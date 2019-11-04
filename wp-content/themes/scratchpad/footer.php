@@ -24,16 +24,6 @@
 				</aside><!-- #secondary -->
 			<?php } ?>
 
-			<!-- <div class="site-info">
-				<?php get_template_part( 'images/inline', 'line.svg' ); ?>
-				<?php scratchpad_social_menu(); ?>
-
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'scratchpad' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'scratchpad' ), 'WordPress' ); ?></a>
-				<span class="sep"> | </span>
-				<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'scratchpad' ), 'Scratchpad', '<a href="http://wordpress.com/themes/" rel="designer">Automattic</a>' ); ?>
-			</div> -->
-			<!-- .site-info -->
-
 			<div class="site-info">
 				<?php get_template_part( 'images/inline', 'line.svg' ); ?>
 				<?php scratchpad_social_menu(); ?>
@@ -41,7 +31,14 @@
 				<a href="<?php echo esc_url( __( 'https://www.facebook.com/watergrass0402/', 'watergrass' ) ); ?>" target="_blank"><?php printf( esc_html__( '粉絲團: %s', 'watergrass' ), 'WaterGrass' ); ?></a>
 				<span class="sep"> | </span>
 				<?php printf( esc_html__( 'Blog: %1$s by %2$s.', 'watergrass' ), 'Watergrass', '<a href="https://www.facebook.com/watergrass0402/" rel="author" target="_blank">Gee Hsu</a>' ); ?>
+
+				<br>
+
+				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'scratchpad' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'scratchpad' ), 'WordPress' ); ?></a>
+				<span class="sep"> | </span>
+				<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'scratchpad' ), 'Scratchpad', '<a href="http://wordpress.com/themes/" rel="designer">Automattic</a>' ); ?>
 			</div>
+			<!-- .site-info -->
 
 		</div><!-- .wrap -->
 	</footer><!-- #colophon -->

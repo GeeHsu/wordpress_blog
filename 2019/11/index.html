@@ -56,7 +56,12 @@ img.emoji {
 			<div class="wrap">
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">選單</button>
 				<div class="menu-menu-container"><ul id="primary-menu" class="menu"><li id="menu-item-13" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-13"><a href="https://geehsu.github.io/wordpress_blog/category/about/">關於</a></li>
-<li id="menu-item-9" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-9"><a href="https://geehsu.github.io/wordpress_blog/category/post/">文章</a></li>
+<li id="menu-item-9" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-9"><a href="https://geehsu.github.io/wordpress_blog/category/post/">文章</a>
+<ul class="sub-menu">
+	<li id="menu-item-98" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-98"><a href="https://geehsu.github.io/wordpress_blog/category/post/hexschool/">六角學院</a></li>
+	<li id="menu-item-99" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-99"><a href="https://geehsu.github.io/wordpress_blog/category/post/ninja/">The Net Ninja</a></li>
+</ul>
+</li>
 <li id="menu-item-12" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-12"><a href="https://geehsu.github.io/wordpress_blog/category/sticker/">貼圖</a></li>
 <li id="menu-item-11" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11"><a href="https://geehsu.github.io/wordpress_blog/category/food/">美食</a></li>
 <li id="menu-item-10" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10"><a href="https://geehsu.github.io/wordpress_blog/category/tour/">旅遊</a></li>
@@ -116,12 +121,95 @@ img.emoji {
 				<h1 class="page-title">月份: 2019 年 11 月</h1>			</header><!-- .page-header -->
 
 			
+<article id="post-100" class="post-100 post type-post status-publish format-standard hentry category-hexschool">
+	
+	
+	<header class="entry-header">
+		<span class="cat-links"><span class="screen-reader-text">發表於</span> <a href="https://geehsu.github.io/wordpress_blog/category/post/hexschool/" rel="category tag">六角學院</a></span>		<h2 class="entry-title"><a href="https://geehsu.github.io/wordpress_blog/gitgithub-training-1/" rel="bookmark">Git &#038; Github 特訓班 -1</a></h2>		<div class="entry-meta">
+			<span class="posted-on">發表於<a href="https://geehsu.github.io/wordpress_blog/gitgithub-training-1/" rel="bookmark"><time class="entry-date published updated" datetime="2019-11-16T22:04:52+08:00">2019 年 11 月 16 日</time></a></span><span class="byline"> 由<span class="author vcard"><a class="url fn n" href="https://geehsu.github.io/wordpress_blog/author/gee-hsu/">gee.hsu</a></span>撰寫</span>					</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		
+<h2>Git 環境建立與基本指令</h2>
+
+
+
+<h4>為什麼要學 Git ?</h4>
+
+
+
+<ul><li>Git 是程式碼版本控制軟體</li></ul>
+
+
+
+<h4>軟體與服務安裝</h4>
+
+
+
+<ul><li>Git 軟體安裝</li><li>Github 會員註冊</li><li>SourceTree 軟體安裝</li></ul>
+
+
+
+<h4>終端機</h4>
+
+
+
+<p>Win: Git Bash<br>開始 > 搜尋輸入 > Git Bash<br>Mac: 終端機<br>輸入 control + 空白 ， 關鍵字輸入 終端機</p>
+
+
+
+<h4>終端機指令學習</h4>
+
+
+
+<p>練習: 前往到某資料夾，觀看內容<br>練習: 嘗試用指令開一個新資料夾或檔案</p>
+
+
+
+<table class="wp-block-table"><tbody><tr><td></td><td>Windows</td><td>MacOs / Linux</td><td></td></tr><tr><td>1</td><td>cd</td><td>cd</td><td>前往資料夾</td></tr><tr><td>2</td><td>cd</td><td>pwd</td><td>取得目前所在的位置</td></tr><tr><td>3</td><td>dir</td><td>ls</td><td>顯示資料夾裡的檔案</td></tr><tr><td>4</td><td>mkdir</td><td>mkdir</td><td>新增資料夾</td></tr><tr><td>5</td><td>無指令</td><td>touch</td><td>開新檔案</td></tr><tr><td>6</td><td>copy</td><td>cp</td><td>複製檔案</td></tr><tr><td>7</td><td>move</td><td>mv</td><td>移動檔案</td></tr><tr><td>8</td><td>del</td><td>rm</td><td>刪除檔案</td></tr><tr><td>9</td><td>cls</td><td>clear</td><td>清除畫面上的內容</td></tr></tbody></table>
+
+
+
+<h4>查詢 Git 是否有安裝成功</h4>
+
+
+
+<p>在終端機裡面輸入: git &#8211;version</p>
+
+
+
+<h4>設定個人資料</h4>
+
+
+
+<ul><li>輸入姓名: git config &#8211;global user.name &#8220;name&#8221;</li><li>輸入個人的email: git config &#8211;global user.email &#8220;name@gmail.com&#8221;</li><li>查詢 git 設定內容: git config &#8211;list</li></ul>
+
+
+
+<h4>基本指令架構</h4>
+
+
+
+<figure class="wp-block-image"><img src="https://geehsu.github.io/wordpress_blog/wp-content/uploads/2019/11/git.png" alt="" class="wp-image-101" srcset="https://geehsu.github.io/wordpress_blog/wp-content/uploads/2019/11/git.png 956w, https://geehsu.github.io/wordpress_blog/wp-content/uploads/2019/11/git-300x186.png 300w, https://geehsu.github.io/wordpress_blog/wp-content/uploads/2019/11/git-768x477.png 768w, https://geehsu.github.io/wordpress_blog/wp-content/uploads/2019/11/git-483x300.png 483w" sizes="(max-width: 956px) 100vw, 956px" /></figure>
+
+
+
+<h4>Git 常用指令</h4>
+
+
+
+<ul><li>初始化數據庫: git init</li><li>開啟 .git 隱藏檔方法</li><li>查詢當前狀態: git status</li><li>將檔案加入到索引: git add .</li><li>將索引檔案變成一個更新(commit): git commit -m &#8220;修改內容&#8221;</li><li>觀察 commit 歷史紀錄: git log</li><li>下載遠端數據庫: git clone 數據庫網址</li><li>更新遠端數據庫: git push origin master</li></ul>
+	</div><!-- .entry-content -->
+
+</article><!-- #post-## -->
+
 <article id="post-92" class="post-92 post type-post status-publish format-standard hentry category-post">
 	
 	
 	<header class="entry-header">
 		<span class="cat-links"><span class="screen-reader-text">發表於</span> <a href="https://geehsu.github.io/wordpress_blog/category/post/" rel="category tag">文章</a></span>		<h2 class="entry-title"><a href="https://geehsu.github.io/wordpress_blog/learn-roadmap/" rel="bookmark">前端開發者 學習地圖</a></h2>		<div class="entry-meta">
-			<span class="posted-on">發表於<a href="https://geehsu.github.io/wordpress_blog/learn-roadmap/" rel="bookmark"><time class="entry-date published updated" datetime="2019-11-13T11:48:08+08:00">2019 年 11 月 13 日</time></a></span><span class="byline"> 由<span class="author vcard"><a class="url fn n" href="https://geehsu.github.io/wordpress_blog/author/gee-hsu/">gee.hsu</a></span>撰寫</span>					</div><!-- .entry-meta -->
+			<span class="posted-on">發表於<a href="https://geehsu.github.io/wordpress_blog/learn-roadmap/" rel="bookmark"><time class="entry-date published" datetime="2019-11-13T11:48:08+08:00">2019 年 11 月 13 日</time><time class="updated" datetime="2019-11-13T15:01:17+08:00">2019 年 11 月 13 日</time></a></span><span class="byline"> 由<span class="author vcard"><a class="url fn n" href="https://geehsu.github.io/wordpress_blog/author/gee-hsu/">gee.hsu</a></span>撰寫</span>					</div><!-- .entry-meta -->
 			</header><!-- .entry-header -->
 
 	<div class="entry-content">
@@ -866,6 +954,9 @@ https://xxx.github.io/xxx/</p>
 	<aside id="secondary" class="widget-area" role="complementary">
 				<section id="recent-posts-2" class="widget widget_recent_entries">		<h2 class="widget-title">近期文章</h2>		<ul>
 											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/gitgithub-training-1/">Git &#038; Github 特訓班 -1</a>
+									</li>
+											<li>
 					<a href="https://geehsu.github.io/wordpress_blog/learn-roadmap/">前端開發者 學習地圖</a>
 									</li>
 											<li>
@@ -877,15 +968,14 @@ https://xxx.github.io/xxx/</p>
 											<li>
 					<a href="https://geehsu.github.io/wordpress_blog/icon/">網站 icon 來源</a>
 									</li>
-											<li>
-					<a href="https://geehsu.github.io/wordpress_blog/banner/">網站頁首來源</a>
-									</li>
 					</ul>
 		</section><section id="archives-2" class="widget widget_archive"><h2 class="widget-title">彙整</h2>		<ul>
 				<li><a href='https://geehsu.github.io/wordpress_blog/2019/11/'>2019 年 11 月</a></li>
 		</ul>
 			</section><section id="categories-2" class="widget widget_categories"><h2 class="widget-title">分類</h2>		<ul>
-				<li class="cat-item cat-item-3"><a href="https://geehsu.github.io/wordpress_blog/category/post/">文章</a>
+				<li class="cat-item cat-item-12"><a href="https://geehsu.github.io/wordpress_blog/category/post/hexschool/">六角學院</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="https://geehsu.github.io/wordpress_blog/category/post/">文章</a>
 </li>
 	<li class="cat-item cat-item-2"><a href="https://geehsu.github.io/wordpress_blog/category/about/">關於</a>
 </li>
@@ -920,7 +1010,7 @@ https://xxx.github.io/xxx/</p>
 		<td><a href="https://geehsu.github.io/wordpress_blog/2019/11/04/" aria-label="文章發佈於 2019 年 11 月 4 日">4</a></td><td><a href="https://geehsu.github.io/wordpress_blog/2019/11/05/" aria-label="文章發佈於 2019 年 11 月 5 日">5</a></td><td>6</td><td>7</td><td>8</td><td><a href="https://geehsu.github.io/wordpress_blog/2019/11/09/" aria-label="文章發佈於 2019 年 11 月 9 日">9</a></td><td>10</td>
 	</tr>
 	<tr>
-		<td>11</td><td>12</td><td id="today"><a href="https://geehsu.github.io/wordpress_blog/2019/11/13/" aria-label="文章發佈於 2019 年 11 月 13 日">13</a></td><td>14</td><td>15</td><td>16</td><td>17</td>
+		<td>11</td><td>12</td><td><a href="https://geehsu.github.io/wordpress_blog/2019/11/13/" aria-label="文章發佈於 2019 年 11 月 13 日">13</a></td><td>14</td><td>15</td><td id="today"><a href="https://geehsu.github.io/wordpress_blog/2019/11/16/" aria-label="文章發佈於 2019 年 11 月 16 日">16</a></td><td>17</td>
 	</tr>
 	<tr>
 		<td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td>
@@ -930,16 +1020,10 @@ https://xxx.github.io/xxx/</p>
 		<td class="pad" colspan="1">&nbsp;</td>
 	</tr>
 	</tbody>
-	</table></div></section>	</aside><!-- #secondary -->
-		</div><!-- .wrap -->
-	</div><!-- #content -->
-
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="wrap">
-
-							<aside id="footer-widgets" class="widget-area" role="complementary">
-					<div class="grid-container">
-								<section id="recent-posts-4" class="widget widget_recent_entries">		<h2 class="widget-title">近期文章</h2>		<ul>
+	</table></div></section>		<section id="recent-posts-4" class="widget widget_recent_entries">		<h2 class="widget-title">近期文章</h2>		<ul>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/gitgithub-training-1/">Git &#038; Github 特訓班 -1</a>
+									</li>
 											<li>
 					<a href="https://geehsu.github.io/wordpress_blog/learn-roadmap/">前端開發者 學習地圖</a>
 									</li>
@@ -952,12 +1036,11 @@ https://xxx.github.io/xxx/</p>
 											<li>
 					<a href="https://geehsu.github.io/wordpress_blog/icon/">網站 icon 來源</a>
 									</li>
-											<li>
-					<a href="https://geehsu.github.io/wordpress_blog/banner/">網站頁首來源</a>
-									</li>
 					</ul>
 		</section><section id="categories-4" class="widget widget_categories"><h2 class="widget-title">分類</h2>		<ul>
-				<li class="cat-item cat-item-3"><a href="https://geehsu.github.io/wordpress_blog/category/post/">文章</a>
+				<li class="cat-item cat-item-12"><a href="https://geehsu.github.io/wordpress_blog/category/post/hexschool/">六角學院</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="https://geehsu.github.io/wordpress_blog/category/post/">文章</a>
 </li>
 	<li class="cat-item cat-item-2"><a href="https://geehsu.github.io/wordpress_blog/category/about/">關於</a>
 </li>
@@ -965,8 +1048,13 @@ https://xxx.github.io/xxx/</p>
 			</section><section id="archives-4" class="widget widget_archive"><h2 class="widget-title">彙整</h2>		<ul>
 				<li><a href='https://geehsu.github.io/wordpress_blog/2019/11/'>2019 年 11 月</a></li>
 		</ul>
-			</section>					</div>
-				</aside><!-- #secondary -->
+			</section>	</aside><!-- #secondary -->
+		</div><!-- .wrap -->
+	</div><!-- #content -->
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="wrap">
+
 			
 			<div class="site-info">
 				<svg class="line" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1509.5px" height="15.6px" viewBox="0 0 1509.5 15.6" style="enable-background:new 0 0 1509.5 15.6;" xml:space="preserve" aria-hidden="true">

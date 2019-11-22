@@ -24,16 +24,6 @@
 				</aside><!-- #secondary -->
 			<?php } ?>
 
-			<div class="site-info">
-				<?php get_template_part( 'images/inline', 'line.svg' ); ?>
-				<?php scratchpad_social_menu(); ?>
-
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'scratchpad' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'scratchpad' ), 'WordPress' ); ?></a>
-				<span class="sep"> | </span>
-				<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'scratchpad' ), 'Scratchpad', '<a href="http://wordpress.com/themes/" rel="designer">Automattic</a>' ); ?>
-			</div>
-			<!-- .site-info -->
-
 		</div><!-- .wrap -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

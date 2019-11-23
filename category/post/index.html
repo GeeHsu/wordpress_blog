@@ -122,6 +122,129 @@ img.emoji {
 				<h1 class="page-title">分類: 文章</h1>			</header><!-- .page-header -->
 
 			
+<article id="post-108" class="post-108 post type-post status-publish format-standard hentry category-hexschool">
+	
+	
+	<header class="entry-header">
+		<span class="cat-links"><span class="screen-reader-text">發表於</span> <a href="https://geehsu.github.io/wordpress_blog/category/post/hexschool/" rel="category tag">六角學院</a></span>		<h2 class="entry-title"><a href="https://geehsu.github.io/wordpress_blog/gitgithub-training-2/" rel="bookmark">Git &#038; Github 特訓班 -2</a></h2>		<div class="entry-meta">
+			<span class="posted-on">發表於<a href="https://geehsu.github.io/wordpress_blog/gitgithub-training-2/" rel="bookmark"><time class="entry-date published updated" datetime="2019-11-23T14:28:08+08:00">2019 年 11 月 23 日</time></a></span><span class="byline"> 由<span class="author vcard"><a class="url fn n" href="https://geehsu.github.io/wordpress_blog/author/gee-hsu/">gee.hsu</a></span>撰寫</span>					</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		
+<h2>Git 遠端 Repository 操作</h2>
+
+
+
+<h4>常用環境設定</h4>
+
+
+
+<ul><li>編輯器更換: git config –global core.editor “code –wait”</li><li>Git 縮寫:<br>$ git config –global alias.co checkout<br>$ git config –global alias.br branch<br>$ git config –global alias.st status<br>$ git config –global alias.ci commit</li><li>觀看所有 config 的設定:<br>Mac: ~/.gitconfig<br>Win: C:\Users\$USER</li></ul>
+
+
+
+<h4> Git 與 Github 是什麼 ? </h4>
+
+
+
+<ul><li>Git 是一個分散式版本控制軟體，可藉由它產生一個儲存庫(git Repository)，也有人稱為數據庫。</li><li>Github : 支援 git 程式碼存取和遠端託管儲存庫的平台服務</li><li>關係像是本地端有一個 index.html，但可以放到 dropbox、Google Drive 進行雲端託管</li></ul>
+
+
+
+<h4>熱門遠端儲存庫( Github VS Bitbucket VS Gitlab)</h4>
+
+
+
+<ul><li>GitHub : 擁有 GitHub Pages 功能，可擁有私人數據庫，免費方案是3人以下</li><li>Bitbucket : 可擁有私人數據庫，免費方案是五人以下團隊</li><li>GitLab : 自架 Git 伺服器，有提供 web 視覺化管理介面，常用於企業內部開發</li></ul>
+
+
+
+<p>懶人包解釋:</p>
+
+
+
+<ul><li>公司專案的小型團隊可用 Bitbucket</li><li>想要有一個公開對外網站的話，可用 GitHub</li></ul>
+
+
+
+<h4>遠端儲存庫(Repository)操作</h4>
+
+
+
+<ul><li>註冊遠端儲存庫: git remote add origin 遠端儲存庫網址</li><li>更新資料到遠端 master 分支: git push -u origin master</li><li>-u 是指他預設會推到哪個遠端數據庫服務</li><li>origin 可以改它的遠端數據庫名稱，例如 git push -u github master</li></ul>
+
+
+
+<h4>Git 版本細節</h4>
+
+
+
+<ul><li>branch : 分支，預設分支叫做 master</li><li>HEAD : 指標 (當下目前的位置)</li><li>origin : 預設遠端儲存庫名稱</li><li>回頭觀看版本內容 : git checkout 編號</li><li>返回最新的版本 : git checkout master (分支名稱)</li></ul>
+
+
+
+<h4>還原技巧</h4>
+
+
+
+<figure class="wp-block-image"><img src="https://geehsu.github.io/wordpress_blog/wp-content/uploads/2019/11/file-status-lifecycle.png" alt="" class="wp-image-110" srcset="https://geehsu.github.io/wordpress_blog/wp-content/uploads/2019/11/file-status-lifecycle.png 763w, https://geehsu.github.io/wordpress_blog/wp-content/uploads/2019/11/file-status-lifecycle-300x199.png 300w, https://geehsu.github.io/wordpress_blog/wp-content/uploads/2019/11/file-status-lifecycle-452x300.png 452w" sizes="(max-width: 763px) 100vw, 763px" /></figure>
+
+
+
+<p>新增檔案時，檔案還沒加追蹤時，清空工作目錄</p>
+
+
+
+<ul><li>顯示此次清除的檔案 : git clean -n</li><li>強制清除檔案: git clean -f</li></ul>
+
+
+
+<p>檔案已加入追蹤，清空工作目錄</p>
+
+
+
+<ul><li>還原工作目錄上已更改的檔案 : git checkout — &lt;file&gt;</li></ul>
+
+
+
+<p>檔案加入到索引，退到工作目錄</p>
+
+
+
+<ul><li>加入索引的檔案還原到工作目錄 : git reset HEAD</li></ul>
+
+
+
+<p>版本還原</p>
+
+
+
+<ul><li>還原前兩個版本 : git reset HEAD^^</li><li>還原前兩個版本，所有更新檔案都放棄 : git reset HEAD^^ –hard</li><li>觀看詳細歷史紀錄 : git reflog</li><li>還原到特定 commit : git reset commit編號 –hard</li><li>git reset 參數介紹</li></ul>
+
+
+
+<h4>Git 補充指令</h4>
+
+
+
+<ul><li>git log –oneline</li></ul>
+
+
+
+<h4>Git 練習</h4>
+
+
+
+<p>請貼上你的截圖，問其他同學，<br>1.這裡有幾個未被追蹤的檔案?<br>2.有幾個未被加入索引的檔案?<br>3.有幾個已加入索引的檔案 ?</p>
+
+
+
+<figure class="wp-block-image"><img src="https://geehsu.github.io/wordpress_blog/wp-content/uploads/2019/11/hw1024.png" alt="" class="wp-image-111" srcset="https://geehsu.github.io/wordpress_blog/wp-content/uploads/2019/11/hw1024.png 842w, https://geehsu.github.io/wordpress_blog/wp-content/uploads/2019/11/hw1024-300x136.png 300w, https://geehsu.github.io/wordpress_blog/wp-content/uploads/2019/11/hw1024-768x349.png 768w, https://geehsu.github.io/wordpress_blog/wp-content/uploads/2019/11/hw1024-660x300.png 660w" sizes="(max-width: 842px) 100vw, 842px" /><figcaption> 1. 有 2 個未被追蹤的檔案<br>2.有 3 個未被加入索引的檔案<br>3.有3個以加入索引的檔案 </figcaption></figure>
+	</div><!-- .entry-content -->
+
+</article><!-- #post-## -->
+
 <article id="post-100" class="post-100 post type-post status-publish format-standard hentry category-hexschool">
 	
 	
@@ -769,6 +892,9 @@ img.emoji {
 	<aside id="secondary" class="widget-area" role="complementary">
 				<section id="recent-posts-2" class="widget widget_recent_entries">		<h2 class="widget-title">近期文章</h2>		<ul>
 											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/gitgithub-training-2/">Git &#038; Github 特訓班 -2</a>
+									</li>
+											<li>
 					<a href="https://geehsu.github.io/wordpress_blog/gitgithub-training-1/">Git &#038; Github 特訓班 -1</a>
 									</li>
 											<li>
@@ -779,9 +905,6 @@ img.emoji {
 									</li>
 											<li>
 					<a href="https://geehsu.github.io/wordpress_blog/theme/">網站主題來源</a>
-									</li>
-											<li>
-					<a href="https://geehsu.github.io/wordpress_blog/icon/">網站 icon 來源</a>
 									</li>
 					</ul>
 		</section><section id="archives-2" class="widget widget_archive"><h2 class="widget-title">彙整</h2>		<ul>
@@ -828,25 +951,14 @@ img.emoji {
 		<td>11</td><td>12</td><td><a href="https://geehsu.github.io/wordpress_blog/2019/11/13/" aria-label="文章發佈於 2019 年 11 月 13 日">13</a></td><td>14</td><td>15</td><td><a href="https://geehsu.github.io/wordpress_blog/2019/11/16/" aria-label="文章發佈於 2019 年 11 月 16 日">16</a></td><td>17</td>
 	</tr>
 	<tr>
-		<td>18</td><td>19</td><td>20</td><td>21</td><td id="today">22</td><td>23</td><td>24</td>
+		<td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td id="today"><a href="https://geehsu.github.io/wordpress_blog/2019/11/23/" aria-label="文章發佈於 2019 年 11 月 23 日">23</a></td><td>24</td>
 	</tr>
 	<tr>
 		<td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td>
 		<td class="pad" colspan="1">&nbsp;</td>
 	</tr>
 	</tbody>
-	</table></div></section><section id="categories-4" class="widget widget_categories"><h2 class="widget-title">分類</h2>		<ul>
-				<li class="cat-item cat-item-12"><a href="https://geehsu.github.io/wordpress_blog/category/post/hexschool/">六角學院</a>
-</li>
-	<li class="cat-item cat-item-3 current-cat"><a href="https://geehsu.github.io/wordpress_blog/category/post/">文章</a>
-</li>
-	<li class="cat-item cat-item-2"><a href="https://geehsu.github.io/wordpress_blog/category/about/">關於</a>
-</li>
-		</ul>
-			</section><section id="archives-4" class="widget widget_archive"><h2 class="widget-title">彙整</h2>		<ul>
-				<li><a href='https://geehsu.github.io/wordpress_blog/2019/11/'>2019 年 11 月</a></li>
-		</ul>
-			</section>	</aside><!-- #secondary -->
+	</table></div></section>	</aside><!-- #secondary -->
 		</div><!-- .wrap -->
 	</div><!-- #content -->
 

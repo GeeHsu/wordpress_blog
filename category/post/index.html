@@ -122,6 +122,128 @@ img.emoji {
 				<h1 class="page-title">分類: 文章</h1>			</header><!-- .page-header -->
 
 			
+<article id="post-133" class="post-133 post type-post status-publish format-standard hentry category-hexschool">
+	
+	
+	<header class="entry-header">
+		<span class="cat-links"><span class="screen-reader-text">發表於</span> <a href="https://geehsu.github.io/wordpress_blog/category/post/hexschool/" rel="category tag">六角學院</a></span>		<h2 class="entry-title"><a href="https://geehsu.github.io/wordpress_blog/gitgithub-training-5/" rel="bookmark">Git &#038; Github 特訓班 -5</a></h2>		<div class="entry-meta">
+			<span class="posted-on">發表於<a href="https://geehsu.github.io/wordpress_blog/gitgithub-training-5/" rel="bookmark"><time class="entry-date published updated" datetime="2019-11-26T17:45:09+08:00">2019 年 11 月 26 日</time></a></span><span class="byline"> 由<span class="author vcard"><a class="url fn n" href="https://geehsu.github.io/wordpress_blog/author/gee-hsu/">gee.hsu</a></span>撰寫</span>					</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		
+<h2>Git Flow 、 GitHub Flow</h2>
+
+
+
+<h4>常見合作流程</h4>
+
+
+
+<ul><li>Git flow<br><a rel="noreferrer noopener" href="https://nvie.com/posts/a-successful-git-branching-model/" target="_blank">https://nvie.com/posts/a-successful-git-branching-model/</a></li><li>GitHub flow<br><a href="https://guides.github.com/introduction/flow/" target="_blank" rel="noreferrer noopener">https://guides.github.com/introduction/flow/</a></li></ul>
+
+
+
+<h4>GitHub flow</h4>
+
+
+
+<ol><li>在 master 建立分支來新增功能</li><li>開始開發功能</li><li>發 PR (Pull Request) 申請合併</li><li>討論與檢視程式碼</li><li>部署(Deploy)</li><li>合併(Merge)</li></ol>
+
+
+
+<p>規範</p>
+
+
+
+<ul><li>任何在 master 上的 commit 都是可以部署的</li><li>假使程式碼需要討論，請在 PR 後在 comment 進行討論</li></ul>
+
+
+
+<h4>本日協作流程</h4>
+
+
+
+<ol><li>本地建立 node、 Git 環境，增加(.gitignore)</li><li>commit 1 : 建立環境</li><li>commit 2 : 修改 title</li><li>新增 dev branch</li><li>新增 GitHub Repo ，並 push</li><li>新增 GitHub Repo ，並 push</li><li>Ray 抓 GitHub dev 分支，並開 feature 分支 (中間洧杰做 heroku 部署設定)</li><li>commit 兩個後， push feature 分支，並開 PR 請求合併 dev</li><li>管理員合併</li><li>志誠抓 GitHub dev 分支，並開 feature 分支</li><li>commit 兩個後， push feature 分支，並開 PR 請求合併 dev</li><li>管理員合併，並抓下來看內容都 ok</li><li>管理員 fetch 下來，用 master 合併 origin/dev 分支，並 push 到 GitHub</li></ol>
+
+
+
+<h4>補充</h4>
+
+
+
+<p>pull = fetch + merge</p>
+	</div><!-- .entry-content -->
+
+</article><!-- #post-## -->
+
+<article id="post-126" class="post-126 post type-post status-publish format-standard hentry category-hexschool">
+	
+	
+	<header class="entry-header">
+		<span class="cat-links"><span class="screen-reader-text">發表於</span> <a href="https://geehsu.github.io/wordpress_blog/category/post/hexschool/" rel="category tag">六角學院</a></span>		<h2 class="entry-title"><a href="https://geehsu.github.io/wordpress_blog/gitgithub-training-4/" rel="bookmark">Git &#038; Github 特訓班 -4</a></h2>		<div class="entry-meta">
+			<span class="posted-on">發表於<a href="https://geehsu.github.io/wordpress_blog/gitgithub-training-4/" rel="bookmark"><time class="entry-date published updated" datetime="2019-11-26T17:41:08+08:00">2019 年 11 月 26 日</time></a></span><span class="byline"> 由<span class="author vcard"><a class="url fn n" href="https://geehsu.github.io/wordpress_blog/author/gee-hsu/">gee.hsu</a></span>撰寫</span>					</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		
+<h2>Git 分支中階教學</h2>
+
+
+
+<h4>還原技巧</h4>
+
+
+
+<ul><li>回頭觀看版本內容</li><li>返回最新的版本 : git checkout 編號</li><li>還原工作目錄上已更改的檔案 : git checkout — &lt;file&gt;</li><li>索引檔案&gt;還原到工作目錄 : git reset HEAD</li><li>還原前兩個版本 : git reset HEAD^^</li><li>還原前兩個版本，所有更新檔案都放棄 : git reset HEAD^^ –hard</li><li>觀看詳細歷史紀錄 : git reflog</li><li>git reset 參數介紹<br><a href="https://gitbook.tw/chapters/using-git/reset-commit.html" target="_blank" rel="noreferrer noopener">https://gitbook.tw/chapters/using-git/reset-commit.html</a></li></ul>
+
+
+
+<h4>checkout 與 reset 差異</h4>
+
+
+
+<ul><li>checkout 是移動 HEAD</li><li>reset 是移動 branch</li></ul>
+
+
+
+<h4>指令補充</h4>
+
+
+
+<p>$git revert HEAD</p>
+
+
+
+<h4>發 PR 流程</h4>
+
+
+
+<ol><li>Ray 是開發者，並擁有一個 master 開發分支</li><li>洧杰很喜歡這個專案，但發現有個小問題</li><li>於是他 fork 了專案，在 master 上新增了一個 commit 並下了 PR</li><li>Ray 認為洧杰真是天才，於是 merge 了他的 PR</li></ol>
+
+
+
+<p>練習 : 請試著發 PR 給 Ray<br><a href="https://github.com/hsiangfeng/1107-Pull-request" target="_blank" rel="noreferrer noopener">https://github.com/hsiangfeng/1107-Pull-request</a></p>
+
+
+
+<h4>commit 衝突</h4>
+
+
+
+<p>兩個 commit 在合併時，檔案裡的某一行有重複修改到時，就會觸發</p>
+
+
+
+<h4>本地衝突</h4>
+
+
+
+<ol><li>洧杰跟 Ray 一起在同個 repo 開發，只有一條 master 線</li><li>洧杰先部署了一個 commit 到 master</li><li>Ray 更新了第六行程式碼，並在下班前立馬 push</li><li>洧杰也改了第六行，但他效率比較差，下班後 push 時才發現， Ray 已經先 push 了</li><li>洧杰只好先 pull 下來，結果竟然跟自己的 commit 衝突</li><li>洧杰只好先解決衝突，整理好後再 push</li></ol>
+	</div><!-- .entry-content -->
+
+</article><!-- #post-## -->
+
 <article id="post-113" class="post-113 post type-post status-publish format-standard hentry category-hexschool">
 	
 	
@@ -1008,6 +1130,14 @@ img.emoji {
 	<aside id="secondary" class="widget-area" role="complementary">
 				<section id="recent-posts-2" class="widget widget_recent_entries">		<h2 class="widget-title">近期文章</h2>		<ul>
 											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/gitgithub-training-5/">Git &#038; Github 特訓班 -5</a>
+											<span class="post-date">2019 年 11 月 26 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/gitgithub-training-4/">Git &#038; Github 特訓班 -4</a>
+											<span class="post-date">2019 年 11 月 26 日</span>
+									</li>
+											<li>
 					<a href="https://geehsu.github.io/wordpress_blog/gitgithub-training-3/">Git &#038; Github 特訓班 -3</a>
 											<span class="post-date">2019 年 11 月 24 日</span>
 									</li>
@@ -1039,18 +1169,14 @@ img.emoji {
 					<a href="https://geehsu.github.io/wordpress_blog/banner/">網站頁首來源</a>
 											<span class="post-date">2019 年 11 月 4 日</span>
 									</li>
-											<li>
-					<a href="https://geehsu.github.io/wordpress_blog/setup/">使用 WordPress、Github架設 Github Pages靜態網站</a>
-											<span class="post-date">2019 年 11 月 3 日</span>
-									</li>
 					</ul>
 		</section><section id="archives-2" class="widget widget_archive"><h2 class="widget-title">彙整</h2>		<ul>
-				<li><a href='https://geehsu.github.io/wordpress_blog/2019/11/'>2019 年 11 月</a>&nbsp;(9)</li>
+				<li><a href='https://geehsu.github.io/wordpress_blog/2019/11/'>2019 年 11 月</a>&nbsp;(11)</li>
 		</ul>
 			</section><section id="categories-2" class="widget widget_categories"><h2 class="widget-title">分類</h2>		<ul>
-				<li class="cat-item cat-item-3 current-cat"><a href="https://geehsu.github.io/wordpress_blog/category/post/">文章</a> (5)
+				<li class="cat-item cat-item-3 current-cat"><a href="https://geehsu.github.io/wordpress_blog/category/post/">文章</a> (7)
 <ul class='children'>
-	<li class="cat-item cat-item-12"><a href="https://geehsu.github.io/wordpress_blog/category/post/hexschool/">六角學院</a> (3)
+	<li class="cat-item cat-item-12"><a href="https://geehsu.github.io/wordpress_blog/category/post/hexschool/">六角學院</a> (5)
 </li>
 </ul>
 </li>
@@ -1090,10 +1216,10 @@ img.emoji {
 		<td>11</td><td>12</td><td><a href="https://geehsu.github.io/wordpress_blog/2019/11/13/" aria-label="文章發佈於 2019 年 11 月 13 日">13</a></td><td>14</td><td>15</td><td><a href="https://geehsu.github.io/wordpress_blog/2019/11/16/" aria-label="文章發佈於 2019 年 11 月 16 日">16</a></td><td>17</td>
 	</tr>
 	<tr>
-		<td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td><a href="https://geehsu.github.io/wordpress_blog/2019/11/23/" aria-label="文章發佈於 2019 年 11 月 23 日">23</a></td><td id="today"><a href="https://geehsu.github.io/wordpress_blog/2019/11/24/" aria-label="文章發佈於 2019 年 11 月 24 日">24</a></td>
+		<td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td><a href="https://geehsu.github.io/wordpress_blog/2019/11/23/" aria-label="文章發佈於 2019 年 11 月 23 日">23</a></td><td><a href="https://geehsu.github.io/wordpress_blog/2019/11/24/" aria-label="文章發佈於 2019 年 11 月 24 日">24</a></td>
 	</tr>
 	<tr>
-		<td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td>
+		<td>25</td><td id="today"><a href="https://geehsu.github.io/wordpress_blog/2019/11/26/" aria-label="文章發佈於 2019 年 11 月 26 日">26</a></td><td>27</td><td>28</td><td>29</td><td>30</td>
 		<td class="pad" colspan="1">&nbsp;</td>
 	</tr>
 	</tbody>

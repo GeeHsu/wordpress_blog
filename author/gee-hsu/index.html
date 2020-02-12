@@ -122,6 +122,81 @@ img.emoji {
 				<h1 class="page-title">作者: <span class="vcard">gee.hsu</span></h1>			</header><!-- .page-header -->
 
 			
+<article id="post-141" class="post-141 post type-post status-publish format-standard hentry category-hexschool">
+	
+	
+	<header class="entry-header">
+		<span class="cat-links"><span class="screen-reader-text">發表於</span> <a href="https://geehsu.github.io/wordpress_blog/category/post/hexschool/" rel="category tag">六角學院</a></span>		<h2 class="entry-title"><a href="https://geehsu.github.io/wordpress_blog/maskonmap/" rel="bookmark">Leaflet + OpenStreetMap 地圖應用開發 ─ 學習</a></h2>		<div class="entry-meta">
+			<span class="posted-on">發表於<a href="https://geehsu.github.io/wordpress_blog/maskonmap/" rel="bookmark"><time class="entry-date published updated" datetime="2020-02-12T17:15:48+08:00">2020 年 2 月 12 日</time></a></span><span class="byline"> 由<span class="author vcard"><a class="url fn n" href="https://geehsu.github.io/wordpress_blog/author/gee-hsu/">gee.hsu</a></span>撰寫</span>					</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		
+<p><a href="https://quip.com/vdqYAiFHHkaV" target="_blank" rel="noreferrer noopener">共筆筆記</a></p>
+
+
+
+<h3>教學一 : 載入地圖</h3>
+
+
+
+<ul><li><a href="https://codepen.io/liao/pen/gOpOgzg" target="_blank" rel="noreferrer noopener">範例程式碼</a></li><li><a rel="noreferrer noopener" href="https://leafletjs.com/reference-1.6.0.html#map-example" target="_blank">官網參數</a></li><li>自我練習：換成自己的座標，做成自己的地圖</li></ul>
+
+
+
+<h4>語法</h4>
+
+
+
+<ul><li>.setView – 布置場景，可以想像成建立一個空的容器地圖</li><li>tileLayer – 拉近圖資，本教材使用&nbsp;<a rel="noreferrer noopener" href="https://www.openstreetmap.org/#map=8/23.611/120.768" target="_blank">OpenStreetMap</a>，其他還有像是&nbsp;<a rel="noreferrer noopener" href="https://docs.mapbox.com/" target="_blank">mapbox</a>、<a href="https://developers.google.com/maps/documentation/javascript/get-api-key?hl=zh-tw#add_key" target="_blank" rel="noreferrer noopener">Google Map</a>，但需要 api key</li><li>.setZoom(18) – Zoom 地圖</li><li>getZoom() – 取得 Zoom</li></ul>
+
+
+
+<p><strong>為什麼使用別人的服務 API，都會要使用 key？因為要用這個 key 去算你的 $$ 啊~</strong></p>
+
+
+
+<h3>教學二 : 圖層概念</h3>
+
+
+
+<ul><li><a href="https://www.androidpit.com/google-maps-gesture-controls" target="_blank" rel="noreferrer noopener">地圖圖層概念</a></li><li>Leaflet 圖層有<ul><li>Raster Layers –<ul><li>TileLayer – 圖磚方式呈現， OpenStreetMap 與 Google Map 都是如此</li><li>TileLayer.WMS</li><li>ImageOverlay</li><li>VideoOverlay</li></ul></li><li>UI Layers<ul><li>Marker (單點)</li><li>Popup (彈跳冒泡視窗 – 可放多內容)</li><li>Tooltip (彈跳冒泡視窗 – 可放少內容)</li></ul></li><li>其他圖層<ul><li>GeoJSON</li><li>LayerGroup</li><li>FeatureGroup</li><li>GridLayer</li></ul></li><li>Vector Layers (向量圖層)</li></ul></li></ul>
+
+
+
+<h3>教學三 : UI Layer Marker</h3>
+
+
+
+<ul><li><a rel="noreferrer noopener" href="https://codepen.io/liao/pen/YzXzNRW" target="_blank">範例程式碼</a></li><li><a rel="noreferrer noopener" href="https://github.com/pointhi/leaflet-color-markers" target="_blank">Marker 顏色 PNG</a></li><li><a rel="noreferrer noopener" href="https://codepen.io/liao/pen/dyoyvop" target="_blank">兩個點以上</a></li><li><a rel="noreferrer noopener" href="https://codepen.io/liao/pen/XWbWMdr" target="_blank">Marker for 迴圈</a></li><li><a rel="noreferrer noopener" href="https://codepen.io/liao/pen/rNVNoGN" target="_blank">效能處理</a><ul><li><a rel="noreferrer noopener" href="https://github.com/Leaflet/Leaflet.markercluster" target="_blank">插件網址</a>&nbsp;Leaflet.markercluster</li></ul></li><li><a rel="noreferrer noopener" href="https://codepen.io/liao/pen/abObPQm" target="_blank">倒真正資料</a></li><li><a rel="noreferrer noopener" href="https://codepen.io/liao/pen/poJoqmz" target="_blank">下 if 判斷改變樣式</a></li><li><a href="https://github.com/kurotanshi/mask-map" target="_blank" rel="noreferrer noopener">kuro GitHub</a></li></ul>
+
+
+
+<h3>筆記</h3>
+
+
+
+<ul><li>LeafLet (JS 框架-常見處理)<br>圖資(地圖資料)<br>標示點(marker)</li><li>OpenStreetMap(圖資-地圖資料、開源免費)</li><li>Google Map (收費)</li><li>Safari Map (逐漸有優化)</li></ul>
+
+
+
+<figure class="wp-block-image"><img src="https://wp-blogtoshare.000webhostapp.com/wp-content/uploads/2020/02/maplayer.png" alt="" class="wp-image-409"/><figcaption>地圖圖層概念</figcaption></figure>
+
+
+
+<p>設定一個地圖，把這地圖地位在 #map，<br>先定位 center 座標， zoom 定位 16<br>22.9972,120.2128<br><br>你要用誰的圖資<br><br>greenIcon<br><br>我要加上一個 marker，並設定他的座標，同時將這座標放入對應的地圖裡<br>我要針對這個 marker，加上 HTML 內容進去<br>我預設要把它開啟<br><br>23.01943,120.22430<br><br>圖資框架(呈現) + 第三方 open data JSON (資料)<br><a rel="noreferrer noopener" href="https://raw.githubusercontent.com/kiang/pharmacies/master/json/points.json" target="_blank">open data JSON</a><br><br>新增一個圖層，這圖層專門放 icon 群組<br><br>在該圖層上，加上各個 marker<br><br>開啟一個網路請求<br>我準備要跟某某伺服器，要藥局剩餘口罩資料<br>執行要資料的動作<br>當資料回傳時，下面語法就會自動觸發<br>我要把它轉成物件陣列的 JSON 格式<br>依序把 marker 倒進圖層裡<br><br>redIcon</p>
+
+
+
+<figure class="wp-block-image"><img src="https://wp-blogtoshare.000webhostapp.com/wp-content/uploads/2020/02/send.png" alt="" class="wp-image-420"/></figure>
+
+
+
+<figure class="wp-block-image"><img alt=""/></figure>
+	</div><!-- .entry-content -->
+
+</article><!-- #post-## -->
+
 <article id="post-137" class="post-137 post type-post status-publish format-standard hentry category-post">
 	
 	
@@ -1218,25 +1293,6 @@ img.emoji {
 
 </article><!-- #post-## -->
 
-<article id="post-48" class="post-48 post type-post status-publish format-standard hentry category-about">
-	
-	
-	<header class="entry-header">
-		<span class="cat-links"><span class="screen-reader-text">發表於</span> <a href="https://geehsu.github.io/wordpress_blog/category/about/" rel="category tag">關於</a></span>		<h2 class="entry-title"><a href="https://geehsu.github.io/wordpress_blog/icon/" rel="bookmark">網站 icon 來源</a></h2>		<div class="entry-meta">
-			<span class="posted-on">發表於<a href="https://geehsu.github.io/wordpress_blog/icon/" rel="bookmark"><time class="entry-date published updated" datetime="2019-11-04T12:06:56+08:00">2019 年 11 月 4 日</time></a></span><span class="byline"> 由<span class="author vcard"><a class="url fn n" href="https://geehsu.github.io/wordpress_blog/author/gee-hsu/">gee.hsu</a></span>撰寫</span>					</div><!-- .entry-meta -->
-			</header><!-- .entry-header -->
-
-	<div class="entry-content">
-		
-<div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
-
-
-
-<figure class="wp-block-image"><img src="https://geehsu.github.io/wordpress_blog/wp-content/uploads/2019/11/blogging.png" alt="" class="wp-image-45" srcset="https://geehsu.github.io/wordpress_blog/wp-content/uploads/2019/11/blogging.png 512w, https://geehsu.github.io/wordpress_blog/wp-content/uploads/2019/11/blogging-150x150.png 150w, https://geehsu.github.io/wordpress_blog/wp-content/uploads/2019/11/blogging-300x300.png 300w, https://geehsu.github.io/wordpress_blog/wp-content/uploads/2019/11/blogging-85x85.png 85w" sizes="(max-width: 512px) 100vw, 512px" /><figcaption>Say thanks<br> <a href="https://www.flaticon.com/free-icon/blogging_1069159">https://www.flaticon.com/free-icon/blogging_1069159</a> </figcaption></figure>
-	</div><!-- .entry-content -->
-
-</article><!-- #post-## -->
-
 	<nav class="navigation posts-navigation" role="navigation">
 		<h2 class="screen-reader-text">文章導覽</h2>
 		<div class="nav-links"><div class="nav-previous"><a href="https://geehsu.github.io/wordpress_blog/author/gee-hsu/page/2/" >較舊的文章</a></div></div>
@@ -1246,6 +1302,10 @@ img.emoji {
 
 	<aside id="secondary" class="widget-area" role="complementary">
 				<section id="recent-posts-2" class="widget widget_recent_entries">		<h2 class="widget-title">近期文章</h2>		<ul>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/maskonmap/">Leaflet + OpenStreetMap 地圖應用開發 ─ 學習</a>
+											<span class="post-date">2020 年 2 月 12 日</span>
+									</li>
 											<li>
 					<a href="https://geehsu.github.io/wordpress_blog/ui-design/">The 2019 UI Design Crash Course for Beginners</a>
 											<span class="post-date">2020 年 1 月 25 日</span>
@@ -1282,19 +1342,16 @@ img.emoji {
 					<a href="https://geehsu.github.io/wordpress_blog/theme/">網站主題來源</a>
 											<span class="post-date">2019 年 11 月 5 日</span>
 									</li>
-											<li>
-					<a href="https://geehsu.github.io/wordpress_blog/icon/">網站 icon 來源</a>
-											<span class="post-date">2019 年 11 月 4 日</span>
-									</li>
 					</ul>
 		</section><section id="archives-2" class="widget widget_archive"><h2 class="widget-title">彙整</h2>		<ul>
-				<li><a href='https://geehsu.github.io/wordpress_blog/2020/01/'>2020 年 1 月</a>&nbsp;(1)</li>
+				<li><a href='https://geehsu.github.io/wordpress_blog/2020/02/'>2020 年 2 月</a>&nbsp;(1)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2020/01/'>2020 年 1 月</a>&nbsp;(1)</li>
 	<li><a href='https://geehsu.github.io/wordpress_blog/2019/11/'>2019 年 11 月</a>&nbsp;(11)</li>
 		</ul>
 			</section><section id="categories-2" class="widget widget_categories"><h2 class="widget-title">分類</h2>		<ul>
-				<li class="cat-item cat-item-3"><a href="https://geehsu.github.io/wordpress_blog/category/post/">文章</a> (8)
+				<li class="cat-item cat-item-3"><a href="https://geehsu.github.io/wordpress_blog/category/post/">文章</a> (9)
 <ul class='children'>
-	<li class="cat-item cat-item-12"><a href="https://geehsu.github.io/wordpress_blog/category/post/hexschool/">六角學院</a> (5)
+	<li class="cat-item cat-item-12"><a href="https://geehsu.github.io/wordpress_blog/category/post/hexschool/">六角學院</a> (6)
 </li>
 </ul>
 </li>
@@ -1302,7 +1359,7 @@ img.emoji {
 </li>
 		</ul>
 			</section><section id="calendar-3" class="widget widget_calendar"><div id="calendar_wrap" class="calendar_wrap"><table id="wp-calendar">
-	<caption>2020 年 1 月</caption>
+	<caption>2020 年 2 月</caption>
 	<thead>
 	<tr>
 		<th scope="col" title="星期一">一</th>
@@ -1317,7 +1374,7 @@ img.emoji {
 
 	<tfoot>
 	<tr>
-		<td colspan="3" id="prev"><a href="https://geehsu.github.io/wordpress_blog/2019/11/">&laquo; 11 月</a></td>
+		<td colspan="3" id="prev"><a href="https://geehsu.github.io/wordpress_blog/2020/01/">&laquo; 1 月</a></td>
 		<td class="pad">&nbsp;</td>
 		<td colspan="3" id="next" class="pad">&nbsp;</td>
 	</tr>
@@ -1325,20 +1382,20 @@ img.emoji {
 
 	<tbody>
 	<tr>
-		<td colspan="2" class="pad">&nbsp;</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td>
+		<td colspan="5" class="pad">&nbsp;</td><td>1</td><td>2</td>
 	</tr>
 	<tr>
-		<td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td>
+		<td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td>
 	</tr>
 	<tr>
-		<td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td>
+		<td>10</td><td>11</td><td id="today"><a href="https://geehsu.github.io/wordpress_blog/2020/02/12/" aria-label="文章發佈於 2020 年 2 月 12 日">12</a></td><td>13</td><td>14</td><td>15</td><td>16</td>
 	</tr>
 	<tr>
-		<td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td id="today"><a href="https://geehsu.github.io/wordpress_blog/2020/01/25/" aria-label="文章發佈於 2020 年 1 月 25 日">25</a></td><td>26</td>
+		<td>17</td><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td>
 	</tr>
 	<tr>
-		<td>27</td><td>28</td><td>29</td><td>30</td><td>31</td>
-		<td class="pad" colspan="2">&nbsp;</td>
+		<td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td>
+		<td class="pad" colspan="1">&nbsp;</td>
 	</tr>
 	</tbody>
 	</table></div></section>	</aside><!-- #secondary -->

@@ -122,6 +122,282 @@ img.emoji {
 				<h1 class="page-title">作者: <span class="vcard">gee.hsu</span></h1>			</header><!-- .page-header -->
 
 			
+<article id="post-146" class="post-146 post type-post status-publish format-standard hentry category-hexschool">
+	
+	
+	<header class="entry-header">
+		<span class="cat-links"><span class="screen-reader-text">發表於</span> <a href="https://geehsu.github.io/wordpress_blog/category/post/hexschool/" rel="category tag">六角學院</a></span>		<h2 class="entry-title"><a href="https://geehsu.github.io/wordpress_blog/wheremask/" rel="bookmark">示範：使用 Vuejs 結合 Open Street Map 製作口罩地圖</a></h2>		<div class="entry-meta">
+			<span class="posted-on">發表於<a href="https://geehsu.github.io/wordpress_blog/wheremask/" rel="bookmark"><time class="entry-date published updated" datetime="2020-03-15T11:08:09+08:00">2020 年 3 月 15 日</time></a></span><span class="byline"> 由<span class="author vcard"><a class="url fn n" href="https://geehsu.github.io/wordpress_blog/author/gee-hsu/">gee.hsu</a></span>撰寫</span>					</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		
+<p><a rel="noreferrer noopener" href="https://www.youtube.com/watch?v=7CXnNMVMXeo" target="_blank">影片教學連結</a><br><a href="https://paper.dropbox.com/doc/2020-0213-2XPGbqH5JqE9vTD7a6npd">共筆文件</a><br><a href="https://wcc723.github.io/wheremask/#/" target="_blank" rel="noreferrer noopener">教學範例</a></p>
+
+
+
+<h2>2020 0213 口罩地圖</h2>
+
+
+
+<h4>相關主題</h4>
+
+
+
+<ul><li><a rel="noreferrer noopener" href="https://challenge.thef2e.com/works" target="_blank">The F2E</a></li><li><a rel="noreferrer noopener" href="https://www.facebook.com/groups/110635703123103/?ref=group_header" target="_blank">資源</a></li><li><a href="https://www.youtube.com/watch?v=pUizu62dlnY" target="_blank" rel="noreferrer noopener">OSM 教學影片</a></li></ul>
+
+
+
+<h4>開始</h4>
+
+
+
+<ul><li>如何建立環境</li><li>快速建立介面</li><li>如何接收遠端資料</li><li>使用 OSM<ul><li>搭配 Vue 套件</li><li>不使用 Vue 套件</li></ul></li><li>插旗</li><li>介面優化</li><li>取得用戶地點</li></ul>
+
+
+
+<h4>建立環境</h4>
+
+
+
+<p>vue create 或使用 vue ui</p>
+
+
+
+<p>Bootstrap</p>
+
+
+
+<p>快速介面</p>
+
+
+
+<pre class="wp-block-code"><code>
+&lt;div class="row no-gutters">
+  &lt;div class="col-sm-3">
+    &lt;div class="toolbox">
+      &lt;div class="sticky-top bg-white shadow-sm p-2">
+        &lt;div class="form-group d-flex">
+          &lt;label for="cityName" class="mr-2 col-form-label text-right">縣市&lt;/label>
+          &lt;div class="flex-fill">
+            &lt;select id="cityName" class="form-control">
+            &lt;/select>
+          &lt;/div>
+        &lt;/div>
+        &lt;div class="form-group d-flex">
+          &lt;label for="area" class="mr-2 col-form-label text-right">地區&lt;/label>
+          &lt;div class="flex-fill">
+            &lt;select id="area" class="form-control">
+              &lt;option value="">-- Select One --&lt;/option>
+            &lt;/select>
+          &lt;/div>
+        &lt;/div>
+        &lt;p class="mb-0 small text-muted text-right">請先選擇區域查看（綠色表示還有口罩）&lt;/p>
+      &lt;/div>
+      &lt;ul class="list-group">
+        &lt;template>
+          &lt;a class="list-group-item text-left">
+            &lt;h3>藥局名稱&lt;/h3>
+            &lt;p class="mb-0">
+              成人口罩：1 | 兒童口罩：2
+            &lt;/p>
+              &lt;p class="mb-0">地址：&lt;a href="https://www.google.com.tw/maps/place/..."
+              target="_blank" title="Google Map">
+              地址&lt;/a>
+            &lt;/p>
+          &lt;/a>
+        &lt;/template>
+      &lt;/ul>
+    &lt;/div>
+  &lt;/div>
+  &lt;div class="col-sm-9">
+    &lt;div id="map">&lt;/div>
+  &lt;/div>
+&lt;/div>
+
+&lt;style lang="scss">
+@import 'bootstrap/scss/bootstrap';
+#map {
+  height: 100vh;
+}
+.highlight {
+  background: #e9ffe3;
+}
+.toolbox {
+  height: 100vh;
+  overflow-y: auto;
+  a {
+    cursor: pointer;
+  }
+}
+&lt;/style></code></pre>
+
+
+
+<h4>遠端資料</h4>
+
+
+
+<p><a rel="noreferrer noopener" href="https://raw.githubusercontent.com/kiang/pharmacies/master/json/points.json" target="_blank">API 路徑</a><br><a href="https://github.com/donma/TaiwanAddressCityAreaRoadChineseEnglishJSON" target="_blank" rel="noreferrer noopener">台灣縣市 JSON</a></p>
+
+
+
+<h4>OSM 基本概念</h4>
+
+
+
+<p><a rel="noreferrer noopener" href="https://github.com/donma/TaiwanAddressCityAreaRoadChineseEnglishJSON" target="_blank">OpenStreepMap</a><br><a rel="noreferrer noopener" href="https://leafletjs.com/" target="_blank">leaflet.js</a><br>CSS 資源<br>&lt;link&nbsp;<em>rel</em>=’stylesheet’&nbsp;<em>href</em>=’https://unpkg.com/leaflet@1.5.1/dist/leaflet.css’&gt;</p>
+
+
+
+<ul><li><a rel="noreferrer noopener" href="https://leafletjs.com/examples/quick-start/" target="_blank">快速產生</a></li><li><a href="https://leafletjs.com/reference-1.6.0.html#map-example" target="_blank" rel="noreferrer noopener">Map</a></li></ul>
+
+
+
+<p><a rel="noreferrer noopener" href="https://github.com/donma/TaiwanAddressCityAreaRoadChineseEnglishJSON" target="_blank">台灣縣市鄉鎮 JSON</a></p>
+
+
+
+<p><a rel="noreferrer noopener" href="https://leafletjs.com/reference-1.6.0.html#tilelayer" target="_blank">TileLayer</a><br>台北座標 : [25.03, 121.55]</p>
+
+
+
+<p><a href="https://leafletjs.com/reference-1.6.0.html#marker" target="_blank" rel="noreferrer noopener">UI Layers</a></p>
+
+
+
+<p><a href="https://github.com/pointhi/leaflet-color-markers" target="_blank" rel="noreferrer noopener">Leaflet icons</a></p>
+
+
+
+<p><a rel="noreferrer noopener" href="https://leafletjs.com/reference-1.6.0.html#map-eachlayer" target="_blank">EachLayers</a><br><br><a rel="noreferrer noopener" href="https://leafletjs.com/reference-1.6.0.html#control-layers-removelayer" target="_blank">removeLayers</a><br><br><a rel="noreferrer noopener" href="https://leafletjs.com/reference-1.6.0.html#map-panto" target="_blank">penTo</a><br><br><a href="https://leafletjs.com/reference-1.6.0.html#popup" target="_blank" rel="noreferrer noopener">popUp</a></p>
+
+
+
+<p>連結到特定節點，並開啟視窗</p>
+
+
+
+<pre class="wp-block-code"><code>
+osmMap.panTo([geometry.coordinates[1], geometry.coordinates[0]]);
+osmMap.eachLayer((layer) => {
+  // eslint-disable-next-line no-underscore-dangle
+  if (layer._zIndex === item.zIndex) {
+    layer.openPopup();
+  }
+});</code></pre>
+
+
+
+<h4>個人筆記</h4>
+
+
+
+<p>Vue CLI<br>npm install -g @vue/cli<br>vue –version</p>
+
+
+
+<p>vue create maskgo<br>Manually select features<br>Babel、CSS Pre-processors、Linter / Formatter<br>Sass/SCSS (with node-sass)<br>ESLint + Airbnb config<br>Lint on save<br>In dedicated config files<br>N</p>
+
+
+
+<p>停止服務: Ctrl + c<br>indent-rainbow 方便程式碼檢視</p>
+
+
+
+<p>安裝bootstrap 套件<br>npm install bootstrap<br>並導入到style @import&nbsp;‘bootstrap/scss/bootstrap’;<br>安裝<a rel="noreferrer noopener" href="https://www.npmjs.com/package/vue-axios" target="_blank">vue-axios</a>&nbsp;套件<br>npm&nbsp;install&nbsp;–save&nbsp;axios&nbsp;vue-axios</p>
+
+
+
+<p>安裝<a rel="noreferrer noopener" href="https://www.npmjs.com/package/vue-axios" target="_blank">vue-axios</a>&nbsp;套件<br>npm&nbsp;install&nbsp;–save&nbsp;axios&nbsp;vue-axios</p>
+
+
+
+<p>ESLint&nbsp;+&nbsp;Airbnb&nbsp;config&nbsp;規則<br>外部套件<br>內部套件</p>
+
+
+
+<p>Vue.js devtools 擴充套件</p>
+
+
+
+<p>Using a JavaScript package manager<br>npm install leaflet<br>因為 leaflet圖標顯示有問題另外載入css cdn</p>
+
+
+
+<pre class="wp-block-code"><code>pharmacies.forEach((pharmacy) => {
+        // 寫法一
+        L.marker([
+          pharmacy.geometry.coordinates[1],
+          pharmacy.geometry.coordinates[0],
+        ]).addTo(osmMap);
+        // 寫法二
+        const { properties, geometry } = pharmacy;
+        L.marker([
+          geometry.coordinates[1],
+          geometry.coordinates[0],
+        ]).addTo(osmMap);
+
+        console.log(properties);
+      });</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 移除標示
+    removeMarker() {
+      osmMap.eachLayer((layer) => {
+        if (layer instanceof L.Marker) {
+          osmMap.removeLayer(layer);
+        }
+      });
+    },</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// panTo 移動區域
+    panTo(item) {
+      const { properties, geometry } = item;
+      console.log(properties);
+      osmMap.panTo([geometry.coordinates[1], geometry.coordinates[0]]);
+    },</code></pre>
+
+
+
+<h4>Vuejs部署GitHub Pages</h4>
+
+
+
+<p>Git&amp;GitHub<br><br>遠端數據庫新增數據庫<br>Repository name、Public、Create repository</p>
+
+
+
+<p>Git<br><br>cd project<br>git init<br>git add .<br>git commit -m ‘first commit’<br><br>git remote add origin →https://github.com/username/project.git<br>git push -u origin master</p>
+
+
+
+<p>Vue.js Push 到 Pages<br><br>cd project<br>npm run build<br>cd dist<br>git init<br>git add .<br>git commit -m ‘first’<br>git push -f https://github.com/username/project.git master:gh-pages</p>
+
+
+
+<p>Vue CLI3<br>Vue Cli3 則是 vue.config.js，輸入以下程式碼。</p>
+
+
+
+<pre class="wp-block-preformatted">module.exports = {
+  publicPath: './'
+}</pre>
+
+
+
+<p>問題: 有些縣市和地區，因為地區有重複所以會有地圖標示錯誤地點的情形，例如大安區、東區…等等。</p>
+
+
+
+<h4>口罩地圖學習:<a rel="noreferrer noopener" href="https://geehsu.github.io/maskgo/" target="_blank">口罩地圖Vue-.js 學習版</a></h4>
+	</div><!-- .entry-content -->
+
+</article><!-- #post-## -->
+
 <article id="post-141" class="post-141 post type-post status-publish format-standard hentry category-hexschool">
 	
 	
@@ -1270,29 +1546,6 @@ img.emoji {
 
 </article><!-- #post-## -->
 
-<article id="post-71" class="post-71 post type-post status-publish format-standard hentry category-about">
-	
-	
-	<header class="entry-header">
-		<span class="cat-links"><span class="screen-reader-text">發表於</span> <a href="https://geehsu.github.io/wordpress_blog/category/about/" rel="category tag">關於</a></span>		<h2 class="entry-title"><a href="https://geehsu.github.io/wordpress_blog/theme/" rel="bookmark">網站主題來源</a></h2>		<div class="entry-meta">
-			<span class="posted-on">發表於<a href="https://geehsu.github.io/wordpress_blog/theme/" rel="bookmark"><time class="entry-date published" datetime="2019-11-05T13:55:33+08:00">2019 年 11 月 5 日</time><time class="updated" datetime="2019-11-05T14:11:03+08:00">2019 年 11 月 5 日</time></a></span><span class="byline"> 由<span class="author vcard"><a class="url fn n" href="https://geehsu.github.io/wordpress_blog/author/gee-hsu/">gee.hsu</a></span>撰寫</span>					</div><!-- .entry-meta -->
-			</header><!-- .entry-header -->
-
-	<div class="entry-content">
-		
-<p class="has-medium-font-size">WordPress theme comes from Scratchpad</p>
-
-
-
-<h3>Say thanks to Scratchpad By&nbsp;<a href="https://wordpress.org/themes/author/automattic/" target="_blank" rel="noreferrer noopener" aria-label=" (在新分頁中開啟)">Automattic</a> </h3>
-
-
-
-<figure class="wp-block-image"><img src="https://geehsu.github.io/wordpress_blog/wp-content/uploads/2019/11/screenshot-1024x768.png" alt="" class="wp-image-72" srcset="https://geehsu.github.io/wordpress_blog/wp-content/uploads/2019/11/screenshot-1024x768.png 1024w, https://geehsu.github.io/wordpress_blog/wp-content/uploads/2019/11/screenshot-300x225.png 300w, https://geehsu.github.io/wordpress_blog/wp-content/uploads/2019/11/screenshot-768x576.png 768w, https://geehsu.github.io/wordpress_blog/wp-content/uploads/2019/11/screenshot-1000x750.png 1000w, https://geehsu.github.io/wordpress_blog/wp-content/uploads/2019/11/screenshot-400x300.png 400w, https://geehsu.github.io/wordpress_blog/wp-content/uploads/2019/11/screenshot.png 1200w" sizes="(max-width: 1024px) 100vw, 1024px" /><figcaption> A colorful theme for collecting your ideas. <br> <a href="https://wordpress.org/themes/scratchpad/" target="_blank" rel="noreferrer noopener" aria-label=" (在新分頁中開啟)">https://wordpress.org/themes/scratchpad/</a> </figcaption></figure>
-	</div><!-- .entry-content -->
-
-</article><!-- #post-## -->
-
 	<nav class="navigation posts-navigation" role="navigation">
 		<h2 class="screen-reader-text">文章導覽</h2>
 		<div class="nav-links"><div class="nav-previous"><a href="https://geehsu.github.io/wordpress_blog/author/gee-hsu/page/2/" >較舊的文章</a></div></div>
@@ -1302,6 +1555,10 @@ img.emoji {
 
 	<aside id="secondary" class="widget-area" role="complementary">
 				<section id="recent-posts-2" class="widget widget_recent_entries">		<h2 class="widget-title">近期文章</h2>		<ul>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/wheremask/">示範：使用 Vuejs 結合 Open Street Map 製作口罩地圖</a>
+											<span class="post-date">2020 年 3 月 15 日</span>
+									</li>
 											<li>
 					<a href="https://geehsu.github.io/wordpress_blog/maskonmap/">Leaflet + OpenStreetMap 地圖應用開發 ─ 學習</a>
 											<span class="post-date">2020 年 2 月 12 日</span>
@@ -1338,20 +1595,17 @@ img.emoji {
 					<a href="https://geehsu.github.io/wordpress_blog/the-net-ninja/">The Net Ninja</a>
 											<span class="post-date">2019 年 11 月 9 日</span>
 									</li>
-											<li>
-					<a href="https://geehsu.github.io/wordpress_blog/theme/">網站主題來源</a>
-											<span class="post-date">2019 年 11 月 5 日</span>
-									</li>
 					</ul>
 		</section><section id="archives-2" class="widget widget_archive"><h2 class="widget-title">彙整</h2>		<ul>
-				<li><a href='https://geehsu.github.io/wordpress_blog/2020/02/'>2020 年 2 月</a>&nbsp;(1)</li>
+				<li><a href='https://geehsu.github.io/wordpress_blog/2020/03/'>2020 年 3 月</a>&nbsp;(1)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2020/02/'>2020 年 2 月</a>&nbsp;(1)</li>
 	<li><a href='https://geehsu.github.io/wordpress_blog/2020/01/'>2020 年 1 月</a>&nbsp;(1)</li>
 	<li><a href='https://geehsu.github.io/wordpress_blog/2019/11/'>2019 年 11 月</a>&nbsp;(11)</li>
 		</ul>
 			</section><section id="categories-2" class="widget widget_categories"><h2 class="widget-title">分類</h2>		<ul>
-				<li class="cat-item cat-item-3"><a href="https://geehsu.github.io/wordpress_blog/category/post/">文章</a> (9)
+				<li class="cat-item cat-item-3"><a href="https://geehsu.github.io/wordpress_blog/category/post/">文章</a> (10)
 <ul class='children'>
-	<li class="cat-item cat-item-12"><a href="https://geehsu.github.io/wordpress_blog/category/post/hexschool/">六角學院</a> (6)
+	<li class="cat-item cat-item-12"><a href="https://geehsu.github.io/wordpress_blog/category/post/hexschool/">六角學院</a> (7)
 </li>
 </ul>
 </li>
@@ -1359,7 +1613,7 @@ img.emoji {
 </li>
 		</ul>
 			</section><section id="calendar-3" class="widget widget_calendar"><div id="calendar_wrap" class="calendar_wrap"><table id="wp-calendar">
-	<caption>2020 年 2 月</caption>
+	<caption>2020 年 3 月</caption>
 	<thead>
 	<tr>
 		<th scope="col" title="星期一">一</th>
@@ -1374,7 +1628,7 @@ img.emoji {
 
 	<tfoot>
 	<tr>
-		<td colspan="3" id="prev"><a href="https://geehsu.github.io/wordpress_blog/2020/01/">&laquo; 1 月</a></td>
+		<td colspan="3" id="prev"><a href="https://geehsu.github.io/wordpress_blog/2020/02/">&laquo; 2 月</a></td>
 		<td class="pad">&nbsp;</td>
 		<td colspan="3" id="next" class="pad">&nbsp;</td>
 	</tr>
@@ -1382,20 +1636,23 @@ img.emoji {
 
 	<tbody>
 	<tr>
-		<td colspan="5" class="pad">&nbsp;</td><td>1</td><td>2</td>
+		<td colspan="6" class="pad">&nbsp;</td><td>1</td>
 	</tr>
 	<tr>
-		<td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td>
+		<td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td>
 	</tr>
 	<tr>
-		<td>10</td><td>11</td><td id="today"><a href="https://geehsu.github.io/wordpress_blog/2020/02/12/" aria-label="文章發佈於 2020 年 2 月 12 日">12</a></td><td>13</td><td>14</td><td>15</td><td>16</td>
+		<td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td id="today"><a href="https://geehsu.github.io/wordpress_blog/2020/03/15/" aria-label="文章發佈於 2020 年 3 月 15 日">15</a></td>
 	</tr>
 	<tr>
-		<td>17</td><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td>
+		<td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td>
 	</tr>
 	<tr>
-		<td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td>
-		<td class="pad" colspan="1">&nbsp;</td>
+		<td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td>
+	</tr>
+	<tr>
+		<td>30</td><td>31</td>
+		<td class="pad" colspan="5">&nbsp;</td>
 	</tr>
 	</tbody>
 	</table></div></section>	</aside><!-- #secondary -->

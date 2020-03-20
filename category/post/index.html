@@ -122,6 +122,370 @@ img.emoji {
 				<h1 class="page-title">分類: 文章</h1>			</header><!-- .page-header -->
 
 			
+<article id="post-150" class="post-150 post type-post status-publish format-standard hentry category-ninja">
+	
+	
+	<header class="entry-header">
+		<span class="cat-links"><span class="screen-reader-text">發表於</span> <a href="https://geehsu.github.io/wordpress_blog/category/post/ninja/" rel="category tag">The Net Ninja</a></span>		<h2 class="entry-title"><a href="https://geehsu.github.io/wordpress_blog/html-tutorial-for-beginers/" rel="bookmark">HTML Tutorial for Beginers</a></h2>		<div class="entry-meta">
+			<span class="posted-on">發表於<a href="https://geehsu.github.io/wordpress_blog/html-tutorial-for-beginers/" rel="bookmark"><time class="entry-date published" datetime="2020-03-20T11:05:53+08:00">2020 年 3 月 20 日</time><time class="updated" datetime="2020-03-20T11:06:18+08:00">2020 年 3 月 20 日</time></a></span><span class="byline"> 由<span class="author vcard"><a class="url fn n" href="https://geehsu.github.io/wordpress_blog/author/gee-hsu/">gee.hsu</a></span>撰寫</span>					</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		
+<h2>01 – HTML Introduction</h2>
+
+
+
+<p>…Just an introduction<br>What You Need to Know<br>1. Nothing<br>What We’ll Cover<br>1. What HTML is<br>2. Structure of a HTML Document<br>3. HTML editing software<br>4. How to create a webpage<br>5. Text, links, lists and images<br>6. Various other HTML tags<br>7. Adding CSS to a webpage<br>8. Adding JavaScript to a webpage</p>
+
+
+
+<h2>02 – What is HTML?</h2>
+
+
+
+<p>HTML Basics<br>What is HTML?<br><br>HTML STANDS FOR:<br>Hyper Text Markup Language<br><br>3 Awesome Technologies<br>HTML – The structure of a web page<br>CSS – The styling of a web page<br>JavaScript – Making a web page interactive<br><br>HTML Tags<br>&lt;p&gt; Paragraph text &lt;/p&gt;<br>&lt;a&gt; Link to another page &lt;/a&gt;<br>&lt;h1&gt; Headings &lt;/h1&gt;<br>&lt;blockquote&gt; Quotes &lt;/blockquote&gt;</p>
+
+
+
+<h2>03 – HTML Syntax &amp; Structure</h2>
+
+
+
+<p>HTML Basics<br>HTML Syntax &amp; Structure<br><br>HTML Syntax<br><br>HTML is a Markup Language<br>We use tags &lt;&gt; to mark content up<br><br>Example<br>&lt;h1&gt;This is a header&lt;/h1&gt;<br><br>Syntax Summary<br>* HTML uses tags &lt;&gt; &lt;/&gt; to present content<br>* There are many different tags<br>* Tags can contain attributes &lt;p class=”myclass”&gt;<br>* Tags can be nested in other tags<br>* Tags are normally indented when nested for readability</p>
+
+
+
+<h2>04 – Your First Web Page</h2>
+
+
+
+<p>HTML Basics<br>Your First Web Page</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!doctype html>
+&lt;html>
+ &lt;head>
+  &lt;meta charset="utf-8" />
+  &lt;title>My first web page&lt;/title>
+ &lt;/head>
+ &lt;body>
+  &lt;h1>My first web page&lt;/h1>
+  &lt;p>Yo guys, hope you like my website, we sell fish.&lt;/p>
+&lt;/html></code></pre>
+
+
+
+<h2>05 – Head and Body Tag</h2>
+
+
+
+<p>HTML Basics<br>The Head and Body<br><br>Head and Body tags<br>* The &lt;head&gt; tag contains all the ‘extra’ information about a web page<br>– Meta data<br>– CSS &amp; JavaScript references<br>* The &lt;body&gt; contains all visual content<br>– Headings, images, paragraphs etc</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!doctype html>
+
+&lt;html>
+ &lt;head>
+  &lt;meta charset="utf-8" />
+  &lt;meta name="keywords" content="fish, smelly, trout, salmon, shark">
+  &lt;meta name="description" content="We sell the smelliest fish online, guranteed!">
+  &lt;title>Mr Green's Smelly Fish Emporium&lt;/title>
+  &lt;link rel="stylesheet" type="text/css" href="css/main.css">
+ &lt;/head>
+ &lt;body>
+  &lt;h1>My first web page&lt;/h1>
+  &lt;p>Yo guys, hope you like my website, we sell fish.&lt;/p>
+ &lt;/body>
+
+&lt;/html></code></pre>
+
+
+
+<h2>06 – Headings and Text</h2>
+
+
+
+<pre class="wp-block-code"><code>&lt;h1>This is a h1 tag&lt;/h1>
+&lt;h2>This is a h2 tag&lt;/h2>
+&lt;h3>This is a h3 tag&lt;/h3>
+&lt;h4>This is a h4 tag&lt;/h4>
+&lt;h5>This is a h5 tag&lt;/h5></code></pre>
+
+
+
+<pre class="wp-block-code"><code>&lt;p>We sell the smelliest fish on the planet&lt;/p>
+&lt;p>We sell the smelliest &lt;small>fish&lt;/small> on the planet&lt;/p>
+&lt;p>We sell the smelliest &lt;mark>fish&lt;/mark> on the planet&lt;/p>
+&lt;p>We sell the smelliest &lt;sub>fish&lt;/sub> on the planet&lt;/p>
+&lt;p>We sell the smelliest &lt;sup>fish&lt;sup> on the planet 10&lt;sup>4&lt;/sup>&lt;/p>
+&lt;p>&lt;pre>We sell the smelliest 
+fish on the planet&lt;/pre>&lt;/p></code></pre>
+
+
+
+<h2>07 – Heading Structure</h2>
+
+
+
+<h4>Structuring Headings</h4>
+
+
+
+<ul><li>Heading tags range from h1 to h6</li><li>We give sections of a page an appropriate heading depending on it’s hierarchy in the document</li></ul>
+
+
+
+<pre class="wp-block-code"><code>&lt;h1>Welcome to my smelly fish shop&lt;/h1>
+&lt;p>We sell the smelliest fish on the planet&lt;/p>
+
+&lt;h2>Types of Fish We Sell&lt;h2>
+&lt;h3>Freshwater Fish&lt;/h3>
+&lt;p>We are experts in catching many types of freshwater fish...&lt;/p>
+&lt;h3>Saltwater Fish&lt;/h3>
+&lt;p>We are experts in catching many types of Saltwater fish...&lt;/p>
+
+&lt;h2>About Us&lt;/h2>
+&lt;p>Mr Green's Smelly Fish Emporium prides itself on catching, preparing and delivering the smelliest fish right to your doorstep. Whether you like to cook them, feed them to your cat, or just hide them in your unruly neighbours porch, Mr Green has it covered!&lt;/p>
+
+&lt;h2>Contact Us&lt;/h2>
+&lt;p>You can contact Mr Green in various ways...&lt;/p>
+&lt;h3>By phone&lt;/h3>
+&lt;p>222-222-FISH&lt;p>
+&lt;h3>By Email&lt;/h3>
+&lt;p>iammrgreen@mrgreen.com&lt;/p>
+&lt;h1>By carrier pidgeon&lt;/h1>
+&lt;p>To do this, order your pidgeon at www.mrgreenspidgeonemporium.com&lt;/p>
+</code></pre>
+
+
+
+<h2>08 – Default Browser Styles</h2>
+
+
+
+<p>不同的瀏覽器有各自的預設樣式</p>
+
+
+
+<ul><li>IE</li><li>GOOGLE CHROME</li><li>FIREFOX</li></ul>
+
+
+
+<h2>09 – The img Tag</h2>
+
+
+
+<ul><li>&lt;img&gt;</li><li>We specify where the image is stored using the ‘src’ attribute</li><li>&lt;img src=”image-source-path.jpg”&gt;</li></ul>
+
+
+
+<pre class="wp-block-code"><code>&lt;img src="img/fish-banner.jpg"  alt="Mr Green's Fish Emporium"></code></pre>
+
+
+
+<h2>10 – HTML Links</h2>
+
+
+
+<h4>The Anchor Tag</h4>
+
+
+
+<ul><li>&lt;a href=”link-source”&gt;</li><li>Internal – links to pages in own website</li><li>External – links to other websites</li><li>Downloads – links to files</li><li>Anchors – links to specific areas on a page</li></ul>
+
+
+
+<pre class="wp-block-code"><code>&lt;a href="contact.html">Contact Us&lt;/a>
+&lt;a href="prices/freshwater-fish-prices.html">Price list&lt;/a>
+&lt;a href="../index.html">back to index&lt;/a>
+&lt;a href="https://www.thenetninja.co.uk/" target="_blank">Try out some awesome web tutorials&lt;/a>
+&lt;a href="downloads/all-prices.pdf">Download our full price list&lt;/a>
+&lt;div id="top">&lt;/div>
+&lt;a href="#top">to top&lt;/a></code></pre>
+
+
+
+<h2>11 – HTML Lists</h2>
+
+
+
+<h4>Types of Lists</h4>
+
+
+
+<ul><li>Unordered list – &lt;ul&gt; + &lt;li&gt;</li><li>Ordered list – &lt;ol&gt; + &lt;li&gt;</li><li>Definition list – &lt;dl&gt; + &lt;dt&gt; + &lt;dd&gt;</li></ul>
+
+
+
+<pre class="wp-block-code"><code>&lt;ul>
+  &lt;li>1&lt;/li>
+  &lt;li>2&lt;/li>
+  &lt;li>3&lt;/li>
+&lt;/ul>
+&lt;ol>
+  &lt;li>Step one&lt;/li>
+  &lt;li>Step two
+    &lt;ol>
+      &lt;li>Step 2.1&lt;/li>
+      &lt;li>Step 2.2&lt;/li>
+  &lt;/li>
+  &lt;li>Step three&lt;/li>
+&lt;/ol>
+&lt;dl>
+  &lt;dt>Unordered list&lt;/dt>
+  &lt;dd>Unordered list is a list without any consideration to order&lt;/dd>
+  &lt;dt>Ordered list&lt;/dt>
+  &lt;dd>This is a list in which order is important&lt;/dd>
+  &lt;dt>Definition list&lt;/dt>
+  &lt;dd>Definition list contains terms and descriptions, much like a dictionary&lt;/dd>
+&lt;/dl></code></pre>
+
+
+
+<h2>12 – HR and BR Tags</h2>
+
+
+
+<h3>Line Breaks and Horizontal Rules</h3>
+
+
+
+<pre class="wp-block-code"><code>&lt;hr>
+&lt;br></code></pre>
+
+
+
+<h2>13 – The div Tag</h2>
+
+
+
+<h4>The div tag explained</h4>
+
+
+
+<ul><li>div stands for ‘division’</li><li>Used to divide content into logical sections</li></ul>
+
+
+
+<pre class="wp-block-code"><code>&lt;div>&lt;/div></code></pre>
+
+
+
+<h2>14 – ID’s and Classes</h2>
+
+
+
+<ul><li>An ID is a UNIQUE identifier, used once on a page.<ul><li>E.g. header, about</li></ul></li><li>A Class is an identifier of an element which can be used multiple times on a page<ul><li>E.g. Comment (when there are multiple comments)</li></ul></li><li>Both are used for JS and CSS</li></ul>
+
+
+
+<pre class="wp-block-code"><code>&lt;div id="header>&lt;/div>
+&lt;div id="navigation>&lt;/div>
+&lt;div id="types-of-fish>&lt;/div>
+&lt;div id="about-us">&lt;/div>
+&lt;div id="contact-us">&lt;/div>
+
+&lt;div class="contact-method">&lt;/div>
+
+&lt;div id="comments">&lt;/div>
+&lt;div class="single-comment">&lt;/div></code></pre>
+
+
+
+<h2>15 – Adding CSS to HTML</h2>
+
+
+
+<h4>3 Ways to Add CSS</h4>
+
+
+
+<ol><li>Inline styling using the style attribute</li><li>Within &lt;style&gt; tags in the head of the document</li><li>By linking up a stylesheet in the head</li></ol>
+
+
+
+<pre class="wp-block-code"><code>&lt;a style="color: red;">&lt;/a></code></pre>
+
+
+
+<pre class="wp-block-code"><code>&lt;head>
+  &lt;style>
+    #navigation a{
+      color: red;
+    }
+  &lt;/style>
+&lt;/head></code></pre>
+
+
+
+<pre class="wp-block-code"><code>&lt;head>
+  &lt;link rel="stylesheet" type="text/css" href="css/main.css>
+&lt;/head>
+
+h1{
+  color: blue;
+  text-decoration: underline;
+  text-transform: uppercase;
+}</code></pre>
+
+
+
+<h2>16 – Adding JavaScript to HTML</h2>
+
+
+
+<h4>How To Add JavaScript</h4>
+
+
+
+<ul><li>In the &lt;script&gt; tag in the head or body</li><li>By linking a .js file in the head or body</li><li>Inline (not a good practise)</li></ul>
+
+
+
+<pre class="wp-block-code"><code>&lt;head>
+  &lt;script>
+    alert("Yo Ninja, welcome to my website!");
+  &lt;/script>
+&lt;/head></code></pre>
+
+
+
+<pre class="wp-block-code"><code>&lt;body>
+  &lt;script>
+    alert("Yo Ninja, welcome to my website!");
+  &lt;/script>
+&lt;/body></code></pre>
+
+
+
+<pre class="wp-block-code"><code>&lt;head>
+  &lt;script src="scripts/main.js">&lt;/script>
+&lt;/head>
+
+alert("Yo Ninja, welcome to my website!");</code></pre>
+
+
+
+<pre class="wp-block-code"><code>&lt;a onclick="alert('Yo Ninja, welcome to my website!');">&lt;/a></code></pre>
+
+
+
+<h2>17 – What To Do Next</h2>
+
+
+
+<p>Cool HTML websites for further learning:</p>
+
+
+
+<p><a href="https://webplatform.github.io/" target="_blank" rel="noreferrer noopener">webplatform</a><br><a rel="noreferrer noopener" href="https://www.html5rocks.com/en/" target="_blank">html5rocks</a></p>
+	</div><!-- .entry-content -->
+
+</article><!-- #post-## -->
+
 <article id="post-146" class="post-146 post type-post status-publish format-standard hentry category-hexschool">
 	
 	
@@ -1187,370 +1551,19 @@ osmMap.eachLayer((layer) => {
 
 </article><!-- #post-## -->
 
-<article id="post-83" class="post-83 post type-post status-publish format-standard hentry category-post">
-	
-	
-	<header class="entry-header">
-		<span class="cat-links"><span class="screen-reader-text">發表於</span> <a href="https://geehsu.github.io/wordpress_blog/category/post/" rel="category tag">文章</a></span>		<h2 class="entry-title"><a href="https://geehsu.github.io/wordpress_blog/the-net-ninja/" rel="bookmark">The Net Ninja</a></h2>		<div class="entry-meta">
-			<span class="posted-on">發表於<a href="https://geehsu.github.io/wordpress_blog/the-net-ninja/" rel="bookmark"><time class="entry-date published" datetime="2019-11-09T13:49:16+08:00">2019 年 11 月 9 日</time><time class="updated" datetime="2019-11-11T17:41:24+08:00">2019 年 11 月 11 日</time></a></span><span class="byline"> 由<span class="author vcard"><a class="url fn n" href="https://geehsu.github.io/wordpress_blog/author/gee-hsu/">gee.hsu</a></span>撰寫</span>					</div><!-- .entry-meta -->
-			</header><!-- .entry-header -->
-
-	<div class="entry-content">
-		
-<p>Say thanks to Shaun learned from <a rel="noreferrer noopener" aria-label=" (在新分頁中開啟)" href="https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg/videos" target="_blank">https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg/videos</a></p>
-
-
-
-<h2>HTML (超文本標記語言)</h2>
-
-
-
-<p>HTML Tutorials For Beginners</p>
-
-
-
-<h2>CSS (層疊樣式表)</h2>
-
-
-
-<p>CSS Tutorial For Beginners</p>
-
-
-
-<p>HTML &amp; CSS Crash Course Tutorial (HTML &amp; CSS 速成課程)</p>
-
-
-
-<p>Styling a HTML5 Form</p>
-
-
-
-<p>CSS Tips &amp; Tricks (CSS 指示 &amp; 謀略)</p>
-
-
-
-<h4>CSS Skills (CSS 技巧)</h4>
-
-
-
-<p>Responsive Web Design Tutorials (響應式網頁設計)</p>
-
-
-
-<p>CSS Flexbox Tutorial (彈性盒子)</p>
-
-
-
-<h4>CSS Specialization (CSS 專精)</h4>
-
-
-
-<p>CSS Positioning Tutorials (CSS 定位)</p>
-
-
-
-<p>CSS Animation Tutorial (CSS 動畫)</p>
-
-
-
-<p>CSS Grid Tutorial (CSS 格線)</p>
-
-
-
-<p>CSS Variables Tutorial (CSS 變數)</p>
-
-
-
-<h4>CSS preprocessor (CSS 預處理器)</h4>
-
-
-
-<p>SASS Tutorial ( Syntactically Awesome Stylesheets )</p>
-
-
-
-<h4>CSS Framework (CSS 框架)</h4>
-
-
-
-<p>Bootstrap 3 Tutorials<br>Bootstrap 4 Tutorials</p>
-
-
-
-<p>Materialize Tutorial</p>
-
-
-
-<h2>PSD系列</h2>
-
-
-
-<p>PSD to WordPress Tutorial<br>PSD to HTML &amp; CSS Series 1 (unresponsive)<br>PSD to Responsive Website Tutorial</p>
-
-
-
-<h2>JS</h2>
-
-
-
-<p>JavaScript Tutorials For Beginners</p>
-
-
-
-<p>Modern JavaScript Tutorial</p>
-
-
-
-<p>JavaScript Tips &amp; Tricks (JavaScript 指示 &amp; 謀略)</p>
-
-
-
-<h4>基本 DOM 操作</h4>
-
-
-
-<p>jQuery Tutorials For Beginners</p>
-
-
-
-<h4>JavaScript 技巧</h4>
-
-
-
-<p>JavaScript ES6 Tutorials</p>
-
-
-
-<p>JavaScript DOM Tutorial</p>
-
-
-
-<p>Object Oriented JavaScript</p>
-
-
-
-<p>Asynchronous JavaScript Tutorial</p>
-
-
-
-<p>D3 Tutorial – The Basics</p>
-
-
-
-<h2>JS Framework (JS 框架)</h2>
-
-
-
-<h4>Angular</h4>
-
-
-
-<p>Angular JS Tutorials<br>Angular 2 Tutorials</p>
-
-
-
-<h4>Vue</h4>
-
-
-
-<p>Vue JS 2 Tutorial</p>
-
-
-
-<p>Vuex Tutorial</p>
-
-
-
-<p>Real-time Chat with Vue &amp; Firebase (Preview)</p>
-
-
-
-<p>Vue CLI 3 Tutorial</p>
-
-
-
-<p>Vuetify Tutorial</p>
-
-
-
-<h4>React</h4>
-
-
-
-<p>React Tutorials</p>
-
-
-
-<p>Complete React Tutorial (with Redux)</p>
-
-
-
-<p>React, Redux &amp; Firebase App Tutorial</p>
-
-
-
-<p>React Context &amp; Hook Tutorial</p>
-
-
-
-<h2>Version Control (版本控制)</h2>
-
-
-
-<p>Git &amp; GitHub Tutorial For Beginners</p>
-
-
-
-<h2>管理工具</h2>
-
-
-
-<h4>任務管理工具</h4>
-
-
-
-<p>Grunt.js</p>
-
-
-
-<h4>Module Bundler (打包工具)</h4>
-
-
-
-<p>Webpack Tutorials for Beginners</p>
-
-
-
-<h2>Regular Expressions (正規表達式)</h2>
-
-
-
-<p>Regular Expressions (RegEx) Tutorial</p>
-
-
-
-<h2>開放授權</h2>
-
-
-
-<p>OAuth Login (Passport.js) Tutorial</p>
-
-
-
-<h2><strong>Representational State Transfer</strong>&nbsp;( 表現層狀態轉換 )</h2>
-
-
-
-<p>REST API Tutorials (Node, Express &amp; Mongo)</p>
-
-
-
-<h2>A query language for your API (一種用於 API 的查詢語言)</h2>
-
-
-
-<p>GraphQL Tutorial</p>
-
-
-
-<h2>文件導向的資料庫管理系統</h2>
-
-
-
-<p>MongoDB Tutorial for Beginners</p>
-
-
-
-<h2>網路傳輸協定</h2>
-
-
-
-<p>WebSockets Tutorial (Node &amp; Socket.io Chat App)</p>
-
-
-
-<h2>Node.js</h2>
-
-
-
-<p>Node JS Tutorial for Beginners</p>
-
-
-
-<h2>Python</h2>
-
-
-
-<p>Python 3 Tutorial For Beginners</p>
-
-
-
-<p>Django Tutorial (Create a Blog)</p>
-
-
-
-<h2>PHP</h2>
-
-
-
-<p>PHP Tutorial For Beginners</p>
-
-
-
-<p>Object Oriented PHP Tutorial</p>
-
-
-
-<h2>Firebase</h2>
-
-
-
-<p>Firebase Firestore Tutorial</p>
-
-
-
-<p>Firebase Auth Tutorial</p>
-
-
-
-<p>Firebase Hosting Tutorial</p>
-
-
-
-<h2>Progressing Web App (漸進式網站應用程式)</h2>
-
-
-
-<p>PWA Tutorial For Beginners</p>
-
-
-
-<h2>Flutter</h2>
-
-
-
-<p>Flutter Tutorial For Beginners</p>
-
-
-
-<p>Flutter &amp; Firebase App Build</p>
-
-
-
-<h2>Other (其他)</h2>
-
-
-
-<p>Screencasting Tutorial</p>
-	</div><!-- .entry-content -->
-
-</article><!-- #post-## -->
-
+	<nav class="navigation posts-navigation" role="navigation">
+		<h2 class="screen-reader-text">文章導覽</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="https://geehsu.github.io/wordpress_blog/category/post/page/2/" >較舊的文章</a></div></div>
+	</nav>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 	<aside id="secondary" class="widget-area" role="complementary">
 				<section id="recent-posts-2" class="widget widget_recent_entries">		<h2 class="widget-title">近期文章</h2>		<ul>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/html-tutorial-for-beginers/">HTML Tutorial for Beginers</a>
+											<span class="post-date">2020 年 3 月 20 日</span>
+									</li>
 											<li>
 					<a href="https://geehsu.github.io/wordpress_blog/wheremask/">示範：使用 Vuejs 結合 Open Street Map 製作口罩地圖</a>
 											<span class="post-date">2020 年 3 月 15 日</span>
@@ -1587,20 +1600,18 @@ osmMap.eachLayer((layer) => {
 					<a href="https://geehsu.github.io/wordpress_blog/learn-roadmap/">前端開發者 學習地圖</a>
 											<span class="post-date">2019 年 11 月 13 日</span>
 									</li>
-											<li>
-					<a href="https://geehsu.github.io/wordpress_blog/the-net-ninja/">The Net Ninja</a>
-											<span class="post-date">2019 年 11 月 9 日</span>
-									</li>
 					</ul>
 		</section><section id="archives-2" class="widget widget_archive"><h2 class="widget-title">彙整</h2>		<ul>
-				<li><a href='https://geehsu.github.io/wordpress_blog/2020/03/'>2020 年 3 月</a>&nbsp;(1)</li>
+				<li><a href='https://geehsu.github.io/wordpress_blog/2020/03/'>2020 年 3 月</a>&nbsp;(2)</li>
 	<li><a href='https://geehsu.github.io/wordpress_blog/2020/02/'>2020 年 2 月</a>&nbsp;(1)</li>
 	<li><a href='https://geehsu.github.io/wordpress_blog/2020/01/'>2020 年 1 月</a>&nbsp;(1)</li>
 	<li><a href='https://geehsu.github.io/wordpress_blog/2019/11/'>2019 年 11 月</a>&nbsp;(11)</li>
 		</ul>
 			</section><section id="categories-2" class="widget widget_categories"><h2 class="widget-title">分類</h2>		<ul>
-				<li class="cat-item cat-item-3 current-cat"><a href="https://geehsu.github.io/wordpress_blog/category/post/">文章</a> (10)
+				<li class="cat-item cat-item-3 current-cat"><a href="https://geehsu.github.io/wordpress_blog/category/post/">文章</a> (11)
 <ul class='children'>
+	<li class="cat-item cat-item-13"><a href="https://geehsu.github.io/wordpress_blog/category/post/ninja/">The Net Ninja</a> (1)
+</li>
 	<li class="cat-item cat-item-12"><a href="https://geehsu.github.io/wordpress_blog/category/post/hexschool/">六角學院</a> (7)
 </li>
 </ul>
@@ -1638,10 +1649,10 @@ osmMap.eachLayer((layer) => {
 		<td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td>
 	</tr>
 	<tr>
-		<td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td id="today"><a href="https://geehsu.github.io/wordpress_blog/2020/03/15/" aria-label="文章發佈於 2020 年 3 月 15 日">15</a></td>
+		<td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td><a href="https://geehsu.github.io/wordpress_blog/2020/03/15/" aria-label="文章發佈於 2020 年 3 月 15 日">15</a></td>
 	</tr>
 	<tr>
-		<td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td>
+		<td>16</td><td>17</td><td>18</td><td>19</td><td id="today"><a href="https://geehsu.github.io/wordpress_blog/2020/03/20/" aria-label="文章發佈於 2020 年 3 月 20 日">20</a></td><td>21</td><td>22</td>
 	</tr>
 	<tr>
 		<td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td>

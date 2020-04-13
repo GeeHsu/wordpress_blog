@@ -117,6 +117,340 @@ img.emoji {
 		<main id="main" class="site-main" role="main">
 
 		
+<article id="post-153" class="post-153 post type-post status-publish format-standard hentry category-ninja">
+	
+	
+	<header class="entry-header">
+		<span class="cat-links"><span class="screen-reader-text">發表於</span> <a href="https://geehsu.github.io/wordpress_blog/category/post/ninja/" rel="category tag">The Net Ninja</a></span>		<h2 class="entry-title"><a href="https://geehsu.github.io/wordpress_blog/css-variables-tutorial/" rel="bookmark">CSS Variables Tutorial</a></h2>		<div class="entry-meta">
+			<span class="posted-on">發表於<a href="https://geehsu.github.io/wordpress_blog/css-variables-tutorial/" rel="bookmark"><time class="entry-date published updated" datetime="2020-04-13T09:13:13+08:00">2020 年 4 月 13 日</time></a></span><span class="byline"> 由<span class="author vcard"><a class="url fn n" href="https://geehsu.github.io/wordpress_blog/author/gee-hsu/">gee.hsu</a></span>撰寫</span>					</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		
+<h2>#1 – What are CSS Variables?</h2>
+
+
+
+<p>什麼是 CSS 變量?</p>
+
+
+
+<h4>Why CSS Variables?</h4>
+
+
+
+<pre class="wp-block-code"><code>.intro-text{
+  color: #ee44f9;
+  margin: 20px;
+  font-size: 2em;
+  font-weight: bold;
+}
+.outro-text{
+  color: #ee44f9;
+  margin: 10px;
+  font-size: 1em;
+}
+.blurb{
+  color: #ee44f9;
+  margin: 0;
+}</code></pre>
+
+
+
+<p>“primary-colour” variable</p>
+
+
+
+<h2>Custom Properties</h2>
+
+
+
+<ul><li>CSS Variables are also known as “Custom Properties”</li><li>They look like regular CSS properties, with a — before them<ul><li>–my-property: value;</li></ul></li><li>CSS Variables == Custom Properties</li></ul>
+
+
+
+<p>範例程式碼</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html>
+&lt;html>
+    &lt;head>
+        &lt;meta charset="utf-8">
+        &lt;title>CSS Variables&lt;/title>
+        &lt;link rel="stylesheet" href="styles.css">
+    &lt;/head>
+    &lt;body>
+        &lt;header>
+            &lt;nav class="main-nav">
+                &lt;ul>
+                    &lt;li>&lt;a href="">Home&lt;/a>&lt;/li>
+                    &lt;li>&lt;a href="">About&lt;/a>&lt;/li>
+                    &lt;li>&lt;a href="">Contact&lt;/a>&lt;/li>
+                &lt;/ul>
+            &lt;/nav>
+        &lt;/header>
+        &lt;main>
+            &lt;div class="banner">
+                &lt;h1>Mario &amp; Luigi&lt;/h1>
+                &lt;p>Plumbing Extravaganzas&lt;/p>
+            &lt;/div>
+            &lt;div class="content">
+                &lt;div class="spot">
+                    &lt;h2>We Love All Kinds of Pipes...&lt;/h2>
+                    &lt;p>Lorizzle ipsum crunk brizzle amet, gizzle cool elizzle. Nullam dawg velizzle, aliquet volutpizzle, suscipizzle dizzle, gravida yippiyo, arcu. Pellentesque eget check it out. Fo shizzle my nizzle erizzle. Boom shackalack bling bling dolor turpizzle go to hizzle tempor. Yippiyo mah nizzle nibh et turpizzle. Yo izzle da bomb. Daahng dawg eleifend rhoncus daahng dawg. In hac habitasse fo shizzle dictumst. Yo mamma dapibizzle.&lt;/p>
+                    &lt;a href="#">More info...&lt;/a>
+                &lt;/div>
+                &lt;div class="spot">
+                    &lt;h2>In Fact, we're Piping-Mad&lt;/h2>
+                    &lt;p>I saw beyonces tizzles and my pizzle went crizzle tellus urna, pretium own yo', mattis away, eleifend we gonna chung, nunc. Daahng dawg suscipizzle. Integer sempizzle velizzle sizzle mah nizzle.&lt;/p>
+                    &lt;a href="#">More info...&lt;/a>
+                &lt;/div>
+                &lt;div class="spot">
+                    &lt;h2>Any Shape and Any Size...&lt;/h2>
+                    &lt;p>Phasellizzle interdum volutpizzle shizzlin dizzle. Ut semper adipiscing shiz. Ma nizzle sure est. Nulla sapizzle ass, ultrices nec, accumsizzle pizzle, rizzle quis, pede. Dizzle nec shit. Etizzle rutrizzle ornare ante. Maurizzle its fo rizzle. Vestibulum izzle pede varius nibh commodo commodo.&lt;/p>
+                    &lt;a href="#">More info...&lt;/a>
+                &lt;/div>
+                &lt;div class="spot">
+                    &lt;h2>No Job is Too Big&lt;/h2>
+                    &lt;p>Mofo yo mamma dolor sizzle boofron, consectetizzle adipiscing elit. Hizzle izzle shizzle my nizzle crocodizzle. Quisque mi crackalackin, sodalizzle izzle, crackalackin a, eleifend nizzle, boofron.&lt;/p>
+                    &lt;a href="#">More info...&lt;/a>
+                &lt;/div>
+            &lt;/div>
+        &lt;/main>
+        &lt;footer>
+            &lt;div class="blurbs">
+                &lt;div class="blurb">
+                    &lt;h3>Blurb title&lt;/h3>
+                    &lt;p>Etizzle a magna dang mammasay mammasa mamma oo sa accumsizzle.&lt;/p>
+                &lt;/div>
+                &lt;div class="blurb">
+                    &lt;h3>Blurb title&lt;/h3>
+                    &lt;p>Funky fresh in stuff. Yo mamma mauris dolor, shit vitae, its fo rizzle.&lt;/p>
+                &lt;/div>
+                &lt;div class="blurb">
+                    &lt;h3>Blurb title&lt;/h3>
+                    &lt;p>Vestibulizzle ante ipsizzle sure dope orci luctus et ultrices posuere shizzle.&lt;/p>
+                &lt;/div>
+            &lt;/div>
+        &lt;/footer>
+    &lt;/body>
+&lt;/html></code></pre>
+
+
+
+<pre class="wp-block-code"><code>/* --- Variables --- */
+
+/* --- Main styles --- */
+
+h1, h2, h3{
+    font-weight: normal;
+}
+
+body{
+    margin: 0;
+    font-family: Verdana;
+}
+
+nav.main-nav ul{
+    width: 600px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav a{
+    color: #daa33e;
+}
+
+.banner{
+    background: #3e84da;
+    color: #fff;
+    font-size: 1.6em;
+    text-align: center;
+    padding: 100px 0 160px;
+}
+
+.content{
+    width: 760px;
+    margin: 0 auto;
+    position: relative;
+    top: -100px;
+    padding: 40px 60px;
+    background: #fff
+}
+
+.spot{
+    margin: 0 40px 80px;
+    text-align: center;
+}
+
+.spot h2{
+    color: #3e84da;
+}
+
+.spot p{
+    color: #333;
+    line-height: 2em;
+    font-size: 0.9em
+}
+
+.content a{
+    color: #daa33e;
+    font-size: 1.2em;
+}
+
+footer{
+    background: #ddd;
+    padding: 60px 0
+}
+
+footer .blurbs{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 760px;
+    margin: 0 auto;
+    grid-gap: 40px;
+}
+
+footer .blurb{
+    text-align: center;
+    color: #333;
+    line-height: 2em;
+    font-size: 0.9em
+}</code></pre>
+
+
+
+<p><a rel="noreferrer noopener" href="https://github.com/iamshaunjp/CSS-Variables" target="_blank">Course files</a><br><a rel="noreferrer noopener" href="https://caniuse.com/#home" target="_blank">Can I use?</a></p>
+
+
+
+<h2>#2 – Declaring Variables</h2>
+
+
+
+<p>範例程式碼</p>
+
+
+
+<pre class="wp-block-code"><code>/* --- Variables --- */
+
+:root{
+  --theme-color: #3e84da;
+  --link-color: #daa33e;
+}
+
+/* --- Main styles --- */
+nav a{
+  color: var(--link-color);
+}
+
+.banner{
+  background: var(--theme-color);
+  color: #fff;
+  font-size: 1.6em;
+  text-align: center;
+  padding: 100px 0 160px;
+}
+
+.spot h2{
+  color: var(--theme-color);
+}
+
+.content a{
+  color: var(--link-color);
+  font-size: 1.2em;
+}</code></pre>
+
+
+
+<h2>#3 – CSS Variable Benefits</h2>
+
+
+
+<p>範例程式碼</p>
+
+
+
+<pre class="wp-block-code"><code>/* --- Variables --- */
+:root{
+  --theme-color: #3e84da;
+  --link-color: #daa33e;
+  --layout: 1fr 1fr 1fr;
+
+nav{
+  --link-color: #000;
+}
+
+@media screen and (max-width: 760px){
+  :root{
+    --layout: 1fr;
+  }
+}
+
+/* --- Main styles --- */
+
+footer .blurbs{
+  display: grid;
+  grid-template-columns: var(--layout);
+  max-width: 760px;
+  margin: 0 auto;
+  gap: 40px;
+}</code></pre>
+
+
+
+<h2>#4 – CSS Variables &amp; JavaScript</h2>
+
+
+
+<p>swatch 色板</p>
+
+
+
+<p>範例程式碼</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;header>
+  &lt;div class="swatches">
+    &lt;span style="background: #222;">&lt;/span>
+    &lt;span style="background: #f76262;">&lt;/span>
+    &lt;span style="background: #3e84da;">&lt;/span>
+    &lt;span style="background: #ebb332;">&lt;/span>
+  &lt;/div>
+&lt;/header>
+
+&lt;script type="text/javascript" src="js/swatches.js">&lt;/script></code></pre>
+
+
+
+<pre class="wp-block-code"><code>.swatches span{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+  cursor: pointer;
+}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>var swatches = document.querySelectorAll('.swatches span');
+var root = document.querySelector(':root');
+
+swatches.forEach((swatch)=>{
+  swatch.addEventListener('click',(e)=>{
+    root.style.setProperty('--theme-color',e.target.style.background);
+  });
+});</code></pre>
+	</div><!-- .entry-content -->
+
+</article><!-- #post-## -->
+
 <article id="post-150" class="post-150 post type-post status-publish format-standard hentry category-ninja">
 	
 	
@@ -480,7 +814,17 @@ alert("Yo Ninja, welcome to my website!");</code></pre>
 	</div><!-- .entry-content -->
 
 </article><!-- #post-## -->
-
+<div class="separator"><svg class="little-pencil" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1013.5px" height="72.3px" viewBox="0 0 1013.5 72.3" style="enable-background:new 0 0 1013.5 72.3;" xml:space="preserve" aria-hidden="true">
+<path class="pencil-little0" d="M10,0C10,0,0,10.9,0,35.8c0,28.2,10,36.5,10,36.5h841.4V0H10z"/>
+<path class="pencil-little1" d="M57,0c0,0-10,10.9-10,35.8c0,28.2,10,36.5,10,36.5h821.4V0L57,0z"/>
+<path class="pencil-little2" d="M101,0c0,0-10,10.9-10,35.8c0,28.2,10,36.5,10,36.5h821.4V0L101,0z"/>
+<rect x="92.7" y="24.3" class="pencil-little3" width="829.7" height="22.8"/>
+<polygon class="pencil-little4" points="92.7,49.5 101,72.3 922.4,72.3 922.4,49.5 "/>
+<path class="pencil-little5" d="M1013.5,36.1l-91.2,36.1c0,0-8.4-9.8-8.4-36.1S922.4,0,922.4,0L1013.5,36.1z"/>
+<path class="pencil-little6" d="M1013.5,36.1l-33.5,13.3c0,0-3.1-3.6-3.1-13.3s3.1-13.3,3.1-13.3L1013.5,36.1z"/>
+<path class="pencil-little5" d="M922.4,72.3c0,0-12.7-5.4-14-10C907,57.7,914,53,914,49.4s-10-7.8-10-13.6s10-7.8,10-12.9s-5.7-8.3-5.7-13.6s14-9.3,14-9.3l11,35.8L922.4,72.3z"/>
+</svg>
+</div>
 <article id="post-146" class="post-146 post type-post status-publish format-standard hentry category-hexschool">
 	
 	
@@ -756,21 +1100,7 @@ osmMap.eachLayer((layer) => {
 	</div><!-- .entry-content -->
 
 </article><!-- #post-## -->
-<div class="separator"><svg version="1.1" class="grip-pencil" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="841.1px" height="54.3px" viewBox="0 0 841.1 54.3" style="enable-background:new 0 0 841.1 54.3;" xml:space="preserve">
-<polygon class="grip-pencil0" points="37.5,35.8 16.8,35.8 0,30.4 16.8,25.3 37.5,25.3 "/>
-<polygon class="grip-pencil1" points="202.2,51.5 40.7,44.5 40.7,16.5 202.2,9.5 "/>
-<rect x="202.2" y="9.5" class="grip-pencil2" width="585.3" height="42"/>
-<rect x="787.5" y="16.4" class="grip-pencil3" width="53.6" height="28.2"/>
-<rect x="705.7" y="6.8" class="grip-pencil3" width="33" height="47.5"/>
-<rect x="21.3" y="20.9" class="grip-pencil1" width="43.5" height="20.7"/>
-<g>
-	<rect x="526.5" class="grip-pencil3" width="171.5" height="13.3"/>
-	<polygon class="grip-pencil4" points="698,0.4 706.5,10 706.5,21.9 698,12.5 	"/>
-</g>
-<polygon class="grip-pencil3" points="97,14.1 40.7,16.5 40.7,44.5 97,47 "/>
-<path class="grip-pencil5" d="M550,13.3c0,0-13.2,6.2-18.5,6.2s-5-6.2-5-6.2H550z"/>
-</svg>
-</div>
+
 <article id="post-141" class="post-141 post type-post status-publish format-standard hentry category-hexschool">
 	
 	
@@ -916,7 +1246,21 @@ osmMap.eachLayer((layer) => {
 	</div><!-- .entry-content -->
 
 </article><!-- #post-## -->
-
+<div class="separator"><svg version="1.1" class="grip-pencil" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="841.1px" height="54.3px" viewBox="0 0 841.1 54.3" style="enable-background:new 0 0 841.1 54.3;" xml:space="preserve">
+<polygon class="grip-pencil0" points="37.5,35.8 16.8,35.8 0,30.4 16.8,25.3 37.5,25.3 "/>
+<polygon class="grip-pencil1" points="202.2,51.5 40.7,44.5 40.7,16.5 202.2,9.5 "/>
+<rect x="202.2" y="9.5" class="grip-pencil2" width="585.3" height="42"/>
+<rect x="787.5" y="16.4" class="grip-pencil3" width="53.6" height="28.2"/>
+<rect x="705.7" y="6.8" class="grip-pencil3" width="33" height="47.5"/>
+<rect x="21.3" y="20.9" class="grip-pencil1" width="43.5" height="20.7"/>
+<g>
+	<rect x="526.5" class="grip-pencil3" width="171.5" height="13.3"/>
+	<polygon class="grip-pencil4" points="698,0.4 706.5,10 706.5,21.9 698,12.5 	"/>
+</g>
+<polygon class="grip-pencil3" points="97,14.1 40.7,16.5 40.7,44.5 97,47 "/>
+<path class="grip-pencil5" d="M550,13.3c0,0-13.2,6.2-18.5,6.2s-5-6.2-5-6.2H550z"/>
+</svg>
+</div>
 <article id="post-133" class="post-133 post type-post status-publish format-standard hentry category-hexschool">
 	
 	
@@ -971,21 +1315,7 @@ osmMap.eachLayer((layer) => {
 	</div><!-- .entry-content -->
 
 </article><!-- #post-## -->
-<div class="separator"><svg class="pencil-sharpener" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="79.5px" viewBox="0 0 48 79.5" style="enable-background:new 0 0 48 79.5;" xml:space="preserve" aria-hidden="true">
-<g>
-	<path class="sharpener0" d="M42.7,39.8c0-8.2,1.9-15.9,5.3-22.8V0H0v17c3.4,6.9,5.3,14.6,5.3,22.8S3.4,55.6,0,62.5v17h48v-17C44.6,55.6,42.7,47.9,42.7,39.8z"/>
-	<g>
-		<path class="sharpener1" d="M24,13.2L24,13.2c-5.4,0-9.8,4.4-9.8,9.7v56.5h19.5V23C33.7,17.6,29.4,13.2,24,13.2z"/>
-		<path class="sharpener2" d="M24,13.2c-5.4,0-9.8,4.4-9.8,9.8v56.5h11V13.3C24.8,13.3,24.4,13.2,24,13.2z"/>
-		<path class="sharpener3" d="M28.4,14.3c-1-0.5-2-0.8-3.2-1v66.2h3.2V14.3z"/>
-		<g>
-			<circle class="sharpener0" cx="19.6" cy="45.2" r="3.6"/>
-			<path class="sharpener1" d="M16.7,47.3c0.1,0.2,0.3,0.4,0.5,0.6c0.2,0.2,0.4,0.3,0.6,0.4l4.6-5.3c-0.1-0.2-0.3-0.4-0.5-0.6s-0.4-0.3-0.6-0.4L16.7,47.3z"/>
-		</g>
-	</g>
-</g>
-</svg>
-</div>
+
 <article id="post-126" class="post-126 post type-post status-publish format-standard hentry category-hexschool">
 	
 	
@@ -1168,7 +1498,21 @@ osmMap.eachLayer((layer) => {
 	</div><!-- .entry-content -->
 
 </article><!-- #post-## -->
-
+<div class="separator"><svg class="pencil-sharpener" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="79.5px" viewBox="0 0 48 79.5" style="enable-background:new 0 0 48 79.5;" xml:space="preserve" aria-hidden="true">
+<g>
+	<path class="sharpener0" d="M42.7,39.8c0-8.2,1.9-15.9,5.3-22.8V0H0v17c3.4,6.9,5.3,14.6,5.3,22.8S3.4,55.6,0,62.5v17h48v-17C44.6,55.6,42.7,47.9,42.7,39.8z"/>
+	<g>
+		<path class="sharpener1" d="M24,13.2L24,13.2c-5.4,0-9.8,4.4-9.8,9.7v56.5h19.5V23C33.7,17.6,29.4,13.2,24,13.2z"/>
+		<path class="sharpener2" d="M24,13.2c-5.4,0-9.8,4.4-9.8,9.8v56.5h11V13.3C24.8,13.3,24.4,13.2,24,13.2z"/>
+		<path class="sharpener3" d="M28.4,14.3c-1-0.5-2-0.8-3.2-1v66.2h3.2V14.3z"/>
+		<g>
+			<circle class="sharpener0" cx="19.6" cy="45.2" r="3.6"/>
+			<path class="sharpener1" d="M16.7,47.3c0.1,0.2,0.3,0.4,0.5,0.6c0.2,0.2,0.4,0.3,0.6,0.4l4.6-5.3c-0.1-0.2-0.3-0.4-0.5-0.6s-0.4-0.3-0.6-0.4L16.7,47.3z"/>
+		</g>
+	</g>
+</g>
+</svg>
+</div>
 <article id="post-108" class="post-108 post type-post status-publish format-standard hentry category-hexschool">
 	
 	
@@ -1291,17 +1635,7 @@ osmMap.eachLayer((layer) => {
 	</div><!-- .entry-content -->
 
 </article><!-- #post-## -->
-<div class="separator"><svg class="pencil" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="972.5px" height="55.6px" viewBox="0 0 972.5 55.6" style="enable-background:new 0 0 972.5 55.6;" xml:space="preserve" aria-hidden="true">
-<g>
-	<path class="pencil0" d="M10,55.6c0,0-10-8.4-10-27.5C0,6.4,10,0,10,0l871.4,0v55.6H10z"/>
-	<rect x="1.7" y="19.3" class="pencil1" width="879.7" height="17.6"/>
-	<polygon class="pencil2" points="1.7,17.6 10,0 881.4,0 881.4,17.6 	"/>
-	<path class="pencil3" d="M972.5,27.8L881.4,0c0,0-8.4,7.5-8.4,27.8s8.4,27.8,8.4,27.8L972.5,27.8z"/>
-	<path class="pencil0" d="M972.5,27.8l-33.5-10.2c0,0-3.1,2.8-3.1,10.2s3.1,10.2,3.1,10.2L972.5,27.8z"/>
-	<path class="pencil3" d="M881.4,0c0,0-12.7,4.2-14,7.7c-1.3,3.5,5.7,7.1,5.7,9.9s-10,6-10,10.5s10,6,10,9.9s-5.7,6.4-5.7,10.5s14,7.1,14,7.1l11-27.5L881.4,0z"/>
-</g>
-</svg>
-</div>
+
 <article id="post-100" class="post-100 post type-post status-publish format-standard hentry category-hexschool">
 	
 	
@@ -1385,205 +1719,6 @@ osmMap.eachLayer((layer) => {
 
 </article><!-- #post-## -->
 
-<article id="post-92" class="post-92 post type-post status-publish format-standard hentry category-post">
-	
-	
-	<header class="entry-header">
-		<span class="cat-links"><span class="screen-reader-text">發表於</span> <a href="https://geehsu.github.io/wordpress_blog/category/post/" rel="category tag">文章</a></span>		<h2 class="entry-title"><a href="https://geehsu.github.io/wordpress_blog/learn-roadmap/" rel="bookmark">前端開發者 學習地圖</a></h2>		<div class="entry-meta">
-			<span class="posted-on">發表於<a href="https://geehsu.github.io/wordpress_blog/learn-roadmap/" rel="bookmark"><time class="entry-date published" datetime="2019-11-13T11:48:08+08:00">2019 年 11 月 13 日</time><time class="updated" datetime="2019-11-13T15:01:17+08:00">2019 年 11 月 13 日</time></a></span><span class="byline"> 由<span class="author vcard"><a class="url fn n" href="https://geehsu.github.io/wordpress_blog/author/gee-hsu/">gee.hsu</a></span>撰寫</span>					</div><!-- .entry-meta -->
-			</header><!-- .entry-header -->
-
-	<div class="entry-content">
-		
-<p>來源六角學院</p>
-
-
-
-<h2>前端初心者</h2>
-
-
-
-<h4>必備技能</h4>
-
-
-
-<ul><li>Git (版本控制工具)</li><li>Terminal (終端機操作)</li><li>文字編輯器</li><li>研究的心</li></ul>
-
-
-
-<h3>CSS</h3>
-
-
-
-<h4>CSS 預處理</h4>
-
-
-
-<ul><li><strong>*Sass</strong></li><li><strong>*PostCSS</strong></li><li>Less</li><li>Stylus</li></ul>
-
-
-
-<h3>CSS 模組化概念</h3>
-
-
-
-<ul><li><strong>*OOCSS</strong></li><li>SMACSS</li><li>BEM</li></ul>
-
-
-
-<h3>CSS 框架</h3>
-
-
-
-<ul><li><strong>*Bootstrap</strong></li><li>UIKit</li><li>Foundation</li><li>Semantic UI</li></ul>
-
-
-
-<h3>CSS 技巧</h3>
-
-
-
-<ul><li><strong>*Responsive Web</strong></li><li><strong>*Flexbox</strong></li></ul>
-
-
-
-<h3>CSS 專精</h3>
-
-
-
-<ul><li>Grid Layout</li><li>Animation</li><li>Transform 2D, 3D</li></ul>
-
-
-
-<h2>前端設計師</h2>
-
-
-
-<h3>設計專精</h3>
-
-
-
-<h4>繪圖軟體</h4>
-
-
-
-<ul><li><strong>*Sketch</strong></li><li><strong>*Adobe XD</strong></li><li>Photoshop</li><li>Illustrator</li></ul>
-
-
-
-<h4>閱讀設計規範</h4>
-
-
-
-<ul><li><strong>*Material Design</strong></li><li>iOS Human Interface Guidelines</li><li>Atomic design</li></ul>
-
-
-
-<h4>Web 繪圖技術</h4>
-
-
-
-<ul><li>SVG</li><li>Canvas</li><li>D3.js</li></ul>
-
-
-
-<h2>前端開發者</h2>
-
-
-
-<h3>JavaScript</h3>
-
-
-
-<h4>基礎 DOM 操作</h4>
-
-
-
-<p>jQuery</p>
-
-
-
-<h4>JavaScript 技巧</h4>
-
-
-
-<p><strong>**ES6</strong></p>
-
-
-
-<h4>JavaScript 預處理</h4>
-
-
-
-<ul><li>TypeScript</li><li>Babel</li><li>CoffeeScript</li></ul>
-
-
-
-<h4>JS Framework (擇一)</h4>
-
-
-
-<ul><li><strong>*Vue.js</strong></li><li><strong>*Angular.js</strong></li><li><strong>*React.js</strong></li></ul>
-
-
-
-<h3>管理工具</h3>
-
-
-
-<h4>套件管理工具</h4>
-
-
-
-<ul><li><strong>*NPM</strong></li><li><strong>*YARN</strong></li><li>Bower</li></ul>
-
-
-
-<h4>任務管理工具</h4>
-
-
-
-<ul><li><strong>*npm script</strong></li><li><strong>*gulp</strong></li><li>grunt</li></ul>
-
-
-
-<h4>模組打包工具</h4>
-
-
-
-<ul><li><strong>*Webpack</strong></li><li>Parcel</li></ul>
-
-
-
-<h2>後端開發</h2>
-
-
-
-<h4>Node.js</h4>
-
-
-
-<ul><li>Express</li><li>Koa</li><li>Meteor</li></ul>
-
-
-
-<h4>第三方 API</h4>
-
-
-
-<ul><li>Google API</li><li>Facebook API</li></ul>
-
-
-
-<h4>測試</h4>
-
-
-
-<ul><li>Krama</li><li>Mocha</li><li>Nightwatch</li></ul>
-	</div><!-- .entry-content -->
-
-</article><!-- #post-## -->
-
 	<nav class="navigation posts-navigation" role="navigation">
 		<h2 class="screen-reader-text">文章導覽</h2>
 		<div class="nav-links"><div class="nav-previous"><a href="https://geehsu.github.io/wordpress_blog/page/2/" >較舊的文章</a></div></div>
@@ -1593,6 +1728,10 @@ osmMap.eachLayer((layer) => {
 
 	<aside id="secondary" class="widget-area" role="complementary">
 				<section id="recent-posts-2" class="widget widget_recent_entries">		<h2 class="widget-title">近期文章</h2>		<ul>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/css-variables-tutorial/">CSS Variables Tutorial</a>
+											<span class="post-date">2020 年 4 月 13 日</span>
+									</li>
 											<li>
 					<a href="https://geehsu.github.io/wordpress_blog/html-tutorial-for-beginers/">HTML Tutorial for Beginers</a>
 											<span class="post-date">2020 年 3 月 20 日</span>
@@ -1629,21 +1768,18 @@ osmMap.eachLayer((layer) => {
 					<a href="https://geehsu.github.io/wordpress_blog/gitgithub-training-1/">Git &#038; Github 特訓班 -1</a>
 											<span class="post-date">2019 年 11 月 16 日</span>
 									</li>
-											<li>
-					<a href="https://geehsu.github.io/wordpress_blog/learn-roadmap/">前端開發者 學習地圖</a>
-											<span class="post-date">2019 年 11 月 13 日</span>
-									</li>
 					</ul>
 		</section><section id="archives-2" class="widget widget_archive"><h2 class="widget-title">彙整</h2>		<ul>
-				<li><a href='https://geehsu.github.io/wordpress_blog/2020/03/'>2020 年 3 月</a>&nbsp;(2)</li>
+				<li><a href='https://geehsu.github.io/wordpress_blog/2020/04/'>2020 年 4 月</a>&nbsp;(1)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2020/03/'>2020 年 3 月</a>&nbsp;(2)</li>
 	<li><a href='https://geehsu.github.io/wordpress_blog/2020/02/'>2020 年 2 月</a>&nbsp;(1)</li>
 	<li><a href='https://geehsu.github.io/wordpress_blog/2020/01/'>2020 年 1 月</a>&nbsp;(1)</li>
 	<li><a href='https://geehsu.github.io/wordpress_blog/2019/11/'>2019 年 11 月</a>&nbsp;(11)</li>
 		</ul>
 			</section><section id="categories-2" class="widget widget_categories"><h2 class="widget-title">分類</h2>		<ul>
-				<li class="cat-item cat-item-3"><a href="https://geehsu.github.io/wordpress_blog/category/post/">文章</a> (11)
+				<li class="cat-item cat-item-3"><a href="https://geehsu.github.io/wordpress_blog/category/post/">文章</a> (12)
 <ul class='children'>
-	<li class="cat-item cat-item-13"><a href="https://geehsu.github.io/wordpress_blog/category/post/ninja/">The Net Ninja</a> (1)
+	<li class="cat-item cat-item-13"><a href="https://geehsu.github.io/wordpress_blog/category/post/ninja/">The Net Ninja</a> (2)
 </li>
 	<li class="cat-item cat-item-12"><a href="https://geehsu.github.io/wordpress_blog/category/post/hexschool/">六角學院</a> (7)
 </li>
@@ -1653,7 +1789,7 @@ osmMap.eachLayer((layer) => {
 </li>
 		</ul>
 			</section><section id="calendar-3" class="widget widget_calendar"><div id="calendar_wrap" class="calendar_wrap"><table id="wp-calendar">
-	<caption>2020 年 3 月</caption>
+	<caption>2020 年 4 月</caption>
 	<thead>
 	<tr>
 		<th scope="col" title="星期一">一</th>
@@ -1668,7 +1804,7 @@ osmMap.eachLayer((layer) => {
 
 	<tfoot>
 	<tr>
-		<td colspan="3" id="prev"><a href="https://geehsu.github.io/wordpress_blog/2020/02/">&laquo; 2 月</a></td>
+		<td colspan="3" id="prev"><a href="https://geehsu.github.io/wordpress_blog/2020/03/">&laquo; 3 月</a></td>
 		<td class="pad">&nbsp;</td>
 		<td colspan="3" id="next" class="pad">&nbsp;</td>
 	</tr>
@@ -1676,23 +1812,20 @@ osmMap.eachLayer((layer) => {
 
 	<tbody>
 	<tr>
-		<td colspan="6" class="pad">&nbsp;</td><td>1</td>
+		<td colspan="2" class="pad">&nbsp;</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td>
 	</tr>
 	<tr>
-		<td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td>
+		<td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td>
 	</tr>
 	<tr>
-		<td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td><a href="https://geehsu.github.io/wordpress_blog/2020/03/15/" aria-label="文章發佈於 2020 年 3 月 15 日">15</a></td>
+		<td id="today"><a href="https://geehsu.github.io/wordpress_blog/2020/04/13/" aria-label="文章發佈於 2020 年 4 月 13 日">13</a></td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td>
 	</tr>
 	<tr>
-		<td>16</td><td>17</td><td>18</td><td>19</td><td id="today"><a href="https://geehsu.github.io/wordpress_blog/2020/03/20/" aria-label="文章發佈於 2020 年 3 月 20 日">20</a></td><td>21</td><td>22</td>
+		<td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td>
 	</tr>
 	<tr>
-		<td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td>
-	</tr>
-	<tr>
-		<td>30</td><td>31</td>
-		<td class="pad" colspan="5">&nbsp;</td>
+		<td>27</td><td>28</td><td>29</td><td>30</td>
+		<td class="pad" colspan="3">&nbsp;</td>
 	</tr>
 	</tbody>
 	</table></div></section>	</aside><!-- #secondary -->

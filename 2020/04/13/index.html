@@ -8,7 +8,7 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="https://geehsu.github.io/wordpress_blog/xmlrpc.php">
 
-<title>2019 年 11 月 3 日 &#8211; WordPress_blog</title>
+<title>2020 年 4 月 13 日 &#8211; WordPress_blog</title>
 <link rel='dns-prefetch' href='//fonts.googleapis.com' />
 <link rel='dns-prefetch' href='//s.w.org' />
 <link rel="alternate" type="application/rss+xml" title="訂閱《Wordpress_blog》&raquo; 資訊提供" href="https://geehsu.github.io/wordpress_blog/feed/" />
@@ -118,118 +118,339 @@ img.emoji {
 
 		
 			<header class="page-header">
-				<h1 class="page-title">日期: 2019 年 11 月 3 日</h1>			</header><!-- .page-header -->
+				<h1 class="page-title">日期: 2020 年 4 月 13 日</h1>			</header><!-- .page-header -->
 
 			
-<article id="post-22" class="post-22 post type-post status-publish format-standard hentry category-about">
+<article id="post-153" class="post-153 post type-post status-publish format-standard hentry category-ninja">
 	
 	
 	<header class="entry-header">
-		<span class="cat-links"><span class="screen-reader-text">發表於</span> <a href="https://geehsu.github.io/wordpress_blog/category/about/" rel="category tag">關於</a></span>		<h2 class="entry-title"><a href="https://geehsu.github.io/wordpress_blog/setup/" rel="bookmark">使用 WordPress、Github架設 Github Pages靜態網站</a></h2>		<div class="entry-meta">
-			<span class="posted-on">發表於<a href="https://geehsu.github.io/wordpress_blog/setup/" rel="bookmark"><time class="entry-date published" datetime="2019-11-03T18:42:27+08:00">2019 年 11 月 3 日</time><time class="updated" datetime="2019-11-03T18:43:16+08:00">2019 年 11 月 3 日</time></a></span><span class="byline"> 由<span class="author vcard"><a class="url fn n" href="https://geehsu.github.io/wordpress_blog/author/gee-hsu/">gee.hsu</a></span>撰寫</span>					</div><!-- .entry-meta -->
+		<span class="cat-links"><span class="screen-reader-text">發表於</span> <a href="https://geehsu.github.io/wordpress_blog/category/post/ninja/" rel="category tag">The Net Ninja</a></span>		<h2 class="entry-title"><a href="https://geehsu.github.io/wordpress_blog/css-variables-tutorial/" rel="bookmark">CSS Variables Tutorial</a></h2>		<div class="entry-meta">
+			<span class="posted-on">發表於<a href="https://geehsu.github.io/wordpress_blog/css-variables-tutorial/" rel="bookmark"><time class="entry-date published updated" datetime="2020-04-13T09:13:13+08:00">2020 年 4 月 13 日</time></a></span><span class="byline"> 由<span class="author vcard"><a class="url fn n" href="https://geehsu.github.io/wordpress_blog/author/gee-hsu/">gee.hsu</a></span>撰寫</span>					</div><!-- .entry-meta -->
 			</header><!-- .entry-header -->
 
 	<div class="entry-content">
 		
-<p>準備工具如下:<br> 1.Github – Repository<br> 2.Wordpress – Simply Static<br> 3.Xampp – Apache、MySQL<br> 4.Git Bash</p>
+<h2>#1 – What are CSS Variables?</h2>
 
 
 
-<p>步驟如下:</p>
+<p>什麼是 CSS 變量?</p>
 
 
 
-<p>1.Github 建立一個新的資料庫<br>
-資料庫名稱、敘述、公開、勾選初始化資料庫關於 README、建立</p>
+<h4>Why CSS Variables?</h4>
 
 
 
-<p>2.建立一個新的分支: gh-pages</p>
+<pre class="wp-block-code"><code>.intro-text{
+  color: #ee44f9;
+  margin: 20px;
+  font-size: 2em;
+  font-weight: bold;
+}
+.outro-text{
+  color: #ee44f9;
+  margin: 10px;
+  font-size: 1em;
+}
+.blurb{
+  color: #ee44f9;
+  margin: 0;
+}</code></pre>
 
 
 
-<p>3.設定 -&gt; 分支<br>
-默認分支: gh-pages</p>
+<p>“primary-colour” variable</p>
 
 
 
-<p>4.安裝 Xampp 和 使用phpMyAdmin</p>
+<h2>Custom Properties</h2>
 
 
 
-<p>5.建立一個本地資料庫</p>
+<ul><li>CSS Variables are also known as “Custom Properties”</li><li>They look like regular CSS properties, with a — before them<ul><li>–my-property: value;</li></ul></li><li>CSS Variables == Custom Properties</li></ul>
 
 
 
-<p>6.下載 WordPress</p>
+<p>範例程式碼</p>
 
 
 
-<p>7.下載 Github 資料庫和解壓縮到 htdocs</p>
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html>
+&lt;html>
+    &lt;head>
+        &lt;meta charset="utf-8">
+        &lt;title>CSS Variables&lt;/title>
+        &lt;link rel="stylesheet" href="styles.css">
+    &lt;/head>
+    &lt;body>
+        &lt;header>
+            &lt;nav class="main-nav">
+                &lt;ul>
+                    &lt;li>&lt;a href="">Home&lt;/a>&lt;/li>
+                    &lt;li>&lt;a href="">About&lt;/a>&lt;/li>
+                    &lt;li>&lt;a href="">Contact&lt;/a>&lt;/li>
+                &lt;/ul>
+            &lt;/nav>
+        &lt;/header>
+        &lt;main>
+            &lt;div class="banner">
+                &lt;h1>Mario &amp; Luigi&lt;/h1>
+                &lt;p>Plumbing Extravaganzas&lt;/p>
+            &lt;/div>
+            &lt;div class="content">
+                &lt;div class="spot">
+                    &lt;h2>We Love All Kinds of Pipes...&lt;/h2>
+                    &lt;p>Lorizzle ipsum crunk brizzle amet, gizzle cool elizzle. Nullam dawg velizzle, aliquet volutpizzle, suscipizzle dizzle, gravida yippiyo, arcu. Pellentesque eget check it out. Fo shizzle my nizzle erizzle. Boom shackalack bling bling dolor turpizzle go to hizzle tempor. Yippiyo mah nizzle nibh et turpizzle. Yo izzle da bomb. Daahng dawg eleifend rhoncus daahng dawg. In hac habitasse fo shizzle dictumst. Yo mamma dapibizzle.&lt;/p>
+                    &lt;a href="#">More info...&lt;/a>
+                &lt;/div>
+                &lt;div class="spot">
+                    &lt;h2>In Fact, we're Piping-Mad&lt;/h2>
+                    &lt;p>I saw beyonces tizzles and my pizzle went crizzle tellus urna, pretium own yo', mattis away, eleifend we gonna chung, nunc. Daahng dawg suscipizzle. Integer sempizzle velizzle sizzle mah nizzle.&lt;/p>
+                    &lt;a href="#">More info...&lt;/a>
+                &lt;/div>
+                &lt;div class="spot">
+                    &lt;h2>Any Shape and Any Size...&lt;/h2>
+                    &lt;p>Phasellizzle interdum volutpizzle shizzlin dizzle. Ut semper adipiscing shiz. Ma nizzle sure est. Nulla sapizzle ass, ultrices nec, accumsizzle pizzle, rizzle quis, pede. Dizzle nec shit. Etizzle rutrizzle ornare ante. Maurizzle its fo rizzle. Vestibulum izzle pede varius nibh commodo commodo.&lt;/p>
+                    &lt;a href="#">More info...&lt;/a>
+                &lt;/div>
+                &lt;div class="spot">
+                    &lt;h2>No Job is Too Big&lt;/h2>
+                    &lt;p>Mofo yo mamma dolor sizzle boofron, consectetizzle adipiscing elit. Hizzle izzle shizzle my nizzle crocodizzle. Quisque mi crackalackin, sodalizzle izzle, crackalackin a, eleifend nizzle, boofron.&lt;/p>
+                    &lt;a href="#">More info...&lt;/a>
+                &lt;/div>
+            &lt;/div>
+        &lt;/main>
+        &lt;footer>
+            &lt;div class="blurbs">
+                &lt;div class="blurb">
+                    &lt;h3>Blurb title&lt;/h3>
+                    &lt;p>Etizzle a magna dang mammasay mammasa mamma oo sa accumsizzle.&lt;/p>
+                &lt;/div>
+                &lt;div class="blurb">
+                    &lt;h3>Blurb title&lt;/h3>
+                    &lt;p>Funky fresh in stuff. Yo mamma mauris dolor, shit vitae, its fo rizzle.&lt;/p>
+                &lt;/div>
+                &lt;div class="blurb">
+                    &lt;h3>Blurb title&lt;/h3>
+                    &lt;p>Vestibulizzle ante ipsizzle sure dope orci luctus et ultrices posuere shizzle.&lt;/p>
+                &lt;/div>
+            &lt;/div>
+        &lt;/footer>
+    &lt;/body>
+&lt;/html></code></pre>
 
 
 
-<p>8.Wordpress 解壓縮後並移動到對應的資料夾</p>
+<pre class="wp-block-code"><code>/* --- Variables --- */
+
+/* --- Main styles --- */
+
+h1, h2, h3{
+    font-weight: normal;
+}
+
+body{
+    margin: 0;
+    font-family: Verdana;
+}
+
+nav.main-nav ul{
+    width: 600px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav a{
+    color: #daa33e;
+}
+
+.banner{
+    background: #3e84da;
+    color: #fff;
+    font-size: 1.6em;
+    text-align: center;
+    padding: 100px 0 160px;
+}
+
+.content{
+    width: 760px;
+    margin: 0 auto;
+    position: relative;
+    top: -100px;
+    padding: 40px 60px;
+    background: #fff
+}
+
+.spot{
+    margin: 0 40px 80px;
+    text-align: center;
+}
+
+.spot h2{
+    color: #3e84da;
+}
+
+.spot p{
+    color: #333;
+    line-height: 2em;
+    font-size: 0.9em
+}
+
+.content a{
+    color: #daa33e;
+    font-size: 1.2em;
+}
+
+footer{
+    background: #ddd;
+    padding: 60px 0
+}
+
+footer .blurbs{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 760px;
+    margin: 0 auto;
+    grid-gap: 40px;
+}
+
+footer .blurb{
+    text-align: center;
+    color: #333;
+    line-height: 2em;
+    font-size: 0.9em
+}</code></pre>
 
 
 
-<p>9.安裝 WordPress</p>
+<p><a rel="noreferrer noopener" href="https://github.com/iamshaunjp/CSS-Variables" target="_blank">Course files</a><br><a rel="noreferrer noopener" href="https://caniuse.com/#home" target="_blank">Can I use?</a></p>
 
 
 
-<p>10.需要<br>
-phpMyAdmin 新增使用者帳號<br>
-勾選全域權限 然後執行<br>
-如下:<br>
-資料庫名稱、使用者名稱、密碼、資料庫主機位址、資料表前置詞</p>
+<h2>#2 – Declaring Variables</h2>
 
 
 
-<p>11.WordPress 安裝網站所需資訊<br>
-網站標題、使用者名稱、密碼、電子郵件地址<br>
-12.Wordpress Plug-in (外掛)<br>
-安裝 Simply Static</p>
+<p>範例程式碼</p>
 
 
 
-<p>13.Simply Static 設定<br>
-複製你的網站url 貼在 relative URLs 然後儲存</p>
+<pre class="wp-block-code"><code>/* --- Variables --- */
+
+:root{
+  --theme-color: #3e84da;
+  --link-color: #daa33e;
+}
+
+/* --- Main styles --- */
+nav a{
+  color: var(--link-color);
+}
+
+.banner{
+  background: var(--theme-color);
+  color: #fff;
+  font-size: 1.6em;
+  text-align: center;
+  padding: 100px 0 160px;
+}
+
+.spot h2{
+  color: var(--theme-color);
+}
+
+.content a{
+  color: var(--link-color);
+  font-size: 1.2em;
+}</code></pre>
 
 
 
-<p>14.Include / Exclude<br>
-增加檔案和目錄<br>
-C:\XXX\Xampp\htdocs\XXX/wp-content/</p>
+<h2>#3 – CSS Variable Benefits</h2>
 
 
 
-<p>15.Simply Static<br>
-Delivey Method change to Local Directory<br>
-Local Directory paste on:<br>
-C:\XXX\Xampp\htdocs\XXX<br>
-然後儲存</p>
+<p>範例程式碼</p>
 
 
 
-<p>16.Simply Static 產生 靜態檔案</p>
+<pre class="wp-block-code"><code>/* --- Variables --- */
+:root{
+  --theme-color: #3e84da;
+  --link-color: #daa33e;
+  --layout: 1fr 1fr 1fr;
+
+nav{
+  --link-color: #000;
+}
+
+@media screen and (max-width: 760px){
+  :root{
+    --layout: 1fr;
+  }
+}
+
+/* --- Main styles --- */
+
+footer .blurbs{
+  display: grid;
+  grid-template-columns: var(--layout);
+  max-width: 760px;
+  margin: 0 auto;
+  gap: 40px;
+}</code></pre>
 
 
 
-<p>17.Git Bash push on Github 資料庫</p>
+<h2>#4 – CSS Variables &amp; JavaScript</h2>
 
 
 
-<p>18.修正某些錯誤<br>
-Use absolute URLs<br>
-https://xxx.github.io/xxx/</p>
+<p>swatch 色板</p>
 
 
 
-<p>19.Simply Static 產生</p>
+<p>範例程式碼</p>
 
 
 
-<p>20.再一次使用 Git Bash push on Github 資料庫</p>
+<pre class="wp-block-code"><code>&lt;header>
+  &lt;div class="swatches">
+    &lt;span style="background: #222;">&lt;/span>
+    &lt;span style="background: #f76262;">&lt;/span>
+    &lt;span style="background: #3e84da;">&lt;/span>
+    &lt;span style="background: #ebb332;">&lt;/span>
+  &lt;/div>
+&lt;/header>
+
+&lt;script type="text/javascript" src="js/swatches.js">&lt;/script></code></pre>
+
+
+
+<pre class="wp-block-code"><code>.swatches span{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+  cursor: pointer;
+}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>var swatches = document.querySelectorAll('.swatches span');
+var root = document.querySelector(':root');
+
+swatches.forEach((swatch)=>{
+  swatch.addEventListener('click',(e)=>{
+    root.style.setProperty('--theme-color',e.target.style.background);
+  });
+});</code></pre>
 	</div><!-- .entry-content -->
 
 </article><!-- #post-## -->
@@ -300,7 +521,7 @@ https://xxx.github.io/xxx/</p>
 </li>
 		</ul>
 			</section><section id="calendar-3" class="widget widget_calendar"><div id="calendar_wrap" class="calendar_wrap"><table id="wp-calendar">
-	<caption>2019 年 11 月</caption>
+	<caption>2020 年 4 月</caption>
 	<thead>
 	<tr>
 		<th scope="col" title="星期一">一</th>
@@ -315,28 +536,28 @@ https://xxx.github.io/xxx/</p>
 
 	<tfoot>
 	<tr>
-		<td colspan="3" id="prev" class="pad">&nbsp;</td>
+		<td colspan="3" id="prev"><a href="https://geehsu.github.io/wordpress_blog/2020/03/">&laquo; 3 月</a></td>
 		<td class="pad">&nbsp;</td>
-		<td colspan="3" id="next"><a href="https://geehsu.github.io/wordpress_blog/2020/01/">1 月 &raquo;</a></td>
+		<td colspan="3" id="next" class="pad">&nbsp;</td>
 	</tr>
 	</tfoot>
 
 	<tbody>
 	<tr>
-		<td colspan="4" class="pad">&nbsp;</td><td>1</td><td>2</td><td><a href="https://geehsu.github.io/wordpress_blog/2019/11/03/" aria-label="文章發佈於 2019 年 11 月 3 日">3</a></td>
+		<td colspan="2" class="pad">&nbsp;</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td>
 	</tr>
 	<tr>
-		<td><a href="https://geehsu.github.io/wordpress_blog/2019/11/04/" aria-label="文章發佈於 2019 年 11 月 4 日">4</a></td><td><a href="https://geehsu.github.io/wordpress_blog/2019/11/05/" aria-label="文章發佈於 2019 年 11 月 5 日">5</a></td><td>6</td><td>7</td><td>8</td><td><a href="https://geehsu.github.io/wordpress_blog/2019/11/09/" aria-label="文章發佈於 2019 年 11 月 9 日">9</a></td><td>10</td>
+		<td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td>
 	</tr>
 	<tr>
-		<td>11</td><td>12</td><td><a href="https://geehsu.github.io/wordpress_blog/2019/11/13/" aria-label="文章發佈於 2019 年 11 月 13 日">13</a></td><td>14</td><td>15</td><td><a href="https://geehsu.github.io/wordpress_blog/2019/11/16/" aria-label="文章發佈於 2019 年 11 月 16 日">16</a></td><td>17</td>
+		<td id="today"><a href="https://geehsu.github.io/wordpress_blog/2020/04/13/" aria-label="文章發佈於 2020 年 4 月 13 日">13</a></td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td>
 	</tr>
 	<tr>
-		<td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td><a href="https://geehsu.github.io/wordpress_blog/2019/11/23/" aria-label="文章發佈於 2019 年 11 月 23 日">23</a></td><td><a href="https://geehsu.github.io/wordpress_blog/2019/11/24/" aria-label="文章發佈於 2019 年 11 月 24 日">24</a></td>
+		<td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td>
 	</tr>
 	<tr>
-		<td>25</td><td><a href="https://geehsu.github.io/wordpress_blog/2019/11/26/" aria-label="文章發佈於 2019 年 11 月 26 日">26</a></td><td>27</td><td>28</td><td>29</td><td>30</td>
-		<td class="pad" colspan="1">&nbsp;</td>
+		<td>27</td><td>28</td><td>29</td><td>30</td>
+		<td class="pad" colspan="3">&nbsp;</td>
 	</tr>
 	</tbody>
 	</table></div></section>	</aside><!-- #secondary -->

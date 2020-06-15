@@ -79,6 +79,7 @@ blockquote,.entry-meta,.entry-footer,.comment-list li .comment-meta .says,.comme
 <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://geehsu.github.io/wordpress_blog/xmlrpc.php?rsd" />
 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://geehsu.github.io/wordpress_blog/wp-includes/wlwmanifest.xml" /> 
 <link rel='prev' title='Flex 與響應式排版上的技巧' href='https://geehsu.github.io/wordpress_blog/flex-rwd-skills/' />
+<link rel='next' title='一變應萬變的響應式網頁設計' href='https://geehsu.github.io/wordpress_blog/responsive-website-design/' />
 <meta name="generator" content="WordPress 5.2.4" />
 <link rel="canonical" href="https://geehsu.github.io/wordpress_blog/jquery/" />
 <link rel='shortlink' href='https://geehsu.github.io/wordpress_blog/?p=194' />
@@ -2062,6 +2063,62 @@ $(document).ready(function () {
         /* Act on the event */
         $('body').toggleClass('open');
     });
+});</code></pre>
+
+
+
+<h4>Animate.css 更新說明</h4>
+
+
+
+<p>2020/06/02 更新</p>
+
+
+
+<p>下一章節即將進入 Animate.css 教學章節<br>因應 Animate.css 改版，class 有些許調整，因此增加此章節做為說明：</p>
+
+
+
+<p>class 變更舉例：</p>
+
+
+
+<p>改版前：$(‘.text’).addClass(‘animated bounce’);<br>改版後：$(‘.text’).addClass(‘animate__animated animate__bounce’);</p>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.0/animate.min.css">
+&lt;button id="add">Add Animate&lt;/button>
+&lt;p class="text">Animate&lt;/p>
+
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js">&lt;/script></code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>.text {
+  text-align: center;
+  font-size: 60px;
+}</code></pre>
+
+
+
+<p>JS</p>
+
+
+
+<pre class="wp-block-code"><code>$('#add').click(function() {
+  $('.text').addClass('animate__animated animate__bounce');
+});
+$('.text').on('animationend', function() { // 監聽當動畫結束後移除 class
+  $(this).removeClass('animate__animated animate__bounce');
 });</code></pre>
 
 
@@ -4086,7 +4143,7 @@ section h3{
 		
 	<nav class="navigation post-navigation" role="navigation">
 		<h2 class="screen-reader-text">文章導覽</h2>
-		<div class="nav-links"><div class="nav-previous"><a href="https://geehsu.github.io/wordpress_blog/flex-rwd-skills/" rel="prev">&larr; Flex 與響應式排版上的技巧</a></div></div>
+		<div class="nav-links"><div class="nav-previous"><a href="https://geehsu.github.io/wordpress_blog/flex-rwd-skills/" rel="prev">&larr; Flex 與響應式排版上的技巧</a></div><div class="nav-next"><a href="https://geehsu.github.io/wordpress_blog/responsive-website-design/" rel="next">一變應萬變的響應式網頁設計 &rarr;</a></div></div>
 	</nav>
 		
 	
@@ -4098,6 +4155,10 @@ section h3{
 <div id="secondary" class="widget-area" role="complementary">
 
 			<aside id="recent-posts-2" class="widget widget_recent_entries">		<h4 class="widget-title">近期文章</h4>		<ul>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/responsive-website-design/">一變應萬變的響應式網頁設計</a>
+											<span class="post-date">2020 年 6 月 15 日</span>
+									</li>
 											<li>
 					<a href="https://geehsu.github.io/wordpress_blog/jquery/">使用 jQuery 打造互動性網頁動畫效果</a>
 											<span class="post-date">2020 年 6 月 1 日</span>
@@ -4134,13 +4195,9 @@ section h3{
 					<a href="https://geehsu.github.io/wordpress_blog/gitgithub-training-5/">Git &#038; Github 特訓班 -5</a>
 											<span class="post-date">2019 年 11 月 26 日</span>
 									</li>
-											<li>
-					<a href="https://geehsu.github.io/wordpress_blog/gitgithub-training-4/">Git &#038; Github 特訓班 -4</a>
-											<span class="post-date">2019 年 11 月 26 日</span>
-									</li>
 					</ul>
 		</aside><aside id="archives-2" class="widget widget_archive"><h4 class="widget-title">彙整</h4>		<ul>
-				<li><a href='https://geehsu.github.io/wordpress_blog/2020/06/'>2020 年 6 月</a>&nbsp;(1)</li>
+				<li><a href='https://geehsu.github.io/wordpress_blog/2020/06/'>2020 年 6 月</a>&nbsp;(2)</li>
 	<li><a href='https://geehsu.github.io/wordpress_blog/2020/05/'>2020 年 5 月</a>&nbsp;(1)</li>
 	<li><a href='https://geehsu.github.io/wordpress_blog/2020/04/'>2020 年 4 月</a>&nbsp;(2)</li>
 	<li><a href='https://geehsu.github.io/wordpress_blog/2020/03/'>2020 年 3 月</a>&nbsp;(2)</li>
@@ -4149,11 +4206,11 @@ section h3{
 	<li><a href='https://geehsu.github.io/wordpress_blog/2019/11/'>2019 年 11 月</a>&nbsp;(11)</li>
 		</ul>
 			</aside><aside id="categories-2" class="widget widget_categories"><h4 class="widget-title">分類</h4>		<ul>
-				<li class="cat-item cat-item-3"><a href="https://geehsu.github.io/wordpress_blog/category/post/">文章</a> (15)
+				<li class="cat-item cat-item-3"><a href="https://geehsu.github.io/wordpress_blog/category/post/">文章</a> (16)
 <ul class='children'>
 	<li class="cat-item cat-item-13"><a href="https://geehsu.github.io/wordpress_blog/category/post/ninja/">The Net Ninja</a> (2)
 </li>
-	<li class="cat-item cat-item-12"><a href="https://geehsu.github.io/wordpress_blog/category/post/hexschool/">六角學院</a> (10)
+	<li class="cat-item cat-item-12"><a href="https://geehsu.github.io/wordpress_blog/category/post/hexschool/">六角學院</a> (11)
 </li>
 </ul>
 </li>
@@ -4183,13 +4240,13 @@ section h3{
 	</tfoot>
 
 	<tbody>
-	<tr><td id="today"><a href="https://geehsu.github.io/wordpress_blog/2020/06/01/" aria-label="文章發佈於 2020 年 6 月 1 日">1</a></td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td>
+	<tr><td><a href="https://geehsu.github.io/wordpress_blog/2020/06/01/" aria-label="文章發佈於 2020 年 6 月 1 日">1</a></td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td>
 	</tr>
 	<tr>
 		<td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td>
 	</tr>
 	<tr>
-		<td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td>
+		<td id="today"><a href="https://geehsu.github.io/wordpress_blog/2020/06/15/" aria-label="文章發佈於 2020 年 6 月 15 日">15</a></td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td>
 	</tr>
 	<tr>
 		<td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td>

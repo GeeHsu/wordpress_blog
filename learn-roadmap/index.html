@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+
+<html lang="zh-TW">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+
+	<link rel="pingback" href="https://geehsu.github.io/wordpress_blog/xmlrpc.php">
+
+	<title>前端開發者 學習地圖 &#8211; WordPress_blog</title>
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="訂閱《Wordpress_blog》&raquo; 資訊提供" href="https://geehsu.github.io/wordpress_blog/feed/" />
+<link rel="alternate" type="application/rss+xml" title="訂閱《Wordpress_blog》&raquo; 留言的資訊提供" href="https://geehsu.github.io/wordpress_blog/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/geehsu.github.io\/wordpress_blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.4"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://geehsu.github.io/wordpress_blog/wp-includes/css/dist/block-library/style.min.css?ver=5.2.4' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='https://geehsu.github.io/wordpress_blog/wp-includes/css/dist/block-library/theme.min.css?ver=5.2.4' type='text/css' media='all' />
+<link rel='stylesheet' id='uptown-style-css'  href='https://geehsu.github.io/wordpress_blog/wp-content/themes/uptown-style/style.css?ver=1.1.3' type='text/css' media='all' />
+<style id='uptown-style-inline-css' type='text/css'>
+.hero{background-image:url(https://geehsu.github.io/wordpress_blog/wp-content/themes/uptown-style/assets/images/hero.jpg);}
+.site-title a,.site-title a:visited{color:#353535;}.site-title a:hover,.site-title a:visited:hover{color:rgba(53, 53, 53, 0.8);}
+.site-description{color:#686868;}
+.hero,.hero .widget h1,.hero .widget h2,.hero .widget h3,.hero .widget h4,.hero .widget h5,.hero .widget h6,.hero .widget p,.hero .widget blockquote,.hero .widget cite,.hero .widget table,.hero .widget ul,.hero .widget ol,.hero .widget li,.hero .widget dd,.hero .widget dt,.hero .widget address,.hero .widget code,.hero .widget pre,.hero .widget .widget-title,.hero .page-header h1{color:#ffffff;}.hero .hero-inner{border-color:rgba(255, 255, 255, 0.5);}
+.main-navigation ul li a,.main-navigation ul li a:visited,.main-navigation ul li a:hover,.main-navigation ul li a:focus,.main-navigation ul li a:visited:hover{color:#252525;}.main-navigation .sub-menu .menu-item-has-children > a::after{border-right-color:#252525;border-left-color:#252525;}.menu-toggle div{background-color:#252525;}.main-navigation ul li a:hover,.main-navigation ul li a:focus{color:rgba(37, 37, 37, 0.8);}
+h1,h2,h3,h4,h5,h6,label,legend,table th,dl dt,.entry-title,.entry-title a,.entry-title a:visited,.widget-title{color:#353535;}.entry-title a:hover,.entry-title a:visited:hover,.entry-title a:focus,.entry-title a:visited:focus,.entry-title a:active,.entry-title a:visited:active{color:rgba(53, 53, 53, 0.8);}
+body,input,select,textarea,input[type="text"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="password"]:focus,input[type="search"]:focus,input[type="number"]:focus,input[type="tel"]:focus,input[type="range"]:focus,input[type="date"]:focus,input[type="month"]:focus,input[type="week"]:focus,input[type="time"]:focus,input[type="datetime"]:focus,input[type="datetime-local"]:focus,input[type="color"]:focus,textarea:focus,.navigation.pagination .paging-nav-text{color:#252525;}hr{background-color:rgba(37, 37, 37, 0.1);border-color:rgba(37, 37, 37, 0.1);}input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],input[type="number"],input[type="tel"],input[type="range"],input[type="date"],input[type="month"],input[type="week"],input[type="time"],input[type="datetime"],input[type="datetime-local"],input[type="color"],textarea,.select2-container .select2-choice{color:rgba(37, 37, 37, 0.5);border-color:rgba(37, 37, 37, 0.1);}select,fieldset,blockquote,pre,code,abbr,acronym,.hentry table th,.hentry table td{border-color:rgba(37, 37, 37, 0.1);}.hentry table tr:hover td{background-color:rgba(37, 37, 37, 0.05);}
+blockquote,.entry-meta,.entry-footer,.comment-meta .says,.logged-in-as,.wp-block-coblocks-author__heading{color:#686868;}
+.site-footer .widget-title,.site-footer h1,.site-footer h2,.site-footer h3,.site-footer h4,.site-footer h5,.site-footer h6{color:#ffffff;}
+.site-footer .widget,.site-footer .widget form label{color:#ffffff;}
+.footer-menu ul li a,.footer-menu ul li a:visited{color:#252525;}.site-info-wrapper .social-menu a{background-color:#252525;}.footer-menu ul li a:hover{border-color:#252525;}.footer-menu ul li a:hover,.footer-menu ul li a:visited:hover{color:rgba(37, 37, 37, 0.8);}
+.site-info-wrapper .site-info-text{color:#252525;}
+a,a:visited,.entry-title a:hover,.entry-title a:visited:hover{color:#54ccbe;}.navigation.pagination .nav-links .page-numbers.current,.social-menu a:hover{background-color:#54ccbe;}a:hover,a:visited:hover,a:focus,a:visited:focus,a:active,a:visited:active{color:rgba(84, 204, 190, 0.8);}.comment-list li.bypostauthor{border-color:rgba(84, 204, 190, 0.2);}
+button,a.button,a.button:visited,input[type="button"],input[type="reset"],input[type="submit"],.wp-block-button__link,.site-info-wrapper .social-menu a:hover{background-color:#b5345f;border-color:#b5345f;}button:hover,button:active,button:focus,a.button:hover,a.button:active,a.button:focus,a.button:visited:hover,a.button:visited:active,a.button:visited:focus,input[type="button"]:hover,input[type="button"]:active,input[type="button"]:focus,input[type="reset"]:hover,input[type="reset"]:active,input[type="reset"]:focus,input[type="submit"]:hover,input[type="submit"]:active,input[type="submit"]:focus{background-color:rgba(181, 52, 95, 0.8);border-color:rgba(181, 52, 95, 0.8);}
+button,button:hover,button:active,button:focus,a.button,a.button:hover,a.button:active,a.button:focus,a.button:visited,a.button:visited:hover,a.button:visited:active,a.button:visited:focus,input[type="button"],input[type="button"]:hover,input[type="button"]:active,input[type="button"]:focus,input[type="reset"],input[type="reset"]:hover,input[type="reset"]:active,input[type="reset"]:focus,input[type="submit"],input[type="submit"]:hover,input[type="submit"]:active,input[type="submit"]:focus,.wp-block-button__link{color:#ffffff;}
+body{background-color:#ffffff;}.navigation.pagination .nav-links .page-numbers.current{color:#ffffff;}
+.hero{background-color:#252525;}.hero{-webkit-box-shadow:inset 0 0 0 9999em;-moz-box-shadow:inset 0 0 0 9999em;box-shadow:inset 0 0 0 9999em;color:rgba(37, 37, 37, 0.50);}
+.main-navigation-container,.main-navigation.open,.main-navigation ul ul,.main-navigation .sub-menu{background-color:#ffffff;}.site-header{background-color:#ffffff;}
+.site-footer{background-color:#3f3244;}
+.site-info-wrapper{background-color:#ffffff;}.site-info-wrapper .social-menu a,.site-info-wrapper .social-menu a:visited,.site-info-wrapper .social-menu a:hover,.site-info-wrapper .social-menu a:visited:hover{color:#ffffff;}
+.has-primary-color{color:#03263B;}.has-primary-background-color{background-color:#03263B;}
+.has-secondary-color{color:#0b3954;}.has-secondary-background-color{background-color:#0b3954;}
+.has-tertiary-color{color:#bddae6;}.has-tertiary-background-color{background-color:#bddae6;}
+.has-quaternary-color{color:#ff6663;}.has-quaternary-background-color{background-color:#ff6663;}
+.has-quinary-color{color:#ffffff;}.has-quinary-background-color{background-color:#ffffff;}
+</style>
+<link rel='stylesheet' id='uptown-style-fonts-css'  href='https://fonts.googleapis.com/css?family=Playfair+Display%3A300%2C400%2C700%7CLato%3A300%2C400%2C700&#038;subset=latin&#038;ver=1.8.8' type='text/css' media='all' />
+<style id='uptown-style-fonts-inline-css' type='text/css'>
+.site-title{font-family:"Playfair Display", sans-serif;}
+.main-navigation ul li a,.main-navigation ul li a:visited,button,a.button,a.fl-button,input[type="button"],input[type="reset"],input[type="submit"]{font-family:"Playfair Display", sans-serif;}
+h1,h2,h3,h4,h5,h6,label,legend,table th,dl dt,.entry-title,.widget-title{font-family:"Playfair Display", sans-serif;}
+body,p,ol li,ul li,dl dd,.fl-callout-text{font-family:"Lato", sans-serif;}
+blockquote,.entry-meta,.entry-footer,.comment-list li .comment-meta .says,.comment-list li .comment-metadata,.comment-reply-link,#respond .logged-in-as{font-family:"Lato", sans-serif;}
+</style>
+<script type='text/javascript' src='https://geehsu.github.io/wordpress_blog/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://geehsu.github.io/wordpress_blog/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://geehsu.github.io/wordpress_blog/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://geehsu.github.io/wordpress_blog/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://geehsu.github.io/wordpress_blog/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='The Net Ninja' href='https://geehsu.github.io/wordpress_blog/the-net-ninja/' />
+<link rel='next' title='Git &#038; Github 特訓班 -1' href='https://geehsu.github.io/wordpress_blog/gitgithub-training-1/' />
+<meta name="generator" content="WordPress 5.2.4" />
+<link rel="canonical" href="https://geehsu.github.io/wordpress_blog/learn-roadmap/" />
+<link rel='shortlink' href='https://geehsu.github.io/wordpress_blog/?p=92' />
+<link rel="alternate" type="application/json+oembed" href="https://geehsu.github.io/wordpress_blog/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fgeehsu.github.io%2Fwordpress_blog%2Flearn-roadmap%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://geehsu.github.io/wordpress_blog/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fgeehsu.github.io%2Fwordpress_blog%2Flearn-roadmap%2F&#038;format=xml" />
+<style type='text/css'>
+.site-title a,.site-title a:visited{color:353535;}
+</style><link rel="icon" href="https://geehsu.github.io/wordpress_blog/wp-content/uploads/2019/11/cropped-blogging-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://geehsu.github.io/wordpress_blog/wp-content/uploads/2019/11/cropped-blogging-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://geehsu.github.io/wordpress_blog/wp-content/uploads/2019/11/cropped-blogging-180x180.png" />
+<meta name="msapplication-TileImage" content="https://geehsu.github.io/wordpress_blog/wp-content/uploads/2019/11/cropped-blogging-270x270.png" />
+
+</head>
+
+<body class="post-template-default single single-post postid-92 single-format-standard custom-header-image layout-two-column-default">
+
+	
+	<div id="page" class="hfeed site">
+
+		<a class="skip-link screen-reader-text" href="#content">略過內容</a>
+
+		
+		<header id="masthead" class="site-header" role="banner">
+
+			
+			<div class="site-header-wrapper">
+
+				
+<div class="site-title-wrapper">
+
+	
+	<div class="site-title"><a href="https://geehsu.github.io/wordpress_blog/" rel="home">Wordpress_blog</a></div>
+	<div class="site-description">This is a dynamic to static website.</div>
+</div><!-- .site-title-wrapper -->
+
+<div class="main-navigation-container">
+
+	
+<div class="menu-toggle" id="menu-toggle" role="button" tabindex="0"
+	>
+	<div></div>
+	<div></div>
+	<div></div>
+</div><!-- #menu-toggle -->
+
+	<nav id="site-navigation" class="main-navigation">
+
+		<div class="menu-menu-container"><ul id="menu-menu" class="menu"><li id="menu-item-13" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-13"><a href="https://geehsu.github.io/wordpress_blog/category/about/">關於</a></li>
+<li id="menu-item-9" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-has-children menu-item-9"><a href="https://geehsu.github.io/wordpress_blog/category/post/">文章</a>
+<span  class="expand" role="button" tabindex="0"></span>
+
+<ul class="sub-menu">
+	<li id="menu-item-98" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-98"><a href="https://geehsu.github.io/wordpress_blog/category/post/hexschool/">六角學院</a></li>
+	<li id="menu-item-99" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-99"><a href="https://geehsu.github.io/wordpress_blog/category/post/ninja/">The Net Ninja</a></li>
+	<li id="menu-item-212" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-212"><a href="https://geehsu.github.io/wordpress_blog/category/post/designcourse/">DesignCourse</a></li>
+</ul>
+</li>
+<li id="menu-item-12" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-12"><a href="https://geehsu.github.io/wordpress_blog/category/sticker/">貼圖</a></li>
+<li id="menu-item-11" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11"><a href="https://geehsu.github.io/wordpress_blog/category/food/">美食</a></li>
+<li id="menu-item-10" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10"><a href="https://geehsu.github.io/wordpress_blog/category/tour/">旅遊</a></li>
+<li id="menu-item-59" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-59"><a href="https://geehsu.github.io/wordpress_blog/category/social/">社群</a>
+<span  class="expand" role="button" tabindex="0"></span>
+
+<ul class="sub-menu">
+	<li id="menu-item-60" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-60"><a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/watergrass0402/">facebook</a></li>
+</ul>
+</li>
+</ul></div>
+	</nav><!-- #site-navigation -->
+
+	
+</div>
+
+			</div><!-- .site-header-wrapper -->
+
+			
+		</header><!-- #masthead -->
+
+		
+<div class="hero">
+
+	
+	<div class="hero-inner">
+
+		
+<div class="page-title-container">
+
+	<header class="page-header">
+
+		<h2 class="page-title">文章</h2>
+	</header><!-- .entry-header -->
+
+</div><!-- .page-title-container -->
+
+	</div>
+
+</div>
+
+		<div id="content" class="site-content">
+
+<div id="primary" class="content-area">
+
+	<main id="main" class="site-main" role="main">
+
+	
+		
+<article id="post-92" class="post-92 post type-post status-publish format-standard hentry category-post">
+
+	
+	
+	
+<header class="entry-header">
+
+	<div class="entry-header-row">
+
+		<div class="entry-header-column">
+
+			
+			
+				<h1 class="entry-title">前端開發者 學習地圖</h1>
+
+			
+			
+		</div><!-- .entry-header-column -->
+
+	</div><!-- .entry-header-row -->
+
+</header><!-- .entry-header -->
+
+	
+<div class="entry-meta">
+
+	
+		<span class="posted-date">2019 年 11 月 13 日</span>
+
+	
+	<span class="posted-author"><a href="https://geehsu.github.io/wordpress_blog/author/gee-hsu/" title="「gee.hsu」的文章" rel="author">gee.hsu</a></span>
+
+	
+</div><!-- .entry-meta -->
+
+	
+		
+<div class="entry-content">
+
+	
+<p>來源六角學院</p>
+
+
+
+<h2>前端初心者</h2>
+
+
+
+<h4>必備技能</h4>
+
+
+
+<ul><li>Git (版本控制工具)</li><li>Terminal (終端機操作)</li><li>文字編輯器</li><li>研究的心</li></ul>
+
+
+
+<h3>CSS</h3>
+
+
+
+<h4>CSS 預處理</h4>
+
+
+
+<ul><li><strong>*Sass</strong></li><li><strong>*PostCSS</strong></li><li>Less</li><li>Stylus</li></ul>
+
+
+
+<h3>CSS 模組化概念</h3>
+
+
+
+<ul><li><strong>*OOCSS</strong></li><li>SMACSS</li><li>BEM</li></ul>
+
+
+
+<h3>CSS 框架</h3>
+
+
+
+<ul><li><strong>*Bootstrap</strong></li><li>UIKit</li><li>Foundation</li><li>Semantic UI</li></ul>
+
+
+
+<h3>CSS 技巧</h3>
+
+
+
+<ul><li><strong>*Responsive Web</strong></li><li><strong>*Flexbox</strong></li></ul>
+
+
+
+<h3>CSS 專精</h3>
+
+
+
+<ul><li>Grid Layout</li><li>Animation</li><li>Transform 2D, 3D</li></ul>
+
+
+
+<h2>前端設計師</h2>
+
+
+
+<h3>設計專精</h3>
+
+
+
+<h4>繪圖軟體</h4>
+
+
+
+<ul><li><strong>*Sketch</strong></li><li><strong>*Adobe XD</strong></li><li>Photoshop</li><li>Illustrator</li></ul>
+
+
+
+<h4>閱讀設計規範</h4>
+
+
+
+<ul><li><strong>*Material Design</strong></li><li>iOS Human Interface Guidelines</li><li>Atomic design</li></ul>
+
+
+
+<h4>Web 繪圖技術</h4>
+
+
+
+<ul><li>SVG</li><li>Canvas</li><li>D3.js</li></ul>
+
+
+
+<h2>前端開發者</h2>
+
+
+
+<h3>JavaScript</h3>
+
+
+
+<h4>基礎 DOM 操作</h4>
+
+
+
+<p>jQuery</p>
+
+
+
+<h4>JavaScript 技巧</h4>
+
+
+
+<p><strong>**ES6</strong></p>
+
+
+
+<h4>JavaScript 預處理</h4>
+
+
+
+<ul><li>TypeScript</li><li>Babel</li><li>CoffeeScript</li></ul>
+
+
+
+<h4>JS Framework (擇一)</h4>
+
+
+
+<ul><li><strong>*Vue.js</strong></li><li><strong>*Angular.js</strong></li><li><strong>*React.js</strong></li></ul>
+
+
+
+<h3>管理工具</h3>
+
+
+
+<h4>套件管理工具</h4>
+
+
+
+<ul><li><strong>*NPM</strong></li><li><strong>*YARN</strong></li><li>Bower</li></ul>
+
+
+
+<h4>任務管理工具</h4>
+
+
+
+<ul><li><strong>*npm script</strong></li><li><strong>*gulp</strong></li><li>grunt</li></ul>
+
+
+
+<h4>模組打包工具</h4>
+
+
+
+<ul><li><strong>*Webpack</strong></li><li>Parcel</li></ul>
+
+
+
+<h2>後端開發</h2>
+
+
+
+<h4>Node.js</h4>
+
+
+
+<ul><li>Express</li><li>Koa</li><li>Meteor</li></ul>
+
+
+
+<h4>第三方 API</h4>
+
+
+
+<ul><li>Google API</li><li>Facebook API</li></ul>
+
+
+
+<h4>測試</h4>
+
+
+
+<ul><li>Krama</li><li>Mocha</li><li>Nightwatch</li></ul>
+
+</div><!-- .entry-content -->
+
+	
+	
+<footer class="entry-footer">
+
+	<div class="entry-footer-right">
+
+		
+	</div>
+
+	
+		
+		
+			<span class="cat-links">
+
+				發佈位置： <a href="https://geehsu.github.io/wordpress_blog/category/post/" rel="category tag">文章</a>
+			</span>
+
+		
+		
+		
+	
+</footer><!-- .entry-footer -->
+
+	
+</article><!-- #post-## -->
+
+		
+	<nav class="navigation post-navigation" role="navigation">
+		<h2 class="screen-reader-text">文章導覽</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="https://geehsu.github.io/wordpress_blog/the-net-ninja/" rel="prev">&larr; The Net Ninja</a></div><div class="nav-next"><a href="https://geehsu.github.io/wordpress_blog/gitgithub-training-1/" rel="next">Git &#038; Github 特訓班 -1 &rarr;</a></div></div>
+	</nav>
+		
+	
+	</main><!-- #main -->
+
+</div><!-- #primary -->
+
+
+<div id="secondary" class="widget-area" role="complementary">
+
+			<aside id="recent-posts-2" class="widget widget_recent_entries">		<h4 class="widget-title">近期文章</h4>		<ul>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/bootstrap-5-alpha/">BOOTSTRAP 5 ALPHA – WHAT’S NEW &#038; WHAT CHANGED?!</a>
+											<span class="post-date">2020 年 6 月 30 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/the-parcel-bundler/">THE PARCEL BUNDLER</a>
+											<span class="post-date">2020 年 6 月 30 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/responsive-website-design/">一變應萬變的響應式網頁設計</a>
+											<span class="post-date">2020 年 6 月 15 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/jquery/">使用 jQuery 打造互動性網頁動畫效果</a>
+											<span class="post-date">2020 年 6 月 1 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/flex-rwd-skills/">Flex 與響應式排版上的技巧</a>
+											<span class="post-date">2020 年 5 月 15 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/develop-a-website/">使用 HTML、CSS 開發一個網站</a>
+											<span class="post-date">2020 年 4 月 25 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/css-variables-tutorial/">CSS Variables Tutorial</a>
+											<span class="post-date">2020 年 4 月 13 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/html-tutorial-for-beginers/">HTML Tutorial for Beginers</a>
+											<span class="post-date">2020 年 3 月 20 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/wheremask/">示範：使用 Vuejs 結合 Open Street Map 製作口罩地圖</a>
+											<span class="post-date">2020 年 3 月 15 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/maskonmap/">Leaflet + OpenStreetMap 地圖應用開發 ─ 學習</a>
+											<span class="post-date">2020 年 2 月 12 日</span>
+									</li>
+					</ul>
+		</aside><aside id="archives-2" class="widget widget_archive"><h4 class="widget-title">彙整</h4>		<ul>
+				<li><a href='https://geehsu.github.io/wordpress_blog/2020/06/'>2020 年 6 月</a>&nbsp;(4)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2020/05/'>2020 年 5 月</a>&nbsp;(1)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2020/04/'>2020 年 4 月</a>&nbsp;(2)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2020/03/'>2020 年 3 月</a>&nbsp;(2)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2020/02/'>2020 年 2 月</a>&nbsp;(1)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2020/01/'>2020 年 1 月</a>&nbsp;(1)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2019/11/'>2019 年 11 月</a>&nbsp;(11)</li>
+		</ul>
+			</aside><aside id="categories-2" class="widget widget_categories"><h4 class="widget-title">分類</h4>		<ul>
+				<li class="cat-item cat-item-3"><a href="https://geehsu.github.io/wordpress_blog/category/post/">文章</a> (18)
+<ul class='children'>
+	<li class="cat-item cat-item-14"><a href="https://geehsu.github.io/wordpress_blog/category/post/designcourse/">DesignCourse</a> (3)
+</li>
+	<li class="cat-item cat-item-13"><a href="https://geehsu.github.io/wordpress_blog/category/post/ninja/">The Net Ninja</a> (2)
+</li>
+	<li class="cat-item cat-item-12"><a href="https://geehsu.github.io/wordpress_blog/category/post/hexschool/">六角學院</a> (11)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-2"><a href="https://geehsu.github.io/wordpress_blog/category/about/">關於</a> (4)
+</li>
+		</ul>
+			</aside><aside id="calendar-3" class="widget widget_calendar"><div id="calendar_wrap" class="calendar_wrap"><table id="wp-calendar">
+	<caption>2020 年 6 月</caption>
+	<thead>
+	<tr>
+		<th scope="col" title="星期一">一</th>
+		<th scope="col" title="星期二">二</th>
+		<th scope="col" title="星期三">三</th>
+		<th scope="col" title="星期四">四</th>
+		<th scope="col" title="星期五">五</th>
+		<th scope="col" title="星期六">六</th>
+		<th scope="col" title="星期日">日</th>
+	</tr>
+	</thead>
+
+	<tfoot>
+	<tr>
+		<td colspan="3" id="prev"><a href="https://geehsu.github.io/wordpress_blog/2020/05/">&laquo; 5 月</a></td>
+		<td class="pad">&nbsp;</td>
+		<td colspan="3" id="next" class="pad">&nbsp;</td>
+	</tr>
+	</tfoot>
+
+	<tbody>
+	<tr><td><a href="https://geehsu.github.io/wordpress_blog/2020/06/01/" aria-label="文章發佈於 2020 年 6 月 1 日">1</a></td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td>
+	</tr>
+	<tr>
+		<td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td>
+	</tr>
+	<tr>
+		<td><a href="https://geehsu.github.io/wordpress_blog/2020/06/15/" aria-label="文章發佈於 2020 年 6 月 15 日">15</a></td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td>
+	</tr>
+	<tr>
+		<td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td>
+	</tr>
+	<tr>
+		<td>29</td><td id="today"><a href="https://geehsu.github.io/wordpress_blog/2020/06/30/" aria-label="文章發佈於 2020 年 6 月 30 日">30</a></td>
+		<td class="pad" colspan="5">&nbsp;</td>
+	</tr>
+	</tbody>
+	</table></div></aside>
+</div><!-- #secondary -->
+
+
+
+		</div><!-- #content -->
+
+		
+		<footer id="colophon" class="site-footer">
+
+			<div class="site-footer-inner">
+
+				
+			</div><!-- .site-footer-inner -->
+
+		</footer><!-- #colophon -->
+
+		
+<div class="site-info-wrapper">
+
+	<div class="site-info">
+
+		<div class="site-info-inner">
+
+			
+<div class="site-info-text">
+
+	Copyright &copy; 2020 Wordpress_blog &mdash; Uptown Style WordPress 主題作者：<a href="https://www.godaddy.com/" rel="author nofollow">GoDaddy</a>
+</div>
+
+		</div><!-- .site-info-inner -->
+
+	</div><!-- .site-info -->
+
+</div><!-- .site-info-wrapper -->
+
+	</div><!-- #page -->
+
+	<script type='text/javascript' src='https://geehsu.github.io/wordpress_blog/wp-content/themes/primer/assets/js/navigation.min.js?ver=1.8.8'></script>
+<script type='text/javascript' src='https://geehsu.github.io/wordpress_blog/wp-includes/js/wp-embed.min.js?ver=5.2.4'></script>
+	<script>
+	/* IE11 skip link focus fix */
+	/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
+	</script>
+	
+</body>
+
+</html>

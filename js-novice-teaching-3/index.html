@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+
+<html lang="zh-TW">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+
+	<link rel="pingback" href="https://geehsu.github.io/wordpress_blog/xmlrpc.php">
+
+	<title>陣列與物件、FOREACH &#8211; WordPress_blog</title>
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="訂閱《Wordpress_blog》&raquo; 資訊提供" href="https://geehsu.github.io/wordpress_blog/feed/" />
+<link rel="alternate" type="application/rss+xml" title="訂閱《Wordpress_blog》&raquo; 留言的資訊提供" href="https://geehsu.github.io/wordpress_blog/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/geehsu.github.io\/wordpress_blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.4"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://geehsu.github.io/wordpress_blog/wp-includes/css/dist/block-library/style.min.css?ver=5.2.4' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='https://geehsu.github.io/wordpress_blog/wp-includes/css/dist/block-library/theme.min.css?ver=5.2.4' type='text/css' media='all' />
+<link rel='stylesheet' id='uptown-style-css'  href='https://geehsu.github.io/wordpress_blog/wp-content/themes/uptown-style/style.css?ver=1.1.3' type='text/css' media='all' />
+<style id='uptown-style-inline-css' type='text/css'>
+.hero{background-image:url(https://geehsu.github.io/wordpress_blog/wp-content/themes/uptown-style/assets/images/hero.jpg);}
+.site-title a,.site-title a:visited{color:#353535;}.site-title a:hover,.site-title a:visited:hover{color:rgba(53, 53, 53, 0.8);}
+.site-description{color:#686868;}
+.hero,.hero .widget h1,.hero .widget h2,.hero .widget h3,.hero .widget h4,.hero .widget h5,.hero .widget h6,.hero .widget p,.hero .widget blockquote,.hero .widget cite,.hero .widget table,.hero .widget ul,.hero .widget ol,.hero .widget li,.hero .widget dd,.hero .widget dt,.hero .widget address,.hero .widget code,.hero .widget pre,.hero .widget .widget-title,.hero .page-header h1{color:#ffffff;}.hero .hero-inner{border-color:rgba(255, 255, 255, 0.5);}
+.main-navigation ul li a,.main-navigation ul li a:visited,.main-navigation ul li a:hover,.main-navigation ul li a:focus,.main-navigation ul li a:visited:hover{color:#252525;}.main-navigation .sub-menu .menu-item-has-children > a::after{border-right-color:#252525;border-left-color:#252525;}.menu-toggle div{background-color:#252525;}.main-navigation ul li a:hover,.main-navigation ul li a:focus{color:rgba(37, 37, 37, 0.8);}
+h1,h2,h3,h4,h5,h6,label,legend,table th,dl dt,.entry-title,.entry-title a,.entry-title a:visited,.widget-title{color:#353535;}.entry-title a:hover,.entry-title a:visited:hover,.entry-title a:focus,.entry-title a:visited:focus,.entry-title a:active,.entry-title a:visited:active{color:rgba(53, 53, 53, 0.8);}
+body,input,select,textarea,input[type="text"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="password"]:focus,input[type="search"]:focus,input[type="number"]:focus,input[type="tel"]:focus,input[type="range"]:focus,input[type="date"]:focus,input[type="month"]:focus,input[type="week"]:focus,input[type="time"]:focus,input[type="datetime"]:focus,input[type="datetime-local"]:focus,input[type="color"]:focus,textarea:focus,.navigation.pagination .paging-nav-text{color:#252525;}hr{background-color:rgba(37, 37, 37, 0.1);border-color:rgba(37, 37, 37, 0.1);}input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],input[type="number"],input[type="tel"],input[type="range"],input[type="date"],input[type="month"],input[type="week"],input[type="time"],input[type="datetime"],input[type="datetime-local"],input[type="color"],textarea,.select2-container .select2-choice{color:rgba(37, 37, 37, 0.5);border-color:rgba(37, 37, 37, 0.1);}select,fieldset,blockquote,pre,code,abbr,acronym,.hentry table th,.hentry table td{border-color:rgba(37, 37, 37, 0.1);}.hentry table tr:hover td{background-color:rgba(37, 37, 37, 0.05);}
+blockquote,.entry-meta,.entry-footer,.comment-meta .says,.logged-in-as,.wp-block-coblocks-author__heading{color:#686868;}
+.site-footer .widget-title,.site-footer h1,.site-footer h2,.site-footer h3,.site-footer h4,.site-footer h5,.site-footer h6{color:#ffffff;}
+.site-footer .widget,.site-footer .widget form label{color:#ffffff;}
+.footer-menu ul li a,.footer-menu ul li a:visited{color:#252525;}.site-info-wrapper .social-menu a{background-color:#252525;}.footer-menu ul li a:hover{border-color:#252525;}.footer-menu ul li a:hover,.footer-menu ul li a:visited:hover{color:rgba(37, 37, 37, 0.8);}
+.site-info-wrapper .site-info-text{color:#252525;}
+a,a:visited,.entry-title a:hover,.entry-title a:visited:hover{color:#54ccbe;}.navigation.pagination .nav-links .page-numbers.current,.social-menu a:hover{background-color:#54ccbe;}a:hover,a:visited:hover,a:focus,a:visited:focus,a:active,a:visited:active{color:rgba(84, 204, 190, 0.8);}.comment-list li.bypostauthor{border-color:rgba(84, 204, 190, 0.2);}
+button,a.button,a.button:visited,input[type="button"],input[type="reset"],input[type="submit"],.wp-block-button__link,.site-info-wrapper .social-menu a:hover{background-color:#b5345f;border-color:#b5345f;}button:hover,button:active,button:focus,a.button:hover,a.button:active,a.button:focus,a.button:visited:hover,a.button:visited:active,a.button:visited:focus,input[type="button"]:hover,input[type="button"]:active,input[type="button"]:focus,input[type="reset"]:hover,input[type="reset"]:active,input[type="reset"]:focus,input[type="submit"]:hover,input[type="submit"]:active,input[type="submit"]:focus{background-color:rgba(181, 52, 95, 0.8);border-color:rgba(181, 52, 95, 0.8);}
+button,button:hover,button:active,button:focus,a.button,a.button:hover,a.button:active,a.button:focus,a.button:visited,a.button:visited:hover,a.button:visited:active,a.button:visited:focus,input[type="button"],input[type="button"]:hover,input[type="button"]:active,input[type="button"]:focus,input[type="reset"],input[type="reset"]:hover,input[type="reset"]:active,input[type="reset"]:focus,input[type="submit"],input[type="submit"]:hover,input[type="submit"]:active,input[type="submit"]:focus,.wp-block-button__link{color:#ffffff;}
+body{background-color:#ffffff;}.navigation.pagination .nav-links .page-numbers.current{color:#ffffff;}
+.hero{background-color:#252525;}.hero{-webkit-box-shadow:inset 0 0 0 9999em;-moz-box-shadow:inset 0 0 0 9999em;box-shadow:inset 0 0 0 9999em;color:rgba(37, 37, 37, 0.50);}
+.main-navigation-container,.main-navigation.open,.main-navigation ul ul,.main-navigation .sub-menu{background-color:#ffffff;}.site-header{background-color:#ffffff;}
+.site-footer{background-color:#3f3244;}
+.site-info-wrapper{background-color:#ffffff;}.site-info-wrapper .social-menu a,.site-info-wrapper .social-menu a:visited,.site-info-wrapper .social-menu a:hover,.site-info-wrapper .social-menu a:visited:hover{color:#ffffff;}
+.has-primary-color{color:#03263B;}.has-primary-background-color{background-color:#03263B;}
+.has-secondary-color{color:#0b3954;}.has-secondary-background-color{background-color:#0b3954;}
+.has-tertiary-color{color:#bddae6;}.has-tertiary-background-color{background-color:#bddae6;}
+.has-quaternary-color{color:#ff6663;}.has-quaternary-background-color{background-color:#ff6663;}
+.has-quinary-color{color:#ffffff;}.has-quinary-background-color{background-color:#ffffff;}
+</style>
+<link rel='stylesheet' id='uptown-style-fonts-css'  href='https://fonts.googleapis.com/css?family=Playfair+Display%3A300%2C400%2C700%7CLato%3A300%2C400%2C700&#038;subset=latin&#038;ver=1.8.8' type='text/css' media='all' />
+<style id='uptown-style-fonts-inline-css' type='text/css'>
+.site-title{font-family:"Playfair Display", sans-serif;}
+.main-navigation ul li a,.main-navigation ul li a:visited,button,a.button,a.fl-button,input[type="button"],input[type="reset"],input[type="submit"]{font-family:"Playfair Display", sans-serif;}
+h1,h2,h3,h4,h5,h6,label,legend,table th,dl dt,.entry-title,.widget-title{font-family:"Playfair Display", sans-serif;}
+body,p,ol li,ul li,dl dd,.fl-callout-text{font-family:"Lato", sans-serif;}
+blockquote,.entry-meta,.entry-footer,.comment-list li .comment-meta .says,.comment-list li .comment-metadata,.comment-reply-link,#respond .logged-in-as{font-family:"Lato", sans-serif;}
+</style>
+<script type='text/javascript' src='https://geehsu.github.io/wordpress_blog/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://geehsu.github.io/wordpress_blog/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://geehsu.github.io/wordpress_blog/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://geehsu.github.io/wordpress_blog/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://geehsu.github.io/wordpress_blog/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='DOM、FUNCTION 函式與監聽' href='https://geehsu.github.io/wordpress_blog/js-novice-teaching-2/' />
+<link rel='next' title='AJAX 與資料處理' href='https://geehsu.github.io/wordpress_blog/js-novice-teaching-4/' />
+<meta name="generator" content="WordPress 5.2.4" />
+<link rel="canonical" href="https://geehsu.github.io/wordpress_blog/js-novice-teaching-3/" />
+<link rel='shortlink' href='https://geehsu.github.io/wordpress_blog/?p=242' />
+<link rel="alternate" type="application/json+oembed" href="https://geehsu.github.io/wordpress_blog/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fgeehsu.github.io%2Fwordpress_blog%2Fjs-novice-teaching-3%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://geehsu.github.io/wordpress_blog/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fgeehsu.github.io%2Fwordpress_blog%2Fjs-novice-teaching-3%2F&#038;format=xml" />
+<style type='text/css'>
+.site-title a,.site-title a:visited{color:353535;}
+</style><link rel="icon" href="https://geehsu.github.io/wordpress_blog/wp-content/uploads/2019/11/cropped-blogging-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://geehsu.github.io/wordpress_blog/wp-content/uploads/2019/11/cropped-blogging-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://geehsu.github.io/wordpress_blog/wp-content/uploads/2019/11/cropped-blogging-180x180.png" />
+<meta name="msapplication-TileImage" content="https://geehsu.github.io/wordpress_blog/wp-content/uploads/2019/11/cropped-blogging-270x270.png" />
+
+</head>
+
+<body class="post-template-default single single-post postid-242 single-format-standard custom-header-image layout-two-column-default">
+
+	
+	<div id="page" class="hfeed site">
+
+		<a class="skip-link screen-reader-text" href="#content">略過內容</a>
+
+		
+		<header id="masthead" class="site-header" role="banner">
+
+			
+			<div class="site-header-wrapper">
+
+				
+<div class="site-title-wrapper">
+
+	
+	<div class="site-title"><a href="https://geehsu.github.io/wordpress_blog/" rel="home">Wordpress_blog</a></div>
+	<div class="site-description">This is a dynamic to static website.</div>
+</div><!-- .site-title-wrapper -->
+
+<div class="main-navigation-container">
+
+	
+<div class="menu-toggle" id="menu-toggle" role="button" tabindex="0"
+	>
+	<div></div>
+	<div></div>
+	<div></div>
+</div><!-- #menu-toggle -->
+
+	<nav id="site-navigation" class="main-navigation">
+
+		<div class="menu-menu-container"><ul id="menu-menu" class="menu"><li id="menu-item-13" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-13"><a href="https://geehsu.github.io/wordpress_blog/category/about/">關於</a></li>
+<li id="menu-item-9" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-has-children menu-item-9"><a href="https://geehsu.github.io/wordpress_blog/category/post/">文章</a>
+<span  class="expand" role="button" tabindex="0"></span>
+
+<ul class="sub-menu">
+	<li id="menu-item-98" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-98"><a href="https://geehsu.github.io/wordpress_blog/category/post/hexschool/">六角學院</a></li>
+	<li id="menu-item-99" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-99"><a href="https://geehsu.github.io/wordpress_blog/category/post/ninja/">The Net Ninja</a></li>
+	<li id="menu-item-212" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-212"><a href="https://geehsu.github.io/wordpress_blog/category/post/designcourse/">DesignCourse</a></li>
+</ul>
+</li>
+<li id="menu-item-12" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-12"><a href="https://geehsu.github.io/wordpress_blog/category/sticker/">貼圖</a></li>
+<li id="menu-item-11" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11"><a href="https://geehsu.github.io/wordpress_blog/category/food/">美食</a></li>
+<li id="menu-item-10" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10"><a href="https://geehsu.github.io/wordpress_blog/category/tour/">旅遊</a></li>
+<li id="menu-item-59" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-59"><a href="https://geehsu.github.io/wordpress_blog/category/social/">社群</a>
+<span  class="expand" role="button" tabindex="0"></span>
+
+<ul class="sub-menu">
+	<li id="menu-item-60" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-60"><a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/watergrass0402/">facebook</a></li>
+</ul>
+</li>
+</ul></div>
+	</nav><!-- #site-navigation -->
+
+	
+</div>
+
+			</div><!-- .site-header-wrapper -->
+
+			
+		</header><!-- #masthead -->
+
+		
+<div class="hero">
+
+	
+	<div class="hero-inner">
+
+		
+<div class="page-title-container">
+
+	<header class="page-header">
+
+		<h2 class="page-title">文章</h2>
+	</header><!-- .entry-header -->
+
+</div><!-- .page-title-container -->
+
+	</div>
+
+</div>
+
+		<div id="content" class="site-content">
+
+<div id="primary" class="content-area">
+
+	<main id="main" class="site-main" role="main">
+
+	
+		
+<article id="post-242" class="post-242 post type-post status-publish format-standard hentry category-post">
+
+	
+	
+	
+<header class="entry-header">
+
+	<div class="entry-header-row">
+
+		<div class="entry-header-column">
+
+			
+			
+				<h1 class="entry-title">陣列與物件、FOREACH</h1>
+
+			
+			
+		</div><!-- .entry-header-column -->
+
+	</div><!-- .entry-header-row -->
+
+</header><!-- .entry-header -->
+
+	
+<div class="entry-meta">
+
+	
+		<span class="posted-date">2020 年 9 月 14 日</span>
+
+	
+	<span class="posted-author"><a href="https://geehsu.github.io/wordpress_blog/author/gee-hsu/" title="「gee.hsu」的文章" rel="author">gee.hsu</a></span>
+
+	
+</div><!-- .entry-meta -->
+
+	
+		
+<div class="entry-content">
+
+	
+<ul><li>學習資源：六角學院直播</li><li><a rel="noreferrer noopener" href="https://quip.com/ENbnAoypuKfb" target="_blank">陣列、物件、forEach – 共筆文件</a></li><li><a href="https://hackmd.io/@YmcMgo-NSKOqgTGAjl_5tg/Sk-_oGL2U/%2F6PmB3d1TQN-ZoN-_r3nWVQ" target="_blank" rel="noreferrer noopener">協作手冊</a></li></ul>
+
+
+
+<p>影片長度: 02:16:29</p>
+
+
+
+<h4>為什麼講陣列與物件</h4>
+
+
+
+<h4>JS學徒特訓班報名區</h4>
+
+
+
+<h4>陣列、物件教學開始</h4>
+
+
+
+<p>陣列常用語法</p>
+
+
+
+<ul><li><a rel="noreferrer noopener" href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/%E9%99%A3%E5%88%97%E7%9A%84%E9%81%8B%E7%94%A8" target="_blank">陣列的運用</a></li><li><a href="https://w3c.hexschool.com/blog/6594e4ff" target="_blank" rel="noreferrer noopener">Cheatssheet for Array Methods – JavaScript 陣列方法大全</a></li></ul>
+
+
+
+<h4>ul、li標籤使用時機</h4>
+
+
+
+<ul><li>以 li 來解釋陣列</li></ul>
+
+
+
+<h4>陣列該怎麼寫</h4>
+
+
+
+<pre class="wp-block-code"><code>var news1 = "第一則新聞"
+var news2 = "第二則新聞"
+console.log(typeof(news1+news2));
+// 1.string →這個
+// 2.number
+var ary = [];</code></pre>
+
+
+
+<p>Google Chrome</p>
+
+
+
+<pre class="wp-block-code"><code>var colors = ["紅色","藍色","黃色"]
+undefined
+colors
+(3) ["紅色","藍色","黃色"]</code></pre>
+
+
+
+<h4>陣列記憶體紀錄講解</h4>
+
+
+
+<pre class="wp-block-code"><code>colors → ["紅色","藍色","黃色"]</code></pre>
+
+
+
+<h4>陣列寫法</h4>
+
+
+
+<pre class="wp-block-code"><code>var colors = ["紅色","藍色黃色"]
+// 1.正確 → 這個
+// 2.錯誤</code></pre>
+
+
+
+<pre class="wp-block-code"><code>var colors = [紅色藍色黃色]
+// 1.正確
+// 2.錯誤 → 這個</code></pre>
+
+
+
+<pre class="wp-block-code"><code>1.string
+2.mile
+3.number
+4.boolean
+// JavaScript 有哪幾個常用的型別？
+134</code></pre>
+
+
+
+<pre class="wp-block-code"><code>var colors = ["紅色","藍色","黃色","粉紅色"]
+undefined
+var colors = ["紅色","藍色","黃色","粉紅色",3]
+undefined
+colors
+(5) ["紅色","藍色","黃色","粉紅色", 3]
+var colors = ["紅色","藍色","黃色","粉紅",3,true,false]
+undefined</code></pre>
+
+
+
+<p>陣列就是拿來放好幾筆資料用的。</p>
+
+
+
+<ul><li>讀取裡面的資料，例如第一筆資料：colors[0]</li><li>新增一個顏色，使用 push：colors.push(“黑色”)</li><li>抓出裡面的資料長度，使用 length：colors.length</li></ul>
+
+
+
+<h4>透過程式新增資料到陣列</h4>
+
+
+
+<pre class="wp-block-code"><code>var colors = [];
+undefined
+typeof(colors)
+"object"
+colors
+[]
+colors.push("紅色")
+1
+colors.push("藍色")
+2
+colors
+(2) ["紅色","藍色"]</code></pre>
+
+
+
+<h4>呼叫陣列</h4>
+
+
+
+<pre class="wp-block-code"><code>colors
+(2) ["紅色","藍色"]</code></pre>
+
+
+
+<h4>陣列長度</h4>
+
+
+
+<pre class="wp-block-code"><code>colors.length
+2</code></pre>
+
+
+
+<h4>讀取陣列資料</h4>
+
+
+
+<pre class="wp-block-code"><code>colors[0]
+"紅色"
+colors[1]
+"藍色"</code></pre>
+
+
+
+<h4>改變陣列內容</h4>
+
+
+
+<pre class="wp-block-code"><code>colors[1] = "黑色"
+"黑色"
+colors
+(2) ["紅色","黑色"]</code></pre>
+
+
+
+<p>測驗</p>
+
+
+
+<pre class="wp-block-code"><code>var colors = [];
+colors.push("紅色");
+1
+colors
+["紅色"]
+colors[1] = "粉紅色"
+"粉紅色"
+colors
+(2) ["紅色","粉紅色"]
+colors.length
+2</code></pre>
+
+
+
+<p>陣列操作有幾種？<br>1~10 +1<br>10~20 +2<br>20~30 +3<br>30以上 +4<br>→大概有20~30種<br>以下學習，以 ForEach 來講。</p>
+
+
+
+<h4><a href="https://wcc723.github.io/javascript/2017/06/29/es6-native-array/#Array-prototype-forEach" target="_blank" rel="noreferrer noopener">ForEach</a></h4>
+
+
+
+<ul><li><a rel="noreferrer noopener" href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" target="_blank">MDN</a></li><li><a href="https://wcc723.github.io/javascript/2017/06/29/es6-native-array/" target="_blank" rel="noreferrer noopener">JavaScript 陣列處理方法 [filter(), find(), forEach(), map(), every(), some(), reduce()]</a></li></ul>
+
+
+
+<h4>ForEach 語法</h4>
+
+
+
+<pre class="wp-block-code"><code>var colors = ["紅色","藍色","黃色","粉紅色"];
+colors[0]
+"紅色"
+colors.forEach(function(item,index){
+  console.log(item)
+})
+紅色
+藍色
+黃色
+粉紅色
+undefined</code></pre>
+
+
+
+<h4>ForEach 講解</h4>
+
+
+
+<p>// 函式預設是不執行<br>// 發現陣列有幾筆資料，他就執行幾次函式。</p>
+
+
+
+<pre class="wp-block-code"><code>// item,index 是很常用的參數
+// item指的是"紅色","藍色","黃色","粉紅色"
+// index指的是目前第幾筆資料</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// item,index 執行第三次的時候，item,index 的值是多少？
+"紅色",2</code></pre>
+
+
+
+<h4>老師 JS 就是爛</h4>
+
+
+
+<p>JS 要難就可以很難<br><br>很爛的方法、好記的方法、好用的方法 O<br><br>直播的價值，老師講完你會迫不及待的實作 O<br><br>老師很強，就沒有了，聽安慰的 X</p>
+
+
+
+<h4>ForEach 應用</h4>
+
+
+
+<pre class="wp-block-code"><code>var num = [1,2,3,4,5];
+var total = 0
+num.forEach(function(item,index){
+  total+=item;
+})
+console.log(total);
+15
+undefined</code></pre>
+
+
+
+<h4>ForEach 應用的講解</h4>
+
+
+
+<pre class="wp-block-code"><code>num → [1,2,3,4,5]
+total → 0
+total → 1
+total → 3
+total → 6
+total → 10
+total → 15</code></pre>
+
+
+
+<p>陣列的操作有 push、length、forEach</p>
+
+
+
+<h4>物件</h4>
+
+
+
+<h6>物件寫法</h6>
+
+
+
+<ul><li><a href="https://ithelp.ithome.com.tw/articles/10190962" target="_blank" rel="noreferrer noopener">重新認識 JavaScript: Day 04 物件、陣列以及型別判斷</a></li></ul>
+
+
+
+<p>依照<a rel="noreferrer noopener" href="https://z7x2c0v0b8.github.io/the_f2e_2nd/hotel_reservation.html#artboard1" target="_blank">旅館資訊</a>來設計<br><br>依照老闆公司狀態來設計物件<br><br>依照高雄市家庭來設計物件<br><br>依照<a href="https://hackmd.io/@YmcMgo-NSKOqgTGAjl_5tg/Sk-_oGL2U/https%3A%2F%2Fhackmd.io%2FLagKw_l-SCak_Jdo2MFrdg#%E7%AC%AC%E4%BA%8C%E9%A1%8C%EF%BC%9A%E9%8C%A2%E5%8C%85%E5%89%A9%E4%B8%8B%E5%A4%9A%E5%B0%91%E9%8C%A2" target="_blank" rel="noreferrer noopener">第五關第二題</a>來設計物件</p>
+
+
+
+<h4>陣列、物件差別</h4>
+
+
+
+<pre class="wp-block-code"><code>// 陣列
+var colors = ["紅色","黑色"];
+// 物件
+var house = {
+  // 屬性: 值
+  "room": 3,
+  "bath": 2,
+  "park": false,
+  "name": "持有人",
+  "son": ["Bob","John","小傑"],
+  "dog": 2,
+  "fatherName": "Tom"
+}</code></pre>
+
+
+
+<h4>新增資料到物件</h4>
+
+
+
+<pre class="wp-block-code"><code>var family = {};
+undefined
+family
+{}
+family.father = "Tom"
+"Tom"
+family
+{father: "Tom"}</code></pre>
+
+
+
+<h4>讀取物件資料</h4>
+
+
+
+<pre class="wp-block-code"><code>// 抓整個物件
+family
+{father: "Tom"}
+// 抓裡面的字串
+family.father
+"Tom"</code></pre>
+
+
+
+<h4>取出物件中陣列裡的值</h4>
+
+
+
+<pre class="wp-block-code"><code>family.mother = "mary"
+"mary"
+family
+{father: "Tom", mother: "mary"}
+
+// 1.family[0]
+// 2.family[1].mother
+// 3.family.mother → 這個</code></pre>
+
+
+
+<pre class="wp-block-code"><code>var house = {
+  "room": 3,
+  "bath": 2,
+  "park":false,
+  "name":"持有人",
+  "son":["Bob","John","小傑"],
+  "dog": 2,
+  "fatherName": "Tom"
+}
+undefined
+house.park
+house.son[2]</code></pre>
+
+
+
+<h4>物件名稱使用中文</h4>
+
+
+
+<p>可以使用</p>
+
+
+
+<h4>數字開頭命名的問題</h4>
+
+
+
+<p>變數命名上會出現錯誤</p>
+
+
+
+<h4>如何取出數字命名的物件資料</h4>
+
+
+
+<pre class="wp-block-code"><code>var house = {
+  "1": "第一名",
+  "里長": "料北北",
+  "park": false
+}
+// 讀取方式
+house["1"]
+"第一名"
+
+house.park
+false
+house["park"]
+false</code></pre>
+
+
+
+<h4>The F2E</h4>
+
+
+
+<p>每年會出九個題目，一周內做完。</p>
+
+
+
+<h4>如何規劃資料結構</h4>
+
+
+
+<pre class="wp-block-code"><code>// 物件
+var roomName = "Double";
+var roomPrice = 2460;
+var roomUrl = "https://www.rooms.com/rooms.png";
+
+// 陣列
+var room1,room2,room3,room4,room5,room6
+
+// 字串 +1
+// 數字 +2
+// 物件 +3 → 這個
+var rooms = [
+  {
+    "name": "Single",
+    "price": 1500
+  },{
+    "name": "Double",
+    "price": 2500
+  }
+]</code></pre>
+
+
+
+<h4>旅館資訊範例特訓</h4>
+
+
+
+<pre class="wp-block-code"><code>var rooms = [
+  {
+    "name": "Single",
+    "price": 1500
+  },{
+    "name": "Double",
+    "price": 2500
+  }
+]
+// 取出第二筆資料的價格
+// rooms[1].price
+
+// 取出第一筆資料的房型
+// rooms[0].name
+
+// 取出第二筆資料(return 物件)
+// rooms[1]
+
+// 取出整個陣列
+// rooms
+
+// 想讓這個陣列依序印出每筆物件資料要怎麼做？
+rooms.forEach(function(item,index){
+  console.log(item)
+})
+
+// 想讓這個陣列依序印出每筆物件的價格要怎麼做？
+rooms.forEach(function(item,index){
+  console.log(item.price)
+})
+
+// 第幾筆房子的名稱叫做？
+rooms.forEach(function(item,index){
+  console.log("第"+ (index+1) +"筆房子的名稱叫做" + item.name);
+})
+
+// 第幾筆房子的價格是多少？
+rooms.forEach(function(item,index){
+  console.log("第"+ (index+1) +"筆房子的價格為" + item.price);
+})</code></pre>
+
+
+
+<h4>老闆公司狀態範例</h4>
+
+
+
+<pre class="wp-block-code"><code>// 1間的話，可以用物件
+var restaurant = {
+  "員工": "小杰",
+  "productList": ["ham","fries"],
+  "seat": 36
+}
+
+// 2間的話，可以用陣列
+var res = [
+  {
+    "員工": "小杰",
+    "productList": ["ham","fries"],
+    "seat": 36
+  },
+  {
+    "員工": "小杰","小美","小明"],
+    "productList": ["ham","fries"],
+    "seat": 25
+  }
+]
+// 查詢第二間餐廳的座位要怎麼寫？
+res[1].seat</code></pre>
+
+
+
+<h4>安裝&nbsp;<a rel="noreferrer noopener" href="https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc" target="_blank">JSONView</a></h4>
+
+
+
+<pre class="wp-block-code"><code>// JSON 格式
+// 陣列跟物件的集合
+
+// {} - 物件
+// [] - 陣列</code></pre>
+
+
+
+<p><a href="https://data.kcg.gov.tw/dataset?res_format=JSON" target="_blank" rel="noreferrer noopener">高雄 open data</a></p>
+
+
+
+<h4><a href="https://api.kcg.gov.tw/api/service/get/4278fc6a-c3ea-4192-8ce0-40f00cdb40dd" target="_blank" rel="noreferrer noopener">輕軌 JSON</a></h4>
+
+
+
+<ul><li>總共有幾個車站？</li></ul>
+
+
+
+<h4>輕軌範例</h4>
+
+
+
+<pre class="wp-block-code"><code>var station = {輕軌 JSON 資料}
+undefined
+station
+{輕軌 JSON 資料}
+station.data.length
+39
+
+// 分析哪些才是你要的資料</code></pre>
+
+
+
+<h4><a href="https://cabu4.kcg.gov.tw/KcgRegion/OpenData/%E9%87%8C%E9%95%B7%E9%80%9A%E8%A8%8A%E9%8C%84.JSON" target="_blank" rel="noreferrer noopener">高雄里長範例</a></h4>
+
+
+
+<ul><li>顯示有幾個里長？</li><li>顯示每個里的里長姓名</li></ul>
+
+
+
+<pre class="wp-block-code"><code>var city = [高雄里長 JSON 資料]
+undefined
+city.length</code></pre>
+
+
+
+<pre class="wp-block-code"><code>city.forEach(function(item){
+  console.log(item["里長姓名"]);
+})
+
+// 或者是 item.里長姓名</code></pre>
+
+
+
+<h4><a href="https://raw.githubusercontent.com/hexschool/KCGTravel/master/datastore_search.json" target="_blank" rel="noreferrer noopener">高雄旅遊網範例</a></h4>
+
+
+
+<ul><li>顯示有幾個旅遊景點？(資料處理，撈出我要的乾淨陣列)</li><li>顯示每個旅遊名稱</li><li>顯示三民區有幾個景點？(if + 全域變數)</li></ul>
+
+
+
+<pre class="wp-block-code"><code>var city = {高雄旅遊 JSON 資料}
+undefined
+city
+{高雄旅遊 JSON 資料}
+
+// 顯示有幾個旅遊景點？
+// 第一件事是分析資料
+var kao = city.result.records
+undefined
+kao.length
+100
+
+// 顯示每個旅遊名稱
+kao.forEach(function(item,index){
+  console.log(item.Name)
+})
+
+// 顯示三民區有幾個景點？
+// 篩選
+var total = 0;
+kao.forEach(function(item,index){
+  if(item.Zone == "三民區"){
+    total+=1
+    console.log(item.Name)
+ }
+})
+console.log("三民區景點有幾處:"+total)</code></pre>
+
+
+
+<h4>範例最後一題講解</h4>
+
+
+
+<pre class="wp-block-code"><code>kao → [{},{},{}]
+total → 0
+total → 1
+total → 2</code></pre>
+
+
+
+<p>forEach+陣列+物件</p>
+
+
+
+<pre class="wp-block-code"><code>var farms = [
+  {
+    farmer: '卡斯柏',
+    field: 6
+  },
+  {
+    farmer: '查理',
+    field: 10
+  }
+]</code></pre>
+
+
+
+<h4>陣列資料處理</h4>
+
+
+
+<pre class="wp-block-code"><code>var total = 0;
+var sanmin = []
+kao.forEach(function(item,index){
+  if(item.Zone == "三民區"){
+    total+=1;
+    sanmin.push(item);
+    console.log(item.Name)
+ }
+})
+console.log("三民區景點有幾處:"+total)
+console.log(sanmin);</code></pre>
+
+
+
+<h4>課後作業</h4>
+
+
+
+<p><a href="https://data.kcg.gov.tw/dataset?res_format=JSON" target="_blank" rel="noreferrer noopener">高雄 open data</a></p>
+
+
+
+<pre class="wp-block-code"><code>// 與高雄旅遊網 JSON 題目為範例做練習
+各位同學好，我找的資料是這個
+1.多少筆？
+2.顯示每個的某某名稱
+3.篩選出某某區的資料
+
+// 電動機車充電站名稱及充電站地址
+請挑選 JSON 格式
+檢視頁框原始碼，全選複製
+var area = [{電動機車充電站 JSON 資料}]
+undefined
+// 1.
+area.length
+136
+// 2.
+area.forEach(function(item){
+  console.log(item.Location);
+})
+每個的資料
+// 3.
+var freeStation = 0;
+area.forEach(function(item){
+  if(item.Charge == "免費"){
+    freeStation+=1;
+  }
+})
+console.log(freeStation);
+69
+undefined
+
+// 免費、投幣各有幾筆資料
+var freeStation = 0;
+var paidStation = 0;
+area.forEach(function(item){
+  if(item.Charge == "免費"){
+    freeStation+=1;
+  }else if(item.Charge == "投幣式"){
+    paidStation+=1;
+  }
+})
+console.log(freeStation,paidStation);
+69 67
+undefined</code></pre>
+
+</div><!-- .entry-content -->
+
+	
+	
+<footer class="entry-footer">
+
+	<div class="entry-footer-right">
+
+		
+	</div>
+
+	
+		
+		
+			<span class="cat-links">
+
+				發佈位置： <a href="https://geehsu.github.io/wordpress_blog/category/post/" rel="category tag">文章</a>
+			</span>
+
+		
+		
+		
+	
+</footer><!-- .entry-footer -->
+
+	
+</article><!-- #post-## -->
+
+		
+	<nav class="navigation post-navigation" role="navigation">
+		<h2 class="screen-reader-text">文章導覽</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="https://geehsu.github.io/wordpress_blog/js-novice-teaching-2/" rel="prev">&larr; DOM、FUNCTION 函式與監聽</a></div><div class="nav-next"><a href="https://geehsu.github.io/wordpress_blog/js-novice-teaching-4/" rel="next">AJAX 與資料處理 &rarr;</a></div></div>
+	</nav>
+		
+	
+	</main><!-- #main -->
+
+</div><!-- #primary -->
+
+
+<div id="secondary" class="widget-area" role="complementary">
+
+			<aside id="recent-posts-2" class="widget widget_recent_entries">		<h4 class="widget-title">近期文章</h4>		<ul>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/js-novice-teaching-4/">AJAX 與資料處理</a>
+											<span class="post-date">2020 年 9 月 14 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/js-novice-teaching-3/">陣列與物件、FOREACH</a>
+											<span class="post-date">2020 年 9 月 14 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/js-novice-teaching-2/">DOM、FUNCTION 函式與監聽</a>
+											<span class="post-date">2020 年 9 月 14 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/js-novice-teaching-1/">JS 環境建立與變數</a>
+											<span class="post-date">2020 年 9 月 14 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/rwd-starttofinish/">RESPONSIVE BOOTSTRAP WEBSITE START TO FINISH WITH BOOTSTRAP 4, HTML5 &#038; CSS3</a>
+											<span class="post-date">2020 年 9 月 14 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/scrolltop/">SCROLLTOP – 滑動效果</a>
+											<span class="post-date">2020 年 9 月 14 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/easy-tutorials-01/">HOW TO MAKE A RESPONSIVE WEBSITE DESIGN USING HTML AND CSS STEP BY STEP TUTORIAL</a>
+											<span class="post-date">2020 年 9 月 14 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/hexschoolcolumn/">網頁前端養成專欄-來自六角學院</a>
+											<span class="post-date">2020 年 7 月 4 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/bootstrap-5-alpha/">BOOTSTRAP 5 ALPHA – WHAT’S NEW &#038; WHAT CHANGED?!</a>
+											<span class="post-date">2020 年 6 月 30 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/the-parcel-bundler/">THE PARCEL BUNDLER</a>
+											<span class="post-date">2020 年 6 月 30 日</span>
+									</li>
+					</ul>
+		</aside><aside id="archives-2" class="widget widget_archive"><h4 class="widget-title">彙整</h4>		<ul>
+				<li><a href='https://geehsu.github.io/wordpress_blog/2020/09/'>2020 年 9 月</a>&nbsp;(7)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2020/07/'>2020 年 7 月</a>&nbsp;(1)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2020/06/'>2020 年 6 月</a>&nbsp;(4)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2020/05/'>2020 年 5 月</a>&nbsp;(1)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2020/04/'>2020 年 4 月</a>&nbsp;(2)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2020/03/'>2020 年 3 月</a>&nbsp;(2)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2020/02/'>2020 年 2 月</a>&nbsp;(1)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2020/01/'>2020 年 1 月</a>&nbsp;(1)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2019/11/'>2019 年 11 月</a>&nbsp;(11)</li>
+		</ul>
+			</aside><aside id="categories-2" class="widget widget_categories"><h4 class="widget-title">分類</h4>		<ul>
+				<li class="cat-item cat-item-3"><a href="https://geehsu.github.io/wordpress_blog/category/post/">文章</a> (26)
+<ul class='children'>
+	<li class="cat-item cat-item-14"><a href="https://geehsu.github.io/wordpress_blog/category/post/designcourse/">DesignCourse</a> (3)
+</li>
+	<li class="cat-item cat-item-13"><a href="https://geehsu.github.io/wordpress_blog/category/post/ninja/">The Net Ninja</a> (2)
+</li>
+	<li class="cat-item cat-item-12"><a href="https://geehsu.github.io/wordpress_blog/category/post/hexschool/">六角學院</a> (12)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-2"><a href="https://geehsu.github.io/wordpress_blog/category/about/">關於</a> (4)
+</li>
+		</ul>
+			</aside><aside id="calendar-3" class="widget widget_calendar"><div id="calendar_wrap" class="calendar_wrap"><table id="wp-calendar">
+	<caption>2020 年 9 月</caption>
+	<thead>
+	<tr>
+		<th scope="col" title="星期一">一</th>
+		<th scope="col" title="星期二">二</th>
+		<th scope="col" title="星期三">三</th>
+		<th scope="col" title="星期四">四</th>
+		<th scope="col" title="星期五">五</th>
+		<th scope="col" title="星期六">六</th>
+		<th scope="col" title="星期日">日</th>
+	</tr>
+	</thead>
+
+	<tfoot>
+	<tr>
+		<td colspan="3" id="prev"><a href="https://geehsu.github.io/wordpress_blog/2020/07/">&laquo; 7 月</a></td>
+		<td class="pad">&nbsp;</td>
+		<td colspan="3" id="next" class="pad">&nbsp;</td>
+	</tr>
+	</tfoot>
+
+	<tbody>
+	<tr>
+		<td colspan="1" class="pad">&nbsp;</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td>
+	</tr>
+	<tr>
+		<td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td>
+	</tr>
+	<tr>
+		<td id="today"><a href="https://geehsu.github.io/wordpress_blog/2020/09/14/" aria-label="文章發佈於 2020 年 9 月 14 日">14</a></td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td>
+	</tr>
+	<tr>
+		<td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td>
+	</tr>
+	<tr>
+		<td>28</td><td>29</td><td>30</td>
+		<td class="pad" colspan="4">&nbsp;</td>
+	</tr>
+	</tbody>
+	</table></div></aside>
+</div><!-- #secondary -->
+
+
+
+		</div><!-- #content -->
+
+		
+		<footer id="colophon" class="site-footer">
+
+			<div class="site-footer-inner">
+
+				
+			</div><!-- .site-footer-inner -->
+
+		</footer><!-- #colophon -->
+
+		
+<div class="site-info-wrapper">
+
+	<div class="site-info">
+
+		<div class="site-info-inner">
+
+			
+<div class="site-info-text">
+
+	Copyright &copy; 2020 Wordpress_blog &mdash; Uptown Style WordPress 主題作者：<a href="https://www.godaddy.com/" rel="author nofollow">GoDaddy</a>
+</div>
+
+		</div><!-- .site-info-inner -->
+
+	</div><!-- .site-info -->
+
+</div><!-- .site-info-wrapper -->
+
+	</div><!-- #page -->
+
+	<script type='text/javascript' src='https://geehsu.github.io/wordpress_blog/wp-content/themes/primer/assets/js/navigation.min.js?ver=1.8.8'></script>
+<script type='text/javascript' src='https://geehsu.github.io/wordpress_blog/wp-includes/js/wp-embed.min.js?ver=5.2.4'></script>
+	<script>
+	/* IE11 skip link focus fix */
+	/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
+	</script>
+	
+</body>
+
+</html>

@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+
+<html lang="zh-TW">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+
+	<link rel="pingback" href="https://geehsu.github.io/wordpress_blog/xmlrpc.php">
+
+	<title>伸縮自如的 RWD 排版術 &#8211; WordPress_blog</title>
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="訂閱《Wordpress_blog》&raquo; 資訊提供" href="https://geehsu.github.io/wordpress_blog/feed/" />
+<link rel="alternate" type="application/rss+xml" title="訂閱《Wordpress_blog》&raquo; 留言的資訊提供" href="https://geehsu.github.io/wordpress_blog/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/geehsu.github.io\/wordpress_blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.4"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://geehsu.github.io/wordpress_blog/wp-includes/css/dist/block-library/style.min.css?ver=5.2.4' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='https://geehsu.github.io/wordpress_blog/wp-includes/css/dist/block-library/theme.min.css?ver=5.2.4' type='text/css' media='all' />
+<link rel='stylesheet' id='uptown-style-css'  href='https://geehsu.github.io/wordpress_blog/wp-content/themes/uptown-style/style.css?ver=1.1.3' type='text/css' media='all' />
+<style id='uptown-style-inline-css' type='text/css'>
+.hero{background-image:url(https://geehsu.github.io/wordpress_blog/wp-content/themes/uptown-style/assets/images/hero.jpg);}
+.site-title a,.site-title a:visited{color:#353535;}.site-title a:hover,.site-title a:visited:hover{color:rgba(53, 53, 53, 0.8);}
+.site-description{color:#686868;}
+.hero,.hero .widget h1,.hero .widget h2,.hero .widget h3,.hero .widget h4,.hero .widget h5,.hero .widget h6,.hero .widget p,.hero .widget blockquote,.hero .widget cite,.hero .widget table,.hero .widget ul,.hero .widget ol,.hero .widget li,.hero .widget dd,.hero .widget dt,.hero .widget address,.hero .widget code,.hero .widget pre,.hero .widget .widget-title,.hero .page-header h1{color:#ffffff;}.hero .hero-inner{border-color:rgba(255, 255, 255, 0.5);}
+.main-navigation ul li a,.main-navigation ul li a:visited,.main-navigation ul li a:hover,.main-navigation ul li a:focus,.main-navigation ul li a:visited:hover{color:#252525;}.main-navigation .sub-menu .menu-item-has-children > a::after{border-right-color:#252525;border-left-color:#252525;}.menu-toggle div{background-color:#252525;}.main-navigation ul li a:hover,.main-navigation ul li a:focus{color:rgba(37, 37, 37, 0.8);}
+h1,h2,h3,h4,h5,h6,label,legend,table th,dl dt,.entry-title,.entry-title a,.entry-title a:visited,.widget-title{color:#353535;}.entry-title a:hover,.entry-title a:visited:hover,.entry-title a:focus,.entry-title a:visited:focus,.entry-title a:active,.entry-title a:visited:active{color:rgba(53, 53, 53, 0.8);}
+body,input,select,textarea,input[type="text"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="password"]:focus,input[type="search"]:focus,input[type="number"]:focus,input[type="tel"]:focus,input[type="range"]:focus,input[type="date"]:focus,input[type="month"]:focus,input[type="week"]:focus,input[type="time"]:focus,input[type="datetime"]:focus,input[type="datetime-local"]:focus,input[type="color"]:focus,textarea:focus,.navigation.pagination .paging-nav-text{color:#252525;}hr{background-color:rgba(37, 37, 37, 0.1);border-color:rgba(37, 37, 37, 0.1);}input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],input[type="number"],input[type="tel"],input[type="range"],input[type="date"],input[type="month"],input[type="week"],input[type="time"],input[type="datetime"],input[type="datetime-local"],input[type="color"],textarea,.select2-container .select2-choice{color:rgba(37, 37, 37, 0.5);border-color:rgba(37, 37, 37, 0.1);}select,fieldset,blockquote,pre,code,abbr,acronym,.hentry table th,.hentry table td{border-color:rgba(37, 37, 37, 0.1);}.hentry table tr:hover td{background-color:rgba(37, 37, 37, 0.05);}
+blockquote,.entry-meta,.entry-footer,.comment-meta .says,.logged-in-as,.wp-block-coblocks-author__heading{color:#686868;}
+.site-footer .widget-title,.site-footer h1,.site-footer h2,.site-footer h3,.site-footer h4,.site-footer h5,.site-footer h6{color:#ffffff;}
+.site-footer .widget,.site-footer .widget form label{color:#ffffff;}
+.footer-menu ul li a,.footer-menu ul li a:visited{color:#252525;}.site-info-wrapper .social-menu a{background-color:#252525;}.footer-menu ul li a:hover{border-color:#252525;}.footer-menu ul li a:hover,.footer-menu ul li a:visited:hover{color:rgba(37, 37, 37, 0.8);}
+.site-info-wrapper .site-info-text{color:#252525;}
+a,a:visited,.entry-title a:hover,.entry-title a:visited:hover{color:#54ccbe;}.navigation.pagination .nav-links .page-numbers.current,.social-menu a:hover{background-color:#54ccbe;}a:hover,a:visited:hover,a:focus,a:visited:focus,a:active,a:visited:active{color:rgba(84, 204, 190, 0.8);}.comment-list li.bypostauthor{border-color:rgba(84, 204, 190, 0.2);}
+button,a.button,a.button:visited,input[type="button"],input[type="reset"],input[type="submit"],.wp-block-button__link,.site-info-wrapper .social-menu a:hover{background-color:#b5345f;border-color:#b5345f;}button:hover,button:active,button:focus,a.button:hover,a.button:active,a.button:focus,a.button:visited:hover,a.button:visited:active,a.button:visited:focus,input[type="button"]:hover,input[type="button"]:active,input[type="button"]:focus,input[type="reset"]:hover,input[type="reset"]:active,input[type="reset"]:focus,input[type="submit"]:hover,input[type="submit"]:active,input[type="submit"]:focus{background-color:rgba(181, 52, 95, 0.8);border-color:rgba(181, 52, 95, 0.8);}
+button,button:hover,button:active,button:focus,a.button,a.button:hover,a.button:active,a.button:focus,a.button:visited,a.button:visited:hover,a.button:visited:active,a.button:visited:focus,input[type="button"],input[type="button"]:hover,input[type="button"]:active,input[type="button"]:focus,input[type="reset"],input[type="reset"]:hover,input[type="reset"]:active,input[type="reset"]:focus,input[type="submit"],input[type="submit"]:hover,input[type="submit"]:active,input[type="submit"]:focus,.wp-block-button__link{color:#ffffff;}
+body{background-color:#ffffff;}.navigation.pagination .nav-links .page-numbers.current{color:#ffffff;}
+.hero{background-color:#252525;}.hero{-webkit-box-shadow:inset 0 0 0 9999em;-moz-box-shadow:inset 0 0 0 9999em;box-shadow:inset 0 0 0 9999em;color:rgba(37, 37, 37, 0.50);}
+.main-navigation-container,.main-navigation.open,.main-navigation ul ul,.main-navigation .sub-menu{background-color:#ffffff;}.site-header{background-color:#ffffff;}
+.site-footer{background-color:#3f3244;}
+.site-info-wrapper{background-color:#ffffff;}.site-info-wrapper .social-menu a,.site-info-wrapper .social-menu a:visited,.site-info-wrapper .social-menu a:hover,.site-info-wrapper .social-menu a:visited:hover{color:#ffffff;}
+.has-primary-color{color:#03263B;}.has-primary-background-color{background-color:#03263B;}
+.has-secondary-color{color:#0b3954;}.has-secondary-background-color{background-color:#0b3954;}
+.has-tertiary-color{color:#bddae6;}.has-tertiary-background-color{background-color:#bddae6;}
+.has-quaternary-color{color:#ff6663;}.has-quaternary-background-color{background-color:#ff6663;}
+.has-quinary-color{color:#ffffff;}.has-quinary-background-color{background-color:#ffffff;}
+</style>
+<link rel='stylesheet' id='uptown-style-fonts-css'  href='https://fonts.googleapis.com/css?family=Playfair+Display%3A300%2C400%2C700%7CLato%3A300%2C400%2C700&#038;subset=latin&#038;ver=1.8.8' type='text/css' media='all' />
+<style id='uptown-style-fonts-inline-css' type='text/css'>
+.site-title{font-family:"Playfair Display", sans-serif;}
+.main-navigation ul li a,.main-navigation ul li a:visited,button,a.button,a.fl-button,input[type="button"],input[type="reset"],input[type="submit"]{font-family:"Playfair Display", sans-serif;}
+h1,h2,h3,h4,h5,h6,label,legend,table th,dl dt,.entry-title,.widget-title{font-family:"Playfair Display", sans-serif;}
+body,p,ol li,ul li,dl dd,.fl-callout-text{font-family:"Lato", sans-serif;}
+blockquote,.entry-meta,.entry-footer,.comment-list li .comment-meta .says,.comment-list li .comment-metadata,.comment-reply-link,#respond .logged-in-as{font-family:"Lato", sans-serif;}
+</style>
+<script type='text/javascript' src='https://geehsu.github.io/wordpress_blog/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://geehsu.github.io/wordpress_blog/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://geehsu.github.io/wordpress_blog/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://geehsu.github.io/wordpress_blog/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://geehsu.github.io/wordpress_blog/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='AJAX 與資料處理' href='https://geehsu.github.io/wordpress_blog/js-novice-teaching-4/' />
+<meta name="generator" content="WordPress 5.2.4" />
+<link rel="canonical" href="https://geehsu.github.io/wordpress_blog/flex-rwd/" />
+<link rel='shortlink' href='https://geehsu.github.io/wordpress_blog/?p=269' />
+<link rel="alternate" type="application/json+oembed" href="https://geehsu.github.io/wordpress_blog/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fgeehsu.github.io%2Fwordpress_blog%2Fflex-rwd%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://geehsu.github.io/wordpress_blog/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fgeehsu.github.io%2Fwordpress_blog%2Fflex-rwd%2F&#038;format=xml" />
+<style type='text/css'>
+.site-title a,.site-title a:visited{color:353535;}
+</style><link rel="icon" href="https://geehsu.github.io/wordpress_blog/wp-content/uploads/2019/11/cropped-blogging-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://geehsu.github.io/wordpress_blog/wp-content/uploads/2019/11/cropped-blogging-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://geehsu.github.io/wordpress_blog/wp-content/uploads/2019/11/cropped-blogging-180x180.png" />
+<meta name="msapplication-TileImage" content="https://geehsu.github.io/wordpress_blog/wp-content/uploads/2019/11/cropped-blogging-270x270.png" />
+
+</head>
+
+<body class="post-template-default single single-post postid-269 single-format-standard custom-header-image layout-two-column-default">
+
+	
+	<div id="page" class="hfeed site">
+
+		<a class="skip-link screen-reader-text" href="#content">略過內容</a>
+
+		
+		<header id="masthead" class="site-header" role="banner">
+
+			
+			<div class="site-header-wrapper">
+
+				
+<div class="site-title-wrapper">
+
+	
+	<div class="site-title"><a href="https://geehsu.github.io/wordpress_blog/" rel="home">Wordpress_blog</a></div>
+	<div class="site-description">This is a dynamic to static website.</div>
+</div><!-- .site-title-wrapper -->
+
+<div class="main-navigation-container">
+
+	
+<div class="menu-toggle" id="menu-toggle" role="button" tabindex="0"
+	>
+	<div></div>
+	<div></div>
+	<div></div>
+</div><!-- #menu-toggle -->
+
+	<nav id="site-navigation" class="main-navigation">
+
+		<div class="menu-menu-container"><ul id="menu-menu" class="menu"><li id="menu-item-13" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-13"><a href="https://geehsu.github.io/wordpress_blog/category/about/">關於</a></li>
+<li id="menu-item-9" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor menu-item-has-children menu-item-9"><a href="https://geehsu.github.io/wordpress_blog/category/post/">文章</a>
+<span  class="expand" role="button" tabindex="0"></span>
+
+<ul class="sub-menu">
+	<li id="menu-item-98" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-98"><a href="https://geehsu.github.io/wordpress_blog/category/post/hexschool/">六角學院</a></li>
+	<li id="menu-item-99" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-99"><a href="https://geehsu.github.io/wordpress_blog/category/post/ninja/">The Net Ninja</a></li>
+	<li id="menu-item-212" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-212"><a href="https://geehsu.github.io/wordpress_blog/category/post/designcourse/">DesignCourse</a></li>
+</ul>
+</li>
+<li id="menu-item-12" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-12"><a href="https://geehsu.github.io/wordpress_blog/category/sticker/">貼圖</a></li>
+<li id="menu-item-11" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11"><a href="https://geehsu.github.io/wordpress_blog/category/food/">美食</a></li>
+<li id="menu-item-10" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10"><a href="https://geehsu.github.io/wordpress_blog/category/tour/">旅遊</a></li>
+<li id="menu-item-59" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-59"><a href="https://geehsu.github.io/wordpress_blog/category/social/">社群</a>
+<span  class="expand" role="button" tabindex="0"></span>
+
+<ul class="sub-menu">
+	<li id="menu-item-60" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-60"><a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/watergrass0402/">facebook</a></li>
+</ul>
+</li>
+</ul></div>
+	</nav><!-- #site-navigation -->
+
+	
+</div>
+
+			</div><!-- .site-header-wrapper -->
+
+			
+		</header><!-- #masthead -->
+
+		
+<div class="hero">
+
+	
+	<div class="hero-inner">
+
+		
+<div class="page-title-container">
+
+	<header class="page-header">
+
+		<h2 class="page-title">文章</h2>
+	</header><!-- .entry-header -->
+
+</div><!-- .page-title-container -->
+
+	</div>
+
+</div>
+
+		<div id="content" class="site-content">
+
+<div id="primary" class="content-area">
+
+	<main id="main" class="site-main" role="main">
+
+	
+		
+<article id="post-269" class="post-269 post type-post status-publish format-standard hentry category-hexschool">
+
+	
+	
+	
+<header class="entry-header">
+
+	<div class="entry-header-row">
+
+		<div class="entry-header-column">
+
+			
+			
+				<h1 class="entry-title">伸縮自如的 RWD 排版術</h1>
+
+			
+			
+		</div><!-- .entry-header-column -->
+
+	</div><!-- .entry-header-row -->
+
+</header><!-- .entry-header -->
+
+	
+<div class="entry-meta">
+
+	
+		<span class="posted-date">2021 年 1 月 4 日</span>
+
+	
+	<span class="posted-author"><a href="https://geehsu.github.io/wordpress_blog/author/gee-hsu/" title="「gee.hsu」的文章" rel="author">gee.hsu</a></span>
+
+	
+</div><!-- .entry-meta -->
+
+	
+		
+<div class="entry-content">
+
+	
+<p>資料來源：六角學院<br>學習講義：<a href="https://hackmd.io/@YmcMgo-NSKOqgTGAjl_5tg/HJpJk8ABU/https%3A%2F%2Fhackmd.io%2F8-8d2YbtSXS5Z-WSyFJruw%3Fboth" target="_blank" rel="noreferrer noopener">第三週老師講義</a></p>
+
+
+
+<h3>第三周老師講義&nbsp;<a href="https://drive.google.com/file/d/1r8z8i3LzzEKIzDBlztkpFmuXK6EDyMx3/view" target="_blank" rel="noreferrer noopener">範例程式碼下載</a></h3>
+
+
+
+<ul><li>1920px 講解</li><li>RWD 原理</li><li>RWD 網站分享</li><li>直播軟體品質調查、測速服務[下載建議 10mb，ping 15ms 以下]</li></ul>
+
+
+
+<h4>環境建立(以下 no 編號為範例程式碼編號)</h4>
+
+
+
+<ul><li>viewport 設定 (no.1)<br><br>&lt;meta name=”viewport” content=”width=device-width, initial-scale=1.0″&gt;</li><li>CSS media Queries 語法 (no.2)</li></ul>
+
+
+
+<h4>寬度與單位配置</h4>
+
+
+
+<ul><li>max-width：運用在圖片與 HTML 標籤上 (no.3)</li><li>% 單位的運用 (no.4)</li><li>max-width 與 % 的運用 (no.5)</li></ul>
+
+
+
+<h4>排版細節</h4>
+
+
+
+<ul><li>三欄排版 (no.6)</li><li>三欄圖文排版 (no.7)</li><li>完整版型設計 (no.8)</li></ul>
+
+
+
+<h4>權重覆蓋遊戲</h4>
+
+
+
+<ul><li>HTML 標籤：1 分</li><li>class 選擇器：10 分</li><li>ID 選擇器：100 分</li><li>inline style：1000 分</li><li>!important：10000 分</li></ul>
+
+
+
+<h4>RWD 網站分享</h4>
+
+
+
+<ul><li><a rel="noreferrer noopener" href="https://www.apple.com/tw/" target="_blank">Apple</a><ul><li><a rel="noreferrer noopener" href="https://www.apple.com/tw/mac/" target="_blank">Mac</a></li></ul></li><li><a rel="noreferrer noopener" href="https://medium.com/" target="_blank">medium</a></li><li><a rel="noreferrer noopener" href="https://www.mcdonalds.co.jp/" target="_blank">日本麥當勞</a></li><li><a rel="noreferrer noopener" href="https://ithelp.ithome.com.tw/" target="_blank">IT 邦幫忙</a></li><li><a rel="noreferrer noopener" href="https://roov.jp/" target="_blank">roov</a></li><li><a rel="noreferrer noopener" href="https://ippukuandmatcha.jp/" target="_blank">ippukuandmatcha</a></li><li><a rel="noreferrer noopener" href="https://www.frontage.jp/" target="_blank">frontage</a></li><li><a rel="noreferrer noopener" href="https://hahow.in/" target="_blank">Hahow</a></li><li><a rel="noreferrer noopener" href="https://taiwancanhelp.us/" target="_blank">Taiwan can help</a></li><li><a href="https://app.sli.do/event/apyoanah/live/questions" target="_blank" rel="noreferrer noopener">Slido 發問</a></li></ul>
+
+
+
+<h4>斷點規劃＋大網站設計範例</h4>
+
+
+
+<ul><li>PC – 1200px</li><li>iPad –&nbsp;<strong>768px</strong></li><li>iPad以下 –&nbsp;<strong>767px</strong></li><li>iPhone 6 Plus –&nbsp;<strong>414px (視專案族群)</strong></li><li>iPhone 6 –&nbsp;<strong>375px (是專案族群)</strong></li><li>iPhone 5、SE –&nbsp;<strong>320px</strong></li></ul>
+
+
+
+<p>為什麼還會有一個 767px 的斷點，<br>因為通常 iPad 直式是 Android、IOS 平板很常見的大小，<br>再接著 767px~320px，便會視為他們都是手機 size，<br>所以在 767px 以下時就會直接把他變成手機板型，<br>畢竟 767px~600px size 相當少見，<br>一開始可以先確保一些熱門斷點上優化即可，<br>至少可以滿足 80% 以上的客戶，<br>不用太吹毛求疵，當然你力求優化的話也是可以的。</p>
+
+
+
+<p>再來 320px 是你最小需要注意的 size，<br>現在仍然有許多手機是 320px，尤其是小 size 的 iPhone，<br>以前甚至有 240px 的手機，但現在已經相當稀有了。</p>
+
+
+
+<ul><li>斷點是由 PC 做到手機的話，語法就會有點像是這樣：</li></ul>
+
+
+
+<pre class="wp-block-code"><code>.wrap{
+  max-width: 960px;
+}
+.header{
+  height: 80px;
+}
+.list li{
+  width: 33%;
+}
+.list h3{
+  font-size: 24px;
+}
+@media (max-width: 768px) {
+  .header{
+    height: auto;
+  }
+  .list li{
+    width: 48%;
+    margin: 0 1%;
+  }
+}
+@media (max-width: 767px) {
+  .list li{
+    width: 98%;
+  }
+}
+@media (max-width: 414px) {
+  .list li{
+    font-size: 18px;
+  }
+}</code></pre>
+
+
+
+<h4>影音觀念補充</h4>
+
+
+
+<ul><li><a rel="noreferrer noopener" href="https://courses.hexschool.com/courses/670051/lectures/11953526" target="_blank">動線設計：並非所有內容都要全部塞到網頁內容</a></li><li><a rel="noreferrer noopener" href="https://courses.hexschool.com/courses/670051/lectures/11953528" target="_blank">斷點時機：設計多欄式佈局的必要觀念</a></li><li><a rel="noreferrer noopener" href="https://courses.hexschool.com/courses/670051/lectures/11953530" target="_blank">點擊範圍：設計讓人好點選的元素</a></li><li><a rel="noreferrer noopener" href="https://courses.hexschool.com/courses/670051/lectures/11953532" target="_blank">少即是多：避免資訊量爆炸</a></li><li><a href="https://courses.hexschool.com/courses/670051/lectures/11953535" target="_blank" rel="noreferrer noopener">斷點元素：只有手機才會顯示的功能與Layout切換</a></li></ul>
+
+
+
+<h4>助教修改建議</h4>
+
+
+
+<ul><li>網頁禁止有 x 軸</li></ul>
+
+
+
+<h3>RWD 排版術(上)</h3>
+
+
+
+<p>學習資源：<a rel="noreferrer noopener" href="https://www.youtube.com/watch?v=t13Fvg0_xHk&amp;feature=youtu.be" target="_blank">六角學院 Youtube</a></p>
+
+
+
+<p>影片時間：46:25</p>
+
+
+
+<p>06:40 – 該如何做響應式排版<br>08:20 – 介紹 viewport 語法<br>12:55 – 演示 @media 用法<br>16:22 – 透過互動來了解 @media<br>19:15 – 講解響應式權重概念<br>29:00 – 不要在 id 加上 CSS說明<br>32:05 – 老師對 id 用法爆氣片段(氣氣氣氣氣)<br>33:50 把樣式寫在標籤內的介紹<br>35:55 講解 !important<br>36:45 如何覆蓋別人的CSS<br>44:50 關於 id 的鄉野傳說</p>
+
+
+
+<p>課程：no.1~no.8&nbsp;<a rel="noreferrer noopener" href="https://drive.google.com/file/d/1r8z8i3LzzEKIzDBlztkpFmuXK6EDyMx3/view" target="_blank">範例程式碼</a></p>
+
+
+
+<p>1920px 講解 – 滿版 – 代表的意思是 width:100%;<br>因為會自適應父層，所以不需要寫 width:100%;<br><br>內部的開版<br>960px – 現在比較少了<br>1140px<br>1200px<br>1280px<br>1440px – X<br>1920px – X</p>
+
+
+
+<h4>viewport 設定</h4>
+
+
+
+<h5>範例程式碼 (no.1)</h5>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"></code></pre>
+
+
+
+<h4>CSS media Queries 語法</h4>
+
+
+
+<h5>範例程式碼 (no.2)</h5>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;h1 class="title">標題一標題一標題一標題一標題一標題一標題一&lt;/h1>
+&lt;p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque consequatur illo laborum numquam quod ullam voluptate, quos consectetur quidem neque officiis quia placeat. Libero voluptatibus nam ipsum officiis a quam!&lt;/p></code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/* 先寫PC版型，再依序往下寫響應式設計 */
+.title{
+  color: red;
+}
+.content{
+  color: black;
+}
+/* 在 iPad 直式下變更樣式 */
+/* 在 768px 以下的樣式會被開啟 */
+@media (max-width: 768px) {
+  .title{
+    color: blue;
+  }
+  .content{
+    font-size: 30px;
+  }
+}
+/* 在 iPhone11 直式下變更樣式 */
+/* 在 375px 以下的樣式會被開啟 */
+@media (max-width: 375px) {
+  .title{
+    color: yellow;
+  }
+}</code></pre>
+
+
+
+<p>先看權重，再看先後順序，權重相同時，下面的會取代上面的。<br><br>寫 CSS 樣式不需要用 ID 選擇器。<br><br>後端工程師用 ID 功能、樣版。</p>
+
+
+
+<h3>RWD 排版術(下)</h3>
+
+
+
+<p>影片：<a rel="noreferrer noopener" href="https://www.youtube.com/watch?v=Du_N0Vyh-Q0" target="_blank">六角學院 Youtube</a></p>
+
+
+
+<p><a rel="noreferrer noopener" href="https://drive.google.com/file/d/1r8z8i3LzzEKIzDBlztkpFmuXK6EDyMx3/view" target="_blank">範例程式碼</a><br><br>00:01:59 網頁不可以顯示 X 軸<br>00:03:45 響應式鐵者<br>00:04:29 語法 max-width<br>00:09:42 img 運用 max-width 的效益<br>00:13:26 非 rwd 是否要加?經驗談<br>00:15:50 使用 percent 來設計<br>00:16:55 margin-right 對 percent 的影響<br>00:18:06 響應式語法建議增加的語法：box-sizing<br>00:19:53 響應式用 px 和 percent 上的差異<br>00:22:29 percent 適合使用在非 RWD 的網頁上嗎?<br>00:26:30 響應式的重點<br>00:29:51 手機螢幕大小解說<br>00:34:18 業界潛規則<br>00:40:20 單欄式排版示意圖說明<br>00:45:29 不同版型的作法<br>00:47:59 大logo 置換小 logo 的作法<br>00:48:34 flex 的置換手法<br>00:52:26 實際範例說明<br>01:02:01 斷點說明</p>
+
+
+
+<h4><strong>響應式網頁不可以顯示 X 軸。</strong></h4>
+
+
+
+<ul><li>使用 max-width 屬性<ul><li>解決顯示 x 軸的問題</li><li>自適應裝置螢幕寬度</li><li>防止網頁內容左右滑</li></ul></li></ul>
+
+
+
+<p>響應式鐵則：不可以出現 x 軸。</p>
+
+
+
+<h5>img reset</h5>
+
+
+
+<pre class="wp-block-code"><code>img {
+  max-width: 100%;
+  height: auto;
+}</code></pre>
+
+
+
+<h5>範例程式碼 (no.3)</h5>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html>
+&lt;html lang="en">
+
+&lt;head>
+  &lt;meta charset="UTF-8">
+  &lt;title>Document&lt;/title>
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+  &lt;link rel="stylesheet" href="css/all.css">
+&lt;/head>
+
+&lt;body>
+  &lt;div class="header container">
+    header header header headerheader headerheader headerheader headerheader headerheader headerheader headerheader
+    headerheader headerheader headerheader headerheader headerheader header
+  &lt;/div>
+  &lt;div class="main container">
+    main main main main main mainmain main mainmain main mainmain main mainmain main mainmain main mainmain main
+    mainmain main mainmain main mainmain main mainmain main mainmain main mainmain main mainmain main main
+  &lt;/div>
+  &lt;div class="footer container">
+    footer footer footer footer footer footer footer footerfooter footer footer footerfooter footer footer footerfooter footer footer footerfooter footer footer footerfooter footer footer footerfooter footer footer footer
+  &lt;/div>
+  &lt;img src="img/hex-header-img.jpg" alt="">
+&lt;/body>
+
+&lt;/html></code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/* reset css */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* rwd img css，可當作是 CSS Reset 其中一個 */
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+/* 全域 border box */
+
+*,*::before,*::after{
+  box-sizing: border-box;
+}
+
+
+/* 主體 CSS */
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.header,.main,.footer{
+  margin-bottom: 50px;
+}</code></pre>
+
+
+
+<p><a rel="noreferrer noopener" href="https://codepen.io/GeeHsu/pen/eYdVNpB" target="_blank">程式碼練習</a></p>
+
+
+
+<h4>非 rwd 是否要加 img reset</h4>
+
+
+
+<p>建議還是要加，以避免圖片太大張導致網頁破版。</p>
+
+
+
+<p>圖片、外容器 width 都可以開始改成 max-width 做 rwd 設計。</p>
+
+
+
+<h4>使用 percent 來設計</h4>
+
+
+
+<p>網頁才能自適應延伸。</p>
+
+
+
+<h5>範例程式碼 (no.4)</h5>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div class="container">
+  &lt;div class="menu">&lt;/div>
+  &lt;div class="content">&lt;/div>
+&lt;/div></code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/* CSS RESET */
+/* rwd img css，可當作是 CSS Reset 其中一個 */
+img{
+  max-width: 100%;
+  height: auto;
+}
+/* 全域 border box */
+*,*::before,*::after{
+  box-sizing: border-box;
+}
+/* 主體 CSS */
+.container{
+  display: flex;
+  width: 100px;
+  margin: 0 auto;
+}
+.menu{
+  width: 30%;
+  margin-right: 5%;
+  background: orange;
+  height: 100px;
+}
+.content{
+  width: 65%;
+  background: blue;
+  height: 100px;
+}</code></pre>
+
+
+
+<h4>響應式語法建議增加的語法：box-sizing</h4>
+
+
+
+<pre class="wp-block-code"><code>/* 全域 border box */
+*,*::before,*::after{
+  box-sizing: border-box;
+}</code></pre>
+
+
+
+<p>外層用 max-width px，內層用 width %。</p>
+
+
+
+<h5>範例程式碼 (no.5)</h5>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div class="container">
+  &lt;div class="menu">&lt;/div>
+  &lt;div class="content">&lt;/div>
+&lt;/div></code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/* reset css */
+/* rwd img css，可當作是 CSS Reset 其中一個 */
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+/* 全域 border box */
+
+*,*::before,*::after{
+  box-sizing: border-box;
+}
+
+/* 主體 CSS */
+/* 想想看當 .container 變成 500px width 時，.menu 與 .content 寬度會變成多少？
+.container{
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.menu{
+  width: 30%;
+  margin-right: 5%;
+  background: orange;
+  height: 100px;
+}
+.content{
+  width: 65%;
+  background: blue;
+  height: 100px;
+}</code></pre>
+
+
+
+<h5>範例程式碼 (no.6)</h5>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div class="container">
+    &lt;ul class="news">
+        &lt;li>
+            &lt;h2>大標題&lt;/h2>
+            &lt;p class="news_content">「形分小重個動樣；時好量東，重有未用在有總心樂弟門軍物生也本安人們評保飯資……益同構經！院的類過知這大什，標沒使空會，或像物裡是一無，意動國山一親但！你精得化亮個最我不高也&lt;/p>
+        &lt;/li>
+        &lt;li>
+            &lt;h2>大標題&lt;/h2>
+            &lt;p class="news_content">「形分小重個動樣；時好量東，重有未用在有總心樂弟門軍物生也本安人們評保飯資……益同構經！院的類過知這大什，標沒使空會，或像物裡是一無，意動國山一親但！你精得化亮個最我不高也&lt;/p>
+        &lt;/li>
+        &lt;li>
+            &lt;h2>大標題&lt;/h2>
+            &lt;p class="news_content">「形分小重個動樣；時好量東，重有未用在有總心樂弟門軍物生也本安人們評保飯資……益同構經！院的類過知這大什，標沒使空會，或像物裡是一無，意動國山一親但！你精得化亮個最我不高也&lt;/p>
+        &lt;/li>
+        &lt;li>
+            &lt;h2>大標題&lt;/h2>
+            &lt;p class="news_content">「形分小重個動樣；時好量東，重有未用在有總心樂弟門軍物生也本安人們評保飯資……益同構經！院的類過知這大什，標沒使空會，或像物裡是一無，意動國山一親但！你精得化亮個最我不高也&lt;/p>
+        &lt;/li>
+        &lt;li>
+            &lt;h2>大標題&lt;/h2>
+            &lt;p class="news_content">「形分小重個動樣；時好量東，重有未用在有總心樂弟門軍物生也本安人們評保飯資……益同構經！院的類過知這大什，標沒使空會，或像物裡是一無，意動國山一親但！你精得化亮個最我不高也&lt;/p>
+        &lt;/li>
+        &lt;li>
+            &lt;h2>大標題&lt;/h2>
+            &lt;p class="news_content">「形分小重個動樣；時好量東，重有未用在有總心樂弟門軍物生也本安人們評保飯資……益同構經！院的類過知這大什，標沒使空會，或像物裡是一無，意動國山一親但！你精得化亮個最我不高也&lt;/p>
+        &lt;/li>
+        &lt;li>
+            &lt;h2>大標題&lt;/h2>
+            &lt;p class="news_content">「形分小重個動樣；時好量東，重有未用在有總心樂弟門軍物生也本安人們評保飯資……益同構經！院的類過知這大什，標沒使空會，或像物裡是一無，意動國山一親但！你精得化亮個最我不高也&lt;/p>
+        &lt;/li>
+    &lt;/ul>
+&lt;/div></code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/* reset css */
+/* rwd img css，可當作是 CSS Reset 其中一個 */
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+/* 全域 border box */
+
+*,*::before,*::after{
+  box-sizing: border-box;
+}
+.container{
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.news{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.news h2{
+  font-size: 20px;
+  line-height: 1.2;
+}
+.news li{
+  width: 30%;
+  margin-bottom: 24px;
+}
+@media (max-width: 768px) {
+  .container{
+    padding: 0 15px;
+  }
+  .news li{
+    width: 48%;
+  }
+}
+@media (max-width: 568px) {
+  .news li{
+    width: 100%;
+  }
+}</code></pre>
+
+
+
+<h4>手機螢幕大小解說</h4>
+
+
+
+<ul><li>375px iPhone7~11</li><li>414px</li></ul>
+
+
+
+<p>手機<br>開版設計：常態上會設計 375px、414px 其中一個就可以。<br>se 320px<br><br>平板<br>iPad 768px<br><br>PC 版<br>Bootstrap4 1140px<br>1200px</p>
+
+
+
+<p>業界淺規則：就會去客戶那裡，把他們在用的載具都記錄起來，給設計稿可以剛好符合。<br><br>PM 去開會，客戶瀏覽器、手機型號是什麼。</p>
+
+
+
+<h5>範例程式碼 (no.7)</h5>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div class="container">
+    &lt;ul class="news">
+        &lt;li>
+            &lt;img src="img/others_1.png">
+            &lt;h2>大標題&lt;/h2>
+            &lt;p class="news_content">「形分小重個動樣；時好量東，重有未用在有總心樂弟門軍物生也本安人們評保飯資……益同構經！院的類過知這大什，標沒使空會，或像物裡是一無，意動國山一親但！你精得化亮個最我不高也&lt;/p>
+        &lt;/li>
+        &lt;li>
+            &lt;img src="img/others_2.png">
+            &lt;h2>大標題&lt;/h2>
+            &lt;p class="news_content">「形分小重個動樣；時好量東，重有未用在有總心樂弟門軍物生也本安人們評保飯資……益同構經！院的類過知這大什，標沒使空會，或像物裡是一無，意動國山一親但！你精得化亮個最我不高也&lt;/p>
+        &lt;/li>
+        &lt;li>
+            &lt;img src="img/others_3.png">
+            &lt;h2>大標題&lt;/h2>
+            &lt;p class="news_content">「形分小重個動樣；時好量東，重有未用在有總心樂弟門軍物生也本安人們評保飯資……益同構經！院的類過知這大什，標沒使空會，或像物裡是一無，意動國山一親但！你精得化亮個最我不高也&lt;/p>
+        &lt;/li>
+        &lt;li>
+            &lt;img src="img/others_1.png">
+            &lt;h2>大標題&lt;/h2>
+            &lt;p class="news_content">「形分小重個動樣；時好量東，重有未用在有總心樂弟門軍物生也本安人們評保飯資……益同構經！院的類過知這大什，標沒使空會，或像物裡是一無，意動國山一親但！你精得化亮個最我不高也&lt;/p>
+        &lt;/li>
+        
+    &lt;/ul>
+&lt;/div></code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/* reset css */
+/* rwd img css，可當作 CSS Reset 其中一個 */
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+/* 全域 border box */
+
+*,*::before,*::after{
+  box-sizing: border-box;
+}
+
+/* 全體 CSS */
+.container{
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.news{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.news h2{
+  font-size: 20px;
+  line-height: 1.2;
+}
+.news li{
+  width: 30%;
+  margin-bottom: 24px;
+}
+@media (max-width: 768px) {
+  .container{
+    padding: 0 15px;
+  }
+  .news li{
+    width: 48%;
+  }
+}
+@media (max-width: 568px) {
+  .news li{
+    width: 100%;
+  }
+}</code></pre>
+
+
+
+<h4>單欄式排版示意圖說明</h4>
+
+
+
+<figure class="wp-block-image"><img src="https://wp-blogtoshare.000webhostapp.com/wp-content/uploads/2021/01/rwd-layout-pc.png" alt="" class="wp-image-3695"/><figcaption>rwd-layout-pc</figcaption></figure>
+
+
+
+<figure class="wp-block-image"><img src="https://wp-blogtoshare.000webhostapp.com/wp-content/uploads/2021/01/rwd-layout-ipad-mobile.png" alt="" class="wp-image-3696"/><figcaption>rwd-layout-iPad-mobile</figcaption></figure>
+
+
+
+<p>emmet 寫法</p>
+
+
+
+<ul><li>jcsb – justify-content: space-between;</li><li>fxdc – flex-direction: column;</li><li>jcfe – justify-content: flex-end;</li><li>jcc – justify-content: center;</li></ul>
+
+
+
+<h5>範例程式碼 (no.8)</h5>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html>
+&lt;html>
+&lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	&lt;title>Response Web Design Demo&lt;/title>
+    &lt;link rel="stylesheet" href="css/all.css">
+&lt;/head>
+&lt;body>
+  &lt;div class="header container">
+    &lt;h1 class="logo">&lt;a href="#">公司LOGO&lt;/a>&lt;/h1>
+    &lt;ul class="menu">
+      &lt;li>&lt;a href="#">公司簡介&lt;/a>&lt;/li>
+      &lt;li>&lt;a href="#">專業服務&lt;/a>&lt;/li>
+      &lt;li>&lt;a href="#">新聞活動&lt;/a>&lt;/li>
+      &lt;li>&lt;a href="#">聯繫我們&lt;/a>&lt;/li>
+    &lt;/ul>
+  &lt;/div>
+  &lt;div class="main container">
+    &lt;div class="content">
+      &lt;h2>新聞標題&lt;/h2>
+      &lt;p>六角學院新聞 (2016-06-21 09:06)&lt;/p>
+      &lt;p>生藝本技得童總信。上能表有能已位字高企斷他？神些的司……特了又他的，了象大初小研車對加、間四比，想年訴選年：三車寫教。他成濟位像知他氣程表事。聽制起又雲師山，重不能界使我傷！溫統接視情期事……況無沒指超及世。&lt;/p>
+      &lt;p>
+        列文一有愛的空金代電一前卻歡電個魚天讀狀各童流處開起那朋。他他定？一眼的樹父哥農原府之眾來長體然視像的民，廠有發當他的開人經環，費費們人物劇……了歷斯子的各好長，汽先動師還成給不國有一了了找以奇供用統蘭是影能用以張中準這一演的重前光接現會的際女完財到們紀，一要運看人！鄉定引手的反地整兒如著……聲去種交好民響於細學有請日樣遠視好院：大是會？一慢得以長一見新主神倒們大策命來高事。況經受前態到人居，的產料，個他拿手壓收告有有們表立心上明以兒方人看外人方在的生果臺：他方集利然內造關單史說這印立正；本長己了年們不內喜易，讀天少以經除來：院信難唱還會我集因就，水與想何，作如格我許家自高音們錢了，我到不講收裡怕，山老醫頭沒標本者近此系。
+      &lt;/p>
+    &lt;/div>
+    &lt;div class="sidebar">
+      &lt;img src="images/1.jpg" alt="">
+      &lt;img src="images/1.jpg" alt="">
+      &lt;img src="images/1.jpg" alt="">
+    &lt;/div>
+  &lt;/div>
+  &lt;div class="footer container">
+    Copyright© 2020
+  &lt;/div>
+&lt;/body>
+&lt;/html>
+</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/* reset css */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a{
+	text-decoration: none;
+}
+/* rwd img css，可當作是 CSS Reset 其中一個 */
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+/* 全域 border box */
+
+*,*::before,*::after{
+  box-sizing: border-box;
+}
+.container{
+  max-width: 1000px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 0 auto;
+}
+/* CSS Reset end */
+
+/* CSS主體 */
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 20px;
+  margin-bottom: 24px;
+}
+@media (max-width: 768px){
+  .header{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.logo a{
+  display: block;
+  width: 250px;
+  height: 250px;
+  background: url(../images/M1.png);
+  /* 圖文取代文字技巧 */
+  text-indent: 101%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .logo{
+    margin-bottom: 20px;
+    width: 150px;
+  }
+  .logo a{
+    width: 150px;
+    height: 150px;
+    background: url(../images/M2.png) no-repeat;
+  }
+}
+.menu{
+  display: flex;
+  flex-wrap: wrap;
+}
+.menu li a{
+  background: #3399ff;
+  color: #fff;
+  display: block;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+}
+.menu li a:hover{
+  background: orange;
+}
+@media (max-width: 768px) {
+  .menu li{
+    width: 50%;
+    margin: 0 auto 10px auto;
+  }
+}
+.main{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.content{
+  width: 75%;
+  border: 2px solid #000;
+  padding: 10px;
+}
+.content h2{
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+.content p{
+  line-height: 1.5;
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+.sidebar{
+  width: 20%;
+  border: 2px solid #000;
+  padding: 5px;
+}
+.sidebar img{
+  margin-bottom: 10px;
+}
+@mdiea (max-width: 768px) {
+  .content, .sidebar{
+    width: 100%; /* 百分比呈現寬度 */
+  }
+  .content{
+    margin-bottom: 20px;
+  }
+  .sidebar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .sidebar img{
+    margin-bottom: 10px;
+  }
+}
+.footer{
+  padding: 8px 0;
+  text-align: center;
+}
+</code></pre>
+
+
+
+<h4>不同版型的作法</h4>
+
+
+
+<p>版型有很多種作法，都可以做得出來，最後你會找出自己的維護風格。<br><br>設計師 – 模仿別人設計很容易，要找出自己的設計風格。</p>
+
+
+
+<h4>實際範例說明</h4>
+
+
+
+<p><a rel="noreferrer noopener" href="https://www.mcdonalds.co.jp/" target="_blank">日本麥當勞</a>&nbsp;– display: flex<br><a rel="noreferrer noopener" href="https://ippukuandmatcha.jp/" target="_blank">IPPUKU&amp;MATCHA</a>&nbsp;– 視差滾動效果、display: flex<br><a rel="noreferrer noopener" href="https://www.frontage.jp/" target="_blank">FRONTAGE</a>&nbsp;– 視差滾動效果、display: flex、display: none<br><a href="https://ithelp.ithome.com.tw/" target="_blank" rel="noreferrer noopener">iT邦幫忙</a>&nbsp;– display: none</p>
+
+
+
+<p>資訊量大不一定什麼東西都要放，簡化把最重要的內容顯示出來就好。</p>
+
+
+
+<h4>斷點說明</h4>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/* PC 樣式 */
+/* 768px 以下樣式 */
+>@media (max-width: 768px){
+}
+/* 568px 以下樣式 */
+>@media (max-width: 568px){
+}
+/* 斷點2個和3個都是正確 */</code></pre>
+
+
+
+<p>斷點數量建議 3~4 個。</p>
+
+</div><!-- .entry-content -->
+
+	
+	
+<footer class="entry-footer">
+
+	<div class="entry-footer-right">
+
+		
+	</div>
+
+	
+		
+		
+			<span class="cat-links">
+
+				發佈位置： <a href="https://geehsu.github.io/wordpress_blog/category/post/hexschool/" rel="category tag">六角學院</a>
+			</span>
+
+		
+		
+		
+	
+</footer><!-- .entry-footer -->
+
+	
+</article><!-- #post-## -->
+
+		
+	<nav class="navigation post-navigation" role="navigation">
+		<h2 class="screen-reader-text">文章導覽</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="https://geehsu.github.io/wordpress_blog/js-novice-teaching-4/" rel="prev">&larr; AJAX 與資料處理</a></div></div>
+	</nav>
+		
+	
+	</main><!-- #main -->
+
+</div><!-- #primary -->
+
+
+<div id="secondary" class="widget-area" role="complementary">
+
+			<aside id="recent-posts-2" class="widget widget_recent_entries">		<h4 class="widget-title">近期文章</h4>		<ul>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/flex-rwd/">伸縮自如的 RWD 排版術</a>
+											<span class="post-date">2021 年 1 月 4 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/js-novice-teaching-4/">AJAX 與資料處理</a>
+											<span class="post-date">2020 年 9 月 14 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/js-novice-teaching-3/">陣列與物件、FOREACH</a>
+											<span class="post-date">2020 年 9 月 14 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/js-novice-teaching-2/">DOM、FUNCTION 函式與監聽</a>
+											<span class="post-date">2020 年 9 月 14 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/js-novice-teaching-1/">JS 環境建立與變數</a>
+											<span class="post-date">2020 年 9 月 14 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/rwd-starttofinish/">RESPONSIVE BOOTSTRAP WEBSITE START TO FINISH WITH BOOTSTRAP 4, HTML5 &#038; CSS3</a>
+											<span class="post-date">2020 年 9 月 14 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/scrolltop/">SCROLLTOP – 滑動效果</a>
+											<span class="post-date">2020 年 9 月 14 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/easy-tutorials-01/">HOW TO MAKE A RESPONSIVE WEBSITE DESIGN USING HTML AND CSS STEP BY STEP TUTORIAL</a>
+											<span class="post-date">2020 年 9 月 14 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/hexschoolcolumn/">網頁前端養成專欄-來自六角學院</a>
+											<span class="post-date">2020 年 7 月 4 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/bootstrap-5-alpha/">BOOTSTRAP 5 ALPHA – WHAT’S NEW &#038; WHAT CHANGED?!</a>
+											<span class="post-date">2020 年 6 月 30 日</span>
+									</li>
+					</ul>
+		</aside><aside id="archives-2" class="widget widget_archive"><h4 class="widget-title">彙整</h4>		<ul>
+				<li><a href='https://geehsu.github.io/wordpress_blog/2021/01/'>2021 年 1 月</a>&nbsp;(1)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2020/09/'>2020 年 9 月</a>&nbsp;(7)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2020/07/'>2020 年 7 月</a>&nbsp;(1)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2020/06/'>2020 年 6 月</a>&nbsp;(4)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2020/05/'>2020 年 5 月</a>&nbsp;(1)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2020/04/'>2020 年 4 月</a>&nbsp;(2)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2020/03/'>2020 年 3 月</a>&nbsp;(2)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2020/02/'>2020 年 2 月</a>&nbsp;(1)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2020/01/'>2020 年 1 月</a>&nbsp;(1)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2019/11/'>2019 年 11 月</a>&nbsp;(11)</li>
+		</ul>
+			</aside><aside id="categories-2" class="widget widget_categories"><h4 class="widget-title">分類</h4>		<ul>
+				<li class="cat-item cat-item-3"><a href="https://geehsu.github.io/wordpress_blog/category/post/">文章</a> (27)
+<ul class='children'>
+	<li class="cat-item cat-item-14"><a href="https://geehsu.github.io/wordpress_blog/category/post/designcourse/">DesignCourse</a> (3)
+</li>
+	<li class="cat-item cat-item-13"><a href="https://geehsu.github.io/wordpress_blog/category/post/ninja/">The Net Ninja</a> (2)
+</li>
+	<li class="cat-item cat-item-12"><a href="https://geehsu.github.io/wordpress_blog/category/post/hexschool/">六角學院</a> (13)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-2"><a href="https://geehsu.github.io/wordpress_blog/category/about/">關於</a> (4)
+</li>
+		</ul>
+			</aside><aside id="calendar-3" class="widget widget_calendar"><div id="calendar_wrap" class="calendar_wrap"><table id="wp-calendar">
+	<caption>2021 年 1 月</caption>
+	<thead>
+	<tr>
+		<th scope="col" title="星期一">一</th>
+		<th scope="col" title="星期二">二</th>
+		<th scope="col" title="星期三">三</th>
+		<th scope="col" title="星期四">四</th>
+		<th scope="col" title="星期五">五</th>
+		<th scope="col" title="星期六">六</th>
+		<th scope="col" title="星期日">日</th>
+	</tr>
+	</thead>
+
+	<tfoot>
+	<tr>
+		<td colspan="3" id="prev"><a href="https://geehsu.github.io/wordpress_blog/2020/09/">&laquo; 9 月</a></td>
+		<td class="pad">&nbsp;</td>
+		<td colspan="3" id="next" class="pad">&nbsp;</td>
+	</tr>
+	</tfoot>
+
+	<tbody>
+	<tr>
+		<td colspan="4" class="pad">&nbsp;</td><td>1</td><td>2</td><td>3</td>
+	</tr>
+	<tr>
+		<td id="today"><a href="https://geehsu.github.io/wordpress_blog/2021/01/04/" aria-label="文章發佈於 2021 年 1 月 4 日">4</a></td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td>
+	</tr>
+	<tr>
+		<td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td>
+	</tr>
+	<tr>
+		<td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td>
+	</tr>
+	<tr>
+		<td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td>
+	</tr>
+	</tbody>
+	</table></div></aside>
+</div><!-- #secondary -->
+
+
+
+		</div><!-- #content -->
+
+		
+		<footer id="colophon" class="site-footer">
+
+			<div class="site-footer-inner">
+
+				
+			</div><!-- .site-footer-inner -->
+
+		</footer><!-- #colophon -->
+
+		
+<div class="site-info-wrapper">
+
+	<div class="site-info">
+
+		<div class="site-info-inner">
+
+			
+<div class="site-info-text">
+
+	Copyright &copy; 2021 Wordpress_blog &mdash; Uptown Style WordPress 主題作者：<a href="https://www.godaddy.com/" rel="author nofollow">GoDaddy</a>
+</div>
+
+		</div><!-- .site-info-inner -->
+
+	</div><!-- .site-info -->
+
+</div><!-- .site-info-wrapper -->
+
+	</div><!-- #page -->
+
+	<script type='text/javascript' src='https://geehsu.github.io/wordpress_blog/wp-content/themes/primer/assets/js/navigation.min.js?ver=1.8.8'></script>
+<script type='text/javascript' src='https://geehsu.github.io/wordpress_blog/wp-includes/js/wp-embed.min.js?ver=5.2.4'></script>
+	<script>
+	/* IE11 skip link focus fix */
+	/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
+	</script>
+	
+</body>
+
+</html>

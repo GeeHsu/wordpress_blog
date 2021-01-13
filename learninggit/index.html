@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+
+<html lang="zh-TW">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+
+	<link rel="pingback" href="https://geehsu.github.io/wordpress_blog/xmlrpc.php">
+
+	<title>掌握 Git 與 Github 版本控制 &#8211; WordPress_blog</title>
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="訂閱《Wordpress_blog》&raquo; 資訊提供" href="https://geehsu.github.io/wordpress_blog/feed/" />
+<link rel="alternate" type="application/rss+xml" title="訂閱《Wordpress_blog》&raquo; 留言的資訊提供" href="https://geehsu.github.io/wordpress_blog/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/geehsu.github.io\/wordpress_blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.4"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://geehsu.github.io/wordpress_blog/wp-includes/css/dist/block-library/style.min.css?ver=5.2.4' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='https://geehsu.github.io/wordpress_blog/wp-includes/css/dist/block-library/theme.min.css?ver=5.2.4' type='text/css' media='all' />
+<link rel='stylesheet' id='uptown-style-css'  href='https://geehsu.github.io/wordpress_blog/wp-content/themes/uptown-style/style.css?ver=1.1.3' type='text/css' media='all' />
+<style id='uptown-style-inline-css' type='text/css'>
+.hero{background-image:url(https://geehsu.github.io/wordpress_blog/wp-content/themes/uptown-style/assets/images/hero.jpg);}
+.site-title a,.site-title a:visited{color:#353535;}.site-title a:hover,.site-title a:visited:hover{color:rgba(53, 53, 53, 0.8);}
+.site-description{color:#686868;}
+.hero,.hero .widget h1,.hero .widget h2,.hero .widget h3,.hero .widget h4,.hero .widget h5,.hero .widget h6,.hero .widget p,.hero .widget blockquote,.hero .widget cite,.hero .widget table,.hero .widget ul,.hero .widget ol,.hero .widget li,.hero .widget dd,.hero .widget dt,.hero .widget address,.hero .widget code,.hero .widget pre,.hero .widget .widget-title,.hero .page-header h1{color:#ffffff;}.hero .hero-inner{border-color:rgba(255, 255, 255, 0.5);}
+.main-navigation ul li a,.main-navigation ul li a:visited,.main-navigation ul li a:hover,.main-navigation ul li a:focus,.main-navigation ul li a:visited:hover{color:#252525;}.main-navigation .sub-menu .menu-item-has-children > a::after{border-right-color:#252525;border-left-color:#252525;}.menu-toggle div{background-color:#252525;}.main-navigation ul li a:hover,.main-navigation ul li a:focus{color:rgba(37, 37, 37, 0.8);}
+h1,h2,h3,h4,h5,h6,label,legend,table th,dl dt,.entry-title,.entry-title a,.entry-title a:visited,.widget-title{color:#353535;}.entry-title a:hover,.entry-title a:visited:hover,.entry-title a:focus,.entry-title a:visited:focus,.entry-title a:active,.entry-title a:visited:active{color:rgba(53, 53, 53, 0.8);}
+body,input,select,textarea,input[type="text"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="password"]:focus,input[type="search"]:focus,input[type="number"]:focus,input[type="tel"]:focus,input[type="range"]:focus,input[type="date"]:focus,input[type="month"]:focus,input[type="week"]:focus,input[type="time"]:focus,input[type="datetime"]:focus,input[type="datetime-local"]:focus,input[type="color"]:focus,textarea:focus,.navigation.pagination .paging-nav-text{color:#252525;}hr{background-color:rgba(37, 37, 37, 0.1);border-color:rgba(37, 37, 37, 0.1);}input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],input[type="number"],input[type="tel"],input[type="range"],input[type="date"],input[type="month"],input[type="week"],input[type="time"],input[type="datetime"],input[type="datetime-local"],input[type="color"],textarea,.select2-container .select2-choice{color:rgba(37, 37, 37, 0.5);border-color:rgba(37, 37, 37, 0.1);}select,fieldset,blockquote,pre,code,abbr,acronym,.hentry table th,.hentry table td{border-color:rgba(37, 37, 37, 0.1);}.hentry table tr:hover td{background-color:rgba(37, 37, 37, 0.05);}
+blockquote,.entry-meta,.entry-footer,.comment-meta .says,.logged-in-as,.wp-block-coblocks-author__heading{color:#686868;}
+.site-footer .widget-title,.site-footer h1,.site-footer h2,.site-footer h3,.site-footer h4,.site-footer h5,.site-footer h6{color:#ffffff;}
+.site-footer .widget,.site-footer .widget form label{color:#ffffff;}
+.footer-menu ul li a,.footer-menu ul li a:visited{color:#252525;}.site-info-wrapper .social-menu a{background-color:#252525;}.footer-menu ul li a:hover{border-color:#252525;}.footer-menu ul li a:hover,.footer-menu ul li a:visited:hover{color:rgba(37, 37, 37, 0.8);}
+.site-info-wrapper .site-info-text{color:#252525;}
+a,a:visited,.entry-title a:hover,.entry-title a:visited:hover{color:#54ccbe;}.navigation.pagination .nav-links .page-numbers.current,.social-menu a:hover{background-color:#54ccbe;}a:hover,a:visited:hover,a:focus,a:visited:focus,a:active,a:visited:active{color:rgba(84, 204, 190, 0.8);}.comment-list li.bypostauthor{border-color:rgba(84, 204, 190, 0.2);}
+button,a.button,a.button:visited,input[type="button"],input[type="reset"],input[type="submit"],.wp-block-button__link,.site-info-wrapper .social-menu a:hover{background-color:#b5345f;border-color:#b5345f;}button:hover,button:active,button:focus,a.button:hover,a.button:active,a.button:focus,a.button:visited:hover,a.button:visited:active,a.button:visited:focus,input[type="button"]:hover,input[type="button"]:active,input[type="button"]:focus,input[type="reset"]:hover,input[type="reset"]:active,input[type="reset"]:focus,input[type="submit"]:hover,input[type="submit"]:active,input[type="submit"]:focus{background-color:rgba(181, 52, 95, 0.8);border-color:rgba(181, 52, 95, 0.8);}
+button,button:hover,button:active,button:focus,a.button,a.button:hover,a.button:active,a.button:focus,a.button:visited,a.button:visited:hover,a.button:visited:active,a.button:visited:focus,input[type="button"],input[type="button"]:hover,input[type="button"]:active,input[type="button"]:focus,input[type="reset"],input[type="reset"]:hover,input[type="reset"]:active,input[type="reset"]:focus,input[type="submit"],input[type="submit"]:hover,input[type="submit"]:active,input[type="submit"]:focus,.wp-block-button__link{color:#ffffff;}
+body{background-color:#ffffff;}.navigation.pagination .nav-links .page-numbers.current{color:#ffffff;}
+.hero{background-color:#252525;}.hero{-webkit-box-shadow:inset 0 0 0 9999em;-moz-box-shadow:inset 0 0 0 9999em;box-shadow:inset 0 0 0 9999em;color:rgba(37, 37, 37, 0.50);}
+.main-navigation-container,.main-navigation.open,.main-navigation ul ul,.main-navigation .sub-menu{background-color:#ffffff;}.site-header{background-color:#ffffff;}
+.site-footer{background-color:#3f3244;}
+.site-info-wrapper{background-color:#ffffff;}.site-info-wrapper .social-menu a,.site-info-wrapper .social-menu a:visited,.site-info-wrapper .social-menu a:hover,.site-info-wrapper .social-menu a:visited:hover{color:#ffffff;}
+.has-primary-color{color:#03263B;}.has-primary-background-color{background-color:#03263B;}
+.has-secondary-color{color:#0b3954;}.has-secondary-background-color{background-color:#0b3954;}
+.has-tertiary-color{color:#bddae6;}.has-tertiary-background-color{background-color:#bddae6;}
+.has-quaternary-color{color:#ff6663;}.has-quaternary-background-color{background-color:#ff6663;}
+.has-quinary-color{color:#ffffff;}.has-quinary-background-color{background-color:#ffffff;}
+</style>
+<link rel='stylesheet' id='uptown-style-fonts-css'  href='https://fonts.googleapis.com/css?family=Playfair+Display%3A300%2C400%2C700%7CLato%3A300%2C400%2C700&#038;subset=latin&#038;ver=1.8.8' type='text/css' media='all' />
+<style id='uptown-style-fonts-inline-css' type='text/css'>
+.site-title{font-family:"Playfair Display", sans-serif;}
+.main-navigation ul li a,.main-navigation ul li a:visited,button,a.button,a.fl-button,input[type="button"],input[type="reset"],input[type="submit"]{font-family:"Playfair Display", sans-serif;}
+h1,h2,h3,h4,h5,h6,label,legend,table th,dl dt,.entry-title,.widget-title{font-family:"Playfair Display", sans-serif;}
+body,p,ol li,ul li,dl dd,.fl-callout-text{font-family:"Lato", sans-serif;}
+blockquote,.entry-meta,.entry-footer,.comment-list li .comment-meta .says,.comment-list li .comment-metadata,.comment-reply-link,#respond .logged-in-as{font-family:"Lato", sans-serif;}
+</style>
+<script type='text/javascript' src='https://geehsu.github.io/wordpress_blog/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://geehsu.github.io/wordpress_blog/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://geehsu.github.io/wordpress_blog/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://geehsu.github.io/wordpress_blog/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://geehsu.github.io/wordpress_blog/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='伸縮自如的 RWD 排版術' href='https://geehsu.github.io/wordpress_blog/flex-rwd/' />
+<meta name="generator" content="WordPress 5.2.4" />
+<link rel="canonical" href="https://geehsu.github.io/wordpress_blog/learninggit/" />
+<link rel='shortlink' href='https://geehsu.github.io/wordpress_blog/?p=275' />
+<link rel="alternate" type="application/json+oembed" href="https://geehsu.github.io/wordpress_blog/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fgeehsu.github.io%2Fwordpress_blog%2Flearninggit%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://geehsu.github.io/wordpress_blog/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fgeehsu.github.io%2Fwordpress_blog%2Flearninggit%2F&#038;format=xml" />
+<style type='text/css'>
+.site-title a,.site-title a:visited{color:353535;}
+</style><link rel="icon" href="https://geehsu.github.io/wordpress_blog/wp-content/uploads/2019/11/cropped-blogging-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://geehsu.github.io/wordpress_blog/wp-content/uploads/2019/11/cropped-blogging-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://geehsu.github.io/wordpress_blog/wp-content/uploads/2019/11/cropped-blogging-180x180.png" />
+<meta name="msapplication-TileImage" content="https://geehsu.github.io/wordpress_blog/wp-content/uploads/2019/11/cropped-blogging-270x270.png" />
+
+</head>
+
+<body class="post-template-default single single-post postid-275 single-format-standard custom-header-image layout-two-column-default">
+
+	
+	<div id="page" class="hfeed site">
+
+		<a class="skip-link screen-reader-text" href="#content">略過內容</a>
+
+		
+		<header id="masthead" class="site-header" role="banner">
+
+			
+			<div class="site-header-wrapper">
+
+				
+<div class="site-title-wrapper">
+
+	
+	<div class="site-title"><a href="https://geehsu.github.io/wordpress_blog/" rel="home">Wordpress_blog</a></div>
+	<div class="site-description">This is a dynamic to static website.</div>
+</div><!-- .site-title-wrapper -->
+
+<div class="main-navigation-container">
+
+	
+<div class="menu-toggle" id="menu-toggle" role="button" tabindex="0"
+	>
+	<div></div>
+	<div></div>
+	<div></div>
+</div><!-- #menu-toggle -->
+
+	<nav id="site-navigation" class="main-navigation">
+
+		<div class="menu-menu-container"><ul id="menu-menu" class="menu"><li id="menu-item-13" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-13"><a href="https://geehsu.github.io/wordpress_blog/category/about/">關於</a></li>
+<li id="menu-item-9" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor menu-item-has-children menu-item-9"><a href="https://geehsu.github.io/wordpress_blog/category/post/">文章</a>
+<span  class="expand" role="button" tabindex="0"></span>
+
+<ul class="sub-menu">
+	<li id="menu-item-98" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-98"><a href="https://geehsu.github.io/wordpress_blog/category/post/hexschool/">六角學院</a></li>
+	<li id="menu-item-99" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-99"><a href="https://geehsu.github.io/wordpress_blog/category/post/ninja/">The Net Ninja</a></li>
+	<li id="menu-item-212" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-212"><a href="https://geehsu.github.io/wordpress_blog/category/post/designcourse/">DesignCourse</a></li>
+</ul>
+</li>
+<li id="menu-item-12" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-12"><a href="https://geehsu.github.io/wordpress_blog/category/sticker/">貼圖</a></li>
+<li id="menu-item-11" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11"><a href="https://geehsu.github.io/wordpress_blog/category/food/">美食</a></li>
+<li id="menu-item-10" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10"><a href="https://geehsu.github.io/wordpress_blog/category/tour/">旅遊</a></li>
+<li id="menu-item-59" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-59"><a href="https://geehsu.github.io/wordpress_blog/category/social/">社群</a>
+<span  class="expand" role="button" tabindex="0"></span>
+
+<ul class="sub-menu">
+	<li id="menu-item-60" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-60"><a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/watergrass0402/">facebook</a></li>
+</ul>
+</li>
+</ul></div>
+	</nav><!-- #site-navigation -->
+
+	
+</div>
+
+			</div><!-- .site-header-wrapper -->
+
+			
+		</header><!-- #masthead -->
+
+		
+<div class="hero">
+
+	
+	<div class="hero-inner">
+
+		
+<div class="page-title-container">
+
+	<header class="page-header">
+
+		<h2 class="page-title">文章</h2>
+	</header><!-- .entry-header -->
+
+</div><!-- .page-title-container -->
+
+	</div>
+
+</div>
+
+		<div id="content" class="site-content">
+
+<div id="primary" class="content-area">
+
+	<main id="main" class="site-main" role="main">
+
+	
+		
+<article id="post-275" class="post-275 post type-post status-publish format-standard hentry category-hexschool">
+
+	
+	
+	
+<header class="entry-header">
+
+	<div class="entry-header-row">
+
+		<div class="entry-header-column">
+
+			
+			
+				<h1 class="entry-title">掌握 Git 與 Github 版本控制</h1>
+
+			
+			
+		</div><!-- .entry-header-column -->
+
+	</div><!-- .entry-header-row -->
+
+</header><!-- .entry-header -->
+
+	
+<div class="entry-meta">
+
+	
+		<span class="posted-date">2021 年 1 月 13 日</span>
+
+	
+	<span class="posted-author"><a href="https://geehsu.github.io/wordpress_blog/author/gee-hsu/" title="「gee.hsu」的文章" rel="author">gee.hsu</a></span>
+
+	
+</div><!-- .entry-meta -->
+
+	
+		
+<div class="entry-content">
+
+	
+<h4>學到</h4>
+
+
+
+<ul><li>掌握 Git 版本控制工作流程</li><li>瞭解使用 Git / Github 管理程式碼</li><li>瞭解如何創建分支，並與多位工程師團隊協作</li></ul>
+
+
+
+<h2>第１節：環境安裝篇</h2>
+
+
+
+<h3>01.Git 環境安裝</h3>
+
+
+
+<p>資源</p>
+
+
+
+<ul><li><a rel="noreferrer noopener" href="https://git-scm.com/" target="_blank">Git 官網</a></li><li><a href="https://iterm2.com/" target="_blank" rel="noreferrer noopener">Mac 推薦終端機 iTerm2</a></li></ul>
+
+
+
+<h4>安裝 Git、找尋適合的命令提示字元</h4>
+
+
+
+<p>Windows 使用 Git Bash 去練習。<br>Mac 使用終端機去練習。</p>
+
+
+
+<h4>查詢是否安裝成功</h4>
+
+
+
+<pre class="wp-block-code"><code>// Git Bash
+// 指令 - git version
+$ git version
+git version 2.28.0.windows.1</code></pre>
+
+
+
+<h3>02.Windows – 命令提示字元教學(上)</h3>
+
+
+
+<h4>使用 Git Bash 練習。</h4>
+
+
+
+<p>常用語法</p>
+
+
+
+<ol><li>移動路徑：cd 路徑</li><li>回上一層：cd ..</li><li>展開列表：ls</li><li>開新資料夾：mkdir 資料夾名稱</li><li>開新檔案：touch 檔案名稱</li></ol>
+
+
+
+<p>使用滑鼠拖曳檔案，移動到檔案位置。</p>
+
+
+
+<pre class="wp-block-code"><code>$ cd 滑鼠拖曳檔案</code></pre>
+
+
+
+<h3>03.Windows – 命令提示字元教學(下)</h3>
+
+
+
+<p>承上，常用語法 4、5</p>
+
+
+
+<pre class="wp-block-code"><code>// 新增資料夾
+$ mkdir css
+// 移動到 css 資料夾
+$ cd css
+// 新增檔案
+$ touch style.css</code></pre>
+
+
+
+<h3>04.基本 command 指令</h3>
+
+
+
+<p>備註：開新檔案與展開列表在 git bash 上都可以執行，但是在 windows 預設的命令提示字元沒辦法使用，所以還是都是使用 git bash 來進行操作。</p>
+
+
+
+<p>全部課程只會學五個小指令，內容如下：</p>
+
+
+
+<ol><li>移動路徑：cd 路徑</li><li>回上一層：cd ..</li><li>展開列表：ls</li><li>開新資料夾：mkdir 資料夾名稱</li><li>開新檔案：touch 檔案名稱</li></ol>
+
+
+
+<p>PS：cd ..，是兩個..，不是一個.。</p>
+
+
+
+<h3>05.MAC 終端機高亮</h3>
+
+
+
+<p><a rel="noreferrer noopener" href="https://ohmyz.sh/" target="_blank">Oh My Zsh</a>&nbsp;–&nbsp;<a href="https://gist.github.com/kevin-smets/8568070" target="_blank" rel="noreferrer noopener">相關操作教學連結</a></p>
+
+
+
+<h3>06.MAC – 命令提示字元教學 (上)</h3>
+
+
+
+<ul><li>移動路徑：cd 路徑</li><li>回上一層：cd ..</li><li>展開列表：ls</li></ul>
+
+
+
+<h3>07.MAC – 命令提示字元教學 (下)</h3>
+
+
+
+<ul><li>開新資料夾：mkdir 資料夾名稱</li><li>開新檔案：touch 檔案名稱</li></ul>
+
+
+
+<h3>08.Git 環境設定</h3>
+
+
+
+<pre class="wp-block-code"><code>git config --list
+
+git config --global user.email "你的email"
+git config --global user.name "你的名字"</code></pre>
+
+
+
+<h2>第２節：Git 基礎操作篇</h2>
+
+
+
+<h3>09.前言提要</h3>
+
+
+
+<p>git 教學大綱圖</p>
+
+
+
+<figure class="wp-block-image"><img src="https://wp-blogtoshare.000webhostapp.com/wp-content/uploads/2021/01/git%E6%95%99%E5%AD%B8%E5%A4%A7%E7%B6%B1%E5%9C%96.png" alt="" class="wp-image-3751"/></figure>
+
+
+
+<h3>10.git init – 安裝數據庫</h3>
+
+
+
+<h4>在本地端開啟數據庫</h4>
+
+
+
+<ol><li>新增一個資料夾 project</li><li>移動到資料夾位置 cd project</li><li>輸入指令：git init</li><li>如何判斷已經開啟數據庫<ul><li>Git Bash 命令提示字元檔案位置出現 master</li><li>資料夾內隱藏的項目出現 .git 檔案資料夾</li></ul></li></ol>
+
+
+
+<pre class="wp-block-code"><code>// 1.新增一個資料夾 project
+// 2.cd project
+// 3.輸入指令：git init
+// 4.出現master、隱藏的 .git 檔案</code></pre>
+
+
+
+<h3>11.工作目錄、加入索引、提交版本流程介紹</h3>
+
+
+
+<p>工作目錄 add→ 索引 commit→ 本地數據庫<br>working directory add→ staging area commit→ Local Repository</p>
+
+
+
+<h4>Github 講解</h4>
+
+
+
+<p>17 commits 可以想像說更新了17次的資料上去。<br><br>commits 可以記錄更新的時間、註解更新內容的標題，變動的檔案有幾個，以及程式碼新增、刪減的地方。<br><br>commit – 提交<br>提交：git commit</p>
+
+
+
+<h3>12.基礎指令教學流程</h3>
+
+
+
+<ol><li>建立新的資料夾 project</li><li>新增新的數據庫 git init<ul><li>Git Bash 命令提示字元檔案位置出現 master</li></ul></li><li>新增檔案<ul><li>touch index.html</li><li>touch a.txt</li></ul></li><li>新增一個資料夾 mkdir css</li><li>移動到 css 資料夾位置 cd css</li><li>新增一個檔案 touch all.css</li><li>回到上一層 cd ..</li><li>全部檔案加到索引 git add .</li><li>檢查狀態 git status<ul><li>等待提交</li></ul></li><li>再新增檔案 b.txt</li><li>檢查狀態 git status<ul><li>等待提交</li><li>未追蹤</li></ul></li><li>單一檔案加到索引 git add b.txt</li><li>檢查狀態 git status<ul><li>等待提交</li></ul></li><li>提交更新 git commit -m ‘update1’</li><li>檢查狀態 git status<ul><li>無需提交，工作目錄是乾淨的</li></ul></li><li>修改 index.html 檔案內容</li><li>檢查狀態 git status<ul><li>已更改</li></ul></li><li>新增檔案 touch index2.html</li><li>檢查狀態 git status<ul><li>已更改</li><li>未追蹤</li></ul></li><li>全部加到索引 git add .</li><li>檢查狀態 git status<ul><li>等待提交</li></ul></li><li>提交更新 git commit -m ‘update index’</li><li>檢查狀態 git status<ul><li>無需提交，工作目錄是乾淨的</li></ul></li><li>查詢紀錄 git log</li></ol>
+
+
+
+<p>PS：Mac iterm2 案 q 回到原本畫面。</p>
+
+
+
+<h4>基礎指令</h4>
+
+
+
+<ol><li>加到索引：git add .</li><li>檢查狀態：git status</li><li>提交更新：git commit -m ‘修改紀錄’</li><li>查詢紀錄：git log</li></ol>
+
+
+
+<h3>13.gitignore – 忽略檔案</h3>
+
+
+
+<h4>使用 .gitignore 來忽略檔案</h4>
+
+
+
+<ol><li>index.html：忽略單一檔案</li><li>*.html：忽略全部 HTML 檔案</li><li>folder/：忽略 folder</li></ol>
+
+
+
+<h5>檔案 .gitignore</h5>
+
+
+
+<pre class="wp-block-code"><code>index.html
+*.html
+css/</code></pre>
+
+
+
+<h4>操作流程</h4>
+
+
+
+<ol><li>移動到檔案位置 cd 拖曳滑鼠檔案</li><li>新增資料夾 mkdir project</li><li>移動到資料夾位置 cd project</li><li>新增新的數據庫 git init</li><li>新增檔案 touch index.html</li><li>新增檔案 touch .gitignore</li><li>檢查狀態 git status</li><li>忽略檔案，在.gitignore 輸入 index.html</li><li>檢查檔案 git status</li><li>新增檔案 touch index2.html</li><li>檢查檔案 git status</li><li>忽略全部檔案，在 .gitignore 輸入 *.html</li><li>檢查檔案 git status</li><li>新增 css 資料夾</li><li>移動到資料夾位置 cd css</li><li>新增檔案 touch all.css</li><li>回上一層 cd ..</li><li>忽略資料夾，在 .gitignore 輸入 css/</li><li>檢查狀態 git status</li></ol>
+
+
+
+<p>資源：<a href="https://github.com/github/gitignore" target="_blank" rel="noreferrer noopener">gitignore 大全</a></p>
+
+
+
+<h3>14.工作狀態還原技巧分享</h3>
+
+
+
+<h4>#取消索引</h4>
+
+
+
+<p>全部檔案取消索引<br>git reset HEAD<br><br>單一檔案取消索引<br>git reset HEAD 檔案名稱</p>
+
+
+
+<h4>#還原檔案</h4>
+
+
+
+<p>恢復單一檔案到最新 commit 狀態<br>git checkout 檔案名稱<br><br>還原工作目錄與索引，會跟最後一次 commit 保持一樣<br>git reset –hard</p>
+
+
+
+<h4>操作流程 – 取消索引</h4>
+
+
+
+<ol><li>新增資料夾 mkdir project</li><li>移動到資料夾位置 cd project</li><li>新增新的數據庫 git init</li><li>新增檔案 touch index.html</li><li>加到索引 git add .</li><li>提交更新 git commit -m ‘update’</li><li>查詢紀錄 git log</li><li>新增檔案 touch all.css</li><li>新增檔案 touch all.js</li><li>檢查狀態 git status</li><li>加到索引 git add .</li><li>檢查狀態 git status</li><li>全部檔案取消索引 git reset HEAD</li><li>檢查狀態 git status</li><li>加到索引 git add .</li><li>單一檔案取消索引 git reset HEAD all.css</li><li>檢查狀態 git status</li></ol>
+
+
+
+<h4>操作流程 – 還原檔案</h4>
+
+
+
+<ol><li>檔案程式碼修改，寫壞了</li><li>檢查狀態 git status</li><li>恢復單一檔案到最新 commit 狀態 git checkout index.html</li><li>加到索引 git add .</li><li>還原工作目錄與索引，會跟最後一次 commit 保持一樣 git reset –hard</li><li>檢查狀態 git status</li><li>查詢紀錄 git log</li></ol>
+
+
+
+<h3>15.指令大全</h3>
+
+
+
+<p>這裡條列出本課程裡有教到的指令，都是實務上比較常用的部分。<br>更多指令：<a rel="noreferrer noopener" href="http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html" target="_blank">一峰</a>、<a rel="noreferrer noopener" href="https://backlog.com/git-tutorial/tw/reference/" target="_blank">猴子git</a>的指令庫。</p>
+
+
+
+<h4>基礎設定</h4>
+
+
+
+<p>查詢版本<br>git version<br><br>查詢設定列表<br>git config –list<br><br>輸入姓名<br>git config –global user.name “你的名字”<br><br>輸入email<br>git config –global user.email “你的email”</p>
+
+
+
+<h4>新增本地/複製遠端數據庫</h4>
+
+
+
+<p>在本地資料夾新增數據庫<br>git init<br><br>複製遠端數據庫<br>git clone 遠端數據庫網址</p>
+
+
+
+<h4>增加/刪除檔案</h4>
+
+
+
+<p>增加檔案進入索引<br>git add 檔案名稱<br><br>增加全部檔案進入索引<br>git add .<br><br>查詢狀態<br>git status<br><br>顯示歷史紀錄<br>git log<br><br>將索引提交到數據庫<br>git commit -m ‘更新訊息’</p>
+
+
+
+<h4>還原指令</h4>
+
+
+
+<p>還原工作目錄與索引，會跟最後一次 commit 保持一樣<br>git reset –hard<br><br>全部檔案取消索引<br>git reset HEAD<br><br>單一檔案取消索引<br>git reset HEAD 檔案名稱<br><br>恢復單一檔案到最新 commit 狀態<br>git checkout 檔案名稱<br><br>刪除最近一次 commit<br>git reset –hard HEAD^<br><br>上面語法如果刪除錯了可以再用此語法還原<br>git reset –hard ORIG_HEAD<br><br>刪除最近一次 commit，但保留異動內容<br>git reset –soft HEAD^<br><br>commit 後發現有幾個檔案忘了加入進去<br>git commit –amend</p>
+
+
+
+<h4>分支</h4>
+
+
+
+<p>顯示所有本地分支<br>git branch<br><br>新增分支<br>git branch 分支名稱<br><br>切換分支<br>git checkout 分支名稱<br><br>合併指定分支到目前的分支<br>git merge 分支名稱<br><br>刪除分支<br>git branch -d 分支名稱</p>
+
+
+
+<h4>遠端數據庫操作</h4>
+
+
+
+<p>複製遠端數據庫<br>git clone 遠端數據庫網址<br><br>查詢遠端數據庫<br>git remote<br><br>將本地分支推送到遠端分支<br>git push 遠端數據庫名稱 遠端分支名稱<br><br>將遠端分支拉下來與本地分支進行合併<br>git pull</p>
+
+
+
+<h4>標籤</h4>
+
+
+
+<p>查詢標籤<br>git tag<br><br>查詢詳細標籤<br>git tag -n<br><br>刪除標籤<br>git tag -d 標籤名稱<br><br>新增輕量標籤<br>git tag 標籤名稱<br><br>新增標示標籤<br>git tag -am ‘備註內容’ 標籤名稱</p>
+
+
+
+<h4>暫存</h4>
+
+
+
+<p>暫時儲存當前目錄<br>git stash<br><br>瀏覽 stash 列表<br>git stash list<br><br>還原暫存<br>git stash pop<br><br>清除最新暫存<br>git stash drop<br><br>清除全部暫存<br>git stash clear</p>
+
+
+
+<p><a href="https://geehsu.github.io/git-github/" target="_blank" rel="noreferrer noopener">Git &amp; Github 指令</a></p>
+
+
+
+<h2>第３節：Github</h2>
+
+
+
+<h3>16.Github 註冊流程</h3>
+
+
+
+<p><a rel="noreferrer noopener" href="https://github.com/" target="_blank">GitHub 官網</a></p>
+
+
+
+<p>Github – 遠端數據庫</p>
+
+
+
+<h3>17.git push – 推送數據庫到 Github</h3>
+
+
+
+<h4>講解流程</h4>
+
+
+
+<ol><li>在 Github 新增一個遠端數據庫</li><li>複製遠端數據庫到自己的電腦上面</li><li>修改完之後</li><li>推送更新遠端數據庫</li></ol>
+
+
+
+<p>遠端數據庫 複製→ 本地數據庫，<br>本地數據庫 更新→ 遠端數據庫。<br><br>Remote Repository clone/fetch→ Local Repository,<br>Local Repository push→ Remote Repository.</p>
+
+
+
+<h4>操作流程</h4>
+
+
+
+<ol><li>在 Github 新增一個遠端數據庫</li><li>複製 HTTPS URL</li><li>新增資料夾 mkdir github</li><li>移動到資料夾位置 cd github</li><li>複製檔案下來 git clone URL</li><li>移動到資料夾位置 cd gittest2</li><li>新增檔案 touch index.html</li><li>全部加到索引 git add .</li><li>提交更新 git commit -m ‘update index’</li><li>推送更新 git push</li><li>新增檔案 touch index2.html</li><li>全部加到索引 git add .</li><li>提交更新 git commit -m ‘update index2’</li><li>推送更新 git push</li></ol>
+
+
+
+<h3>18.從 Github 找出實用插件流程</h3>
+
+
+
+<p>Github 首頁搜尋關鍵字，舉例：slider。<br>如何辨別插件的實用，依分類選項：最相關、最多星數、更新時間（約半年左右），來決定是否使用。<br>通常來說，插件會有說明如何使用。</p>
+
+
+
+<p>Github 會記錄各種 Git 狀態，有多少個分支、幾個提交、多少個問題，來評估插件的更新頻率、使用的熱門度高不高。</p>
+
+
+
+<h4>其他的遠端數據庫</h4>
+
+
+
+<p><a rel="noreferrer noopener" href="https://bitbucket.org/product/" target="_blank">Bitbucket</a></p>
+
+
+
+<p>PS：Bitbucket 有提供小團隊 (5人以下) 服務是免費的。<br>PS：Github 私人數據庫服務現在改成免費的。</p>
+
+
+
+<h2>第４節：Git 分支 (branch)</h2>
+
+
+
+<h3>19.分支簡介</h3>
+
+
+
+<p>參考文章：<a rel="noreferrer noopener" href="https://nvie.com/posts/a-successful-git-branching-model/" target="_blank">範例分支圖</a>、<a href="https://git-tutorial.readthedocs.io/zh/latest/branchingmodel.html" target="_blank" rel="noreferrer noopener">Gitflow 分支策略</a></p>
+
+
+
+<h4>分支大致上分為兩種：</h4>
+
+
+
+<ol><li>主要的分支：master(主要)、develop(開發)</li><li>支援的分支：feature(功能)、release(發佈)、hotfix(熱修復)</li></ol>
+
+
+
+<h3>20.HEAD – 瞭解目前所在位置</h3>
+
+
+
+<p>HEAD：目前所在位置的指標。</p>
+
+
+
+<ul><li>查看目前有哪些分支 git branch</li><li>回到以前指定版本狀態，查看過去的內容 git checkout 前4碼</li><li>還原到最新版本 git checkout master</li></ul>
+
+
+
+<h4>操作流程</h4>
+
+
+
+<ol><li>新增資料夾 mkdir project</li><li>移動到資料夾位置 cd project</li><li>新增新的數據庫 git init</li><li>新增檔案 touch index.html</li><li>全部加到索引 git add .</li><li>提交更新 git commit -m ‘update’</li><li>瀏覽目前分支 git branch</li><li>修改檔案內容 index.html</li><li>檢查狀態 git status</li><li>全部加到索引 git add .</li><li>提交更新 git commit -m ‘update index content’</li><li>查詢紀錄 git log</li><li>回到以前指定版本狀態 git checkout 38b0</li><li>還原到最新版本 git checkout master</li></ol>
+
+
+
+<h3>21.git branch – 分支創立</h3>
+
+
+
+<h4>新增分支操作流程</h4>
+
+
+
+<ol><li>新增分支 git branch feature1</li><li>查詢分支 git branch<ul><li>* 代表 HEAD 目前所在位置</li></ul></li><li>切換分支 git checkout feature1</li><li>查詢分支 git branch<ul><li>* 在 feature1 的位置</li></ul></li><li>修改檔案 index.html</li><li>查詢狀態 git status</li><li>全部加到索引 git add .</li><li>提交更新 git commit -m ‘edit index content’</li><li>切換分支 git checkout master</li><li>查詢分支 git branch<ul><li>* 在 master 的位置</li></ul></li><li>切換分支 git checkout feature1</li><li>查詢分支 git branch<ul><li>* 在 feature1 的位置</li></ul></li></ol>
+
+
+
+<p>練習：使用切換分支切換到 master 和 feature1，看他們的差異。</p>
+
+
+
+<h3>22.git merge – fast-forward</h3>
+
+
+
+<h4>合併分支操作流程</h4>
+
+
+
+<ol><li>新增資料夾 mkdir project</li><li>移動到資料夾位置 cd project</li><li>新增新的數據庫 git init</li><li>新增檔案 touch index.html</li><li>全部加到索引 git add .</li><li>提交更新 git commit -m ‘add index’</li><li>修改檔案 index.html</li><li>檢查狀態 git status</li><li>全部加到索引 git add .</li><li>提交更新 git commit -m ‘update index’</li><li>新增分支 git branch feature1</li><li>查詢分支 git branch</li><li>切換分支 git checkout feature1</li><li>修改檔案 index.html 匯入 CSS</li><li>新增資料夾 mkdir css</li><li>移動到資料夾位置 cd css</li><li>新增檔案 touch all.css</li><li>回上一層 cd ..</li><li>檢查狀態 git status</li><li>全部加到索引 git add .</li><li>提交更新 git commit -m ‘add css’</li><li>切換分支 git checkout master</li><li><strong>合併分支</strong>&nbsp;<strong>git merge feature1</strong></li></ol>
+
+
+
+<h3>23.Mac 自動合併細節提醒</h3>
+
+
+
+<p>在下一篇會需要使用到編輯器來寫 merge 的更新訊息，<br>在未指定編輯器的情況下，會出現 vim 的編輯器，此時已會預設<br>帶好 commit 的內容，只要依序輸入以下文字：<br>:wq!<br>就可離開</p>
+
+
+
+<h3>24.git merge – 自動合併篇</h3>
+
+
+
+<h4>同時更新 – 無衝突版本</h4>
+
+
+
+<h5>操作流程</h5>
+
+
+
+<ol><li>新增資料夾 mkdir project</li><li>移動到資料夾位置 cd project</li><li>新增新的數據庫 git init</li><li>新增檔案 touch index.html</li><li>新增 index.html 環境、內容</li><li>查詢狀態 git status</li><li>全部加到索引 git add .</li><li>提交更新 git commit -m ‘add index’</li><li>新增分支 git branch feature1</li><li>切換分支 git checkout feature1</li><li>修改檔案 index.html 匯入 CSS</li><li>檢查狀態 git status</li><li>全部加到索引 git add .</li><li>提交更新 git commit -m ‘update index’</li><li>切換分支 git checkout master</li><li>修改檔案 index.html</li><li>檢查狀態 git status</li><li>全部加到索引 git add .</li><li>提交更新 git commit -m ‘edit h1’</li><li>合併分支 git merge feature1</li><li>跳出合併訊息 MERGE_MSG</li><li>確認合併訊息沒問題後，關掉就合併完成</li></ol>
+
+
+
+<h3>25.git merge – 解決衝突篇</h3>
+
+
+
+<h4>同時更新 – 有衝突版本</h4>
+
+
+
+<h5>操作流程</h5>
+
+
+
+<ol><li>新增資料夾 mkdir project</li><li>移動到資料夾位置 cd project</li><li>新增新的數據庫 git init</li><li>新增檔案 touch index.html</li><li>建立 index.html 環境</li><li>全部加到索引 git add .</li><li>提交更新 git commit -m ‘add index’</li><li>新增分支 git branch feature1</li><li>查詢分支 git branch</li><li>切換分支 git checkout feature1</li><li>修改 index.html 匯入 CSS、新增h1標籤feature1</li><li>檢查狀態 git status</li><li>全部加到索引 git add .</li><li>提交更新 git commit -m ‘add css and feature1’</li><li>切換分支 git checkout master</li><li>修改 index.html 新增h1標籤master</li><li>全部加到索引 git add .</li><li>提交更新 git commit -m ‘add h1 master’</li><li>合併分支 git merge feature1</li><li>衝突、自動合併失敗</li><li>評估與其他成員程式碼有衝突該如何解決<ul><li>部分保留、部分刪除</li><li>全部保留</li><li>全部刪除</li></ul></li><li>這裡是選擇全部保留</li><li>全部加到索引 git add .</li><li>提交更新 git commit -m ‘merge feature1 css and h1’</li></ol>
+
+
+
+<p>發現不能自動合併時，就需要做手動合併的動作。</p>
+
+
+
+<h3>26.git tag – 標籤</h3>
+
+
+
+<ol><li>查詢標籤：git tag</li><li>查詢詳細標籤：git tag -n</li><li>刪除標籤：git tag -d 標籤名稱</li><li>新增輕量標籤：git tag 標籤名稱</li><li>新增標示標籤：git tag -am “備註內容” 標籤名稱</li><li>切換到標籤的 commit：git checkout 標籤名稱</li></ol>
+
+
+
+<h4>操作流程</h4>
+
+
+
+<ol><li>新增資料夾 mkdir project</li><li>移動到資料夾位置 cd project</li><li>新增新的數據庫 git init</li><li>新增檔案 touch index.html</li><li>全部加到索引 git add .</li><li>提交更新 git commit -m ‘update index’</li><li>查詢紀錄 git log</li><li>建立 index.html 環境、新增h1標籤內容</li><li>全部加到索引 git add .</li><li>提交更新 git commit -m ‘edit index’</li><li>查詢標籤 git tag (無，因為還沒新增標籤)</li><li>新增輕量標籤 git tag v1</li><li>查詢標籤 git tag</li><li>修改檔案 index.html 新增p段落內容</li><li>全部加到索引 git add .</li><li>提交更新 git commit -m ‘update p’</li><li>查詢紀錄 git log</li><li>查詢標籤 git tag</li><li>切換到標籤的提交 git checkout v1</li><li>切換分支 git checkout master</li><li>新增檔案 touch contact.html</li><li>全部加到索引 git add .</li><li>提交更新 git commit -m ‘update contact’</li><li>新增標示標籤 git tag -am ‘v2 add contact’ v2</li><li>查詢標籤 git tag</li><li>查詢詳細標籤 git tag -n</li></ol>
+
+
+
+<h3>27.git stash – 暫存檔案</h3>
+
+
+
+<ol><li>git stash – 暫時儲存當前目錄</li><li>git stash list – 瀏覽 git stash 列表</li><li>git stash pop – 還原暫存</li><li>git stash drop – 清除最新暫存</li><li>git stash clear – 清除全部暫存</li></ol>
+
+
+
+<h4>操作流程</h4>
+
+
+
+<ol><li>新增資料夾 mkdir project</li><li>移動到資料夾位置 cd project</li><li>新增新的數據庫 git init</li><li>新增檔案 touch index.html</li><li>建立 index.html 環境、新增h1標籤內容</li><li>全部加到索引 git add .</li><li>提交更新 git commit -m ‘add index’</li><li>新增分支 git branch issue</li><li>修改檔案 index.html 新增p標籤段落內容</li><li>檢查狀態 git status</li><li>突發指派工作內容，暫時儲存當前目錄 git stash</li><li>檢查狀態 git status</li><li>查詢暫存檔案列表 git stash list</li><li>切換分支 git checkout issue</li><li>修改 issue 問題完成後</li><li>還原暫存 git stash pop</li><li>查詢暫存檔案列表 git stash list</li><li>暫時儲存當前目錄 git stash</li><li>切換分支 git checkout master</li><li>還原暫存 git stash pop</li></ol>
+
+
+
+<h2>第５節：Git、Github 團隊協作篇</h2>
+
+
+
+<h3>28.git remote – 遠端數據庫</h3>
+
+
+
+<h4>如何推送分支到遠端數據庫</h4>
+
+
+
+<ol><li>git remote – 查詢遠端數據庫主機名稱</li><li>git remote rename 原名稱 修改名稱 – 修改遠端數據庫主機名稱</li><li>git push origin master – 推送分支更新到指定遠端數據庫主機<ul><li>origin：預設遠端主機名稱</li><li>master：分支名稱</li></ul></li></ol>
+
+
+
+<h5>操作流程</h5>
+
+
+
+<ol><li>在 Github 新增一個 New repository (新的遠端數據庫)</li><li>Repository name (數據庫名稱) gitremote</li><li>Create repository (建立數據庫)</li><li>複製 HTTPS URL</li><li>新增資料夾 mkdir github</li><li>移動到資料夾位置 cd github</li><li>複製遠端數據庫 git clone URL</li><li>移動到資料夾位置 cd gitremote</li><li>新增檔案 touch index.html</li><li>全部加到索引 git add .</li><li>提交更新 git commit -m ‘add index’</li><li>推送更新 git push</li><li>新增分支 git branch issue</li><li>切換分支 git checkout issue</li><li>新增檔案 touch issue.html</li><li>全部加到索引 git add .</li><li>提交更新 git commit -m ‘add issue’</li><li>推送更新失敗 git push</li><li>查詢遠端數據庫 git remote</li><li>推送分支更新到指定遠端數據庫主機 git push origin issue</li><li>查詢遠端數據庫 git remote</li><li>修改遠端數據庫名稱 git remote rename origin github</li><li>查詢遠端數據庫 git remote</li><li>新增檔案 touch contact.html</li><li>全部加到索引 git add .</li><li>提交更新 git commit -m ‘add contact’</li><li>推送更新失敗 git push origin issue</li><li>推送分支更新到指定遠端數據庫主機 git push github issue</li></ol>
+
+
+
+<h3>29.git pull – 下載遠端數據庫</h3>
+
+
+
+<p>從遠端數據庫下載更新 (pull) 到自己的工作目錄。</p>
+
+
+
+<h4>模擬操作流程</h4>
+
+
+
+<p>自己、Github、同事A，<br>在與其他成員團隊合作時會有哪些狀況？</p>
+
+
+
+<ol><li>在 Github 新增一個 New Repository (新的遠端數據庫)</li><li>Repository name (數據庫名稱) gitpull</li><li>Create Repository (建立數據庫)</li><li>複製 HTTPS URL</li><li>新增兩個資料夾，分別是 my、a</li><li>我：移動到資料夾位置 cd my</li><li>我：複製遠端數據庫 git clone URL</li><li>我：移動到資料夾位置 cd gitpull</li><li>同事A：移動到資料夾位置 cd a</li><li>同事A：複製遠端數據庫 git clone URL</li><li>我：我先建立環境 touch index.html</li><li>我：全部加到索引 git add .</li><li>我：提交更新 git commit -m ‘add index’</li><li>我：推送分支更新到指定遠端數據庫主機 git push origin master</li><li>同事A：移動到資料夾位置 cd gitpull</li><li>同事A：查詢紀錄 git log</li><li>同事A：從遠端數據庫下載更新 (pull) 到工作目錄 git pull</li><li>同事A：查詢紀錄 git log</li><li>同事A：新增檔案 touch contact.html</li><li>同事A：全部加到索引 git add .</li><li>同事A：提交更新 git commit -m ‘add contact’</li><li>同事A：推送分支更新到指定遠端數據庫主機 git push origin master</li><li>我：查詢紀錄 git log</li><li>我：從遠端數據庫下載更新 (pull) 到工作目錄 git pull</li><li>我：查詢紀錄 git log</li></ol>
+
+
+
+<h3>30.git pull – 衝突篇</h3>
+
+
+
+<h4>pull – 無法 push 案例</h4>
+
+
+
+<p>自己、Github、同事A<br>在與其他成員團隊合作時，別人更新後，產生無法 push 的狀況。<br>需要先 pull，才可以 push。</p>
+
+
+
+<h5>模擬操作流程</h5>
+
+
+
+<ol><li>在 Github 新增一個 New Repository (新的遠端數據庫)</li><li>Repository name (數據庫名稱) gitconflicts</li><li>Create Repository (建立數據庫)</li><li>複製 HTTPS URL</li><li>新增兩個資料夾，分別為 my、a</li><li>我：移動到資料夾位置 cd my</li><li>我：複製遠端數據庫 git clone URL</li><li>我：移動到資料夾位置 cd gitconflicts</li><li>同事A：移動到資料夾位置 cd a</li><li>同事A：複製遠端數據庫 git clone URL</li><li>同事A：移動到資料夾位置 cd gitconflicts</li><li>我：我先建立環境 touch index.html</li><li>我：全部加到索引 git add .</li><li>我：提交更新 git commit -m ‘add index’</li><li>我：推送分支更新到指定遠端數據庫主機 git push origin master</li><li>同事A：從遠端數據庫下載更新 (pull) 到工作目錄 git pull</li><li>我：在下班後，寫了一些東西。</li><li>我：新增檔案 touch contact.html</li><li>我：全部加到索引 git add .</li><li>我：提交更新 git commit -m ‘add contact’</li><li>我：推送分支更新到指定遠端數據庫主機 git push origin master</li><li>同事A：新增檔案 touch about.html</li><li>同事A：全部加到索引 git add .</li><li>同事A：提交更新 git commit -m ‘add about’</li><li>同事A：出現錯誤－推送分支更新到指定遠端數據庫主機 git push origin master</li><li>同事A：從遠端數據庫下載更新 (pull) 到工作目錄 git pull</li><li>同事A：跳出合併訊息 MERGE_MSG</li><li>同事A：推送分支更新到指定遠端數據庫主機 git push origin master</li><li>我：經由同事告知有更新後</li><li>我：從遠端數據庫下載更新 (pull) 到工作目錄 git pull</li></ol>
+
+
+
+<p>PS：MERGE_MSG 輸入 :wq! 就可離開。</p>
+
+
+
+<h3>31.Github Pages – 存放網頁空間流程</h3>
+
+
+
+<p>利用 github pages 更新網頁。</p>
+
+
+
+<h4>操作流程</h4>
+
+
+
+<ol><li>在 Github 新增一個 New Repository (新的遠端數據庫)</li><li>Repository name (數據庫名稱) demonsite</li><li>Create Repository (建立數據庫)</li><li>複製 HTTPS URL</li><li>新增資料夾 mkdir github</li><li>移動到資料夾位置 cd github</li><li>複製遠端數據庫 git clone URL</li><li>移動到資料夾位置 cd demonsite</li><li>新增檔案 touch index.html</li><li>建立 index.html 環境、新增h1標籤內容</li><li>全部加到索引 git add .</li><li>提交更新 git commit -m ‘add index and h1’</li><li>推送分支更新到指定遠端數據庫主機 git push origin master</li><li>重新整理 Github 網頁</li><li>在 Github 網頁上有個 Settings 裡面有個 GitHub Pages，把 Source 改成 master branch 然後 Save (儲存)</li><li>GitHub Pages 區塊出現 Your site is ready to be published at URL</li><li>修改檔案 新增清單內容</li><li>全部加到索引 git add .</li><li>提交更新 git commit -m ‘edit list’</li><li>推送分支更新到指定遠端數據庫主機 git push origin master</li><li>重新整理 Github 網頁後，看 commits 改了哪些東西</li><li>重新整理 GitHub Pages 網頁後，更新了網頁內容。</li></ol>
+
+
+
+<h3>32.小型團隊分支協作篇</h3>
+
+
+
+<p>參考文章：<a rel="noreferrer noopener" href="https://nvie.com/posts/a-successful-git-branching-model/" target="_blank">範例分支圖</a></p>
+
+
+
+<h4>團隊協作範例圖</h4>
+
+
+
+<figure class="wp-block-image"><img src="https://wp-blogtoshare.000webhostapp.com/wp-content/uploads/2021/01/%E5%9C%98%E9%9A%8A%E5%8D%94%E4%BD%9C%E7%AF%84%E4%BE%8B%E5%9C%96.png" alt="" class="wp-image-3935"/></figure>
+
+
+
+<h5>操作流程</h5>
+
+
+
+<ol><li>新增資料夾 mkdir github</li><li>移動到資料夾 cd github</li><li>新增資料夾 mkdir project</li><li>移動到資料夾 cd project</li><li>新增新的數據庫 git init</li><li>新增檔案 touch index.html</li><li>建立 index.html 環境</li><li>全部加到索引 git add .</li><li>提交更新 git commit -m ‘add index’</li><li>新增分支 git branch develop</li><li>查詢分支 git branch</li><li>切換分支 git checkout develop</li><li>新增分支 git branch feature/view</li><li>切換分支 git checkout feature/view</li><li>新增檔案 touch all.css</li><li>全部加到索引 git add .</li><li>提交更新 git commit -m ‘add css’</li><li>切換分支 git checkout develop</li><li>合併分支 git merge feature/view</li><li>新增分支 git branch feature/js</li><li>切換分支 git checkout feature/js</li><li>新增檔案 touch all.js</li><li>全部加到索引 git add .</li><li>提交更新 git commit -m ‘add js’</li><li>切換分支 git checkout develop</li><li>合併分支 git merge feature/js</li><li>切換分支 git checkout master</li><li>合併分支 git merge develop</li></ol>
+
+
+
+<h5>Learn Git Branching</h5>
+
+
+
+<figure class="wp-block-image"><img src="https://wp-blogtoshare.000webhostapp.com/wp-content/uploads/2021/01/learn-git-branch-1-1024x699.png" alt="" class="wp-image-3941"/></figure>
+
+
+
+<pre class="wp-block-code"><code>$ git branch develop
+$ git checkout develop
+$ git branch f/view
+$ git checkout f/view
+$ git commit
+$ git checkout develop
+$ git merge f/view --no-ff
+$ git branch f/js
+$ git checkout f/js
+$ git commit
+$ git checkout develop
+$ git merge f/js --no-ff
+$ git checkout main
+$ git merge develop --no-ff</code></pre>
+
+
+
+<h5>合併指定分支到目前的分支 – 取消快轉</h5>
+
+
+
+<pre class="wp-block-code"><code>git merge 分支名稱 --no-ff</code></pre>
+
+
+
+<h3>33.git pull = git fetch + git merge</h3>
+
+
+
+<p>相信各位同學練習完 pull 時，可以知道他就是將遠端的分支將<br>你的本地分支進行合併 merge 的動作，<br>但有時候你不希望 pull 下來導致自己的數據庫太亂又擔心有衝突時，可以先使用下面這個指令。</p>
+
+
+
+<pre class="wp-block-code"><code>git fetch origin(遠端數據庫主機名稱) branch1(遠端分支)</code></pre>
+
+
+
+<p>此時你的分支會多一個 FETCH_HEAD 的分支，這個就是遠端數據庫的分支，可以等到你看過沒問題後，<br>再合併 FETCH_HEAD 也 ok。</p>
+
+
+
+<h3>34.延伸教學資源</h3>
+
+
+
+<ul><li><a rel="noreferrer noopener" href="https://backlog.com/git-tutorial/tw/" target="_blank">連猴子都能懂得 Git 入門指南</a></li><li><a rel="noreferrer noopener" href="https://github.com/doggy8088/Learn-Git-in-30-days/blob/master/zh-tw/README.md" target="_blank">保哥 30 天 Git 教學</a></li><li><a rel="noreferrer noopener" href="https://git-scm.com/book/zh-tw/v2" target="_blank">Git 官方繁體教學</a></li><li><a rel="noreferrer noopener" href="https://w3c.hexschool.com/git/cfdbd310" target="_blank">Git &amp; GitHub 教學手冊</a></li><li><a href="https://learngitbranching.js.org/" target="_blank" rel="noreferrer noopener">Learn Git Branching</a></li></ul>
+
+</div><!-- .entry-content -->
+
+	
+	
+<footer class="entry-footer">
+
+	<div class="entry-footer-right">
+
+		
+	</div>
+
+	
+		
+		
+			<span class="cat-links">
+
+				發佈位置： <a href="https://geehsu.github.io/wordpress_blog/category/post/hexschool/" rel="category tag">六角學院</a>
+			</span>
+
+		
+		
+		
+	
+</footer><!-- .entry-footer -->
+
+	
+</article><!-- #post-## -->
+
+		
+	<nav class="navigation post-navigation" role="navigation">
+		<h2 class="screen-reader-text">文章導覽</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="https://geehsu.github.io/wordpress_blog/flex-rwd/" rel="prev">&larr; 伸縮自如的 RWD 排版術</a></div></div>
+	</nav>
+		
+	
+	</main><!-- #main -->
+
+</div><!-- #primary -->
+
+
+<div id="secondary" class="widget-area" role="complementary">
+
+			<aside id="recent-posts-2" class="widget widget_recent_entries">		<h4 class="widget-title">近期文章</h4>		<ul>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/learninggit/">掌握 Git 與 Github 版本控制</a>
+											<span class="post-date">2021 年 1 月 13 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/flex-rwd/">伸縮自如的 RWD 排版術</a>
+											<span class="post-date">2021 年 1 月 4 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/js-novice-teaching-4/">AJAX 與資料處理</a>
+											<span class="post-date">2020 年 9 月 14 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/js-novice-teaching-3/">陣列與物件、FOREACH</a>
+											<span class="post-date">2020 年 9 月 14 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/js-novice-teaching-2/">DOM、FUNCTION 函式與監聽</a>
+											<span class="post-date">2020 年 9 月 14 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/js-novice-teaching-1/">JS 環境建立與變數</a>
+											<span class="post-date">2020 年 9 月 14 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/rwd-starttofinish/">RESPONSIVE BOOTSTRAP WEBSITE START TO FINISH WITH BOOTSTRAP 4, HTML5 &#038; CSS3</a>
+											<span class="post-date">2020 年 9 月 14 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/scrolltop/">SCROLLTOP – 滑動效果</a>
+											<span class="post-date">2020 年 9 月 14 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/easy-tutorials-01/">HOW TO MAKE A RESPONSIVE WEBSITE DESIGN USING HTML AND CSS STEP BY STEP TUTORIAL</a>
+											<span class="post-date">2020 年 9 月 14 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/hexschoolcolumn/">網頁前端養成專欄-來自六角學院</a>
+											<span class="post-date">2020 年 7 月 4 日</span>
+									</li>
+					</ul>
+		</aside><aside id="archives-2" class="widget widget_archive"><h4 class="widget-title">彙整</h4>		<ul>
+				<li><a href='https://geehsu.github.io/wordpress_blog/2021/01/'>2021 年 1 月</a>&nbsp;(2)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2020/09/'>2020 年 9 月</a>&nbsp;(7)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2020/07/'>2020 年 7 月</a>&nbsp;(1)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2020/06/'>2020 年 6 月</a>&nbsp;(4)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2020/05/'>2020 年 5 月</a>&nbsp;(1)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2020/04/'>2020 年 4 月</a>&nbsp;(2)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2020/03/'>2020 年 3 月</a>&nbsp;(2)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2020/02/'>2020 年 2 月</a>&nbsp;(1)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2020/01/'>2020 年 1 月</a>&nbsp;(1)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2019/11/'>2019 年 11 月</a>&nbsp;(11)</li>
+		</ul>
+			</aside><aside id="categories-2" class="widget widget_categories"><h4 class="widget-title">分類</h4>		<ul>
+				<li class="cat-item cat-item-3"><a href="https://geehsu.github.io/wordpress_blog/category/post/">文章</a> (28)
+<ul class='children'>
+	<li class="cat-item cat-item-14"><a href="https://geehsu.github.io/wordpress_blog/category/post/designcourse/">DesignCourse</a> (3)
+</li>
+	<li class="cat-item cat-item-13"><a href="https://geehsu.github.io/wordpress_blog/category/post/ninja/">The Net Ninja</a> (2)
+</li>
+	<li class="cat-item cat-item-12"><a href="https://geehsu.github.io/wordpress_blog/category/post/hexschool/">六角學院</a> (14)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-2"><a href="https://geehsu.github.io/wordpress_blog/category/about/">關於</a> (4)
+</li>
+		</ul>
+			</aside><aside id="calendar-3" class="widget widget_calendar"><div id="calendar_wrap" class="calendar_wrap"><table id="wp-calendar">
+	<caption>2021 年 1 月</caption>
+	<thead>
+	<tr>
+		<th scope="col" title="星期一">一</th>
+		<th scope="col" title="星期二">二</th>
+		<th scope="col" title="星期三">三</th>
+		<th scope="col" title="星期四">四</th>
+		<th scope="col" title="星期五">五</th>
+		<th scope="col" title="星期六">六</th>
+		<th scope="col" title="星期日">日</th>
+	</tr>
+	</thead>
+
+	<tfoot>
+	<tr>
+		<td colspan="3" id="prev"><a href="https://geehsu.github.io/wordpress_blog/2020/09/">&laquo; 9 月</a></td>
+		<td class="pad">&nbsp;</td>
+		<td colspan="3" id="next" class="pad">&nbsp;</td>
+	</tr>
+	</tfoot>
+
+	<tbody>
+	<tr>
+		<td colspan="4" class="pad">&nbsp;</td><td>1</td><td>2</td><td>3</td>
+	</tr>
+	<tr>
+		<td><a href="https://geehsu.github.io/wordpress_blog/2021/01/04/" aria-label="文章發佈於 2021 年 1 月 4 日">4</a></td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td>
+	</tr>
+	<tr>
+		<td>11</td><td>12</td><td id="today"><a href="https://geehsu.github.io/wordpress_blog/2021/01/13/" aria-label="文章發佈於 2021 年 1 月 13 日">13</a></td><td>14</td><td>15</td><td>16</td><td>17</td>
+	</tr>
+	<tr>
+		<td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td>
+	</tr>
+	<tr>
+		<td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td>
+	</tr>
+	</tbody>
+	</table></div></aside>
+</div><!-- #secondary -->
+
+
+
+		</div><!-- #content -->
+
+		
+		<footer id="colophon" class="site-footer">
+
+			<div class="site-footer-inner">
+
+				
+			</div><!-- .site-footer-inner -->
+
+		</footer><!-- #colophon -->
+
+		
+<div class="site-info-wrapper">
+
+	<div class="site-info">
+
+		<div class="site-info-inner">
+
+			
+<div class="site-info-text">
+
+	Copyright &copy; 2021 Wordpress_blog &mdash; Uptown Style WordPress 主題作者：<a href="https://www.godaddy.com/" rel="author nofollow">GoDaddy</a>
+</div>
+
+		</div><!-- .site-info-inner -->
+
+	</div><!-- .site-info -->
+
+</div><!-- .site-info-wrapper -->
+
+	</div><!-- #page -->
+
+	<script type='text/javascript' src='https://geehsu.github.io/wordpress_blog/wp-content/themes/primer/assets/js/navigation.min.js?ver=1.8.8'></script>
+<script type='text/javascript' src='https://geehsu.github.io/wordpress_blog/wp-includes/js/wp-embed.min.js?ver=5.2.4'></script>
+	<script>
+	/* IE11 skip link focus fix */
+	/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
+	</script>
+	
+</body>
+
+</html>

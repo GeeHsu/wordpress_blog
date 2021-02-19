@@ -1,0 +1,2428 @@
+<!DOCTYPE html>
+
+<html lang="zh-TW">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+
+	<link rel="pingback" href="https://geehsu.github.io/wordpress_blog/xmlrpc.php">
+
+	<title>JavaScript 全端特訓營 (試聽版) &#8211; WordPress_blog</title>
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="訂閱《Wordpress_blog》&raquo; 資訊提供" href="https://geehsu.github.io/wordpress_blog/feed/" />
+<link rel="alternate" type="application/rss+xml" title="訂閱《Wordpress_blog》&raquo; 留言的資訊提供" href="https://geehsu.github.io/wordpress_blog/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/geehsu.github.io\/wordpress_blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.4"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://geehsu.github.io/wordpress_blog/wp-includes/css/dist/block-library/style.min.css?ver=5.2.4' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='https://geehsu.github.io/wordpress_blog/wp-includes/css/dist/block-library/theme.min.css?ver=5.2.4' type='text/css' media='all' />
+<link rel='stylesheet' id='uptown-style-css'  href='https://geehsu.github.io/wordpress_blog/wp-content/themes/uptown-style/style.css?ver=1.1.3' type='text/css' media='all' />
+<style id='uptown-style-inline-css' type='text/css'>
+.hero{background-image:url(https://geehsu.github.io/wordpress_blog/wp-content/themes/uptown-style/assets/images/hero.jpg);}
+.site-title a,.site-title a:visited{color:#353535;}.site-title a:hover,.site-title a:visited:hover{color:rgba(53, 53, 53, 0.8);}
+.site-description{color:#686868;}
+.hero,.hero .widget h1,.hero .widget h2,.hero .widget h3,.hero .widget h4,.hero .widget h5,.hero .widget h6,.hero .widget p,.hero .widget blockquote,.hero .widget cite,.hero .widget table,.hero .widget ul,.hero .widget ol,.hero .widget li,.hero .widget dd,.hero .widget dt,.hero .widget address,.hero .widget code,.hero .widget pre,.hero .widget .widget-title,.hero .page-header h1{color:#ffffff;}.hero .hero-inner{border-color:rgba(255, 255, 255, 0.5);}
+.main-navigation ul li a,.main-navigation ul li a:visited,.main-navigation ul li a:hover,.main-navigation ul li a:focus,.main-navigation ul li a:visited:hover{color:#252525;}.main-navigation .sub-menu .menu-item-has-children > a::after{border-right-color:#252525;border-left-color:#252525;}.menu-toggle div{background-color:#252525;}.main-navigation ul li a:hover,.main-navigation ul li a:focus{color:rgba(37, 37, 37, 0.8);}
+h1,h2,h3,h4,h5,h6,label,legend,table th,dl dt,.entry-title,.entry-title a,.entry-title a:visited,.widget-title{color:#353535;}.entry-title a:hover,.entry-title a:visited:hover,.entry-title a:focus,.entry-title a:visited:focus,.entry-title a:active,.entry-title a:visited:active{color:rgba(53, 53, 53, 0.8);}
+body,input,select,textarea,input[type="text"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="password"]:focus,input[type="search"]:focus,input[type="number"]:focus,input[type="tel"]:focus,input[type="range"]:focus,input[type="date"]:focus,input[type="month"]:focus,input[type="week"]:focus,input[type="time"]:focus,input[type="datetime"]:focus,input[type="datetime-local"]:focus,input[type="color"]:focus,textarea:focus,.navigation.pagination .paging-nav-text{color:#252525;}hr{background-color:rgba(37, 37, 37, 0.1);border-color:rgba(37, 37, 37, 0.1);}input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],input[type="number"],input[type="tel"],input[type="range"],input[type="date"],input[type="month"],input[type="week"],input[type="time"],input[type="datetime"],input[type="datetime-local"],input[type="color"],textarea,.select2-container .select2-choice{color:rgba(37, 37, 37, 0.5);border-color:rgba(37, 37, 37, 0.1);}select,fieldset,blockquote,pre,code,abbr,acronym,.hentry table th,.hentry table td{border-color:rgba(37, 37, 37, 0.1);}.hentry table tr:hover td{background-color:rgba(37, 37, 37, 0.05);}
+blockquote,.entry-meta,.entry-footer,.comment-meta .says,.logged-in-as,.wp-block-coblocks-author__heading{color:#686868;}
+.site-footer .widget-title,.site-footer h1,.site-footer h2,.site-footer h3,.site-footer h4,.site-footer h5,.site-footer h6{color:#ffffff;}
+.site-footer .widget,.site-footer .widget form label{color:#ffffff;}
+.footer-menu ul li a,.footer-menu ul li a:visited{color:#252525;}.site-info-wrapper .social-menu a{background-color:#252525;}.footer-menu ul li a:hover{border-color:#252525;}.footer-menu ul li a:hover,.footer-menu ul li a:visited:hover{color:rgba(37, 37, 37, 0.8);}
+.site-info-wrapper .site-info-text{color:#252525;}
+a,a:visited,.entry-title a:hover,.entry-title a:visited:hover{color:#54ccbe;}.navigation.pagination .nav-links .page-numbers.current,.social-menu a:hover{background-color:#54ccbe;}a:hover,a:visited:hover,a:focus,a:visited:focus,a:active,a:visited:active{color:rgba(84, 204, 190, 0.8);}.comment-list li.bypostauthor{border-color:rgba(84, 204, 190, 0.2);}
+button,a.button,a.button:visited,input[type="button"],input[type="reset"],input[type="submit"],.wp-block-button__link,.site-info-wrapper .social-menu a:hover{background-color:#b5345f;border-color:#b5345f;}button:hover,button:active,button:focus,a.button:hover,a.button:active,a.button:focus,a.button:visited:hover,a.button:visited:active,a.button:visited:focus,input[type="button"]:hover,input[type="button"]:active,input[type="button"]:focus,input[type="reset"]:hover,input[type="reset"]:active,input[type="reset"]:focus,input[type="submit"]:hover,input[type="submit"]:active,input[type="submit"]:focus{background-color:rgba(181, 52, 95, 0.8);border-color:rgba(181, 52, 95, 0.8);}
+button,button:hover,button:active,button:focus,a.button,a.button:hover,a.button:active,a.button:focus,a.button:visited,a.button:visited:hover,a.button:visited:active,a.button:visited:focus,input[type="button"],input[type="button"]:hover,input[type="button"]:active,input[type="button"]:focus,input[type="reset"],input[type="reset"]:hover,input[type="reset"]:active,input[type="reset"]:focus,input[type="submit"],input[type="submit"]:hover,input[type="submit"]:active,input[type="submit"]:focus,.wp-block-button__link{color:#ffffff;}
+body{background-color:#ffffff;}.navigation.pagination .nav-links .page-numbers.current{color:#ffffff;}
+.hero{background-color:#252525;}.hero{-webkit-box-shadow:inset 0 0 0 9999em;-moz-box-shadow:inset 0 0 0 9999em;box-shadow:inset 0 0 0 9999em;color:rgba(37, 37, 37, 0.50);}
+.main-navigation-container,.main-navigation.open,.main-navigation ul ul,.main-navigation .sub-menu{background-color:#ffffff;}.site-header{background-color:#ffffff;}
+.site-footer{background-color:#3f3244;}
+.site-info-wrapper{background-color:#ffffff;}.site-info-wrapper .social-menu a,.site-info-wrapper .social-menu a:visited,.site-info-wrapper .social-menu a:hover,.site-info-wrapper .social-menu a:visited:hover{color:#ffffff;}
+.has-primary-color{color:#03263B;}.has-primary-background-color{background-color:#03263B;}
+.has-secondary-color{color:#0b3954;}.has-secondary-background-color{background-color:#0b3954;}
+.has-tertiary-color{color:#bddae6;}.has-tertiary-background-color{background-color:#bddae6;}
+.has-quaternary-color{color:#ff6663;}.has-quaternary-background-color{background-color:#ff6663;}
+.has-quinary-color{color:#ffffff;}.has-quinary-background-color{background-color:#ffffff;}
+</style>
+<link rel='stylesheet' id='uptown-style-fonts-css'  href='https://fonts.googleapis.com/css?family=Playfair+Display%3A300%2C400%2C700%7CLato%3A300%2C400%2C700&#038;subset=latin&#038;ver=1.8.8' type='text/css' media='all' />
+<style id='uptown-style-fonts-inline-css' type='text/css'>
+.site-title{font-family:"Playfair Display", sans-serif;}
+.main-navigation ul li a,.main-navigation ul li a:visited,button,a.button,a.fl-button,input[type="button"],input[type="reset"],input[type="submit"]{font-family:"Playfair Display", sans-serif;}
+h1,h2,h3,h4,h5,h6,label,legend,table th,dl dt,.entry-title,.widget-title{font-family:"Playfair Display", sans-serif;}
+body,p,ol li,ul li,dl dd,.fl-callout-text{font-family:"Lato", sans-serif;}
+blockquote,.entry-meta,.entry-footer,.comment-list li .comment-meta .says,.comment-list li .comment-metadata,.comment-reply-link,#respond .logged-in-as{font-family:"Lato", sans-serif;}
+</style>
+<script type='text/javascript' src='https://geehsu.github.io/wordpress_blog/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://geehsu.github.io/wordpress_blog/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://geehsu.github.io/wordpress_blog/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://geehsu.github.io/wordpress_blog/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://geehsu.github.io/wordpress_blog/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='掌握 Git 與 Github 版本控制' href='https://geehsu.github.io/wordpress_blog/learninggit/' />
+<meta name="generator" content="WordPress 5.2.4" />
+<link rel="canonical" href="https://geehsu.github.io/wordpress_blog/javascript-full-stack-training/" />
+<link rel='shortlink' href='https://geehsu.github.io/wordpress_blog/?p=282' />
+<link rel="alternate" type="application/json+oembed" href="https://geehsu.github.io/wordpress_blog/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fgeehsu.github.io%2Fwordpress_blog%2Fjavascript-full-stack-training%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://geehsu.github.io/wordpress_blog/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fgeehsu.github.io%2Fwordpress_blog%2Fjavascript-full-stack-training%2F&#038;format=xml" />
+<style type='text/css'>
+.site-title a,.site-title a:visited{color:353535;}
+</style><link rel="icon" href="https://geehsu.github.io/wordpress_blog/wp-content/uploads/2019/11/cropped-blogging-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://geehsu.github.io/wordpress_blog/wp-content/uploads/2019/11/cropped-blogging-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://geehsu.github.io/wordpress_blog/wp-content/uploads/2019/11/cropped-blogging-180x180.png" />
+<meta name="msapplication-TileImage" content="https://geehsu.github.io/wordpress_blog/wp-content/uploads/2019/11/cropped-blogging-270x270.png" />
+
+</head>
+
+<body class="post-template-default single single-post postid-282 single-format-standard custom-header-image layout-two-column-default">
+
+	
+	<div id="page" class="hfeed site">
+
+		<a class="skip-link screen-reader-text" href="#content">略過內容</a>
+
+		
+		<header id="masthead" class="site-header" role="banner">
+
+			
+			<div class="site-header-wrapper">
+
+				
+<div class="site-title-wrapper">
+
+	
+	<div class="site-title"><a href="https://geehsu.github.io/wordpress_blog/" rel="home">Wordpress_blog</a></div>
+	<div class="site-description">This is a dynamic to static website.</div>
+</div><!-- .site-title-wrapper -->
+
+<div class="main-navigation-container">
+
+	
+<div class="menu-toggle" id="menu-toggle" role="button" tabindex="0"
+	>
+	<div></div>
+	<div></div>
+	<div></div>
+</div><!-- #menu-toggle -->
+
+	<nav id="site-navigation" class="main-navigation">
+
+		<div class="menu-menu-container"><ul id="menu-menu" class="menu"><li id="menu-item-13" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-13"><a href="https://geehsu.github.io/wordpress_blog/category/about/">關於</a></li>
+<li id="menu-item-9" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor menu-item-has-children menu-item-9"><a href="https://geehsu.github.io/wordpress_blog/category/post/">文章</a>
+<span  class="expand" role="button" tabindex="0"></span>
+
+<ul class="sub-menu">
+	<li id="menu-item-98" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-98"><a href="https://geehsu.github.io/wordpress_blog/category/post/hexschool/">六角學院</a></li>
+	<li id="menu-item-99" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-99"><a href="https://geehsu.github.io/wordpress_blog/category/post/ninja/">The Net Ninja</a></li>
+	<li id="menu-item-212" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-212"><a href="https://geehsu.github.io/wordpress_blog/category/post/designcourse/">DesignCourse</a></li>
+</ul>
+</li>
+<li id="menu-item-12" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-12"><a href="https://geehsu.github.io/wordpress_blog/category/sticker/">貼圖</a></li>
+<li id="menu-item-11" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11"><a href="https://geehsu.github.io/wordpress_blog/category/food/">美食</a></li>
+<li id="menu-item-10" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10"><a href="https://geehsu.github.io/wordpress_blog/category/tour/">旅遊</a></li>
+<li id="menu-item-59" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-59"><a href="https://geehsu.github.io/wordpress_blog/category/social/">社群</a>
+<span  class="expand" role="button" tabindex="0"></span>
+
+<ul class="sub-menu">
+	<li id="menu-item-60" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-60"><a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/watergrass0402/">facebook</a></li>
+</ul>
+</li>
+</ul></div>
+	</nav><!-- #site-navigation -->
+
+	
+</div>
+
+			</div><!-- .site-header-wrapper -->
+
+			
+		</header><!-- #masthead -->
+
+		
+<div class="hero">
+
+	
+	<div class="hero-inner">
+
+		
+<div class="page-title-container">
+
+	<header class="page-header">
+
+		<h2 class="page-title">文章</h2>
+	</header><!-- .entry-header -->
+
+</div><!-- .page-title-container -->
+
+	</div>
+
+</div>
+
+		<div id="content" class="site-content">
+
+<div id="primary" class="content-area">
+
+	<main id="main" class="site-main" role="main">
+
+	
+		
+<article id="post-282" class="post-282 post type-post status-publish format-standard hentry category-hexschool">
+
+	
+	
+	
+<header class="entry-header">
+
+	<div class="entry-header-row">
+
+		<div class="entry-header-column">
+
+			
+			
+				<h1 class="entry-title">JavaScript 全端特訓營 (試聽版)</h1>
+
+			
+			
+		</div><!-- .entry-header-column -->
+
+	</div><!-- .entry-header-row -->
+
+</header><!-- .entry-header -->
+
+	
+<div class="entry-meta">
+
+	
+		<span class="posted-date">2021 年 2 月 19 日</span>
+
+	
+	<span class="posted-author"><a href="https://geehsu.github.io/wordpress_blog/author/gee-hsu/" title="「gee.hsu」的文章" rel="author">gee.hsu</a></span>
+
+	
+</div><!-- .entry-meta -->
+
+	
+		
+<div class="entry-content">
+
+	
+<p>學習來源：六角學院</p>
+
+
+
+<h2>JavaScript 課前知識與環境介紹</h2>
+
+
+
+<h3>安裝 Chrome 網頁瀏覽器</h3>
+
+
+
+<p>下載連結：<a href="https://www.google.com/intl/zh-TW/chrome/" target="_blank" rel="noreferrer noopener">Chrome</a></p>
+
+
+
+<h3>安裝 VSCode 程式編輯器</h3>
+
+
+
+<p>下載連結：<a rel="noreferrer noopener" href="https://code.visualstudio.com/" target="_blank">VSCode</a></p>
+
+
+
+<p>主題顏色設定：File → Preferences → Color Theme</p>
+
+
+
+<h2>變數與資料型別</h2>
+
+
+
+<h3>變數大綱介紹</h3>
+
+
+
+<h4>變數(Variable)與值(Value)</h4>
+
+
+
+<h5>課程目標</h5>
+
+
+
+<ul><li>宣告變數的方法：let、const、var</li><li>基本型別(primitives types) 介紹<ol><li>字串 (String)</li><li>數字 (Number)</li><li>布林 (Boolean)</li><li>undefined</li><li>null</li><li>Symbol</li></ol></li><li>型別操作方法</li></ul>
+
+
+
+<blockquote class="wp-block-quote"><p>除了基本型別外，後面還會講解物件型別，例如陣列(array)與物件(object)</p></blockquote>
+
+
+
+<p>程式幫我們去紀錄資訊。<br><br>大腦吸收資訊。<br><br>舉例：市場賣水果，香蕉、店長的角色。<br><br>變數紀錄資訊，變數、值、種類。<br><br>以 Excel 講解，值是數字、字串、布林 (true、false)。</p>
+
+
+
+<table class="wp-block-table"><tbody><tr><td>變數</td><td>值</td></tr><tr><td>香蕉價格</td><td>79</td></tr><tr><td>店長姓名</td><td>Tom</td></tr><tr><td>店面開啟狀態</td><td>是</td></tr></tbody></table>
+
+
+
+<h3>透過 Chrome 開發人員工具來寫 JavaScript</h3>
+
+
+
+<p>工具：Chrome 開發人員工具</p>
+
+
+
+<ul><li>自訂及管理 Google Chrome → 更多工具 → 開發人員工具</li><li>右鍵 → 檢查</li></ul>
+
+
+
+<p>點選 Console → 點擊 Clear Console 清除 Console 內容 → alert(‘hello world!!!’);<br><br>調整控制板位置，Customize and control DevTools → Dock side<br><br>在 Console 面板可以執行 JavaScript 程式瑪。</p>
+
+
+
+<h3>如何宣告變數</h3>
+
+
+
+<p>宣告變數的方法有</p>
+
+
+
+<ul><li>let</li><li>const</li><li>var</li></ul>
+
+
+
+<pre class="wp-block-code"><code>// 舉例
+// let 變數名稱 = value;
+// let a = 1;
+
+// 講解
+// 宣告一個變數，變數名稱為 a，並賦予值為 1
+// 可修改：變數名稱 a、值 1
+// 不可修改：宣告變數 let、賦予值 =
+// ;是中斷程式碼，進行下一個程式碼的意思。</code></pre>
+
+
+
+<p>Google Console</p>
+
+
+
+<pre class="wp-block-code"><code>> let a = 1;
+&lt; undefined
+> a
+&lt; 1
+> let bananaPrice = 79;
+&lt; undefined
+> bananaPrice
+&lt; 79
+> a
+&lt; 1
+> let b = 3;
+&lt; undefined
+> b
+&lt; 3</code></pre>
+
+
+
+<h3>設定變數，如同在 excel 設定欄位般容易</h3>
+
+
+
+<p>Google Console – 分頁1</p>
+
+
+
+<pre class="wp-block-code"><code>> let a = 1;
+&lt; undefined
+> let b = 3;
+&lt; undefined
+> a
+&lt; 1
+> b
+&lt; 3</code></pre>
+
+
+
+<p>Google Console – 分頁2</p>
+
+
+
+<pre class="wp-block-code"><code>> a
+x Uncaught ReferenceError: a is not defined at &lt;anonymous>:1:1
+> b
+x Uncaught ReferenceError: b is not defined at &lt;anonymous>:1:1</code></pre>
+
+
+
+<p>跨頁面、同頁面的記憶體存放的機制<br>觀念：新的分頁是獨立的頁面，JavaScript 程式碼不會共享到其他頁面，自己本身有自己的記憶體空間去做存放。<br><br>情況：頁面重新整理的話，記憶體空間會被清除。<br><br>自訂及管理 Google Chrome → 更多工具 → 工作管理員，<br>右鍵可以勾選 JavaScript 記憶體使用量。<br>變數是存放在瀏覽器記憶體上面。</p>
+
+
+
+<h3>number 型別 – 讓您擁有簡易計算機功能</h3>
+
+
+
+<p>Google Console</p>
+
+
+
+<pre class="wp-block-code"><code>> 30*8
+&lt; 240
+> 1+5
+&lt; 6
+> 5-4
+&lt; 1
+> 4/2
+&lt; 2
+> 20%2
+&lt; 0
+> 5**2
+&lt; 25
+> 5**3
+&lt; 125</code></pre>
+
+
+
+<pre class="wp-block-code"><code>> 3+2*2
+&lt; 7
+> 
+// 上面的7不會在變數和值有資料
+> let a = 1;
+&lt; undefined
+> let b = 2+2+2;
+&lt; undefined
+> b
+&lt; 6
+> a*b
+&lt; 6
+> let c = 3;
+&lt; undefined
+> b*c
+&lt; 18
+> let d = 2*3
+&lt; undefined
+> d
+&lt; 6
+></code></pre>
+
+
+
+<table class="wp-block-table"><tbody><tr><td>變數</td><td>值</td></tr><tr><td>a</td><td>1</td></tr><tr><td>b</td><td>6</td></tr><tr><td>c</td><td>3</td></tr><tr><td>d</td><td>6</td></tr></tbody></table>
+
+
+
+<h3>number 型別 – 各種數字的支援程度大解密</h3>
+
+
+
+<p>Google Console</p>
+
+
+
+<pre class="wp-block-code"><code>> let a = 1;
+&lt; undefined
+> let b = -3;
+&lt; undefined
+> b
+&lt; -3
+> let c = 1.1314
+&lt; undefined
+> c
+&lt; 1.1314
+> typeof a
+&lt; "number"
+> typeof b
+&lt; "number"
+> typeof c
+&lt; "number"
+></code></pre>
+
+
+
+<table class="wp-block-table"><tbody><tr><td>變數</td><td>值</td></tr><tr><td>a</td><td>1</td></tr><tr><td>b</td><td>-3</td></tr><tr><td>c</td><td>1.1314</td></tr></tbody></table>
+
+
+
+<h3>number 型別 – 變數如何帶變數</h3>
+
+
+
+<p>模擬情境：幫小明算術<br>小明去了超商，想到母親要他幫忙買牛奶<br>1.小明來到冰櫃，看到牛奶一瓶30元<br>2.他買了 6 罐<br>3.小明開始心算總共多少錢？</p>
+
+
+
+<p>學程式 任務拆解</p>
+
+
+
+<p>變數名稱命名 milkPrice – 小駝峰命名。</p>
+
+
+
+<p>Google Console</p>
+
+
+
+<pre class="wp-block-code"><code>> let milkPrice = 30;
+&lt; undefined
+> let milkNum = 6;
+&lt; undefined
+> milkPrice*milkNum
+&lt; 180
+> let total = milkPrice*milkNum;
+&lt; undefined
+> total
+&lt; 180
+></code></pre>
+
+
+
+<table class="wp-block-table"><tbody><tr><td>變數</td><td>值</td></tr><tr><td>milkPrice</td><td>30</td></tr><tr><td>milkNum</td><td>6</td></tr><tr><td>total</td><td>milkPrice*milkNum</td></tr></tbody></table>
+
+
+
+<p>觀念：變數賦予值也可以拿變數*變數的方式來做相乘。</p>
+
+
+
+<h2>let、const、var 介紹</h2>
+
+
+
+<h3>let 變數詳細介紹</h3>
+
+
+
+<p>Google Console</p>
+
+
+
+<pre class="wp-block-code"><code>> let cokePrice = 20;
+&lt; undefined
+> cokePrcie
+&lt; 20
+> cokePrice = 40;
+&lt; 40
+> cokePrice
+&lt; 40
+></code></pre>
+
+
+
+<pre class="wp-block-code"><code>> let a = 1;
+&lt; undefined
+> a = 3;
+&lt; 3
+> a
+&lt; 3</code></pre>
+
+
+
+<table class="wp-block-table"><tbody><tr><td>變數</td><td>值</td></tr><tr><td>cokePrice</td><td>40</td></tr><tr><td>a</td><td>3</td></tr></tbody></table>
+
+
+
+<p>let 可以複寫、修改既有 value 的值。</p>
+
+
+
+<h3>const 詳細介紹</h3>
+
+
+
+<p>Google Console</p>
+
+
+
+<pre class="wp-block-code"><code>> let a = 1;
+&lt; undefined
+> const b = 1;
+&lt; undefined
+> a
+&lt; 1
+> b
+&lt; 1
+> a=2;
+&lt; 2
+> a
+&lt; 2
+> b=3;
+x Uncaught TypeError: Assignment to constant variable.
+  at &lt;anonymous>:1:2
+> b
+&lt; 1
+></code></pre>
+
+
+
+<table class="wp-block-table"><tbody><tr><td>變數</td><td>值</td></tr><tr><td>a</td><td>2</td></tr><tr><td>b</td><td>1</td></tr></tbody></table>
+
+
+
+<pre class="wp-block-code"><code>> let cloud = 3;
+&lt; undefined
+> cloud = 8;
+&lt; 8
+> cloud
+&lt; 8
+> const sunNum = 1;
+&lt; undefined
+> sunNum=2;
+x Uncaught TypeError: Assignment to constant variable.
+  at &lt;anonymous>:1:7</code></pre>
+
+
+
+<pre class="wp-block-code"><code>> const sale = 0.7
+&lt; undefined
+> const hatPrice = 100;
+&lt; undefined
+> let hatNum = 3;
+&lt; undefined
+> let total = sale*hatPrice*hatNum;
+&lt; undefined
+> total
+&lt; 210
+></code></pre>
+
+
+
+<table class="wp-block-table"><tbody><tr><td>變數</td><td>值</td></tr><tr><td>sale</td><td>0.7</td></tr><tr><td>hatPrice</td><td>100</td></tr><tr><td>hatNum</td><td>3</td></tr><tr><td>total</td><td>210</td></tr></tbody></table>
+
+
+
+<pre class="wp-block-code"><code>> hatNum = 10;
+&lt; 10
+> total = sale*hatPrice*hatNum;
+&lt; 700
+></code></pre>
+
+
+
+<table class="wp-block-table"><tbody><tr><td>變數</td><td>值</td></tr><tr><td>sale</td><td>0.7</td></tr><tr><td>hatPrice</td><td>100</td></tr><tr><td>hatNum</td><td>10</td></tr><tr><td>total</td><td>700</td></tr></tbody></table>
+
+
+
+<h4>let、const 差異</h4>
+
+
+
+<p>let 裡面的 value 是可以被修改、被複寫，<br>const 是難被修改、被複寫，基本上是不能的。</p>
+
+
+
+<p>數值一直在更動適合用 let，<br>數值比較不常在更動建議使用 const。</p>
+
+
+
+<p>回顧：const 無法去做修改，let 是可以被修改。</p>
+
+
+
+<pre class="wp-block-code"><code>> const e = 1;
+&lt; undefined
+> e = 3
+x Uncaught TypeError: Assignment to constant variable.
+  at &lt;anonymous>:1:2
+> let k = 3;
+&lt; undefined
+> k = 4
+&lt; 4
+> k
+&lt; 4
+></code></pre>
+
+
+
+<h3>var 歷史的眼淚詳細介紹</h3>
+
+
+
+<p>Google Console</p>
+
+
+
+<pre class="wp-block-code"><code>> var a = 1;
+&lt; undefined
+> a = 3;
+&lt; 3
+> a
+&lt; 3
+></code></pre>
+
+
+
+<p>小結論：現在不太建議使用 var。<br>因為 var 會造成一些奇怪的問題。<br>現在主流來說，只要去學 let、const 就好。</p>
+
+
+
+<p><a rel="noreferrer noopener" href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types" target="_blank">JavaScript 變數</a>、<a rel="noreferrer noopener" href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types#%E5%AE%A3%E5%91%8A%EF%BC%88declarations%EF%BC%89" target="_blank">JavaScript 宣告變數</a></p>
+
+
+
+<p><a rel="noreferrer noopener" href="https://caniuse.com/" target="_blank">Can I use?</a>&nbsp;– javascript var、let、const</p>
+
+
+
+<h3>宣告變數一次讓你知！</h3>
+
+
+
+<p>宣告變數的特性。</p>
+
+
+
+<p>Google Console</p>
+
+
+
+<pre class="wp-block-code"><code>> let a = 1;
+&lt; undefined
+> a
+&lt; 1
+> let const = 1;
+x Uncaught SyntaxError: Unexpected token 'const'
+> let b333 = 3;
+&lt; undefined
+> let 1qqq = 4;
+x Uncaught SyntaxError: Invalid or unexpected token
+> let catNum = 1;
+&lt; undefined
+> let catnum = 2;
+&lt; undefined
+> catNum
+&lt; 1
+> catnum
+&lt; 2
+> let 貓咪數量 = 3;
+&lt; undefined
+> 貓咪數量
+&lt; 3
+> let _a = 3;
+&lt; undefineds
+> _a
+&lt; 3
+> let $qq = 1;
+&lt; undefined
+> $qq
+&lt; 1
+> let if = 3;
+x Uncaught SyntaxError: Unexpected token 'if'
+> let true = 3;
+x Uncaught SyntaxError: Unexpected token 'true'
+> let var = 1;
+x Uncaught SyntaxError: Unexpected token 'var'
+></code></pre>
+
+
+
+<table class="wp-block-table"><tbody><tr><td>變數</td><td>值</td></tr><tr><td>a</td><td>1</td></tr><tr><td>b333</td><td>3</td></tr><tr><td>catNum</td><td>1</td></tr><tr><td>catnum</td><td>2</td></tr></tbody></table>
+
+
+
+<p>變數開頭不能是數字、<a rel="noreferrer noopener" href="https://www.w3schools.com/js/js_reserved.asp" target="_blank">關鍵字、保留字</a>。</p>
+
+
+
+<h2>網頁與 Code 環境建立流程教學</h2>
+
+
+
+<h3>VSCode 撰寫 JS 環境建立</h3>
+
+
+
+<h4>流程</h4>
+
+
+
+<figure class="wp-block-image"><img src="https://wp-blogtoshare.000webhostapp.com/wp-content/uploads/2021/02/JavaScript%E7%92%B0%E5%A2%83%E5%BB%BA%E7%AB%8B%E6%B5%81%E7%A8%8B-1.png" alt="" class="wp-image-4166"/></figure>
+
+
+
+<ol><li>新增一個資料夾 project</li><li>拖曳拉到 VSCode 開啟</li><li>新增檔案<ul><li>File → New File</li><li>點擊畫面兩下</li></ul></li><li>儲存檔案 index.html</li><li>建立網頁環境 ! + tab 或 ! + enter</li><li>輸入 h1 標籤 標題</li><li>開啟 index.html 確認是否可以正常運行</li><li>新增 all.js 檔案</li><li>查看 project 是否有 index.html、all.js 兩個檔案</li><li>在 index.html 載入 all.js 後儲存檔案</li><li>在 all.js 新增 let c = 3; 後儲存檔案</li><li>重新整理網頁記憶體才會重新寫入</li></ol>
+
+
+
+<p>index.html</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+    &lt;title>Document&lt;/title>
+    &lt;script src="all.js">&lt;/script>
+&lt;/head>
+&lt;body>
+    &lt;h1>標題&lt;/h1>
+&lt;/body>
+&lt;/html></code></pre>
+
+
+
+<p>all.js</p>
+
+
+
+<pre class="wp-block-code"><code>let a = 1;
+let b = 2;</code></pre>
+
+
+
+<p>Google Console</p>
+
+
+
+<pre class="wp-block-code"><code>> a
+&lt; 1
+> b
+&lt; 2
+> c
+&lt; 3
+></code></pre>
+
+
+
+<h3>console.log 印出你想顯示的資訊！</h3>
+
+
+
+<ul><li>alert</li><li>console.log</li></ul>
+
+
+
+<p>all.js</p>
+
+
+
+<pre class="wp-block-code"><code>let a = 1;
+let b = 2;
+alert(a);
+console.log(a);
+console.log(b);
+console.log(a,b);</code></pre>
+
+
+
+<h3>如何撰寫優雅的註解</h3>
+
+
+
+<p>all.js</p>
+
+
+
+<pre class="wp-block-code"><code>// a玩家的得分
+let a = 1;
+console.log(a);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 想知道自己還剩下幾根薯條
+// 紀錄薯條的根數
+let num = 0;
+// 紀錄屬薯條的過程
+num+=1;
+num+=1;
+num+=2;
+num+=2;
+// 顯示最後薯條的數量
+console.log(num);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 想知道自己還剩下幾根薯條
+let friesNum = 0;
+// 紀錄數薯條的過程
+friesNum+=1;
+friesNum+=1;
+friesNum+=2;
+friesNum+=2;
+
+console.log(friesNum);</code></pre>
+
+
+
+<h3>Codepen – 透過它來提交您的程式碼</h3>
+
+
+
+<p><a rel="noreferrer noopener" href="https://codepen.io/" target="_blank">Codepen</a></p>
+
+
+
+<h4>流程</h4>
+
+
+
+<ol><li>Google 搜尋 Codepen</li><li>註冊 Codepen 並登入</li><li>Create Pen</li><li>HTML、CSS、JS 程式碼去撰寫</li><li>Save 程式馬存檔</li><li>產生網址，可以用來作業來提交</li><li>沒辦法直接去修改別人程式碼，使用 Fork 複製到自己的 Codepen</li></ol>
+
+
+
+<h4>練習</h4>
+
+
+
+<ol><li>新增一個 Codepen</li><li>新增第二個 Codepen，要確保兩個 Codepen 網址不同</li></ol>
+
+
+
+<h2>數字型別與賦值運算子</h2>
+
+
+
+<h3>賦值運算子 +=、-=</h3>
+
+
+
+<p>all.js</p>
+
+
+
+<pre class="wp-block-code"><code>let a = 50;
+a = a+200;
+a = a+150;
+
+console.log(a);</code></pre>
+
+
+
+<p>Google Console</p>
+
+
+
+<pre class="wp-block-code"><code>400
+></code></pre>
+
+
+
+<table class="wp-block-table"><tbody><tr><td>變數</td><td>值</td><td>過程</td></tr><tr><td>a</td><td>50</td><td>a = 50</td></tr><tr><td>a</td><td>250</td><td>a + 200</td></tr><tr><td>a</td><td>400</td><td>a + 150</td></tr></tbody></table>
+
+
+
+<h4>縮寫寫法</h4>
+
+
+
+<p>all.js</p>
+
+
+
+<pre class="wp-block-code"><code>let a = 50;
+a = a+10;
+a+=10;
+a-=10;
+a = a-10;
+
+console.log(a);</code></pre>
+
+
+
+<p>Google Console</p>
+
+
+
+<pre class="wp-block-code"><code>50
+></code></pre>
+
+
+
+<table class="wp-block-table"><tbody><tr><td>變數</td><td>值</td><td>過程</td></tr><tr><td>a</td><td>50</td><td>a = 50</td></tr><tr><td>a</td><td>60</td><td>a + 10</td></tr><tr><td>a</td><td>70</td><td>a += 10</td></tr><tr><td>a</td><td>60</td><td>a -= 10</td></tr><tr><td>a</td><td>50</td><td>a – 10</td></tr></tbody></table>
+
+
+
+<h3>a++、a– 一次搞懂</h3>
+
+
+
+<ul><li>a++ = a+=1，累加 1</li><li>a– = a-=1，累減 1</li></ul>
+
+
+
+<h4>數字的處理方式 桌球</h4>
+
+
+
+<p>all.js</p>
+
+
+
+<pre class="wp-block-code"><code>let a = 0;
+let b = 0;
+
+a++;
+a++;
+a++;
+b++;
+
+console.log(a,b);</code></pre>
+
+
+
+<p>Google Console</p>
+
+
+
+<pre class="wp-block-code"><code>3 1
+></code></pre>
+
+
+
+<table class="wp-block-table"><tbody><tr><td>變數</td><td>值</td></tr><tr><td>a</td><td>3</td></tr><tr><td>b</td><td>1</td></tr></tbody></table>
+
+
+
+<h2>字串型別</h2>
+
+
+
+<h3>宣告字串流程</h3>
+
+
+
+<p>all.js</p>
+
+
+
+<pre class="wp-block-code"><code>let a = 'hello';
+let b = "你好嗎？";
+let c = "Let's go!!";
+console.log(a,b);
+console.log(c);</code></pre>
+
+
+
+<p>Google Console</p>
+
+
+
+<pre class="wp-block-code"><code>hello 你好嗎？
+Let's go!!
+></code></pre>
+
+
+
+<table class="wp-block-table"><tbody><tr><td>變數</td><td>值</td></tr><tr><td>a</td><td>hello</td></tr><tr><td>b</td><td>你好嗎？</td></tr><tr><td>c</td><td>Let’s go!!</td></tr></tbody></table>
+
+
+
+<p>字串要加上單引號’ ‘或是雙引號” “，<br>單引號、雙引號是成對的，<br>單一單引號、雙引號混用會出現錯誤。<br>字串本身有單引號，那就在外面使用雙引號。</p>
+
+
+
+<h3>一次搞懂字串相加</h3>
+
+
+
+<p>all.js</p>
+
+
+
+<pre class="wp-block-code"><code>let a = 'hello '+'你好嗎？';
+console.log(a);
+let friendName = 'Tom';
+let content = '你好嗎？';
+console.log(friendName+' '+content);
+let total = friendName + ' ' + content;
+console.log(total);</code></pre>
+
+
+
+<p>Google Console</p>
+
+
+
+<pre class="wp-block-code"><code>hello 你好嗎？
+Tom 你好嗎？
+></code></pre>
+
+
+
+<table class="wp-block-table"><tbody><tr><td>變數</td><td>值</td></tr><tr><td>a</td><td>hello</td></tr><tr><td>b</td><td>你好嗎？</td></tr><tr><td>friendName</td><td>Tom</td></tr><tr><td>content</td><td>你好嗎？</td></tr><tr><td>total</td><td>Tom 你好嗎？</td></tr></tbody></table>
+
+
+
+<h3>透過 typeof 瞭解當前變數型別</h3>
+
+
+
+<p>all.js</p>
+
+
+
+<pre class="wp-block-code"><code>let friendName = 'Tom';
+let content = '你好嗎？';
+let total = friendName + '  ' + content;
+let age = 18;
+let ageString = "18";
+console.log(typeof friendName);
+console.log(typeof age);
+console.log(typeof ageString);</code></pre>
+
+
+
+<p>Google Console</p>
+
+
+
+<pre class="wp-block-code"><code>string
+number
+string
+>  </code></pre>
+
+
+
+<table class="wp-block-table"><tbody><tr><td>變數</td><td>值</td><td>型別</td></tr><tr><td>friendName</td><td>Tom</td><td>string</td></tr><tr><td>content</td><td>你好嗎？</td><td>string</td></tr><tr><td>total</td><td>Tom 你好嗎？</td><td>string</td></tr><tr><td>age</td><td>18</td><td>number</td></tr><tr><td>ageString</td><td>18</td><td>string</td></tr></tbody></table>
+
+
+
+<h3>數字與字串相加</h3>
+
+
+
+<h4>自動轉型</h4>
+
+
+
+<p>all.js</p>
+
+
+
+<pre class="wp-block-code"><code>let myName = 'Tom';
+let age = 18;
+let total = myName + age;
+console.log(myName+age);
+console.log(total);
+console.log(typeof total);
+console.log("hi 我是"+myName+"，我今年18歲");
+console.log("hi 我是"+myName+"，我今年"+age+"歲");</code></pre>
+
+
+
+<p>Google Console</p>
+
+
+
+<pre class="wp-block-code"><code>Tom18
+Tom18
+string
+hi 我是Tom，我今年18歲
+hi 我是Tom，我今年18歲
+></code></pre>
+
+
+
+<table class="wp-block-table"><tbody><tr><td>變數</td><td>值</td></tr><tr><td>myName</td><td>Tom</td></tr><tr><td>age</td><td>18</td></tr><tr><td>total</td><td>Tom18</td></tr></tbody></table>
+
+
+
+<p>JavaScript 有些情況下會幫你轉型別。<br>數字自動轉型成字串。</p>
+
+
+
+<h5>練習</h5>
+
+
+
+<p>我體重 55 公斤，我是小美</p>
+
+
+
+<p>all.js</p>
+
+
+
+<pre class="wp-block-code"><code>let myName = '小美';
+let weight = '55';
+let total = myName + weight;
+console.log(typeof total);
+console.log("我體重"+weight+"公斤，我是"+myName);</code></pre>
+
+
+
+<p>Google Console</p>
+
+
+
+<pre class="wp-block-code"><code>string
+我體重55公斤，我是小美
+></code></pre>
+
+
+
+<table class="wp-block-table"><tbody><tr><td>變數</td><td>值</td></tr><tr><td>myName</td><td>小美</td></tr><tr><td>weight</td><td>55</td></tr></tbody></table>
+
+
+
+<h3>NaN 產生時機</h3>
+
+
+
+<h4>NaN 非數字</h4>
+
+
+
+<p>all.js</p>
+
+
+
+<pre class="wp-block-code"><code>let myName = 'Tom';
+let age = 20;
+let total = myName * age;
+let age2 = "30";
+let age3 = parseInt("30");
+let content = parseInt("hello");
+console.log(total);
+console.log(typeof total);
+console.log(typeof age2);
+console.log(typeof age3);
+console.log(content);
+console.log(typeof content);</code></pre>
+
+
+
+<p>Google Console</p>
+
+
+
+<pre class="wp-block-code"><code>NaN
+number
+string
+number
+NaN
+number
+></code></pre>
+
+
+
+<p>為什麼會講到這個，<br>因為有時候透過網頁取值，<br>會取到字串，<br>需要轉型成數字，<br>才能去做數字加總使用。</p>
+
+
+
+<h3>字串處理實用方法</h3>
+
+
+
+<ul><li>length</li><li>trim()</li></ul>
+
+
+
+<p>all.js</p>
+
+
+
+<pre class="wp-block-code"><code>let myName = 'Tom';
+let age = 20;
+
+// 字串的處理方式、方法
+// JS 本身有很多語法
+</code></pre>
+
+
+
+<p>Google Console</p>
+
+
+
+<pre class="wp-block-code"><code>> let a = 'mark';
+&lt; undefined
+> typeof a
+&lt; "string"
+> // 字元數
+> a.length
+&lt; 4
+> let b ="1234567890";
+&lt; "1234567890"
+> b.length;
+&lt; 10
+> let c = "你好嗎";
+&lt; "你好嗎"
+> c.length;
+&lt; 3
+> let yourName =" Mark ";
+&lt; undefined
+> yourName.length
+&lt; 6
+> yourName
+&lt; " Mark "
+> yourName.trim();
+&lt; "Mark"
+> let myEmail ="  myEmail@gmail.com";
+&lt; undefined
+> myEmail
+&lt; "  myEmail@gmail.com"
+> myEmail.trim();
+&lt; "myEmail@gmail.com"
+></code></pre>
+
+
+
+<p>trim() 常用在填寫帳號上刪除字串前後的空白字元。</p>
+
+
+
+<h3>變數記憶體指向講解</h3>
+
+
+
+<h4>value 資料指向</h4>
+
+
+
+<p>all.js</p>
+
+
+
+<pre class="wp-block-code"><code>let myEmail = 'Tom';
+myEmail.length;
+
+console.log(myEmail);</code></pre>
+
+
+
+<p>Google Console</p>
+
+
+
+<pre class="wp-block-code"><code>Tom
+></code></pre>
+
+
+
+<table class="wp-block-table"><tbody><tr><td>變數</td><td>值</td></tr><tr><td>myEmail</td><td>Tom</td></tr></tbody></table>
+
+
+
+<p>all.js</p>
+
+
+
+<pre class="wp-block-code"><code>let myEmail = '  Tom  ';
+let nameLength = myEmail.length;
+let updateEmail = myEmail.trim();
+
+console.log(myEmail);
+console.log(updateEmail);
+console.log(nameLength);</code></pre>
+
+
+
+<p>Google Console</p>
+
+
+
+<pre class="wp-block-code"><code>  Tom  
+Tom
+7
+></code></pre>
+
+
+
+<table class="wp-block-table"><tbody><tr><td>變數</td><td>值</td></tr><tr><td>myEmail</td><td>Tom</td></tr><tr><td>updateEmail</td><td>Tom</td></tr><tr><td>nameLength</td><td>7</td></tr></tbody></table>
+
+
+
+<p>特別注意的是，直接寫 myEmail.trim();，並沒有賦予到新的變數上，他無法去取得修改後的結果。</p>
+
+
+
+<p>all.js</p>
+
+
+
+<pre class="wp-block-code"><code>let myEmail = '  Tom  ';
+myEmail = myEmail.trim();
+console.log(myEmail);</code></pre>
+
+
+
+<p>Google Console</p>
+
+
+
+<pre class="wp-block-code"><code>Tom
+> myEmail.length;
+&lt; 3
+></code></pre>
+
+
+
+<table class="wp-block-table"><tbody><tr><td>變數</td><td>值</td></tr><tr><td>myEmail</td><td>Tom</td></tr><tr><td>nameLength</td><td>3</td></tr></tbody></table>
+
+
+
+<h3>樣板字面值教學</h3>
+
+
+
+<p>all.js</p>
+
+
+
+<pre class="wp-block-code"><code>let myName = "Tom";
+let myAge = 18;
+let content = "您好我是"+myName+"我今年"+myAge+"歲";
+
+console.log(content);
+
+// 樣板字面值 (Template literals)
+// ES6 語法
+let content2 = `您好我是${myName}，我今年${myAge}歲`;
+console.log(content2);</code></pre>
+
+
+
+<p>Google Console</p>
+
+
+
+<pre class="wp-block-code"><code>您好我是Tom我今年18歲
+您好我是Tom我今年18歲
+></code></pre>
+
+
+
+<h2>變數：布林、undefined、null</h2>
+
+
+
+<h3>布林介紹</h3>
+
+
+
+<ul><li>true</li><li>false</li></ul>
+
+
+
+<p>all.js</p>
+
+
+
+<pre class="wp-block-code"><code>let a = 1;
+console.log(a);
+console.log(typeof a);
+
+let str = 'hello';
+console.log(str);
+
+let isWakeUp = true;
+console.log(isWakeUp);
+console.log(typeof isWakeUp);
+// 電腦不知道，你要告訴電腦
+// 情境題
+// 小明吃過飯了嗎？
+// 是否為 VIP 資格
+console.log(2>1);
+console.log(2>3);</code></pre>
+
+
+
+<p>Google Console</p>
+
+
+
+<pre class="wp-block-code"><code>1
+number
+hello
+true
+boolean
+true
+false
+></code></pre>
+
+
+
+<h3>undefined 介紹</h3>
+
+
+
+<p>原始型別</p>
+
+
+
+<ul><li>字串</li><li>數字</li><li>布林</li><li>undefined</li><li>null</li></ul>
+
+
+
+<p>all.js</p>
+
+
+
+<pre class="wp-block-code"><code>let a = 1;
+let b;
+console.log(a);
+console.log(b);
+console.log(typeof b);
+
+// undefined
+// 尚未被賦予值</code></pre>
+
+
+
+<p>Google Console</p>
+
+
+
+<pre class="wp-block-code"><code>1
+undefined
+undefined
+></code></pre>
+
+
+
+<table class="wp-block-table"><tbody><tr><td>變數</td><td>值</td></tr><tr><td>a</td><td>1</td></tr><tr><td>b</td><td>undefined</td></tr></tbody></table>
+
+
+
+<p>undefined 常見、實用。</p>
+
+
+
+<h3>null 介紹</h3>
+
+
+
+<p>all.js</p>
+
+
+
+<pre class="wp-block-code"><code>// null
+let b = 1;
+let c = null;
+let d = 1234;
+d = null;
+console.log(c);
+console.log(d);
+
+// null
+// 有被賦予值，是告知為空值。</code></pre>
+
+
+
+<p>Google Console</p>
+
+
+
+<pre class="wp-block-code"><code>null
+null
+></code></pre>
+
+
+
+<table class="wp-block-table"><tbody><tr><td>變數</td><td>值</td><td></td></tr><tr><td>b</td><td>1</td><td></td></tr><tr><td>c</td><td>null</td><td>記憶體釋放空間</td></tr><tr><td>d</td><td>null</td><td>記憶體釋放空間</td></tr></tbody></table>
+
+
+
+<p>陣列物件，組合資料，放大量的資料在變數上，會暫存在記憶體上。</p>
+
+
+
+<p>03:53 說明為，一開始 a 變數會指向到 undefined 記憶體上，此時該變數的值並未賦予型別，例如：string、number。</p>
+
+
+
+<p>undefined、null – 面試常考題。</p>
+
+
+
+<h3>字串轉數字方法</h3>
+
+
+
+<p>all.js</p>
+
+
+
+<pre class="wp-block-code"><code>let a = "1";
+// 字串轉型成數字
+a = parseInt(a);
+console.log(a+1);</code></pre>
+
+
+
+<p>Google Console</p>
+
+
+
+<pre class="wp-block-code"><code>2
+></code></pre>
+
+
+
+<h4>什麼情況下會取出字串？</h4>
+
+
+
+<p>從表單文字欄位取出的值都是字串。</p>
+
+
+
+<h3>數字轉字串方法</h3>
+
+
+
+<p>all.js</p>
+
+
+
+<pre class="wp-block-code"><code>let b = 1;
+b = b.toString();
+// b 的值，處理過後的回傳結果
+console.log(typeof b);
+console.log(b+1);
+
+// 大樂透號碼
+// 電話區碼 "07"+"1234577"</code></pre>
+
+
+
+<p>Google Console</p>
+
+
+
+<pre class="wp-block-code"><code>string
+11
+></code></pre>
+
+
+
+<h2>比較與邏輯運算子</h2>
+
+
+
+<h3>比較與邏輯運算子簡介</h3>
+
+
+
+<p><a rel="noreferrer noopener" href="https://whimsical.com/4oYtsHWjADWsieeNrjY1Xa" target="_blank">流程判斷</a></p>
+
+
+
+<ol><li>任務拆解</li><li>流程設計</li></ol>
+
+
+
+<p>經由流程判斷反覆練習，產生程式邏輯思維、運算思維。</p>
+
+
+
+<h3>比較運算子：&gt;、=、&lt;=</h3>
+
+
+
+<p>all.js</p>
+
+
+
+<pre class="wp-block-code"><code>// > &lt; >= &lt;= == !=
+
+console.log(3>2);
+console.log(4&lt;1);
+console.log(36.3>=37.5);
+console.log(37.5>=37.5);
+console.log(1==1);
+console.log("hi"=="hi");
+console.log(true==true);
+console.log(1 != 1);</code></pre>
+
+
+
+<p>Google Console</p>
+
+
+
+<pre class="wp-block-code"><code>true
+false
+false
+true
+true
+true
+true
+false
+></code></pre>
+
+
+
+<h3>比較運算子搭配變數方法</h3>
+
+
+
+<p>all.js</p>
+
+
+
+<pre class="wp-block-code"><code>// > &lt; >= &lt;= == !=
+// 比較運算子，利用變數來比較
+
+let a = 2;
+let b = 3;
+console.log(a>b);
+console.log((a+b)>1);
+
+let c = 4;
+let d = 3;
+console.log(c==d);
+
+let e = 8;
+let f = 5;
+console.log(f>=e);
+console.log(f!=e);
+
+let k = 2>1;
+console.log(k);
+let isWakeUp = false;
+console.log(isWakeUp);</code></pre>
+
+
+
+<p>Google Console</p>
+
+
+
+<pre class="wp-block-code"><code>false
+true
+false
+false
+true
+true
+false
+></code></pre>
+
+
+
+<table class="wp-block-table"><tbody><tr><td>變數</td><td>值</td></tr><tr><td>k</td><td>true</td></tr></tbody></table>
+
+
+
+<h3>=、== 差異講解</h3>
+
+
+
+<p>all.js</p>
+
+
+
+<pre class="wp-block-code"><code>// = ==
+
+// 一個 = 賦予值的意思
+let a = 1;
+
+// 兩個 == 比較運算子
+let b = 2;
+console.log(a==b);
+console.log(a!=b);</code></pre>
+
+
+
+<p>Google Console</p>
+
+
+
+<pre class="wp-block-code"><code>false
+true
+></code></pre>
+
+
+
+<table class="wp-block-table"><tbody><tr><td>變數</td><td>值</td></tr><tr><td>a</td><td>1</td></tr></tbody></table>
+
+
+
+<h3>==、=== 差異講解</h3>
+
+
+
+<p>all.js</p>
+
+
+
+<pre class="wp-block-code"><code>let a = 1;
+let b = "1";
+let c = 1;
+let d = "2";
+// 兩個等於，協助轉型
+console.log(a==b);
+console.log(c!=d);
+console.log(a!=b);
+
+// === 嚴謹模式
+// 三個等於，會比較也會看型別
+console.log(a===b);
+console.log(c!==d);
+console.log(a!==b);</code></pre>
+
+
+
+<p>Google Console</p>
+
+
+
+<pre class="wp-block-code"><code>true
+true
+false
+false
+true
+true
+></code></pre>
+
+
+
+<p>==、=== – 面試小題目。</p>
+
+
+
+<h3>邏輯運算子介紹</h3>
+
+
+
+<p>all.js</p>
+
+
+
+<pre class="wp-block-code"><code>// 邏輯運算子 &amp;&amp; ||
+// 同時滿足條件、滿足其中一個條件
+
+let a = 1;
+let b = 2;
+console.log(a == 1 &amp;&amp; b == 2);
+console.log(a == 2 &amp;&amp; b == 2);
+// 餐廳情境題
+// VIP、消費500，這兩個都要滿足才送贈品。
+
+let c = 3;
+let d = 4;
+console.log(c==4 || d==4);
+console.log(c==5 || d==8);</code></pre>
+
+
+
+<p>Google Console</p>
+
+
+
+<pre class="wp-block-code"><code>true
+false
+true
+false
+></code></pre>
+
+
+
+<h3>邏輯運算子增加多條件作法</h3>
+
+
+
+<p>all.js</p>
+
+
+
+<pre class="wp-block-code"><code>// &amp;&amp; 練習 and
+// 符合贈禮條件
+// 必須同時符合以下兩個條件才贈禮
+// 消費滿 500(含)
+// 是 VIP 條件
+// 買到蛋糕，指定商品
+
+let a = 600;
+let isVip = true;
+let buyCake = true;
+console.log(a >= 500 &amp;&amp; isVip==true &amp;&amp; buyCake==true);
+
+// || 練習 or
+// 小孩吃東西
+// 只要冰箱有米飯或蘋果或牛奶任一個，小朋友就願意進食
+
+let haveRice = false;
+let haveApple = true;
+let haveMilk = false;
+
+console.log(haveRice == true || haveApple == true || haveMilk==true);</code></pre>
+
+
+
+<p>Google Console</p>
+
+
+
+<pre class="wp-block-code"><code>true
+true
+></code></pre>
+
+
+
+<h3>邏輯運算子範例情境</h3>
+
+
+
+<p>all.js</p>
+
+
+
+<pre class="wp-block-code"><code>// &amp;&amp; 練習 and
+// 符合贈禮條件
+// 必須同時符合以下兩個條件才贈禮
+// 消費滿 500(含)
+// 是 VIP 條件
+
+let a = 600;
+let isVip = true;
+console.log(a>=500 &amp;&amp; isVip==true);
+
+// || 練習 or
+// 小孩吃東西
+// 只要冰箱有米飯或蘋果任一個，小朋友就願意進食
+
+let haveRice = true;
+let haveApple = false;
+
+console.log(haveRice == true || haveApple == true);</code></pre>
+
+
+
+<p>Google Console</p>
+
+
+
+<pre class="wp-block-code"><code>true
+true
+></code></pre>
+
+
+
+<h2>流程判斷 – if、else if、else</h2>
+
+
+
+<h3>為什麼要理解流程判斷？</h3>
+
+
+
+<p>all.js</p>
+
+
+
+<pre class="wp-block-code"><code>// 小美在氣溫 15 度以下時一定會穿上她心愛的棉外套
+// 今天氣溫是 14 度，請試著用 if 來寫小美會寫如何行動
+
+// console.log("小美穿著外套出門了");
+
+let todayDegrees = 14;
+
+let isWearJacket = 15 >= todayDegrees;
+
+    // 條件式 true
+if (isWearJacket){
+  console.log("小美穿著外套");
+  console.log("她準備出門了");
+}
+</code></pre>
+
+
+
+<p>Google Console</p>
+
+
+
+<pre class="wp-block-code"><code>小美穿著外套出門了
+她準備出門了
+></code></pre>
+
+
+
+<h3>if、else、else if 講解</h3>
+
+
+
+<p>all.js</p>
+
+
+
+<pre class="wp-block-code"><code>// 小美在氣溫 15 度以下時一定會穿上她心愛的棉外套
+// 今天氣溫是 14 度，請試著用 if 來寫小美會如何行動
+
+// console.log("小美穿著外套出門了");
+
+let todayDegrees = 20;
+let isWearJacket = 15 >= todayDegrees;
+
+    // 條件式 true
+if (isWearJacket){
+  console.log("小美穿著外套");
+  console.log("她準備出門了");
+}else{
+  console.log("小美因為太熱，所以不穿外套了");
+}
+
+// 但他不確定錢包剩下多少錢
+// true 小明想要去外面吃飯，他很想吃牛肉麵，價格為110
+// false 於是他打開錢包前決定，錢不夠就回家吃飯
+
+let wallet = 130;
+// console.log(wallet >= 110);
+    // 條件式 true
+if(wallet>=110){
+  console.log("小明跑去吃牛肉麵了");
+}else{
+  console.log("小明錢不夠，跑回家吃飯了！");
+}</code></pre>
+
+
+
+<p>Google Console</p>
+
+
+
+<pre class="wp-block-code"><code>小美因為太熱，所以不穿外套了
+小明跑去吃牛肉麵了
+></code></pre>
+
+
+
+<h3>if 詳細講解 (一)</h3>
+
+
+
+<p>all.js</p>
+
+
+
+<pre class="wp-block-code"><code>// 但他不確定錢包剩下多少錢
+// true 小明想去外面吃，他很想吃牛肉麵，價格為110
+// 有 80 元，他就吃夜市牛排
+// 有 35 元，他就會跑去吃薯條
+// false 於是他打開錢包前決定，錢不夠就回家吃飯
+
+let wallet = 80;
+// console.log(wallet >= 110);
+if(wallet>=110){
+  console.log("小明跑去吃牛肉麵了");
+} else if (wallet >= 80){
+  console.log("小明跑去吃夜市牛排了");
+} else if (wallet >= 35){
+  console.log("小明跑去吃薯條了！")
+} else {
+  console.log("小明錢不夠，跑回家吃飯了！");
+}</code></pre>
+
+
+
+<p>Google Console</p>
+
+
+
+<pre class="wp-block-code"><code>小明跑去吃夜市牛排了
+></code></pre>
+
+
+
+<p>if、else 只有一組，else if 可以多組。</p>
+
+
+
+<h3>if 詳細講解 (二)</h3>
+
+
+
+<p>all.js</p>
+
+
+
+<pre class="wp-block-code"><code>// 小華他的習慣是
+// 1.如果沒有下雨，就不會帶雨具
+// 2.但如果下毛毛雨，他會帶輕便雨衣
+// 3.假使下普通的雨，他會帶折傘
+// 4.如果颱風天豪雨，他會帶長傘
+
+// 今天的天氣是毛毛雨，那小華會帶什麼雨具？
+
+let todayWeather = "天災";
+console.log(todayWeather == "毛毛雨");
+if (todayWeather=="沒有下雨"){
+  console.log("小華不帶雨具");
+} else if (todayWeather=="毛毛雨"){
+  console.log("帶了輕便雨衣")
+} else if (todayWeather=="普通的雨"){
+  console.log("帶了折傘");
+} else if (todayWeather=="颱風豪雨"){
+  console.log("帶長傘");
+} else {
+  console.log("小華遇到異常狀態");
+}
+
+console.log("小華出門了");
+</code></pre>
+
+
+
+<p>Google Console</p>
+
+
+
+<pre class="wp-block-code"><code>false
+小華遇到異常狀態
+小華出門了
+></code></pre>
+
+
+
+<p>寫程式碼時，一段一段的測試，以確保能正確執行，再寫下一段。</p>
+
+
+
+<p>if else 只能有一個，else if 可以多個，if 也可以不寫 else。</p>
+
+
+
+<h2>if 流程圖規劃流程</h2>
+
+
+
+<h3>if 圖表介紹</h3>
+
+
+
+<p><a rel="noreferrer noopener" href="https://whimsical.com/4oYtsHWjADWsieeNrjY1Xa" target="_blank">流程判斷</a></p>
+
+
+
+<ol><li>步驟一：任務拆解</li><li>步驟二：流程設計</li></ol>
+
+
+
+<h4>為什麼要教流程圖？</h4>
+
+
+
+<p>學了很多語法，自己做作業、作品、比較大的專案，腦袋一片空白，不知從何開始下手。<br>情境、解決的事情。</p>
+
+
+
+<h4>工具</h4>
+
+
+
+<ul><li>Whimsical</li><li>PPT</li></ul>
+
+
+
+<p>運算思維、程式邏輯培養</p>
+
+
+
+<h3>圖表服務註冊流程</h3>
+
+
+
+<p><a href="https://whimsical.com/" target="_blank" rel="noreferrer noopener">Whimsical</a></p>
+
+
+
+<h3>流程圖符號簡介</h3>
+
+
+
+<p><a href="https://zh.wikipedia.org/wiki/%E6%B5%81%E7%A8%8B%E5%9B%BE" target="_blank" rel="noreferrer noopener">流程圖 – 維基百科</a></p>
+
+
+
+<h3>流程圖 let code 講解</h3>
+
+
+
+<figure class="wp-block-image"><img src="https://wp-blogtoshare.000webhostapp.com/wp-content/uploads/2021/02/flowchart-1.png" alt="" class="wp-image-4352"/></figure>
+
+
+
+<p>all.js</p>
+
+
+
+<pre class="wp-block-code"><code>// 想查詢自己的錢包有多少錢
+
+// 小華他想出門，但他不確定自己的錢包有沒有錢
+// 於是他想打開錢包看看還有多少錢
+// 打開後，他發現有 150元，於是他就記錄在腦袋裡，他擁有 150 元
+
+let wallet = 0;
+
+wallet+=150;
+console.log(`小華錢包還有${wallet}元`);
+</code></pre>
+
+
+
+<p>Google Console</p>
+
+
+
+<pre class="wp-block-code"><code>小華錢包還有150元
+></code></pre>
+
+
+
+<h3>流程圖 if code 講解</h3>
+
+
+
+<figure class="wp-block-image"><img src="https://wp-blogtoshare.000webhostapp.com/wp-content/uploads/2021/02/flowchart-2.png" alt="" class="wp-image-4358"/></figure>
+
+
+
+<p>all.js</p>
+
+
+
+<pre class="wp-block-code"><code>// 想查詢自己的錢包剩下多少錢
+
+// 小華他想出門，但他不確定自己的錢包有沒有錢
+
+// 於是他想打開錢包看看還有多少錢
+
+// 如果小華發現自己有 100 元，他就吃 80 元牛肉麵
+// 如果沒有 100 元，就不吃任何東西，也不出門
+
+// 最後小華還想計算自己最後剩下多少元
+
+let wallet = 0;
+wallet+=150;
+if(wallet>=100){
+  wallet-=80;
+} else {
+  wallet-=0;
+}
+
+console.log(`小華錢包還有${wallet}元`);</code></pre>
+
+
+
+<p>Google Console</p>
+
+
+
+<pre class="wp-block-code"><code>小華錢包還有70元
+></code></pre>
+
+
+
+<p><a href="https://whimsical.com/4oYtsHWjADWsieeNrjY1Xa" target="_blank" rel="noreferrer noopener">流程判斷練習</a></p>
+
+</div><!-- .entry-content -->
+
+	
+	
+<footer class="entry-footer">
+
+	<div class="entry-footer-right">
+
+		
+	</div>
+
+	
+		
+		
+			<span class="cat-links">
+
+				發佈位置： <a href="https://geehsu.github.io/wordpress_blog/category/post/hexschool/" rel="category tag">六角學院</a>
+			</span>
+
+		
+		
+		
+	
+</footer><!-- .entry-footer -->
+
+	
+</article><!-- #post-## -->
+
+		
+	<nav class="navigation post-navigation" role="navigation">
+		<h2 class="screen-reader-text">文章導覽</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="https://geehsu.github.io/wordpress_blog/learninggit/" rel="prev">&larr; 掌握 Git 與 Github 版本控制</a></div></div>
+	</nav>
+		
+	
+	</main><!-- #main -->
+
+</div><!-- #primary -->
+
+
+<div id="secondary" class="widget-area" role="complementary">
+
+			<aside id="recent-posts-2" class="widget widget_recent_entries">		<h4 class="widget-title">近期文章</h4>		<ul>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/javascript-full-stack-training/">JavaScript 全端特訓營 (試聽版)</a>
+											<span class="post-date">2021 年 2 月 19 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/learninggit/">掌握 Git 與 Github 版本控制</a>
+											<span class="post-date">2021 年 1 月 13 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/flex-rwd/">伸縮自如的 RWD 排版術</a>
+											<span class="post-date">2021 年 1 月 4 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/js-novice-teaching-4/">AJAX 與資料處理</a>
+											<span class="post-date">2020 年 9 月 14 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/js-novice-teaching-3/">陣列與物件、FOREACH</a>
+											<span class="post-date">2020 年 9 月 14 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/js-novice-teaching-2/">DOM、FUNCTION 函式與監聽</a>
+											<span class="post-date">2020 年 9 月 14 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/js-novice-teaching-1/">JS 環境建立與變數</a>
+											<span class="post-date">2020 年 9 月 14 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/rwd-starttofinish/">RESPONSIVE BOOTSTRAP WEBSITE START TO FINISH WITH BOOTSTRAP 4, HTML5 &#038; CSS3</a>
+											<span class="post-date">2020 年 9 月 14 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/scrolltop/">SCROLLTOP – 滑動效果</a>
+											<span class="post-date">2020 年 9 月 14 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/easy-tutorials-01/">HOW TO MAKE A RESPONSIVE WEBSITE DESIGN USING HTML AND CSS STEP BY STEP TUTORIAL</a>
+											<span class="post-date">2020 年 9 月 14 日</span>
+									</li>
+					</ul>
+		</aside><aside id="archives-2" class="widget widget_archive"><h4 class="widget-title">彙整</h4>		<ul>
+				<li><a href='https://geehsu.github.io/wordpress_blog/2021/02/'>2021 年 2 月</a>&nbsp;(1)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2021/01/'>2021 年 1 月</a>&nbsp;(2)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2020/09/'>2020 年 9 月</a>&nbsp;(7)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2020/07/'>2020 年 7 月</a>&nbsp;(1)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2020/06/'>2020 年 6 月</a>&nbsp;(4)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2020/05/'>2020 年 5 月</a>&nbsp;(1)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2020/04/'>2020 年 4 月</a>&nbsp;(2)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2020/03/'>2020 年 3 月</a>&nbsp;(2)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2020/02/'>2020 年 2 月</a>&nbsp;(1)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2020/01/'>2020 年 1 月</a>&nbsp;(1)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2019/11/'>2019 年 11 月</a>&nbsp;(11)</li>
+		</ul>
+			</aside><aside id="categories-2" class="widget widget_categories"><h4 class="widget-title">分類</h4>		<ul>
+				<li class="cat-item cat-item-3"><a href="https://geehsu.github.io/wordpress_blog/category/post/">文章</a> (29)
+<ul class='children'>
+	<li class="cat-item cat-item-14"><a href="https://geehsu.github.io/wordpress_blog/category/post/designcourse/">DesignCourse</a> (3)
+</li>
+	<li class="cat-item cat-item-13"><a href="https://geehsu.github.io/wordpress_blog/category/post/ninja/">The Net Ninja</a> (2)
+</li>
+	<li class="cat-item cat-item-12"><a href="https://geehsu.github.io/wordpress_blog/category/post/hexschool/">六角學院</a> (15)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-2"><a href="https://geehsu.github.io/wordpress_blog/category/about/">關於</a> (4)
+</li>
+		</ul>
+			</aside><aside id="calendar-3" class="widget widget_calendar"><div id="calendar_wrap" class="calendar_wrap"><table id="wp-calendar">
+	<caption>2021 年 2 月</caption>
+	<thead>
+	<tr>
+		<th scope="col" title="星期一">一</th>
+		<th scope="col" title="星期二">二</th>
+		<th scope="col" title="星期三">三</th>
+		<th scope="col" title="星期四">四</th>
+		<th scope="col" title="星期五">五</th>
+		<th scope="col" title="星期六">六</th>
+		<th scope="col" title="星期日">日</th>
+	</tr>
+	</thead>
+
+	<tfoot>
+	<tr>
+		<td colspan="3" id="prev"><a href="https://geehsu.github.io/wordpress_blog/2021/01/">&laquo; 1 月</a></td>
+		<td class="pad">&nbsp;</td>
+		<td colspan="3" id="next" class="pad">&nbsp;</td>
+	</tr>
+	</tfoot>
+
+	<tbody>
+	<tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td>
+	</tr>
+	<tr>
+		<td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td>
+	</tr>
+	<tr>
+		<td>15</td><td>16</td><td>17</td><td>18</td><td id="today"><a href="https://geehsu.github.io/wordpress_blog/2021/02/19/" aria-label="文章發佈於 2021 年 2 月 19 日">19</a></td><td>20</td><td>21</td>
+	</tr>
+	<tr>
+		<td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td>
+	</tr>
+	</tbody>
+	</table></div></aside>
+</div><!-- #secondary -->
+
+
+
+		</div><!-- #content -->
+
+		
+		<footer id="colophon" class="site-footer">
+
+			<div class="site-footer-inner">
+
+				
+			</div><!-- .site-footer-inner -->
+
+		</footer><!-- #colophon -->
+
+		
+<div class="site-info-wrapper">
+
+	<div class="site-info">
+
+		<div class="site-info-inner">
+
+			
+<div class="site-info-text">
+
+	Copyright &copy; 2021 Wordpress_blog &mdash; Uptown Style WordPress 主題作者：<a href="https://www.godaddy.com/" rel="author nofollow">GoDaddy</a>
+</div>
+
+		</div><!-- .site-info-inner -->
+
+	</div><!-- .site-info -->
+
+</div><!-- .site-info-wrapper -->
+
+	</div><!-- #page -->
+
+	<script type='text/javascript' src='https://geehsu.github.io/wordpress_blog/wp-content/themes/primer/assets/js/navigation.min.js?ver=1.8.8'></script>
+<script type='text/javascript' src='https://geehsu.github.io/wordpress_blog/wp-includes/js/wp-embed.min.js?ver=5.2.4'></script>
+	<script>
+	/* IE11 skip link focus fix */
+	/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
+	</script>
+	
+</body>
+
+</html>

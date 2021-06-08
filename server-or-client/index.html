@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+
+<html lang="zh-TW">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+
+	<link rel="pingback" href="https://geehsu.github.io/wordpress_blog/xmlrpc.php">
+
+	<title>如何判斷後端工程師用得是 SERVER SIDE RENDER 還是 CLIENT SIDE RENDER &#8211; WordPress_blog</title>
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="訂閱《Wordpress_blog》&raquo; 資訊提供" href="https://geehsu.github.io/wordpress_blog/feed/" />
+<link rel="alternate" type="application/rss+xml" title="訂閱《Wordpress_blog》&raquo; 留言的資訊提供" href="https://geehsu.github.io/wordpress_blog/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/geehsu.github.io\/wordpress_blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.4"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://geehsu.github.io/wordpress_blog/wp-includes/css/dist/block-library/style.min.css?ver=5.2.4' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='https://geehsu.github.io/wordpress_blog/wp-includes/css/dist/block-library/theme.min.css?ver=5.2.4' type='text/css' media='all' />
+<link rel='stylesheet' id='uptown-style-css'  href='https://geehsu.github.io/wordpress_blog/wp-content/themes/uptown-style/style.css?ver=1.1.3' type='text/css' media='all' />
+<style id='uptown-style-inline-css' type='text/css'>
+.hero{background-image:url(https://geehsu.github.io/wordpress_blog/wp-content/themes/uptown-style/assets/images/hero.jpg);}
+.site-title a,.site-title a:visited{color:#353535;}.site-title a:hover,.site-title a:visited:hover{color:rgba(53, 53, 53, 0.8);}
+.site-description{color:#686868;}
+.hero,.hero .widget h1,.hero .widget h2,.hero .widget h3,.hero .widget h4,.hero .widget h5,.hero .widget h6,.hero .widget p,.hero .widget blockquote,.hero .widget cite,.hero .widget table,.hero .widget ul,.hero .widget ol,.hero .widget li,.hero .widget dd,.hero .widget dt,.hero .widget address,.hero .widget code,.hero .widget pre,.hero .widget .widget-title,.hero .page-header h1{color:#ffffff;}.hero .hero-inner{border-color:rgba(255, 255, 255, 0.5);}
+.main-navigation ul li a,.main-navigation ul li a:visited,.main-navigation ul li a:hover,.main-navigation ul li a:focus,.main-navigation ul li a:visited:hover{color:#252525;}.main-navigation .sub-menu .menu-item-has-children > a::after{border-right-color:#252525;border-left-color:#252525;}.menu-toggle div{background-color:#252525;}.main-navigation ul li a:hover,.main-navigation ul li a:focus{color:rgba(37, 37, 37, 0.8);}
+h1,h2,h3,h4,h5,h6,label,legend,table th,dl dt,.entry-title,.entry-title a,.entry-title a:visited,.widget-title{color:#353535;}.entry-title a:hover,.entry-title a:visited:hover,.entry-title a:focus,.entry-title a:visited:focus,.entry-title a:active,.entry-title a:visited:active{color:rgba(53, 53, 53, 0.8);}
+body,input,select,textarea,input[type="text"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="password"]:focus,input[type="search"]:focus,input[type="number"]:focus,input[type="tel"]:focus,input[type="range"]:focus,input[type="date"]:focus,input[type="month"]:focus,input[type="week"]:focus,input[type="time"]:focus,input[type="datetime"]:focus,input[type="datetime-local"]:focus,input[type="color"]:focus,textarea:focus,.navigation.pagination .paging-nav-text{color:#252525;}hr{background-color:rgba(37, 37, 37, 0.1);border-color:rgba(37, 37, 37, 0.1);}input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],input[type="number"],input[type="tel"],input[type="range"],input[type="date"],input[type="month"],input[type="week"],input[type="time"],input[type="datetime"],input[type="datetime-local"],input[type="color"],textarea,.select2-container .select2-choice{color:rgba(37, 37, 37, 0.5);border-color:rgba(37, 37, 37, 0.1);}select,fieldset,blockquote,pre,code,abbr,acronym,.hentry table th,.hentry table td{border-color:rgba(37, 37, 37, 0.1);}.hentry table tr:hover td{background-color:rgba(37, 37, 37, 0.05);}
+blockquote,.entry-meta,.entry-footer,.comment-meta .says,.logged-in-as,.wp-block-coblocks-author__heading{color:#686868;}
+.site-footer .widget-title,.site-footer h1,.site-footer h2,.site-footer h3,.site-footer h4,.site-footer h5,.site-footer h6{color:#ffffff;}
+.site-footer .widget,.site-footer .widget form label{color:#ffffff;}
+.footer-menu ul li a,.footer-menu ul li a:visited{color:#252525;}.site-info-wrapper .social-menu a{background-color:#252525;}.footer-menu ul li a:hover{border-color:#252525;}.footer-menu ul li a:hover,.footer-menu ul li a:visited:hover{color:rgba(37, 37, 37, 0.8);}
+.site-info-wrapper .site-info-text{color:#252525;}
+a,a:visited,.entry-title a:hover,.entry-title a:visited:hover{color:#54ccbe;}.navigation.pagination .nav-links .page-numbers.current,.social-menu a:hover{background-color:#54ccbe;}a:hover,a:visited:hover,a:focus,a:visited:focus,a:active,a:visited:active{color:rgba(84, 204, 190, 0.8);}.comment-list li.bypostauthor{border-color:rgba(84, 204, 190, 0.2);}
+button,a.button,a.button:visited,input[type="button"],input[type="reset"],input[type="submit"],.wp-block-button__link,.site-info-wrapper .social-menu a:hover{background-color:#b5345f;border-color:#b5345f;}button:hover,button:active,button:focus,a.button:hover,a.button:active,a.button:focus,a.button:visited:hover,a.button:visited:active,a.button:visited:focus,input[type="button"]:hover,input[type="button"]:active,input[type="button"]:focus,input[type="reset"]:hover,input[type="reset"]:active,input[type="reset"]:focus,input[type="submit"]:hover,input[type="submit"]:active,input[type="submit"]:focus{background-color:rgba(181, 52, 95, 0.8);border-color:rgba(181, 52, 95, 0.8);}
+button,button:hover,button:active,button:focus,a.button,a.button:hover,a.button:active,a.button:focus,a.button:visited,a.button:visited:hover,a.button:visited:active,a.button:visited:focus,input[type="button"],input[type="button"]:hover,input[type="button"]:active,input[type="button"]:focus,input[type="reset"],input[type="reset"]:hover,input[type="reset"]:active,input[type="reset"]:focus,input[type="submit"],input[type="submit"]:hover,input[type="submit"]:active,input[type="submit"]:focus,.wp-block-button__link{color:#ffffff;}
+body{background-color:#ffffff;}.navigation.pagination .nav-links .page-numbers.current{color:#ffffff;}
+.hero{background-color:#252525;}.hero{-webkit-box-shadow:inset 0 0 0 9999em;-moz-box-shadow:inset 0 0 0 9999em;box-shadow:inset 0 0 0 9999em;color:rgba(37, 37, 37, 0.50);}
+.main-navigation-container,.main-navigation.open,.main-navigation ul ul,.main-navigation .sub-menu{background-color:#ffffff;}.site-header{background-color:#ffffff;}
+.site-footer{background-color:#3f3244;}
+.site-info-wrapper{background-color:#ffffff;}.site-info-wrapper .social-menu a,.site-info-wrapper .social-menu a:visited,.site-info-wrapper .social-menu a:hover,.site-info-wrapper .social-menu a:visited:hover{color:#ffffff;}
+.has-primary-color{color:#03263B;}.has-primary-background-color{background-color:#03263B;}
+.has-secondary-color{color:#0b3954;}.has-secondary-background-color{background-color:#0b3954;}
+.has-tertiary-color{color:#bddae6;}.has-tertiary-background-color{background-color:#bddae6;}
+.has-quaternary-color{color:#ff6663;}.has-quaternary-background-color{background-color:#ff6663;}
+.has-quinary-color{color:#ffffff;}.has-quinary-background-color{background-color:#ffffff;}
+</style>
+<link rel='stylesheet' id='uptown-style-fonts-css'  href='https://fonts.googleapis.com/css?family=Playfair+Display%3A300%2C400%2C700%7CLato%3A300%2C400%2C700&#038;subset=latin&#038;ver=1.8.8' type='text/css' media='all' />
+<style id='uptown-style-fonts-inline-css' type='text/css'>
+.site-title{font-family:"Playfair Display", sans-serif;}
+.main-navigation ul li a,.main-navigation ul li a:visited,button,a.button,a.fl-button,input[type="button"],input[type="reset"],input[type="submit"]{font-family:"Playfair Display", sans-serif;}
+h1,h2,h3,h4,h5,h6,label,legend,table th,dl dt,.entry-title,.widget-title{font-family:"Playfair Display", sans-serif;}
+body,p,ol li,ul li,dl dd,.fl-callout-text{font-family:"Lato", sans-serif;}
+blockquote,.entry-meta,.entry-footer,.comment-list li .comment-meta .says,.comment-list li .comment-metadata,.comment-reply-link,#respond .logged-in-as{font-family:"Lato", sans-serif;}
+</style>
+<script type='text/javascript' src='https://geehsu.github.io/wordpress_blog/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://geehsu.github.io/wordpress_blog/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://geehsu.github.io/wordpress_blog/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://geehsu.github.io/wordpress_blog/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://geehsu.github.io/wordpress_blog/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='NODE.JS + EXPRESS WEB 應用程式教學' href='https://geehsu.github.io/wordpress_blog/nodejs-express-web/' />
+<link rel='next' title='BOOTSTRAP 5 新手教學實戰營 &#8211; 環境建立 (上)' href='https://geehsu.github.io/wordpress_blog/bs5-01-1/' />
+<meta name="generator" content="WordPress 5.2.4" />
+<link rel="canonical" href="https://geehsu.github.io/wordpress_blog/server-or-client/" />
+<link rel='shortlink' href='https://geehsu.github.io/wordpress_blog/?p=315' />
+<link rel="alternate" type="application/json+oembed" href="https://geehsu.github.io/wordpress_blog/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fgeehsu.github.io%2Fwordpress_blog%2Fserver-or-client%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://geehsu.github.io/wordpress_blog/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fgeehsu.github.io%2Fwordpress_blog%2Fserver-or-client%2F&#038;format=xml" />
+<style type='text/css'>
+.site-title a,.site-title a:visited{color:353535;}
+</style><link rel="icon" href="https://geehsu.github.io/wordpress_blog/wp-content/uploads/2019/11/cropped-blogging-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://geehsu.github.io/wordpress_blog/wp-content/uploads/2019/11/cropped-blogging-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://geehsu.github.io/wordpress_blog/wp-content/uploads/2019/11/cropped-blogging-180x180.png" />
+<meta name="msapplication-TileImage" content="https://geehsu.github.io/wordpress_blog/wp-content/uploads/2019/11/cropped-blogging-270x270.png" />
+
+</head>
+
+<body class="post-template-default single single-post postid-315 single-format-standard custom-header-image layout-two-column-default">
+
+	
+	<div id="page" class="hfeed site">
+
+		<a class="skip-link screen-reader-text" href="#content">略過內容</a>
+
+		
+		<header id="masthead" class="site-header" role="banner">
+
+			
+			<div class="site-header-wrapper">
+
+				
+<div class="site-title-wrapper">
+
+	
+	<div class="site-title"><a href="https://geehsu.github.io/wordpress_blog/" rel="home">Wordpress_blog</a></div>
+	<div class="site-description">This is a dynamic to static website.</div>
+</div><!-- .site-title-wrapper -->
+
+<div class="main-navigation-container">
+
+	
+<div class="menu-toggle" id="menu-toggle" role="button" tabindex="0"
+	>
+	<div></div>
+	<div></div>
+	<div></div>
+</div><!-- #menu-toggle -->
+
+	<nav id="site-navigation" class="main-navigation">
+
+		<div class="menu-menu-container"><ul id="menu-menu" class="menu"><li id="menu-item-13" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-13"><a href="https://geehsu.github.io/wordpress_blog/category/about/">關於</a></li>
+<li id="menu-item-9" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor menu-item-has-children menu-item-9"><a href="https://geehsu.github.io/wordpress_blog/category/post/">文章</a>
+<span  class="expand" role="button" tabindex="0"></span>
+
+<ul class="sub-menu">
+	<li id="menu-item-98" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-98"><a href="https://geehsu.github.io/wordpress_blog/category/post/hexschool/">六角學院</a></li>
+	<li id="menu-item-99" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-99"><a href="https://geehsu.github.io/wordpress_blog/category/post/ninja/">The Net Ninja</a></li>
+	<li id="menu-item-212" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-212"><a href="https://geehsu.github.io/wordpress_blog/category/post/designcourse/">DesignCourse</a></li>
+</ul>
+</li>
+<li id="menu-item-12" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-12"><a href="https://geehsu.github.io/wordpress_blog/category/sticker/">貼圖</a></li>
+<li id="menu-item-11" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11"><a href="https://geehsu.github.io/wordpress_blog/category/food/">美食</a></li>
+<li id="menu-item-10" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10"><a href="https://geehsu.github.io/wordpress_blog/category/tour/">旅遊</a></li>
+<li id="menu-item-59" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-59"><a href="https://geehsu.github.io/wordpress_blog/category/social/">社群</a>
+<span  class="expand" role="button" tabindex="0"></span>
+
+<ul class="sub-menu">
+	<li id="menu-item-60" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-60"><a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/watergrass0402/">facebook</a></li>
+</ul>
+</li>
+</ul></div>
+	</nav><!-- #site-navigation -->
+
+	
+</div>
+
+			</div><!-- .site-header-wrapper -->
+
+			
+		</header><!-- #masthead -->
+
+		
+<div class="hero">
+
+	
+	<div class="hero-inner">
+
+		
+<div class="page-title-container">
+
+	<header class="page-header">
+
+		<h2 class="page-title">文章</h2>
+	</header><!-- .entry-header -->
+
+</div><!-- .page-title-container -->
+
+	</div>
+
+</div>
+
+		<div id="content" class="site-content">
+
+<div id="primary" class="content-area">
+
+	<main id="main" class="site-main" role="main">
+
+	
+		
+<article id="post-315" class="post-315 post type-post status-publish format-standard hentry category-hexschool">
+
+	
+	
+	
+<header class="entry-header">
+
+	<div class="entry-header-row">
+
+		<div class="entry-header-column">
+
+			
+			
+				<h1 class="entry-title">如何判斷後端工程師用得是 SERVER SIDE RENDER 還是 CLIENT SIDE RENDER</h1>
+
+			
+			
+		</div><!-- .entry-header-column -->
+
+	</div><!-- .entry-header-row -->
+
+</header><!-- .entry-header -->
+
+	
+<div class="entry-meta">
+
+	
+		<span class="posted-date">2021 年 6 月 8 日</span>
+
+	
+	<span class="posted-author"><a href="https://geehsu.github.io/wordpress_blog/author/gee-hsu/" title="「gee.hsu」的文章" rel="author">gee.hsu</a></span>
+
+	
+</div><!-- .entry-meta -->
+
+	
+		
+<div class="entry-content">
+
+	
+<h2>Node.js 特訓班 – server、client 差異</h2>
+
+
+
+<h3>Server Side render、Client Side render 差異</h3>
+
+
+
+<ul><li>Server Side render：由後端渲染資料</li><li>Client Side render：由前端渲染資料<ul><li>跟它為伍，JavaScript 即時呈現</li></ul></li><li>懶人包判斷方式：案右鍵檢視原始碼</li></ul>
+
+
+
+<p>如果案右鍵檢視網頁原始碼看到裡面有這段字的時候，就代表說這段話是由後端直接渲染資料給前端使用的。</p>
+
+
+
+<h5>用 Node.js 來建立一個環境起來</h5>
+
+
+
+<p>使用終端機建立 express 框架</p>
+
+
+
+<ol><li>cd nodeJS</li><li>輸入 express –view ejs</li><li>安裝npm套件，npm install</li><li>執行應用程式，npm start</li></ol>
+
+
+
+<h5>index.ejs</h5>
+
+
+
+<p>template language 後端的樣板語言，方便資料庫傳送資料。</p>
+
+
+
+<h5>講解 index.js、index.ejs 程式碼</h5>
+
+
+
+<pre class="wp-block-code"><code>// index.js
+var express = require('express');
+var router = express.Router();
+
+/* GET home page. */
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'Express' });
+});
+
+module.exports = router;
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.ejs
+&lt;!DOCTYPE html>
+&lt;html>
+  &lt;head>
+    &lt;title>&lt;%= title %>&lt;/title>
+    &lt;link rel='stylesheet' href='/stylesheets/style.css' />
+  &lt;/head>
+  &lt;body>
+    &lt;h1>&lt;%= title %>&lt;/h1>
+    &lt;p>Welcome to &lt;%= title %>&lt;/p>
+  &lt;/body>
+&lt;/html>
+</code></pre>
+
+
+
+<h5>瀏覽器接收到什麼資訊</h5>
+
+
+
+<ol><li>按右鍵、按下檢查</li><li>點選 Network</li><li>重新整理</li><li>發現到裡面有一個文件格式</li><li>點一下之後顯示 Response<br>代表伺服器回傳到瀏覽器的格式</li></ol>
+
+
+
+<h5>程式碼 search 範例講解</h5>
+
+
+
+<p>指令 – nodemon npm start</p>
+
+
+
+<pre class="wp-block-code"><code>// routes/index.js
+var express = require('express');
+var router = express.Router();
+
+/* GET home page. */
+router.get('/', function(req, res, next) {
+  // 先跟資料庫要資料
+  res.render('index', { title: '六角學院' });
+});
+
+/* GET search page. */
+router.get('/search', function(req, res, next) {
+  // 先跟資料庫要資料
+  res.render('search', { title: '這裡是搜尋頁面' });
+});
+
+module.exports = router;
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// views/search.ejs
+&lt;!DOCTYPE html>
+&lt;html>
+  &lt;head>
+    &lt;title>&lt;%= title %>&lt;/title>
+    &lt;link rel='stylesheet' href='/stylesheets/style.css' />
+  &lt;/head>
+  &lt;body>
+    &lt;h1>search&lt;/h1>
+    &lt;h1>&lt;%= title %>&lt;/h1>
+    &lt;p>Welcome to &lt;%= title %>&lt;/p>
+  &lt;/body>
+&lt;/html>
+</code></pre>
+
+
+
+<h3>範例程式碼 Live Demo</h3>
+
+
+
+<ul><li>轉址：res.redirect</li><li>傳送文字：res.send</li><li>顯示網頁 EJS：res.render</li></ul>
+
+
+
+<h5>範例程式碼</h5>
+
+
+
+<pre class="wp-block-code"><code>// routes/index.js
+var express = require('express');
+var router = express.Router();
+
+/* GET home page. */
+router.get('/', function(req, res, next) {
+  // 先跟資料庫要資料
+  res.render('index', { title: '六角學院' });
+});
+
+/* GET search page. */
+router.get('/search', function(req, res, next) {
+  // 先跟資料庫要資料
+  res.render('search', { title: '這裡是搜尋頁面' });
+});
+
+/* GET getMore page. */
+router.get('/getMore', function(req, res, next) {
+
+  // 會有一段程式事先跟資料庫撈資料
+
+  // 先跟資料庫要資料
+  res.send(
+    [
+      {
+        "name": "洧杰",
+        "content": "今天超帥"
+      },
+      {
+        "name": "Mary",
+        "content": "今天超美"
+      },
+      {
+        "name": "乾太",
+        "content": "有 airpods pro" 
+      }
+    ]
+  )
+});
+
+module.exports = router;
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// views/index.ejs
+&lt;!DOCTYPE html>
+&lt;html>
+  &lt;head>
+    &lt;title>&lt;%= title %>&lt;/title>
+    &lt;link rel='stylesheet' href='/stylesheets/style.css' />
+  &lt;/head>
+  &lt;body>
+    &lt;h1>&lt;%= title %>&lt;/h1>
+    &lt;p>Welcome to &lt;%= title %>&lt;/p>
+    &lt;input type="button" name="" value="看更多" class="btn">
+    &lt;ul class="list">
+      &lt;li>王志誠：他今天有刷牙&lt;/li>
+      &lt;li>Ray：今天沒有洗臉&lt;/li>
+    &lt;/ul>
+    &lt;script>
+      document.querySelector('.btn').addEventListener('click', function(){
+        var data = null;
+        
+        var xhr = new XMLHttpRequest();
+        xhr.withCredentials = true;
+
+        xhr.addEventListener("readystatechange",
+        function() {
+          if(this.readyState === 4) {
+            let data = JSON.parse(this.responseText);
+            let str = '';
+            for(let i = 0; data.length > i; i++){
+              str += '&lt;li>'+data[i].name+':'+ data[i].content +'&lt;/li>'
+            }
+            document.querySelector('.list').innerHTML += str;
+          }
+        });
+
+        xhr.open("GET", "http://127.0.0.1:3000/getMore");
+        xhr.setRequestHeader("postman-token", "f7bfafd6-0529-1e44-1f4b-4775f9958e55");
+
+        xhr.send(data);
+      })
+    &lt;/script>
+  &lt;/body>
+&lt;/html>
+</code></pre>
+
+
+
+<p>上面這個程式碼範例有 Server Side Render、Client(客戶端) Side Render。<br>AJAX 就算是 Client Side Render 的意思，可是 Render 要提到的一件事是它是顯示畫面給你看。</p>
+
+
+
+<p>前兩筆是 Server Side Render，後三筆是 Client Side Render。</p>
+
+
+
+<h5>資源</h5>
+
+
+
+<ul><li><a href="https://www.postman.com/" target="_blank" rel="noreferrer noopener">postman</a></li></ul>
+
+
+
+<figure class="wp-block-image"><img src="https://wp-blogtoshare.000webhostapp.com/wp-content/uploads/2021/06/%E5%89%8D%E7%AB%AF%E5%8F%96%E5%BE%97%E5%BE%8C%E7%AB%AF%E8%B3%87%E6%96%99.png" alt="" class="wp-image-5990"/></figure>
+
+
+
+<p>透過 JS 的方式去跟伺服器要資料。要完資料它在背景回傳資料給我，在 JS 獲得這些值以後再即時顯示、即時渲染這些資料。</p>
+
+
+
+<h3>Server Side Render 後端工程師合作方式</h3>
+
+
+
+<ol><li>前端做好 HTML 頁面</li><li>提交給後端變成動態語言</li></ol>
+
+
+
+<h3>Client Side Render 後端合作方式</h3>
+
+
+
+<ol><li>後端提供給前端 API 列表</li><li>前端依照 API 列表設計網頁介面</li></ol>
+
+
+
+<h3>抽獎</h3>
+
+
+
+<h3>範例網站練習</h3>
+
+
+
+<ul><li><a rel="noreferrer noopener" href="https://www.hexschool.com/courses/js-core.html" target="_blank">JS 核心篇</a>&nbsp;– Server Side Render</li><li><a rel="noreferrer noopener" href="https://w3c.hexschool.com/category/blog" target="_blank">W3Hexschool 部落格</a>&nbsp;– Server Side Render</li><li><a rel="noreferrer noopener" href="https://codepen.io/HexSchool_yuko/pen/jONaWbN" target="_blank">帳號註冊登入</a>&nbsp;– Client Side Render</li><li><a rel="noreferrer noopener" href="https://challenge.thef2e.com/works" target="_blank">The F2E 第二屆</a>&nbsp;– Server Side Render</li><li><a rel="noreferrer noopener" href="https://lay-order.rocket-coding.com/index.html#/" target="_blank">layorder</a>&nbsp;– Client Side Render<ul><li>Vue cli 版型很多、元件很多，<br>所有東西都用 Client Side Render 去做</li></ul></li><li><a rel="noreferrer noopener" href="https://wen0720.github.io/vueShop/#/" target="_blank">始壯哥健身中心</a>&nbsp;– Client Side Render</li><li><a rel="noreferrer noopener" href="https://chaoyuping.github.io/plantstore/#/" target="_blank">挖栽</a></li><li><a rel="noreferrer noopener" href="https://www.facebook.com/" target="_blank">Facebook</a>&nbsp;– 50% Server Side Render、50% Client Side Render</li><li><a rel="noreferrer noopener" href="https://www.pinkoi.com/" target="_blank">Pinkoi</a></li><li><a rel="noreferrer noopener" href="https://www.plurk.com/portal/" target="_blank">Plurk</a>&nbsp;– 50% Server Side Render、50% Client Side Render</li><li><a rel="noreferrer noopener" href="https://www.pinterest.com/" target="_blank">Pinterest</a>&nbsp;– 50% Server Side Render、50% Client Side Render</li><li><a rel="noreferrer noopener" href="https://shopee.tw/" target="_blank">蝦皮購物</a>&nbsp;– 50% Server Side Render、50% Client Side Render</li><li><a rel="noreferrer noopener" href="https://ithelp.ithome.com.tw/" target="_blank">IT邦幫忙</a>&nbsp;– Server Side Render</li><li><a rel="noreferrer noopener" href="https://www.pixiv.net/ranking.php" target="_blank">pixiv</a>&nbsp;– 50% Server Side Render、50% Client Side Render</li></ul>
+
+
+
+<p>單純寫在 HTML 上，就不是後端，是靜態網頁(沒有接資料庫)。<br>所以 HTML 不算 Server Side Render 也不算 Client Side Render。</p>
+
+
+
+<h5>Q&amp;A – 台灣市場上 Server Side Render、Client Side Render 這兩個比重是多少？</h5>
+
+
+
+<ol><li>Server 80%、Client 20%</li><li>Server 50%、Client 50%</li><li>Server 20%、Client 80%</li></ol>
+
+
+
+<p>老師認為是1.5，大概是正負10%，未來 Client Side Render 趨勢會變多</p>
+
+
+
+<h3>延伸閱讀</h3>
+
+
+
+<ul><li><a href="https://blog.techbridge.cc/2017/09/16/frontend-backend-mvc/" target="_blank" rel="noreferrer noopener">前後端分離與 SPA</a></li></ul>
+
+
+
+<h5>前後端分離</h5>
+
+
+
+<p>前台後台(幾乎)都是 Client 端開發<br>Server 0~10%、Client 90~100%</p>
+
+
+
+<p>前台 Server 0%、Client 100%<br>後台 Server 80~90%、Client 10%</p>
+
+</div><!-- .entry-content -->
+
+	
+	
+<footer class="entry-footer">
+
+	<div class="entry-footer-right">
+
+		
+	</div>
+
+	
+		
+		
+			<span class="cat-links">
+
+				發佈位置： <a href="https://geehsu.github.io/wordpress_blog/category/post/hexschool/" rel="category tag">六角學院</a>
+			</span>
+
+		
+		
+		
+	
+</footer><!-- .entry-footer -->
+
+	
+</article><!-- #post-## -->
+
+		
+	<nav class="navigation post-navigation" role="navigation">
+		<h2 class="screen-reader-text">文章導覽</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="https://geehsu.github.io/wordpress_blog/nodejs-express-web/" rel="prev">&larr; NODE.JS + EXPRESS WEB 應用程式教學</a></div><div class="nav-next"><a href="https://geehsu.github.io/wordpress_blog/bs5-01-1/" rel="next">BOOTSTRAP 5 新手教學實戰營 &#8211; 環境建立 (上) &rarr;</a></div></div>
+	</nav>
+		
+	
+	</main><!-- #main -->
+
+</div><!-- #primary -->
+
+
+<div id="secondary" class="widget-area" role="complementary">
+
+			<aside id="recent-posts-2" class="widget widget_recent_entries">		<h4 class="widget-title">近期文章</h4>		<ul>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/bs5-01-2/">BOOTSTRAP 5 新手教學實戰營 &#8211; 環境建立 (下)</a>
+											<span class="post-date">2021 年 6 月 8 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/bs5-01-1/">BOOTSTRAP 5 新手教學實戰營 &#8211; 環境建立 (上)</a>
+											<span class="post-date">2021 年 6 月 8 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/server-or-client/">如何判斷後端工程師用得是 SERVER SIDE RENDER 還是 CLIENT SIDE RENDER</a>
+											<span class="post-date">2021 年 6 月 8 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/nodejs-express-web/">NODE.JS + EXPRESS WEB 應用程式教學</a>
+											<span class="post-date">2021 年 6 月 8 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/vue-hexschool-3/">Vue 出一個電商網站 (3)</a>
+											<span class="post-date">2021 年 4 月 28 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/vue-hexschool-2/">VUE 出一個電商網站 (2)</a>
+											<span class="post-date">2021 年 3 月 24 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/vue-hexschool-1/">VUE 出一個電商網站 (1)</a>
+											<span class="post-date">2021 年 3 月 24 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/javascript-full-stack-training/">JavaScript 全端特訓營 (試聽版)</a>
+											<span class="post-date">2021 年 2 月 19 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/learninggit/">掌握 Git 與 Github 版本控制</a>
+											<span class="post-date">2021 年 1 月 13 日</span>
+									</li>
+											<li>
+					<a href="https://geehsu.github.io/wordpress_blog/flex-rwd/">伸縮自如的 RWD 排版術</a>
+											<span class="post-date">2021 年 1 月 4 日</span>
+									</li>
+					</ul>
+		</aside><aside id="archives-2" class="widget widget_archive"><h4 class="widget-title">彙整</h4>		<ul>
+				<li><a href='https://geehsu.github.io/wordpress_blog/2021/06/'>2021 年 6 月</a>&nbsp;(4)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2021/04/'>2021 年 4 月</a>&nbsp;(1)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2021/03/'>2021 年 3 月</a>&nbsp;(2)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2021/02/'>2021 年 2 月</a>&nbsp;(1)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2021/01/'>2021 年 1 月</a>&nbsp;(2)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2020/09/'>2020 年 9 月</a>&nbsp;(7)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2020/07/'>2020 年 7 月</a>&nbsp;(1)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2020/06/'>2020 年 6 月</a>&nbsp;(4)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2020/05/'>2020 年 5 月</a>&nbsp;(1)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2020/04/'>2020 年 4 月</a>&nbsp;(2)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2020/03/'>2020 年 3 月</a>&nbsp;(2)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2020/02/'>2020 年 2 月</a>&nbsp;(1)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2020/01/'>2020 年 1 月</a>&nbsp;(1)</li>
+	<li><a href='https://geehsu.github.io/wordpress_blog/2019/11/'>2019 年 11 月</a>&nbsp;(11)</li>
+		</ul>
+			</aside><aside id="categories-2" class="widget widget_categories"><h4 class="widget-title">分類</h4>		<ul>
+				<li class="cat-item cat-item-3"><a href="https://geehsu.github.io/wordpress_blog/category/post/">文章</a> (36)
+<ul class='children'>
+	<li class="cat-item cat-item-14"><a href="https://geehsu.github.io/wordpress_blog/category/post/designcourse/">DesignCourse</a> (3)
+</li>
+	<li class="cat-item cat-item-13"><a href="https://geehsu.github.io/wordpress_blog/category/post/ninja/">The Net Ninja</a> (2)
+</li>
+	<li class="cat-item cat-item-12"><a href="https://geehsu.github.io/wordpress_blog/category/post/hexschool/">六角學院</a> (22)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-2"><a href="https://geehsu.github.io/wordpress_blog/category/about/">關於</a> (4)
+</li>
+		</ul>
+			</aside><aside id="calendar-3" class="widget widget_calendar"><div id="calendar_wrap" class="calendar_wrap"><table id="wp-calendar">
+	<caption>2021 年 6 月</caption>
+	<thead>
+	<tr>
+		<th scope="col" title="星期一">一</th>
+		<th scope="col" title="星期二">二</th>
+		<th scope="col" title="星期三">三</th>
+		<th scope="col" title="星期四">四</th>
+		<th scope="col" title="星期五">五</th>
+		<th scope="col" title="星期六">六</th>
+		<th scope="col" title="星期日">日</th>
+	</tr>
+	</thead>
+
+	<tfoot>
+	<tr>
+		<td colspan="3" id="prev"><a href="https://geehsu.github.io/wordpress_blog/2021/04/">&laquo; 4 月</a></td>
+		<td class="pad">&nbsp;</td>
+		<td colspan="3" id="next" class="pad">&nbsp;</td>
+	</tr>
+	</tfoot>
+
+	<tbody>
+	<tr>
+		<td colspan="1" class="pad">&nbsp;</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td>
+	</tr>
+	<tr>
+		<td>7</td><td id="today"><a href="https://geehsu.github.io/wordpress_blog/2021/06/08/" aria-label="文章發佈於 2021 年 6 月 8 日">8</a></td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td>
+	</tr>
+	<tr>
+		<td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td>
+	</tr>
+	<tr>
+		<td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td>
+	</tr>
+	<tr>
+		<td>28</td><td>29</td><td>30</td>
+		<td class="pad" colspan="4">&nbsp;</td>
+	</tr>
+	</tbody>
+	</table></div></aside>
+</div><!-- #secondary -->
+
+
+
+		</div><!-- #content -->
+
+		
+		<footer id="colophon" class="site-footer">
+
+			<div class="site-footer-inner">
+
+				
+			</div><!-- .site-footer-inner -->
+
+		</footer><!-- #colophon -->
+
+		
+<div class="site-info-wrapper">
+
+	<div class="site-info">
+
+		<div class="site-info-inner">
+
+			
+<div class="site-info-text">
+
+	Copyright &copy; 2021 Wordpress_blog &mdash; Uptown Style WordPress 主題作者：<a href="https://www.godaddy.com/" rel="author nofollow">GoDaddy</a>
+</div>
+
+		</div><!-- .site-info-inner -->
+
+	</div><!-- .site-info -->
+
+</div><!-- .site-info-wrapper -->
+
+	</div><!-- #page -->
+
+	<script type='text/javascript' src='https://geehsu.github.io/wordpress_blog/wp-content/themes/primer/assets/js/navigation.min.js?ver=1.8.8'></script>
+<script type='text/javascript' src='https://geehsu.github.io/wordpress_blog/wp-includes/js/wp-embed.min.js?ver=5.2.4'></script>
+	<script>
+	/* IE11 skip link focus fix */
+	/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
+	</script>
+	
+</body>
+
+</html>

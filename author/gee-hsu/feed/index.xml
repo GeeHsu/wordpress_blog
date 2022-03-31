@@ -12,7 +12,7 @@
 	<atom:link href="/wordpress_blog/author/gee-hsu/feed/" rel="self" type="application/rss+xml" />
 	<link>/wordpress_blog</link>
 	<description>This is a dynamic to static website.</description>
-	<lastBuildDate>Tue, 29 Mar 2022 08:41:43 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 31 Mar 2022 02:25:24 +0000</lastBuildDate>
 	<language>zh-TW</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,131 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>Git &#038; Github 特訓班 &#8211; 2</title>
+		<link>/wordpress_blog/gitgithub-training-2/</link>
+		
+		<dc:creator><![CDATA[gee.hsu]]></dc:creator>
+		<pubDate>Mon, 18 Nov 2019 02:22:00 +0000</pubDate>
+				<category><![CDATA[六角學院]]></category>
+		<guid isPermaLink="false">/wordpress_blog/?p=278</guid>
+
+					<description><![CDATA[Git 遠端 Repository 操作 常用環境設定 編輯 [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<h2>Git 遠端 Repository 操作</h2>
+
+
+
+<h3>常用環境設定</h3>
+
+
+
+<ul><li>編輯器更換: git config –global core.editor “code –wait”</li><li>Git 縮寫:<br>$ git config –global alias.co checkout<br>$ git config –global alias.br branch<br>$ git config –global alias.st status<br>$ git config –global alias.ci commit</li><li>觀看所有 config 的設定:<br>Mac: ~/.gitconfig<br>Win: C:\Users\$USER</li></ul>
+
+
+
+<h3>Git 與 Github 是什麼 ?</h3>
+
+
+
+<ul><li>Git 是一個分散式版本控制軟體，可藉由它產生一個儲存庫(git Repository)，也有人稱為數據庫。</li><li>Github : 支援 git 程式碼存取和遠端託管儲存庫的平台服務</li><li>關係像是本地端有一個 index.html，但可以放到 dropbox、Google Drive 進行雲端託管</li></ul>
+
+
+
+<h3>熱門遠端儲存庫( Github VS Bitbucket VS Gitlab)</h3>
+
+
+
+<ul><li>GitHub : 擁有 GitHub Pages 功能，可擁有私人數據庫，免費方案是3人以下</li><li>Bitbucket : 可擁有私人數據庫，免費方案是五人以下團隊</li><li>GitLab : 自架 Git 伺服器，有提供 web 視覺化管理介面，常用於企業內部開發</li></ul>
+
+
+
+<p>懶人包解釋:</p>
+
+
+
+<ul><li>公司專案的小型團隊可用 Bitbucket</li><li>想要有一個公開對外網站的話，可用 GitHub</li></ul>
+
+
+
+<h3>遠端儲存庫(Repository)操作</h3>
+
+
+
+<ul><li>註冊遠端儲存庫: git remote add origin 遠端儲存庫網址</li><li>更新資料到遠端 master 分支: git push -u origin master</li><li>-u 是指他預設會推到哪個遠端數據庫服務</li><li>origin 可以改它的遠端數據庫名稱，例如 git push -u github master</li></ul>
+
+
+
+<h3>Git 版本細節</h3>
+
+
+
+<ul><li>branch : 分支，預設分支叫做 master</li><li>HEAD : 指標 (當下目前的位置)</li><li>origin : 預設遠端儲存庫名稱</li><li>回頭觀看版本內容 : git checkout 編號</li><li>返回最新的版本 : git checkout master (分支名稱)</li></ul>
+
+
+
+<h3>還原技巧</h3>
+
+
+
+<figure class="wp-block-image size-full"><img width="763" height="506" src="/wordpress_blog/wp-content/uploads/2022/03/file-status-lifecycle.png" alt="" class="wp-image-279"/><figcaption>File Status Lifecycle</figcaption></figure>
+
+
+
+<p>新增檔案時，檔案還沒加追蹤時，清空工作目錄</p>
+
+
+
+<ul><li>顯示此次清除的檔案 : git clean -n</li><li>強制清除檔案: git clean -f</li></ul>
+
+
+
+<p>檔案已加入追蹤，清空工作目錄</p>
+
+
+
+<ul><li>還原工作目錄上已更改的檔案 : git checkout — &lt;file&gt;</li></ul>
+
+
+
+<p>檔案加入到索引，退到工作目錄</p>
+
+
+
+<ul><li>加入索引的檔案還原到工作目錄 : git reset HEAD</li></ul>
+
+
+
+<p>版本還原</p>
+
+
+
+<ul><li>還原前兩個版本 : git reset HEAD^^</li><li>還原前兩個版本，所有更新檔案都放棄 : git reset HEAD^^ –hard</li><li>觀看詳細歷史紀錄 : git reflog</li><li>還原到特定 commit : git reset commit編號 –hard</li><li>git reset 參數介紹</li></ul>
+
+
+
+<h4>Git 補充指令</h4>
+
+
+
+<ul><li>git log –oneline</li></ul>
+
+
+
+<h4>Git 練習</h4>
+
+
+
+<p>請貼上你的截圖，問其他同學，<br>1.這裡有幾個未被追蹤的檔案?<br>2.有幾個未被加入索引的檔案?<br>3.有幾個已加入索引的檔案 ?</p>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" width="842" height="383" src="/wordpress_blog/wp-content/uploads/2022/03/hw1024.png" alt="" class="wp-image-280"/><figcaption>1. 有 2 個未被追蹤的檔案<br>2.有 3 個未被加入索引的檔案<br>3.有3個以加入索引的檔案</figcaption></figure>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Git &#038; GitHub 特訓班 &#8211; 1</title>
 		<link>/wordpress_blog/gitgithub-training-1/</link>
 		
@@ -98,7 +223,7 @@
 
 
 
-<figure class="wp-block-image size-full"><img width="956" height="594" src="/wordpress_blog/wp-content/uploads/2022/03/git.png" alt="" class="wp-image-128" srcset="/wordpress_blog/wp-content/uploads/2022/03/git.png 956w, /wordpress_blog/wp-content/uploads/2022/03/git-300x186.png 300w, /wordpress_blog/wp-content/uploads/2022/03/git-768x477.png 768w" sizes="(max-width: 956px) 100vw, 956px" /><figcaption>基本指令架構</figcaption></figure>
+<figure class="wp-block-image size-full"><img loading="lazy" width="956" height="594" src="/wordpress_blog/wp-content/uploads/2022/03/git.png" alt="" class="wp-image-128" srcset="/wordpress_blog/wp-content/uploads/2022/03/git.png 956w, /wordpress_blog/wp-content/uploads/2022/03/git-300x186.png 300w, /wordpress_blog/wp-content/uploads/2022/03/git-768x477.png 768w" sizes="(max-width: 956px) 100vw, 956px" /><figcaption>基本指令架構</figcaption></figure>
 
 
 

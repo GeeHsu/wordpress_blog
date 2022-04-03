@@ -1,0 +1,804 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Youtube &#8211; wordpress_blog</title>
+	<atom:link href="/wordpress_blog/category/youtube/feed/" rel="self" type="application/rss+xml" />
+	<link>/wordpress_blog</link>
+	<description>This is a dynamic to static website.</description>
+	<lastBuildDate>Sun, 03 Apr 2022 02:49:18 +0000</lastBuildDate>
+	<language>zh-TW</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.9.2</generator>
+
+<image>
+	<url>/wordpress_blog/wp-content/uploads/2022/03/logo.png</url>
+	<title>Youtube &#8211; wordpress_blog</title>
+	<link>/wordpress_blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Web Development In 2022 &#8211; A Practical Guide</title>
+		<link>/wordpress_blog/web-development-in-2022/</link>
+		
+		<dc:creator><![CDATA[gee.hsu]]></dc:creator>
+		<pubDate>Thu, 13 Jan 2022 02:48:00 +0000</pubDate>
+				<category><![CDATA[Youtube]]></category>
+		<guid isPermaLink="false">/wordpress_blog/?p=480</guid>
+
+					<description><![CDATA[學習資源:&#160;Traversy Media Thank  [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<blockquote class="wp-block-quote"><p>學習資源:&nbsp;<a href="https://www.youtube.com/watch?v=EqzUcMzfV1w" target="_blank" rel="noreferrer noopener">Traversy Media</a></p><cite>Thank you.</cite></blockquote>
+
+
+
+<p>This is my annual guide to take you from start to finish when it comes to the web development technologies that are available for frontend, backend, and full-stack developers.</p>
+
+
+
+<p>Timestamps:</p>
+
+
+
+<p>00:00:00 – Intro<br>00:01:32 – What Is Your Goal?<br>00:03:54 – Types of Web Developers<br>00:05:40 – Basic Necessities/Tools<br>00:09:17 – HTML &amp; CSS<br>00:11:33 – Sass &amp; PostCSS<br>00:13:09 – CSS Frameworks<br>00:16:56 – UI Design Principles<br>00:18:23 – JavaScript<br>00:22:02 – Extra Programming Tools<br>00:25:20 – Deploying Frontend Projects<br>00:27:19 – Basic Frontend Developer Checklist<br>00:28:58 – Where To Go From Here<br>00:31:25 – Frontend Frameworks<br>00:35:20 – TypeScript<br>00:36:53 – UI Kits &amp; Libraries<br>00:39:04 – Testing<br>00:40:38 – Server-Side Rendering<br>00:43:28 – Static Site Generators<br>00:45:59 – Headless CMS<br>00:48:30 – The Jamstack<br>00:50:20 – Frontend Superstar Checklist<br>00:51:51 – Server-Side Languages<br>00:56:40 – Server-Side Web Frameworks<br>01:04:05 – Databases<br>01:10:30 – REST APIs<br>01:11:21 – GraphQL<br>01:12:48 – Authentication &amp; Authorization<br>01:15:25 – WordPress<br>01:16:36 – Deploying Full Stack Projects<br>01:20:42 – Backend &amp; Full Stack Checklist<br>01:21:54 – Mobile App Development<br>01:23:56 – Web3<br>01:28:20 – Web Assembly<br>01:29:18 – Artificial Intelligence<br>01:30:36 – Thank You!</p>
+
+
+
+<h2>Why Learn To Code?</h2>
+
+
+
+<p>There are many reasons to learn to code. Figure out what you want to do with this skill.</p>
+
+
+
+<ul><li>Work as a developer for a company</li><li>Freelance or run your own business</li><li>Build your own products or SaaS (Software as a Service)</li><li>Create educational content</li><li>Code as a hobby</li></ul>
+
+
+
+<h2>Types Of Web Developers</h2>
+
+
+
+<h3>Fronted Developer</h3>
+
+
+
+<p>Works on the client side / browser and creates user interfaces.<br>They use tools like HTML, CSS, JS, DOM, FE frameworks, etc.</p>
+
+
+
+<h3>Backend Developer</h3>
+
+
+
+<p>Works on the server and deals with databases.<br>They use languages like JS, Python, PHP, etc. Databases like Postgres, MongoDB. HTTP, server configuration, deployment, etc.</p>
+
+
+
+<h3>Full Stack Developer</h3>
+
+
+
+<p>Works on the frontend and backend and works with a combination of the tools above.</p>
+
+
+
+<h2>Tools: The Necessities</h2>
+
+
+
+<p>Basic tools that every web developer uses</p>
+
+
+
+<ul><li>Computer &amp; OS<ul><li><strong>MacOS</strong>&nbsp;| Windows | Linux | WSL</li></ul></li><li>Web Browser<ul><li><strong>Chrome</strong>&nbsp;| Firefox | Brave | Edge | Safari</li></ul></li><li>Text Editor / IDE<ul><li><strong>VS Code</strong>&nbsp;| Sublime Text | Vim | Webstorm</li></ul></li><li>Terminal<ul><li>Default |&nbsp;<strong>iTerm2</strong>&nbsp;| Powershell | Git Bash | Hyper</li></ul></li><li>Design Software<ul><li>Figma |&nbsp;<strong>Adobe XD</strong>&nbsp;| Sketch</li></ul></li></ul>
+
+
+
+<h2>HTML &amp; CSS</h2>
+
+
+
+<p>HTML &amp; CSS are the building blocks of web development</p>
+
+
+
+<ul><li>HTML5 Basic &amp; Semantic Tags (Page Layout)</li><li>CSS Fundamentals</li><li>CSS Alignment (Flexbox &amp; CSS Grid)</li><li>Media Queries / Responsive Design</li><li>Simple Animations / Transitions</li></ul>
+
+
+
+<h2>Sass &amp; PostCSS</h2>
+
+
+
+<p>Sass is a CSS pre-processor that adds to the functionality of CSS. It offers variables, nesting, mixins, functions, etc.</p>
+
+
+
+<p>PostCSS is a tool for transforming CSS with JavaScript. There are plugins to add the stuff Sass offers and more.</p>
+
+
+
+<h2>CSS Frameworks (Choose One)</h2>
+
+
+
+<p>CSS frameworks give you predefined classes/components to style elements. The can rapidly speed up the process of creating layouts.</p>
+
+
+
+<ul><li><strong>Bootstrap 5</strong><ul><li>Popular, high level framework</li></ul></li><li>Tailwind CSS<ul><li>Low-level, utility based framework</li></ul></li><li>Materialize<ul><li>Based on material design</li></ul></li><li>Bulma<ul><li>Mobile-first, modular framework</li></ul></li><li>Foundation<ul><li>Advanced CSS framework</li></ul></li></ul>
+
+
+
+<h2>UI Design Principles</h2>
+
+
+
+<p>Frontend devs &amp; web designers should know some basic design principles.</p>
+
+
+
+<ul><li>Color &amp; Contrast<ul><li>Text should be readable</li></ul></li><li>Whitespace<ul><li>Check space between elements</li></ul></li><li>Scale<ul><li>Relative element sizing</li></ul></li><li>Visual Hierarchy (視覺層級)<ul><li>Arrange in order of importance</li></ul></li><li>Typography<ul><li>Typeface, sizing, etc</li></ul></li></ul>
+
+
+
+<h2>JavaScript</h2>
+
+
+
+<p>JavaScript is the language of the browser.</p>
+
+
+
+<p>Every web developer should have some level of JS knowledge.</p>
+
+
+
+<ul><li>JS Basics<ul><li>Data types, data structures, functions, loops</li></ul></li><li>DOM<ul><li>Document object model</li></ul></li><li>Async JS<ul><li>Promises, Async/Await</li></ul></li><li>Fetch API &amp; HTTP<ul><li>Make requests to API’s &amp; understand HTTP</li></ul></li><li>Array Methods<ul><li>map, filter, reduce, etc</li></ul></li></ul>
+
+
+
+<h2>Extra Programming Tools</h2>
+
+
+
+<ul><li>GIT is a popular version control system. It is used with remote repositories such as GitHub, GitLab and BitBucket.</li><li>NPM is a package manager used to install packages into your project. NPM requires Node.js to be installed.</li><li>Browser dev tools are important for all types of developers Element selector, console, storage, network activity, etc.</li><li>Emmet, Live Server, Prettier, ESLint, GitHub Copilot, etc.</li></ul>
+
+
+
+<h2>Deploying Frontend Projects</h2>
+
+
+
+<h3>Popular Platforms</h3>
+
+
+
+<ul><li>netlify</li><li>Vercel</li><li>cPanel</li><li>amazon $3</li></ul>
+
+
+
+<h3>Domain Name Registrars</h3>
+
+
+
+<ul><li>namecheap</li><li>DOMAIN.COM</li><li>bluehost</li><li>GoDaddy</li></ul>
+
+
+
+<p>There are multiple ways to deploy to a hosting platform<br><br>GIT, SSH, FTP/SFTP</p>
+
+
+
+<h2 class="has-background" style="background-color:#ff6663">Basic Frontend Developer</h2>
+
+
+
+<p>A basic frontend developer should be able to do the following…</p>
+
+
+
+<ul><li>Create website layouts with HTML/CSS</li><li>Understand some basic design principles</li><li>Know JavaScript and how to work with the DOM</li><li>Create basic interactive frontend applications</li><li>Connect to APIs and make requests via Fetch</li><li>Work with GIT and use version control</li><li>Deploy and manage small production projects</li></ul>
+
+
+
+<h2>Where To Go From Here (Choose one)</h2>
+
+
+
+<ul><li>Web Design<ul><li>Learn More Design</li><li>Get Better at CSS</li><li>Simple Websites</li></ul></li><li><strong>Frontend Framework</strong><ul><li>React, Vue, Svelte</li><li>State Managers</li><li>Server-Side Rendering</li></ul></li><li>Backend<ul><li>Node.js, Python, PHP, C#, Go</li><li>Databases – Postgres, MongoDB</li><li>HTTP &amp; API Development</li></ul></li><li>Advanced JS<ul><li>Module Bundlers</li><li>Testing</li><li>Design Patterns</li></ul></li></ul>
+
+
+
+<h2 class="has-background" style="background-color:#ff6663">Frontend Frameworks (Choose One)</h2>
+
+
+
+<p>Frontend JS frameworks used for SPAs (Single Page Apps)</p>
+
+
+
+<h3>React</h3>
+
+
+
+<ul><li>Created &amp; Maintained by Facebook</li><li>Most Popular Framework / Library</li><li>Moderate Learning Curve</li></ul>
+
+
+
+<p>React Router, JSX, Hooks, Context API, Redux</p>
+
+
+
+<h3>Vue</h3>
+
+
+
+<ul><li>Second Most Popular Framework</li><li>Great Community</li><li>Low Learning Curve</li></ul>
+
+
+
+<p>Vue CLI, Vue Router, Composition API, Vuex</p>
+
+
+
+<h3>Angular</h3>
+
+
+
+<ul><li>Created &amp; Maintained by Google</li><li>Popular in Enterprise</li><li>Steep Learning Curve</li></ul>
+
+
+
+<p>Angular CLI, Services, TypeScript, Observables</p>
+
+
+
+<h3>Svelte</h3>
+
+
+
+<ul><li>Gaining Popularity</li><li>Lightweight &amp; Performant Compiler</li><li>Lowest Learning Curve</li></ul>
+
+
+
+<p>SvelteKit, Stores</p>
+
+
+
+<h2>TypeScript</h2>
+
+
+
+<p>Superset of JavaScript that adds static typing and other features</p>
+
+
+
+<ul><li>Static-Type Checking</li><li>Class &amp; Module Support</li><li>Other ES6+ Features</li><li>Code less prone to errors</li><li>Code is more robust and definitive</li></ul>
+
+
+
+<h2 class="has-background" style="background-color:#ff6663">UI Kits (Choose One)</h2>
+
+
+
+<p>Reusable design elements / components</p>
+
+
+
+<h3>React</h3>
+
+
+
+<ul><li><strong>Material UI</strong></li><li>Onsen UI</li><li>Chakra UI</li><li>React Bootstrap</li></ul>
+
+
+
+<h3>Vue</h3>
+
+
+
+<ul><li><strong>Vuetify</strong></li><li>Buefy</li><li>Vue Material</li><li>Bootstrap Vue</li></ul>
+
+
+
+<h3>Angular</h3>
+
+
+
+<ul><li><strong>Angular Material</strong></li><li>Ng-Zorro</li><li>Ng-Bootstrap</li><li>MD Bootstrap</li></ul>
+
+
+
+<h3>Svelte</h3>
+
+
+
+<ul><li><strong>Svelte Material UI</strong></li><li>Materialify</li><li>Smelte</li><li>Sveltestrap</li></ul>
+
+
+
+<h2>Testing</h2>
+
+
+
+<p>Common types of testing in programming</p>
+
+
+
+<ul><li>Unit Testing – Test blocks of code (functions, modules, classes)</li><li>Integration Testing – Modules are combined and tested together</li><li>E2E Testing – Emulating a user</li></ul>
+
+
+
+<p>JS testing tools include Jest , Cypress and Puppeteer.</p>
+
+
+
+<p>Other languages have testing tools as well</p>
+
+
+
+<h2 class="has-background" style="background-color:#ff6663">Server-Side Rendering (Choose One)</h2>
+
+
+
+<p>Unlike with a SPA, React/Vue/Svelte apps render on the server-side</p>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Next.js</h3>
+
+
+
+<ul><li>React Based</li><li>Data Fetching Methods</li><li>Image Optimization, SEO, etc</li></ul>
+
+
+
+<h3>Nuxt.js</h3>
+
+
+
+<ul><li>Vue Based</li><li>Data Fetching</li><li>Automatic transpilation &amp; Bundling</li></ul>
+
+
+
+<h3>Remix</h3>
+
+
+
+<ul><li>React Based</li><li>Loaders &amp; Actions</li><li>Most Control Over HTTP Request/Response</li></ul>
+
+
+
+<h3>SvelteKit</h3>
+
+
+
+<ul><li>Svelte Based</li><li>Advanced Routing</li><li>Code Splitting &amp; Other features</li></ul>
+
+
+
+<h2 class="has-background" style="background-color:#ff6663">Static Site Generators (Choose One)</h2>
+
+
+
+<p>Static sites have a lot of benefits such as performance, SEO and more</p>
+
+
+
+<h3>Gatsby</h3>
+
+
+
+<ul><li>React Based</li><li>GraphQL Data Layer</li><li>Image Optimization, Code Splitting &amp; More</li></ul>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Next.js</h3>
+
+
+
+<ul><li>React Based</li><li>Exports Fast Static Websites</li><li>Data Fetching Methods</li></ul>
+
+
+
+<h3>Gridsome</h3>
+
+
+
+<ul><li>Vue Based</li><li>PWA Ready</li><li>SEO Benefits</li></ul>
+
+
+
+<h3>Jekyll</h3>
+
+
+
+<ul><li>Built on Ruby</li><li>Been Around a While</li><li>Liquid Template Engine</li></ul>
+
+
+
+<h2 class="has-background" style="background-color:#ff6663">Headless CMS (Choose One)</h2>
+
+
+
+<p>Content management systmes for creating APIs with no frontend</p>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Strapi</h3>
+
+
+
+<ul><li>Open Source, Based on Node.js</li><li>Customizable</li><li>Self hosted</li></ul>
+
+
+
+<h3>Sanity.io</h3>
+
+
+
+<ul><li>Powerful &amp; Flexible Platform</li><li>Great for Collaboration</li><li>Sanity Studio Toolkit</li></ul>
+
+
+
+<h3>ContentFul</h3>
+
+
+
+<ul><li>Great for Teams</li><li>Optimized for Speed</li><li>Great for Large Businesses</li></ul>
+
+
+
+<h3>GraphCMS</h3>
+
+
+
+<ul><li>Build a GraphQI API instantly</li><li>Lightweight &amp; Intuitive</li><li>UI Extensions</li></ul>
+
+
+
+<h2>The JamStack</h2>
+
+
+
+<p>Broad term to refer to an architectural approach for building websites.</p>
+
+
+
+<ul><li>Variety Of Tools / Tecknologies</li><li>Decoupled</li><li>Static-First</li><li>Serverless Functions</li><li>High Performance, Secure &amp; Affordable</li></ul>
+
+
+
+<h2 class="has-background" style="background-color:#ff6663">Frontend Superstar</h2>
+
+
+
+<p>We have gone over just about everything a FE developer could do</p>
+
+
+
+<ul><li>Build user interfaces with a frontend framework</li><li>Understand how to work with local and global state</li><li>Work with REST APIs &amp; HTTP</li></ul>
+
+
+
+<p>Added Skills</p>
+
+
+
+<ul><li>Create applications with TypeScript</li><li>Work with SSR &amp; Jamstack technologies (SSG, headless CMS)</li><li>Write unit, integration &amp; e2e tests</li></ul>
+
+
+
+<h2 class="has-background" style="background-color:#ff6663">Server-Side Language (Choose One)</h2>
+
+
+
+<p>Many different languages can be used on the server for web development</p>
+
+
+
+<ul><li><strong>Node.js</strong></li><li>GoLang</li><li>Python</li><li>PHP</li><li>C#</li><li>GoLang</li><li>Ruby</li><li>Java</li><li>Kotlin</li><li>Rust</li><li>Scala</li><li>R</li><li>Swift</li></ul>
+
+
+
+<h2 class="has-background" style="background-color:#ff6663">Server-Side Web Framework (Choose One)</h2>
+
+
+
+<h3>Node.js</h3>
+
+
+
+<ul><li>Express</li><li>Fastify</li><li>Koa</li><li>Nest.js</li></ul>
+
+
+
+<h3>Python</h3>
+
+
+
+<ul><li>Django</li><li>Flask</li><li>FastAPI</li></ul>
+
+
+
+<h3>PHP</h3>
+
+
+
+<ul><li>Laravel</li><li>Symfony</li><li>Slim</li></ul>
+
+
+
+<h3>C#</h3>
+
+
+
+<ul><li>ASP.NET</li><li>ASP.NET MVC</li></ul>
+
+
+
+<h3>GoLang</h3>
+
+
+
+<ul><li>Gin</li><li>Beego</li></ul>
+
+
+
+<h3>Ruby</h3>
+
+
+
+<ul><li>Ruby on Rails</li><li>Sinatra</li></ul>
+
+
+
+<h3>Java</h3>
+
+
+
+<ul><li>Spring</li><li>Struts</li></ul>
+
+
+
+<h3>Kotlin</h3>
+
+
+
+<ul><li>Spring</li><li>Vert.x</li></ul>
+
+
+
+<h3>Scala</h3>
+
+
+
+<ul><li>Play</li><li>Lift</li></ul>
+
+
+
+<h3>Rust</h3>
+
+
+
+<ul><li>Rocket</li><li>Actix Web</li></ul>
+
+
+
+<h2>Databases (Choose One)</h2>
+
+
+
+<p>Backend &amp; full stack developers work with various databases &amp; tools</p>
+
+
+
+<ul><li><strong>PostgreSQL</strong></li><li>MySQL</li><li>MS SQL Server</li><li>SQLite</li><li><strong>MongoDB</strong></li><li>Firebase</li><li>Supabase</li><li>Redis</li></ul>
+
+
+
+<h3>ORMs</h3>
+
+
+
+<ul><li>Sequelize</li><li>TypeORM</li><li>Mongoose</li><li>Prisma</li><li>SQLAlchemy</li><li>Doctrine</li></ul>
+
+
+
+<h2>REST APIs</h2>
+
+
+
+<p>APIs that conform to the REST architectural style and interacts with RESTful services</p>
+
+
+
+<ul><li>Representational State Transfer</li><li>HTTP requests work with data/resources</li><li>Specific URL structure for endpoints</li></ul>
+
+
+
+<p>GET /api/todos<br>POST /api/todos<br>PUT /api/todos/100<br>DELETE /api/todos/100</p>
+
+
+
+<h2>GraphQL</h2>
+
+
+
+<p>Data query &amp; manipulation language for APIs</p>
+
+
+
+<ul><li>Request specific data points</li><li>Strongly typed</li><li>Less maintenance than REST</li><li>Apollo is a popular GraphQL client</li></ul>
+
+
+
+<h2>Authentication &amp; Authorization</h2>
+
+
+
+<p>Authentication is the process of identifying an individual and authorization pertains to the permissions that individual has.</p>
+
+
+
+<ul><li>JSON Web Tokens</li><li>Cookies &amp; Sessions</li><li>OAuth (Login via Google, Twitter, GitHub)</li><li>Authentication libraries (Passport, Grant, etc)</li><li>Password hashing (Bcrypt)</li><li>Protecting endpoints and routes</li></ul>
+
+
+
+<h2>WordPress</h2>
+
+
+
+<p>Full-featured PHP content management system</p>
+
+
+
+<ul><li>WordPress is still widely used</li><li>It is great for freelancing</li><li>Small business clients like it</li><li>It can also be used as a headless CMS</li></ul>
+
+
+
+<h2>Deploying Full Stack Projects &amp; DevOps</h2>
+
+
+
+<h3>Hosting Platforms</h3>
+
+
+
+<ul><li>aws</li><li>heroku</li><li>DigitalOcean</li></ul>
+
+
+
+<h3>Server Software</h3>
+
+
+
+<ul><li>APACHE</li><li>NGINX</li></ul>
+
+
+
+<h3>Containers &amp; Virtualization</h3>
+
+
+
+<ul><li>docker</li><li>kubernetes</li></ul>
+
+
+
+<p>Image &amp; Video</p>
+
+
+
+<ul><li>Cloudinary</li><li>Amazon S3</li></ul>
+
+
+
+<h2 class="has-background" style="background-color:#ff6663">Backend &amp; Full Stack Web Developer</h2>
+
+
+
+<p>A backend web developer should know how to do the following…</p>
+
+
+
+<ul><li>Comfortable with a server-side programming language</li><li>Know how to setup and manage a database &amp; ORM / ODM</li><li>Know how to create REST APIs and implement authentication</li><li>Comfortable with the terminal and Unix commands</li><li>Know how to deploy projects and work with servers</li></ul>
+
+
+
+<p>A&nbsp;<strong>full stack developer</strong>&nbsp;can do this as well as frontend tasks</p>
+
+
+
+<h2 class="has-background" style="background-color:#ff6663">Mobile Development (Choose One)</h2>
+
+
+
+<p>There are many web technologies that allow us to create mobile apps</p>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">React Native</h3>
+
+
+
+<ul><li>React Based</li><li>Code Reusability</li><li>Large Community</li></ul>
+
+
+
+<h3>Flutter</h3>
+
+
+
+<ul><li>Dart Programming Language</li><li>Extremely Fast</li><li>Strong Documentation</li></ul>
+
+
+
+<h3>Ionic</h3>
+
+
+
+<ul><li>Use Any Framework</li><li>Pre-Designed UI Components</li><li>Developer-Friendly Tooling</li></ul>
+
+
+
+<h3>Xamarin</h3>
+
+
+
+<ul><li>Mobile Apps With .NET &amp; C#</li><li>Cross-Platform Apps</li><li>High Performance</li></ul>
+
+
+
+<h3>Web3</h3>
+
+
+
+<p>Web3 opens up a whole new possibility of decentralized apps (Dapps) that offer benefits usch as transparency, security, anonymity and more.</p>
+
+
+
+<ul><li>Blockchain</li><li>Ethereum &amp; Smart Contracts</li><li>Solidity Programming</li><li>NFTs (Non-Fungible Tokens)</li></ul>
+
+
+
+<h2>Web Assembly</h2>
+
+
+
+<p>A low-level assembly-like language or bytecode for the web</p>
+
+
+
+<ul><li>Develop high-performance web applications</li><li>Write programs in Rust, C, C++ and compile to WASM</li><li>AssemblyScript is a TypeScript variant</li><li>NOT a replacement for JS!</li></ul>
+
+
+
+<h2>Artificial Intelligence</h2>
+
+
+
+<p>Machine Learning and AI have a role in web development</p>
+
+
+
+<ul><li>Programming Tools (GitHub Copilot)</li><li>Testing Tools</li><li>ML APIs</li><li>Chatbots, Spam Filters, Suggestions, etc</li></ul>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

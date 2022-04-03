@@ -1,0 +1,4425 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<title>JavaScript 必修篇 &#8211; 前端修練全攻略 (2) &#8211; wordpress_blog</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="訂閱《wordpress_blog》&raquo; 資訊提供" href="/wordpress_blog/feed/">
+<link rel="alternate" type="application/rss+xml" title="訂閱《wordpress_blog》&raquo; 留言的資訊提供" href="/wordpress_blog/comments/feed/">
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.9.2"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style>img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="/wordpress_blog/wp-includes/css/dist/block-library/style.min.css?ver=5.9.2" media="all">
+<style id="global-styles-inline-css">body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--palette-1-color-0: #212121;--wp--preset--color--palette-1-color-1: #757575;--wp--preset--color--palette-1-color-2: #212121;--wp--preset--color--palette-1-color-3: #212121;--wp--preset--color--palette-1-color-4: #212121;--wp--preset--color--palette-1-color-5: #f5f5f5;--wp--preset--color--palette-1-color-6: #ffffff;--wp--preset--color--palette-1-color-7: #ffffff;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 14px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 18px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--normal: 16px;--wp--preset--font-size--larger: 24px;--wp--preset--font-size--extra-large: 32px;--wp--preset--font-size--huge: 48px;--wp--preset--font-size--gigantic: 64px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}</style>
+<link rel="stylesheet" id="botiga-style-css" href="/wordpress_blog/wp-content/themes/botiga/style.css?ver=1.1.2" media="all">
+<link rel="stylesheet" id="botiga-style-min-css" href="/wordpress_blog/wp-content/themes/botiga/assets/css/styles.min.css?ver=1.1.2" media="all">
+<link rel="stylesheet" id="botiga-custom-styles-css" href="/wordpress_blog/wp-content/uploads/botiga/custom-styles.css?ver=1648804469" media="all">
+<link rel="https://api.w.org/" href="/wordpress_blog/wp-json/">
+<link rel="alternate" type="application/json" href="/wordpress_blog/wp-json/wp/v2/posts/585">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/wordpress_blog/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wordpress_blog/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 5.9.2">
+<link rel="canonical" href="/wordpress_blog/javascript-compulsory-2/">
+<link rel="shortlink" href="/wordpress_blog/?p=585">
+<link rel="alternate" type="application/json+oembed" href="/wordpress_blog/wp-json/oembed/1.0/embed?url=%2Fjavascript-compulsory-2%2F">
+<link rel="alternate" type="text/xml+oembed" href="/wordpress_blog/wp-json/oembed/1.0/embed?url=%2Fjavascript-compulsory-2%2F&#038;format=xml">
+<link rel="icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png" sizes="32x32">
+<link rel="icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png" sizes="192x192">
+<link rel="apple-touch-icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png">
+<meta name="msapplication-TileImage" content="/wp-content/uploads/2022/03/logo.png">
+	
+</head>
+
+<body class="post-template-default single single-post postid-585 single-format-standard wp-custom-logo wp-embed-responsive header-header_layout_1 blog-single-layout1">
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0.49803921568627"></fefuncr><fefuncg type="table" tablevalues="0 0.49803921568627"></fefuncg><fefuncb type="table" tablevalues="0 0.49803921568627"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.54901960784314 0.98823529411765"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.71764705882353 0.25490196078431"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 0.27843137254902"></fefuncg><fefuncb type="table" tablevalues="0.5921568627451 0.27843137254902"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0"></fefuncr><fefuncg type="table" tablevalues="0 0.64705882352941"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.78039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.94901960784314"></fefuncg><fefuncb type="table" tablevalues="0.35294117647059 0.47058823529412"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.65098039215686 0.40392156862745"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.44705882352941 0.4"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.098039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.66274509803922"></fefuncg><fefuncb type="table" tablevalues="0.84705882352941 0.41960784313725"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg>
+
+<div id="page" class="site">
+
+	<a class="skip-link screen-reader-text" href="#primary">Skip to content</a>
+
+	
+			<div class="top-bar visibility-desktop-only">
+				<div class="container-fluid">
+					<div class="top-bar-inner">
+						<div class="row valign">
+
+															<div class="col header-elements delimiter-none">
+									<div class="header-item top-bar-social"><div class="social-profile">
+<a target="_blank" href="https://www.facebook.com/watergrass0402/"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></i></a><a target="_blank" href="https://github.com/GeeHsu"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></i></a>
+</div></div>								</div>
+																						<div class="col header-elements delimiter-none">
+													
+			<nav class="header-item top-bar-secondary-navigation secondary-navigation">
+				<div class="menu-topbar-container"><ul id="secondary" class="menu">
+<li id="menu-item-143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143"><a href="/wordpress_blog/setup/">網站架設</a></li>
+<li id="menu-item-144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a href="/wordpress_blog/source/">資料來源</a></li>
+<li id="menu-item-262" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-262"><a href="/wordpress_blog/resource/">學習資源</a></li>
+</ul></div>			</nav>
+											</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			
+							
+				<header id="masthead" class="site-header header_layout_1">
+					<div class="container-fluid">
+						<div class="site-header-inner">
+							<div class="row valign">
+								<div class="col-md-5">
+										
+			<nav id="site-navigation" class="main-navigation">
+				<div class="menu-navbar-container"><ul id="primary-menu" class="menu">
+<li id="menu-item-109" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="/wordpress_blog/about/">關於</a></li>
+<li id="menu-item-110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-110">
+<a href="/wordpress_blog/learn/">學習</a><span tabindex="0" class="dropdown-symbol"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512.011 512.011"><path d="M505.755 123.592c-8.341-8.341-21.824-8.341-30.165 0L256.005 343.176 36.421 123.592c-8.341-8.341-21.824-8.341-30.165 0s-8.341 21.824 0 30.165l234.667 234.667a21.275 21.275 0 0015.083 6.251 21.275 21.275 0 0015.083-6.251l234.667-234.667c8.34-8.341 8.34-21.824-.001-30.165z"></path></svg></i></span>
+<ul class="sub-menu">
+	<li id="menu-item-140" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-140"><a href="/wordpress_blog/category/hexschool/">六角學院</a></li>
+	<li id="menu-item-141" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-141"><a href="/wordpress_blog/category/ninja/">The Net Ninja</a></li>
+	<li id="menu-item-483" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-483"><a href="/wordpress_blog/category/youtube/">Youtube</a></li>
+</ul>
+</li>
+<li id="menu-item-111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="/wordpress_blog/linestore/">LINE STORE</a></li>
+</ul></div>			</nav><!-- #site-navigation -->
+											</div>
+								<div class="col-md-2">
+												<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+											</div>
+								<div class="col-md-5 header-elements">
+																	</div>							
+							</div>
+						</div>
+					</div>
+								<div class="header-search-form">
+			<form role="search" method="get" class="search-form" action="/">
+	<label class="screen-reader-text" for="search-form-1">Search&hellip;</label>
+	<input type="search" id="search-form-1" class="search-field" value="" name="s" placeholder="Search &hellip;">
+	<button type="submit" class="search-submit" value="Search"><i class="ws-svg-icon"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 100 14.25 7.125 7.125 0 000-14.25zM2.25 10.875a8.625 8.625 0 1117.25 0 8.625 8.625 0 01-17.25 0z"></path><path fill-rule="evenodd" d="M15.913 15.914a.75.75 0 011.06 0l4.557 4.556a.75.75 0 01-1.06 1.06l-4.557-4.556a.75.75 0 010-1.06z"></path></svg></i></button>
+</form>
+			</div>
+			
+									</header>
+
+										<div class="search-overlay"></div>
+			
+			<div class="botiga-offcanvas-menu">
+				<div class="mobile-header-item">
+					<div class="row">
+						<div class="col">
+										<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+									</div>
+						<div class="col align-right">
+							<a class="mobile-menu-close" href="#"><i class="ws-svg-icon icon-cancel"><svg width="16" height="16" fill="none" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.219.781L.78 2.22 9.562 11l-8.78 8.781 1.437 1.438L11 12.437l8.781 8.782 1.438-1.438L12.437 11l8.782-8.781L19.78.78 11 9.562 2.219.783z"></path></svg></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="mobile-header-item">
+						
+			<nav id="site-navigation" class="main-navigation">
+				<div class="menu-navbar-container"><ul id="primary-menu" class="menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="/wordpress_blog/about/">關於</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-110">
+<a href="/wordpress_blog/learn/">學習</a><span tabindex="0" class="dropdown-symbol"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512.011 512.011"><path d="M505.755 123.592c-8.341-8.341-21.824-8.341-30.165 0L256.005 343.176 36.421 123.592c-8.341-8.341-21.824-8.341-30.165 0s-8.341 21.824 0 30.165l234.667 234.667a21.275 21.275 0 0015.083 6.251 21.275 21.275 0 0015.083-6.251l234.667-234.667c8.34-8.341 8.34-21.824-.001-30.165z"></path></svg></i></span>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-140"><a href="/wordpress_blog/category/hexschool/">六角學院</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-141"><a href="/wordpress_blog/category/ninja/">The Net Ninja</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-483"><a href="/wordpress_blog/category/youtube/">Youtube</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="/wordpress_blog/linestore/">LINE STORE</a></li>
+</ul></div>			</nav><!-- #site-navigation -->
+							</div>
+				<div class="mobile-header-item">
+									<a target="&quot;_blank&quot;" class="button header-item" href="https://www.facebook.com/watergrass0402/">聯絡我</a>
+							</div>			
+			</div>
+			
+							<header id="masthead-mobile" class="site-header mobile-header">
+					<div class="container-fluid">
+						<div class="row valign flex-nowrap">
+							<div class="col-sm-6 col-md-4 col-grow-mobile">
+											<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+										</div>
+							<div class="col-auto col-sm-6 col-md-8 col-grow-mobile header-elements valign align-right">
+																	
+															<a href="#" class="menu-toggle">
+				<i class="ws-svg-icon"><svg width="16" height="11" viewbox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="16" height="1"></rect><rect y="5" width="16" height="1"></rect><rect y="10" width="16" height="1"></rect></svg></i>
+			</a>
+																		</div>						
+						</div>
+					</div>
+								<div class="header-search-form">
+			<form role="search" method="get" class="search-form" action="/">
+	<label class="screen-reader-text" for="search-form-2">Search&hellip;</label>
+	<input type="search" id="search-form-2" class="search-field" value="" name="s" placeholder="Search &hellip;">
+	<button type="submit" class="search-submit" value="Search"><i class="ws-svg-icon"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 100 14.25 7.125 7.125 0 000-14.25zM2.25 10.875a8.625 8.625 0 1117.25 0 8.625 8.625 0 01-17.25 0z"></path><path fill-rule="evenodd" d="M15.913 15.914a.75.75 0 011.06 0l4.557 4.556a.75.75 0 01-1.06 1.06l-4.557-4.556a.75.75 0 010-1.06z"></path></svg></i></button>
+</form>
+			</div>
+			
+									</header>
+						<div class="search-overlay"></div>
+			<div class="header-image"><img src="/wordpress_blog/wp-content/uploads/2022/03/seashore.jpg" width="1920" height="500" alt=""></div>
+<div class="container content-wrapper"><div class="row main-row">			
+	<main id="primary" class="site-main no-sidebar">
+
+		
+
+<article id="post-585" class="post-585 post type-post status-publish format-standard hentry category-hexschool">
+	
+		
+	<header class="entry-header">
+		
+		
+		<h1 class="entry-title">JavaScript 必修篇 &#8211; 前端修練全攻略 (2)</h1>			<div class="entry-meta entry-meta-below delimiter-none">
+<span class="posted-on"><a href="/wordpress_blog/javascript-compulsory-2/" rel="bookmark"><time class="entry-date published" datetime="2022-03-28T15:23:00+08:00">2022 年 3 月 28 日</time><time class="updated" datetime="2022-04-03T15:23:33+08:00">2022 年 4 月 3 日</time></a></span><span class="byline"> <span class="author vcard"><a class="url fn n" href="/wordpress_blog/author/gee-hsu/">gee.hsu</a></span></span>
+</div>			</header><!-- .entry-header -->
+
+	
+	<div class="entry-content">
+		
+<h2>AJAX – 網路請求</h2>
+
+
+
+<h3>什麼是 AJAX？它如何改善網頁使用體驗？</h3>
+
+
+
+<ul><li><a href="https://zh.wikipedia.org/wiki/AJAX" target="_blank" rel="noreferrer noopener">AJAX – 維基百科</a></li></ul>
+
+
+
+<p>AJAX 是非同步 JavaScript 與 XML 技術。</p>
+
+
+
+<h3>什麼是網路請求？</h3>
+
+
+
+<ul>
+<li>透過 Chrome 執行 Enter URL 動作，我傳送了一個網路請求，取得：get URL 網頁上的資訊</li>
+<li>其他軟體也可以發出網路請求</li>
+<li>透過 JS 發出網路請求</li>
+</ul>
+
+
+
+<h3>從網頁架構瞭解網頁請求 – 上集</h3>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;js-compulsory&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;h1&gt;js-compulsory&lt;/h1&gt;
+  &lt;ul class="list"&gt;&lt;/ul&gt;
+  &lt;img src="https://images.unsplash.com/photo-1630042111810-af23e1de9176?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=736&amp;q=80" alt="Photo by Lissete Laverde"&gt;
+
+  &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+console.log('1234');</code></pre>
+
+
+
+<ul><li>Chrome Network – 開發人員工具</li></ul>
+
+
+
+<h3>從網頁架構瞭解網頁請求 – 下集</h3>
+
+
+
+<p>網頁請求先後分別是 index.html 的 HTML 結構、 img src、all.js，共發了3次網頁請求。</p>
+
+
+
+<ul>
+<li>Chrome get 取得請求 → 本地端伺服器</li>
+<li>Chrome ← 本地端伺服器</li>
+</ul>
+
+
+
+<h3>網頁請求狀態碼</h3>
+
+
+
+<ul><li>
+<a rel="noreferrer noopener" href="https://developer.mozilla.org/zh-TW/docs/Web/HTTP/Status" target="_blank">HTTP 狀態碼 – MDN文件</a><ul>
+<li>資訊回應 (Informational responses, 100 -199)</li>
+<li>成功回應 (Successful responses, 200 – 299)</li>
+<li>重定向 (Redirects , 300 – 399)</li>
+<li>用戶端錯誤 (Client errors, 400 – 499)</li>
+<li>伺服器端錯誤 (Server errors, 500 – 599)</li>
+</ul>
+</li></ul>
+
+
+
+<h4>狀態碼(Status)有哪些</h4>
+
+
+
+<ul>
+<li>404 Not Found 伺服器找不到請求的資源</li>
+<li>200 OK 請求成功</li>
+<li>304 Not Modified</li>
+<li>500 Internal Server Error 伺服器端發生未知或無法處理的錯誤</li>
+</ul>
+
+
+
+<h4>清除快取並強制重新載入 (開發人員工具要打開)</h4>
+
+
+
+<ul>
+<li>重新整理圖示長按左鍵後選取清除快取並強制重新載入</li>
+<li>重新整理圖示右鍵後選取清除快取並強制重新載入</li>
+</ul>
+
+
+
+<h3>request、response 講解</h3>
+
+
+
+<ul><li>Google Network → Name – index.html → Headers → Request Headers</li></ul>
+
+
+
+<p>request(請求)：傳送給伺服器要什麼資料。</p>
+
+
+
+<p>response(回傳)：回傳給瀏覽器資料，response header、response data</p>
+
+
+
+<h3>用 Node.js 開啟伺服器，更加瞭解 request、response 的差異</h3>
+
+
+
+<pre class="wp-block-code"><code>// app.js
+
+
+const http = require('http');
+
+http.createServer(function(request, response) {
+  console.log(request);
+  if(request.url == '/') {
+    console.log('接收到網頁請求');
+    response.writeHead(200, {'Content-Type': 'text/HTML'});
+    response.write('&lt;h1&gt;index&lt;/h1&gt;');
+    response.end();
+  }
+
+}).listen(process.env.PORT || 3000);
+console.log('Server已開啟port: 3000.');</code></pre>
+
+
+
+<h3>AJAX – 網路請求小節測驗</h3>
+
+
+
+<h2>AJAX – axios 套件教學</h2>
+
+
+
+<h3>各種發出網路請求的 JS 寫法種類介紹</h3>
+
+
+
+<p>AJAX 透過 JS 發出網路請求。</p>
+
+
+
+<h4>JavaScript 原生寫法</h4>
+
+
+
+<ul>
+<li>XMLHttpRequest –&nbsp;<a rel="noreferrer noopener" href="https://developer.mozilla.org/zh-TW/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest" target="_blank">連結</a>
+</li>
+<li>Fetch –&nbsp;<a href="https://developer.mozilla.org/zh-TW/docs/Web/API/Fetch_API/Using_Fetch" target="_blank" rel="noreferrer noopener">連結</a>
+</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// XMLHttpRequest 範例
+
+function reqListener () {
+  console.log(this.responseText);
+}
+
+var oReq = new XMLHttpRequest();
+oReq.addEventListener("load", reqListener);
+oReq.open("GET", "http://www.example.org/example.txt");
+oReq.send();</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Fetch 範例
+
+fetch('http://example.com/movies.json')
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(myJson) {
+    console.log(myJson);
+  });
+
+</code></pre>
+
+
+
+<h4>套件，需額外載入 JS</h4>
+
+
+
+<ul><li>axios –&nbsp;<a href="https://github.com/axios/axios" target="_blank" rel="noreferrer noopener">連結</a>、Features</li></ul>
+
+
+
+<h3>axios 環境安裝</h3>
+
+
+
+<ul><li><a rel="noreferrer noopener" href="https://github.com/axios/axios" target="_blank">axios 套件連結</a></li></ul>
+
+
+
+<h4>套件cdn 程式碼與自己撰寫載入的程式碼載入順序有差</h4>
+
+
+
+<p>套件程式碼載入放在自己撰寫的程式碼之前。</p>
+
+
+
+<h4>檢查套件載入有沒有成功</h4>
+
+
+
+<ul>
+<li>使用 Google Network 查看 Status</li>
+<li>使用 console.log(axios);</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;js-compulsory&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;h1&gt;js-compulsory&lt;/h1&gt;
+
+  &lt;script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"&gt;&lt;/script&gt;
+  &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+// 測試套件有沒有載入成功
+console.log(axios);</code></pre>
+
+
+
+<h3>axios – 嘗試串接外部資料</h3>
+
+
+
+<ul><li><a href="https://hexschool.github.io/ajaxHomework/data.json" target="_blank" rel="noreferrer noopener">練習用的 json 連結</a></li></ul>
+
+
+
+<pre class="wp-block-code"><code>// 範例程式碼
+
+axios.get('https://hexschool.github.io/ajaxHomework/data.json')
+  .then(function (response) {
+    console.log(response.data);
+    console.log(response.status);
+    console.log(response.statusText);
+    console.log(response.headers);
+    console.log(response.config);
+  });</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;js-compulsory&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;h1&gt;js-compulsory&lt;/h1&gt;
+
+  &lt;script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"&gt;&lt;/script&gt;
+  &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+// 測試套件有沒有載入成功
+// console.log(axios);
+
+// https://hexschool.github.io/ajaxHomework/data.json
+
+axios.get('https://hexschool.github.io/ajaxHomework/data.json')
+  .then(function (response) {
+    console.log(response.data);
+    console.log(response.status);
+    console.log(response.statusText);
+    console.log(response.headers);
+    console.log(response.config);
+  });</code></pre>
+
+
+
+<h3>axios – response 參數詳細講解</h3>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;js-compulsory&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;h1&gt;js-compulsory&lt;/h1&gt;
+
+  &lt;script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"&gt;&lt;/script&gt;
+  &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+// 測試套件有沒有載入成功
+// console.log(axios);
+
+// https://hexschool.github.io/ajaxHomework/data.json
+
+axios.get('https://hexschool.github.io/ajaxHomework/data.json')
+  .then(function (response) {
+    console.log(response);
+
+    console.log(response.data);
+    console.log(response.status);
+    console.log(response.statusText);
+    console.log(response.headers);
+    console.log(response.config);
+  });</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">axios – 將外部資料寫入到網頁上</h3>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;js-compulsory&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;h1&gt;js-compulsory&lt;/h1&gt;
+  &lt;h2 class="title"&gt;&lt;/h2&gt;
+
+  &lt;script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"&gt;&lt;/script&gt;
+  &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+// 測試套件有沒有載入成功
+// console.log(axios);
+
+// https://hexschool.github.io/ajaxHomework/data.json
+
+axios.get('https://hexschool.github.io/ajaxHomework/data.json')
+  .then(function (response) {
+    let ary = response.data;
+    console.log(ary&#91;0].name);
+    const title = document.querySelector('.title');
+    // title.innerHTML = '王小明';
+    // title.innerHTML = ary&#91;0].name;
+    title.textContent = ary&#91;0].name;
+  });</code></pre>
+
+
+
+<h4>我的提問，外部資料圖片抓取問題</h4>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;ul class="list"&gt;&lt;/ul&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// style.css
+
+img {
+  width: 320px;
+  height: 240px;
+}
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// script.js
+
+// 外部資料
+// https://ptx.transportdata.tw/MOTC/v2/Tourism/ScenicSpot?%24top=40&amp;%24format=JSON
+
+// 資料模擬
+let data = &#91;
+  {
+    name: "green mountain across body of water",
+    pictureUrl:
+      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=870&amp;q=80"
+  },
+  {
+    name: "mountains reflected on water"
+    // 沒有 pictureUrl
+  },
+  {
+    name: "brown field near tree during daytime",
+    pictureUrl: "" // pictureUrl 為空值
+  },
+  {
+    name: "花瓶岩",
+    pictureUrl: "http://210.69.151.212/ptngis/files/photos/l/marks/C1-11501.jpg" // pictureUrl 圖片網址錯誤
+  }
+];
+const list = document.querySelector(".list");
+
+// 初始化狀態 - 渲染資料
+function dataRender() {
+  // 初始化一個空字串
+  let str = "";
+
+  data.forEach(function (item, index) {
+    // let content = `&lt;li&gt;
+    //   &lt;h2&gt;${item.name}&lt;/h2&gt;
+    //   &lt;img src="${item.pictureUrl}" alt="圖片"&gt;
+    // &lt;/li&gt;`;
+    // str+=content;
+
+    let content = `&lt;li&gt;
+        &lt;h2&gt;${item.name}&lt;/h2&gt;
+        &lt;img src="${item.pictureUrl}" alt="${item.name}" &gt;
+      &lt;/li&gt;`;
+    str += content;
+    // }
+  });
+
+  list.innerHTML = str;
+}
+dataRender();
+
+// 綁定監聽事件
+// 最後一項錯誤的網址，瀏覽器會先去找看看有沒有，如果沒有才會觸發。所以可以看到最後一張比較慢才顯示
+const images = document.querySelectorAll("img");
+images.forEach((item) =&gt; {
+  item.addEventListener("error", (e) =&gt; {
+    // console.log(e.target);
+    e.target.setAttribute(
+      "src",
+      "https://images.unsplash.com/photo-1561657819-51c0511e35ab?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=871&amp;q=80"
+    );
+  });
+});
+
+// 第一個資料正常：圖片正常
+// 第二個沒有資料：使用取代圖片
+// 第三個是空值
+// 第四個是錯誤的圖片網址
+
+// 關於陣列圖片抓取的問題
+// 關於沒有資料、空值、錯誤的圖片網址，該怎麼處理、避免圖片區域是空白情形?
+</code></pre>
+
+
+
+<ul><li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/error_event" target="_blank" rel="noreferrer noopener">error event – MDN 文件連結</a></li></ul>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">axios – 非同步觀念</h3>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+// 測試套件有沒有載入成功
+// console.log(axios);
+
+// https://hexschool.github.io/ajaxHomework/data.json
+
+let ary = &#91;];
+
+axios.get('https://hexschool.github.io/ajaxHomework/data.json')
+  .then(function (response) {
+    console.log('資料有回傳了');
+    ary = response.data;
+    console.log(ary);
+  });
+
+  console.log(ary);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   &#91;]           all.js:15
+   資料有回傳了  all.js:10
+   &#91;{...}]      all.js:12</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">透過函式設計處理非同步</h3>
+
+
+
+<p>資料回傳後，再執行函式。</p>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;js-compulsory&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;h1&gt;js-compulsory&lt;/h1&gt;
+  &lt;h2 class="title"&gt;&lt;/h2&gt;
+
+  &lt;script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"&gt;&lt;/script&gt;
+  &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+// 測試套件有沒有載入成功
+// console.log(axios);
+
+// https://hexschool.github.io/ajaxHomework/data.json
+
+let ary = &#91;];
+
+axios.get('https://hexschool.github.io/ajaxHomework/data.json')
+  .then(function(response) {
+    console.log('資料有回傳了'); // 1
+    ary = response.data;
+    renderData();
+  });
+
+// 渲染資料
+function renderData() {
+  console.log(ary); // 2
+  const title =  document.querySelector('.title');
+  // title.textContent = '測試';
+  title.textContent = ary&#91;0].name;
+}
+console.log(ary);  // 3
+
+// 執行的先後順序 3 → 1 → 2</code></pre>
+
+
+
+<h3>AJAX – axios 套件教學小節測驗</h3>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">第五週總複習</h3>
+
+
+
+<h2>網路請求補充知識 (還未觀看)</h2>
+
+
+
+<h3>從 Wireshark、Fiddler 深入了解網路請求</h3>
+
+
+
+<h3>計算機網路總結</h3>
+
+
+
+<h2>AJAX POST API 講解</h2>
+
+
+
+<h3>網路請求種類介紹</h3>
+
+
+
+<ul><li><a href="https://developer.mozilla.org/zh-TW/docs/Web/HTTP/Methods" target="_blank" rel="noreferrer noopener">HTTP 請求方法</a></li></ul>
+
+
+
+<h3>post 網路請求文件介紹</h3>
+
+
+
+<ul><li>
+<a rel="noreferrer noopener" href="https://github.com/hexschool/nodejs_ajax_tutorial" target="_blank">本小節練習用 API 網址</a><ul>
+<li>註冊</li>
+<li>登入</li>
+</ul>
+</li></ul>
+
+
+
+<h4>六角學院 AJAX 練習</h4>
+
+
+
+<p>注意，此範例僅供練習，並不會儲存用戶資料至資料庫(僅緩存)。</p>
+
+
+
+<h5>註冊</h5>
+
+
+
+<p>新增一個帳號。</p>
+
+
+
+<ul>
+<li>Method: POST</li>
+<li>URL: https://hexschool-tutorial.herokuapp.com/api/signup</li>
+<li>Data:</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>{
+  email: 'lovef2e@hexschool.com',
+  password: '12345678'
+}</code></pre>
+
+
+
+<ul><li>Success Response:</li></ul>
+
+
+
+<pre class="wp-block-code"><code>{
+  "success": true,
+  "result": {},
+  "message": "帳號註冊成功"
+}</code></pre>
+
+
+
+<ul><li>Error Response:</li></ul>
+
+
+
+<pre class="wp-block-code"><code>{
+  "success": false,
+  "result": {},
+  "message": "此帳號已被使用"
+}</code></pre>
+
+
+
+<h5>登入</h5>
+
+
+
+<p>登入一個已存在的帳號。</p>
+
+
+
+<ul>
+<li>Method: POST</li>
+<li>URL: https://hexschool-tutorial.herokuapp.com/api/signin</li>
+<li>Data:</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>{
+  email: 'lovef2e@hexschool.com',
+  password: '12345678'
+}</code></pre>
+
+
+
+<ul><li>Success Response:</li></ul>
+
+
+
+<pre class="wp-block-code"><code>{
+  "success": true,
+  "result" {},
+  "message": "登入成功"
+}</code></pre>
+
+
+
+<ul><li>Error Response:</li></ul>
+
+
+
+<pre class="wp-block-code"><code>{
+  "success": false,
+  "result": {},
+  "message": "此帳號不存在或帳號密碼錯誤"
+}</code></pre>
+
+
+
+<h3>四種常見的 POST 請求 content-type 介紹</h3>
+
+
+
+<h4>請求資料格式 request header Content-Type</h4>
+
+
+
+<ul>
+<li>application/x-www-form-urlencoded</li>
+<li>application/json</li>
+<li>multipart/form-data</li>
+<li>text/plain (記事本格式最少使用)</li>
+</ul>
+
+
+
+<p>axios 預設屬於第2種請求資料格式，支援其他格式、可以自己設定。</p>
+
+
+
+<p>multipart/form-data，傳送檔案格式的時候，檔案：圖片、pdf、word、mp4。</p>
+
+
+
+<h3>透過 axios 實作註冊 post 網路請求</h3>
+
+
+
+<ul>
+<li><a rel="noreferrer noopener" href="https://github.com/hexschool/nodejs_ajax_tutorial" target="_blank">本小節練習用 API 網址</a></li>
+<li><a href="https://github.com/axios/axios" target="_blank" rel="noreferrer noopener">axios 文件連結</a></li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// axios post 範例
+
+axios.post('/user', {
+    firstName: 'Fred',
+    lastName: 'Flintstone'
+  })
+  .then(function (response) {
+    console.log(response);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;JS必修篇&lt;/title&gt;  
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"&gt;&lt;/script&gt;
+  &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+// URL
+// https://hexschool-tutorial.herokuapp.com/api/signup
+
+let obj =  {
+  email: 'hexschool2021@hexschool.com',
+  password: '12345678'
+}
+
+axios.post('https://hexschool-tutorial.herokuapp.com/api/signup', obj)
+.then(function (response) {
+  console.log(response);
+})
+.catch(function (error) {
+  console.log(error);
+});</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   {data: {…}, status: 200, statusText: 'OK', headers: {…}, config: {…},&nbsp;…}
+   XHR finished loading: POST "https://hexschool-tutorial.herokuapp.com/api/signup"
+&gt;</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">從 chrome 觀察 post 請求</h3>
+
+
+
+<ul><li>Chrome Network<ul>
+<li>Name</li>
+<li>Headers</li>
+<li>Payload</li>
+<li>Preview</li>
+<li>Response</li>
+</ul>
+</li></ul>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 1
+
+// URL
+// https://hexschool-tutorial.herokuapp.com/api/signup
+
+let obj =  {
+  email: 'hexschool2021@hexschool.com',
+  password: '12345678'
+}
+
+axios.post('https://hexschool-tutorial.herokuapp.com/api/signup', obj)
+.then(function (response) {
+  console.log(response);
+})
+.catch(function (error) {
+  console.log(error);
+});</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.html - 2
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;JS必修篇&lt;/title&gt;  
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"&gt;&lt;/script&gt;
+  &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 2
+
+// URL
+// https://hexschool-tutorial.herokuapp.com/api/signup
+
+function callSignUp(){
+  let obj =  {
+    email: 'hexschool2021@hexschool.com',
+    password: '12345678'
+  }
+  
+  axios.post('https://hexschool-tutorial.herokuapp.com/api/signup', obj)
+  .then(function (response) {
+    console.log(response);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 2
+&gt;  callSignUp();
+&lt;  undefined
+   {data: {…}, status: 200, statusText: 'OK', headers: {…}, config: {…},&nbsp;…}
+   XHR finished loading: POST "https://hexschool-tutorial.herokuapp.com/api/signup"
+&gt;</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">實作 axios DOM 表單註冊流程</h3>
+
+
+
+<ul><li><a href="https://codepen.io/hexschool/pen/jOVgyPr?editors=1010" target="_blank" rel="noreferrer noopener">本小節 Codepen 範例程式碼</a></li></ul>
+
+
+
+<pre class="wp-block-code"><code>// 範例程式碼 index.html
+
+帳號：
+  &lt;input type="text" class="account"&gt;
+  &lt;br&gt;
+  密碼：
+  &lt;input type="text" class="password"&gt;
+  &lt;br&gt;
+  &lt;input type="button" value="送出" class="send"&gt;
+  &lt;script src="https://unpkg.com/axios/dist/axios.min.js"&gt;&lt;/script&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 範例程式碼 - script.js
+
+const account = document.querySelector('.account');
+const password = document.querySelector('.password');
+const send = document.querySelector('.send');
+
+send.addEventListener('click',function(e){
+  callSingUp()
+})
+function callSingUp(){
+  if (account.value == "" || password.value==""){
+    alert("請填寫正確資訊");
+    return;
+  }
+  let obj = {};
+  obj.email = account.value;
+  obj.password = password.value;
+  axios.post('https://hexschool-tutorial.herokuapp.com/api/signup', obj)
+    .then(function (response) {
+      if (response.data.message=="帳號註冊成功"){
+        alert("恭喜帳號註冊成功");
+      }else{
+        alert("帳號註冊失敗，有可能有人用你的email註冊！");
+      }
+      account.value = "";
+      password.value="";
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;JS必修篇&lt;/title&gt; 
+  &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;div class="container"&gt;
+    &lt;form&gt;
+      &lt;h2&gt;註冊帳號&lt;/h2&gt;
+      &lt;label for="account"&gt;帳號：&lt;/label&gt;
+      &lt;input id="account" type="text" class="account" placeholder="請輸入帳號"&gt;
+      
+      &lt;br&gt;&lt;br&gt;
+      
+      &lt;label for="password"&gt;密碼：&lt;/label&gt;
+      &lt;input id="password" type="password" class="password" placeholder="請輸入密碼"&gt;
+      
+      &lt;br&gt;&lt;br&gt;
+      
+      &lt;input type="button" value="送出" class="send"&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+
+  &lt;script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"&gt;&lt;/script&gt;
+  &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// style.css
+
+/* css reset start */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* css reset end */
+
+/* css reset settings start */
+*,*::before,*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* css reset settings end */
+
+/* css styles start */
+*,*:before,*:after {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 940px;
+  margin: 12% auto;
+}
+
+form {
+  max-width: 375px;
+  width: 100%;
+  margin: 0 auto;
+  background: #eee;
+}
+
+form h2 {
+  font-size: 28px;
+  text-align: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+form label {
+  width: 100%;
+  display: block;
+  margin-bottom: 16px;
+  padding-left: 5%;
+  font-size: 20px;
+}
+
+.account, .password {
+  width: 90%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-size: 20px;
+}
+
+.send {
+  margin-left: 5%;
+  margin-bottom: 16px;
+  padding: 8px 16px;
+  background: #353535;
+  color: #fff;
+  border-radius: 4px;
+  border: 0;
+  font-size: 20px;
+}
+
+.send:hover {
+  background: #c9184a;
+}
+
+/* css styles end */</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+// URL
+// https://hexschool-tutorial.herokuapp.com/api/signup
+
+const account = document.querySelector('.account');
+const password = document.querySelector('.password');
+const send = document.querySelector('.send');
+
+// console.log(account,password,send);
+
+send.addEventListener('click',function(e){
+  // console.log('是否被點擊');
+  callSignUp();
+
+});
+
+function callSignUp(){
+  // email: 'hexschool2021@hexschool.com',
+  // password: '12345678'
+  if(account.value == "" || password.value == ""){
+    alert("請填寫正確資訊");
+    return;
+  }
+  let obj =  {};
+  obj.email = account.value;
+  obj.password = password.value;
+  console.log(obj);
+  
+  axios.post('https://hexschool-tutorial.herokuapp.com/api/signup', obj)
+  .then(function (response) {
+    // console.log(response);
+    // alert(response.data.message);
+    if(response.data.message == "帳號註冊成功"){
+      alert("恭喜帳號註冊成功");
+    }
+    else {
+      alert("此帳號註冊失敗，有可能有人用你的email註冊！");
+    }
+    account.value = "";
+    password.value = "";
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+}</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">AJAX POST 小節作業</h3>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;JS必修篇&lt;/title&gt; 
+  &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;!-- 註冊帳號 --&gt;
+  &lt;div class="container"&gt;
+    &lt;form&gt;
+      &lt;h2&gt;註冊帳號&lt;/h2&gt;
+      &lt;label for="account-signup"&gt;帳號：&lt;/label&gt;
+      &lt;input id="account-signup" type="text" class="account account-signup" placeholder="請輸入帳號"&gt;
+      
+      &lt;br&gt;&lt;br&gt;
+      
+      &lt;label for="password-signup"&gt;密碼：&lt;/label&gt;
+      &lt;input id="password-signup" type="password" class="password password-signup" placeholder="請輸入密碼"&gt;
+      
+      &lt;br&gt;&lt;br&gt;
+      
+      &lt;input type="button" value="送出" class="send send-signup"&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+
+  &lt;!-- 登入帳號 --&gt;
+  &lt;div class="container"&gt;
+    &lt;form&gt;
+      &lt;h2&gt;登入帳號&lt;/h2&gt;
+      &lt;label for="account-signin"&gt;帳號：&lt;/label&gt;
+      &lt;input id="account-signin" type="text" class="account account-signin" placeholder="請輸入帳號"&gt;
+      
+      &lt;br&gt;&lt;br&gt;
+      
+      &lt;label for="password-signin"&gt;密碼：&lt;/label&gt;
+      &lt;input id="password-signin" type="password" class="password password-signin" placeholder="請輸入密碼"&gt;
+      
+      &lt;br&gt;&lt;br&gt;
+      
+      &lt;input type="button" value="送出" class="send send-signin"&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+
+  &lt;script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"&gt;&lt;/script&gt;
+  &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// style.css
+
+/* css reset start */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* css reset end */
+
+/* css reset settings start */
+*,*::before,*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* css reset settings end */
+
+/* css styles start */
+.container {
+  max-width: 940px;
+  margin: 12% auto;
+}
+
+form {
+  max-width: 375px;
+  width: 100%;
+  margin: 0 auto;
+  background: #eee;
+}
+
+form h2 {
+  font-size: 28px;
+  text-align: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+form label {
+  width: 100%;
+  display: block;
+  margin-bottom: 16px;
+  padding-left: 5%;
+  font-size: 20px;
+}
+
+.account, .password {
+  width: 90%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-size: 20px;
+}
+
+.send {
+  margin-left: 5%;
+  margin-bottom: 16px;
+  padding: 8px 16px;
+  background: #353535;
+  color: #fff;
+  border-radius: 4px;
+  border: 0;
+  font-size: 20px;
+}
+
+.send:hover {
+  background: #c9184a;
+}
+
+/* css styles end */</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+// URL
+// https://hexschool-tutorial.herokuapp.com/api/signup
+
+const accountSignup = document.querySelector('.account-signup');
+const passwordSignup = document.querySelector('.password-signup');
+const sendSignup = document.querySelector('.send-signup');
+
+// console.log(accountSignup,passwordSignup,sendSignup);
+
+sendSignup.addEventListener('click',function(e){
+  // console.log('是否被點擊');
+  callSignUp();
+
+});
+
+function callSignUp(){
+  // email: 'hexschool2021@hexschool.com',
+  // password: '12345678'
+  if(accountSignup.value == "" || passwordSignup.value == ""){
+    alert("請填寫正確資訊");
+    return;
+  }
+  let objSignup =  {};
+  objSignup.email = accountSignup.value;
+  objSignup.password = passwordSignup.value;
+  // console.log(objSignup);
+  
+  axios.post('https://hexschool-tutorial.herokuapp.com/api/signup', objSignup)
+  .then(function (response) {
+    // console.log(response);
+    // alert(response.data.message);
+    if(response.data.message == "帳號註冊成功"){
+      alert("恭喜帳號註冊成功");
+    }
+    else {
+      alert("此帳號註冊失敗，有可能有人用你的email註冊！");
+    }
+    accountSignup.value = "";
+    passwordSignup.value = "";
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+}
+
+// URL
+// https://hexschool-tutorial.herokuapp.com/api/signin
+
+const accountSignin = document.querySelector('.account-signin');
+const passwordSignin = document.querySelector('.password-signin');
+const sendSignin = document.querySelector('.send-signin');
+
+// console.log(accountSignin,passwordSignin,sendSignin);
+
+sendSignin.addEventListener('click',function(e){
+  // console.log('是否被點擊');
+  callSignin();
+});
+
+function callSignin(){
+  if(accountSignin.value == "" || passwordSignin.value == ""){
+    alert("請填寫正確資訊");
+    return;
+  }
+  let objSignin = {};
+  objSignin.email = accountSignin.value;
+  objSignin.password = passwordSignin.value;
+  // console.log(objSignin);
+
+  axios.post('https://hexschool-tutorial.herokuapp.com/api/signin', objSignin)
+    .then(function (response) {
+      // console.log(response);
+      // alert(response.data.message);
+      if(response.data.message == '登入成功'){
+        alert("帳號登入成功");
+      }
+      else {
+        alert('此帳號登入失敗，請重新登入帳號');
+      }
+      accountSignin.value = "";
+      passwordSignin.value = "";
+    })
+    .catch(function (error) {
+      console.log(error);
+    })
+}
+</code></pre>
+
+
+
+<h3>AJAX POST API 講解小節測驗</h3>
+
+
+
+<h2>todolist 待辦事項</h2>
+
+
+
+<h3>todolist 經典題目介紹</h3>
+
+
+
+<ul><li><a href="https://codepen.io/hexschool/pen/OJWRqrN" target="_blank" rel="noreferrer noopener">todolist 範例程式碼</a></li></ul>
+
+
+
+<h3>取值複習 getAttribute</h3>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;JS必修篇&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;h2 class="title"&gt;標題內容&lt;/h2&gt;
+  
+  &lt;script src="all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+const title = document.querySelector(".title");
+
+// console.log(title);
+
+title.addEventListener("click",function(e){
+  // console.log(e.target);
+  console.log(e.target.textContent);
+  console.log(e.target.getAttribute("class"));
+});</code></pre>
+
+
+
+<h3>範圍內容取值</h3>
+
+
+
+<h4>方法一</h4>
+
+
+
+<pre class="wp-block-code"><code>// index.html - 1
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;JS必修篇&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;h2 class="title"&gt;
+    &lt;span&gt;標題內容&lt;/span&gt;
+    &lt;input type="button" value="檢視"&gt;
+  &lt;/h2&gt;
+  
+  &lt;script src="all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 1
+
+const title = document.querySelector(".title");
+
+// console.log(title);
+
+title.addEventListener("click",function(e){
+  // console.log(e.target);
+  // console.log(e.target.textContent);
+  // console.log(e.target.getAttribute("class"));
+  
+  // console.log(e.target.nodeName);
+  if (e.target.nodeName!=="INPUT") {
+    return;
+  }
+  // console.log('你有正確點到 input');
+  console.log(e.target.getAttribute("value"));
+
+});</code></pre>
+
+
+
+<h4>方法二</h4>
+
+
+
+<pre class="wp-block-code"><code>// index.html - 2
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;JS必修篇&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;h2 class="title"&gt;
+    &lt;span&gt;標題內容&lt;/span&gt;
+    &lt;input type="button" class="view" value="檢視"&gt;
+  &lt;/h2&gt;
+  
+  &lt;script src="all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 2
+
+const title = document.querySelector(".title");
+
+title.addEventListener("click",function(e){
+  if (e.target.getAttribute("class")=="view") {
+    console.log(e.target.getAttribute("value"));
+  }
+
+});</code></pre>
+
+
+
+<h3>監聽大範圍內容取值</h3>
+
+
+
+<pre class="wp-block-code"><code>// index.html - 1
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;JS必修篇&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;div class="box"&gt;
+    &lt;h2 class="title"&gt;
+      &lt;span&gt;標題1&lt;/span&gt;
+      &lt;input type="button" class="view" value="檢視1"&gt;
+    &lt;/h2&gt;
+    &lt;h2 class="title"&gt;
+      &lt;span&gt;標題2&lt;/span&gt;
+      &lt;input type="button" class="view" value="檢視2"&gt;
+    &lt;/h2&gt;
+    &lt;h2 class="title"&gt;
+      &lt;span&gt;標題3&lt;/span&gt;
+      &lt;input type="button" class="view" value="檢視3"&gt;
+    &lt;/h2&gt;
+  &lt;/div&gt;
+
+  
+  
+  &lt;script src="all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<h4>方法一 – class 比較直覺、不會犯錯</h4>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 1
+
+const list = document.querySelector('.box');
+// console.log(list);
+list.addEventListener('click',function(e){
+  // console.log(e.target.nodeName);
+  if (e.target.getAttribute('class') == 'view'){
+    console.log(e.target.getAttribute('value'));
+
+  }
+});
+
+</code></pre>
+
+
+
+<h4>方法二</h4>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 2
+
+const list = document.querySelector('.box');
+// console.log(list);
+list.addEventListener('click',function(e){
+  // console.log(e.target.nodeName);
+  if (e.target.nodeName == "INPUT"){
+    console.log(e.target.getAttribute('value'));
+
+  }
+});
+</code></pre>
+
+
+
+<h4>方法三</h4>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 3
+
+const list = document.querySelector('.box');
+// console.log(list);
+list.addEventListener('click',function(e){
+  // console.log(e.target.nodeName);
+  if (e.target.nodeName !== "INPUT"){
+    return;
+  }
+  console.log(e.target.getAttribute('value'));
+
+});
+</code></pre>
+
+
+
+<h3>data- 屬性妙用</h3>
+
+
+
+<ul><li>data- 屬性取值，data-自訂名稱=”值”<ul><li>例如：data-num=”3″、data-content=”標題內容”</li></ul>
+</li></ul>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;JS必修篇&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;h2 class="title" data-content="標題內容" data-num="3"&gt;標題內容&lt;/h2&gt;
+  
+  &lt;script src="all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+const title = document.querySelector('.title');
+// console.log(title);
+
+console.log(title.getAttribute("data-content"));
+console.log(title.getAttribute("data-num"));
+
+let data = title.getAttribute("data-content");
+
+console.log(data);</code></pre>
+
+
+
+<h3>HTML 結構設計</h3>
+
+
+
+<h4>畫面實作</h4>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;JS必修篇&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;input type="text" class="txt" placeholder="請輸入待辦事項"&gt;
+  &lt;input type="button" class="save" value="儲存待辦"&gt;
+  &lt;ul class="list"&gt;
+    &lt;li&gt;待辦事項一 &lt;input class="delete" type="button" value="刪除待辦"&gt;&lt;/li&gt;
+    &lt;li&gt;待辦事項二 &lt;input class="delete" type="button" value="刪除待辦"&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;script src="all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<h3>資料初始化渲染</h3>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;JS必修篇&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;input type="text" class="txt" placeholder="請輸入待辦事項"&gt;
+  &lt;input type="button" class="save" value="儲存待辦"&gt;
+  &lt;ul class="list"&gt;
+    
+  &lt;/ul&gt;
+  &lt;script src="all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 1
+
+let data = &#91;
+  {
+    "content": "待辦事項一"
+  },
+  {
+    "content": "今天記得刷牙"
+  }
+]
+
+let str = '';
+data.forEach(function(item){
+  str+=`
+  &lt;li&gt;${item.content} &lt;input class="delete" type="button" value="刪除待辦"&gt;&lt;/li&gt;
+  `
+});
+// console.log(str);
+const list = document.querySelector(".list");
+list.innerHTML = str;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 2
+
+let data = &#91;
+  {
+    "content": "待辦事項一"
+  },
+  {
+    "content": "今天記得刷牙"
+  }
+]
+
+function renderData(){
+  let str = '';
+  data.forEach(function(item){
+    str+=`
+    &lt;li&gt;${item.content} &lt;input class="delete" type="button" value="刪除待辦"&gt;&lt;/li&gt;
+    `
+  });
+  // console.log(str);
+  const list = document.querySelector(".list");
+  list.innerHTML = str;
+}
+
+renderData();
+</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">待辦新增功能</h3>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;JS必修篇&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;input type="text" class="txt" placeholder="請輸入待辦事項"&gt;
+  &lt;input type="button" class="save" value="儲存待辦"&gt;
+  &lt;ul class="list"&gt;
+    
+  &lt;/ul&gt;
+  &lt;script src="all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+const txt = document.querySelector('.txt');
+const save = document.querySelector('.save');
+// console.log(txt);
+// console.log(save);
+
+let data = &#91;];
+
+function renderData(){
+  let str = '';
+  data.forEach(function(item){
+    str+=`
+    &lt;li&gt;${item.content} &lt;input class="delete" type="button" value="刪除待辦"&gt;&lt;/li&gt;
+    `
+  });
+  // console.log(str);
+  const list = document.querySelector(".list");
+  list.innerHTML = str;
+}
+
+save.addEventListener('click',function(e){
+  // console.log('你點擊到了');
+
+  if(txt.value==""){
+    alert("請輸入內容");
+    return;
+  }
+  // {
+  //   "content": "待辦事項一"
+  // }
+  let obj = {};
+  obj.content = txt.value;
+  // console.log(txt.value);
+  // console.log(obj);
+  data.push(obj);
+  renderData();
+});
+
+// renderData();</code></pre>
+
+
+
+<h3>待辦刪除功能-前置解說</h3>
+
+
+
+<ul>
+<li>splice 刪除指定資料</li>
+<li>forEach 會用到 index 索引值</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;JS必修篇&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;input type="text" class="txt" placeholder="請輸入待辦事項"&gt;
+  &lt;input type="button" class="save" value="儲存待辦"&gt;
+  &lt;ul class="list"&gt;
+    
+  &lt;/ul&gt;
+  &lt;script src="all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+const txt = document.querySelector('.txt');
+const save = document.querySelector('.save');
+// console.log(txt);
+// console.log(save);
+
+let data = &#91;];
+
+function renderData(){
+  let str = '';
+  data.forEach(function(item,index){
+    str+=`
+    &lt;li&gt;${item.content} &lt;input class="delete" type="button" data-num="${index}" value="刪除待辦"&gt;&lt;/li&gt;
+    `
+  });
+  // console.log(str);
+  const list = document.querySelector(".list");
+  list.innerHTML = str;
+}
+
+save.addEventListener('click',function(e){
+  // console.log('你點擊到了');
+
+  if(txt.value==""){
+    alert("請輸入內容");
+    return;
+  }
+  // {
+  //   "content": "待辦事項一"
+  // }
+  let obj = {};
+  obj.content = txt.value;
+  // console.log(txt.value);
+  // console.log(obj);
+  data.push(obj);
+  renderData();
+});
+
+// renderData();</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">待辦刪除功能</h3>
+
+
+
+<ul><li><a href="https://codepen.io/hexschool/pen/OJWRqrN" target="_blank" rel="noreferrer noopener">待辦功能刪除範例程式碼</a></li></ul>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;JS必修篇&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;input type="text" class="txt" placeholder="請輸入待辦事項"&gt;
+  &lt;input type="button" class="save" value="儲存待辦"&gt;
+  &lt;ul class="list"&gt;
+    
+  &lt;/ul&gt;
+  &lt;script src="all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+const txt = document.querySelector('.txt');
+const save = document.querySelector('.save');
+const list = document.querySelector('.list');
+// console.log(txt);
+// console.log(save);
+// console.log(list);
+
+let data = &#91;];
+
+function renderData(){
+  let str = '';
+  data.forEach(function(item,index){
+    str+=`
+    &lt;li&gt;${item.content} &lt;input class="delete" type="button" data-num="${index}" value="刪除待辦"&gt;&lt;/li&gt;
+    `
+  });
+  // console.log(str);
+  const list = document.querySelector(".list");
+  list.innerHTML = str;
+}
+
+// 新增待辦功能
+save.addEventListener('click',function(e){
+  // console.log('你點擊到了');
+
+  if(txt.value==""){
+    alert("請輸入內容");
+    return;
+  }
+  // {
+  //   "content": "待辦事項一"
+  // }
+  let obj = {};
+  obj.content = txt.value;
+  // console.log(txt.value);
+  // console.log(obj);
+  data.push(obj);
+  renderData();
+});
+
+// 刪除待辦功能
+list.addEventListener('click',function(e){
+  // console.log(e.target.nodeName);
+  if(e.target.getAttribute('class',"delete")!=="delete"){
+    alert('你目前不是點擊到按鈕');
+    return;
+  }
+  // alert('你目前有確實點到刪除按鈕');
+  let num = e.target.getAttribute("data-num");
+  console.log(num);
+  data.splice(num,1);
+  renderData();
+});
+
+// renderData();</code></pre>
+
+
+
+<h3>todolist 待辦事項小節測驗</h3>
+
+
+
+<h2>陣列資料操作</h2>
+
+
+
+<h3>陣列操作 – map</h3>
+
+
+
+<h4>JS array map</h4>
+
+
+
+<ol>
+<li>能將原始陣列運算後，重新組合回傳一個新陣列</li>
+<li>不會影響到原陣列</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 1
+
+// 第一個範例
+const arr = &#91;1,5,10];
+const newArr = arr.map(function(item){
+  return item*item;
+});
+
+console.log(newArr);
+console.log(arr);
+
+// 第二個範例
+const data = &#91;1,8,13,20];
+const newData = data.map(function(item){
+  return item&gt;10;
+});
+
+console.log(data);
+console.log(newData);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 1
+   (3) &#91;1, 25, 100]
+   (3) &#91;1, 5, 10]
+   (4) &#91;1, 8, 13, 20]
+   (4) &#91;false, false, true, true]
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js -2
+
+// 第三個範例
+const data = &#91;1,8,13,20];
+const newData = data.map(function(item){
+  let obj = {};
+  obj.checkNum = item &gt; 10;
+  return obj;
+});
+
+console.log(data);
+console.log(newData);
+
+// {
+//   checkNum: true;
+// }</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 2
+   (4) &#91;1, 8, 13, 20]
+   (4) &#91;{...},{...},{...},{...}]
+&gt;</code></pre>
+
+
+
+<h3>陣列操作 – map 補充</h3>
+
+
+
+<ul>
+<li>map 觀念補充</li>
+<li>map、forEach 差異</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 1
+
+// map 觀念補充、map,forEach 差異
+
+const arr = &#91;1,5,10];
+const newArr = arr.map(function(item){
+  // return item*item;
+});
+
+console.log(newArr);
+console.log(arr);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 1
+   (3) &#91;undefined, undefined, undefined]
+   (3) &#91;1, 5, 10]
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 2
+
+// map 觀念補充、map,forEach 差異
+
+const arr = &#91;1,5,10];
+const newArr = arr.forEach(function(item){
+  return item*item;
+});
+
+console.log(newArr);
+console.log(arr);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 2
+   undefined
+   (3) &#91;1, 5, 10]
+&gt;</code></pre>
+
+
+
+<p>forEach 並沒有回傳一個新陣列的特性、也沒辦法用 return 回傳值。forEach 使用時機，裡面資料都跑一次，加總、額外處理、空陣列組出要的資料。</p>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 3
+
+// map 觀念補充、map,forEach 差異
+
+const arr = &#91;1,5,10];
+let total = 0;
+arr.forEach(function(item){
+  total+=item;
+});
+
+console.log(arr);
+console.log(total);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 3
+   (3) &#91;1, 5, 10]
+   16
+&gt;</code></pre>
+
+
+
+<p>map 使用情境，新變數要拿原始變數回傳一個陣列的時候，處理陣列、回傳一個組合好的陣列，map 就比較合適。</p>
+
+
+
+<ul><li>有無 return，forEach 沒有 return、map 有 return</li></ul>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">陣列操作 – filter 資料篩選</h3>
+
+
+
+<h4>JS array filter 篩選</h4>
+
+
+
+<ol>
+<li>篩選出符合條件的內容</li>
+<li>不會影響到原陣列</li>
+</ol>
+
+
+
+<p>常用於比價、下拉選擇市區、有誰有及格。</p>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 1
+
+// JS array filter 篩選
+// 1.篩選出符合條件的內容，組合後回傳新陣列。
+// 2.不會影響到原陣列
+// 常用於比價、下拉選擇市區
+
+const arr = &#91;1,5,10];
+const newArr = arr.filter(function(item){
+  return item &gt;= 5;
+});
+
+console.log(newArr);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 1
+   (2) &#91;5, 10]
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 2
+
+// JS array filter 篩選
+// 1.篩選出符合條件的內容，組合後回傳新陣列。
+// 2.不會影響到原陣列
+// 常用於比價、下拉選擇市區、有誰有及格
+
+// 分數
+const scoreData = &#91;
+  {
+    name: "小明",
+    score: 88
+  },
+  {
+    name: "小英",
+    score: 62
+  },
+  {
+    name: "小花",
+    score: 53
+  }
+];
+
+const filterScore = scoreData.filter(function(item){
+  return item.score &gt;= 60;
+});
+
+console.log(filterScore);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 2
+   (2) &#91;{...},{...}]
+&gt;</code></pre>
+
+
+
+<h3>陣列操作 – find 尋找頭一筆資料</h3>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+// JS array find 尋找頭一筆資料
+
+const arr = &#91;1,2,3,5,10,20,30,40];
+
+const newArr = arr.find(function(item){
+  console.log(item);
+  return item &gt;= 5;
+});
+
+console.log(newArr);
+
+// 分數
+const scoreData = &#91;
+  {
+    name: "小明",
+    score: 88
+  },
+  {
+    name: "小英",
+    score: 62
+  },
+  {
+    name: "小花",
+    score: 53
+  }
+];
+
+const filterScore = scoreData.find(function(item){
+  return item.score &gt;= 60;
+});
+
+console.log(filterScore);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   1
+   2
+   3
+   5
+   5
+   {name: '小明', score: 88}
+&gt;</code></pre>
+
+
+
+<h3>陣列操作 – findindex 尋找資料索引</h3>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+// find 值提取出來
+// findIndex 索引 編號
+
+const colors = &#91;'red','blue','black'];
+
+const blueIndex = colors.findIndex(function(item){
+  return item == "blue";
+});
+
+console.log(blueIndex);
+
+// 訂單編號
+
+const orders = &#91;
+  {
+    name: '小廖',
+    orderId: '12384955'
+  },
+  {
+    name: '小華',
+    orderId: '12384945'
+  },
+  {
+    name: '小美',
+    orderId: '12314955'
+  },
+];
+
+const huaId = orders.findIndex(function(item){
+  return item.orderId == "12384945";
+});
+
+console.log(huaId);
+console.log(`這個訂單編號是${orders&#91;huaId].name}`);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+
+   1
+   1
+   這個訂單編號是小華
+&gt;</code></pre>
+
+
+
+<h3>陣列資料操作小節測驗</h3>
+
+
+
+<h2>箭頭函式</h2>
+
+
+
+<h3>函式陳述式與函式表達式差異</h3>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 1
+
+// 箭頭函式
+
+// 函式陳述式
+function numA (x){
+  return x * x;
+}
+
+// 函式表達式
+const numB = function(x){
+  return x * x;
+}
+
+const numC = (x) =&gt; {
+  return x * x;
+}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 1
+&gt;  numA(3)
+&lt;  9
+&gt;  numB(3)
+&lt;  9
+&gt;  numC(3)
+&lt;  9
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 1
+&gt;  numB
+&lt;  f (x){
+     return x * x;
+   }
+&gt;  numB(3)
+&lt;  9
+&gt;</code></pre>
+
+
+
+<p>函式陳述式有提升的特性，函式表達式沒有提升的特性。</p>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 2
+
+console.log(numA(3));
+// 函式陳述式
+function numA (x){
+  return x * x;
+}
+console.log(numA(3));
+
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 2
+   9
+   9
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 3
+
+console.log(numB(3));
+// 函式表達式
+const numB = function(x){
+  return x * x;
+}
+// console.log(numB(3));
+
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 3
+x  Uncaught ReferenceError: Cannot access 'numB' before initialization at xxx
+&gt;</code></pre>
+
+
+
+<h3>箭頭函式基本寫法</h3>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+// 函式表達式
+const numA = function(x){
+  return x * x;
+}
+
+console.log(numA(3));
+
+// 箭頭函式
+const numB = (x) =&gt;{
+  return x * x * x;
+}
+
+console.log(numB(4));</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   9
+   64
+&gt;</code></pre>
+
+
+
+<h3>箭頭函式再縮寫</h3>
+
+
+
+<h4>縮寫寫法</h4>
+
+
+
+<ol>
+<li>如果函式搭配到 return</li>
+<li>如果只有一個參數，可以省略括號</li>
+<li>沒有參數，還是要有空括號</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+// 箭頭函式
+// 縮寫寫法
+// 1.如果函式搭配到 return
+// 2.如果只有一個參數，可以省略括號
+// 3.沒有參數，還是要有空括號
+
+const numA = (x) =&gt; {
+  return `數字相乘 ${x*x}`;
+};
+console.log(numA(3));
+
+const numB = (x) =&gt; `數字相乘 ${x*x}`;
+console.log(numB(4));
+
+const numC = x =&gt; `數字相乘 ${x*x}`;
+console.log(numC(5));
+
+const num = () =&gt; `數字相乘 ${9}`;
+console.log(num());</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   數字相乘 9
+   數字相乘 16
+   數字相乘 25
+   數字相乘 9
+&gt;</code></pre>
+
+
+
+<h3>陣列 map 搭配箭頭函式寫法</h3>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 1
+
+// 陣列操作 map、filter
+
+// const data = &#91;1,8,13,20];
+
+// const newData = data.map(function(item){
+//   return item + 2;
+// });
+
+// console.log(newData);
+
+const data = &#91;1,8,13,20];
+
+const newData = data.map(item =&gt; item + 3);
+
+console.log(newData);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 1
+   (4) &#91;4, 11, 16, 23]
+&gt;</code></pre>
+
+
+
+<p>單行可以使用箭頭函式再縮寫，多行還是建議需要加上大括號。</p>
+
+
+
+<h3>箭頭函式小節測驗</h3>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">第六週總複習</h3>
+
+
+
+<h2 class="has-background" style="background-color:#ff6663">最終關卡 – todolist 待辦事項 (未製作)</h2>
+
+
+
+<h2>JS – 彩蛋課程 – NPM 管理</h2>
+
+
+
+<h3>NPM 介紹</h3>
+
+
+
+<p>NPM 套件管理工具。</p>
+
+
+
+<h3>Node.js、NPM 環境安裝</h3>
+
+
+
+<h4>資源連結</h4>
+
+
+
+<ul>
+<li><a href="https://www.npmjs.com/" target="_blank" rel="noreferrer noopener">NPM 官網</a></li>
+<li><a href="https://nodejs.org/en/" target="_blank" rel="noreferrer noopener">Node.js 官網</a></li>
+</ul>
+
+
+
+<p>Node.js 安裝選擇 LTS(長期支援)版本安裝，比較穩定。</p>
+
+
+
+<h3>VSCode 終端機教學</h3>
+
+
+
+<h4>版本檢查</h4>
+
+
+
+<ol>
+<li>檢查 Node.js 版本： node -v</li>
+<li>檢查 NPM 版本： npm -v</li>
+</ol>
+
+
+
+<h4>開啟資料夾方式</h4>
+
+
+
+<ul>
+<li>直接拖曳資料夾到 VSCode</li>
+<li>從 VSCode 選單 File → Open Folder</li>
+</ul>
+
+
+
+<h4>開啟終端機</h4>
+
+
+
+<ul>
+<li>從 VSCode 選單 View → Terminal 開啟終端機面板</li>
+<li>終端機 – 輸入指令</li>
+<li>node -v</li>
+<li>npm-v</li>
+<li>都有回報版本號就有安裝成功</li>
+</ul>
+
+
+
+<h3>npm init – 專案環境初始化</h3>
+
+
+
+<h4>指令</h4>
+
+
+
+<ul>
+<li>專案初始化：npm init</li>
+<li>專案初始化，並提供預設值：npm init -y</li>
+</ul>
+
+
+
+<h4>開啟 Terminal 介面</h4>
+
+
+
+<ul>
+<li>View → Terminal、或者快捷鍵 Ctrl + `</li>
+<li>確認是否在專案位置</li>
+<li>輸入指令 npm init</li>
+<li>完成設定後會產生 package.json</li>
+</ul>
+
+
+
+<p>各種套件，都會同步記錄在 package.json。</p>
+
+
+
+<h3>npm install – 環境安裝教學</h3>
+
+
+
+<ul>
+<li>NPM 官網</li>
+<li>安裝模組指令：npm install 模組名稱</li>
+</ul>
+
+
+
+<p>備註：若您是 Mac 電腦，有時可能會因為權限不夠而出現紅字 err 出錯，此時請嘗試將指令改為：sudo npm install 模組名稱</p>
+
+
+
+<ul>
+<li>bootstrap – npm i bootstrap 或者 npm install bootstrap</li>
+<li>vue – npm i vue 或者 npm install vue</li>
+</ul>
+
+
+
+<h3>npm 全域安裝 -g</h3>
+
+
+
+<p>NPM 安裝範圍。</p>
+
+
+
+<ul>
+<li>package.json 檔案裡面的 dependencies 的套件，可以使用 npm install 指令安裝</li>
+<li>node_modules 不會進到 git 版本控制，通常來說只放開發的 Code</li>
+<li>package.json 裡面的 dependencies 可以安裝自己想要安裝的套件版本號</li>
+<li>全域空間 – npm install jquery -g<ul>
+<li>建議還是先把套案安裝在專案資料夾</li>
+<li>可能會運用在 jest, mocha, express…等</li>
+<li>Mac 的話會安裝在 /usr/local/lib/node_modules</li>
+</ul>
+</li>
+</ul>
+
+
+
+<h4>練習</h4>
+
+
+
+<ul>
+<li>把專案資料夾裡面 node_modules 刪除、然後使用 npm install 安裝回來</li>
+<li>可以練習使用全域空間 npm install 模組名稱 -g</li>
+</ul>
+
+
+
+<h3>–save、–save-dev 指令差異</h3>
+
+
+
+<ul>
+<li>production (上線)依賴模組：npm install 模組名稱 –save</li>
+<li>development (開發)依賴模組：npm install 模組名稱 –save-dev</li>
+</ul>
+
+
+
+<h4>Webpack套件</h4>
+
+
+
+<ul>
+<li><a rel="noreferrer noopener" href="https://webpack.js.org/" target="_blank">Webpack 官網</a></li>
+<li>安裝套件指令 npm install webpack –save-dev</li>
+</ul>
+
+
+
+<h4>練習</h4>
+
+
+
+<ul>
+<li>npm install bootstrap –save 套件安裝是在 dependencies (上線階段)</li>
+<li>npm install bootstrap –save-dev 套件安裝是在 devDependencies (開發階段)</li>
+<li>npm install bootstrap 套件安裝是在 dependencies (上線階段)</li>
+</ul>
+
+
+
+<h3>常見指令補充</h3>
+
+
+
+<ul>
+<li>更新套件：npm update 模組名稱</li>
+<li>移除套件：npm uninstall 模組名稱</li>
+</ul>
+
+
+
+<h4>舉例</h4>
+
+
+
+<ul>
+<li>npm uninstall jquery</li>
+<li>npm uninstall webpack</li>
+<li>npm uninstall vue</li>
+<li>npm uninstall bootstrap</li>
+<li>npm uninstall bootstrap -g</li>
+<li>npm update vue</li>
+</ul>
+
+
+
+<p>也可以從 package.json 修改套件的名稱、版本號，再使用 npm install 安裝套件。</p>
+
+
+
+<h2 class="has-background" style="background-color:#ff6663">webpack 壓縮打包工具管理</h2>
+
+
+
+<h3>為什麼要學 webpack?</h3>
+
+
+
+<ul><li><a href="https://webpack.js.org/" target="_blank" rel="noreferrer noopener">webpack 官網</a></li></ul>
+
+
+
+<p>前端壓縮打包工具。</p>
+
+
+
+<h4>舉例</h4>
+
+
+
+<ul>
+<li>vue</li>
+<li>react</li>
+<li>前端應用</li>
+<li>spa (單頁面應用)</li>
+</ul>
+
+
+
+<h3>webpack 環境建立</h3>
+
+
+
+<ul><li>安裝 Webpack 套件指令：npm install webpack webpack-cli –save-dev</li></ul>
+
+
+
+<h4>環境建立步驟</h4>
+
+
+
+<ul>
+<li>建立一個專案資料夾 – webpack-demo</li>
+<li>開啟終端機</li>
+<li>專案環境初始化 – npm init、快速初始化 npm init -y</li>
+<li>webpack 套件指令：npm install webpack webpack-cli –save-dev，這裡會安裝在開發環境</li>
+<li>在 package.json 的 devDependencies 裡面會產生webpack、webpack-cli 名稱、版本號就代表 Webpack 環境建立好了</li>
+</ul>
+
+
+
+<h4>Webpack Guides</h4>
+
+
+
+<ul><li><a href="https://webpack.js.org/guides/getting-started/#basic-setup" target="_blank" rel="noreferrer noopener">Basic Setup</a></li></ul>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">進入點(entry)、輸出點(output) 觀念建立</h3>
+
+
+
+<h4>Download</h4>
+
+
+
+<ul><li><a href="https://cdn.fs.teachablecdn.com/AQBQsgbuQoWCRWSPxGnm" target="_blank" rel="noreferrer noopener">webpack-entry.zip</a></li></ul>
+
+
+
+<h4>Webpack Concepts</h4>
+
+
+
+<ul>
+<li><a href="https://webpack.js.org/concepts/#entry" target="_blank" rel="noreferrer noopener">Entry</a></li>
+<li><a href="https://webpack.js.org/concepts/#output" target="_blank" rel="noreferrer noopener">Output</a></li>
+</ul>
+
+
+
+<h4>Webpack 官網圖片講解</h4>
+
+
+
+<ul><li>MODULES WITH DEPENDENCIES→bundle your scripts→STATIC ASSETS</li></ul>
+
+
+
+<ul>
+<li>進入點 – MODULES WITH DEPENDENCIES</li>
+<li>輸出點 – STATIC ASSETS</li>
+</ul>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ul>
+<li>建立 src 資料夾 – 這個就是進入點、然後在裡面建立 index.js 檔案</li>
+<li>建立 dist 資料夾 – 這個就是輸出點</li>
+<li>在 package.json 新增 “build”: “webpack” 名稱、值</li>
+<li>在終端機輸入指令：npm run build，build 叫做編譯，<br>在 dist 資料夾就會新增一個 main.js 檔案</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// src/index.js
+
+let a = 1;
+let b = 2;
+console.log("hello");
+function hello(a,b){
+  console.log(a+b);
+}
+hello(1,2);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// package.json - 新增 "build": "webpack"
+
+{
+  "name": "webpack-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" &amp;&amp; exit 1",
+    "build": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1"
+  }
+}
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// dist/main.js
+
+console.log("hello"),console.log(3);</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">webpack.config.js 環境建立</h3>
+
+
+
+<ul><li><a href="https://cdn.fs.teachablecdn.com/K7qUetNLTxvbXG6KduwG" target="_blank" rel="noreferrer noopener">webpack-config.zip</a></li></ul>
+
+
+
+<p>客製化進入點、輸出點資料夾名稱、以及裡面的檔案。</p>
+
+
+
+<ul>
+<li><a rel="noreferrer noopener" href="https://webpack.js.org/concepts/#entry" target="_blank">Webpack Concepts Entry</a></li>
+<li><a href="https://webpack.js.org/concepts/#output" target="_blank" rel="noreferrer noopener">Webpack Concepts Output</a></li>
+</ul>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ul>
+<li>新增 webpack.config.js 檔案</li>
+<li>客製化進入點路徑、輸出點檔案名稱</li>
+<li>移除輸出點 main.js 檔案</li>
+<li>開啟終端機執行指令：npm run build</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// webpack.config.js - 範例
+
+const path = require('path');
+
+module.exports = {
+  entry: './path/to/my/entry/file.js',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'my-first-webpack.bundle.js',
+  },
+};</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// webpack.config.js - 客製化
+
+const path = require('path');
+
+module.exports = {
+  entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js',
+  },
+};</code></pre>
+
+
+
+<h4>講解</h4>
+
+
+
+<ul><li>path.resolve(__dirname, ‘dist’)，可以使用 console.log 查看</li></ul>
+
+
+
+<h3>NPM script 講解</h3>
+
+
+
+<p>可以自訂、客製化指令。</p>
+
+
+
+<h4>操作步驟講解</h4>
+
+
+
+<ul>
+<li>在根目錄上新增 hello.js 檔案</li>
+<li>透過 package.json 的 “scripts” 的指令</li>
+<li>在 “scripts” 新增 “hello”: “node hello.js”</li>
+<li>打開終端機輸入指令：npm run hello</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// hello.js
+
+console.log("hello1");
+console.log("hello2");
+console.log("hello3");</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// package.json
+
+{
+  "name": "webpack-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" &amp;&amp; exit 1",
+    "hello": "node hello.js",
+    "build": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1"
+  }
+}
+</code></pre>
+
+
+
+<h3>開發、上線模式 mode 切換</h3>
+
+
+
+<ul><li><a href="https://cdn.fs.teachablecdn.com/oBB2rUUORAGMUk9NDxm7" target="_blank" rel="noreferrer noopener">webpack-mode.zip</a></li></ul>
+
+
+
+<p>終端機執行指令npm run build”，出現的訊息 “mode” option has not been set、”mode” option to ‘development’ or ‘production’ 該如何調整、差異在哪裡。</p>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ul>
+<li>在 package.json 把原本 “build”: “webpack” 改寫成開發模式 “dev”: “webpack –mode development”</li>
+<li>在 package.json 新增一個上線模式 “deploy”: “webpack –mode production”</li>
+<li>最後的結果會影響到 dist/bundle.js 檔案，他的狀況會有些差異</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// package.json
+
+{
+  "name": "webpack-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" &amp;&amp; exit 1",
+    "hello": "node hello.js",
+    "dev": "webpack --mode development",
+    "deploy": "webpack --mode production"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1"
+  }
+}
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// dist/bundle.js - 開發模式
+
+/*
+ * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+/******/ (() =&gt; { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/***/ (() =&gt; {
+
+eval("let a = 1;\r\nlet b = 2;\r\nconsole.log(\"hello\");\r\nfunction hello(a,b){\r\n  console.log(a+b);\r\n}\r\nhello(1,2);\n\n//# sourceURL=webpack://webpack-demo/./src/index.js?");
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module can't be inlined because the eval devtool is used.
+/******/ 	var __webpack_exports__ = {};
+/******/ 	__webpack_modules__&#91;"./src/index.js"]();
+/******/ 	
+/******/ })()
+;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// dits/bundle.js - 上線模式
+
+console.log("hello"),console.log(3);</code></pre>
+
+
+
+<p>開發模式產生的 bundle.js 幫助除錯、狀況條列，通常開發的時候都會用開發模式。</p>
+
+
+
+<p>上線模式產生的 bundle.js 比較精簡、把程式碼壓縮成一行、做各種優化。</p>
+
+
+
+<h4>第二種寫法 (比較少寫在這裡)</h4>
+
+
+
+<ul><li>在 webpack.config.js 寫上 mode: ‘production’</li></ul>
+
+
+
+<pre class="wp-block-code"><code>// webpack.config.js
+
+const path = require('path');
+
+module.exports = {
+  mode: 'production',
+  entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js',
+  },
+};</code></pre>
+
+
+
+<p>比較少寫在 webpack.config.js 原因是通常會透過 package.json 用下指令的方式去做開發。</p>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">export、import 語法教學</h3>
+
+
+
+<ul>
+<li>JavaScript 模組化 –&nbsp;<a rel="noreferrer noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Modules" target="_blank">JavaScript modules 模塊</a><ul>
+<li>import</li>
+<li>export</li>
+</ul>
+</li>
+<li>JS 模組化又稱作 ES Module</li>
+</ul>
+
+
+
+<figure class="wp-block-image size-full"><img width="603" height="438" src="/wordpress_blog/wp-content/uploads/2022/04/JS-模組化.png" alt="" class="wp-image-587"><figcaption>JS &#8211; 模組化</figcaption></figure>
+
+
+
+<h4>預設匯出 – 操作步驟</h4>
+
+
+
+<ul>
+<li>新增資料夾 ESModule 放 modules 做練習</li>
+<li>使用 VSCode 開啟 ESModule 專案</li>
+<li>新增一個 index.js 檔案</li>
+<li>新增一個 export1.js 檔案</li>
+<li>新增一個 index.html 檔案、並載入 &lt;script&gt; index.js、用 ESModule 要加上 type=”module” 這樣子 import export 語法才會生效</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// index.js - 1
+
+import data from "./export1.js";
+
+console.log(data);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// export1.js - 1
+export default 1;
+
+// 預設匯出</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.html - 1
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  
+
+  &lt;script src="index.js" type="module"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 1
+   1
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.js - 2
+
+import data from "./export1.js";
+
+console.log(data.a);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// export1.js - 2
+
+let a = 1;
+let b = 2;
+let c = a+b;
+
+export default {
+  a: 5,
+  content: b
+};
+
+// 預設匯出 default export</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 2
+   5
+&gt;</code></pre>
+
+
+
+<h4>其他常見做法 – 具名匯出</h4>
+
+
+
+<ul>
+<li>新增 export2.js 檔案</li>
+<li>匯入 index.js 檔案</li>
+<li>使用 * 匯入、代表全部都載入，通常不建議這樣使用，會不好除錯，使用 * 的時候要搭配 as 自訂名稱</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// export2.js - 1
+
+// 具名匯出
+
+export const c = 1;
+
+export function add(x,y){
+  return x+y;
+}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.js - 1
+
+import data from "./export1.js";
+import {c,add} from "./export2.js";
+console.log(data.a);
+
+console.log(c);
+console.log(add(2,9));</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 1
+   5
+   1
+   11
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.js - 2
+
+import data from "./export1.js";
+import {add} from "./export2.js";
+console.log(data.a);
+
+// console.log(c);
+console.log(add(2,9));</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 2
+   5
+   11
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.js - 3
+
+import data from "./export1.js";
+import * as data2 from "./export2.js";
+console.log(data.a);
+
+// console.log(c);
+console.log(data2.add(3,88));</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 3
+   5
+   91
+&gt;</code></pre>
+
+
+
+<h4>匯出做法</h4>
+
+
+
+<ul>
+<li>預設匯出</li>
+<li>具名匯出</li>
+</ul>
+
+
+
+<p>依照專案團隊開發共同討論出共識要使用那種做法。</p>
+
+
+
+<p>依老師來說會使用預設匯出的做法。</p>
+
+
+
+<h4>補充做法(冷門)</h4>
+
+
+
+<pre class="wp-block-code"><code>// export3.js
+
+function a(){
+  console.log(88);
+}
+
+a();</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.js
+
+import "./export3.js"</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   88
+&gt;</code></pre>
+
+
+
+<h4>預設匯出、具名匯出混用</h4>
+
+
+
+<pre class="wp-block-code"><code>// export2.js
+
+// 具名匯出
+
+export const c = 1;
+
+export function add(x,y){
+  return x+y;
+}
+
+export default 8;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.js
+
+import data from "./export1.js";
+import total, {c,add} from "./export2.js";
+console.log(data.a);
+
+// console.log(c);
+console.log(add(3,88));
+console.log(total);
+
+// import "./export3.js"</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   5
+   91
+   8
+&gt;</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">webpack import 載入流程</h3>
+
+
+
+<h4>Download</h4>
+
+
+
+<ul><li><a href="https://cdn.fs.teachablecdn.com/fFV1N49cRc6qjZW9opCZ" target="_blank" rel="noreferrer noopener">webpack-esmodule.zip</a></li></ul>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ul>
+<li>新增一個 c.js 在 src 資料夾裡</li>
+<li>在 src/index.js 匯入 c.js</li>
+<li>使用終端機執行指令(從 package.json 的指令) npm run dev</li>
+<li>如果要看編譯模式執行指令 npm run deploy</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// src/c.js
+
+export default 333;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// src/index.js
+
+import c from './c.js';
+let a = 1;
+let b = 2;
+console.log("hello");
+function hello(a,b){
+  console.log(a+b);
+}
+hello(1,2);
+console.log(c);</code></pre>
+
+
+
+<h3>加入 index.html 顯示 bundle.js 結果</h3>
+
+
+
+<h4>Download</h4>
+
+
+
+<ul>
+<li><a rel="noreferrer noopener" href="https://cdn.fs.teachablecdn.com/Ud1OulECStCppEMymIWB" target="_blank">webpack-addindexhtml.zip</a></li>
+<li><a rel="noreferrer noopener" href="https://webpack.js.org/loaders/css-loader/" target="_blank">Webpack Loaders CSS css-loader</a></li>
+</ul>
+
+
+
+<h4>操作講解</h4>
+
+
+
+<ul>
+<li>在 dist 資料夾裡新增 index.html</li>
+<li>載入 &lt;script&gt; bundle.js</li>
+<li>打開 dist/index.html 看 Google Console 有無資料顯示、正確載入 bundle.js</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;標題&lt;/h1&gt;
+
+  &lt;script src="./bundle.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">載入 CSS-loader 流程</h3>
+
+
+
+<h4>Download</h4>
+
+
+
+<ul>
+<li><a rel="noreferrer noopener" href="https://cdn.fs.teachablecdn.com/lcfOSjGEQCK2BgC5jpRh" target="_blank">webpack-cssLoader.zip</a></li>
+<li><a href="https://github.com/webpack-contrib/css-loader" target="_blank" rel="noreferrer noopener">CSS-Loader 文件</a></li>
+</ul>
+
+
+
+<h4>操作講解</h4>
+
+
+
+<ul>
+<li>安裝 css-loader 指令：npm install –save-dev css-loader</li>
+<li>新增一個 css 檔案：style.css 放在 src 資料夾裡面</li>
+<li>環境設定，在 webpack.config.js</li>
+<li>在 index.js 匯入 import css from “./style.css”;</li>
+<li>執行 npm run deploy</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// src/style.css
+
+h1 {
+  color: red;
+}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// webpack.config.js
+
+const path = require('path');
+
+module.exports = {
+  entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js',
+  },
+  module: {
+    rules: &#91;
+      {
+        test: /\.css$/i,
+        use: &#91;"style-loader", "css-loader"],
+      },
+    ],
+  },
+};</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.js
+
+import c from './c.js';
+import css from "./style.css";
+let a = 1;
+let b = 2;
+console.log("hello");
+function hello(a,b){
+  console.log(a+b);
+}
+hello(1,2);
+console.log(c);</code></pre>
+
+
+
+<h4>出現錯誤</h4>
+
+
+
+<ul>
+<li>缺少 style-loader 套件安裝，npm install style-loader –save-dev</li>
+<li>再執行 npm run deploy</li>
+<li>打開 dist/index.html 看標題是否有變紅色</li>
+</ul>
+
+
+
+<h3>載入 Sass-loader 流程</h3>
+
+
+
+<h4>Download</h4>
+
+
+
+<ul>
+<li><a rel="noreferrer noopener" href="https://cdn.fs.teachablecdn.com/h2zQRfVQvmclsDYrtKHA" target="_blank">webpack-scss.zip</a></li>
+<li><a rel="noreferrer noopener" href="https://github.com/webpack-contrib/sass-loader" target="_blank">Sass-loader 文件</a></li>
+</ul>
+
+
+
+<p>Sass 是 SCSS 預處理器</p>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ul>
+<li>安裝 sass-loader、指令：npm install sass-loader sass webpack –save-dev，有安裝的可以不用再安裝、sass 或者 node-sass 這兩個都可以擇一即可，這裡選擇 node-sass 使用</li>
+<li>進入點 src/index.js 依照文件範例去修改 import “./style.scss”;</li>
+<li>把 src/style.css 改成 src/style.scss、然後把程式碼貼上、調整</li>
+<li>webpack.config.js 調整成 sass-loader 文件上範例的程式碼</li>
+<li>執行 npm run deploy</li>
+<li>打開 dist/index.html 查看標題是否有正確載入變粉紅色</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// src/index.js
+
+import c from './c.js';
+import css from "./style.scss";
+let a = 1;
+let b = 2;
+console.log("hello");
+function hello(a,b){
+  console.log(a+b);
+}
+hello(1,2);
+console.log(c);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// src/style.scss
+
+$body-color: pink;
+
+h1 {
+  color: $body-color;
+}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// webpack.config.js
+
+const path = require('path');
+
+module.exports = {
+  entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js',
+  },
+  module: {
+    rules: &#91;
+      {
+        test: /\.s&#91;ac]ss$/i,
+        use: &#91;
+          // Creates `style` nodes from JS strings
+          "style-loader",
+          // Translates CSS into CommonJS
+          "css-loader",
+          // Compiles Sass to CSS
+          "sass-loader",
+        ],
+      },
+    ],
+  },
+};</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">載入 webpack 測試伺服器</h3>
+
+
+
+<p>即時更新、監聽。</p>
+
+
+
+<h4>Download</h4>
+
+
+
+<ul>
+<li><a rel="noreferrer noopener" href="https://cdn.fs.teachablecdn.com/rlnVC0vRbqEJ6cnik0oQ" target="_blank">webpack-devServer.zip</a></li>
+<li><a href="https://webpack.js.org/configuration/dev-server/" target="_blank" rel="noreferrer noopener">webpack 官網文件</a></li>
+<li><a href="https://github.com/webpack/webpack-dev-server" target="_blank" rel="noreferrer noopener">webpack server GitHub 文件</a></li>
+</ul>
+
+
+
+<h4>更新說明</h4>
+
+
+
+<p>由於 dev server 版本更新（v3 -&gt; v4）因此設定方式的寫法也有些差異</p>
+
+
+
+<p>v3 版本寫法</p>
+
+
+
+<pre class="wp-block-code"><code>devServer: {
+    contentBase: path.join(__dirname, "dist"),
+}</code></pre>
+
+
+
+<p>v4 版本寫法</p>
+
+
+
+<pre class="wp-block-code"><code>devServer: {
+    static: {
+      directory: path.join(__dirname, 'dist'),
+    },
+}</code></pre>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ul>
+<li>安裝模組指令：npm install webpack-dev-server –save-dev</li>
+<li>使用上用 CLI，指令是：npx webpack serve，npx 可以不用只需要 webpack serve 這個指令就可以</li>
+<li>NPM Scripts，”scripts” 指令要加上 “serve”: “webpack serve”</li>
+<li>webpack.config.js 也需要做些資料夾設定，從 Webpack devServer 找到 webpack.config.js 範例程式碼複製貼上</li>
+<li>把 package.json “scripts” 的 “dev” 改成 “dev”: “webpack serve –mode development”</li>
+<li>執行 npm run dev</li>
+<li>網址可以輸入 127.0.0.1:9000</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// package.json
+
+{
+  "name": "webpack-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" &amp;&amp; exit 1",
+    "hello": "node hello.js",
+    "dev": "webpack --mode development",
+    "deploy": "webpack --mode production",
+    "serve": "webpack serve"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^6.5.1",
+    "node-sass": "^7.0.1",
+    "sass-loader": "^12.4.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.7.2"
+  }
+}
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// webpack.config.js
+
+const path = require('path');
+
+module.exports = {
+  entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js',
+  },
+  module: {
+    rules: &#91;
+      {
+        test: /\.s&#91;ac]ss$/i,
+        use: &#91;
+          // Creates `style` nodes from JS strings
+          "style-loader",
+          // Translates CSS into CommonJS
+          "css-loader",
+          // Compiles Sass to CSS
+          "sass-loader",
+        ],
+      },
+    ],
+  },
+  devServer: {
+    static: {
+      directory: path.join(__dirname, 'public'),
+    },
+    compress: true,
+    port: 9000,
+  },
+};</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// package.json
+
+{
+  "name": "webpack-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" &amp;&amp; exit 1",
+    "hello": "node hello.js",
+    "dev": "webpack serve --mode development",
+    "deploy": "webpack --mode production",
+    "serve": "webpack serve"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^6.5.1",
+    "node-sass": "^7.0.1",
+    "sass-loader": "^12.4.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.7.2"
+  }
+}
+</code></pre>
+
+
+
+<h4>出現錯誤</h4>
+
+
+
+<ul>
+<li>webpack.config.js 的 devServer ‘public’ 改成 ‘dist’</li>
+<li>終止批次工作</li>
+<li>重新執行 npm run dev</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// webpack.config.js
+
+const path = require('path');
+
+module.exports = {
+  entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js',
+  },
+  module: {
+    rules: &#91;
+      {
+        test: /\.s&#91;ac]ss$/i,
+        use: &#91;
+          // Creates `style` nodes from JS strings
+          "style-loader",
+          // Translates CSS into CommonJS
+          "css-loader",
+          // Compiles Sass to CSS
+          "sass-loader",
+        ],
+      },
+    ],
+  },
+  devServer: {
+    static: {
+      directory: path.join(__dirname, 'dist'),
+    },
+    compress: true,
+    port: 9000,
+  },
+};</code></pre>
+
+
+
+<h4>自動開啟伺服器網頁</h4>
+
+
+
+<ul>
+<li>webpack.config.js 的 devServer 新增 open: true</li>
+<li>終止批次工作 Ctrl + c</li>
+<li>重新執行 npm run dev</li>
+<li>在 style.scss 把 pink 改成 blue 看是否有即時更新</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// webpack.config.js
+
+const path = require('path');
+
+module.exports = {
+  entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js',
+  },
+  module: {
+    rules: &#91;
+      {
+        test: /\.s&#91;ac]ss$/i,
+        use: &#91;
+          // Creates `style` nodes from JS strings
+          "style-loader",
+          // Translates CSS into CommonJS
+          "css-loader",
+          // Compiles Sass to CSS
+          "sass-loader",
+        ],
+      },
+    ],
+  },
+  devServer: {
+    static: {
+      directory: path.join(__dirname, 'dist'),
+    },
+    compress: true,
+    port: 9000,
+    open: true
+  },
+};</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">載入第三方套件 axios – 以 import 為例</h3>
+
+
+
+<h4>Download</h4>
+
+
+
+<ul>
+<li><a rel="noreferrer noopener" href="https://cdn.fs.teachablecdn.com/dpwk4BOaSE2B5PdrKHoj" target="_blank">webpack-axios.zip</a></li>
+<li><a rel="noreferrer noopener" href="https://www.npmjs.com/package/axios" target="_blank">axios 官網</a></li>
+<li><a href="https://hexschool.github.io/ajaxHomework/data.json" target="_blank" rel="noreferrer noopener">練習用的 json 連結</a></li>
+</ul>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ul>
+<li>安裝 axios 套件：npm install axios –save</li>
+<li>在進入點 src/index.js 寫 import axios from “axios”;，會從 node_modules 找、看有沒有載入的檔案</li>
+<li>撰寫 axios get</li>
+<li>執行 npm run dev 看是否有載入成功</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// src/index.js
+
+import c from './c.js';
+import css from "./style.scss";
+import axios from "axios";
+axios.get("https://hexschool.github.io/ajaxHomework/data.json")
+.then(function(response){
+  console.log(response);
+});
+let a = 1;
+let b = 2;
+console.log("hello");
+function hello(a,b){
+  console.log(a+b);
+}
+hello(1,2);
+console.log(c);</code></pre>
+
+
+
+<h2>JavaScript 總複習題</h2>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">第七週總複習</h3>
+
+
+
+<h3>JS 百題斬 (未練習)</h3>
+
+
+
+<h2>JavaScript 加碼直播 (未觀看)</h2>
+	</div>
+<!-- .entry-content -->
+
+	<footer class="entry-footer">
+			</footer><!-- .entry-footer -->
+</article><!-- #post-585 -->
+
+	<nav class="navigation post-navigation" aria-label="文章">
+		<h2 class="screen-reader-text">文章導覽</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="/wordpress_blog/bs5-weblayout-2/" rel="prev"><span class="nav-subtitle">Previous:</span> <span class="nav-title">Bootstrap 5 網頁切版整合術(2)</span></a></div></div>
+	</nav>
+	</main><!-- #main -->
+
+
+	</div></div>
+			
+			<footer id="colophon" class="site-footer">
+
+				
+				<div class="container-fluid">
+					<div class="site-info">
+						<div class="row">
+
+															
+								<div class="col-12 footer-copyright-elements footer-copyright-alignment-center">
+
+									<div class="botiga-credits">&copy; 2022 wordpress_blog. 
+Created by Gee Hsu. 
+<br>Proudly powered by <a rel="nofollow" href="https://athemes.com/theme/botiga/">Botiga</a>
+</div>
+<div class="social-profile">
+<a target="_blank" href="https://www.facebook.com/watergrass0402/"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></i></a><a target="_blank" href="https://github.com/GeeHsu"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></i></a>
+</div>
+								</div>
+														
+						</div>
+					</div>
+				</div>
+<!-- .site-info -->
+
+				
+			</footer><!-- #colophon -->
+
+			
+			<div class="back-to-top visibility-all position-right"><i class="ws-svg-icon"><svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 15l7-7 7 7" stroke-width="3" stroke-linejoin="round"></path></svg></i></div>
+</div>
+<!-- #page -->
+
+
+<script id="botiga-custom-js-extra">
+var botiga = {"ajaxurl":"\/wp-admin\/admin-ajax.php","i18n":{"botiga_sharebox_copy_link":"Copy link","botiga_sharebox_copy_link_copied":"Copied!"}};
+</script>
+<script src="/wordpress_blog/wp-content/themes/botiga/assets/js/custom.min.js?ver=1.1.2" id="botiga-custom-js"></script>
+
+</body>
+</html>

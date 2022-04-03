@@ -1,0 +1,2807 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<title>Vue 出一個電商網站 (4) &#8211; wordpress_blog</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="訂閱《wordpress_blog》&raquo; 資訊提供" href="/wordpress_blog/feed/">
+<link rel="alternate" type="application/rss+xml" title="訂閱《wordpress_blog》&raquo; 留言的資訊提供" href="/wordpress_blog/comments/feed/">
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.9.2"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style>img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="/wordpress_blog/wp-includes/css/dist/block-library/style.min.css?ver=5.9.2" media="all">
+<style id="global-styles-inline-css">body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--palette-1-color-0: #212121;--wp--preset--color--palette-1-color-1: #757575;--wp--preset--color--palette-1-color-2: #212121;--wp--preset--color--palette-1-color-3: #212121;--wp--preset--color--palette-1-color-4: #212121;--wp--preset--color--palette-1-color-5: #f5f5f5;--wp--preset--color--palette-1-color-6: #ffffff;--wp--preset--color--palette-1-color-7: #ffffff;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 14px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 18px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--normal: 16px;--wp--preset--font-size--larger: 24px;--wp--preset--font-size--extra-large: 32px;--wp--preset--font-size--huge: 48px;--wp--preset--font-size--gigantic: 64px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}</style>
+<link rel="stylesheet" id="botiga-style-css" href="/wordpress_blog/wp-content/themes/botiga/style.css?ver=1.1.2" media="all">
+<link rel="stylesheet" id="botiga-style-min-css" href="/wordpress_blog/wp-content/themes/botiga/assets/css/styles.min.css?ver=1.1.2" media="all">
+<link rel="stylesheet" id="botiga-custom-styles-css" href="/wordpress_blog/wp-content/uploads/botiga/custom-styles.css?ver=1648804469" media="all">
+<link rel="https://api.w.org/" href="/wordpress_blog/wp-json/">
+<link rel="alternate" type="application/json" href="/wordpress_blog/wp-json/wp/v2/posts/581">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/wordpress_blog/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wordpress_blog/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 5.9.2">
+<link rel="canonical" href="/wordpress_blog/vue-hexschool-4/">
+<link rel="shortlink" href="/wordpress_blog/?p=581">
+<link rel="alternate" type="application/json+oembed" href="/wordpress_blog/wp-json/oembed/1.0/embed?url=%2Fvue-hexschool-4%2F">
+<link rel="alternate" type="text/xml+oembed" href="/wordpress_blog/wp-json/oembed/1.0/embed?url=%2Fvue-hexschool-4%2F&#038;format=xml">
+<link rel="icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png" sizes="32x32">
+<link rel="icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png" sizes="192x192">
+<link rel="apple-touch-icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png">
+<meta name="msapplication-TileImage" content="/wp-content/uploads/2022/03/logo.png">
+	
+</head>
+
+<body class="post-template-default single single-post postid-581 single-format-standard wp-custom-logo wp-embed-responsive header-header_layout_1 blog-single-layout1">
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0.49803921568627"></fefuncr><fefuncg type="table" tablevalues="0 0.49803921568627"></fefuncg><fefuncb type="table" tablevalues="0 0.49803921568627"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.54901960784314 0.98823529411765"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.71764705882353 0.25490196078431"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 0.27843137254902"></fefuncg><fefuncb type="table" tablevalues="0.5921568627451 0.27843137254902"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0"></fefuncr><fefuncg type="table" tablevalues="0 0.64705882352941"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.78039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.94901960784314"></fefuncg><fefuncb type="table" tablevalues="0.35294117647059 0.47058823529412"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.65098039215686 0.40392156862745"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.44705882352941 0.4"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.098039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.66274509803922"></fefuncg><fefuncb type="table" tablevalues="0.84705882352941 0.41960784313725"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg>
+
+<div id="page" class="site">
+
+	<a class="skip-link screen-reader-text" href="#primary">Skip to content</a>
+
+	
+			<div class="top-bar visibility-desktop-only">
+				<div class="container-fluid">
+					<div class="top-bar-inner">
+						<div class="row valign">
+
+															<div class="col header-elements delimiter-none">
+									<div class="header-item top-bar-social"><div class="social-profile">
+<a target="_blank" href="https://www.facebook.com/watergrass0402/"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></i></a><a target="_blank" href="https://github.com/GeeHsu"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></i></a>
+</div></div>								</div>
+																						<div class="col header-elements delimiter-none">
+													
+			<nav class="header-item top-bar-secondary-navigation secondary-navigation">
+				<div class="menu-topbar-container"><ul id="secondary" class="menu">
+<li id="menu-item-143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143"><a href="/wordpress_blog/setup/">網站架設</a></li>
+<li id="menu-item-144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a href="/wordpress_blog/source/">資料來源</a></li>
+<li id="menu-item-262" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-262"><a href="/wordpress_blog/resource/">學習資源</a></li>
+</ul></div>			</nav>
+											</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			
+							
+				<header id="masthead" class="site-header header_layout_1">
+					<div class="container-fluid">
+						<div class="site-header-inner">
+							<div class="row valign">
+								<div class="col-md-5">
+										
+			<nav id="site-navigation" class="main-navigation">
+				<div class="menu-navbar-container"><ul id="primary-menu" class="menu">
+<li id="menu-item-109" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="/wordpress_blog/about/">關於</a></li>
+<li id="menu-item-110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-110">
+<a href="/wordpress_blog/learn/">學習</a><span tabindex="0" class="dropdown-symbol"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512.011 512.011"><path d="M505.755 123.592c-8.341-8.341-21.824-8.341-30.165 0L256.005 343.176 36.421 123.592c-8.341-8.341-21.824-8.341-30.165 0s-8.341 21.824 0 30.165l234.667 234.667a21.275 21.275 0 0015.083 6.251 21.275 21.275 0 0015.083-6.251l234.667-234.667c8.34-8.341 8.34-21.824-.001-30.165z"></path></svg></i></span>
+<ul class="sub-menu">
+	<li id="menu-item-140" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-140"><a href="/wordpress_blog/category/hexschool/">六角學院</a></li>
+	<li id="menu-item-141" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-141"><a href="/wordpress_blog/category/ninja/">The Net Ninja</a></li>
+	<li id="menu-item-483" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-483"><a href="/wordpress_blog/category/youtube/">Youtube</a></li>
+</ul>
+</li>
+<li id="menu-item-111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="/wordpress_blog/linestore/">LINE STORE</a></li>
+</ul></div>			</nav><!-- #site-navigation -->
+											</div>
+								<div class="col-md-2">
+												<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+											</div>
+								<div class="col-md-5 header-elements">
+																	</div>							
+							</div>
+						</div>
+					</div>
+								<div class="header-search-form">
+			<form role="search" method="get" class="search-form" action="/">
+	<label class="screen-reader-text" for="search-form-1">Search&hellip;</label>
+	<input type="search" id="search-form-1" class="search-field" value="" name="s" placeholder="Search &hellip;">
+	<button type="submit" class="search-submit" value="Search"><i class="ws-svg-icon"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 100 14.25 7.125 7.125 0 000-14.25zM2.25 10.875a8.625 8.625 0 1117.25 0 8.625 8.625 0 01-17.25 0z"></path><path fill-rule="evenodd" d="M15.913 15.914a.75.75 0 011.06 0l4.557 4.556a.75.75 0 01-1.06 1.06l-4.557-4.556a.75.75 0 010-1.06z"></path></svg></i></button>
+</form>
+			</div>
+			
+									</header>
+
+										<div class="search-overlay"></div>
+			
+			<div class="botiga-offcanvas-menu">
+				<div class="mobile-header-item">
+					<div class="row">
+						<div class="col">
+										<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+									</div>
+						<div class="col align-right">
+							<a class="mobile-menu-close" href="#"><i class="ws-svg-icon icon-cancel"><svg width="16" height="16" fill="none" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.219.781L.78 2.22 9.562 11l-8.78 8.781 1.437 1.438L11 12.437l8.781 8.782 1.438-1.438L12.437 11l8.782-8.781L19.78.78 11 9.562 2.219.783z"></path></svg></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="mobile-header-item">
+						
+			<nav id="site-navigation" class="main-navigation">
+				<div class="menu-navbar-container"><ul id="primary-menu" class="menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="/wordpress_blog/about/">關於</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-110">
+<a href="/wordpress_blog/learn/">學習</a><span tabindex="0" class="dropdown-symbol"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512.011 512.011"><path d="M505.755 123.592c-8.341-8.341-21.824-8.341-30.165 0L256.005 343.176 36.421 123.592c-8.341-8.341-21.824-8.341-30.165 0s-8.341 21.824 0 30.165l234.667 234.667a21.275 21.275 0 0015.083 6.251 21.275 21.275 0 0015.083-6.251l234.667-234.667c8.34-8.341 8.34-21.824-.001-30.165z"></path></svg></i></span>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-140"><a href="/wordpress_blog/category/hexschool/">六角學院</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-141"><a href="/wordpress_blog/category/ninja/">The Net Ninja</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-483"><a href="/wordpress_blog/category/youtube/">Youtube</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="/wordpress_blog/linestore/">LINE STORE</a></li>
+</ul></div>			</nav><!-- #site-navigation -->
+							</div>
+				<div class="mobile-header-item">
+									<a target="&quot;_blank&quot;" class="button header-item" href="https://www.facebook.com/watergrass0402/">聯絡我</a>
+							</div>			
+			</div>
+			
+							<header id="masthead-mobile" class="site-header mobile-header">
+					<div class="container-fluid">
+						<div class="row valign flex-nowrap">
+							<div class="col-sm-6 col-md-4 col-grow-mobile">
+											<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+										</div>
+							<div class="col-auto col-sm-6 col-md-8 col-grow-mobile header-elements valign align-right">
+																	
+															<a href="#" class="menu-toggle">
+				<i class="ws-svg-icon"><svg width="16" height="11" viewbox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="16" height="1"></rect><rect y="5" width="16" height="1"></rect><rect y="10" width="16" height="1"></rect></svg></i>
+			</a>
+																		</div>						
+						</div>
+					</div>
+								<div class="header-search-form">
+			<form role="search" method="get" class="search-form" action="/">
+	<label class="screen-reader-text" for="search-form-2">Search&hellip;</label>
+	<input type="search" id="search-form-2" class="search-field" value="" name="s" placeholder="Search &hellip;">
+	<button type="submit" class="search-submit" value="Search"><i class="ws-svg-icon"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 100 14.25 7.125 7.125 0 000-14.25zM2.25 10.875a8.625 8.625 0 1117.25 0 8.625 8.625 0 01-17.25 0z"></path><path fill-rule="evenodd" d="M15.913 15.914a.75.75 0 011.06 0l4.557 4.556a.75.75 0 01-1.06 1.06l-4.557-4.556a.75.75 0 010-1.06z"></path></svg></i></button>
+</form>
+			</div>
+			
+									</header>
+						<div class="search-overlay"></div>
+			<div class="header-image"><img src="/wordpress_blog/wp-content/uploads/2022/03/seashore.jpg" width="1920" height="500" alt=""></div>
+<div class="container content-wrapper"><div class="row main-row">			
+	<main id="primary" class="site-main no-sidebar">
+
+		
+
+<article id="post-581" class="post-581 post type-post status-publish format-standard hentry category-hexschool">
+	
+		
+	<header class="entry-header">
+		
+		
+		<h1 class="entry-title">Vue 出一個電商網站 (4)</h1>			<div class="entry-meta entry-meta-below delimiter-none">
+<span class="posted-on"><a href="/wordpress_blog/vue-hexschool-4/" rel="bookmark"><time class="entry-date published" datetime="2022-03-28T09:06:00+08:00">2022 年 3 月 28 日</time><time class="updated" datetime="2022-04-03T15:08:14+08:00">2022 年 4 月 3 日</time></a></span><span class="byline"> <span class="author vcard"><a class="url fn n" href="/wordpress_blog/author/gee-hsu/">gee.hsu</a></span></span>
+</div>			</header><!-- .entry-header -->
+
+	
+	<div class="entry-content">
+		
+<h2>第１１節：Vue&nbsp;出一個電商網站 (下)</h2>
+
+
+
+<h5>GitHub –&nbsp;<a href="https://github.com/GeeHsu/vue-dashboard-record" target="_blank" rel="noreferrer noopener">vue-dashboard-record</a>
+</h5>
+
+
+
+<h3>Dashboard&nbsp;新增模擬購物頁面&nbsp;–&nbsp;新增卡片式產品列表</h3>
+
+
+
+<p>操作與講解</p>
+
+
+
+<ol>
+<li>接下來我們要來做模擬訂單的部分，不過在模擬訂單之前，我們先補一下這個登出的功能，那我們就直接打開 Navbar.vue 這個頁面，所以我們在製作登出的時候，它每個元件都可以獨立的運作。不過這登出難度並不會很高，所以這邊我們就不重頭講解，我們直接把現成的程式碼先貼進來之後，在講解說這段程式碼做了哪些事情，那上面這段是 Navbar 的元件，一樣是 const vm = this，const url 這段是 API 登出的路徑，在往下這裡確定登出之後就會把頁面轉回 /signin 的地方，(上面登出的連結補上 @click.prevent=”signout”)，那我們存檔來試一次看看。完成 Sign out 之後我們一樣可以測試先前的一些行為，像是我們在網址的地方直接輸入 admin/orders 能不能直接進去那個頁面，按下去是沒有任何的反應，當然你也可以透過 Console 來看一下它到底有沒有跳轉這個頁面、admin/orders，當然它是沒有跳轉頁面。</li>
+<li>我們先來看一下模擬訂單的畫面，模擬訂單的畫面首先我們要先把上面這個列表先把它完成，完成之後我們下一個章節再來介紹怎麼取得單一筆的資料以及加入購物車的部分。</li>
+<li>那麼這一段我們操作就會比較快一點，相關的行為跟先前都差不多，那一樣新增一個元件 pages/CustomerOrders.vue，這一段會提供現成的卡片的 Template 讓我們可以直接套用。這段我們就先把這個元件建起來。</li>
+<li>接下來我們把新增的頁面加到 Vue Router 裡面來 import CustomerOrders from ‘@/components/pages/CustomerOrders’。import 進來之後我們要在下方新增相對應的路徑，我們可以先複製先前所建立好的 admin 路由，然後在往下建立一個相同的，但是這一段要不太一樣，我們在製作這一段的時候它不用掛在 admin 的頁面下面，我們可以用相同的模板但是我們不需要掛在 admin 下面，然後它的 component 是 CustomerOrder。但是它不需要經過驗證就可以使用，所以等一下可以直接透過這個路徑直接傳進來，路徑也要稍微調整一下、然後 name 也改一下。</li>
+<li>接下來我們把這個路徑直接放到 Sidebar.vue 上面，to=”/customer_order”、然後存檔。接下來我們直接在登入的地方如果輸入 /customer_order 就可以直接進入這個頁面，但是如果在此我們想要進入其他路徑就會被登出。</li>
+<li>我們在 CustomerOrders.vue 頁面下我們直接貼上現成的程式碼，因為這一段的流程跟先前非常接近，所以我們就不重頭寫一次給大家看。我們直接講解一下這裡做了哪些事情，和先前一樣我們先定義一個 products，並且加入用戶端取得資料的路徑。那麼用戶端取得資料的路徑我們要選擇的是<a rel="noreferrer noopener" href="https://github.com/hexschool/vue-course-api-wiki/wiki/%E5%AE%A2%E6%88%B6%E8%B3%BC%E7%89%A9-%5B%E5%85%8D%E9%A9%97%E8%AD%89%5D" target="_blank">客戶購物 [免驗證]</a>&nbsp;這一個、取得商品列表這一段，<strong>並不是用 admin 的那一段這裡要特別注意</strong>，然後一樣可以加入讀取的效果，然後取得資料之後將資料存到 products，然後接下來我們就可以把 products 的資料陳列在這上面。</li>
+<li>那麼我們剛有使用讀取的效果，那讀取的效果也做好了。接下來我們要把卡片的資料內容補上，這裡可以使用 .row.mt-4 這是與上方有一些間距，那這個 row 是 Bootstrap 4 做格線用的，因為這個卡片是有運用道格線的技巧，接下來我們在把卡片整個貼進來，然後這裡使用 v-for=”item in products”，然後在補上一個 :key=”item.id”、我們來存檔一次。</li>
+<li>我們回到畫面上重新整理，現在就可以看到這裡就有一張一張的卡片，我們只要將這些資料一個一個綁定上來就可以，現在我們將這些資料全部替換上來。上方有一張產品的圖片我們先把它加進來，可以使用 :style 等於裡面一樣是個物件，<strong>不過這裡要特別注意</strong>，background的時候後面的Image I 要大寫 Image (backgroundImage)，可以用 ES6 的反引號來製作這一段的連結 url，接下來我們要用$配合大括號，這是 ES6 反引號裡面插入變數的方法，然後使用 item.imageUrl，這是我們先前插入連結的方式，我們再重新整理看一下圖片有沒有進來。接下來下方有分類、以及標題、還有內容，相關內容我們就可以一一的補上。(備註：前者顯示僅有原價的、後者顯示僅有原價 + 優惠價。)，現在這個卡片列表已經完成了。</li>
+<li>這段就先製作登出、以及模擬訂單的產品列表這一段。完成之後我們再繼續來製作加到購物車的部分。</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// 1. Navbar.vue
+    &lt;ul class="navbar-nav px-3"&gt;
+      &lt;li class="nav-item text-nowrap"&gt;
+        &lt;a class="nav-link" href="#" @click.prevent="signout"&gt;Sign out&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+
+&lt;script&gt;
+export default {
+  name: 'Navbar',
+  data () {
+    return {
+      msg: 'Welcome to Your Vue.js App'
+    }
+  },
+  methods: {
+    signout() {
+      const api = `${process.env.APIPATH}/logout`;
+      const vm = this;
+      this.$http.post(api).then((response) =&gt; {
+        // console.log(response.data);
+        if (response.data.success) {
+          // vm.$router.push('/login');
+          vm.$router.push('/signin');
+        }
+      });
+    }
+  }
+}
+&lt;/script&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 4. router/index.js
+// 把CustomerOrder給載進來
+import CustomerOrder from '@/components/pages/CustomerOrders'
+
+    // 客戶購物的路徑(使用與Dashboard相同的模板)
+    {
+      path: '/',
+      name: 'Dashboard',
+      component: Dashboard,
+      children: &#91;
+        // CustomerOrder的路徑
+        {
+          path: 'customer_order',
+          name: 'CustomerOrder',
+          component: CustomerOrder,
+        },
+      ],
+    },</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 5. Sidebar.vue
+      &lt;ul class="nav flex-column mb-2"&gt;
+        &lt;li class="nav-item"&gt;
+          &lt;router-link  class="nav-link" to="/customer_order"&gt;
+            &lt;i class="fas fa-shopping-cart"&gt;&lt;/i&gt;
+            模擬訂單
+          &lt;/router-link&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 6~8.  CustomerOrders.vue
+&lt;template&gt;
+  &lt;div&gt;
+    &lt;loading :active.sync="isLoading"&gt;&lt;/loading&gt;
+    &lt;div class="row mt-4"&gt;
+      &lt;div class="col-md-4 mb-4" v-for="item in products" :key="item.id"&gt;
+        &lt;div class="card border-0 shadow-sm"&gt;
+          &lt;div style="height: 150px; background-size: cover; background-position: center"
+            :style="{backgroundImage: `url(${item.imageUrl})`}"&gt;
+          &lt;/div&gt;
+          &lt;div class="card-body"&gt;
+            &lt;span class="badge badge-secondary float-right ml-2"&gt;{{ item.category }}&lt;/span&gt;
+            &lt;h5 class="card-title"&gt;
+              &lt;a href="#" class="text-dark"&gt;{{ item.title }}&lt;/a&gt;
+            &lt;/h5&gt;
+            &lt;p class="card-text"&gt;{{ item.content }}&lt;/p&gt;
+            &lt;div class="d-flex justify-content-between align-items-baseline"&gt;
+              &lt;div class="h5" v-if="!item.price"&gt;{{ item.origin_price }}&lt;/div&gt;
+              &lt;del class="h6" v-if="item.price"&gt;{{ item.origin_price }}&lt;/del&gt;
+              &lt;div class="h5" v-if="item.price"&gt;{{ item.price }}&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="card-footer d-flex"&gt;
+            &lt;button type="button" class="btn btn-outline-secondary btn-sm"&gt;
+              &lt;i class="fas fa-spinner fa-spin"&gt;&lt;/i&gt;
+              查看更多
+            &lt;/button&gt;
+            &lt;button type="button" class="btn btn-outline-danger btn-sm ml-auto"&gt;
+              &lt;i class="fas fa-spinner fa-spin"&gt;&lt;/i&gt;
+              加到購物車
+            &lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  data() {
+    return {
+      products: &#91;],
+      isLoading: false,
+    };
+  },
+  methods: {
+    getProducts() {
+      const vm = this;
+      const url = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/products`;
+      vm.isLoading = true;
+      this.$http.get(url).then((response) =&gt; {
+        vm.products = response.data.products;
+        console.log(response);
+        vm.isLoading = false;
+      });
+    },
+  },
+  created() {
+    this.getProducts();
+  },
+};
+&lt;/script&gt;</code></pre>
+
+
+
+<h3>取得單一產品</h3>
+
+
+
+<p>操作與講解</p>
+
+
+
+<ol>
+<li>做出彈出 Modal 的效果，像這樣子點起來之後它就會將這個 Modal 彈開，不過跟之前比較不一樣是它這個彈出 Modal 之前，它會取得資料之後再將 Modal 打開，然後在彈出 Modal 之後它還可以選購說它需要多少數量的產品。為什麼要這樣做，我們來看一下接下來可能會做到的作業，在作業的部分我們來看一下這個畫面，這裡面有非常多的產品，但是點擊這個搶購去的時候，它是到這個頁面再重新將資料取得一次。我們可以看一下上面的網址，上面是帶入 product/ 以及這個 product id，然後將這個產品的資料取出來，我們常常在呈現這個資料列表時它這裡所取得的資料並非完整的資料，如果要看詳細的資料會在重新取得單一筆的特定資料，所以在這裡要做的是我們點擊的時候才將完整的資料取出。</li>
+<li>接下來我們來看一下取得單一筆資料的 API，這裡有一個單一商品細節，那單一商品的話我們取得跟先前差不多，不過這個 product 是沒有 s 的，我們在取得多筆資料的時候是有 s 的，那麼取得單筆是沒有 s 並且後面會帶上 id。</li>
+<li>現在我們來製作取得單一筆資料的 Modal，我們要做的行為會放在查看更多的按鈕上，在這部分我們就可以在 methods 的部分先加上 getProduct 但是沒有 s、參數的話會帶上 id，然後先把大括號補上。接下來我們回到 &lt;html&gt; 的地方，我們將上面這個(&lt;button&gt;)查看更多補上 @click=”getProduct”，另外要帶上 id (@click=”getProduct(item.id)”)，那 id 的話在上面這裡有個 item，我們把 item 的 id 帶進來。接下來 id 之後，這段程式碼跟先前的差異不大，我們可以直接複製過來，複製過來之後將這個 s 去掉補上 id。</li>
+<li>接下來我們就可以取得單一筆資料，然後我們取得單一筆資料會在 Modal 裡面顯示。Modal 的部分我們另外定義一個 product 的物件來存放 Modal 的資料，所以在這裡會有一個 vm.product = response.data.product;，不過在存放之前我們還是看一下這個結果是否正常。重新整理、打開 Console 來看一下，接下來點擊查看更多然後看一下這個資料內容，看起來是有正確的呈現，我們剛剛點擊的是 Vue 課程好棒棒，那麼我們把這個 product 打開之後這個 title 也是 Vue 課程好棒棒。</li>
+<li>接下來我們把這個關掉之後回到 CustomerOrders.vue 的頁面上，這段是取得資料之後再將 Modal 打開，那 Modal 的話我們先前是使用 jQuery 的方式，在這裡也是用相同的方式，我們 import $ from ‘jquery’;，然後將 jquery 載進來。</li>
+<li>載進來以後我們這個 Modal 就不完全重新製作了，裡面的內容跟先前都差異不大，所以我們這裡先複製已經製作好的部分，但是比較重要的地方我們在這裡還是會重新講解，像是這裡有許多的資料內容，像是這裡有 {{ product.title }}、content、description，這裡都是直接帶入的。</li>
+<li>接下來我們要將 Modal 打開，那 Modal 打開的話我們就會把它放在 AJAX 結束之後將 Modal 打開，那這個 Modal 的名字叫做 #productModal，這個載入資料也要把它打開，所以我們在這個地方會先將資料讀取進來之後再將 Modal 打開，所以我們一打開 Modal 它基本上就會有資料，我們現在點擊查看更多，這個時候資料已經帶進來了。我們現在點擊查看更多，讀取之後這裡就會出現完整的資料。</li>
+<li>不過在這部分我們要介紹一個比較不一樣的讀取方式，像是這裡已經有預設準備很多旋轉的讀取效果，那麼我們就要將這個全畫面的讀取效果替換成單一個的讀取效果，那我們在這個部分就可以再新增一個狀態叫做 status，在這個 status 內再新增一個值叫做 loadingItem。那這段是要判斷目前畫面上是哪一個元素正在讀取中，loadingItem 要存放的值就是產品的 id，所以在這裡我們可以把這個 isLoading 改成 status.loadingItem，然後這裡要替換的是 id。那當然讀取完之後我們要將值替換成空的，和先前一樣。接下來這個 loadingItem 我們要把它放到上面這個地方來，我們可以把剛剛的 loadingItem 帶上來 v-if 假設 status 的 loadingItem 與我們目前的 item.id 是相符合的時候，我們就會將這個讀取效果呈現出來。那我們也把這段複製過來，重新整理之後我們按下查看更多，這個時候會跳出一小段時間的讀取效果，然後在將這個畫面呈現出來。但是我們只有在點擊的那個物件上才會出現讀取效果、然後並且將相關的資料呈現出來。</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// 3~8. CustomerOrders.vue
+&lt;template&gt;
+  &lt;div&gt;
+    &lt;loading :active.sync="isLoading"&gt;&lt;/loading&gt;
+    &lt;div class="row mt-4"&gt;
+      &lt;div class="col-md-4 mb-4" v-for="item in products" :key="item.id"&gt;
+        &lt;div class="card border-0 shadow-sm"&gt;
+          &lt;div style="height: 150px; background-size: cover; background-position: center"
+            :style="{backgroundImage: `url(${item.imageUrl})`}"&gt;
+          &lt;/div&gt;
+          &lt;div class="card-body"&gt;
+            &lt;span class="badge badge-secondary float-right ml-2"&gt;{{ item.category }}&lt;/span&gt;
+            &lt;h5 class="card-title"&gt;
+              &lt;a href="#" class="text-dark"&gt;{{ item.title }}&lt;/a&gt;
+            &lt;/h5&gt;
+            &lt;p class="card-text"&gt;{{ item.content }}&lt;/p&gt;
+            &lt;div class="d-flex justify-content-between align-items-baseline"&gt;
+              &lt;div class="h5" v-if="!item.price"&gt;{{ item.origin_price }}&lt;/div&gt;
+              &lt;del class="h6" v-if="item.price"&gt;原價 {{ item.origin_price }} 元&lt;/del&gt;
+              &lt;div class="h5" v-if="item.price"&gt;現在只要 {{ item.price }} 元&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="card-footer d-flex"&gt;
+            &lt;button type="button" class="btn btn-outline-secondary btn-sm"
+              @click="getProduct(item.id)"&gt;
+              &lt;i class="fas fa-spinner fa-spin" v-if="status.loadingItem === item.id"&gt;&lt;/i&gt;
+              查看更多
+            &lt;/button&gt;
+            &lt;button type="button" class="btn btn-outline-danger btn-sm ml-auto"&gt;
+              &lt;i class="fas fa-spinner fa-spin" v-if="status.loadingItem === item.id"&gt;&lt;/i&gt;
+              加到購物車
+            &lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- Modal CustomerOrders --&gt;
+    &lt;div class="modal fade" id="productModal" tabindex="-1" role="dialog"
+      aria-labelledby="exampleModalLabel" aria-hidden="true"&gt;
+      &lt;div class="modal-dialog" role="document"&gt;
+        &lt;div class="modal-content"&gt;
+          &lt;div class="modal-header"&gt;
+            &lt;h5 class="modal-title" id="exampleModalLabel"&gt;{{ product.title }}&lt;/h5&gt;
+            &lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;
+              &lt;span aria-hidden="true"&gt;&amp;times;&lt;/span&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
+          &lt;div class="modal-body"&gt;
+            &lt;img :src="product.imageUrl" class="img-fluid" alt=""&gt;
+            &lt;blockquote class="blockquote mt-3"&gt;
+              &lt;p class="mb-0"&gt;{{ product.content }}&lt;/p&gt;
+              &lt;footer class="blockquote-footer text-right"&gt;{{ product.description }}&lt;/footer&gt;
+            &lt;/blockquote&gt;
+            &lt;div class="d-flex justify-content-between align-items-baseline"&gt;
+              &lt;div class="h4" v-if="!product.price"&gt;{{ product.origin_price }} 元&lt;/div&gt;
+              &lt;del class="h6" v-if="product.price"&gt;原價 {{ product.origin_price }} 元&lt;/del&gt;
+              &lt;div class="h4" v-if="product.price"&gt;現在只要 {{ product.price }} 元&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;select name="" class="form-control mt-3" v-model="product.num"&gt;
+              &lt;option :value="num" v-for="num in 10" :key="num"&gt;
+                選購 {{ num }} {{ product.unit }}
+              &lt;/option&gt;
+            &lt;/select&gt;
+          &lt;/div&gt;
+          &lt;div class="modal-footer"&gt;
+            &lt;div class="text-muted text-nowrap mr-3"&gt;
+              小計 &lt;strong&gt;{{ product.num * product.price }}&lt;/strong&gt; 元
+            &lt;/div&gt;
+            &lt;button type="button" class="btn btn-primary"&gt;
+              &lt;!-- &lt;i class="fas fa-spinner fa-spin" v-if="product.id === status.loadingItem"&gt;&lt;/i&gt; --&gt;
+              加到購物車
+            &lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import $ from 'jquery';
+
+export default {
+  data() {
+    return {
+      products: &#91;],
+      product: {},
+      status: {
+        loadingItem: '',
+      },
+      isLoading: false,
+    };
+  },
+  methods: {
+    getProducts() {
+      const vm = this;
+      const url = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/products`;
+      vm.isLoading = true;
+      this.$http.get(url).then((response) =&gt; {
+        vm.products = response.data.products;
+        console.log(response);
+        vm.isLoading = false;
+      });
+    },
+    // 取得單一產品
+    getProduct(id) {
+      const vm = this;
+      const url = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/product/${id}`;
+      // vm.isLoading = true;
+      vm.status.loadingItem = id;
+      this.$http.get(url).then((response) =&gt; {
+        vm.product = response.data.product;
+        $('#productModal').modal('show');
+        console.log(response);
+        // vm.isLoading = false;
+        vm.status.loadingItem = '';
+        vm.product.num = 1; // 所有商品初始值設置為 1
+      });
+    },
+  },
+  created() {
+    this.getProducts();
+  },
+};
+&lt;/script&gt;</code></pre>
+
+
+
+<h5>討論串：查看更多選購數量問題</h5>
+
+
+
+<p>商品預設顯示數量和回傳資料的 num 有關，<br>可以看到 CustomerOrders.vue 頁面中有使用 v-model=”product.num”<br>因此要調整這個預設數量<br>有兩個辦法</p>
+
+
+
+<ol>
+<li>可以在 Products.vue 頁面中新增關於 num 資料的詳細設定，如下：</li>
+<li>可以在 CustomerOrders.vue 頁面的 getProduct 函式中，新增 vm.product.num = 1</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// 1. Products.vue
+&lt;div class="form-group col-md-4"&gt;
+  &lt;label for="num"&gt;預設單位&lt;/label&gt;
+  &lt;input type="number" class="form-control" id="num" placeholder="請輸入預設單位" v-model="tempProduct.num" /&gt;
+&lt;/div&gt;
+
+// 這樣可以對每個商品的預設數量做調整。</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 2. CustomerOrders.vue
+getProduct(id){
+  ...
+  this.axios.get(url).then((response) =&gt; {
+    console.log(response.data)
+    vm.product = response.data.product;
+    $('#productModal').modal('show')
+    vm.product.num = 1;//多加了這行
+    vm.status.loadingItem = '';
+  });
+
+// 這樣所有商品初始值就會變成1了。</code></pre>
+
+
+
+<h5>討論串：如何將login改為首頁</h5>
+
+
+
+<ul>
+<li>若要改網站連結的路徑都是在 router/index.js 裡面去修改</li>
+<li>課程只是示範顯示首頁的元件為 Dashboard 來當首頁，並不代表網站首頁都一定是 Dashboard，可自己選擇要用哪個元件來當首頁</li>
+<li>路徑(path)的值可以自己去設定</li>
+<li>名稱(name)的值相同會產生黃色錯誤</li>
+</ul>
+
+
+
+<h5>排除錯誤：we can’t find&nbsp;<code>`tsconfig.json` or `jsconfig.json`</code>
+</h5>
+
+
+
+<p><a rel="noreferrer noopener" href="https://vuejs.github.io/vetur/guide/setup.html#advanced" target="_blank">Vetur – Setup/Advanced</a></p>
+
+
+
+<h5>修正：Navbar.vue</h5>
+
+
+
+<pre class="wp-block-code"><code>// Navbar.vue
+&lt;template&gt;
+  &lt;nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow"&gt;
+    &lt;a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="#"&gt;Company name&lt;/a&gt;
+    &lt;button class="navbar-toggler position-absolute d-md-none collapsed"
+      type="button" data-toggle="collapse" data-target="#sidebarMenu"
+      aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation"&gt;
+      &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;input class="form-control form-control-dark w-100"
+      type="text" placeholder="Search" aria-label="Search" /&gt;
+    &lt;ul class="navbar-nav px-3"&gt;
+      &lt;li class="nav-item text-nowrap"&gt;
+        &lt;a class="nav-link" href="#" @click.prevent="signout"&gt;Sign out&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  name: 'Navbar',
+  data () {
+    return {
+      msg: 'Welcome to Your Vue.js App'
+    }
+  },
+  methods: {
+    signout() {
+      const api = `${process.env.APIPATH}/logout`;
+      const vm = this;
+      this.$http.post(api).then((response) =&gt; {
+        // console.log(response.data);
+        if (response.data.success) {
+          vm.$router.push('/login');
+          // vm.$router.push('/signin');
+        }
+      });
+    }
+  }
+}
+&lt;/script&gt;</code></pre>
+
+
+
+<h3>選購產品及加入購物車</h3>
+
+
+
+<p>操作與講解</p>
+
+
+
+<ol>
+<li>這段要來介紹加入購物車，在加入購物車之前我們先來看一下這一段的操作行為，在這個畫面上我們按查看更多，裡面就可以加到購物車，不過加入購物車之前，這裡可以選擇數量，像是這裡我們選擇2的話，在按加入購物車，那下面這個購物車列表就會跳出我們加入了2堂。另外一個就是我們直接點選加入購物車，直接點選的話，我們就會加入1堂的數量，所以我們在這邊行為會有兩種。一種是可以選擇數量、另外一種是直接將單一筆加進去。</li>
+<li>那我們來看 API(文件)的部分，在 API 的部分加入購物車這裡會傳入參數，參數的地方第一個是傳入產品的 id、第二個是傳入(產品的)數量，<strong>所以在這裡要特別注意，我們在傳入的時候基本上不會傳入產品的價格，用戶可以傳入產品的價格的話，用戶就可能可以篡改整個購物車最終所結帳的金額。</strong>所以這裡要特別注意，通常我們只會上傳 id，那金額的計算是由後端來決定的。</li>
+<li>那我們來看一下購物車的列表，在購物車列表的地方這裡有一個 carts，那 carts 它裡面是個陣列，所以這裡面會有很多個產品，那產品的話它就會回傳它相關的價格、以及它產品的內容。<strong>還有這裡要特別注意，除了產品的列表之外，然後價格會有兩個，一個是它的原始價格、以及最終的價格，那這個最終價格會受到優惠券的影響，當然這也是一般電商在設計平台裡面最複雜的地方，因為價格的計算邏輯非常多種</strong>，但在課程中會用比較簡單的方式呈現給大家看。</li>
+<li>接下來我們在回到 API 上面這一段，現在我們回到購物車這個地方，我們在來回顧一下參數的部分，參數的部分我們要傳入的是一個產品的 id、以及數量，那我們現在來開始撰寫 JavaScript 的部分。</li>
+<li>我們一樣到 (CustomerOrders.vue) methods 這個地方，然後我們用 addtoCart()，然後這裡會傳入兩個參數，一個就是 id，product 的 id、以及它的數量 qty，這個數量它是基本上一定要傳入數量，傳入數量的話基本上最少就是1，所以這裡可以用 ES6 一個方法，叫做預設值。這裡如果使用 qty = 1的話，代表函式傳進來的時候，如果沒有帶入 qty，它會使用預設值1的方式。</li>
+<li>接下來我們先把另外一個函式(getProduct(id))打開，因為執行的內容差不多，我們就先把另外一段給貼過來，貼過來之後我們把這邊的 API 的路徑稍微做一下調整，加入購物車是使用 cart，這裡一樣會有讀取，然後行為會改成 post，接下來我們要把資料結構定義起來，我們會使用 const cart 等於一個物件，那物件會傳入兩個參數，一個是 product_id，那 product_id 就是 id，那另外一個是 qty，那 qty 在這裡不用這樣子寫，我們可以只寫一個 qty 的變數，那這個的話就會直接將這 qty 以及它的值自動帶進來。接下來在把這個 cart 放到這個後方，然後我們在傳入的時候，要記得資料結構，它的資料結構是 data 裡面在包著購物車的內容，那麼我們把多餘的方法把它移除。</li>
+<li>然後接下來我們把這個 addtoCart 加到 &lt;html&gt; 的部分來，在上面這個卡片的部分，這個加到購物車就可以把 @click=”addtoCart()” 帶進來，然後我們要帶進的參數是 item 的 id、以及數量，那數量的話我們可以不用帶，它的預設值就是1，加進來之後我們重新整理一下，看一下能不能順利的加入購物車。現在我們按一下這個加到購物車，按下去之後這裡有回傳一些訊息，這裡回傳訊息說 true、已經成功加入購物車了。</li>
+<li>接下來我們要介紹一下 Modal 的部分，那 Modal 的部分我們這裡可以選擇數量，那麼數量的話我們先暫存在 product.num 裡面來，那這個 product 就是我們點下查看更多取回來的那個 product 資料，那我們就會把 num、就是數量的資訊先存在 product 這個物件裡面來。現在目前如果按下這個下拉選單，它只會跳出選購一件，因為我們是寫死這個數值，如果說我們要讓它可以選擇多筆的數量該怎麼做，我們在這裡可以使用 v-for 等於 num in 固定的數量，比如說我們可以直接輸入10，那接下來這個 num 就是從1~10，後面要記得帶上 :key 等於 num。value 的部分我們就可以把 num 帶上來，就是數量、選擇的數量，不過記得把這個 value 改成動態屬性。接下來我們在把相關的文字帶上去，選購幾件，後面這個件我們一樣可以把它改成 product 的 unit，那這樣子的話就會變成選購多少數量、以及數量的單位，我們存檔試一次看看、重新整理。接下來按查看更多，那這邊的下拉選單就會出現選購幾堂，那這個堂這個字就是我們帶入的 product.unit，加到購物車的時候，我們就可以帶入 product 的 id、以及 product 的數量，然後存檔。現在我們來試著來送出不同數量的數值，這裡我們就可以按選購5堂、然後按加到購物車，這裡的話回傳的數值就會跳出 success、然後我們的數量是5，我們把5堂的 Vue 的課程加到購物車。</li>
+<li>當然我們這裡按下選購幾堂之後要記得把這個 Modal 也關掉，那在這個部分我們就可以在一樣的把 Modal 關掉，這裡有個 modal(‘show’)，我們把這個 modal(‘show’) 一樣把它貼過來，把它改成 modal(‘hide’)，加到購物車之後就把這個 Modal 隱藏起來，購物車完成之後我們就可以在取得購物車的內容，就是 getCart()，取得購物車的內容其實方法都跟之前差不多，我們在把先前的 API (getProducts()) 複製過來，那複製過來之後把這個 product 換成 cart，其他的行為差距不大，我們接下來把這個 getCart() 完成之後要記得在一開始的時候，我們就把購物車也取得回來、this.getCart();，然後另外一個就是加入購物車之後也一樣要把購物車給取得回來，vm.getCart();，我們來看一下這個購物車有沒有正確的取得，我們來看一下 Console、然後按加到購物車，加到購物車之後會有兩次 AJAX 的行為，第一次是將物件加到購物車內、第二個是將購物車的資料取得回來，那取得回來之後這裡就有一些資訊，它是放在 data 的 data 內，這裡會有兩個總價，一個是 total、一個是 final_total，final_total 就是經過計算可能是有一些優惠等等的，然後下方有另外一個是購物車的內容，那我們就可以把這購物車的內容再把它呈現出來。呈現的方式就會像這樣子，有表格、然後這裡有品名、數量、以及單價，那下方還有總計。</li>
+<li>購物車的列表這一段就讓大家自己練習，下個章節我們要來介紹怎麼刪除單一個商品、以及套用優惠碼的細節，如果沒有問題的話，大家先製作這一段。</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// CustomerOrders.vue
+&lt;template&gt;
+  &lt;div&gt;
+    &lt;loading :active.sync="isLoading"&gt;&lt;/loading&gt;
+    &lt;div class="row mt-4"&gt;
+      &lt;div class="col-md-4 mb-4" v-for="item in products" :key="item.id"&gt;
+        &lt;div class="card border-0 shadow-sm"&gt;
+          &lt;div style="height: 150px; background-size: cover; background-position: center"
+            :style="{backgroundImage: `url(${item.imageUrl})`}"&gt;
+          &lt;/div&gt;
+          &lt;div class="card-body"&gt;
+            &lt;span class="badge badge-secondary float-right ml-2"&gt;{{ item.category }}&lt;/span&gt;
+            &lt;h5 class="card-title"&gt;
+              &lt;a href="#" class="text-dark"&gt;{{ item.title }}&lt;/a&gt;
+            &lt;/h5&gt;
+            &lt;p class="card-text"&gt;{{ item.content }}&lt;/p&gt;
+            &lt;div class="d-flex justify-content-between align-items-baseline"&gt;
+              &lt;div class="h5" v-if="!item.price"&gt;{{ item.origin_price }}&lt;/div&gt;
+              &lt;del class="h6" v-if="item.price"&gt;原價 {{ item.origin_price }} 元&lt;/del&gt;
+              &lt;div class="h5" v-if="item.price"&gt;現在只要 {{ item.price }} 元&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="card-footer d-flex"&gt;
+            &lt;button type="button" class="btn btn-outline-secondary btn-sm"
+              @click="getProduct(item.id)"&gt;
+              &lt;i class="fas fa-spinner fa-spin" v-if="status.loadingItem === item.id"&gt;&lt;/i&gt;
+              查看更多
+            &lt;/button&gt;
+            &lt;button type="button" class="btn btn-outline-danger btn-sm ml-auto"
+              @click="addtoCart(item.id)"&gt;
+              &lt;i class="fas fa-spinner fa-spin" v-if="status.loadingItem === item.id"&gt;&lt;/i&gt;
+              加到購物車
+            &lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- Modal CustomerOrders --&gt;
+    &lt;div class="modal fade" id="productModal" tabindex="-1" role="dialog"
+      aria-labelledby="exampleModalLabel" aria-hidden="true"&gt;
+      &lt;div class="modal-dialog" role="document"&gt;
+        &lt;div class="modal-content"&gt;
+          &lt;div class="modal-header"&gt;
+            &lt;h5 class="modal-title" id="exampleModalLabel"&gt;{{ product.title }}&lt;/h5&gt;
+            &lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;
+              &lt;span aria-hidden="true"&gt;&amp;times;&lt;/span&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
+          &lt;div class="modal-body"&gt;
+            &lt;img :src="product.imageUrl" class="img-fluid" alt=""&gt;
+            &lt;blockquote class="blockquote mt-3"&gt;
+              &lt;p class="mb-0"&gt;{{ product.content }}&lt;/p&gt;
+              &lt;footer class="blockquote-footer text-right"&gt;{{ product.description }}&lt;/footer&gt;
+            &lt;/blockquote&gt;
+            &lt;div class="d-flex justify-content-between align-items-baseline"&gt;
+              &lt;div class="h4" v-if="!product.price"&gt;{{ product.origin_price }} 元&lt;/div&gt;
+              &lt;del class="h6" v-if="product.price"&gt;原價 {{ product.origin_price }} 元&lt;/del&gt;
+              &lt;div class="h4" v-if="product.price"&gt;現在只要 {{ product.price }} 元&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;select name="" class="form-control mt-3" v-model="product.num"&gt;
+              &lt;option :value="num" v-for="num in 10" :key="num"&gt;
+                選購 {{ num }} {{ product.unit }}
+              &lt;/option&gt;
+            &lt;/select&gt;
+          &lt;/div&gt;
+          &lt;div class="modal-footer"&gt;
+            &lt;div class="text-muted text-nowrap mr-3"&gt;
+              小計 &lt;strong&gt;{{ product.num * product.price }}&lt;/strong&gt; 元
+            &lt;/div&gt;
+            &lt;button type="button" class="btn btn-primary"
+              @click="addtoCart(product.id, product.num)"&gt;
+              &lt;!-- &lt;i class="fas fa-spinner fa-spin" v-if="product.id === status.loadingItem"&gt;&lt;/i&gt; --&gt;
+              加到購物車
+            &lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import $ from 'jquery';
+
+export default {
+  data() {
+    return {
+      products: &#91;],
+      product: {},
+      status: {
+        loadingItem: '',
+      },
+      isLoading: false,
+    };
+  },
+  methods: {
+    getProducts() {
+      const vm = this;
+      const url = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/products`;
+      vm.isLoading = true;
+      this.$http.get(url).then((response) =&gt; {
+        vm.products = response.data.products;
+        console.log(response);
+        vm.isLoading = false;
+      });
+    },
+    // 取得單一產品
+    getProduct(id) {
+      const vm = this;
+      const url = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/product/${id}`;
+      // vm.isLoading = true;
+      vm.status.loadingItem = id;
+      this.$http.get(url).then((response) =&gt; {
+        vm.product = response.data.product;
+        $('#productModal').modal('show');
+        console.log(response);
+        // vm.isLoading = false;
+        vm.status.loadingItem = '';
+        vm.product.num = 1; // 所有商品初始值設置為 1
+      });
+    },
+    // 加入購物車
+    addtoCart(id, qty = 1) {
+      const vm = this;
+      const url = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/cart`;
+      // vm.isLoading = true;
+      vm.status.loadingItem = id;
+      const cart = {
+        product_id: id,
+        qty,
+      };
+      this.$http.post(url, { data: cart }).then((response) =&gt; {
+        console.log(response);
+        // vm.isLoading = false;
+        vm.status.loadingItem = '';
+        vm.getCart();
+        $('#productModal').modal('hide');
+      });
+    },
+    // 取得購物車的內容
+    getCart() {
+      const vm = this;
+      const url = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/cart`;
+      vm.isLoading = true;
+      this.$http.get(url).then((response) =&gt; {
+        // vm.products = response.data.products;
+        console.log(response);
+        vm.isLoading = false;
+      });
+    },
+  },
+  created() {
+    this.getProducts();
+    this.getCart();
+  },
+};
+&lt;/script&gt;</code></pre>
+
+
+
+<h3>刪除購物車品項及新增優惠碼</h3>
+
+
+
+<p>操作與講解</p>
+
+
+
+<ol>
+<li>這個地方已經把購物車的列表都已經呈現出來了，那購物車(列表)的部分還缺少刪除以及加入優惠券的部分，那我們來看一下 API，API 的部分如果刪除特定的一筆資料其實也蠻單純的，就是將 API 的路由帶進去之後，後面在補上購物車內的產品 id 就可以了。那麼另外一個套用優惠券，比較不一樣是說我們要上傳的是優惠碼，那麼先前有請大家先製作優惠券的頁面，如果你已經做好優惠券的頁面的話，也就可以製作這一段，就是將優惠碼也套用進來。那麼套用優惠碼之後，它的價格也會調整，所以每次套用優惠券後，這整個購物車也必需要重新取得。</li>
+<li>我們這個地方先來製作刪除特定購物車內容的部分，一樣回到下方(CustomerOrders.vue)，下面這個地方我們可以先把 AJAX 的操作先複製起來，接下來再新增一個行為叫做 removeCartItem() 的方法，然後並且把剛剛複製的 AJAX 行為先貼進來，那麼刪除購物車商品的時候它必須帶入 id，我們就可以把這個 id 一樣貼到這個後方 ${id}，<strong>然後要特別注意</strong>，在這個部分操作並不是使用 get 或 post，所使用的是 delete，我們會送出刪除的行為，然後後端就會把這一筆資料給刪掉，在刪除之前我們先把多的行為先把它關掉、然後把這個 removeCartItem() 貼到上面刪除的按鈕上面，我們使用 @click 等於 removeCartItem() 之後，並且把 item 的 id 帶進來。</li>
+<li>那我們來試試看能不能正確的刪除，我們重新整理、然後打開 Console，這個時候按下這個刪除的按鈕，刪除之後這裡會跳出一個訊息就是已經刪除，那麼刪除之後記得整個購物車也要重新取得，我們再把後面的程式碼補上，刪除之後我們再重新取得購物車的內容(vm.getCart();)，當然讀取效果也要把它關掉，那我們重新整理，重新整理之後這裡購物車只剩一個品項、把它刪掉，刪除之後這裡就沒有品項，那實際製作的時候要確定購物車有沒有內容才顯示這個畫面，假設購物車都沒有內容的時候要記得把這個畫面把它隱藏起來，現在我們再把一些品項給加進來。</li>
+<li>加進來之後，接下來我們要來套用優惠碼的部分，那套用優惠碼之前，這裡來跟大家講一個小技巧，這裡我們先準備好一個註解，那這個註解要呈現的是最終的一個價錢，那我們先存檔來試一次看看。現在因為我們沒有套用優惠券，所以這裡會有個總計的價錢、下面會有個折扣價，但是這兩個價格如果都同樣的時候，其實這個折扣價不需要出現，所以我們可以做個比對，假設 final_total 的價錢不等於 cart.total 的時候它才會顯示這一段，那我們重新整理、重新整理之後下面的我們比對之後總計下方就不會出現折扣價，接下來我們在把優惠碼給補上。</li>
+<li>那優惠碼的部分這裡已經準備好表單，上方是一個 &lt;input&gt;、下方是一個按鈕，那在上面的部分，我們就可以補上一個 v-model 等於 coupon_code，那下方的部分我們就可以補上行為，不過在補上行為之前，我們先把行為寫出來，資料的部分剛剛有新增一個 coupon_code 先是一個空的(值)，然後接下來我們在把上面這一段(removeCartItem(id)裡面的程式碼)先複製一份，然後摺疊起來，addCouponCode()，然後把剛剛複製的那一段貼上來，那我們來看一下 coupon_code 的資料結構是什麼樣子，coupon_code 的資料結構是 data 裡面有個 code，那這個 code 裡面才包著你所提供的優惠碼。那我們在這裡就在宣告一個 coupon 等於 code、然後對應的是剛剛所新宣告的一個 coupon_code 的變數，那這裡剛剛是使用 delete，那我們要再把它改成 post、然後送出 data: coupon ，然後 API 的路徑也記得要稍作調整，這裡對應的是 coupon 的 API，不過套用前我們先來看一下它是否有正常的運作。程式碼寫好之後記得把這個(addCouponCode)行為放回剛剛的按鈕上，@click 等於 addCouponCode。</li>
+<li>接下來這個地方我們就輸入優惠碼，先輸入錯誤的優惠碼試試看，輸入之後這邊會跳出兩個 request，第一個是送出優惠碼的訊息，那這裡就會出現 success: false，所以我們這裡的驗證還要加上一個 success: false、然後它會出現找不到優惠券，所以這邊就沒有套用優惠券的內容。接下來我們這裡輸入正確的優惠碼是 code，這 code 是我們從優惠券的後台去新增的，所以我們要新增自己的優惠碼才能套用，那這個地方就套用優惠券，套用優惠券之後這裡就會已經套用優惠券，並且在這個地方就會出現折扣價，然後接下來我們把購物車的內容在打開看一下，購物車的內容在 data 裡面，這裡面還是一樣有每個產品的內容，然後這裡就會多一個 coupon，我們在套用這 coupon 的時候是將這個 coupon_code 套用在每個商品上，所以每個商品的價錢也都會有調整，這裡的價錢就會不太一樣，原價是1650，那麼在套用之後這個優惠券就會影響這個的價錢。</li>
+<li>那麼如果說我們要知道哪些產品有套用優惠碼的話，我們一樣可以在這個地方加入我們這邊有先註解好的一段，假設它裡面有包含優惠券的話就會跳出已套用優惠券的字樣，那麼我們重新整理一下、重新整理之後，這裡所有的商品就會套用優惠券的字樣，所以這些就是已經有套用優惠券的商品。</li>
+<li>如果沒有問題的話，我們就準備到下一個章節，要把訂單給送出囉</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// CustomerOrders.vue
+&lt;template&gt;
+  &lt;div&gt;
+    &lt;loading :active.sync="isLoading"&gt;&lt;/loading&gt;
+    &lt;div class="row mt-4"&gt;
+      &lt;div class="col-md-4 mb-4" v-for="item in products" :key="item.id"&gt;
+        &lt;div class="card border-0 shadow-sm"&gt;
+          &lt;div style="height: 150px; background-size: cover; background-position: center"
+            :style="{backgroundImage: `url(${item.imageUrl})`}"&gt;
+          &lt;/div&gt;
+          &lt;div class="card-body"&gt;
+            &lt;span class="badge badge-secondary float-right ml-2"&gt;{{ item.category }}&lt;/span&gt;
+            &lt;h5 class="card-title"&gt;
+              &lt;a href="#" class="text-dark"&gt;{{ item.title }}&lt;/a&gt;
+            &lt;/h5&gt;
+            &lt;p class="card-text"&gt;{{ item.content }}&lt;/p&gt;
+            &lt;div class="d-flex justify-content-between align-items-baseline"&gt;
+              &lt;div class="h5" v-if="!item.price"&gt;{{ item.origin_price }}&lt;/div&gt;
+              &lt;del class="h6" v-if="item.price"&gt;原價 {{ item.origin_price }} 元&lt;/del&gt;
+              &lt;div class="h5" v-if="item.price"&gt;現在只要 {{ item.price }} 元&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="card-footer d-flex"&gt;
+            &lt;button type="button" class="btn btn-outline-secondary btn-sm"
+              @click="getProduct(item.id)"&gt;
+              &lt;i class="fas fa-spinner fa-spin" v-if="status.loadingItem === item.id"&gt;&lt;/i&gt;
+              查看更多
+            &lt;/button&gt;
+            &lt;button type="button" class="btn btn-outline-danger btn-sm ml-auto"
+              @click="addtoCart(item.id)"&gt;
+              &lt;i class="fas fa-spinner fa-spin" v-if="status.loadingItem === item.id"&gt;&lt;/i&gt;
+              加到購物車
+            &lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- Modal CustomerOrders --&gt;
+    &lt;div class="modal fade" id="productModal" tabindex="-1" role="dialog"
+      aria-labelledby="exampleModalLabel" aria-hidden="true"&gt;
+      &lt;div class="modal-dialog" role="document"&gt;
+        &lt;div class="modal-content"&gt;
+          &lt;div class="modal-header"&gt;
+            &lt;h5 class="modal-title" id="exampleModalLabel"&gt;{{ product.title }}&lt;/h5&gt;
+            &lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;
+              &lt;span aria-hidden="true"&gt;&amp;times;&lt;/span&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
+          &lt;div class="modal-body"&gt;
+            &lt;img :src="product.imageUrl" class="img-fluid" alt=""&gt;
+            &lt;blockquote class="blockquote mt-3"&gt;
+              &lt;p class="mb-0"&gt;{{ product.content }}&lt;/p&gt;
+              &lt;footer class="blockquote-footer text-right"&gt;{{ product.description }}&lt;/footer&gt;
+            &lt;/blockquote&gt;
+            &lt;div class="d-flex justify-content-between align-items-baseline"&gt;
+              &lt;div class="h4" v-if="!product.price"&gt;{{ product.origin_price }} 元&lt;/div&gt;
+              &lt;del class="h6" v-if="product.price"&gt;原價 {{ product.origin_price }} 元&lt;/del&gt;
+              &lt;div class="h4" v-if="product.price"&gt;現在只要 {{ product.price }} 元&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;select name="" class="form-control mt-3" v-model="product.num"&gt;
+              &lt;option :value="num" v-for="num in 10" :key="num"&gt;
+                選購 {{ num }} {{ product.unit }}
+              &lt;/option&gt;
+            &lt;/select&gt;
+          &lt;/div&gt;
+          &lt;div class="modal-footer"&gt;
+            &lt;div class="text-muted text-nowrap mr-3"&gt;
+              小計 &lt;strong&gt;{{ product.num * product.price }}&lt;/strong&gt; 元
+            &lt;/div&gt;
+            &lt;button type="button" class="btn btn-primary"
+              @click="addtoCart(product.id, product.num)"&gt;
+              &lt;!-- &lt;i class="fas fa-spinner fa-spin" v-if="product.id === status.loadingItem"&gt;&lt;/i&gt; --&gt;
+              加到購物車
+            &lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- 購物車列表 --&gt;
+    &lt;div class="my-5 row justify-content-center"&gt;
+      &lt;div class="col-md-6"&gt;
+        &lt;table class="table"&gt;
+          &lt;thead&gt;
+            &lt;th&gt;&lt;/th&gt;
+            &lt;th&gt;品名&lt;/th&gt;
+            &lt;th&gt;數量&lt;/th&gt;
+            &lt;th&gt;單價&lt;/th&gt;
+          &lt;/thead&gt;
+          &lt;tbody&gt;
+            &lt;tr v-for="item in cart.carts" :key="item.id" v-if="cart.carts"&gt;
+              &lt;td class="align-middle"&gt;
+                &lt;button type="button" class="btn btn-outline-danger btn-sm"
+                  @click="removeCartItem(item.id)"&gt;
+                  &lt;i class="far fa-trash-alt"&gt;&lt;/i&gt;
+                &lt;/button&gt;
+              &lt;/td&gt;
+              &lt;td class="align-middle"&gt;
+                {{ item.product.title }}
+                &lt;div class="text-success" v-if="item.coupon"&gt;
+                  已套用優惠券
+                &lt;/div&gt;
+              &lt;/td&gt;
+              &lt;td class="align-middle"&gt;{{ item.qty }}/{{ item.product.unit }}&lt;/td&gt;
+              &lt;td class="align-middle text-right"&gt;{{ item.final_total }}&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+          &lt;tfoot&gt;
+            &lt;tr&gt;
+              &lt;td colspan="3" class="text-right"&gt;總計&lt;/td&gt;
+              &lt;td class="text-right"&gt;{{ cart.total }}&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr v-if="cart.final_total !== cart.total"&gt;
+              &lt;td colspan="3" class="text-right text-success"&gt;折扣價&lt;/td&gt;
+              &lt;td class="text-right text-success"&gt;{{ cart.final_total }}&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tfoot&gt;
+        &lt;/table&gt;
+        &lt;div class="input-group mb-3 input-group-sm"&gt;
+          &lt;input type="text" class="form-control" v-model="coupon_code" placeholder="請輸入優惠碼"&gt;
+          &lt;div class="input-group-append"&gt;
+            &lt;button class="btn btn-outline-secondary" type="button" @click="addCouponCode"&gt;
+              套用優惠碼
+            &lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import $ from 'jquery';
+
+export default {
+  data() {
+    return {
+      products: &#91;],
+      product: {},
+      status: {
+        loadingItem: '',
+      },
+      cart: {},
+      isLoading: false,
+      coupon_code: '',
+    };
+  },
+  methods: {
+    getProducts() {
+      const vm = this;
+      const url = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/products`;
+      vm.isLoading = true;
+      this.$http.get(url).then((response) =&gt; {
+        vm.products = response.data.products;
+        console.log(response);
+        vm.isLoading = false;
+      });
+    },
+    // 取得單一產品
+    getProduct(id) {
+      const vm = this;
+      const url = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/product/${id}`;
+      // vm.isLoading = true;
+      vm.status.loadingItem = id;
+      this.$http.get(url).then((response) =&gt; {
+        vm.product = response.data.product;
+        $('#productModal').modal('show');
+        console.log(response);
+        // vm.isLoading = false;
+        vm.status.loadingItem = '';
+        vm.product.num = 1; // 所有商品初始值設置為 1
+      });
+    },
+    // 加入購物車
+    addtoCart(id, qty = 1) {
+      const vm = this;
+      const url = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/cart`;
+      // vm.isLoading = true;
+      vm.status.loadingItem = id;
+      const cart = {
+        product_id: id,
+        qty,
+      };
+      this.$http.post(url, { data: cart }).then((response) =&gt; {
+        console.log(response);
+        // vm.isLoading = false;
+        vm.status.loadingItem = '';
+        vm.getCart();
+        $('#productModal').modal('hide');
+      });
+    },
+    // 取得購物車的內容
+    getCart() {
+      const vm = this;
+      const url = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/cart`;
+      vm.isLoading = true;
+      this.$http.get(url).then((response) =&gt; {
+        // vm.products = response.data.products;
+        vm.cart = response.data.data;
+        console.log(response);
+        vm.isLoading = false;
+      });
+    },
+    // 刪除購物車品項
+    removeCartItem(id) {
+      const vm = this;
+      const url = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/cart/${id}`;
+      vm.isLoading = true;
+      this.$http.delete(url).then(() =&gt; {
+        vm.getCart();
+        vm.isLoading = false;
+      });
+    },
+    // 新增優惠碼
+    addCouponCode() {
+      const vm = this;
+      const url = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/coupon`;
+      const coupon = {
+        code: vm.coupon_code,
+      };
+      vm.isLoading = true;
+      this.$http.post(url, { data: coupon }).then((response) =&gt; {
+        console.log(response);
+        vm.getCart();
+        vm.isLoading = false;
+      });
+    },
+  },
+  created() {
+    this.getProducts();
+    this.getCart();
+  },
+};
+&lt;/script&gt;</code></pre>
+
+
+
+<h3>*建立訂單及表單驗證技巧</h3>
+
+
+
+<h5>資源</h5>
+
+
+
+<ul>
+<li><a href="https://vee-validate.logaretm.com/v2/" target="_blank" rel="noreferrer noopener">Vee Validate 套件 – 課程版本</a></li>
+<li><a href="https://vee-validate.logaretm.com/v2/guide/events.html#changing-default-events" target="_blank" rel="noreferrer noopener">Vee Validate 驗證事件 – 課程版本</a></li>
+<li><a href="https://vee-validate.logaretm.com/v4/" target="_blank" rel="noreferrer noopener">Vee Validate 套件 – 更新版</a></li>
+<li><a href="https://vee-validate.logaretm.com/v4/" target="_blank" rel="noreferrer noopener">Vee Validate 驗證事件 – 更新版</a></li>
+</ul>
+
+
+
+<p>操作與講解</p>
+
+
+
+<ol>
+<li>接下來來到建立訂單的部分，這個地方也是蠻重要而且比較困難的地方，我們在建立訂單的時候會把原本所選的購物車的內容全部刪掉，然後它會成立一個新的訂單，那麼在訂單送出前也必需把用戶的一些相關資訊也都存下來。</li>
+<li>那我們來看一下畫面在這個部分會做什麼事情，下面這個地方就是訂單所要填入的內容，在這個部分最困難的就是說這個訂單不能隨意讓用戶送出，像我們現在直接按下送出訂單，這個訊息它會直接被阻擋，並且如果點一些特定的欄位，它會跳出提示說姓名欄位不得留空，在這個地方我們來填入錯誤的 email 內容，這裡會跳出說 email 必需是有效的電子郵件地址，所以我們在輸入這個表單的時候，要特別做這樣的驗證，不能讓用戶隨意送出空的表單內容。</li>
+<li>這個時候就可以使用一個套件叫 vee-validate，這個套件使用上蠻容易的，等下課程也會介紹怎麼使用這個套件，而且這個套件還包含中文的語系檔，所以可以直接的使用。它可以在畫面上加入一些條件，像是這裡就可以要求說一定要 email 格式、或者是使用正規式的方式來驗證這個表單內容是否正確。VeeValidate 這個套件跟 Bootstrap 也是沒有問題的，那我們來開始製作。</li>
+<li>我們回到畫面上，下方這個地方還沒有表單內容，那表單這部分我們就不重頭打，會直接提供現成的給大家，我們把表單的格式直接貼進來、重新排版，調整好之後，下面要建立對應的資料格式，那麼這個資料格式大家要記得對應送出的&nbsp;<a rel="noreferrer noopener" href="https://github.com/hexschool/vue-course-api-wiki/wiki/%E5%AE%A2%E6%88%B6%E8%B3%BC%E7%89%A9-%5B%E5%85%8D%E9%A9%97%E8%AD%89%5D#%E7%B5%90%E5%B8%B3%E9%A0%81%E9%9D%A2" target="_blank">API 的結構</a>，所以在這裡我們就要建立 form，那這個表單的結構大家可以直接參考 API 所提供的格式。</li>
+<li>那下面的部分我們就來開始撰寫 AJAX，但是這個 AJAX 跟先前的方法也都差異不大，所以這段我們就加速帶過，訂單完成之後，補上一個訂單已建立的字樣，那這裡還沒有完成，先做到這部分就可以，接下來把這個 createOrder 加到這個表單上面來，這個方法可以清除它預設的 submit 行為、我們存檔。</li>
+<li>存檔之後我們來看一下，這個表單格式錯誤、表單完成以後，我們先不要做驗證，先試試看這個送出的行為是否正確，那我們先輸入假的資料、然後將這個訂單給送出，那這個時候會跳出訂單已建立，所以我們現在 AJAX 行為是沒有問題的，接下來我們要來製作驗證的部分。</li>
+<li>我們打開 Terminal(終端機)，然後將這個驗證工具把它裝下來，驗證工具安裝、npm install vee-validate，存檔(安裝)這部分一樣花一些時間，這部分我們就先來準備一些後面所需要的程式碼，它一樣是需要做 import，那我們打開 main.js，那我們就先把它給 import 進來，import 進來之後它一樣去啟用它、Vue.use(VeeValidate) 把它啟用、存檔之後，我們來將服務 run 起來 npm run dev。</li>
+<li>這裡有寫一下它的使用方式，它的使用方式就是在你的元件上面加上 v-validate 這個字樣，那我們先把它加上來，先使用收件人姓名這個部分，我們把它加上來、然後後面 email 的部分先把它拿掉，我們先加上 required 就好、存檔。然後回到我們畫面上、重新整理這裡不會有任何變化，我們先試著把錯誤的訊息把它抓出來，下方有一個 &lt;span&gt; 這裡是會輸出紅色的字樣，我們先用兩個大括號使用 errors 這個是它所提供的一個變數、然後 has，然後假設它有 name 這個欄位，它對應的是我們 &lt;input&gt; 裡面 name 這個屬性，那剛好我們這個名稱是一樣，是叫做 name，那我們把它輸入進來、然後存檔 (註：在此條件是 “required”，所以是不得為空)。這個條件是當它被觸發之後，然後它的 name 並不存在的話，它就會跳出這個錯誤、那我們重新整理一下，重新整理我們到畫面上之後，現在我們還沒有觸發它，所以他現在是跳出 false，那麼我們先輸入一些內容，它還是 false，可是當這個欄位清空之後，它就會跳出 true，也就是說它這個欄位當被觸發過之後，但是如果他沒有輸入內容的話，它就會跳出錯誤，那我們再重新整理一次。現在我們先直接點一下、然後移出來(點空白處)，這個時候它就算錯誤。我應該要輸入這個欄位，但是我跳過的話，這個就算錯誤。</li>
+<li>那接下來我們就可以用這個方式驗證它，當它為 true 的時候、當它為錯誤的時候，我們就顯示這個欄位 v-if=”errors.has(‘name’)”，那這個 name 是對應上面那個 name (值那個 name)，然後(&lt;span&gt;標籤內修改成姓名必須輸入)、存檔之後我們在重新整理，現在是空的、但是如果說我們點一下這個欄位、然後在點一下外面它就會跳出這個錯誤，姓名必須輸入，那這個方式我們也可以套用在這個 &lt;input&gt; 的 class 上面，我們可以在這個 &lt;input&gt; 上面再加上一個 :class 把它改為一個物件，前方我們加入 ‘is-invalid’，代表說它的驗證是錯誤的，那它的條件就是 errors.has(‘name’) 的時候，它會出現紅色的框框，那我們來試一次看看。重新整理之後，我們點一下收件者姓名、然後在點一下外面，這個時候它的框框就變紅色的，而且會跳出姓名必須輸入的字樣。</li>
+<li>接下來我們來製作 Email 這個欄位，Email 這個欄位製作方式跟其他有一些些不同，我們直接參照它的官網，有一些特定的欄位它有提供特殊的驗證方法，那我們這一段就直接使用它的 Email 驗證，接下來我們回到 CustomerOrders.vue 的頁面上面來、然後並且將 v-validate 貼進來，貼進來之後它就會自動驗證 Email，那下方這個地方我們一樣用 v-if 去判斷 email 這個欄位是否正確，接下來裡面這一段驗證可以用它所提供的另一個方法，errors.first 然後括號、使用 email 這個欄位，這個方式會比較特別，它會直接告訴你說你的 Email 輸入錯誤在哪裡、那我們存檔。接下來重新整理之後，我們先點一下 Email 這個欄位，點一下之後再點擊外面，它會回應說這個欄位是必須的。那我們再輸入一些東西，那我們隨便輸入一些文字之後，這會跳出這個 Email 的欄位它不是有效的 Email 格式，用這種方式它就可以提供一些額外的回饋訊息，那當然如果說我們把它輸入成正確的格式，它這個回饋訊息就會移掉。現在這個回饋訊息由於是英文的，那當然我們會希望用中文的方式來呈現這個回饋訊息，我們就可以做一些些簡單的調整，就可以把它改成中文的回饋。</li>
+<li>我們回到 main.js 、並且回到它的 node_modules 裡面(有個 vee-validate)，然後裡面有個 dist，dist 下面有一個 locale，這個 locale 下就是各種語系的檔案，那我們就把這個 locale import 進來，假設我們在這裡需要中文的話、import，import 之後就必需啟用它，接下來我們把它的、接下來選擇 Validator 這個物件，下方還有一個 localize 的一個方法，那這個方法就可以將中文語系載進來，zh_TW 然後把這個語系檔給載進來，這個載入方式比較特別，不過在它的文件裡面也有寫到，在這部分我們就直接打給大家看、存檔之後就可以使用它的中文語系。在這個部分它要求我們的單字要改一下、改成這樣，接下來存檔，存檔之後我們回到畫面上，我們再來試一次這個 Email 的格式，這個時候它就會改成中文的回饋，如果說我們改成錯誤的話，它一樣會跳出對應的訊息。</li>
+<li>我們現在在看一下這個表單的部分，現在這個表單這個欄位，我們一樣留空，但是我們按下送出訂單，這個時候會跳出一個請填寫這個欄位，這個請填寫這個欄位是 Chrome 自動跳出來，只要你在 &lt;input&gt; 裡面有加上 required 的話，它就會跳出這個訊息，那假設說我們不要使用這個 required，我們要使用這個套件的功能，要阻止它送出的話，該怎麼做，像我們現在把這個 required 拿掉，如果按下送出，它是真的會送出這個表單，所以我們現在要確保我們在送出的時候，它的欄位是符合我們的套件的要求的、該怎麼做，我們在滑到下方程式碼的部分，它在它的 API 裡面有提供其中一段，就是在我們 submit 的時候可以先做一下我們套件的驗證。我們現在直接把這一段複製下來，貼到我們的程式碼裡面，這個 result 要加上括號，加進來之後，假設這邊有一個 if result 為 true 的時候，把這一段貼進來，那在另外一個地方加上 else 假設沒有成功的時候，我們跳出欄位不完整，我們先使用 console 來做一下就可以了，並且把這個 isLoading 拿掉，因為這個會擋到我們的畫面、然後存檔。接下來回到畫面上重新整理、然後我們這個時候按下送出訂單，按下去之後(Console)會跳出欄位不完整，並且我們往上看這上面的部分都會全部算是被驗證過的狀態，如果說我們這個欄位完全都沒有碰過，它一樣會顯示這個紅色的錯誤。</li>
+<li>這邊就是一個比較完整的驗證模式，現在這個部分就給大家自己練習，把這個表單完整的製作完成，並且可以送出表單的狀態。</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// 7. VeeValidate 安裝
+// npm
+npm install vee-validate --save</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 7. main.js
+// import VeeValidate
+import VeeValidate from 'vee-validate'</code></pre>
+
+
+
+<h5>版本問題</h5>
+
+
+
+<pre class="wp-block-code"><code>// 移除 vee-validate 套件 3.x.x 版本
+npm uninstall vee-validate --save
+
+// 安裝 vee-validate 套件 2.x.x 版本
+npm install vee-validate@2.2.15 --save</code></pre>
+
+
+
+<h5>即時監聽 – Focus 到 &lt;input&gt; 再點外面即時監聽到 &lt;span&gt; 的行為</h5>
+
+
+
+<pre class="wp-block-code"><code>// main.js
+// 修改 events，加上 blur
+Vue.use(VeeValidate, {
+  events: 'input|blur',
+});</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 11. main.js
+// 中文語系
+import zhTW_Validate from 'vee-validate/dist/locale/zh_TW';
+
+VeeValidate.Validator.localize('zh_TW', zhTW_Validate)</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 11. main.js
+// 中文語系修改後
+import zhTWValidate from 'vee-validate/dist/locale/zh_TW'
+
+// 寫在這無法顯示中文
+// VeeValidate.Validator.localize('zh_TW', zhTWValidate)
+Vue.use(VeeValidate, {
+  events: 'input|blur',
+})
+// 寫在這才能顯示中文
+VeeValidate.Validator.localize('zh_TW', zhTWValidate)</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// CustomerOrders.vue
+&lt;template&gt;
+  &lt;div&gt;
+    &lt;loading :active.sync="isLoading"&gt;&lt;/loading&gt;
+    &lt;div class="row mt-4"&gt;
+      &lt;div class="col-md-4 mb-4" v-for="item in products" :key="item.id"&gt;
+        &lt;div class="card border-0 shadow-sm"&gt;
+          &lt;div style="height: 150px; background-size: cover; background-position: center"
+            :style="{backgroundImage: `url(${item.imageUrl})`}"&gt;
+          &lt;/div&gt;
+          &lt;div class="card-body"&gt;
+            &lt;span class="badge badge-secondary float-right ml-2"&gt;{{ item.category }}&lt;/span&gt;
+            &lt;h5 class="card-title"&gt;
+              &lt;a href="#" class="text-dark"&gt;{{ item.title }}&lt;/a&gt;
+            &lt;/h5&gt;
+            &lt;p class="card-text"&gt;{{ item.content }}&lt;/p&gt;
+            &lt;div class="d-flex justify-content-between align-items-baseline"&gt;
+              &lt;div class="h5" v-if="!item.price"&gt;{{ item.origin_price }}&lt;/div&gt;
+              &lt;del class="h6" v-if="item.price"&gt;原價 {{ item.origin_price }} 元&lt;/del&gt;
+              &lt;div class="h5" v-if="item.price"&gt;現在只要 {{ item.price }} 元&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="card-footer d-flex"&gt;
+            &lt;button type="button" class="btn btn-outline-secondary btn-sm"
+              @click="getProduct(item.id)"&gt;
+              &lt;i class="fas fa-spinner fa-spin" v-if="status.loadingItem === item.id"&gt;&lt;/i&gt;
+              查看更多
+            &lt;/button&gt;
+            &lt;button type="button" class="btn btn-outline-danger btn-sm ml-auto"
+              @click="addtoCart(item.id)"&gt;
+              &lt;i class="fas fa-spinner fa-spin" v-if="status.loadingItem === item.id"&gt;&lt;/i&gt;
+              加到購物車
+            &lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- Modal CustomerOrders --&gt;
+    &lt;div class="modal fade" id="productModal" tabindex="-1" role="dialog"
+      aria-labelledby="exampleModalLabel" aria-hidden="true"&gt;
+      &lt;div class="modal-dialog" role="document"&gt;
+        &lt;div class="modal-content"&gt;
+          &lt;div class="modal-header"&gt;
+            &lt;h5 class="modal-title" id="exampleModalLabel"&gt;{{ product.title }}&lt;/h5&gt;
+            &lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;
+              &lt;span aria-hidden="true"&gt;&amp;times;&lt;/span&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
+          &lt;div class="modal-body"&gt;
+            &lt;img :src="product.imageUrl" class="img-fluid" alt=""&gt;
+            &lt;blockquote class="blockquote mt-3"&gt;
+              &lt;p class="mb-0"&gt;{{ product.content }}&lt;/p&gt;
+              &lt;footer class="blockquote-footer text-right"&gt;{{ product.description }}&lt;/footer&gt;
+            &lt;/blockquote&gt;
+            &lt;div class="d-flex justify-content-between align-items-baseline"&gt;
+              &lt;div class="h4" v-if="!product.price"&gt;{{ product.origin_price }} 元&lt;/div&gt;
+              &lt;del class="h6" v-if="product.price"&gt;原價 {{ product.origin_price }} 元&lt;/del&gt;
+              &lt;div class="h4" v-if="product.price"&gt;現在只要 {{ product.price }} 元&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;select name="" class="form-control mt-3" v-model="product.num"&gt;
+              &lt;option :value="num" v-for="num in 10" :key="num"&gt;
+                選購 {{ num }} {{ product.unit }}
+              &lt;/option&gt;
+            &lt;/select&gt;
+          &lt;/div&gt;
+          &lt;div class="modal-footer"&gt;
+            &lt;div class="text-muted text-nowrap mr-3"&gt;
+              小計 &lt;strong&gt;{{ product.num * product.price }}&lt;/strong&gt; 元
+            &lt;/div&gt;
+            &lt;button type="button" class="btn btn-primary"
+              @click="addtoCart(product.id, product.num)"&gt;
+              &lt;!-- &lt;i class="fas fa-spinner fa-spin" v-if="product.id === status.loadingItem"&gt;&lt;/i&gt; --&gt;
+              加到購物車
+            &lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- 購物車列表 --&gt;
+    &lt;div class="my-5 row justify-content-center"&gt;
+      &lt;div class="col-md-6"&gt;
+        &lt;table class="table"&gt;
+          &lt;thead&gt;
+            &lt;th&gt;&lt;/th&gt;
+            &lt;th&gt;品名&lt;/th&gt;
+            &lt;th&gt;數量&lt;/th&gt;
+            &lt;th&gt;單價&lt;/th&gt;
+          &lt;/thead&gt;
+          &lt;tbody&gt;
+            &lt;tr v-for="item in cart.carts" :key="item.id" v-if="cart.carts"&gt;
+              &lt;td class="align-middle"&gt;
+                &lt;button type="button" class="btn btn-outline-danger btn-sm"
+                  @click="removeCartItem(item.id)"&gt;
+                  &lt;i class="far fa-trash-alt"&gt;&lt;/i&gt;
+                &lt;/button&gt;
+              &lt;/td&gt;
+              &lt;td class="align-middle"&gt;
+                {{ item.product.title }}
+                &lt;div class="text-success" v-if="item.coupon"&gt;
+                  已套用優惠券
+                &lt;/div&gt;
+              &lt;/td&gt;
+              &lt;td class="align-middle"&gt;{{ item.qty }}/{{ item.product.unit }}&lt;/td&gt;
+              &lt;td class="align-middle text-right"&gt;{{ item.final_total }}&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+          &lt;tfoot&gt;
+            &lt;tr&gt;
+              &lt;td colspan="3" class="text-right"&gt;總計&lt;/td&gt;
+              &lt;td class="text-right"&gt;{{ cart.total }}&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr v-if="cart.final_total !== cart.total"&gt;
+              &lt;td colspan="3" class="text-right text-success"&gt;折扣價&lt;/td&gt;
+              &lt;td class="text-right text-success"&gt;{{ cart.final_total }}&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tfoot&gt;
+        &lt;/table&gt;
+        &lt;div class="input-group mb-3 input-group-sm"&gt;
+          &lt;input type="text" class="form-control" v-model="coupon_code" placeholder="請輸入優惠碼"&gt;
+          &lt;div class="input-group-append"&gt;
+            &lt;button class="btn btn-outline-secondary" type="button" @click="addCouponCode"&gt;
+              套用優惠碼
+            &lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- 建立訂購表單 --&gt;
+    &lt;div class="my-5 row justify-content-center"&gt;
+      &lt;form class="col-md-6" @submit.prevent="createOrder"&gt;
+        &lt;div class="form-group"&gt;
+          &lt;label for="useremail"&gt;Email&lt;/label&gt;
+          &lt;input type="email" class="form-control" name="email" id="useremail"
+            v-validate="'required|email'"
+            :class="{'is-invalid': errors.has('email')}"
+            v-model="form.user.email" placeholder="請輸入 Email"&gt;
+          &lt;span class="text-danger" v-if="errors.has('email')"&gt;
+            {{ errors.first('email') }}
+          &lt;/span&gt;
+        &lt;/div&gt;
+      
+        &lt;div class="form-group"&gt;
+          &lt;label for="username"&gt;收件人姓名&lt;/label&gt;
+          &lt;input type="text" class="form-control" name="name" id="username"
+            :class="{'is-invalid': errors.has('name')}"
+            v-model="form.user.name" v-validate="'required'" placeholder="輸入姓名"&gt;
+          &lt;span class="text-danger" v-if="errors.has('name')"&gt;姓名必須輸入&lt;/span&gt;
+        &lt;/div&gt;
+      
+        &lt;div class="form-group"&gt;
+          &lt;label for="usertel"&gt;收件人電話&lt;/label&gt;
+          &lt;input type="tel" class="form-control" name="tel" id="usertel"
+            :class="{'is-invalid': errors.has('tel')}"
+            v-model="form.user.tel" v-validate="'required'" placeholder="請輸入電話"&gt;
+          &lt;span class="text-danger" v-if="errors.has('tel')"&gt;電話欄位不得留空&lt;/span&gt;
+        &lt;/div&gt;
+      
+        &lt;div class="form-group"&gt;
+          &lt;label for="useraddress"&gt;收件人地址&lt;/label&gt;
+          &lt;input type="text" class="form-control" name="address" id="useraddress"
+            :class="{'is-invalid': errors.has('address')}"
+            v-model="form.user.address" v-validate="'required'" placeholder="請輸入地址"&gt;
+          &lt;span class="text-danger" v-if="errors.has('address')"&gt;地址欄位不得留空&lt;/span&gt;
+        &lt;/div&gt;
+      
+        &lt;div class="form-group"&gt;
+          &lt;label for="comment"&gt;留言&lt;/label&gt;
+          &lt;textarea name="" id="comment" class="form-control" cols="30" rows="10" v-model="form.message"&gt;&lt;/textarea&gt;
+        &lt;/div&gt;
+        &lt;div class="text-right"&gt;
+          &lt;button class="btn btn-danger"&gt;送出訂單&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import $ from 'jquery';
+
+export default {
+  data() {
+    return {
+      products: &#91;],
+      product: {},
+      status: {
+        loadingItem: '',
+      },
+      form: {
+        user: {
+          name: '',
+          email: '',
+          tel: '',
+          address: '',
+        },
+        message: '',
+      },
+      cart: {},
+      isLoading: false,
+      coupon_code: '',
+    };
+  },
+  methods: {
+    getProducts() {
+      const vm = this;
+      const url = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/products`;
+      vm.isLoading = true;
+      this.$http.get(url).then((response) =&gt; {
+        vm.products = response.data.products;
+        console.log(response);
+        vm.isLoading = false;
+      });
+    },
+    // 取得單一產品
+    getProduct(id) {
+      const vm = this;
+      const url = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/product/${id}`;
+      // vm.isLoading = true;
+      vm.status.loadingItem = id;
+      this.$http.get(url).then((response) =&gt; {
+        vm.product = response.data.product;
+        $('#productModal').modal('show');
+        console.log(response);
+        // vm.isLoading = false;
+        vm.status.loadingItem = '';
+        vm.product.num = 1; // 所有商品初始值設置為 1
+      });
+    },
+    // 加入購物車
+    addtoCart(id, qty = 1) {
+      const vm = this;
+      const url = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/cart`;
+      // vm.isLoading = true;
+      vm.status.loadingItem = id;
+      const cart = {
+        product_id: id,
+        qty,
+      };
+      this.$http.post(url, { data: cart }).then((response) =&gt; {
+        console.log(response);
+        // vm.isLoading = false;
+        vm.status.loadingItem = '';
+        vm.getCart();
+        $('#productModal').modal('hide');
+      });
+    },
+    // 取得購物車的內容
+    getCart() {
+      const vm = this;
+      const url = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/cart`;
+      vm.isLoading = true;
+      this.$http.get(url).then((response) =&gt; {
+        // vm.products = response.data.products;
+        vm.cart = response.data.data;
+        console.log(response);
+        vm.isLoading = false;
+      });
+    },
+    // 刪除購物車品項
+    removeCartItem(id) {
+      const vm = this;
+      const url = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/cart/${id}`;
+      vm.isLoading = true;
+      this.$http.delete(url).then(() =&gt; {
+        vm.getCart();
+        vm.isLoading = false;
+      });
+    },
+    // 新增優惠碼
+    addCouponCode() {
+      const vm = this;
+      const url = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/coupon`;
+      const coupon = {
+        code: vm.coupon_code,
+      };
+      vm.isLoading = true;
+      this.$http.post(url, { data: coupon }).then((response) =&gt; {
+        console.log(response);
+        vm.getCart();
+        vm.isLoading = false;
+      });
+    },
+    // 建立訂購表單
+    createOrder() {
+      const vm = this;
+      const url = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/order`;
+      const order = vm.form;
+      // vm.isLoading = true;
+      this.$validator.validate().then((result) =&gt; {
+        if (result) {
+          this.$http.post(url, { data: order }).then((response) =&gt; {
+            console.log('訂單已建立', response);
+            // vm.getCart();
+            vm.isLoading = false;
+          });
+        } else {
+          console.log('欄位不完整');
+        }
+      });
+    },
+  },
+  created() {
+    this.getProducts();
+    this.getCart();
+  },
+};
+&lt;/script&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// main.js
+// The Vue build version to load with the `import` command
+// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+import Vue from 'vue'
+// 第三方的套件
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+// import component
+import Loading from 'vue-loading-overlay'
+// import stylesheet
+import 'vue-loading-overlay/dist/vue-loading.css'
+import 'bootstrap'
+// import VeeValidate
+import VeeValidate from 'vee-validate'
+// import 中文語系
+import zhTWValidate from 'vee-validate/dist/locale/zh_TW'
+// 自己撰寫
+import App from './App'
+import router from './router'
+import './bus'
+import currencyFilter from './filters/currency'
+import dateFilter from './filters/date'
+
+Vue.config.productionTip = false
+Vue.use(VueAxios, axios)
+
+// 寫在這無法顯示中文
+// VeeValidate.Validator.localize('zh_TW', zhTWValidate)
+Vue.use(VeeValidate, {
+  events: 'input|blur',
+})
+// 寫在這才能顯示中文
+VeeValidate.Validator.localize('zh_TW', zhTWValidate)
+
+Vue.component('Loading', Loading)
+Vue.filter('currency', currencyFilter)
+Vue.filter('date', dateFilter)
+
+// 前端跨域設定
+axios.defaults.withCredentials = true;
+
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
+  router,
+  components: { App },
+  template: '&lt;App/&gt;'
+})
+
+// 導航守衛
+router.beforeEach((to, from, next) =&gt; {
+  // console.log('to', to, 'from', from, 'next', next);
+  // ...
+  if (to.meta.requiresAuth) {
+    const api = `${process.env.APIPATH}/api/user/check`;
+    axios.post(api).then((response) =&gt; {
+      // console.log(response.data);
+      if (response.data.success) {
+        next();
+      } else {
+        next({
+          path: '/login',
+        });
+      }
+    });
+  } else {
+    next();
+  }
+})</code></pre>
+
+
+
+<h3>表單驗證補充</h3>
+
+
+
+<p>操作與講解</p>
+
+
+
+<ol>
+<li>在我們課程原本的介紹是使用第二版的 Vee Validate，那我們現在直接跳到指定的行數，在過去我們使用 Vee Validate 它的驗證主要是透過 Vue 的指令、它算是 HTML 的屬性來進行驗證。</li>
+<li>那在新版就有很大的不同，新版的話主要是使用元件的方式來進行驗證，那相對來說使用元件的方式進行驗證會稍微複雜一點點，但是它會更符合 Vue 的邏輯，因此在這個地方我們就額外推出關於 Vee Validate 新版的驗證方式，也因為新版的驗證它稍微複雜一點點，所以在這個地方我們會提供完整的文件。</li>
+<li>這個文件我們只要按照這個流程我們就可以把 Vee Validate 安裝好，我們就透過這個文件一一的解說我們到底做了哪些事情，我們先把多餘的 &lt;input&gt; 的欄位先把它關掉，我們先只留下 Email 這一段就好了，這個是對應我們的這個頁面、就是我們現在只留下這個 Email，那下面的收件人姓名到留言這一段，我們先把它們關掉，這個是 Email，因此我們就把下面的收件人姓名到留言這個地方，我們都先把它刪掉，現在我們只留下畫面的這一塊。接下來我們把原本的 Vee-Validate 解除安裝、然後並且安裝新版的 Vee-Validate，那我們來打開終端機、打開終端機之後，npm uninstall vee-validate，解除安裝之後，我們就可以準備直接安裝新版的 Vee-Validate，這個地方我們就輸入 npm install vee-validate –save，安裝完成之後，我們會建議先打開 package.json 這一個頁面，打開 package.json 之後我們要先確定我們 vee-validate 的版本，那目前來說它的使用版本是3.x.x的版本，那麼如果你是使用第四版測試版的話，它是支援 Vue 3。</li>
+<li>我們先把 Vue 的環境運行起來 npm run dev，運行起來它預期會跳一些錯誤，因為新舊版是有一點點不同的，但是我們先不管它。現在我們先把多的頁面關掉，我們打開 main.js、我們在進入點上面需要做一點點調整。在原本 vee-validate 上面有進行一些設定像是這兩行，還有上面會有引入 vee-validate 的方法，我們先把這四行先把它刪掉，這是屬於舊版的驗證。</li>
+<li>那現在我們要導入新版的驗證，存檔之後、我們現在跳到步驟二，我們必需先把新版是使用元件的方式進行驗證，所以我們先把元件給導入進來，這邊是 import&nbsp;相關的元件內容，那我們把它放在這個地方、原本的這個地方，我們先整理一下程式碼。接下來我們再把這裡有一些規則、以及元件的設定，我們先把它直接給貼進來，貼進來之後我們再一一解說這些程式碼到底代表什麼意思，我先稍微整理一下程式碼、存檔之後，我們現在來稍微做一下說明，在這個地方我們分別引入這些區塊，這邊是將元件、以及相關的驗證設定檔，從 VeeValidate 給導出來，validation-provider 是 input&nbsp;驗證元件、validation-observer&nbsp;則是整體 &lt;form&gt;&nbsp;驗證元件，(extend)這邊是VeeValidate的一些擴充功能、(localize)是關於語系的設定、(configure)是VeeValidate的一些設定檔，這是針對繁體中文的一些語系設定，它這個可以直接導出、讓我們就可以直接運用，然後另外一個這是一個比較大、不同的地方就是 VeeValidate&nbsp;在新版的時候，它所有驗證都是把它規則化，像是我們要驗證 email 的時候，它就提供 email&nbsp;的驗證規則，一般來說它可以自己撰寫、另外一種方式就是直接使用它所提供的一些規則，這些規則我們就把它全部導出出來，就不需要一個一個導入了。</li>
+<li>那我們再往下看，下面這個地方是我們剛剛所加入的其他設定檔，那麼大家可能會比較疑惑的是屬於這一段，這一段是我們會把剛剛的規則全部都導出出來，並且把它加到 VeeValidate&nbsp;的擴充的裡面，就是把它的規則預設其實是沒有加入進去，我們就必須手動的把它導出之後，再把它加進去。這樣你才可以運用這些規則。這邊是運用繁體中文的語系檔，另外下方有兩個元件、下面這邊有兩個元件，兩個元件我們會分別做介紹，其中一個是針對單一 input&nbsp;的驗證，另外一個是針對表單完整的 form&nbsp;表單進行驗證。另外最後還有關於 class&nbsp;name&nbsp;的一些設定檔，那麼這個 class name&nbsp;的設定檔目前這邊所撰寫的這兩行是針對 Bootstrap&nbsp;所進行驗證的一些 class name&nbsp;的設定，這個就是整個我們在導入新版的VeeValidate&nbsp;會加入的片段。</li>
+<li>建議你可以先檢查一下你目前的程式碼有沒有正確的運行，照理說你在設定完成之後，你的環境是可以運行起來的，那這邊我們就把 main.js&nbsp;關掉，現在我們再回到我們這段程式碼來(CustomerOrders.vue)，這個是我們 CustomerOrders.vue&nbsp;這個頁面，對應的就是我們目前的訂購表單</li>
+</ol>
+
+
+
+<p>表單驗證補充單元未完成</p>
+
+
+
+<pre class="wp-block-code"><code>//&nbsp;3.&nbsp;terminal
+//&nbsp;解除安裝舊的 Vee-Validate 版本
+npm uninstall vee-validate
+//&nbsp;安裝新的版本 V3
+npm install vee-validate --save</code></pre>
+
+
+
+<pre class="wp-block-code"><code>//&nbsp;4.&nbsp;main.js 這兩行
+VeeValidate.Validator.localize('zh_TW', zhTWValidate);
+Vue.use(VeeValidate);
+//&nbsp;引入的 vee-validate
+import VeeValidate from 'vee-validate';
+import zhTWValidate from 'vee-validate/dist/locale/zh_TW';</code></pre>
+
+
+
+<pre class="wp-block-code"><code>//&nbsp;5.&nbsp;main.js
+
+import { ValidationObserver, ValidationProvider, extend, localize, configure } from 'vee-validate';
+import TW from 'vee-validate/dist/locale/zh_TW.json'
+import * rules from 'vee-validate/dist/rules';
+
+Object.keys(rules).forEach((rule) =&gt; {
+  extend(rule, rules&#91;rule]);
+});
+
+localize('zh_TW', TW);
+
+Vue.component('ValidationObserver', ValidationObserver)
+Vue.component('ValidationProvider', ValidationProvider)
+
+configure({
+  classes: {
+    valid: 'is-valid',
+    invalid: 'is-invalid'
+  }
+});</code></pre>
+
+
+
+<pre class="wp-block-code"><code>口誤：
+validation-provider&nbsp;是 input&nbsp;驗證元件
+validation-observer&nbsp;則是整體 &lt;form&gt;&nbsp;驗證元件</code></pre>
+
+
+
+<h3>表單驗證補充文件</h3>
+
+
+
+<p>第三版</p>
+
+
+
+<h4>如何為單一表單(input)進行驗證</h4>
+
+
+
+<ul>
+<li><a href="https://logaretm.github.io/vee-validate/overview.html#installation" target="_blank" rel="noreferrer noopener">文件</a></li>
+<li><a href="https://cdnjs.com/libraries/vee-validate" target="_blank" rel="noreferrer noopener">CDN</a></li>
+</ul>
+
+
+
+<h4>步驟一</h4>
+
+
+
+<p>載入 vee-validate</p>
+
+
+
+<pre class="wp-block-code"><code>npm install vee-validate --save</code></pre>
+
+
+
+<h4>步驟二</h4>
+
+
+
+<p>註冊全域的表單驗證元件 (ValidationProvider)</p>
+
+
+
+<pre class="wp-block-code"><code>import { ValidationObserver, ValidationProvider, extend, localize, configure } from 'vee-validate';
+import TW from 'vee-validate/dist/locale/zh_TW.json'
+import * rules from 'vee-validate/dist/rules';
+
+Object.keys(rules).forEach((rule) =&gt; {
+  extend(rule, rules&#91;rule]);
+});
+
+localize('zh_TW', TW);
+
+Vue.component('ValidationObserver', ValidationObserver)
+Vue.component('ValidationProvider', ValidationProvider)
+
+configure({
+  classes: {
+    valid: 'is-valid',
+    invalid: 'is-invalid'
+  }
+});</code></pre>
+
+
+
+<h4>步驟三</h4>
+
+
+
+<ol>
+<li>建立 validation-provider 元件：<ul>
+<li>rules 帶上驗證的規則，規則列表可<a rel="noreferrer noopener" href="https://logaretm.github.io/vee-validate/guide/rules.html#rules" target="_blank">參考</a>。注意：規則之間不需要帶上空白鍵。</li>
+<li>v-slot 帶上預計回傳的回饋內容，常用的可參考下方範例，完整列表可<a rel="noreferrer noopener" href="https://logaretm.github.io/vee-validate/api/validation-provider.html#scoped-slot-props" target="_blank">參考</a>
+</li>
+</ul>
+</li>
+<li>建立 input 欄位內容</li>
+<li>將回饋帶至驗證 (v-slot 的內容)</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>&lt;validation-provider rules="required|email" v-slot="{ errors }"&gt;
+  &lt;!-- 輸入框 --&gt;
+  &lt;label for="email"&gt;Email&lt;/label&gt;
+  &lt;input id="email" type="email" name="email" v-model="email"
+      class="form-control"&gt;
+  &lt;!-- 錯誤訊息 --&gt;
+  &lt;span&gt;{‌{ errors&#91;0] }}&lt;/span&gt;
+&lt;/validation-provider&gt;</code></pre>
+
+
+
+<blockquote class="wp-block-quote">
+<p>備註：v-slot 稱為插槽 (Vue 的元件語法之一)，可以將驗證結果的回饋資料直接帶入於區塊中，相關概念可參考：</p>
+<cite><a href="https://cn.vuejs.org/v2/guide/components-slots.html#%E4%BD%9C%E7%94%A8%E5%9F%9F%E6%8F%92%E6%A7%BD" target="_blank" rel="noreferrer noopener">作用域插槽</a></cite>
+</blockquote>
+
+
+
+<h4>步驟四</h4>
+
+
+
+<p>加入樣式，JavaScript 加入 Bootstrap 樣式設定，可使用以下設定，或<a rel="noreferrer noopener" href="https://logaretm.github.io/vee-validate/guide/state.html#css-classes" target="_blank">參考官方文件</a>。</p>
+
+
+
+<pre class="wp-block-code"><code>// Class 設定檔案
+VeeValidate.configure({
+  classes: {
+    valid: 'is-valid',
+    invalid: 'is-invalid',
+  }
+});</code></pre>
+
+
+
+<p>將 HTML 的部分進行更新</p>
+
+
+
+<ul>
+<li>v-slot 增加 classes</li>
+<li>input 增加 :class=”classes”</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>&lt;validation-provider rules="required|email" v-slot="{ errors, classes }"&gt;
+  &lt;!-- 輸入框 --&gt;
+  &lt;label for="email"&gt;Email&lt;/label&gt;
+  &lt;input id="email" type="email" name="email" v-model="email"
+    class="form-control" :class="classes"&gt;
+  &lt;!-- 錯誤訊息 --&gt;
+  &lt;span class="invalid-feedback"&gt;{‌{ errors&#91;0] }}&lt;/span&gt;
+&lt;/validation-provider&gt;</code></pre>
+
+
+
+<h4>步驟五</h4>
+
+
+
+<p>增加多國語系的方法</p>
+
+
+
+<ul>
+<li><a rel="noreferrer noopener" href="https://logaretm.github.io/vee-validate/guide/localization.html#using-the-default-i18n" target="_blank">參考文件</a></li>
+<li><a href="https://github.com/logaretm/vee-validate/tree/master/locale" target="_blank" rel="noreferrer noopener">語系檔案</a></li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// 匯入語系檔案
+import zh_TW from './zh_TW.js';
+ 
+// 加入至 VeeValidate 的設定檔案
+VeeValidate.localize('tw', zh_TW);</code></pre>
+
+
+
+<p><a href="https://codepen.io/Wcc723/pen/ExPdGpX?editors=1010" target="_blank" rel="noreferrer noopener">範例 (不包含多國語系)</a></p>
+
+
+
+<h4>如何為完整表單進行驗證</h4>
+
+
+
+<h4>步驟一</h4>
+
+
+
+<p>建立 validation-observer 元件：v-slot 帶上預計回傳的回饋內容，常用的可參考下方範例，完整列表可<a href="https://logaretm.github.io/vee-validate/api/validation-provider.html#scoped-slot-props" target="_blank" rel="noreferrer noopener">參考</a></p>
+
+
+
+<pre class="wp-block-code"><code>&lt;validation-observer v-slot="{ invalid }"&gt;
+&lt;/validation-observer&gt;</code></pre>
+
+
+
+<h4>步驟二</h4>
+
+
+
+<p>加入，方法可參考上篇的 「如何為單一表單(input)進行驗證」</p>
+
+
+
+<h4>步驟三</h4>
+
+
+
+<p>加入 &lt;form&gt; 標籤及 &lt;button&gt; 標籤：</p>
+
+
+
+<ul>
+<li>表單送出改為使用 form submit 的方法</li>
+<li>送出表單使用 submit 的方法，如果驗證未通過則 disabled 該按鈕</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>&lt;!-- validation-observer 驗證整體表單 --&gt;
+&lt;validation-observer v-slot="{ invalid }"&gt;
+  &lt;!-- 表單送出改為使用 form submit 的方法 --&gt;
+  &lt;form @submit.prevent="submitForm"&gt;
+    &lt;validation-provider rules="required|email" class="form-group" tag="div" v-slot="{ errors, classes, passed }"&gt;
+      ...
+    &lt;/validation-provider&gt;
+    &lt;!-- 送出表單使用 submit 的方法，如果驗證未通過則 disabled 該按鈕 --&gt;
+    &lt;button type="submit" class="btn btn-primary" :disabled="invalid"&gt;送出表單&lt;/button&gt;
+  &lt;/form&gt;
+&lt;/validation-observer&gt;</code></pre>
+
+
+
+<p><a href="https://codepen.io/Wcc723/pen/zYrmeYP?editors=1010" target="_blank" rel="noreferrer noopener">完整範例</a></p>
+
+
+
+<h4>使用 JS 觸發驗證</h4>
+
+
+
+<ol>
+<li>&lt;v-slot&gt; 加入 handleSubmit</li>
+<li>表單送出改為 handleSubmit(自訂方法)</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>&lt;validation-observer v-slot="{ handleSubmit }"&gt;
+  &lt;form @submit.prevent="handleSubmit(submitForm)"&gt;
+    ...
+    &lt;button type="submit" class="btn btn-primary"&gt;送出表單&lt;/button&gt;
+  &lt;/form&gt;
+&lt;/validation-observer&gt;</code></pre>
+
+
+
+<p><a href="https://codepen.io/Wcc723/pen/QWyZYjE?editors=1010" target="_blank" rel="noreferrer noopener">完整範例</a></p>
+
+
+
+<h3>驗證補充說明</h3>
+
+
+
+<p>由於驗證套件更新<br>所以方法略有些微調整<br>以下感謝 洪同學提供</p>
+
+
+
+<p>vee-validate 更改語系的方法在 2.1.0-beta.24 版之後已經更改了，因此照著這個影片實作會無法中文化，以下是由老師爬 stack overflow 以及官方範例後的結果，希望能幫助到遇到同樣問題的大家。</p>
+
+
+
+<ol>
+<li>安裝 vue-i18n</li>
+<li>在 main.js 中將 vue-i18n import 進來</li>
+<li>將 VeeValidate.Validator.localize(‘zh_TW’, zhTWValidate) 及 Vue.use(VeeValidate) 刪除，並加入下列程式碼</li>
+<li>在 Vue 物件中新增 i18n</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// 1. 在 terminal 中輸入
+npm install vue-i18n --save</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 2. main.js
+import VueI18n from 'vue-i18n';
+Vue.use(VueI18n);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 3.
+const i18n = new VueI18n({
+  locale: 'zhTW'
+});
+Vue.use(VeeValidate, {
+  i18n,
+  dictionary: {
+    zhTW
+  }
+});</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 4.
+new Vue({
+  i18n,
+  el: '#app',
+  components: { App },
+  template: '&lt;App/&gt;',
+  router,
+})</code></pre>
+
+
+
+<h3>結帳頁面製作</h3>
+
+
+
+<p>操作與講解</p>
+
+
+
+<ol>
+<li>最後這個部分，我們要來做結帳的頁面，那我們先隨意加入一些商品到購物車內。</li>
+<li>接下來我們到下面填寫表單的地方，我們把表單填寫完成，到目前這個階段我們都已經完成了，接下來我們按下送出訂單，送出訂單之後它會到達這個連結，它是 CustomerCheckout、然後後面會帶上這筆訂單的 id。那這筆訂單會呈現這個商品的資料、以及用戶所填寫的內容，用戶確認說這筆訂單就是他所填寫的部分，下面還會有一個付款狀態，那目前這個付款狀態是尚未付款的狀態。</li>
+<li>當我們按下確認付款之後，他這個付款狀態也會有所更動。接下來我們按下確認付款，按下確認付款之後，你可以看到這個連結並沒有做變換，但是它會因為這筆訂單他已經付款完成、然後就把下面的文字做一些切換，並且把這個付款的連結把它拿掉。當這個付款完成之後，這個訂單列表它的付款狀態也會呈現已付款，那我們再回到上一個頁面。</li>
+<li>最後這個章節主要介紹怎麼製作這個頁面，那我們先來看一下API。API的部分主要是有兩個、一個是取得某一筆特定的訂單，我們剛剛這個連結後面其實有帶上這筆訂單的id，我們就可以透過這筆id將特定的訂單內容把它取回來，那取得這筆訂單之後，我們就可以把這筆訂單的資料呈現出來、還有裡面有一個很重要的值就是它到底付款了沒，再往下我們可以看到結帳付款，主要觸發這個API就會將上面這筆訂單轉為已經付款完成的狀態。</li>
+<li>我們來開始製作這個章節，在這個章節的部分，老師一樣會把HTML的Template直接提供給同學，那所以這個地方，同學不需要重刻這段HTML，我們在CustomerOrders.vue這裡其實還少一個步驟，就是我們在付款完成的時候，其實我們並沒有做跳頁，所以我們現在要先把另外一個checkout頁面先把它完成。</li>
+<li>那我們在這個部分，我們就先新增一個檔案，叫做CustomerCheckout.vue，那我們先準備一個&lt;template&gt;裡面是&lt;div&gt;結帳確認&lt;/div&gt;，這個頁面完成之後，我們再到達Vue router的index.js，我們這個下面有另外一個是CustomerOrder，我們先複製一下這個物件，這個物件我們要做為載入另外一個Checkout的頁面使用，所以我們現在要把CustomerCheckout把它載進來、然後接下來我們將這個頁面放到我們這個元件上面來，我們在加上這個連結之後它還沒有完成，後面記得帶上/:orderId，完成之後我們就把這個連結(customer_checkout)先把它複製起來，然後我們回到這個CustomerOrders.vue的地方，我們在先前建立訂單的時候，這裡有收到一個response，那我們這裡先判斷一下 if (response.data.success)，我們這筆訂單如果確定建立完成之後，我們將這個頁面 vm.$router，這段我們在Vue router的課程有介紹過，我們可以使用router來轉換它的頁面，那麼router在轉換的時候，我們就可以把customer_checkout、然後後面再帶上這個order的id(${response.data.orderId})，這裡應該使用反引號才是正確的。</li>
+<li>現在我們來試試看這個頁面有沒有正確的跳轉。確認購物車有資料，那我們輸入表單內容、然後按下送出訂單，送出訂單之後，這裡就有轉到customer_checkout，並且後面有帶上這筆訂單的id，那有這筆訂單的id之後，我們就可以開始撰寫接下來的 script。</li>
+<li>我們打開 CustomerCheckout.vue 、我們來開始撰寫 script 的部分，script 的話一開始就是 export default，物件一開始我們要先定義資料結構 data()，return 這個地方我們就可以先加入 orderId，我們要先把 orderId 取得之後，我們才能取得其他的內容，那要取得 orderId 的話，我們在一開始的 created() 就可以來做取得了，取得的時候我們就可以使用 this的orderId等於this，這是我們在先前router 的課程有介紹到的一個方法，我們可以用這個方式來取得網址上的參數，那最後的參數(params)是指這一段.orderId，最後這個 orderId 是對應我們路由所自定義的名稱，這裡要特別注意，當你這兩個名稱(orderId)如果輸入不一致的話，是沒有辦法正確取得的。那我們來看一下這個 orderId 有沒有取得回來，那透過 console 來看一下這個 orderId 有沒有取得回來，那看起來是有的，這裡的名稱會和我們路徑上的名稱是一致的，有 orderId 之後就可以把資料內容給取得回來了。那取得的資料方式跟先前的方法都一樣，所以我們可以先複製先前所寫好的方法，那在這裡加上 methods、然後它是個物件、然後 getOrder()，那把相同內容貼進來，貼進來之後我們再來對應一下 API，這段 API 是使用 api_path/order 然後再對應 order_id，所以我們把這個 order 加過來、order 後面再加上 orderId，那 orderId 的話我們剛已經存起來，在 vm.orderId，現在可以用 get 的方式把這筆資料內容存起來，那我們存起來之前先來確認一下這筆資料是不是我們要的、存檔，資料取得回來之後，我們打開看一下、它是存放在 data 的 data 內，這邊要特別注意在 success 的旁邊還有一個 order，所以它不是直接存放於這個 data 內，它是存放在 order 內。那在這個 order 內會有這個產品列表、以及我的訂單的資料，所以在這個地方我們就可以把這個註解打開、改成 vm.order、然後 response.data.order，將我們現成的 template 貼進來。</li>
+<li>現成的 template 貼進來，但是有些行為我們還沒加進來，所以我們要先把它移掉、存檔試試看，存檔之後它會發現說 email undefined，但其實 email 有在上面，原因是因為這個 email 是放在 user 下，它這裡已經跨第二層了，如果要避免跳出這個錯誤，比較簡單的方式是在 order: {} 下(裡)再新增 user 這一層，那這樣子的話它就不會跳出這樣子的錯誤、重新整理一次，現在就沒有跳出這個錯誤，並且有把整個訂單的資料完整的呈現出來，那資料都完整的呈現出來之後，這裡有一個確認付款去，所以我們再補上確認付款去的行為就可以了，所以我們在下方就可以再做一個 payOrder() 的一個行為，這邊我們可以複製我們先前寫好的程式碼、然後來稍作調整，結帳付款是在 api_path 下有一個 pay、然後後面接上 order_id 就可以直接付款，那我們在這個部分就可以使用 api、然後後面加上 pay、以及 orderId。在這個地方行為要特別注意，我們使用的是 post 的行為，後面的話這一段(vm.order = response.data.order;)可以移除，接下來這個地方記得把這個 payOrder() 加到我們上面的表單來，我們可以使用 @submit.prevent=”payOrder”。那我們來送出一次表單試試看、重新整理、打開 console 然後按下確認付款去，那確認付款去這裡就會顯示付款完成，那我們顯示付款完成，但是其實我們這個訂單還是呈現尚未付款，所以在下方程式碼的部分也要稍微做一些調整，假設它付款成功之後，我們可以跳出一個訊息，那跳出訊息之外，我們還可以重新取得訂單資料，它還可以再重新取得一次訂單資料，我們再重新整理一次，這個時候它就會轉換成付款完成，並且把它的付款連結也把它拿掉，這個時候如果進入訂單列表，假設你這個畫面已經完成的狀態，你也可以看到這個商品已經被付款完成，那這個就是最後付款結帳頁面。</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// 6. CustomerCheckout.vue
+&lt;template&gt;
+  &lt;div&gt;
+    結帳確認
+  &lt;/div&gt;
+&lt;/template&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 6. router/index.js
+import Vue from 'vue'
+import Router from 'vue-router'
+// 之後都不會用到，可以直接移除
+// import HelloWorld from '@/components/HelloWorld'
+// 把Dashboard給載進來
+import Dashboard from '@/components/Dashboard'
+// 把Login給載進來
+import Login from '@/components/pages/Login'
+// 把Product給載進來
+import Products from '@/components/pages/Products'
+// 把Order給載進來
+import Orders from '@/components/pages/Orders'
+// 把Coupon給載進來
+import Coupons from '@/components/pages/Coupons'
+// 把CustomerOrder給載進來
+import CustomerOrder from '@/components/pages/CustomerOrders' 
+// 把CustomerCheckout給載進來
+import CustomerCheckout from '@/components/pages/CustomerCheckout' 
+
+// 解決重複導航
+const inCludPush = Router.prototype.push
+Router.prototype.push = function push(location) {
+  return inCludPush.call(this, location).catch(err =&gt; err)
+}
+
+Vue.use(Router)
+
+export default new Router({
+  linkActiveClass: 'active',
+  routes: &#91;
+    // 重新導向
+    {
+      path: '*',
+      // redirect: 'login',
+      redirect: 'shop/customer_order',
+    },
+    // 之後都不會用到，可以直接移除
+    // // 首頁的路徑
+    // {
+    //   path: '/',
+    //   name: 'HelloWorld',
+    //   component: HelloWorld,
+    //   meta: { requiresAuth: true }
+    // },
+    // 新增一個登入的路徑
+    {
+      path: '/login',
+      name: 'Login',
+      component: Login,
+    },
+    // Dashboard的路徑
+    {
+      path: '/admin',
+      name: 'Dashboard',
+      component: Dashboard,
+      // 設定 meta 是否需要驗證
+      meta: { requiresAuth: true },
+      children: &#91;
+        {
+          path: 'products',
+          name: 'Products',
+          component: Products,
+          meta: { requiresAuth: true },
+        },
+        // Orders的路徑
+        {
+          path: 'orders',
+          name: 'Orders',
+          component: Orders,
+          meta: { requiresAuth: true },
+        },
+        // Coupons的路徑
+        {
+          path: 'coupons',
+          name: 'Coupons',
+          component: Coupons,
+          meta: { requiresAuth: true },
+        },
+      ],
+    },
+    // 客戶購物的路徑(使用與Dashboard相同的模板)
+    {
+      // path: '/',
+      // name: 'Dashboard',
+      path: '/shop',
+      name: 'DashboardCustomerOrder',
+      component: Dashboard,
+      // 設定 meta 是否需要驗證
+      meta: { requiresAuth: true },
+      children: &#91;
+        // CustomerOrder的路徑
+        {
+          path: 'customer_order',
+          name: 'CustomerOrder',
+          component: CustomerOrder,
+        },
+        // CustomerCheckout的路徑 
+        {
+          path: 'customer_checkout/:orderId',
+          name: 'CustomerCheckout',
+          component: CustomerCheckout,
+        },
+      ],
+    },
+  ]
+})
+</code></pre>
+
+
+
+<h5>結帳頁面製作範例程式碼</h5>
+
+
+
+<pre class="wp-block-code"><code>// index.js
+import Vue from 'vue'
+import Router from 'vue-router'
+// 之後都不會用到，可以直接移除
+// import HelloWorld from '@/components/HelloWorld'
+// 把Dashboard給載進來
+import Dashboard from '@/components/Dashboard'
+// 把Login給載進來
+import Login from '@/components/pages/Login'
+// 把Product給載進來
+import Products from '@/components/pages/Products'
+// 把Order給載進來
+import Orders from '@/components/pages/Orders'
+// 把Coupon給載進來
+import Coupons from '@/components/pages/Coupons'
+// 把CustomerOrder給載進來
+import CustomerOrder from '@/components/pages/CustomerOrders' 
+// 把CustomerCheckout給載進來
+import CustomerCheckout from '@/components/pages/CustomerCheckout' 
+
+
+
+Vue.use(Router)
+
+export default new Router({
+  linkActiveClass: 'active',
+  routes: &#91;
+    // 重新導向
+    {
+      path: '*',
+      // redirect: 'login',
+      redirect: 'shop/customer_order',
+    },
+    // 之後都不會用到，可以直接移除
+    // // 首頁的路徑
+    // {
+    //   path: '/',
+    //   name: 'HelloWorld',
+    //   component: HelloWorld,
+    //   meta: { requiresAuth: true }
+    // },
+    // 新增一個登入的路徑
+    {
+      path: '/login',
+      name: 'Login',
+      component: Login,
+    },
+    // Dashboard的路徑
+    {
+      path: '/admin',
+      name: 'Dashboard',
+      component: Dashboard,
+      // 設定 meta 是否需要驗證
+      meta: { requiresAuth: true },
+      children: &#91;
+        {
+          path: 'products',
+          name: 'Products',
+          component: Products,
+          meta: { requiresAuth: true },
+        },
+        // Orders的路徑
+        {
+          path: 'orders',
+          name: 'Orders',
+          component: Orders,
+          meta: { requiresAuth: true },
+        },
+        // Coupons的路徑
+        {
+          path: 'coupons',
+          name: 'Coupons',
+          component: Coupons,
+          meta: { requiresAuth: true },
+        },
+      ],
+    },
+    // 客戶購物的路徑(使用與Dashboard相同的模板)
+    {
+      // path: '/',
+      // name: 'Dashboard',
+      path: '/shop',
+      name: 'DashboardCustomerOrder',
+      component: Dashboard,
+      // 設定 meta 是否需要驗證
+      meta: { requiresAuth: true },
+      children: &#91;
+        // CustomerOrder的路徑
+        {
+          path: 'customer_order',
+          name: 'CustomerOrder',
+          component: CustomerOrder,
+        },
+        // CustomerCheckout的路徑 
+        {
+          path: 'customer_checkout/:orderId',
+          name: 'CustomerCheckout',
+          component: CustomerCheckout,
+        },
+      ],
+    },
+  ]
+})
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// CustomerOrders.vue
+&lt;template&gt;
+  &lt;div&gt;
+    &lt;loading :active.sync="isLoading"&gt;&lt;/loading&gt;
+    &lt;div class="row mt-4"&gt;
+      &lt;div class="col-md-4 mb-4" v-for="item in products" :key="item.id"&gt;
+        &lt;div class="card border-0 shadow-sm"&gt;
+          &lt;div style="height: 150px; background-size: cover; background-position: center"
+            :style="{backgroundImage: `url(${item.imageUrl})`}"&gt;
+          &lt;/div&gt;
+          &lt;div class="card-body"&gt;
+            &lt;span class="badge badge-secondary float-right ml-2"&gt;{{ item.category }}&lt;/span&gt;
+            &lt;h5 class="card-title"&gt;
+              &lt;a href="#" class="text-dark"&gt;{{ item.title }}&lt;/a&gt;
+            &lt;/h5&gt;
+            &lt;p class="card-text"&gt;{{ item.content }}&lt;/p&gt;
+            &lt;div class="d-flex justify-content-between align-items-baseline"&gt;
+              &lt;div class="h5" v-if="!item.price"&gt;{{ item.origin_price }}&lt;/div&gt;
+              &lt;del class="h6" v-if="item.price"&gt;原價 {{ item.origin_price }} 元&lt;/del&gt;
+              &lt;div class="h5" v-if="item.price"&gt;現在只要 {{ item.price }} 元&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="card-footer d-flex"&gt;
+            &lt;button type="button" class="btn btn-outline-secondary btn-sm"
+              @click="getProduct(item.id)"&gt;
+              &lt;i class="fas fa-spinner fa-spin" v-if="status.loadingItem === item.id"&gt;&lt;/i&gt;
+              查看更多
+            &lt;/button&gt;
+            &lt;button type="button" class="btn btn-outline-danger btn-sm ml-auto"
+              @click="addtoCart(item.id)"&gt;
+              &lt;i class="fas fa-spinner fa-spin" v-if="status.loadingItem === item.id"&gt;&lt;/i&gt;
+              加到購物車
+            &lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- Modal CustomerOrders --&gt;
+    &lt;div class="modal fade" id="productModal" tabindex="-1" role="dialog"
+      aria-labelledby="exampleModalLabel" aria-hidden="true"&gt;
+      &lt;div class="modal-dialog" role="document"&gt;
+        &lt;div class="modal-content"&gt;
+          &lt;div class="modal-header"&gt;
+            &lt;h5 class="modal-title" id="exampleModalLabel"&gt;{{ product.title }}&lt;/h5&gt;
+            &lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;
+              &lt;span aria-hidden="true"&gt;&amp;times;&lt;/span&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
+          &lt;div class="modal-body"&gt;
+            &lt;img :src="product.imageUrl" class="img-fluid" alt=""&gt;
+            &lt;blockquote class="blockquote mt-3"&gt;
+              &lt;p class="mb-0"&gt;{{ product.content }}&lt;/p&gt;
+              &lt;footer class="blockquote-footer text-right"&gt;{{ product.description }}&lt;/footer&gt;
+            &lt;/blockquote&gt;
+            &lt;div class="d-flex justify-content-between align-items-baseline"&gt;
+              &lt;div class="h4" v-if="!product.price"&gt;{{ product.origin_price }} 元&lt;/div&gt;
+              &lt;del class="h6" v-if="product.price"&gt;原價 {{ product.origin_price }} 元&lt;/del&gt;
+              &lt;div class="h4" v-if="product.price"&gt;現在只要 {{ product.price }} 元&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;select name="" class="form-control mt-3" v-model="product.num"&gt;
+              &lt;option :value="num" v-for="num in 10" :key="num"&gt;
+                選購 {{ num }} {{ product.unit }}
+              &lt;/option&gt;
+            &lt;/select&gt;
+          &lt;/div&gt;
+          &lt;div class="modal-footer"&gt;
+            &lt;div class="text-muted text-nowrap mr-3"&gt;
+              小計 &lt;strong&gt;{{ product.num * product.price }}&lt;/strong&gt; 元
+            &lt;/div&gt;
+            &lt;button type="button" class="btn btn-primary"
+              @click="addtoCart(product.id, product.num)"&gt;
+              &lt;!-- &lt;i class="fas fa-spinner fa-spin" v-if="product.id === status.loadingItem"&gt;&lt;/i&gt; --&gt;
+              加到購物車
+            &lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- 購物車列表 --&gt;
+    &lt;div class="my-5 row justify-content-center"&gt;
+      &lt;div class="col-md-6"&gt;
+        &lt;table class="table"&gt;
+          &lt;thead&gt;
+            &lt;th&gt;&lt;/th&gt;
+            &lt;th&gt;品名&lt;/th&gt;
+            &lt;th&gt;數量&lt;/th&gt;
+            &lt;th&gt;單價&lt;/th&gt;
+          &lt;/thead&gt;
+          &lt;tbody&gt;
+            &lt;tr v-for="item in cart.carts" :key="item.id" v-if="cart.carts"&gt;
+              &lt;td class="align-middle"&gt;
+                &lt;button type="button" class="btn btn-outline-danger btn-sm"
+                  @click="removeCartItem(item.id)"&gt;
+                  &lt;i class="far fa-trash-alt"&gt;&lt;/i&gt;
+                &lt;/button&gt;
+              &lt;/td&gt;
+              &lt;td class="align-middle"&gt;
+                {{ item.product.title }}
+                &lt;div class="text-success" v-if="item.coupon"&gt;
+                  已套用優惠券
+                &lt;/div&gt;
+              &lt;/td&gt;
+              &lt;td class="align-middle"&gt;{{ item.qty }}/{{ item.product.unit }}&lt;/td&gt;
+              &lt;td class="align-middle text-right"&gt;{{ item.final_total }}&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+          &lt;tfoot&gt;
+            &lt;tr&gt;
+              &lt;td colspan="3" class="text-right"&gt;總計&lt;/td&gt;
+              &lt;td class="text-right"&gt;{{ cart.total }}&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr v-if="cart.final_total !== cart.total"&gt;
+              &lt;td colspan="3" class="text-right text-success"&gt;折扣價&lt;/td&gt;
+              &lt;td class="text-right text-success"&gt;{{ cart.final_total }}&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tfoot&gt;
+        &lt;/table&gt;
+        &lt;div class="input-group mb-3 input-group-sm"&gt;
+          &lt;input type="text" class="form-control" v-model="coupon_code" placeholder="請輸入優惠碼"&gt;
+          &lt;div class="input-group-append"&gt;
+            &lt;button class="btn btn-outline-secondary" type="button" @click="addCouponCode"&gt;
+              套用優惠碼
+            &lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- 建立訂購表單 --&gt;
+    &lt;div class="my-5 row justify-content-center"&gt;
+      &lt;form class="col-md-6" @submit.prevent="createOrder"&gt;
+        &lt;div class="form-group"&gt;
+          &lt;label for="useremail"&gt;Email&lt;/label&gt;
+          &lt;input type="email" class="form-control" name="email" id="useremail"
+            v-validate="'required|email'"
+            :class="{'is-invalid': errors.has('email')}"
+            v-model="form.user.email" placeholder="請輸入 Email"&gt;
+          &lt;span class="text-danger" v-if="errors.has('email')"&gt;
+            {{ errors.first('email') }}
+          &lt;/span&gt;
+        &lt;/div&gt;
+      
+        &lt;div class="form-group"&gt;
+          &lt;label for="username"&gt;收件人姓名&lt;/label&gt;
+          &lt;input type="text" class="form-control" name="name" id="username"
+            :class="{'is-invalid': errors.has('name')}"
+            v-model="form.user.name" v-validate="'required'" placeholder="輸入姓名"&gt;
+          &lt;span class="text-danger" v-if="errors.has('name')"&gt;姓名必須輸入&lt;/span&gt;
+        &lt;/div&gt;
+      
+        &lt;div class="form-group"&gt;
+          &lt;label for="usertel"&gt;收件人電話&lt;/label&gt;
+          &lt;input type="tel" class="form-control" name="tel" id="usertel"
+            :class="{'is-invalid': errors.has('tel')}"
+            v-model="form.user.tel" v-validate="'required'" placeholder="請輸入電話"&gt;
+          &lt;span class="text-danger" v-if="errors.has('tel')"&gt;電話欄位不得留空&lt;/span&gt;
+        &lt;/div&gt;
+      
+        &lt;div class="form-group"&gt;
+          &lt;label for="useraddress"&gt;收件人地址&lt;/label&gt;
+          &lt;input type="text" class="form-control" name="address" id="useraddress"
+            :class="{'is-invalid': errors.has('address')}"
+            v-model="form.user.address" v-validate="'required'" placeholder="請輸入地址"&gt;
+          &lt;span class="text-danger" v-if="errors.has('address')"&gt;地址欄位不得留空&lt;/span&gt;
+        &lt;/div&gt;
+      
+        &lt;div class="form-group"&gt;
+          &lt;label for="comment"&gt;留言&lt;/label&gt;
+          &lt;textarea name="" id="comment" class="form-control" cols="30" rows="10" v-model="form.message"&gt;&lt;/textarea&gt;
+        &lt;/div&gt;
+        &lt;div class="text-right"&gt;
+          &lt;button class="btn btn-danger"&gt;送出訂單&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import $ from 'jquery';
+
+export default {
+  data() {
+    return {
+      products: &#91;],
+      product: {},
+      status: {
+        loadingItem: '',
+      },
+      form: {
+        user: {
+          name: '',
+          email: '',
+          tel: '',
+          address: '',
+        },
+        message: '',
+      },
+      cart: {},
+      isLoading: false,
+      coupon_code: '',
+    };
+  },
+  methods: {
+    getProducts() {
+      const vm = this;
+      const url = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/products`;
+      vm.isLoading = true;
+      this.$http.get(url).then((response) =&gt; {
+        vm.products = response.data.products;
+        // console.log(response);
+        vm.isLoading = false;
+      });
+    },
+    // 取得單一產品
+    getProduct(id) {
+      const vm = this;
+      const url = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/product/${id}`;
+      // vm.isLoading = true;
+      vm.status.loadingItem = id;
+      this.$http.get(url).then((response) =&gt; {
+        vm.product = response.data.product;
+        $('#productModal').modal('show');
+        // console.log(response);
+        // vm.isLoading = false;
+        vm.status.loadingItem = '';
+        vm.product.num = 1; // 所有商品初始值設置為 1
+      });
+    },
+    // 加入購物車
+    addtoCart(id, qty = 1) {
+      const vm = this;
+      const url = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/cart`;
+      // vm.isLoading = true;
+      vm.status.loadingItem = id;
+      const cart = {
+        product_id: id,
+        qty,
+      };
+      this.$http.post(url, { data: cart }).then((response) =&gt; {
+        console.log(response);
+        // vm.isLoading = false;
+        vm.status.loadingItem = '';
+        vm.getCart();
+        $('#productModal').modal('hide');
+      });
+    },
+    // 取得購物車的內容
+    getCart() {
+      const vm = this;
+      const url = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/cart`;
+      vm.isLoading = true;
+      this.$http.get(url).then((response) =&gt; {
+        // vm.products = response.data.products;
+        vm.cart = response.data.data;
+        // console.log(response);
+        vm.isLoading = false;
+      });
+    },
+    // 刪除購物車品項
+    removeCartItem(id) {
+      const vm = this;
+      const url = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/cart/${id}`;
+      vm.isLoading = true;
+      this.$http.delete(url).then(() =&gt; {
+        vm.getCart();
+        vm.isLoading = false;
+      });
+    },
+    // 新增優惠碼
+    addCouponCode() {
+      const vm = this;
+      const url = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/coupon`;
+      const coupon = {
+        code: vm.coupon_code,
+      };
+      vm.isLoading = true;
+      this.$http.post(url, { data: coupon }).then((response) =&gt; {
+        // console.log(response);
+        vm.getCart();
+        vm.isLoading = false;
+      });
+    },
+    // 建立訂購表單
+    createOrder() {
+      const vm = this;
+      const url = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/order`;
+      const order = vm.form;
+      // vm.isLoading = true;
+      this.$validator.validate().then((result) =&gt; {
+        if (result) {
+          this.$http.post(url, { data: order }).then((response) =&gt; {
+            console.log('訂單已建立', response);
+            if (response.data.success) {
+              vm.$router.push(`/shop/customer_checkout/${response.data.orderId}`);
+            }
+            // vm.getCart();
+            vm.isLoading = false;
+          });
+        } else {
+          console.log('欄位不完整');
+        }
+      });
+    },
+  },
+  created() {
+    this.getProducts();
+    this.getCart();
+  },
+};
+&lt;/script&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// CustomerCheckout.vue
+&lt;template&gt;
+  &lt;div class="my-5 row justify-content-center"&gt;
+    &lt;form class="col-md-6" @submit.prevent="payOrder"&gt;
+      &lt;table class="table"&gt;
+        &lt;thead&gt;
+          &lt;th&gt;品名&lt;/th&gt;
+          &lt;th&gt;數量&lt;/th&gt;
+          &lt;th&gt;單價&lt;/th&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr v-for="item in order.products" :key="item.id"&gt;
+            &lt;td class="align-middle"&gt;{{ item.product.title }}&lt;/td&gt;
+            &lt;td class="align-middle"&gt;{{ item.qty }}/{{ item.product.unit }}&lt;/td&gt;
+            &lt;td class="align-middle text-right"&gt;{{ item.final_total }}&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+        &lt;tfoot&gt;
+          &lt;tr&gt;
+            &lt;td colspan="2" class="text-right"&gt;總計&lt;/td&gt;
+            &lt;td class="text-right"&gt;{{ order.total }}&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tfoot&gt;
+      &lt;/table&gt;
+
+      &lt;table class="table"&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;
+            &lt;th width="100"&gt;Email&lt;/th&gt;
+            &lt;td&gt;{{ order.user.email }}&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;th&gt;姓名&lt;/th&gt;
+            &lt;td&gt;{{ order.user.name }}&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;th&gt;收件人電話&lt;/th&gt;
+            &lt;td&gt;{{ order.user.tel }}&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;th&gt;收件人地址&lt;/th&gt;
+            &lt;td&gt;{{ order.user.address }}&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;th&gt;付款狀態&lt;/th&gt;
+            &lt;td&gt;
+              &lt;span v-if="!order.is_paid"&gt;尚未付款&lt;/span&gt;
+              &lt;span v-else class="text-success"&gt;付款完成&lt;/span&gt;
+            &lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+      &lt;div class="text-right" v-if="order.is_paid === false"&gt;
+        &lt;button class="btn btn-danger"&gt;確認付款去&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  data() {
+    return {
+      order: {
+        user: {},
+      },
+      orderId: '',
+    };
+  },
+  methods: {
+    getOrder() {
+      const vm = this;
+      const url = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/order/${vm.orderId}`;
+      vm.isLoading = true;
+      this.$http.get(url).then((response) =&gt; {
+        vm.order = response.data.order;
+        console.log(response);
+        vm.isLoading = false;
+      });
+    },
+    payOrder() {
+      const vm = this;
+      const url = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/pay/${vm.orderId}`;
+      vm.isLoading = true;
+      this.$http.post(url).then((response) =&gt; {
+        console.log(response);
+        if (response.data.success) {
+          vm.getOrder();
+        }
+        vm.isLoading = false;
+      });
+    },
+  },
+  created() {
+    this.orderId = this.$route.params.orderId;
+    this.getOrder();
+    console.log(this.orderId);
+  },
+};
+&lt;/script&gt;</code></pre>
+
+
+
+<h3>最終作業寄送變更</h3>
+
+
+
+<p>依照課程指示。</p>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">最終作業說明</h3>
+
+
+
+<p>操作與講解</p>
+
+
+
+<ol>
+<li>這個專案到目前為止都完成了差不多了，目前我們都是使用 npm run dev 的方式在運行這個專案，但我們不可能使用這個 webpack 直接給別人看，我們必定要編譯完成之後上傳到正式的伺服器。</li>
+<li>在做最後的編譯之前，跟同學分享一些小地方。我們到目前為止都是使用 npm run dev，那這裡面所使用的設定檔是使用 config/dev.env.js 這個檔案，裡面就包含 APIPATH、以及 CUSTOMPATH。但如果說你在編譯的時候沒有把這些設定檔加到 config/prod.env.js 裡面的話，你的正式釋出的檔案是不會包含這些內容的，所以在這裡，你在釋出前記得把 APIPATH、以及 CUSTOMPATH 把它加進來，加進來之後你在進行 npm run build 才能把這些內容都加進去。</li>
+<li>現在來執行 npm run build，執行完之後這裡就有寫到這些檔案必需在 HTTP server 下面才能運行。如果你直接打開的話，在 file 的路徑下是沒有辦法運行的，接下來我們把這個資料夾打開，在上傳前建議還是檢查一下這個檔案有沒有問題，這個時候一樣就可以把它丟在 VSCode 裡面來，然後透過我們先前所介紹的 preview on web server 就可以快速地檢視這個檔案。現在是登入的狀態，我先把它登出。登出之後、接下來(在網址)輸入 adminProducts 是沒有辦法進去的，我們就一定要輸入帳密，輸入帳密之後才能正確進來我們的 admin 後台。</li>
+<li>這裡再跟同學分享另外一個小地方，假設我們所釋出的檔案並不是在這個根目錄下，就不是在這個 Domain 下的話，我們先把後面的路徑刪掉。假設我們所釋出的路徑不是直接在這個 Domain 下，而是在其他的路徑下，像是這邊我再加一個 vue-testing，我是加在這個 vue-testing 下的話，我們就要另外做一些些調整。</li>
+<li>調整的方式我們可以把 config/index.js 打開，裡面有一個 build、然後下方可以找到 assetPublicPath，那這個是針對編譯後的路徑來做調整，所以這個時候如果我把 vue-testing 這個路徑加進來，再運行 npm run build 我們就可以在這個目錄下運行，假設如果你沒有加入這一段的話，它就只能在根目錄的 Domain 下才能運行這個專案。那這裡就跟同學分享一下這一段。</li>
+<li>最後我們在講一下作業的部分，最後的作業的部分就有分為前台跟後台，那前台跟後台同學都可以選擇使用老師所提供的版型、 Bootstrap 的版型、或自定義版型都是可以的。當然也希望同學可以經營成屬於自己主題的購物網站，那圖庫的話，你可以使用 unsplash 這個網站圖庫，細節的話有些部分希望同學可以自己做加強，像是錯誤回饋的部分，同學可以加上連線、以及表單的錯誤回饋…等等，然後還有增加 Vue 的 Component 使用，另外還有一個、希望同學的作品都可以有增加多一點的獨特性，所以盡量去自定義 Bootstrap 的樣式、色彩，然後不要只使用預設的樣式。</li>
+<li>那作業交送的方式有兩種，一種是直接寄給我們，寄給我們的話請不要包含 node_modules 這個資料夾，這個資料夾非常的大，而且你上傳給我的話，我還是必需要重新安裝。那另外一個比較推薦的做法是你直接將這個 dist 資料夾上傳到 GitHub Pages，那前後台的原始碼上傳到 GitHub，相關連結直接提供到 Udemy 問答區，你都提供完之後，老師就會來做檢視。如果沒有問題的話，大家來開始練習吧。</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// config/prod.env.js
+
+'use strict'
+module.exports = {
+  NODE_ENV: '"production"',
+  APIPATH: '"https://vue-course-api.hexschool.io"',
+  CUSTOMPATH: '"geehsu"',
+}
+</code></pre>
+
+
+
+<h3>最終作業文件</h3>
+
+
+
+<p>最終作業說明<br><br>注意：每個最終作業限制<strong>檢視三次</strong>，講師會在每次檢視後回覆的剩餘批改次數。<br><br>在第一次提交時：</p>
+
+
+
+<ul>
+<li>請提供 GitHub 及 GitHub Page 兩種版本</li>
+<li>確保 GitHub 上的程式碼下載後可正確運行，並修正 Console 所有錯誤</li>
+</ul>
+
+
+
+<p>重新提交檢視時：</p>
+
+
+
+<ul>
+<li>請確保修正完講師的所有建議</li>
+<li>如有疑問可回覆詢問講師 (詢問不會算次數)</li>
+<li>若是課程觀念問題請提交至線上問答區</li>
+</ul>
+
+
+
+<p>課程中提供完整的 API 與後台教學<br>同學的作業是完成此作品，並上傳至 Github Pages<br>那麼同學就來完成此作業吧</p>
+
+
+
+<ul>
+<li>後台：可使用 Bootstrap 的 Dashboard 版型、或自選撰寫 CSS、上網下載其他版型皆可</li>
+<li>前台：可使用課程提供的免費版型或自定義版型</li>
+<li>經營成屬於自己主題的購物網站</li>
+<li>圖庫可用：<a rel="noreferrer noopener" href="https://unsplash.com/" target="_blank">unsplash</a>
+</li>
+<li>細節要求：<ul>
+<li>增加錯誤回饋如：連線錯誤、表單錯誤等錯誤訊息提示</li>
+<li>增加 Vue 元件的使用，如頁碼、Modal、卡片都可運用 Component 練習</li>
+<li>自定義 Bootstrap 的樣式、色彩，盡可能不使用預設的樣式</li>
+</ul>
+</li>
+<li>作業前後台需要釋出至 Github Pages 或寄送到 service@hexschool.com<br>另外必需提供原始碼給老師查閱(不然有錯很難抓阿~)</li>
+</ul>
+
+
+
+<p>作業寄送：</p>
+
+
+
+<ol><li>推薦做法：<br>編譯後的檔案(dist) 上傳至 Github Pages<br>前後台原始碼上傳至 Github<br>將相關連結提供到<a rel="noreferrer noopener" href="https://rpg.hexschool.com/login" target="_blank">任務系統回報任務</a><br><br>Github Pages 基礎部屬教學 –&nbsp;<a rel="noreferrer noopener" href="https://www.youtube.com/watch?v=bU0f1IvUcZA" target="_blank">連結</a>
+</li></ol>
+
+
+
+<p>如果作業希望做為應徵作品集使用<br>可在回覆時增加：<strong>希望作為履歷作品集的一部分</strong><br><br>作業審核標準會不太一樣，許多內容將針對畫面處理給予建議<br><strong>希望作為履歷作品集的一部分</strong>盡可能以 “接近實際運作的網站” 經營，<br>以下部分可先多加強</p>
+
+
+
+<ul>
+<li>網頁主要文案 (怎麼吸引用戶在這個網站購買)</li>
+<li>產品文案可多加調整 (吸引用戶買該產品)</li>
+<li>網頁可增加互動性內容 (我的最愛、類似品項、優惠券介紹…)</li>
+</ul>
+
+
+
+<p>可參考同學們的作品 (連結頁面下方) –&nbsp;<a href="https://www.hexschool.com/qa/how-to.html" target="_blank" rel="noreferrer noopener">連結</a></p>
+
+
+
+<p>Github 部屬時，如果出現資源路徑錯誤<br>則需要調整設定檔的路徑</p>
+
+
+
+<pre class="wp-block-code"><code>// ./config/index.js
+
+build: {
+  // ...
+  assetsPublicPath: '/view', // 修改這裡得值，使其對應 Github Pages 的路徑
+
+}</code></pre>
+
+
+
+<p>接下來輸出後，再把 dist 資料夾推到 gh-pages 分支</p>
+
+
+
+<p>如果使用 npm run build 時遇到類似下方的錯誤訊息：</p>
+
+
+
+<pre class="wp-block-code"><code>⠋ building for production.../.../node_modules/last-call-webpack-plugin/src/index.js:170
+  compiler.hooks.compilation.tap(
+    ^
+TypeError: Cannot read property 'compilation' of undefined</code></pre>
+
+
+
+<p>因為部分套件更新導致錯誤，可以打開 package.json 調整套件版號如下：</p>
+
+
+
+<pre class="wp-block-code"><code>"optimize-css-assets-webpack-plugin": "3.2.0",</code></pre>
+
+
+
+<p>此講座的資源</p>
+
+
+
+<ul><li>shoppingCartTemplate.zip (在 Udemy 課程內下載)</li></ul>
+	</div>
+<!-- .entry-content -->
+
+	<footer class="entry-footer">
+			</footer><!-- .entry-footer -->
+</article><!-- #post-581 -->
+
+	<nav class="navigation post-navigation" aria-label="文章">
+		<h2 class="screen-reader-text">文章導覽</h2>
+		<div class="nav-links">
+<div class="nav-previous"><a href="/wordpress_blog/vuejs3firebase-1/" rel="prev"><span class="nav-subtitle">Previous:</span> <span class="nav-title">Build Web Apps With Vue JS 3 &#038; Firebase (1)</span></a></div>
+<div class="nav-next"><a href="/wordpress_blog/bs5-weblayout-1/" rel="next"><span class="nav-subtitle">Next:</span> <span class="nav-title">Bootstrap 5 網頁切版整合術(1)</span></a></div>
+</div>
+	</nav>
+	</main><!-- #main -->
+
+
+	</div></div>
+			
+			<footer id="colophon" class="site-footer">
+
+				
+				<div class="container-fluid">
+					<div class="site-info">
+						<div class="row">
+
+															
+								<div class="col-12 footer-copyright-elements footer-copyright-alignment-center">
+
+									<div class="botiga-credits">&copy; 2022 wordpress_blog. 
+Created by Gee Hsu. 
+<br>Proudly powered by <a rel="nofollow" href="https://athemes.com/theme/botiga/">Botiga</a>
+</div>
+<div class="social-profile">
+<a target="_blank" href="https://www.facebook.com/watergrass0402/"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></i></a><a target="_blank" href="https://github.com/GeeHsu"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></i></a>
+</div>
+								</div>
+														
+						</div>
+					</div>
+				</div>
+<!-- .site-info -->
+
+				
+			</footer><!-- #colophon -->
+
+			
+			<div class="back-to-top visibility-all position-right"><i class="ws-svg-icon"><svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 15l7-7 7 7" stroke-width="3" stroke-linejoin="round"></path></svg></i></div>
+</div>
+<!-- #page -->
+
+
+<script id="botiga-custom-js-extra">
+var botiga = {"ajaxurl":"\/wp-admin\/admin-ajax.php","i18n":{"botiga_sharebox_copy_link":"Copy link","botiga_sharebox_copy_link_copied":"Copied!"}};
+</script>
+<script src="/wordpress_blog/wp-content/themes/botiga/assets/js/custom.min.js?ver=1.1.2" id="botiga-custom-js"></script>
+
+</body>
+</html>

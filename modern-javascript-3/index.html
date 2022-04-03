@@ -1,0 +1,4669 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<title>Modern JavaScript (3) &#8211; wordpress_blog</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="訂閱《wordpress_blog》&raquo; 資訊提供" href="/wordpress_blog/feed/">
+<link rel="alternate" type="application/rss+xml" title="訂閱《wordpress_blog》&raquo; 留言的資訊提供" href="/wordpress_blog/comments/feed/">
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.9.2"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style>img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="/wordpress_blog/wp-includes/css/dist/block-library/style.min.css?ver=5.9.2" media="all">
+<style id="global-styles-inline-css">body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--palette-1-color-0: #212121;--wp--preset--color--palette-1-color-1: #757575;--wp--preset--color--palette-1-color-2: #212121;--wp--preset--color--palette-1-color-3: #212121;--wp--preset--color--palette-1-color-4: #212121;--wp--preset--color--palette-1-color-5: #f5f5f5;--wp--preset--color--palette-1-color-6: #ffffff;--wp--preset--color--palette-1-color-7: #ffffff;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 14px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 18px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--normal: 16px;--wp--preset--font-size--larger: 24px;--wp--preset--font-size--extra-large: 32px;--wp--preset--font-size--huge: 48px;--wp--preset--font-size--gigantic: 64px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}</style>
+<link rel="stylesheet" id="botiga-style-css" href="/wordpress_blog/wp-content/themes/botiga/style.css?ver=1.1.2" media="all">
+<link rel="stylesheet" id="botiga-style-min-css" href="/wordpress_blog/wp-content/themes/botiga/assets/css/styles.min.css?ver=1.1.2" media="all">
+<link rel="stylesheet" id="botiga-custom-styles-css" href="/wordpress_blog/wp-content/uploads/botiga/custom-styles.css?ver=1648804469" media="all">
+<link rel="https://api.w.org/" href="/wordpress_blog/wp-json/">
+<link rel="alternate" type="application/json" href="/wordpress_blog/wp-json/wp/v2/posts/508">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/wordpress_blog/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wordpress_blog/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 5.9.2">
+<link rel="canonical" href="/wordpress_blog/modern-javascript-3/">
+<link rel="shortlink" href="/wordpress_blog/?p=508">
+<link rel="alternate" type="application/json+oembed" href="/wordpress_blog/wp-json/oembed/1.0/embed?url=%2Fmodern-javascript-3%2F">
+<link rel="alternate" type="text/xml+oembed" href="/wordpress_blog/wp-json/oembed/1.0/embed?url=%2Fmodern-javascript-3%2F&#038;format=xml">
+<link rel="icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png" sizes="32x32">
+<link rel="icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png" sizes="192x192">
+<link rel="apple-touch-icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png">
+<meta name="msapplication-TileImage" content="/wp-content/uploads/2022/03/logo.png">
+	
+</head>
+
+<body class="post-template-default single single-post postid-508 single-format-standard wp-custom-logo wp-embed-responsive header-header_layout_1 blog-single-layout1">
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0.49803921568627"></fefuncr><fefuncg type="table" tablevalues="0 0.49803921568627"></fefuncg><fefuncb type="table" tablevalues="0 0.49803921568627"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.54901960784314 0.98823529411765"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.71764705882353 0.25490196078431"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 0.27843137254902"></fefuncg><fefuncb type="table" tablevalues="0.5921568627451 0.27843137254902"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0"></fefuncr><fefuncg type="table" tablevalues="0 0.64705882352941"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.78039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.94901960784314"></fefuncg><fefuncb type="table" tablevalues="0.35294117647059 0.47058823529412"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.65098039215686 0.40392156862745"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.44705882352941 0.4"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.098039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.66274509803922"></fefuncg><fefuncb type="table" tablevalues="0.84705882352941 0.41960784313725"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg>
+
+<div id="page" class="site">
+
+	<a class="skip-link screen-reader-text" href="#primary">Skip to content</a>
+
+	
+			<div class="top-bar visibility-desktop-only">
+				<div class="container-fluid">
+					<div class="top-bar-inner">
+						<div class="row valign">
+
+															<div class="col header-elements delimiter-none">
+									<div class="header-item top-bar-social"><div class="social-profile">
+<a target="_blank" href="https://www.facebook.com/watergrass0402/"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></i></a><a target="_blank" href="https://github.com/GeeHsu"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></i></a>
+</div></div>								</div>
+																						<div class="col header-elements delimiter-none">
+													
+			<nav class="header-item top-bar-secondary-navigation secondary-navigation">
+				<div class="menu-topbar-container"><ul id="secondary" class="menu">
+<li id="menu-item-143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143"><a href="/wordpress_blog/setup/">網站架設</a></li>
+<li id="menu-item-144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a href="/wordpress_blog/source/">資料來源</a></li>
+<li id="menu-item-262" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-262"><a href="/wordpress_blog/resource/">學習資源</a></li>
+</ul></div>			</nav>
+											</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			
+							
+				<header id="masthead" class="site-header header_layout_1">
+					<div class="container-fluid">
+						<div class="site-header-inner">
+							<div class="row valign">
+								<div class="col-md-5">
+										
+			<nav id="site-navigation" class="main-navigation">
+				<div class="menu-navbar-container"><ul id="primary-menu" class="menu">
+<li id="menu-item-109" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="/wordpress_blog/about/">關於</a></li>
+<li id="menu-item-110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-110">
+<a href="/wordpress_blog/learn/">學習</a><span tabindex="0" class="dropdown-symbol"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512.011 512.011"><path d="M505.755 123.592c-8.341-8.341-21.824-8.341-30.165 0L256.005 343.176 36.421 123.592c-8.341-8.341-21.824-8.341-30.165 0s-8.341 21.824 0 30.165l234.667 234.667a21.275 21.275 0 0015.083 6.251 21.275 21.275 0 0015.083-6.251l234.667-234.667c8.34-8.341 8.34-21.824-.001-30.165z"></path></svg></i></span>
+<ul class="sub-menu">
+	<li id="menu-item-140" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-140"><a href="/wordpress_blog/category/hexschool/">六角學院</a></li>
+	<li id="menu-item-141" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-141"><a href="/wordpress_blog/category/ninja/">The Net Ninja</a></li>
+	<li id="menu-item-483" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-483"><a href="/wordpress_blog/category/youtube/">Youtube</a></li>
+</ul>
+</li>
+<li id="menu-item-111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="/wordpress_blog/linestore/">LINE STORE</a></li>
+</ul></div>			</nav><!-- #site-navigation -->
+											</div>
+								<div class="col-md-2">
+												<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+											</div>
+								<div class="col-md-5 header-elements">
+																	</div>							
+							</div>
+						</div>
+					</div>
+								<div class="header-search-form">
+			<form role="search" method="get" class="search-form" action="/">
+	<label class="screen-reader-text" for="search-form-1">Search&hellip;</label>
+	<input type="search" id="search-form-1" class="search-field" value="" name="s" placeholder="Search &hellip;">
+	<button type="submit" class="search-submit" value="Search"><i class="ws-svg-icon"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 100 14.25 7.125 7.125 0 000-14.25zM2.25 10.875a8.625 8.625 0 1117.25 0 8.625 8.625 0 01-17.25 0z"></path><path fill-rule="evenodd" d="M15.913 15.914a.75.75 0 011.06 0l4.557 4.556a.75.75 0 01-1.06 1.06l-4.557-4.556a.75.75 0 010-1.06z"></path></svg></i></button>
+</form>
+			</div>
+			
+									</header>
+
+										<div class="search-overlay"></div>
+			
+			<div class="botiga-offcanvas-menu">
+				<div class="mobile-header-item">
+					<div class="row">
+						<div class="col">
+										<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+									</div>
+						<div class="col align-right">
+							<a class="mobile-menu-close" href="#"><i class="ws-svg-icon icon-cancel"><svg width="16" height="16" fill="none" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.219.781L.78 2.22 9.562 11l-8.78 8.781 1.437 1.438L11 12.437l8.781 8.782 1.438-1.438L12.437 11l8.782-8.781L19.78.78 11 9.562 2.219.783z"></path></svg></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="mobile-header-item">
+						
+			<nav id="site-navigation" class="main-navigation">
+				<div class="menu-navbar-container"><ul id="primary-menu" class="menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="/wordpress_blog/about/">關於</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-110">
+<a href="/wordpress_blog/learn/">學習</a><span tabindex="0" class="dropdown-symbol"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512.011 512.011"><path d="M505.755 123.592c-8.341-8.341-21.824-8.341-30.165 0L256.005 343.176 36.421 123.592c-8.341-8.341-21.824-8.341-30.165 0s-8.341 21.824 0 30.165l234.667 234.667a21.275 21.275 0 0015.083 6.251 21.275 21.275 0 0015.083-6.251l234.667-234.667c8.34-8.341 8.34-21.824-.001-30.165z"></path></svg></i></span>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-140"><a href="/wordpress_blog/category/hexschool/">六角學院</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-141"><a href="/wordpress_blog/category/ninja/">The Net Ninja</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-483"><a href="/wordpress_blog/category/youtube/">Youtube</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="/wordpress_blog/linestore/">LINE STORE</a></li>
+</ul></div>			</nav><!-- #site-navigation -->
+							</div>
+				<div class="mobile-header-item">
+									<a target="&quot;_blank&quot;" class="button header-item" href="https://www.facebook.com/watergrass0402/">聯絡我</a>
+							</div>			
+			</div>
+			
+							<header id="masthead-mobile" class="site-header mobile-header">
+					<div class="container-fluid">
+						<div class="row valign flex-nowrap">
+							<div class="col-sm-6 col-md-4 col-grow-mobile">
+											<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+										</div>
+							<div class="col-auto col-sm-6 col-md-8 col-grow-mobile header-elements valign align-right">
+																	
+															<a href="#" class="menu-toggle">
+				<i class="ws-svg-icon"><svg width="16" height="11" viewbox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="16" height="1"></rect><rect y="5" width="16" height="1"></rect><rect y="10" width="16" height="1"></rect></svg></i>
+			</a>
+																		</div>						
+						</div>
+					</div>
+								<div class="header-search-form">
+			<form role="search" method="get" class="search-form" action="/">
+	<label class="screen-reader-text" for="search-form-2">Search&hellip;</label>
+	<input type="search" id="search-form-2" class="search-field" value="" name="s" placeholder="Search &hellip;">
+	<button type="submit" class="search-submit" value="Search"><i class="ws-svg-icon"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 100 14.25 7.125 7.125 0 000-14.25zM2.25 10.875a8.625 8.625 0 1117.25 0 8.625 8.625 0 01-17.25 0z"></path><path fill-rule="evenodd" d="M15.913 15.914a.75.75 0 011.06 0l4.557 4.556a.75.75 0 01-1.06 1.06l-4.557-4.556a.75.75 0 010-1.06z"></path></svg></i></button>
+</form>
+			</div>
+			
+									</header>
+						<div class="search-overlay"></div>
+			<div class="header-image"><img src="/wordpress_blog/wp-content/uploads/2022/03/seashore.jpg" width="1920" height="500" alt=""></div>
+<div class="container content-wrapper"><div class="row main-row">			
+	<main id="primary" class="site-main no-sidebar">
+
+		
+
+<article id="post-508" class="post-508 post type-post status-publish format-standard hentry category-ninja">
+	
+		
+	<header class="entry-header">
+		
+		
+		<h1 class="entry-title">Modern JavaScript (3)</h1>			<div class="entry-meta entry-meta-below delimiter-none">
+<span class="posted-on"><a href="/wordpress_blog/modern-javascript-3/" rel="bookmark"><time class="entry-date published" datetime="2022-02-11T12:18:00+08:00">2022 年 2 月 11 日</time><time class="updated" datetime="2022-04-03T12:19:18+08:00">2022 年 4 月 3 日</time></a></span><span class="byline"> <span class="author vcard"><a class="url fn n" href="/wordpress_blog/author/gee-hsu/">gee.hsu</a></span></span>
+</div>			</header><!-- .entry-header -->
+
+	
+	<div class="entry-content">
+		
+<p>(Complete guide, from Novice to Ninja)</p>
+
+
+
+<blockquote class="wp-block-quote">
+<p>Learning Udemy Course：<a href="https://www.udemy.com/course/modern-javascript-from-novice-to-ninja/" target="_blank" rel="noreferrer noopener">Modern JavaScript</a></p>
+<cite>建立者：The Net Ninja (Shaun Pelling)</cite>
+</blockquote>
+
+
+
+<p>Learn Modern JavaScript from the very start to ninja-level &amp; build awesome JavaScript applications.</p>
+
+
+
+<h4>您會學到</h4>
+
+
+
+<ul>
+<li>Learn how to program with modern JavaScript, from the very beginning to more advanced topics</li>
+<li>Learn all about OOP (object-oriented programming) with JavaScript, working with prototypes &amp; classes</li>
+<li>Learn how to create real-world front-end applications with JavaScript (quizes, weather apps, chat rooms etc)</li>
+<li>Learn how to make useful JavaScript driven UI components like popups, drop-downs, tabs, tool-tips &amp; more.</li>
+<li>Learn how to use modern, cutting-edge JavaScript features today by using a modern workflow (Babel &amp; Webpack)</li>
+<li>Learn how to use real-time databases to store, retrieve and update application data</li>
+<li>Explore API’s to make the most of third-party data (such as weather information)</li>
+</ul>
+
+
+
+<h2 class="has-background" style="background-color:#ff6663">Project – Weather App</h2>
+
+
+
+<h3>Project Preview &amp; Setup</h3>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ul>
+<li>創建一個專案資料夾 weather_app</li>
+<li>新增一個 index.html 檔案</li>
+<li>index.html 使用 doc + tab 建立環境、載入 CSS、Bootstrap CDN</li>
+<li>新增一個 scripts 資料夾、並建立 app.js、forecast.js 檔案</li>
+<li>在 index.html 載入 JS</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous"&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+  &lt;title&gt;Ninja Weather&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  
+
+  &lt;script src="scripts/forecast.js"&gt;&lt;/script&gt;
+  &lt;script src="scripts/app.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<h3>HTML &amp; CSS Template</h3>
+
+
+
+<h4>資源</h4>
+
+
+
+<ul><li><a href="https://github.com/iamshaunjp/modern-javascript/tree/lesson-100" target="_blank" rel="noreferrer noopener">GitHub files for this lesson (HTML template)</a></li></ul>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous"&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+  &lt;title&gt;Ninja Weather&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;div class="container my-5 mx-auto"&gt;
+
+    &lt;h1 class="text-muted text-center my-4"&gt;Ninja Weather&lt;/h1&gt;
+
+    &lt;form class="change-location my-4 text-center text-muted"&gt;
+      &lt;label for="city"&gt;Enter a location for weather information&lt;/label&gt;
+      &lt;input type="text" name="city" class="form-control p-4"&gt;
+    &lt;/form&gt;
+
+    &lt;div class="card shadow-lg rounded"&gt;
+      &lt;img src="https://via.placeholder.com/400x300" class="time card-img-top" alt=""&gt;
+      &lt;div class="icon bg-light mx-auto text-center"&gt;
+        &lt;!-- icon --&gt;
+      &lt;/div&gt;
+      &lt;div class="text-muted text-uppercase text-center details"&gt;
+        &lt;h5 class="my-3"&gt;City name&lt;/h5&gt;
+        &lt;div class="my-3"&gt;Weather condition&lt;/div&gt;
+        &lt;div class="display-4 my-4"&gt;
+          &lt;span&gt;temp&lt;/span&gt;
+          &lt;span&gt;&amp;deg;C&lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+  
+
+  &lt;script src="scripts/forecast.js"&gt;&lt;/script&gt;
+  &lt;script src="scripts/app.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// style.css
+
+body{
+  background: #eeedec;
+  letter-spacing: 0.2em;
+  font-size: 0.8em;
+}
+.container{
+  max-width: 400px;
+}</code></pre>
+
+
+
+<h4>Placeholder Image</h4>
+
+
+
+<ul><li><a href="https://placeholder.com/" target="_blank" rel="noreferrer noopener">網站連結</a></li></ul>
+
+
+
+<h3>AccuWeather API</h3>
+
+
+
+<h4>資源</h4>
+
+
+
+<ul><li><a href="https://developer.accuweather.com/" target="_blank" rel="noreferrer noopener">AccuWeather API Website</a></li></ul>
+
+
+
+<h4>API Reference</h4>
+
+
+
+<ul>
+<li>Locations API<ul><li>Text Search – City Search</li></ul>
+</li>
+<li>Current Conditions API<ul><li>Current Conditions – Current Conditions</li></ul>
+</li>
+</ul>
+
+
+
+<h4>個人練習</h4>
+
+
+
+<ul>
+<li>政府資料凱放平臺</li>
+<li>中央氣象局開放資料平臺之資料擷取 API</li>
+</ul>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Get City API Call</h3>
+
+
+
+<pre class="wp-block-code"><code>// forecast.js
+
+const key = 'rdec-key-123-45678-011121314';
+
+const getCity = async (city) =&gt; {
+
+  const base = 'https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001';
+  const query = `?Authorization=${key}&amp;locationName=${city}`;
+
+  const response = await fetch(base + query);
+  const data = await response.json();
+
+  // console.log(data);
+  // console.log(data.records.location&#91;0]);
+  
+return data.records.location&#91;0];
+
+};
+
+getCity('臺南市')
+  .then(data =&gt; console.log(data))
+  .catch(err =&gt; console.log(err));</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Get Weather API Call</h3>
+
+
+
+<pre class="wp-block-code"><code>// forecast.js - 1
+
+const key = 'rdec-key-123-45678-011121314';
+
+// get weather information
+const getWeather = async (id = 'F-C0032-001') =&gt; {
+
+  const base = 'https://opendata.cwb.gov.tw/api/v1/rest/datastore/';
+  const query = `${id}?Authorization=${key}`;
+
+  const response = await fetch(base + query);
+  const data = await response.json();
+
+  // console.log(data.records.location);
+  return data.records.location;
+
+};
+
+// get city information
+const getCity = async (city) =&gt; {
+
+  const base = 'https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001';
+  const query = `?Authorization=${key}&amp;locationName=${city}`;
+
+  const response = await fetch(base + query);
+  const data = await response.json();
+
+  // console.log(data);
+  // console.log(data.records.location&#91;0]);
+  
+return data.records.location;
+
+};
+
+getCity('臺南市').then(data =&gt; {
+    return getWeather(data.key);
+  }).then(data =&gt; {
+    console.log(data);
+  }).catch(err =&gt; console.log(err));
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// forecast.js - 2
+
+const key = 'rdec-key-123-45678-011121314';
+
+// get weather information
+const getWeather = async (id) =&gt; {
+
+  const base = 'https://opendata.cwb.gov.tw/api/v1/rest/datastore/';
+  const query = `${id}?Authorization=${key}`;
+
+  const response = await fetch(base + query);
+  const data = await response.json();
+
+  // console.log(data.records.location);
+  return data;
+
+};
+
+// get city information
+const getCity = async (city) =&gt; {
+
+  const base = 'https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001';
+  const query = `?Authorization=${key}&amp;locationName=${city}`;
+
+  const response = await fetch(base + query);
+  const data = await response.json();
+
+  // console.log(data);
+  // console.log(data.records.location&#91;0]);
+  
+return data;
+
+};
+
+getCity('臺南市').then(data =&gt; {
+    return getWeather(data.result.resource_id);
+  }).then(data =&gt; {
+    console.log(data);
+  }).catch(err =&gt; console.log(err));
+</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Updating the Location</h3>
+
+
+
+<pre class="wp-block-code"><code>// app.js
+
+const cityForm = document.querySelector('form');
+
+const updateCity = async (city) =&gt; {
+
+  // console.log(city);
+  const cityDets = await getCity(city);
+  const weather = await getWeather(cityDets.result.resource_id);
+
+  return {
+    cityDets: cityDets,
+    weather: weather
+  };
+
+};
+
+cityForm.addEventListener('submit', e =&gt; {
+  // prevent default action
+  e.preventDefault();
+
+  // get city value
+  const city = cityForm.city.value.trim();
+  cityForm.reset();
+
+  // update the ui with new city
+  updateCity(city)
+  .then(data =&gt; console.log(data))
+  .catch(err =&gt; console.log(err));
+
+});</code></pre>
+
+
+
+<h3>Object Shorthand Notation</h3>
+
+
+
+<pre class="wp-block-code"><code>// app.js
+
+const cityForm = document.querySelector('form');
+
+const updateCity = async (city) =&gt; {
+
+  // console.log(city);
+  const cityDets = await getCity(city);
+  const weather = await getWeather(cityDets.result.resource_id);
+
+  return { cityDets, weather };
+
+};
+
+cityForm.addEventListener('submit', e =&gt; {
+  // prevent default action
+  e.preventDefault();
+
+  // get city value
+  const city = cityForm.city.value.trim();
+  cityForm.reset();
+
+  // update the ui with new city
+  updateCity(city)
+  .then(data =&gt; console.log(data))
+  .catch(err =&gt; console.log(err));
+
+});</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Updating the UI</h3>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous"&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+  &lt;title&gt;Ninja Weather&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;div class="container my-5 mx-auto"&gt;
+
+    &lt;h1 class="text-muted text-center my-4"&gt;Ninja Weather&lt;/h1&gt;
+
+    &lt;form class="change-location my-4 text-center text-muted"&gt;
+      &lt;label for="city"&gt;Enter a location for weather information&lt;/label&gt;
+      &lt;input type="text" name="city" class="form-control p-4"&gt;
+    &lt;/form&gt;
+
+    &lt;div class="card shadow-lg rounded d-none"&gt;
+      &lt;img src="https://via.placeholder.com/400x300" class="time card-img-top" alt=""&gt;
+      &lt;div class="icon bg-light mx-auto text-center"&gt;
+        &lt;!-- icon --&gt;
+      &lt;/div&gt;
+      &lt;div class="text-muted text-uppercase text-center details"&gt;
+        &lt;h5 class="my-3"&gt;City name&lt;/h5&gt;
+        &lt;div class="my-3"&gt;Weather condition&lt;/div&gt;
+        &lt;div class="display-4 my-4"&gt;
+          &lt;span&gt;temp&lt;/span&gt;
+          &lt;span&gt;&amp;deg;C&lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+  
+
+  &lt;script src="scripts/forecast.js"&gt;&lt;/script&gt;
+  &lt;script src="scripts/app.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// app.js
+
+const cityForm = document.querySelector('form');
+const card = document.querySelector('.card');
+const details = document.querySelector('.details');
+
+const updateUI = (data) =&gt; {
+  
+  const cityDets = data.cityDets;
+  const weather = data.weather;
+
+  // update details template
+  details.innerHTML = `
+    &lt;h4 class="my-3"&gt;今明36小時天氣預報&lt;/h4&gt;
+    &lt;h5 class="my-3"&gt;${cityDets.records.location&#91;0].locationName}&lt;/h5&gt;
+    &lt;div class="my-3"&gt;${cityDets.records.location&#91;0].weatherElement&#91;0].time&#91;0].parameter.parameterName}&lt;/div&gt;
+    &lt;div&gt;↓&lt;/div&gt;
+    &lt;div class="my-3"&gt;&lt;br&gt;${cityDets.records.location&#91;0].weatherElement&#91;0].time&#91;1].parameter.parameterName}&lt;/div&gt;
+    &lt;div&gt;↓&lt;/div&gt;
+    &lt;div class="my-3"&gt;&lt;br&gt;${cityDets.records.location&#91;0].weatherElement&#91;0].time&#91;2].parameter.parameterName}&lt;/div&gt;
+    &lt;div class="display-4 my-4"&gt;
+      &lt;span&gt;temp&lt;/span&gt;&lt;br&gt;
+      &lt;span&gt;${cityDets.records.location&#91;0].weatherElement&#91;2].time&#91;0].parameter.parameterName} - ${cityDets.records.location&#91;0].weatherElement&#91;4].time&#91;0].parameter.parameterName}  &amp;deg;C&lt;/span&gt;
+      &lt;div&gt;↓&lt;/div&gt;
+      &lt;span&gt;${cityDets.records.location&#91;0].weatherElement&#91;2].time&#91;1].parameter.parameterName} - ${cityDets.records.location&#91;0].weatherElement&#91;4].time&#91;1].parameter.parameterName}  &amp;deg;C&lt;/span&gt;
+      &lt;div&gt;↓&lt;/div&gt;
+      &lt;span&gt;${cityDets.records.location&#91;0].weatherElement&#91;2].time&#91;2].parameter.parameterName} - ${cityDets.records.location&#91;0].weatherElement&#91;4].time&#91;2].parameter.parameterName}  &amp;deg;C&lt;/span&gt;
+    &lt;/div&gt;
+  `;
+
+  // remove the d-none class if present
+  if(card.classList.contains('d-none')){
+    card.classList.remove('d-none');
+  }
+
+};
+
+const updateCity = async (city) =&gt; {
+
+  // console.log(city);
+  const cityDets = await getCity(city);
+  const weather = await getWeather(cityDets.result.resource_id);
+
+  console.log(cityDets);
+  return { cityDets, weather };
+
+};
+
+cityForm.addEventListener('submit', e =&gt; {
+  // prevent default action
+  e.preventDefault();
+
+  // get city value
+  const city = cityForm.city.value.trim();
+  cityForm.reset();
+
+  // update the ui with new city
+  updateCity(city)
+  .then(data =&gt; updateUI(data))
+  .catch(err =&gt; console.log(err));
+
+});</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// forecast.js
+
+const key = 'rdec-key-123-45678-011121314';
+
+// get weather information
+const getWeather = async (id) =&gt; {
+
+  const base = 'https://opendata.cwb.gov.tw/api/v1/rest/datastore/';
+  const query = `${id}?Authorization=${key}`;
+
+  const response = await fetch(base + query);
+  const data = await response.json();
+
+  // console.log(data.records.location);
+  
+  return data;
+
+};
+
+// get city information
+const getCity = async (city) =&gt; {
+
+  const base = 'https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001';
+  const query = `?Authorization=${key}&amp;locationName=${city}`;
+
+  const response = await fetch(base + query);
+  const data = await response.json();
+
+  // console.log(data);
+  // console.log(data.records.location&#91;0]);
+  
+  return data;
+
+};
+</code></pre>
+
+
+
+<h3>Destructuring (解構賦值)</h3>
+
+
+
+<pre class="wp-block-code"><code>// app.js
+
+const cityForm = document.querySelector('form');
+const card = document.querySelector('.card');
+const details = document.querySelector('.details');
+
+const updateUI = (data) =&gt; {
+  
+  // console.log(data);
+  // const cityDets = data.cityDets;
+  // const weather = data.weather;
+
+  // destructure properties
+  const { cityDets, weather } = data;
+
+  // update details template
+  details.innerHTML = `
+    &lt;h4 class="my-3"&gt;今明36小時天氣預報&lt;/h4&gt;
+    &lt;h5 class="my-3"&gt;${cityDets.records.location&#91;0].locationName}&lt;/h5&gt;
+    &lt;div class="my-3"&gt;${weather.records.location&#91;0].weatherElement&#91;0].time&#91;0].parameter.parameterName}&lt;/div&gt;
+    &lt;div&gt;↓&lt;/div&gt;
+    &lt;div class="my-3"&gt;&lt;br&gt;${weather.records.location&#91;0].weatherElement&#91;0].time&#91;1].parameter.parameterName}&lt;/div&gt;
+    &lt;div&gt;↓&lt;/div&gt;
+    &lt;div class="my-3"&gt;&lt;br&gt;${weather.records.location&#91;0].weatherElement&#91;0].time&#91;2].parameter.parameterName}&lt;/div&gt;
+    &lt;div class="display-4 my-4"&gt;
+      &lt;span&gt;temp&lt;/span&gt;&lt;br&gt;
+      &lt;span&gt;${weather.records.location&#91;0].weatherElement&#91;2].time&#91;0].parameter.parameterName} - ${weather.records.location&#91;0].weatherElement&#91;4].time&#91;0].parameter.parameterName}  &amp;deg;C&lt;/span&gt;
+      &lt;div&gt;↓&lt;/div&gt;
+      &lt;span&gt;${weather.records.location&#91;0].weatherElement&#91;2].time&#91;1].parameter.parameterName} - ${weather.records.location&#91;0].weatherElement&#91;4].time&#91;1].parameter.parameterName}  &amp;deg;C&lt;/span&gt;
+      &lt;div&gt;↓&lt;/div&gt;
+      &lt;span&gt;${weather.records.location&#91;0].weatherElement&#91;2].time&#91;2].parameter.parameterName} - ${weather.records.location&#91;0].weatherElement&#91;4].time&#91;2].parameter.parameterName}  &amp;deg;C&lt;/span&gt;
+    &lt;/div&gt;
+  `;
+
+  // remove the d-none class if present
+  if(card.classList.contains('d-none')){
+    card.classList.remove('d-none');
+  }
+
+};
+
+const updateCity = async (city) =&gt; {
+
+  // console.log(city);
+  const cityDets = await getCity(city);
+  const weather = await getWeather(city);
+
+  console.log(cityDets);
+  console.log(weather);
+  return { cityDets, weather };
+
+};
+
+cityForm.addEventListener('submit', e =&gt; {
+  // prevent default action
+  e.preventDefault();
+
+  // get city value
+  const city = cityForm.city.value.trim();
+  cityForm.reset();
+
+  // update the ui with new city
+  updateCity(city)
+  .then(data =&gt; updateUI(data))
+  .catch(err =&gt; console.log(err));
+
+});</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous"&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+  &lt;title&gt;Ninja Weather&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;div class="container my-5 mx-auto"&gt;
+
+    &lt;h1 class="text-muted text-center my-4"&gt;Ninja Weather&lt;/h1&gt;
+
+    &lt;form class="change-location my-4 text-center text-muted"&gt;
+      &lt;label for="city"&gt;Enter a location for weather information&lt;/label&gt;
+      &lt;input type="text" name="city" class="form-control p-4"&gt;
+    &lt;/form&gt;
+
+    &lt;div class="card shadow-lg rounded d-none"&gt;
+      &lt;img src="https://via.placeholder.com/400x300" class="time card-img-top" alt=""&gt;
+      &lt;div class="icon bg-light mx-auto text-center"&gt;
+        &lt;!-- icon --&gt;
+      &lt;/div&gt;
+      &lt;div class="text-muted text-uppercase text-center details"&gt;
+        &lt;h5 class="my-3"&gt;City name&lt;/h5&gt;
+        &lt;div class="my-3"&gt;Weather condition&lt;/div&gt;
+        &lt;div class="display-4 my-4"&gt;
+          &lt;span&gt;temp&lt;/span&gt;
+          &lt;span&gt;&amp;deg;C&lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+  
+
+  &lt;script src="scripts/forecast.js"&gt;&lt;/script&gt;
+  &lt;script src="scripts/app.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// forecast.js
+
+const key = 'rdec-key-123-45678-011121314';
+const id = 'F-C0032-001';
+
+// get weather information
+const getWeather = async (city) =&gt; {
+
+  const base = 'https://opendata.cwb.gov.tw/api/v1/rest/datastore/';
+  const query = `${id}?Authorization=${key}&amp;locationName=${city}`;
+
+  const response = await fetch(base + query);
+  const data = await response.json();
+
+  // console.log(data.records.location);
+  
+  return data;
+
+};
+
+// get city information
+const getCity = async (city) =&gt; {
+
+  const base = 'https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001';
+  const query = `?Authorization=${key}&amp;locationName=${city}`;
+
+  const response = await fetch(base + query);
+  const data = await response.json();
+
+  // console.log(data);
+  // console.log(data.records.location&#91;0]);
+  
+  return data;
+
+};
+</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Weather Icons &amp; images</h3>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous"&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+  &lt;title&gt;Ninja Weather&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;div class="container my-5 mx-auto"&gt;
+
+    &lt;h1 class="text-muted text-center my-4"&gt;臺灣天氣&lt;/h1&gt;
+
+    &lt;form class="change-location my-4 text-center text-muted"&gt;
+      &lt;label for="city"&gt;輸入地點取得天氣資訊&lt;/label&gt;&lt;br&gt;
+      &lt;span class="text-muted"&gt;需輸入完整縣市名稱(例如:臺北市)&lt;/span&gt;&lt;br&gt;&lt;br&gt;
+      &lt;input type="text" name="city" class="form-control p-4"&gt;
+    &lt;/form&gt;
+
+    &lt;div class="card shadow-lg rounded d-none"&gt;
+      &lt;img src="https://via.placeholder.com/400x300" class="time card-img-top" alt=""&gt;
+      &lt;div class="icon bg-light mx-auto text-center"&gt;
+        &lt;!-- icon --&gt;
+        &lt;img src="" alt=""&gt;
+      &lt;/div&gt;
+      &lt;div class="text-muted text-uppercase text-center details"&gt;
+        &lt;h5 class="my-3"&gt;City name&lt;/h5&gt;
+        &lt;div class="my-3"&gt;Weather condition&lt;/div&gt;
+        &lt;div class="display-4 my-4"&gt;
+          &lt;span&gt;temp&lt;/span&gt;
+          &lt;span&gt;&amp;deg;C&lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+  
+
+  &lt;script src="scripts/forecast.js"&gt;&lt;/script&gt;
+  &lt;script src="scripts/app.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// app.js
+
+const cityForm = document.querySelector('form');
+const card = document.querySelector('.card');
+const details = document.querySelector('.details');
+const time = document.querySelector('img.time');
+const icon = document.querySelector('.icon img');
+
+const updateUI = (data) =&gt; {
+  
+  // console.log(data);
+  // const cityDets = data.cityDets;
+  // const weather = data.weather;
+
+  // destructure properties
+  const { cityDets, weather } = data;
+
+  // update details template
+  details.innerHTML = `
+    &lt;h4 class="my-3"&gt;12小時內天氣預報&lt;/h4&gt;
+    &lt;h5 class="my-3"&gt;${cityDets.records.location&#91;0].locationName}&lt;/h5&gt;
+    &lt;div class="my-3"&gt;${weather.records.location&#91;0].weatherElement&#91;0].time&#91;0].parameter.parameterName}&lt;/div&gt;
+    &lt;div class="display-4 my-4"&gt;
+      &lt;span&gt;氣溫&lt;/span&gt;&lt;br&gt;
+      &lt;span&gt;${weather.records.location&#91;0].weatherElement&#91;2].time&#91;0].parameter.parameterName} - ${weather.records.location&#91;0].weatherElement&#91;4].time&#91;0].parameter.parameterName}  &amp;deg;C&lt;/span&gt;
+    &lt;/div&gt;
+  `;
+
+  // update the night/day &amp; icon images
+  const iconSrc = `img/icons/${weather.records.location&#91;0].weatherElement&#91;0].time&#91;0].parameter.parameterValue}.svg`;
+  icon.setAttribute('src', iconSrc);
+
+  let timeSrc = null;
+  if(weather.records.location&#91;0].weatherElement&#91;0].time&#91;0].startTime.indexOf("06:00:00") &gt;= 0){
+    timeSrc = 'img/day.svg';
+  } else {
+    timeSrc = 'img/night.svg';
+  }
+  time.setAttribute('src', timeSrc);
+
+  // remove the d-none class if present
+  if(card.classList.contains('d-none')){
+    card.classList.remove('d-none');
+  }
+
+};
+
+const updateCity = async (city) =&gt; {
+
+  // console.log(city);
+  const cityDets = await getCity(city);
+  const weather = await getWeather(city);
+
+  console.log(cityDets);
+  console.log(weather);
+  // console.log(weather.records.location&#91;0].weatherElement&#91;0].time&#91;0].startTime);
+  return { cityDets, weather };
+
+};
+
+cityForm.addEventListener('submit', e =&gt; {
+  // prevent default action
+  e.preventDefault();
+
+  // get city value
+  const city = cityForm.city.value.trim();
+  cityForm.reset();
+
+  // update the ui with new city
+  updateCity(city)
+  .then(data =&gt; updateUI(data))
+  .catch(err =&gt; console.log(err));
+
+});</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// style.css
+
+body{
+  background: #eeedec;
+  letter-spacing: 0.2em;
+  font-size: 0.8em;
+}
+.container{
+  max-width: 400px;
+}
+.icon{
+  position: relative;
+  top: -50px;
+  border-radius: 50%;
+  width: 100px;
+  margin-bottom: -50px;
+}</code></pre>
+
+
+
+<h3>Ternary Operator (三元運算子)</h3>
+
+
+
+<pre class="wp-block-code"><code>// app.js
+
+const cityForm = document.querySelector('form');
+const card = document.querySelector('.card');
+const details = document.querySelector('.details');
+const time = document.querySelector('img.time');
+const icon = document.querySelector('.icon img');
+
+const updateUI = (data) =&gt; {
+  
+  // console.log(data);
+  // const cityDets = data.cityDets;
+  // const weather = data.weather;
+
+  // destructure properties
+  const { cityDets, weather } = data;
+
+  // update details template
+  details.innerHTML = `
+    &lt;h4 class="my-3"&gt;12小時內天氣預報&lt;/h4&gt;
+    &lt;h5 class="my-3"&gt;${cityDets.records.location&#91;0].locationName}&lt;/h5&gt;
+    &lt;div class="my-3"&gt;${weather.records.location&#91;0].weatherElement&#91;0].time&#91;0].parameter.parameterName}&lt;/div&gt;
+    &lt;div class="display-4 my-4"&gt;
+      &lt;span&gt;氣溫&lt;/span&gt;&lt;br&gt;
+      &lt;span&gt;${weather.records.location&#91;0].weatherElement&#91;2].time&#91;0].parameter.parameterName} - ${weather.records.location&#91;0].weatherElement&#91;4].time&#91;0].parameter.parameterName}  &amp;deg;C&lt;/span&gt;
+    &lt;/div&gt;
+  `;
+
+  // update the night/day &amp; icon images
+  const iconSrc = `img/icons/${weather.records.location&#91;0].weatherElement&#91;0].time&#91;0].parameter.parameterValue}.svg`;
+  icon.setAttribute('src', iconSrc);
+
+
+  let timeSrc = weather.records.location&#91;0].weatherElement&#91;0].time&#91;0].startTime.indexOf("06:00:00") &gt;= 0 ? 'img/day.svg' : 'img/night.svg';
+
+  // let timeSrc = null;
+  // if(weather.records.location&#91;0].weatherElement&#91;0].time&#91;0].startTime.indexOf("06:00:00") &gt;= 0){
+  //   timeSrc = 'img/day.svg';
+  // } else {
+  //   timeSrc = 'img/night.svg';
+  // }
+  time.setAttribute('src', timeSrc);
+
+  // remove the d-none class if present
+  if(card.classList.contains('d-none')){
+    card.classList.remove('d-none');
+  }
+
+};
+
+const updateCity = async (city) =&gt; {
+
+  // console.log(city);
+  const cityDets = await getCity(city);
+  const weather = await getWeather(city);
+
+  console.log(cityDets);
+  console.log(weather);
+  // console.log(weather.records.location&#91;0].weatherElement&#91;0].time&#91;0].startTime);
+  return { cityDets, weather };
+
+};
+
+cityForm.addEventListener('submit', e =&gt; {
+  // prevent default action
+  e.preventDefault();
+
+  // get city value
+  const city = cityForm.city.value.trim();
+  cityForm.reset();
+
+  // update the ui with new city
+  updateCity(city)
+  .then(data =&gt; updateUI(data))
+  .catch(err =&gt; console.log(err));
+
+});
+
+// ternary operator
+// const result = true ? 'value 1' : 'value 2';
+// console.log(result);</code></pre>
+
+
+
+<h2>Local Storage</h2>
+
+
+
+<h3>What is Local Storage?</h3>
+
+
+
+<h4>Application Data</h4>
+
+
+
+<ul>
+<li>Set up a database to store &amp; retrieve data</li>
+<li>Use local storage to store and retrieve data</li>
+</ul>
+
+
+
+<h4>Local Storage</h4>
+
+
+
+<figure class="wp-block-gallery has-nested-images columns-1 is-cropped">
+<figure class="wp-block-image size-large"><img width="1435" height="705" data-id="510" src="/wordpress_blog/wp-content/uploads/2022/04/localstorage-1.png" alt="" class="wp-image-510"><figcaption>Local Storage &#8211; 1</figcaption></figure>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" width="1461" height="613" data-id="511" src="/wordpress_blog/wp-content/uploads/2022/04/localstorage-2.png" alt="" class="wp-image-511"><figcaption>Local Storage &#8211; 2</figcaption></figure>
+</figure>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+&gt;  window
+&lt;  Window&nbsp;{window: Window, self: Window, document: document, name: '', location: Location,&nbsp;…}
+&gt;</code></pre>
+
+
+
+<h3>Storing &amp; Getting Data</h3>
+
+
+
+<ul>
+<li>Google Console</li>
+<li>sandbox.js</li>
+<li>Google Application → Storage → Local Storage</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 1
+&gt;  window.localStorage
+&lt;  Storage {length: 0}
+&gt;  localStorage
+&lt;  Storage {length: 0}
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 2
+
+// store data in local storage
+localStorage.setItem('name', 'mario');
+localStorage.setItem('age', 50);
+
+
+// get data from local storage
+let name = localStorage.getItem('name');
+let age = localStorage.getItem('age');
+
+console.log(name, age);
+
+// updating data
+localStorage.setItem('name', 'luigi');
+localStorage.age = '40';
+
+name = localStorage.getItem('name');
+age = localStorage.getItem('age');
+console.log(name, age);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 2</code></pre>
+
+
+
+<h3>Deleting Storage Data</h3>
+
+
+
+<ul>
+<li>sandbox.js</li>
+<li>Google Console</li>
+<li>Google Application</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 1
+
+// store data in local storage
+localStorage.setItem('name', 'mario');
+localStorage.setItem('age', 50);
+
+// get data from local storage
+let name = localStorage.getItem('name');
+let age = localStorage.getItem('age');
+
+console.log(name, age);
+
+// deleting data from local storage
+
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 1
+   mario 50
+&gt;  localStorage
+&lt;  Storage {name: 'mario', age: '50', length: 2}
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 2
+
+// store data in local storage
+localStorage.setItem('name', 'mario');
+localStorage.setItem('age', 50);
+
+// get data from local storage
+let name = localStorage.getItem('name');
+let age = localStorage.getItem('age');
+
+console.log(name, age);
+
+// deleting data from local storage
+// localStorage.removeItem('name');
+localStorage.clear();
+
+name = localStorage.getItem('name');
+age = localStorage.getItem('age');
+
+console.log(name, age);
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 2
+   mario 50
+   null null
+&gt;</code></pre>
+
+
+
+<h3>Stringifying &amp; Parsing Data</h3>
+
+
+
+<ul>
+<li>sandbox.js</li>
+<li>Google Console</li>
+<li>Google Application</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+
+const todos = &#91;
+  {text: 'play mariokart', author: 'shaun'},
+  {text: 'buy some milk', author: 'mario'},
+  {text: 'buy some bread', author: 'luigi'}
+];
+
+// console.log(JSON.stringify(todos));
+localStorage.setItem('todos', JSON.stringify(todos));
+
+const stored = localStorage.getItem('todos');
+
+console.log(JSON.parse(stored));</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   (3) &#91;{...}, {...}, {...}]
+&gt;</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Updating the Weather App</h3>
+
+
+
+<ul>
+<li>app.js</li>
+<li>Google Application</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// app.js
+
+const cityForm = document.querySelector('form');
+const card = document.querySelector('.card');
+const details = document.querySelector('.details');
+const time = document.querySelector('img.time');
+const icon = document.querySelector('.icon img');
+
+const updateUI = (data) =&gt; {
+  
+  // console.log(data);
+  // const cityDets = data.cityDets;
+  // const weather = data.weather;
+
+  // destructure properties
+  const { cityDets, weather } = data;
+
+  // update details template
+  details.innerHTML = `
+    &lt;h4 class="my-3"&gt;12小時內天氣預報&lt;/h4&gt;
+    &lt;h5 class="my-3"&gt;${cityDets.records.location&#91;0].locationName}&lt;/h5&gt;
+    &lt;div class="my-3"&gt;${weather.records.location&#91;0].weatherElement&#91;0].time&#91;0].parameter.parameterName}&lt;/div&gt;
+    &lt;div class="display-4 my-4"&gt;
+      &lt;span&gt;氣溫&lt;/span&gt;&lt;br&gt;
+      &lt;span&gt;${weather.records.location&#91;0].weatherElement&#91;2].time&#91;0].parameter.parameterName} - ${weather.records.location&#91;0].weatherElement&#91;4].time&#91;0].parameter.parameterName}  &amp;deg;C&lt;/span&gt;
+    &lt;/div&gt;
+  `;
+
+  // update the night/day &amp; icon images
+  const iconSrc = `img/icons/${weather.records.location&#91;0].weatherElement&#91;0].time&#91;0].parameter.parameterValue}.svg`;
+  icon.setAttribute('src', iconSrc);
+
+
+  let timeSrc = weather.records.location&#91;0].weatherElement&#91;0].time&#91;0].startTime.indexOf("06:00:00") || weather.records.location&#91;0].weatherElement&#91;0].time&#91;0].startTime.indexOf("12:00:00") &gt;= 0 ? 'img/day.svg' : 'img/night.svg';
+
+  // let timeSrc = null;
+  // if(weather.records.location&#91;0].weatherElement&#91;0].time&#91;0].startTime.indexOf("06:00:00") &gt;= 0){
+  //   timeSrc = 'img/day.svg';
+  // } else {
+  //   timeSrc = 'img/night.svg';
+  // }
+  time.setAttribute('src', timeSrc);
+
+  // remove the d-none class if present
+  if(card.classList.contains('d-none')){
+    card.classList.remove('d-none');
+  }
+
+};
+
+const updateCity = async (city) =&gt; {
+
+  // console.log(city);
+  const cityDets = await getCity(city);
+  const weather = await getWeather(city);
+
+  console.log(cityDets);
+  console.log(weather);
+  // console.log(weather.records.location&#91;0].weatherElement&#91;0].time&#91;0].startTime);
+  return { cityDets, weather };
+
+};
+
+cityForm.addEventListener('submit', e =&gt; {
+  // prevent default action
+  e.preventDefault();
+
+  // get city value
+  const city = cityForm.city.value.trim();
+  cityForm.reset();
+
+  // update the ui with new city
+  updateCity(city)
+  .then(data =&gt; updateUI(data))
+  .catch(err =&gt; console.log(err));
+
+  // set local storage
+  localStorage.setItem('city', city);
+
+});
+
+// ternary operator
+// const result = true ? 'value 1' : 'value 2';
+// console.log(result);
+
+if(localStorage.getItem('city')){
+  updateCity(localStorage.getItem('city'))
+    .then(data =&gt; updateUI(data))
+    .catch(err =&gt; console.log(err));
+};</code></pre>
+
+
+
+<h2 class="has-background" style="background-color:#ff6663">Object Oriented JavaScript (物件導向)</h2>
+
+
+
+<h3>What is OOP? (物件導向程式設計)</h3>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+&gt;  const names = &#91;'shaun', 'crystal']
+&lt;  undefined
+&gt;  names
+&lt;  (2) &#91;"shaun", "crystal"]
+&gt;  const ages = new Array(20,25,30)
+&lt;  undefined
+&gt;  ages
+&lt;  (3) &#91;20, 25, 30]
+&gt;  const userOne = {}
+&lt;  undefined
+&gt;  userOne
+&lt;  {}
+&gt;  const userTwo = new Object();
+&lt;  undefined
+&gt;  userTwo
+&lt;  {}
+&gt;  const name = 'mario'
+&lt;  undefined
+&gt;  name
+&lt;  "mario"
+&gt;  name.length
+&lt;  5
+&gt;  name.toUpperCase()
+&lt;  "MARIO"
+&gt;  const nameTwo = new String('ryu');
+&lt;  undefined
+&gt;  nameTwo
+&lt;  String {"ryu"}
+&gt;  new Number(5)
+&lt;  Number {5}
+&gt;  new Boolean(true)
+&lt;  Boolean {true}
+&gt;</code></pre>
+
+
+
+<h3>Object Literal Recap (物件實字回顧)</h3>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+    &lt;title&gt;Modern JavaScript&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Object Oriented JavaScript&lt;/h1&gt;
+    
+    
+    &lt;script src="sandbox.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 1
+
+const userOne = {
+  username: 'ryu',
+  email: 'ryu@thenetninja.co.uk',
+  login(){
+    console.log('the user logged in');
+  },
+  logout(){
+    console.log('the user logged out');
+  }
+};
+
+console.log(userOne.email, userOne.username);
+userOne.login();
+
+const userTwo = {
+  username: 'chun li',
+  email: 'chun.li@thenetninja.co.uk',
+  login(){
+    console.log('the user logged in');
+  },
+  logout(){
+    console.log('the user logged out');
+  }
+};
+
+console.log(userTwo.email, userTwo.username);
+userTwo.login();
+
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 1
+   ryu@thenetninja.co.uk ryu
+   the user logged in
+   chun.li@thenetninja.co.uk chun li
+   the user logged in
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 2
+
+const userOne = {
+  username: 'ryu',
+  email: 'ryu@thenetninja.co.uk',
+  login(){
+    console.log('the user logged in');
+  },
+  logout(){
+    console.log('the user logged out');
+  }
+};
+
+console.log(userOne.email, userOne.username);
+userOne.login();
+
+const userTwo = {
+  username: 'chun li',
+  email: 'chun.li@thenetninja.co.uk',
+  login(){
+    console.log('the user logged in');
+  },
+  logout(){
+    console.log('the user logged out');
+  }
+};
+
+console.log(userTwo.email, userTwo.username);
+userTwo.login();
+
+const userThree = new User('shaun@thenetninja.co.uk', 'shaun');</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Classes (類別)</h3>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+
+const userOne = {
+  username: 'ryu',
+  email: 'ryu@thenetninja.co.uk',
+  login(){
+    console.log('the user logged in');
+  },
+  logout(){
+    console.log('the user logged out');
+  }
+};
+
+console.log(userOne.email, userOne.username);
+userOne.login();
+
+const userTwo = {
+  username: 'chun li',
+  email: 'chun.li@thenetninja.co.uk',
+  login(){
+    console.log('the user logged in');
+  },
+  logout(){
+    console.log('the user logged out');
+  }
+};
+
+console.log(userTwo.email, userTwo.username);
+userTwo.login();
+
+const userThree = new User('shaun@thenetninja.co.uk', 'shaun');</code></pre>
+
+
+
+<h4>Classes</h4>
+
+
+
+<ul><li>A Class is like a blueprint(藍圖) for an object (it describes how one should be made)</li></ul>
+
+
+
+<figure class="wp-block-gallery has-nested-images columns-1 is-cropped">
+<figure class="wp-block-image size-large"><img loading="lazy" width="1536" height="553" data-id="513" src="/wordpress_blog/wp-content/uploads/2022/04/Classes-1.png" alt="" class="wp-image-513"><figcaption>Classes &#8211; 1</figcaption></figure>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" width="1211" height="599" data-id="514" src="/wordpress_blog/wp-content/uploads/2022/04/Classes-2.png" alt="" class="wp-image-514"><figcaption>Classes &#8211; 2</figcaption></figure>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" width="1536" height="603" data-id="515" src="/wordpress_blog/wp-content/uploads/2022/04/Classes-3.png" alt="" class="wp-image-515"><figcaption>Classes &#8211; 3</figcaption></figure>
+</figure>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Class Constructors (類別建構子)</h3>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 1
+
+class User {
+  constructor(){
+    // set up properties
+    this.username = 'mario';
+  }
+}
+
+const userOne = new User();
+const userTwo = new User();
+
+console.log(userOne, userTwo);
+
+// the 'new' keyword
+// 1 - it creates a new empty object {}
+// 2 - it binds the value of 'this' to the new empty object
+// 3 - it calls the constructor function to 'build' the object</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 1
+   User {username: 'mario'} User {username: 'mario'}
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 2
+
+class User {
+  constructor(username){
+    // set up properties
+    this.username = username;
+  }
+}
+
+const userOne = new User('mario');
+const userTwo = new User('luigi');
+
+console.log(userOne, userTwo);
+
+// the 'new' keyword
+// 1 - it creates a new empty object {}
+// 2 - it binds the value of 'this' to the new empty object
+// 3 - it calls the constructor function to 'build' the object</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 2
+   User {username: 'mario'} User {username: 'luigi'}
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 3
+
+class User {
+  constructor(username, email){
+    // set up properties
+    this.username = username;
+    this.email = email;
+  }
+}
+
+const userOne = new User('mario', 'mario@thenetninja.co.uk');
+const userTwo = new User('luigi', 'luigi@thenetninja.co.uk');
+
+console.log(userOne, userTwo);
+
+// the 'new' keyword
+// 1 - it creates a new empty object {}
+// 2 - it binds the value of 'this' to the new empty object
+// 3 - it calls the constructor function to 'build' the object</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 3
+   User&nbsp;{username: 'mario', email: 'mario@thenetninja.co.uk'}
+   User&nbsp;{username: 'luigi', email: 'luigi@thenetninja.co.uk'}
+&gt;</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Class Methods &amp; Method Chaining</h3>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 1
+
+class User {
+  constructor(username, email){
+    // set up properties
+    this.username = username;
+    this.email = email;
+  }
+  login(){
+    console.log(`${this.username} just logged in`);
+  }
+  logout(){
+    console.log(`${this.username} just logged out`);
+  }
+}
+
+const userOne = new User('mario', 'mario@thenetninja.co.uk');
+const userTwo = new User('luigi', 'luigi@thenetninja.co.uk');
+
+console.log(userOne, userTwo);
+userOne.login();
+userTwo.login();</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 1
+   User&nbsp;{username: 'mario', email: 'mario@thenetninja.co.uk'}
+   User&nbsp;{username: 'luigi', email: 'luigi@thenetninja.co.uk'}
+   mario just logged in
+   luigi just logged in
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox - 2
+
+class User {
+  constructor(username, email){
+    // set up properties
+    this.username = username;
+    this.email = email;
+  }
+  login(){
+    console.log(`${this.username} just logged in`);
+  }
+  logout(){
+    console.log(`${this.username} just logged out`);
+  }
+}
+
+const userOne = new User('mario', 'mario@thenetninja.co.uk');
+const userTwo = new User('luigi', 'luigi@thenetninja.co.uk');
+
+console.log(userOne, userTwo);
+userOne.logout();
+userTwo.logout();</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 2
+   User&nbsp;{username: 'mario', email: 'mario@thenetninja.co.uk'}
+   User&nbsp;{username: 'luigi', email: 'luigi@thenetninja.co.uk'}
+   mario just logged out
+   luigi just logged out
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 3
+
+class User {
+  constructor(username, email){
+    // set up properties
+    this.username = username;
+    this.email = email;
+    this.score = 0;
+  }
+  login(){
+    console.log(`${this.username} just logged in`);
+    return this;
+  }
+  logout(){
+    console.log(`${this.username} just logged out`);
+    return this;
+  }
+  incScore(){
+    this.score += 1;
+    console.log(`${this.username} has a score of ${this.score}`);
+    return this;
+  }
+}
+
+const userOne = new User('mario', 'mario@thenetninja.co.uk');
+const userTwo = new User('luigi', 'luigi@thenetninja.co.uk');
+
+console.log(userOne, userTwo);
+
+userOne.login().incScore().incScore().logout();</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 3
+   User {username: 'mario', email: 'mario@thenetninja.co.uk', score: 0}
+   User {username: 'luigi', email: 'luigi@thenetninja.co.uk', score: 0}
+   mario just logged in
+   mario has a score of 1
+   mario has a score of 2
+   mario just logged out
+&gt;</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Class Inheritance (類別繼承) (subclasses) (子類別)</h3>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 1
+
+class User {
+  constructor(username, email){
+    // set up properties
+    this.username = username;
+    this.email = email;
+    this.score = 0;
+  }
+  login(){
+    console.log(`${this.username} just logged in`);
+    return this;
+  }
+  logout(){
+    console.log(`${this.username} just logged out`);
+    return this;
+  }
+  incScore(){
+    this.score += 1;
+    console.log(`${this.username} has a score of ${this.score}`);
+    return this;
+  }
+}
+
+class Admin extends User{
+
+}
+
+const userOne = new User('mario', 'mario@thenetninja.co.uk');
+const userTwo = new User('luigi', 'luigi@thenetninja.co.uk');
+const userThree = new Admin('shaun', 'shaun@thenetninja.co.uk');
+
+console.log(userOne, userTwo, userThree);
+
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 1
+   User {username: 'mario', email: 'mario@thenetninja.co.uk', score: 0}
+   User {username: 'luigi', email: 'luigi@thenetninja.co.uk', score: 0}
+   Admin {username: 'shaun', email: 'shaun@thenetninja.co.uk', score: 0}
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 2
+   User {username: 'mario', email: 'mario@thenetninja.co.uk', score: 0}
+   User {username: 'luigi', email: 'luigi@thenetninja.co.uk', score: 0}
+   Admin {username: 'shaun', email: 'shaun@thenetninja.co.uk', score: 0}
+&gt;  userThree.login();
+   shaun just logged in
+&lt;  Admin {username: 'shaun', email: 'shaun@thenetninja.co.uk', score: 0}
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox - 3
+
+class User {
+  constructor(username, email){
+    // set up properties
+    this.username = username;
+    this.email = email;
+    this.score = 0;
+  }
+  login(){
+    console.log(`${this.username} just logged in`);
+    return this;
+  }
+  logout(){
+    console.log(`${this.username} just logged out`);
+    return this;
+  }
+  incScore(){
+    this.score += 1;
+    console.log(`${this.username} has a score of ${this.score}`);
+    return this;
+  }
+}
+
+class Admin extends User{
+  deleteUser(user){
+    users = users.filter((u) =&gt; {
+      return u.username !== user.username;
+    });
+  }
+}
+
+const userOne = new User('mario', 'mario@thenetninja.co.uk');
+const userTwo = new User('luigi', 'luigi@thenetninja.co.uk');
+const userThree = new Admin('shaun', 'shaun@thenetninja.co.uk');
+
+console.log(userOne, userTwo, userThree);
+
+let users = &#91;userOne, userTwo, userThree];
+console.log(users);
+
+userThree.deleteUser(userTwo);
+console.log(users);
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 3
+   User {username: 'mario', email: 'mario@thenetninja.co.uk', score: 0}
+   User {username: 'luigi', email: 'luigi@thenetninja.co.uk', score: 0}
+   Admin {username: 'shaun', email: 'shaun@thenetninja.co.uk', score: 0}
+   (3) &#91;User, User, Admin]
+   (2) &#91;User, Admin]
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 3 縮寫
+
+class User {
+  constructor(username, email){
+    // set up properties
+    this.username = username;
+    this.email = email;
+    this.score = 0;
+  }
+  login(){
+    console.log(`${this.username} just logged in`);
+    return this;
+  }
+  logout(){
+    console.log(`${this.username} just logged out`);
+    return this;
+  }
+  incScore(){
+    this.score += 1;
+    console.log(`${this.username} has a score of ${this.score}`);
+    return this;
+  }
+}
+
+class Admin extends User{
+  deleteUser(user){
+    users = users.filter(u =&gt; u.username !== user.username);
+  }
+}
+
+const userOne = new User('mario', 'mario@thenetninja.co.uk');
+const userTwo = new User('luigi', 'luigi@thenetninja.co.uk');
+const userThree = new Admin('shaun', 'shaun@thenetninja.co.uk');
+
+console.log(userOne, userTwo, userThree);
+
+let users = &#91;userOne, userTwo, userThree];
+console.log(users);
+
+userThree.deleteUser(userTwo);
+console.log(users);
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 3 縮寫
+   User {username: 'mario', email: 'mario@thenetninja.co.uk', score: 0}
+   User {username: 'luigi', email: 'luigi@thenetninja.co.uk', score: 0}
+   Admin {username: 'shaun', email: 'shaun@thenetninja.co.uk', score: 0}
+   (3) &#91;User, User, Admin]
+   (2) &#91;User, Admin]
+&gt;</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Super()</h3>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+
+class User {
+  constructor(username, email){
+    // set up properties
+    this.username = username;
+    this.email = email;
+    this.score = 0;
+  }
+  login(){
+    console.log(`${this.username} just logged in`);
+    return this;
+  }
+  logout(){
+    console.log(`${this.username} just logged out`);
+    return this;
+  }
+  incScore(){
+    this.score += 1;
+    console.log(`${this.username} has a score of ${this.score}`);
+    return this;
+  }
+}
+
+class Admin extends User{
+  constructor(username, email, title){
+    super(username, email);
+    this.title = title;
+  }
+  deleteUser(user){
+    users = users.filter(u =&gt; u.username !== user.username);
+  }
+}
+
+const userOne = new User('mario', 'mario@thenetninja.co.uk');
+const userTwo = new User('luigi', 'luigi@thenetninja.co.uk');
+const userThree = new Admin('shaun', 'shaun@thenetninja.co.uk', 'black-belt-ninja');
+
+console.log(userThree);
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   Admin&nbsp;{username: 'shaun', email: 'shaun@thenetninja.co.uk', score: 0, title: 'black-belt-ninja'}
+&gt;</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Constructors (under the hood)</h3>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+
+// constructor functions
+
+function User(username, email){
+  this.username = username;
+  this.email = email;
+  this.login = function(){
+    console.log(`${this.username} has logged in`);
+  };
+}
+
+// class User {
+//   constructor(username, email){
+//     // set up properties
+//     this.username = username;
+//     this.email = email;
+//   }
+// }
+
+const userOne = new User('mario', 'mario@thenetninja.co.uk');
+const userTwo = new User('luigi', 'luigi@thenetninja.co.uk');
+
+console.log(userOne, userTwo);
+userOne.login();
+
+// the 'new' keyword
+// 1 - it creates a new empty object {}
+// 2 - it binds the value of 'this' to the new empty object
+// 3 - it calls the constructor function to 'build' the object</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   User&nbsp;{username: 'mario', email: 'mario@thenetninja.co.uk', login: ƒ}
+   User&nbsp;{username: 'luigi', email: 'luigi@thenetninja.co.uk', login: ƒ}
+   mario has logged in
+&gt;</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Prototype Model (原型模型)</h3>
+
+
+
+<p>不懂可以重複觀看、練習。</p>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 1
+
+// constructor functions
+
+function User(username, email){
+  this.username = username;
+  this.email = email;
+  this.login = function(){
+    console.log(`${this.username} has logged in`);
+  };
+}
+
+const userOne = new User('mario', 'mario@thenetninja.co.uk');
+const userTwo = new User('luigi', 'luigi@thenetninja.co.uk');
+
+console.log(userOne, userTwo);
+userOne.login();
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 1
+   User User
+   mario has logged in
+&gt;  const nums = &#91;1,2,3,4,5]
+&lt;  undefined
+&gt;  nums
+&lt;  (5) &#91;1,2,3,4,5]
+&gt;</code></pre>
+
+
+
+<h4>Prototypes (原型)</h4>
+
+
+
+<ul>
+<li>Every object in JavaScript has a prototype</li>
+<li>Prototypes contain all the methods for that object type</li>
+</ul>
+
+
+
+<figure class="wp-block-gallery has-nested-images columns-1 is-cropped">
+<figure class="wp-block-image size-large"><img loading="lazy" width="1476" height="516" data-id="518" src="/wordpress_blog/wp-content/uploads/2022/04/prototype-1.png" alt="" class="wp-image-518"><figcaption>Prototype &#8211; 1</figcaption></figure>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" width="1536" height="674" data-id="517" src="/wordpress_blog/wp-content/uploads/2022/04/prototype-2.png" alt="" class="wp-image-517"><figcaption>Prototype &#8211; 2</figcaption></figure>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" width="1536" height="681" data-id="519" src="/wordpress_blog/wp-content/uploads/2022/04/prototype-3.png" alt="" class="wp-image-519"><figcaption>Prototype &#8211; 3</figcaption></figure>
+</figure>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 2
+   User User
+   mario has logged in
+&gt;  const nums = &#91;1,2,3,4,5]
+&lt;  undefined
+&gt;  nums
+&lt;  (5) &#91;1,2,3,4,5]
+&gt;  Array.prototype
+&lt;  &#91;constructor: ƒ, concat: ƒ, copyWithin: ƒ, fill: ƒ, find: ƒ,&nbsp;…]
+&gt;  Date.prototype
+&lt;  {constructor: ƒ, toString: ƒ, toDateString: ƒ, toTimeString: ƒ, toISOString: ƒ,&nbsp;…}
+&gt;  User.prototype
+&lt;  {constructor: ƒ}
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 3
+
+// constructor functions
+
+function User(username, email){
+  this.username = username;
+  this.email = email;
+}
+
+User.prototype.login = function(){
+  console.log(`${this.username} has logged in`);
+};
+
+const userOne = new User('mario', 'mario@thenetninja.co.uk');
+const userTwo = new User('luigi', 'luigi@thenetninja.co.uk');
+
+console.log(userOne, userTwo);
+userOne.login();
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 3
+   User {username: 'mario', email: 'mario@thenetninja.co.uk'}
+   User {username: 'luigi', email: 'luigi@thenetninja.co.uk'}
+   mario has logged in
+&gt;  User.prototype
+&lt;  {login: f, constructor: f}
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 4
+
+// constructor functions
+
+function User(username, email){
+  this.username = username;
+  this.email = email;
+}
+
+User.prototype.login = function(){
+  console.log(`${this.username} has logged in`);
+};
+
+User.prototype.logout = function(){
+  console.log(`${this.username} has logged out`);
+};
+
+const userOne = new User('mario', 'mario@thenetninja.co.uk');
+const userTwo = new User('luigi', 'luigi@thenetninja.co.uk');
+
+console.log(userOne, userTwo);
+userOne.login();
+userOne.logout();
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 4
+   User {username: 'mario', email: 'mario@thenetninja.co.uk'}
+   User {username: 'luigi', email: 'luigi@thenetninja.co.uk'}
+   mario has logged in
+   mario has logged out
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 5
+// constructor functions
+
+function User(username, email){
+  this.username = username;
+  this.email = email;
+}
+
+User.prototype.login = function(){
+  console.log(`${this.username} has logged in`);
+  return this;
+};
+
+User.prototype.logout = function(){
+  console.log(`${this.username} has logged out`);
+  return this;
+};
+
+const userOne = new User('mario', 'mario@thenetninja.co.uk');
+const userTwo = new User('luigi', 'luigi@thenetninja.co.uk');
+
+console.log(userOne, userTwo);
+userOne.login().logout();
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 5
+   User {username: 'mario', email: 'mario@thenetninja.co.uk'}
+   User {username: 'luigi', email: 'luigi@thenetninja.co.uk'}
+   mario has logged in
+   mario has logged out
+&gt;</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Prototypal Inheritance</h3>
+
+
+
+<p>不懂可以重複觀看、練習。</p>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 1
+
+// constructor functions
+
+function User(username, email){
+  this.username = username;
+  this.email = email;
+}
+
+User.prototype.login = function(){
+  console.log(`${this.username} has logged in`);
+  return this;
+};
+
+User.prototype.logout = function(){
+  console.log(`${this.username} has logged out`);
+  return this;
+};
+
+function Admin(username, email){
+  User.call(this, username, email);
+}
+
+const userOne = new User('mario', 'mario@thenetninja.co.uk');
+const userTwo = new User('luigi', 'luigi@thenetninja.co.uk');
+const userThree =  new Admin('shaun', 'shaun@thenetninja.co.uk');
+
+console.log(userOne, userTwo, userThree);
+userOne.login().logout();</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 1
+   User&nbsp;{username: 'mario', email: 'mario@thenetninja.co.uk'}
+   User&nbsp;{username: 'luigi', email: 'luigi@thenetninja.co.uk'}
+   Admin&nbsp;{username: 'shaun', email: 'shaun@thenetninja.co.uk'}
+   mario has logged in
+   mario has logged out
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 2
+
+// constructor functions
+
+function User(username, email){
+  this.username = username;
+  this.email = email;
+}
+
+User.prototype.login = function(){
+  console.log(`${this.username} has logged in`);
+  return this;
+};
+
+User.prototype.logout = function(){
+  console.log(`${this.username} has logged out`);
+  return this;
+};
+
+function Admin(username, email, title){
+  User.call(this, username, email);
+  this.title = title;
+}
+
+const userOne = new User('mario', 'mario@thenetninja.co.uk');
+const userTwo = new User('luigi', 'luigi@thenetninja.co.uk');
+const userThree =  new Admin('shaun', 'shaun@thenetninja.co.uk', 'black-belt-ninja');
+
+console.log(userOne, userTwo, userThree);
+userOne.login().logout();</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 2
+   User&nbsp;{username: 'mario', email: 'mario@thenetninja.co.uk'}
+   User&nbsp;{username: 'luigi', email: 'luigi@thenetninja.co.uk'}
+   Admin&nbsp;{username: 'shaun', email: 'shaun@thenetninja.co.uk', title: 'black-belt-ninja'}
+   mario has logged in
+   mario has logged out
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 3
+   User&nbsp;{username: 'mario', email: 'mario@thenetninja.co.uk'}
+   User&nbsp;{username: 'luigi', email: 'luigi@thenetninja.co.uk'}
+   Admin&nbsp;{username: 'shaun', email: 'shaun@thenetninja.co.uk', title: 'black-belt-ninja'}
+   mario has logged in
+   mario has logged out
+&gt;  Admin.prototype
+&lt;  {constructor: f}
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 4
+
+// constructor functions
+
+function User(username, email){
+  this.username = username;
+  this.email = email;
+}
+
+User.prototype.login = function(){
+  console.log(`${this.username} has logged in`);
+  return this;
+};
+
+User.prototype.logout = function(){
+  console.log(`${this.username} has logged out`);
+  return this;
+};
+
+function Admin(username, email, title){
+  User.call(this, username, email);
+  this.title = title;
+}
+
+Admin.prototype = Object.create(User.prototype);
+
+const userOne = new User('mario', 'mario@thenetninja.co.uk');
+const userTwo = new User('luigi', 'luigi@thenetninja.co.uk');
+const userThree =  new Admin('shaun', 'shaun@thenetninja.co.uk', 'black-belt-ninja');
+
+console.log(userOne, userTwo, userThree);
+userOne.login().logout();</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 4
+   User&nbsp;{username: 'mario', email: 'mario@thenetninja.co.uk'}
+   User&nbsp;{username: 'luigi', email: 'luigi@thenetninja.co.uk'}
+   Admin&nbsp;{username: 'shaun', email: 'shaun@thenetninja.co.uk', title: 'black-belt-ninja'}
+   mario has logged in
+   mario has logged out
+&gt;  Admin.prototype
+&lt;  User {}
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 5
+
+// constructor functions
+
+function User(username, email){
+  this.username = username;
+  this.email = email;
+}
+
+User.prototype.login = function(){
+  console.log(`${this.username} has logged in`);
+  return this;
+};
+
+User.prototype.logout = function(){
+  console.log(`${this.username} has logged out`);
+  return this;
+};
+
+function Admin(username, email, title){
+  User.call(this, username, email);
+  this.title = title;
+}
+
+Admin.prototype = Object.create(User.prototype);
+
+Admin.prototype.deleteUser = function(){
+  // delete a user
+};
+
+const userOne = new User('mario', 'mario@thenetninja.co.uk');
+const userTwo = new User('luigi', 'luigi@thenetninja.co.uk');
+const userThree =  new Admin('shaun', 'shaun@thenetninja.co.uk', 'black-belt-ninja');
+
+console.log(userOne, userTwo, userThree);
+userOne.login().logout();</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 5
+   User&nbsp;{username: 'mario', email: 'mario@thenetninja.co.uk'}
+   User&nbsp;{username: 'luigi', email: 'luigi@thenetninja.co.uk'}
+   Admin&nbsp;{username: 'shaun', email: 'shaun@thenetninja.co.uk', title: 'black-belt-ninja'}
+   mario has logged in
+   mario has logged out
+&gt;</code></pre>
+
+
+
+<h3>Built-in Objects</h3>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+&gt;  new Array(1,2,3,4,5)
+&lt;  (5) &#91;1,2,3,4,5]
+&gt;  new Object
+&lt;  {}
+&gt;  new XMLHttpRequest
+&lt;  XMLHttpRequest&nbsp;{onreadystatechange: null, readyState: 0, timeout: 0, withCredentials: false, upload: XMLHttpRequestUpload,&nbsp;…}
+&gt;</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Making a Forecast Class (weather app)</h3>
+
+
+
+<pre class="wp-block-code"><code>// scripts/forecast.js
+
+class Forecast{
+  constructor(){
+    this.key = 'rdec-key-123-45678-011121314';
+    this.weatherURI = 'https://opendata.cwb.gov.tw/api/v1/rest/datastore/';
+    this.cityURI = 'https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001';
+    this.id = 'F-C0032-001';
+  }
+  async updateCity(city){
+    const cityDets = await this.getCity(city);
+    const weather = await this.getWeather(city);
+    return { cityDets, weather };
+  }
+  async getCity(city){
+    const query = `?Authorization=${this.key}&amp;locationName=${city}`;
+    const response = await fetch(this.cityURI + query);
+    const data = await response.json();
+    return data;
+  }
+  async getWeather(city){
+    const query = `${this.id}?Authorization=${this.key}&amp;locationName=${city}`;
+    const response = await fetch(this.weatherURI + query);
+    const data = await response.json();
+    return data;
+  }
+}
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// scripts/app.js
+
+const cityForm = document.querySelector('form');
+const card = document.querySelector('.card');
+const details = document.querySelector('.details');
+const time = document.querySelector('img.time');
+const icon = document.querySelector('.icon img');
+const forecast = new Forecast();
+
+// console.log(forecast);
+
+const updateUI = (data) =&gt; {
+  // destructure properties
+  const { cityDets, weather } = data;
+
+  // update details template
+  details.innerHTML = `
+    &lt;h4 class="my-3"&gt;12小時內天氣預報&lt;/h4&gt;
+    &lt;h5 class="my-3"&gt;${cityDets.records.location&#91;0].locationName}&lt;/h5&gt;
+    &lt;div class="my-3"&gt;${weather.records.location&#91;0].weatherElement&#91;0].time&#91;0].parameter.parameterName}&lt;/div&gt;
+    &lt;div class="display-4 my-4"&gt;
+      &lt;span&gt;氣溫&lt;/span&gt;&lt;br&gt;
+      &lt;span&gt;${weather.records.location&#91;0].weatherElement&#91;2].time&#91;0].parameter.parameterName} - ${weather.records.location&#91;0].weatherElement&#91;4].time&#91;0].parameter.parameterName}  &amp;deg;C&lt;/span&gt;
+    &lt;/div&gt;
+  `;
+
+  // update the night/day &amp; icon images
+  const iconSrc = `img/icons/${weather.records.location&#91;0].weatherElement&#91;0].time&#91;0].parameter.parameterValue}.svg`;
+  icon.setAttribute('src', iconSrc);
+
+
+  const timeSrc = weather.records.location&#91;0].weatherElement&#91;0].time&#91;0].startTime.indexOf("06:00:00") || weather.records.location&#91;0].weatherElement&#91;0].time&#91;0].startTime.indexOf("12:00:00") &gt;= 0 ? 'img/day.svg' : 'img/night.svg';
+  time.setAttribute('src', timeSrc);
+
+  // remove the d-none class if present
+  if(card.classList.contains('d-none')){
+    card.classList.remove('d-none');
+  }
+
+};
+
+cityForm.addEventListener('submit', e =&gt; {
+  // prevent default action
+  e.preventDefault();
+
+  // get city value
+  const city = cityForm.city.value.trim();
+  cityForm.reset();
+
+  // update the ui with new city
+  forecast.updateCity(city)
+  .then(data =&gt; updateUI(data))
+  .catch(err =&gt; console.log(err));
+
+  // set local storage
+  localStorage.setItem('city', city);
+
+});
+
+if(localStorage.getItem('city')){
+  forecast.updateCity(localStorage.getItem('city'))
+    .then(data =&gt; updateUI(data))
+    .catch(err =&gt; console.log(err));
+};</code></pre>
+
+
+
+<h2 class="has-background" style="background-color:#ff6663">Databases (Firebase)</h2>
+
+
+
+<h3>NoSQL Databases</h3>
+
+
+
+<h4>Storing Data</h4>
+
+
+
+<ul>
+<li>Websites work with data<ul><li>blog posts, todos, comments, user info, scores etc</li></ul>
+</li>
+<li>We can store this data in database<ul><li>Firebase (by Google)</li></ul>
+</li>
+</ul>
+
+
+
+<h4>Storing Data</h4>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" width="1497" height="725" src="/wordpress_blog/wp-content/uploads/2022/04/Storing-Data.png" alt="" class="wp-image-521"><figcaption>Storing Data</figcaption></figure>
+
+
+
+<h4>NoSQL Databases</h4>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" width="1536" height="652" src="/wordpress_blog/wp-content/uploads/2022/04/NoSQL-Databases.png" alt="" class="wp-image-522"><figcaption>NoSQL Databases</figcaption></figure>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Firebase &amp; Firestore</h3>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ul>
+<li>GO TO CONSOLE</li>
+<li>新的 Firebase 專案 &gt; 新增專案</li>
+<li>專案名稱 udemy-modern-javascript</li>
+<li>適用於 Firebase 專案的 Google Analytics (分析)<ul><li>這裡我先不使用</li></ul>
+</li>
+<li>建立專案</li>
+<li>建構 &gt; Firestore Database</li>
+<li>建立資料庫</li>
+<li>Cloud Firestore 的安全規則<ul><li>以測試模式啟動 (在這裡先使用這個)<br>以正式版模式啟動 (在未來使用上安全是重要的)</li></ul>
+</li>
+<li>設定 Cloud Firestore 位置<ul><li>選擇東亞啟用</li></ul>
+</li>
+<li>新增集合 (Add collection)<ul><li>集合 ID (Collection ID) – recipes</li></ul>
+</li>
+<li>新增第一份文件 (Add first document)<ul>
+<li>欄位(Field) title、類型(Type) string、值(Value) veg &amp; tofu ninja curry</li>
+<li>欄位(Field) author、類型(Type) string、值(Value) ryu</li>
+<li>欄位(Field) created_at 日期(Date) 2022年1月24日、類型(Type) timestamp</li>
+</ul>
+</li>
+<li>自動產生的 ID、然後儲存</li>
+<li>新增文件 (Add a document)<ul>
+<li>欄位(Field) title、類型(Type) string、值(Value) spring green burrito</li>
+<li>欄位(Field) author、類型(Type) string、值(Value) chun li</li>
+<li>欄位(Field) created_at 日期(Date) 2022年1月25日、類型(Type) timestamp</li>
+</ul>
+</li>
+<li>自動產生的 ID、然後儲存</li>
+</ul>
+
+
+
+<p>可以參考 The Net Ninja Youtube Channel 的其他課程。</p>
+
+
+
+<h4>課程補充文件</h4>
+
+
+
+<ul><li><a href="https://firebase.google.com/docs/firestore/quickstart#set_up_your_development_environment" target="_blank" rel="noreferrer noopener">Firebase Documentation 開始使用 Cloud Firestore</a></li></ul>
+
+
+
+<pre class="wp-block-code"><code>// In index.html file put the script tag like this:
+
+&lt;script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"&gt;&lt;/script&gt;
+&lt;script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  // replace "xxxx" with your own generated firebase config
+  const firebaseConfig = {
+  apiKey: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+  authDomain: 'xxxxxxxxxxxxxxxxxxxxx.com',
+  projectId: 'xxxxx-js',
+  storageBucket: 'xxxxxxxxxxx.com',
+  messagingSenderId: 'xxxxxxxxxxxxxxxxx',
+  appId: 'xxxxxxxxxxxxxxxxx',
+  measurementId: 'xxxxxxxxxxxx'
+  };
+    
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+&lt;/script&gt;
+&lt;script src="sandbox.js"&gt;&lt;/script&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// in sandbox.js file
+
+db.collection('recipes')
+   .get()
+   .then((snapshot) =&gt; {
+      snapshot.docs.forEach((doc) =&gt; {
+         console.log(doc.data());
+      });
+   })
+   .catch((err) =&gt; {
+      console.log(err);
+   });</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Connecting to Firestore</h3>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+    &lt;title&gt;Modern JavaScript&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Databases(Firebase)&lt;/h1&gt;
+    
+    
+    &lt;script src="sandbox.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ul>
+<li>建立一個 index.html 檔案</li>
+<li>專案總覽 udemy-modern-javascript</li>
+<li>首先請新增應用程式 &gt; 選擇網頁</li>
+<li>將 Firebase 新增至您的網頁應用程式<ul>
+<li>註冊應用程式 &gt;應用程式暱稱 udemy-modern-javascript &gt; 註冊應用程式</li>
+<li>新增 Firebase SDK &gt; 使用 &lt;script&gt; 標記 (選擇這個)</li>
+</ul>
+</li>
+<li>這個教學影片版本是使用 5.9.1</li>
+<li>載入 Bootstrap v4.6</li>
+<li>製作 index.html 的 HTML Template</li>
+</ul>
+
+
+
+<p>注意:<br>Make sure you use the same version of Firebase as me – 5.9.1 – to make sure everything works the same way as in the videos.<br><br>There will be a chapter at the end of the course showing how to use the most recent version of Firebase as well (version 9)</p>
+
+
+
+<pre class="wp-block-code"><code>// index.html - HTML Template
+
+  &lt;div class="container my-5"&gt;
+    &lt;h2&gt;Recipes&lt;/h2&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Mushroom pie&lt;/li&gt;
+      &lt;li&gt;Veg curry&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;form&gt;
+      &lt;label for="recipe"&gt;Add a new recipe:&lt;/label&gt;
+      &lt;div class="input-group"&gt;
+        &lt;input type="text" class="form-control" id="recipe" required&gt;
+        &lt;div class="input-group-append"&gt;
+          &lt;input type="submit" value="add" class="btn btn-outline-secondary"&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.html - 串接資料查閱 Firebase
+
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous"&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+    &lt;title&gt;Modern JavaScript&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+  &lt;div class="container my-5"&gt;
+    &lt;h2&gt;Recipes&lt;/h2&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Mushroom pie&lt;/li&gt;
+      &lt;li&gt;Veg curry&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;form&gt;
+      &lt;label for="recipe"&gt;Add a new recipe:&lt;/label&gt;
+      &lt;div class="input-group"&gt;
+        &lt;input type="text" class="form-control" id="recipe" required&gt;
+        &lt;div class="input-group-append"&gt;
+          &lt;input type="submit" value="add" class="btn btn-outline-secondary"&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+    
+    &lt;script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"&gt;&lt;/script&gt;
+    &lt;script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+      // Initialize Firebase
+      const firebaseConfig = {
+          apiKey: "",
+          authDomain: "",
+          projectId: "",
+          storageBucket: "",
+          messagingSenderId: "",
+          appId: ""
+      };
+      
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
+    &lt;/script&gt;
+    &lt;script src="sandbox.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Getting Collections</h3>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.html - 串接資料查閱 firebase
+
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous"&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+    &lt;title&gt;Modern JavaScript&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+  &lt;div class="container my-5"&gt;
+    &lt;h2&gt;Recipes&lt;/h2&gt;
+    &lt;ul&gt;
+    &lt;/ul&gt;
+    &lt;form&gt;
+      &lt;label for="recipe"&gt;Add a new recipe:&lt;/label&gt;
+      &lt;div class="input-group"&gt;
+        &lt;input type="text" class="form-control" id="recipe" required&gt;
+        &lt;div class="input-group-append"&gt;
+          &lt;input type="submit" value="add" class="btn btn-outline-secondary"&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+    
+    &lt;script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"&gt;&lt;/script&gt;
+    &lt;script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+      // Initialize Firebase
+      const firebaseConfig = {
+          apiKey: "",
+          authDomain: "",
+          projectId: "",
+          storageBucket: "",
+          messagingSenderId: "",
+          appId: ""
+      };
+      
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
+    &lt;/script&gt;
+    &lt;script src="sandbox.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+
+const list = document.querySelector('ul');
+
+const addRecipe = (recipe) =&gt; {
+  // console.log(recipe.created_at.toDate());
+  let time = recipe.created_at.toDate();
+  let html = `
+    &lt;li&gt;
+      &lt;div&gt;${recipe.title}&lt;/div&gt;
+      &lt;div&gt;${time}&lt;/div&gt;
+    &lt;/li&gt;
+  `;
+
+  // console.log(html);
+  list.innerHTML += html;
+}
+
+// get documents
+db.collection('recipes').get().then(snapshot =&gt; {
+  // when we have the data
+  snapshot.docs.forEach(doc =&gt; {
+    // console.log(doc.data());
+    addRecipe(doc.data());
+  });
+}).catch(err =&gt; {
+  console.log(err);
+});</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Saving Documents</h3>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+
+const list = document.querySelector('ul');
+const form = document.querySelector('form');
+
+const addRecipe = (recipe) =&gt; {
+  // console.log(recipe.created_at.toDate());
+  let time = recipe.created_at.toDate();
+  let html = `
+    &lt;li&gt;
+      &lt;div&gt;${recipe.title}&lt;/div&gt;
+      &lt;div&gt;${time}&lt;/div&gt;
+    &lt;/li&gt;
+  `;
+
+  // console.log(html);
+  list.innerHTML += html;
+}
+
+// get documents
+db.collection('recipes').get().then(snapshot =&gt; {
+  // when we have the data
+  snapshot.docs.forEach(doc =&gt; {
+    // console.log(doc.data());
+    addRecipe(doc.data());
+  });
+}).catch(err =&gt; {
+  console.log(err);
+});
+
+// add documents
+form.addEventListener('submit', e =&gt; {
+  e.preventDefault();
+
+  const now = new Date();
+  const recipe = {
+    title: form.recipe.value,
+    created_at: firebase.firestore.Timestamp.fromDate(now)
+  };
+
+  db.collection('recipes').add(recipe).then(() =&gt; {
+    console.log('recipe added');
+  }).catch(err =&gt; {
+    console.log(err);
+  });
+
+});</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Deleting Documents</h3>
+
+
+
+<p>不懂可重複觀看、練習。</p>
+
+
+
+<pre class="wp-block-code"><code>// index.html - 串接資料查閱 Firebase
+
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous"&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+    &lt;title&gt;Modern JavaScript&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+  &lt;div class="container my-5"&gt;
+    &lt;h2&gt;Recipes&lt;/h2&gt;
+    &lt;ul&gt;
+    &lt;/ul&gt;
+    &lt;form&gt;
+      &lt;label for="recipe"&gt;Add a new recipe:&lt;/label&gt;
+      &lt;div class="input-group"&gt;
+        &lt;input type="text" class="form-control" id="recipe" required&gt;
+        &lt;div class="input-group-append"&gt;
+          &lt;input type="submit" value="add" class="btn btn-outline-secondary"&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+    
+    &lt;script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"&gt;&lt;/script&gt;
+    &lt;script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+      // Initialize Firebase
+      const firebaseConfig = {
+          apiKey: "",
+          authDomain: "",
+          projectId: "",
+          storageBucket: "",
+          messagingSenderId: "",
+          appId: ""
+      };
+      
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
+    &lt;/script&gt;
+    &lt;script src="sandbox.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+
+const list = document.querySelector('ul');
+const form = document.querySelector('form');
+
+const addRecipe = (recipe, id) =&gt; {
+  // console.log(recipe.created_at.toDate());
+  let time = recipe.created_at.toDate();
+  let html = `
+    &lt;li data-id="${id}"&gt;
+      &lt;div&gt;${recipe.title}&lt;/div&gt;
+      &lt;div&gt;${time}&lt;/div&gt;
+      &lt;button class="btn btn-danger btn-sm my-2"&gt;delete&lt;/button&gt;
+    &lt;/li&gt;
+  `;
+
+  // console.log(html);
+  list.innerHTML += html;
+}
+
+// get documents
+db.collection('recipes').get().then(snapshot =&gt; {
+  // when we have the data
+  snapshot.docs.forEach(doc =&gt; {
+    // console.log(doc.data());
+    // console.log(doc.id);
+    addRecipe(doc.data(), doc.id);
+  });
+}).catch(err =&gt; {
+  console.log(err);
+});
+
+// add documents
+form.addEventListener('submit', e =&gt; {
+  e.preventDefault();
+
+  const now = new Date();
+  const recipe = {
+    title: form.recipe.value,
+    created_at: firebase.firestore.Timestamp.fromDate(now)
+  };
+
+  db.collection('recipes').add(recipe).then(() =&gt; {
+    console.log('recipe added');
+  }).catch(err =&gt; {
+    console.log(err);
+  });
+
+});
+
+// deleting data
+list.addEventListener('click', e =&gt; {
+  // console.log(e);
+  if(e.target.tagName === 'BUTTON'){
+    const id = e.target.parentElement.getAttribute('data-id');
+    // console.log(id);
+    db.collection('recipes').doc(id).delete().then(() =&gt; {
+      console.log('recipe deleted');
+    });
+  }
+});</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Real-time Listeners</h3>
+
+
+
+<p>不懂可重複觀看、練習。</p>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+
+const list = document.querySelector('ul');
+const form = document.querySelector('form');
+
+const addRecipe = (recipe, id) =&gt; {
+  // console.log(recipe.created_at.toDate());
+  let time = recipe.created_at.toDate();
+  let html = `
+    &lt;li data-id="${id}"&gt;
+      &lt;div&gt;${recipe.title}&lt;/div&gt;
+      &lt;div&gt;${time}&lt;/div&gt;
+      &lt;button class="btn btn-danger btn-sm my-2"&gt;delete&lt;/button&gt;
+    &lt;/li&gt;
+  `;
+
+  // console.log(html);
+  list.innerHTML += html;
+}
+
+const deleteRecipe = (id) =&gt; {
+  const recipes = document.querySelectorAll('li');
+  recipes.forEach(recipe =&gt; {
+    if(recipe.getAttribute('data-id') === id){
+      recipe.remove();
+    }
+  });
+}
+
+// get documents
+db.collection('recipes').onSnapshot(snapshot =&gt; {
+  // console.log(snapshot.docChanges());
+  snapshot.docChanges().forEach(change =&gt; {
+    // console.log(change);
+    const doc = change.doc;
+    // console.log(doc);
+    if(change.type === 'added'){
+      addRecipe(doc.data(), doc.id);
+    } else if (change.type === 'removed'){
+      deleteRecipe(doc.id);
+    }
+  })
+});
+
+// add documents
+form.addEventListener('submit', e =&gt; {
+  e.preventDefault();
+
+  const now = new Date();
+  const recipe = {
+    title: form.recipe.value,
+    created_at: firebase.firestore.Timestamp.fromDate(now)
+  };
+
+  db.collection('recipes').add(recipe).then(() =&gt; {
+    console.log('recipe added');
+  }).catch(err =&gt; {
+    console.log(err);
+  });
+
+});
+
+// deleting data
+list.addEventListener('click', e =&gt; {
+  // console.log(e);
+  if(e.target.tagName === 'BUTTON'){
+    const id = e.target.parentElement.getAttribute('data-id');
+    // console.log(id);
+    db.collection('recipes').doc(id).delete().then(() =&gt; {
+      console.log('recipe deleted');
+    });
+  }
+});</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Unsubscribing</h3>
+
+
+
+<pre class="wp-block-code"><code>// index.html - 串接資料查閱 Firebase
+
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous"&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+    &lt;title&gt;Modern JavaScript&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+  &lt;div class="container my-5"&gt;
+    &lt;h2&gt;Recipes&lt;/h2&gt;
+    &lt;ul&gt;
+    &lt;/ul&gt;
+    &lt;form&gt;
+      &lt;label for="recipe"&gt;Add a new recipe:&lt;/label&gt;
+      &lt;div class="input-group"&gt;
+        &lt;input type="text" class="form-control" id="recipe" required&gt;
+        &lt;div class="input-group-append"&gt;
+          &lt;input type="submit" value="add" class="btn btn-outline-secondary"&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/form&gt;
+    &lt;button&gt;unsubscribe from changes&lt;/button&gt;
+  &lt;/div&gt;
+    
+    &lt;script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"&gt;&lt;/script&gt;
+    &lt;script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+      // Initialize Firebase
+      const firebaseConfig = {
+          apiKey: "",
+          authDomain: "",
+          projectId: "",
+          storageBucket: "",
+          messagingSenderId: "",
+          appId: ""
+      };
+      
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
+    &lt;/script&gt;
+    &lt;script src="sandbox.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+
+const list = document.querySelector('ul');
+const form = document.querySelector('form');
+const button = document.querySelector('button');
+
+const addRecipe = (recipe, id) =&gt; {
+  // console.log(recipe.created_at.toDate());
+  let time = recipe.created_at.toDate();
+  let html = `
+    &lt;li data-id="${id}"&gt;
+      &lt;div&gt;${recipe.title}&lt;/div&gt;
+      &lt;div&gt;${time}&lt;/div&gt;
+      &lt;button class="btn btn-danger btn-sm my-2"&gt;delete&lt;/button&gt;
+    &lt;/li&gt;
+  `;
+
+  // console.log(html);
+  list.innerHTML += html;
+}
+
+const deleteRecipe = (id) =&gt; {
+  const recipes = document.querySelectorAll('li');
+  recipes.forEach(recipe =&gt; {
+    if(recipe.getAttribute('data-id') === id){
+      recipe.remove();
+    }
+  });
+}
+
+// get documents
+const unsub = db.collection('recipes').onSnapshot(snapshot =&gt; {
+  // console.log(snapshot.docChanges());
+  snapshot.docChanges().forEach(change =&gt; {
+    // console.log(change);
+    const doc = change.doc;
+    // console.log(doc);
+    if(change.type === 'added'){
+      addRecipe(doc.data(), doc.id);
+    } else if (change.type === 'removed'){
+      deleteRecipe(doc.id);
+    }
+  })
+});
+
+// add documents
+form.addEventListener('submit', e =&gt; {
+  e.preventDefault();
+
+  const now = new Date();
+  const recipe = {
+    title: form.recipe.value,
+    created_at: firebase.firestore.Timestamp.fromDate(now)
+  };
+
+  db.collection('recipes').add(recipe).then(() =&gt; {
+    console.log('recipe added');
+  }).catch(err =&gt; {
+    console.log(err);
+  });
+
+});
+
+// deleting data
+list.addEventListener('click', e =&gt; {
+  // console.log(e);
+  if(e.target.tagName === 'BUTTON'){
+    const id = e.target.parentElement.getAttribute('data-id');
+    // console.log(id);
+    db.collection('recipes').doc(id).delete().then(() =&gt; {
+      console.log('recipe deleted');
+    });
+  }
+});
+
+// unsub from database changes
+button.addEventListener('click', () =&gt; {
+  unsub();
+  console.log('unsubscribed from collection changes');
+});</code></pre>
+
+
+
+<h2 class="has-background" style="background-color:#ff6663">Project – Real-time Chatroom</h2>
+
+
+
+<p>非常有趣，不懂可以重複觀看、練習。</p>
+
+
+
+<h3>Project Preview &amp; Setup</h3>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ul>
+<li>建立一個專案資料夾 ninja_chat</li>
+<li>建立 index.html 檔案</li>
+<li>建立一個 scripts 資料夾</li>
+<li>在 scripts 資料夾裡面建立以下檔案<ul>
+<li>app.js</li>
+<li>ui.js</li>
+<li>chat.js</li>
+</ul>
+</li>
+<li>載入 JS 檔案，chat.js、ui.js、app.js</li>
+<li>載入 CSS 檔案，bootstrap v4.6 cdn</li>
+<li>建立 style.css 檔案</li>
+<li>載入 CSS 檔案，style.css</li>
+<li>開啟 Live Server</li>
+</ul>
+
+
+
+<h3>HTML Template</h3>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous"&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+  &lt;title&gt;Ninja Chat&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;!-- container &amp; title --&gt;
+  &lt;div class="container my-4"&gt;
+    &lt;h1 class="my-4 text-center"&gt;Ninja Chat&lt;/h1&gt;
+
+
+    &lt;!-- buttons for chatrooms --&gt;
+    &lt;div class="chat-rooms mb-3 text-center"&gt;
+      &lt;div class="my-2"&gt;Choose a chatroom:&lt;/div&gt;
+      &lt;button class="btn" id="general"&gt;#general&lt;/button&gt;
+      &lt;button class="btn" id="gaming"&gt;#gaming&lt;/button&gt;
+      &lt;button class="btn" id="music"&gt;#music&lt;/button&gt;
+      &lt;button class="btn" id="ninjas"&gt;#ninjas&lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;!-- chat list / window --&gt;
+    &lt;div class="chat-window"&gt;
+      &lt;ul class="chat-list list-group"&gt;&lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;!-- new chat form --&gt;
+    &lt;form class="new-chat my-3"&gt;
+      &lt;div class="input-group"&gt;
+        &lt;div class="input-group-prepend"&gt;
+          &lt;div class="input-group-text"&gt;Your message:&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;input type="text" id="message" class="form-control" required&gt;
+        &lt;div class="input-group-append"&gt;
+          &lt;input type="submit" class="btn" value="send"&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/form&gt;
+
+    &lt;!-- update name form --&gt;
+    &lt;form class="new-name my-3"&gt;
+      &lt;div class="input-group"&gt;
+        &lt;div class="input-group-prepend"&gt;
+          &lt;div class="input-group-text"&gt;Update name:&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;input type="text" id="name" class="form-control" required&gt;
+        &lt;div class="input-group-append"&gt;
+          &lt;input type="submit" class="btn" value="update"&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="update-mssg"&gt;&lt;/div&gt;
+    &lt;/form&gt;
+    
+  &lt;/div&gt;
+
+  &lt;script src="scripts/chat.js"&gt;&lt;/script&gt;
+  &lt;script src="scripts/ui.js"&gt;&lt;/script&gt;
+  &lt;script src="scripts/app.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// style.css
+
+.container{
+  max-width: 600px;
+}
+.btn{
+  background: #43d9be;
+  color: white;
+  outline: none !important;
+  box-shadow: none !important;
+}
+.btn:focus{
+  outline: none !important;
+}</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Connecting to Firebase</h3>
+
+
+
+<p>Make sure you use the same version of Firebase as me – 5.9.1 – to make sure everything works the same way as in the videos.<br><br>There will be a chapter at the end of the course showing how to use the most recent version of Firebase as well (version 9)</p>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ul>
+<li>載入 SDK 設定和配置 (使用 udermy-modern-javascript 來練習)</li>
+<li>點選 udemy-modern-javascript、選擇 Firestore Database</li>
+<li>並不是每次都需要手動新增集合(collection)，這邊是想要新增兩個虛假的文件</li>
+<li>開始新增集合 (Set collection ID)<ul><li>集合ID (Collection ID) chats</li></ul>
+</li>
+<li>新增第一份文件、自動產生 ID，然後儲存<ul>
+<li>欄位(Field) message、類型(Types) string、值(Value) hey guys</li>
+<li>欄位(Field) username、類型(Types) string、值(Value) yoshi</li>
+<li>欄位(Field) room、類型(Types) string、值(Value) general</li>
+<li>欄位(Field) created_at、類型(Types) timestamp 2022年1月27日</li>
+</ul>
+</li>
+<li>新增文件、自動產生 ID、然後儲存<ul>
+<li>欄位(Field) message、類型(Types) string、值(Value) Yo Yoshi</li>
+<li>欄位(Field) username、類型(Types) string、值(Value) mario</li>
+<li>欄位(Field) room、類型(Types) string、值(Value) general</li>
+<li>欄位(Field) created_at、類型 timestamp 2022年1月27日</li>
+</ul>
+</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// index.html 串接資料查閱 Firebase
+
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous"&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+  &lt;title&gt;Ninja Chat&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;!-- container &amp; title --&gt;
+  &lt;div class="container my-4"&gt;
+    &lt;h1 class="my-4 text-center"&gt;Ninja Chat&lt;/h1&gt;
+
+
+    &lt;!-- buttons for chatrooms --&gt;
+    &lt;div class="chat-rooms mb-3 text-center"&gt;
+      &lt;div class="my-2"&gt;Choose a chatroom:&lt;/div&gt;
+      &lt;button class="btn" id="general"&gt;#general&lt;/button&gt;
+      &lt;button class="btn" id="gaming"&gt;#gaming&lt;/button&gt;
+      &lt;button class="btn" id="music"&gt;#music&lt;/button&gt;
+      &lt;button class="btn" id="ninjas"&gt;#ninjas&lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;!-- chat list / window --&gt;
+    &lt;div class="chat-window"&gt;
+      &lt;ul class="chat-list list-group"&gt;&lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;!-- new chat form --&gt;
+    &lt;form class="new-chat my-3"&gt;
+      &lt;div class="input-group"&gt;
+        &lt;div class="input-group-prepend"&gt;
+          &lt;div class="input-group-text"&gt;Your message:&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;input type="text" id="message" class="form-control" required&gt;
+        &lt;div class="input-group-append"&gt;
+          &lt;input type="submit" class="btn" value="send"&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/form&gt;
+
+    &lt;!-- update name form --&gt;
+    &lt;form class="new-name my-3"&gt;
+      &lt;div class="input-group"&gt;
+        &lt;div class="input-group-prepend"&gt;
+          &lt;div class="input-group-text"&gt;Update name:&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;input type="text" id="name" class="form-control" required&gt;
+        &lt;div class="input-group-append"&gt;
+          &lt;input type="submit" class="btn" value="update"&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="update-mssg"&gt;&lt;/div&gt;
+    &lt;/form&gt;
+    
+  &lt;/div&gt;
+
+  &lt;script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"&gt;&lt;/script&gt;
+  &lt;script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"&gt;&lt;/script&gt;
+  &lt;script&gt;
+    // Initialize Firebase
+    const firebaseConfig = {
+        apiKey: "",
+        authDomain: "",
+        projectId: "",
+        storageBucket: "",
+        messagingSenderId: "",
+        appId: ""
+    };
+    
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+  &lt;/script&gt;
+  &lt;script src="scripts/chat.js"&gt;&lt;/script&gt;
+  &lt;script src="scripts/ui.js"&gt;&lt;/script&gt;
+  &lt;script src="scripts/app.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Chatroom Class &amp; Adding Chats</h3>
+
+
+
+<p>chat.js 從零開始撰寫程式碼，<br>不懂可重複觀看、練習。</p>
+
+
+
+<pre class="wp-block-code"><code>// chat.js
+
+// adding new chat documents
+// setting up a real-time listener to get new chats
+// updating the username
+// updating the room
+
+class Chatroom {
+  constructor(room, username){
+    this.room = room;
+    this.username = username;
+    this.chats = db.collection('chats');
+  }
+  async addChat(message){
+    // format a chat object
+    const now = new Date();
+    const chat = {
+      message,
+      username: this.username,
+      room: this.room,
+      created_at: firebase.firestore.Timestamp.fromDate(now)
+    };
+    // save the chat document
+    const response = await this.chats.add(chat);
+    return response;
+  }
+}
+
+const chatroom = new Chatroom('gaming', 'shaun');
+// console.log(chatroom);
+
+chatroom.addChat('hello everyone')
+  .then(() =&gt; console.log('chat added'))
+  .catch(err =&gt; console.log(err));</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Setting up a Real-time Listener</h3>
+
+
+
+<pre class="wp-block-code"><code>// chat.js
+
+// adding new chat documents
+// setting up a real-time listener to get new chats
+// updating the username
+// updating the room
+
+class Chatroom {
+  constructor(room, username){
+    this.room = room;
+    this.username = username;
+    this.chats = db.collection('chats');
+  }
+  async addChat(message){
+    // format a chat object
+    const now = new Date();
+    const chat = {
+      message,
+      username: this.username,
+      room: this.room,
+      created_at: firebase.firestore.Timestamp.fromDate(now)
+    };
+    // save the chat document
+    const response = await this.chats.add(chat);
+    return response;
+  }
+  getChats(callback){
+    this.chats
+      .onSnapshot(snapshot =&gt; {
+        snapshot.docChanges().forEach(change =&gt; {
+          if(change.type === 'added'){
+            // update the ui
+            callback(change.doc.data());
+          }
+        });
+    });
+  }
+}
+
+const chatroom = new Chatroom('gaming', 'shaun');
+
+chatroom.getChats((data) =&gt; {
+  console.log(data);
+});</code></pre>
+
+
+
+<h4>測試 – 在 Firestore Database 新增文件是否會 console.log 出物件資料</h4>
+
+
+
+<ul><li>新增文件<ul><li>欄位(Field) message、類型(Types) string、值(Value) test</li></ul>
+</li></ul>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Complex Queries</h3>
+
+
+
+<p>不懂可重複觀看、練習。</p>
+
+
+
+<pre class="wp-block-code"><code>// chat.js
+
+// adding new chat documents
+// setting up a real-time listener to get new chats
+// updating the username
+// updating the room
+
+class Chatroom {
+  constructor(room, username){
+    this.room = room;
+    this.username = username;
+    this.chats = db.collection('chats');
+  }
+  async addChat(message){
+    // format a chat object
+    const now = new Date();
+    const chat = {
+      message,
+      username: this.username,
+      room: this.room,
+      created_at: firebase.firestore.Timestamp.fromDate(now)
+    };
+    // save the chat document
+    const response = await this.chats.add(chat);
+    return response;
+  }
+  getChats(callback){
+    this.chats
+      .where('room', '==', this.room)
+      .orderBy('created_at')
+      .onSnapshot(snapshot =&gt; {
+        snapshot.docChanges().forEach(change =&gt; {
+          if(change.type === 'added'){
+            // update the ui
+            callback(change.doc.data());
+          }
+        });
+    });
+  }
+}
+
+const chatroom = new Chatroom('general', 'shaun');
+
+chatroom.getChats((data) =&gt; {
+  console.log(data);
+});</code></pre>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ul>
+<li>在 Firestore Database 移除 test 文件</li>
+<li>在 orderBy(‘created_at) 產生錯誤時 Google Console 有顯示如何建立 index、開啟後按建立</li>
+</ul>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Updating the Room &amp; Username</h3>
+
+
+
+<p>不懂可重複觀看、練習。</p>
+
+
+
+<pre class="wp-block-code"><code>// chat.js
+
+// adding new chat documents
+// setting up a real-time listener to get new chats
+// updating the username
+// updating the room
+
+class Chatroom {
+  constructor(room, username){
+    this.room = room;
+    this.username = username;
+    this.chats = db.collection('chats');
+    this.unsub;
+  }
+  async addChat(message){
+    // format a chat object
+    const now = new Date();
+    const chat = {
+      message,
+      username: this.username,
+      room: this.room,
+      created_at: firebase.firestore.Timestamp.fromDate(now)
+    };
+    // save the chat document
+    const response = await this.chats.add(chat);
+    return response;
+  }
+  getChats(callback){
+    this.unsub = this.chats
+      .where('room', '==', this.room)
+      .orderBy('created_at')
+      .onSnapshot(snapshot =&gt; {
+        snapshot.docChanges().forEach(change =&gt; {
+          if(change.type === 'added'){
+            // update the ui
+            callback(change.doc.data());
+          }
+        });
+    });
+  }
+  updateName(username){
+    this.username = username;
+  }
+  updateRoom(room){
+    this.room = room;
+    console.log('room updated');
+    if(this.undub){
+      this.unsub();
+    }
+  }
+}
+
+const chatroom = new Chatroom('general', 'shaun');
+
+chatroom.getChats((data) =&gt; {
+  console.log(data);
+});
+
+setTimeout(() =&gt; {
+  chatroom.updateRoom('gaming');
+  chatroom.updateName('yoshi');
+  chatroom.getChats((data) =&gt; {
+    console.log(data);
+  });
+  chatroom.addChat('hello');
+}, 3000);</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Creating a ChatUI Class</h3>
+
+
+
+<p>不懂可重複觀看、練習。</p>
+
+
+
+<pre class="wp-block-code"><code>// chat.js
+
+// adding new chat documents
+// setting up a real-time listener to get new chats
+// updating the username
+// updating the room
+
+class Chatroom {
+  constructor(room, username){
+    this.room = room;
+    this.username = username;
+    this.chats = db.collection('chats');
+    this.unsub;
+  }
+  async addChat(message){
+    // format a chat object
+    const now = new Date();
+    const chat = {
+      message,
+      username: this.username,
+      room: this.room,
+      created_at: firebase.firestore.Timestamp.fromDate(now)
+    };
+    // save the chat document
+    const response = await this.chats.add(chat);
+    return response;
+  }
+  getChats(callback){
+    this.unsub = this.chats
+      .where('room', '==', this.room)
+      .orderBy('created_at')
+      .onSnapshot(snapshot =&gt; {
+        snapshot.docChanges().forEach(change =&gt; {
+          if(change.type === 'added'){
+            // update the ui
+            callback(change.doc.data());
+          }
+        });
+    });
+  }
+  updateName(username){
+    this.username = username;
+  }
+  updateRoom(room){
+    this.room = room;
+    console.log('room updated');
+    if(this.undub){
+      this.unsub();
+    }
+  }
+}
+
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// app.js
+
+// dom queries
+const chatList = document.querySelector('.chat-list');
+
+// class instances
+const chatUI = new ChatUI(chatList);
+const chatroom = new Chatroom('general', 'shaun');
+
+// get chats and render
+chatroom.getChats(data =&gt; chatUI.render(data));</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// ui.js
+
+// render chat templates to the DOM
+// clear the list of chats (when the room changes)
+
+class ChatUI {
+  constructor(list){
+    this.list = list;
+  }
+  render(data){
+    const html = `
+      &lt;li class="list-group-item"&gt;
+        &lt;span class="username"&gt;${data.username}&lt;/span&gt;
+        &lt;span class="message"&gt;${data.message}&lt;/span&gt;
+        &lt;div class="time"&gt;${data.created_at.toDate()}&lt;/div&gt;
+      &lt;/li&gt;
+    `;
+
+    this.list.innerHTML += html;
+  }
+}
+</code></pre>
+
+
+
+<h3>Formatting the Dates</h3>
+
+
+
+<h4>GitHub Course</h4>
+
+
+
+<ul>
+<li><a rel="noreferrer noopener" href="https://github.com/iamshaunjp/modern-javascript/blob/lesson-143/chat_project/index.html" target="_blank">課程連結</a></li>
+<li><a href="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.9.0/date_fns.min.js" target="_blank" rel="noreferrer noopener">自己找的 date-fns 1.9.0 cdn</a></li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous"&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+  &lt;title&gt;Ninja Chat&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;!-- container &amp; title --&gt;
+  &lt;div class="container my-4"&gt;
+    &lt;h1 class="my-4 text-center"&gt;Ninja Chat&lt;/h1&gt;
+
+
+    &lt;!-- buttons for chatrooms --&gt;
+    &lt;div class="chat-rooms mb-3 text-center"&gt;
+      &lt;div class="my-2"&gt;Choose a chatroom:&lt;/div&gt;
+      &lt;button class="btn" id="general"&gt;#general&lt;/button&gt;
+      &lt;button class="btn" id="gaming"&gt;#gaming&lt;/button&gt;
+      &lt;button class="btn" id="music"&gt;#music&lt;/button&gt;
+      &lt;button class="btn" id="ninjas"&gt;#ninjas&lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;!-- chat list / window --&gt;
+    &lt;div class="chat-window"&gt;
+      &lt;ul class="chat-list list-group"&gt;&lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;!-- new chat form --&gt;
+    &lt;form class="new-chat my-3"&gt;
+      &lt;div class="input-group"&gt;
+        &lt;div class="input-group-prepend"&gt;
+          &lt;div class="input-group-text"&gt;Your message:&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;input type="text" id="message" class="form-control" required&gt;
+        &lt;div class="input-group-append"&gt;
+          &lt;input type="submit" class="btn" value="send"&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/form&gt;
+
+    &lt;!-- update name form --&gt;
+    &lt;form class="new-name my-3"&gt;
+      &lt;div class="input-group"&gt;
+        &lt;div class="input-group-prepend"&gt;
+          &lt;div class="input-group-text"&gt;Update name:&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;input type="text" id="name" class="form-control" required&gt;
+        &lt;div class="input-group-append"&gt;
+          &lt;input type="submit" class="btn" value="update"&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="update-mssg"&gt;&lt;/div&gt;
+    &lt;/form&gt;
+    
+  &lt;/div&gt;
+
+  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.9.0/date_fns.min.js"&gt;&lt;/script&gt;
+  &lt;script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"&gt;&lt;/script&gt;
+  &lt;script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"&gt;&lt;/script&gt;
+  &lt;script&gt;
+    // Initialize Firebase
+    const firebaseConfig = {
+        apiKey: "",
+        authDomain: "",
+        projectId: "",
+        storageBucket: "",
+        messagingSenderId: "",
+        appId: ""
+    };
+    
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+  &lt;/script&gt;
+  &lt;script src="scripts/chat.js"&gt;&lt;/script&gt;
+  &lt;script src="scripts/ui.js"&gt;&lt;/script&gt;
+  &lt;script src="scripts/app.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// ui.js
+
+// render chat templates to the DOM
+// clear the list of chats (when the room changes)
+
+class ChatUI {
+  constructor(list){
+    this.list = list;
+  }
+  render(data){
+    const when = dateFns.distanceInWordsToNow(
+      data.created_at.toDate(),
+      { addSuffix: true }
+    );
+    const html = `
+      &lt;li class="list-group-item"&gt;
+        &lt;span class="username"&gt;${data.username}&lt;/span&gt;
+        &lt;span class="message"&gt;${data.message}&lt;/span&gt;
+        &lt;div class="time"&gt;${when}&lt;/div&gt;
+      &lt;/li&gt;
+    `;
+
+    this.list.innerHTML += html;
+  }
+}
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// style.css
+
+.container{
+  max-width: 600px;
+}
+.btn{
+  background: #43d9be;
+  color: white;
+  outline: none !important;
+  box-shadow: none !important;
+}
+.btn:focus{
+  outline: none !important;
+}
+.username{
+  font-weight: bold;
+}
+.time{
+  font-size: 0.7em;
+  color: #999;
+}</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Sending New Chats</h3>
+
+
+
+<p>不懂可重複觀看、練習。</p>
+
+
+
+<pre class="wp-block-code"><code>// app.js
+
+// dom queries
+const chatList = document.querySelector('.chat-list');
+const newChatForm = document.querySelector('.new-chat');
+
+// add a new chat
+newChatForm.addEventListener('submit', e =&gt; {
+  e.preventDefault();
+  const message = newChatForm.message.value.trim();
+  chatroom.addChat(message)
+    .then(() =&gt; newChatForm.reset())
+    .catch(err =&gt; console.log(err));
+});
+
+// class instances
+const chatUI = new ChatUI(chatList);
+const chatroom = new Chatroom('general', 'shaun');
+
+// get chats and render
+chatroom.getChats(data =&gt; chatUI.render(data));</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Changing Username &amp; Local Storage</h3>
+
+
+
+<p>重要，不懂可重複觀看、練習。</p>
+
+
+
+<pre class="wp-block-code"><code>// app.js - 1
+
+// dom queries
+const chatList = document.querySelector('.chat-list');
+const newChatForm = document.querySelector('.new-chat');
+const newNameForm = document.querySelector('.new-name');
+const updateMssg = document.querySelector('.update-mssg');
+
+// add a new chat
+newChatForm.addEventListener('submit', e =&gt; {
+  e.preventDefault();
+  const message = newChatForm.message.value.trim();
+  chatroom.addChat(message)
+    .then(() =&gt; newChatForm.reset())
+    .catch(err =&gt; console.log(err));
+});
+
+// update username
+newNameForm.addEventListener('submit', e =&gt; {
+  e.preventDefault();
+  // update name via chatroom
+  const newName = newNameForm.name.value.trim();
+  chatroom.updateName(newName);
+  // reset the form
+  newNameForm.reset();
+  // show then hide the update message
+  updateMssg.innerText = `Your name was updated to ${newName}`;
+  setTimeout(() =&gt; updateMssg.innerText = '', 3000);
+});
+
+// class instances
+const chatUI = new ChatUI(chatList);
+const chatroom = new Chatroom('general', 'shaun');
+
+// get chats and render
+chatroom.getChats(data =&gt; chatUI.render(data));</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// style.css
+
+.container{
+  max-width: 600px;
+}
+.btn{
+  background: #43d9be;
+  color: white;
+  outline: none !important;
+  box-shadow: none !important;
+}
+.btn:focus{
+  outline: none !important;
+}
+.username{
+  font-weight: bold;
+}
+.time{
+  font-size: 0.7em;
+  color: #999;
+}
+.update-mssg{
+  text-align: center;
+  margin: 20px auto;
+}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+&gt;  chatroom
+&lt;  Chatroom&nbsp;{room: 'general', username: 'luigi', chats: t, unsub: ƒ}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// chat.js
+
+// adding new chat documents
+// setting up a real-time listener to get new chats
+// updating the username
+// updating the room
+
+class Chatroom {
+  constructor(room, username){
+    this.room = room;
+    this.username = username;
+    this.chats = db.collection('chats');
+    this.unsub;
+  }
+  async addChat(message){
+    // format a chat object
+    const now = new Date();
+    const chat = {
+      message,
+      username: this.username,
+      room: this.room,
+      created_at: firebase.firestore.Timestamp.fromDate(now)
+    };
+    // save the chat document
+    const response = await this.chats.add(chat);
+    return response;
+  }
+  getChats(callback){
+    this.unsub = this.chats
+      .where('room', '==', this.room)
+      .orderBy('created_at')
+      .onSnapshot(snapshot =&gt; {
+        snapshot.docChanges().forEach(change =&gt; {
+          if(change.type === 'added'){
+            // update the ui
+            callback(change.doc.data());
+          }
+        });
+    });
+  }
+  updateName(username){
+    this.username = username;
+    localStorage.setItem('username', username);
+  }
+  updateRoom(room){
+    this.room = room;
+    console.log('room updated');
+    if(this.undub){
+      this.unsub();
+    }
+  }
+}
+
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// app.js - 2
+
+// dom queries
+const chatList = document.querySelector('.chat-list');
+const newChatForm = document.querySelector('.new-chat');
+const newNameForm = document.querySelector('.new-name');
+const updateMssg = document.querySelector('.update-mssg');
+
+// add a new chat
+newChatForm.addEventListener('submit', e =&gt; {
+  e.preventDefault();
+  const message = newChatForm.message.value.trim();
+  chatroom.addChat(message)
+    .then(() =&gt; newChatForm.reset())
+    .catch(err =&gt; console.log(err));
+});
+
+// update username
+newNameForm.addEventListener('submit', e =&gt; {
+  e.preventDefault();
+  // update name via chatroom
+  const newName = newNameForm.name.value.trim();
+  chatroom.updateName(newName);
+  // reset the form
+  newNameForm.reset();
+  // show then hide the update message
+  updateMssg.innerText = `Your name was updated to ${newName}`;
+  setTimeout(() =&gt; updateMssg.innerText = '', 3000);
+});
+
+// check local storage for a name
+const username = localStorage.username ? localStorage.username : 'anon';
+
+// class instances
+const chatUI = new ChatUI(chatList);
+const chatroom = new Chatroom('general', username);
+
+// get chats and render
+chatroom.getChats(data =&gt; chatUI.render(data));</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - test
+&gt;  chatroom
+&lt;  Chatroom&nbsp;{room: 'general', username: 'anon', chats: t, unsub: ƒ}
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Goolge Console - Update name: luigi
+&gt;  chatroom
+&lt;  Chatroom&nbsp;{room: 'general', username: 'anon', chats: t, unsub: ƒ}
+&gt;  chatroom
+&lt;  Chatroom&nbsp;{room: 'general', username: 'luigi', chats: t, unsub: ƒ}
+&gt;</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Updating the Room</h3>
+
+
+
+<p>不懂可重複觀看、練習。</p>
+
+
+
+<pre class="wp-block-code"><code>// app.js
+
+// dom queries
+const chatList = document.querySelector('.chat-list');
+const newChatForm = document.querySelector('.new-chat');
+const newNameForm = document.querySelector('.new-name');
+const updateMssg = document.querySelector('.update-mssg');
+const rooms = document.querySelector('.chat-rooms');
+
+// add a new chat
+newChatForm.addEventListener('submit', e =&gt; {
+  e.preventDefault();
+  const message = newChatForm.message.value.trim();
+  chatroom.addChat(message)
+    .then(() =&gt; newChatForm.reset())
+    .catch(err =&gt; console.log(err));
+});
+
+// update username
+newNameForm.addEventListener('submit', e =&gt; {
+  e.preventDefault();
+  // update name via chatroom
+  const newName = newNameForm.name.value.trim();
+  chatroom.updateName(newName);
+  // reset the form
+  newNameForm.reset();
+  // show then hide the update message
+  updateMssg.innerText = `Your name was updated to ${newName}`;
+  setTimeout(() =&gt; updateMssg.innerText = '', 3000);
+});
+
+// update the chat room
+rooms.addEventListener('click', e =&gt; {
+  // console.log(e);
+  if(e.target.tagName === 'BUTTON'){
+    chatUI.clear();
+    chatroom.updateRoom(e.target.getAttribute('id'));
+    chatroom.getChats(chat =&gt; chatUI.render(chat));
+  }
+});
+
+// check local storage for a name
+const username = localStorage.username ? localStorage.username : 'anon';
+
+// class instances
+const chatUI = new ChatUI(chatList);
+const chatroom = new Chatroom('general', username);
+
+// get chats and render
+chatroom.getChats(data =&gt; chatUI.render(data));</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// ui.js
+
+// render chat templates to the DOM
+// clear the list of chats (when the room changes)
+
+class ChatUI {
+  constructor(list){
+    this.list = list;
+  }
+  clear(){
+    this.list.innerHTML = '';
+  }
+  render(data){
+    const when = dateFns.distanceInWordsToNow(
+      data.created_at.toDate(),
+      { addSuffix: true }
+    );
+    const html = `
+      &lt;li class="list-group-item"&gt;
+        &lt;span class="username"&gt;${data.username}&lt;/span&gt;
+        &lt;span class="message"&gt;${data.message}&lt;/span&gt;
+        &lt;div class="time"&gt;${when}&lt;/div&gt;
+      &lt;/li&gt;
+    `;
+
+    this.list.innerHTML += html;
+  }
+}
+</code></pre>
+
+
+
+<h3>Testing the App</h3>
+
+
+
+<h4>資源</h4>
+
+
+
+<ul><li><a href="https://www.youtube.com/playlist?list=PL4cUxeGkcC9jUPIes_B8vRjn1_GaplOPQ" target="_blank" rel="noreferrer noopener">Firebase Auth Playlist on The Net Ninja YouTube Channel</a></li></ul>
+
+
+
+<h2>More ES6 Features</h2>
+
+
+
+<h3>Spread &amp; Rest</h3>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous"&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+    &lt;title&gt;Modern JavaScript&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+    &lt;script src="sandbox.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+
+// rest parameter - 其餘參數
+const double = (...nums) =&gt; {
+  console.log(nums);
+  return nums.map(num =&gt; num*2);
+}
+
+const result = double(1,3,5,7,9,2,4,6,8);
+console.log(result);
+
+// spread syntax (arrays) - 展開語法 (陣列)
+
+const people = &#91;'shaun', 'ryu', 'crystal'];
+console.log(...people);
+const members = &#91;'mario', 'chun-li', ...people];
+console.log(members);
+
+// spread syntax (objects) - 展開語法 (物件)
+
+const person = { name: 'shaun', age: 30, job: 'net ninja'};
+const personClone = {...person, location: 'manchester'};
+
+console.log(personClone);</code></pre>
+
+
+
+<h3>Sets</h3>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous"&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+    &lt;title&gt;Modern JavaScript&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+    &lt;script src="sandbox.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+
+// sets
+const namesArray = &#91;'ryu', 'chun-li', 'ryu', 'shaun'];
+console.log(namesArray);
+
+// const namesSet = new Set(&#91;'ryu', 'chun-li', 'ryu', 'shaun']);
+// const namesSet = new Set(namesArray);
+// console.log(namesSet);
+
+// const uniqueNames = &#91;...namesSet];
+const uniqueNames = &#91;...new Set(namesArray)];
+console.log(uniqueNames);
+
+const ages = new Set();
+ages.add(20);
+ages.add(25).add(30);
+ages.add(25);
+ages.delete(25);
+
+console.log(ages, ages.size);
+console.log(ages.has(30), ages.has(25));
+
+ages.clear();
+console.log(ages);
+
+const ninjas = new Set(&#91;
+  {name: 'shaun', age: 30},
+  {name: 'crystal', age: 29},
+  {name: 'chun-li', age: 32}
+]);
+
+ninjas.forEach(ninja =&gt; {
+  console.log(ninja.name, ninja.age);
+});</code></pre>
+
+
+
+<h3>Symbols (符號)</h3>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous"&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+    &lt;title&gt;Modern JavaScript&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+    &lt;script src="sandbox.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+
+const symbolOne = Symbol('a generic name');
+const symbolTwo = Symbol('a generic name');
+
+console.log(symbolOne, symbolTwo, typeof symbolOne);
+console.log(symbolOne === symbolTwo);
+
+const ninja = {};
+
+ninja.age = 30;
+ninja&#91;'belt'] = 'orange';
+ninja&#91;'belt'] = 'black';
+
+ninja&#91;symbolOne] = 'ryu';
+ninja&#91;symbolTwo] = 'shaun';
+
+console.log(ninja);</code></pre>
+	</div>
+<!-- .entry-content -->
+
+	<footer class="entry-footer">
+			</footer><!-- .entry-footer -->
+</article><!-- #post-508 -->
+
+	<nav class="navigation post-navigation" aria-label="文章">
+		<h2 class="screen-reader-text">文章導覽</h2>
+		<div class="nav-links">
+<div class="nav-previous"><a href="/wordpress_blog/modern-javascript-2/" rel="prev"><span class="nav-subtitle">Previous:</span> <span class="nav-title">Modern JavaScript (2)</span></a></div>
+<div class="nav-next"><a href="/wordpress_blog/modern-javascript-4/" rel="next"><span class="nav-subtitle">Next:</span> <span class="nav-title">Modern JavaScript (4)</span></a></div>
+</div>
+	</nav>
+	</main><!-- #main -->
+
+
+	</div></div>
+			
+			<footer id="colophon" class="site-footer">
+
+				
+				<div class="container-fluid">
+					<div class="site-info">
+						<div class="row">
+
+															
+								<div class="col-12 footer-copyright-elements footer-copyright-alignment-center">
+
+									<div class="botiga-credits">&copy; 2022 wordpress_blog. 
+Created by Gee Hsu. 
+<br>Proudly powered by <a rel="nofollow" href="https://athemes.com/theme/botiga/">Botiga</a>
+</div>
+<div class="social-profile">
+<a target="_blank" href="https://www.facebook.com/watergrass0402/"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></i></a><a target="_blank" href="https://github.com/GeeHsu"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></i></a>
+</div>
+								</div>
+														
+						</div>
+					</div>
+				</div>
+<!-- .site-info -->
+
+				
+			</footer><!-- #colophon -->
+
+			
+			<div class="back-to-top visibility-all position-right"><i class="ws-svg-icon"><svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 15l7-7 7 7" stroke-width="3" stroke-linejoin="round"></path></svg></i></div>
+</div>
+<!-- #page -->
+
+
+<script id="botiga-custom-js-extra">
+var botiga = {"ajaxurl":"\/wp-admin\/admin-ajax.php","i18n":{"botiga_sharebox_copy_link":"Copy link","botiga_sharebox_copy_link_copied":"Copied!"}};
+</script>
+<script src="/wordpress_blog/wp-content/themes/botiga/assets/js/custom.min.js?ver=1.1.2" id="botiga-custom-js"></script>
+
+</body>
+</html>

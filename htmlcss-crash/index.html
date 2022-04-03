@@ -1,0 +1,2479 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<title>HTML &#038; CSS Crash Course Tutorial &#8211; wordpress_blog</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="訂閱《wordpress_blog》&raquo; 資訊提供" href="/wordpress_blog/feed/">
+<link rel="alternate" type="application/rss+xml" title="訂閱《wordpress_blog》&raquo; 留言的資訊提供" href="/wordpress_blog/comments/feed/">
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.9.2"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style>img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="/wordpress_blog/wp-includes/css/dist/block-library/style.min.css?ver=5.9.2" media="all">
+<style id="global-styles-inline-css">body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--palette-1-color-0: #212121;--wp--preset--color--palette-1-color-1: #757575;--wp--preset--color--palette-1-color-2: #212121;--wp--preset--color--palette-1-color-3: #212121;--wp--preset--color--palette-1-color-4: #212121;--wp--preset--color--palette-1-color-5: #f5f5f5;--wp--preset--color--palette-1-color-6: #ffffff;--wp--preset--color--palette-1-color-7: #ffffff;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 14px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 18px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--normal: 16px;--wp--preset--font-size--larger: 24px;--wp--preset--font-size--extra-large: 32px;--wp--preset--font-size--huge: 48px;--wp--preset--font-size--gigantic: 64px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}</style>
+<link rel="stylesheet" id="botiga-style-css" href="/wordpress_blog/wp-content/themes/botiga/style.css?ver=1.1.2" media="all">
+<link rel="stylesheet" id="botiga-style-min-css" href="/wordpress_blog/wp-content/themes/botiga/assets/css/styles.min.css?ver=1.1.2" media="all">
+<link rel="stylesheet" id="botiga-custom-styles-css" href="/wordpress_blog/wp-content/uploads/botiga/custom-styles.css?ver=1648804469" media="all">
+<link rel="https://api.w.org/" href="/wordpress_blog/wp-json/">
+<link rel="alternate" type="application/json" href="/wordpress_blog/wp-json/wp/v2/posts/472">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/wordpress_blog/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wordpress_blog/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 5.9.2">
+<link rel="canonical" href="/wordpress_blog/htmlcss-crash/">
+<link rel="shortlink" href="/wordpress_blog/?p=472">
+<link rel="alternate" type="application/json+oembed" href="/wordpress_blog/wp-json/oembed/1.0/embed?url=%2Fhtmlcss-crash%2F">
+<link rel="alternate" type="text/xml+oembed" href="/wordpress_blog/wp-json/oembed/1.0/embed?url=%2Fhtmlcss-crash%2F&#038;format=xml">
+<link rel="icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png" sizes="32x32">
+<link rel="icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png" sizes="192x192">
+<link rel="apple-touch-icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png">
+<meta name="msapplication-TileImage" content="/wp-content/uploads/2022/03/logo.png">
+	
+</head>
+
+<body class="post-template-default single single-post postid-472 single-format-standard wp-custom-logo wp-embed-responsive header-header_layout_1 blog-single-layout1">
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0.49803921568627"></fefuncr><fefuncg type="table" tablevalues="0 0.49803921568627"></fefuncg><fefuncb type="table" tablevalues="0 0.49803921568627"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.54901960784314 0.98823529411765"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.71764705882353 0.25490196078431"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 0.27843137254902"></fefuncg><fefuncb type="table" tablevalues="0.5921568627451 0.27843137254902"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0"></fefuncr><fefuncg type="table" tablevalues="0 0.64705882352941"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.78039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.94901960784314"></fefuncg><fefuncb type="table" tablevalues="0.35294117647059 0.47058823529412"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.65098039215686 0.40392156862745"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.44705882352941 0.4"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.098039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.66274509803922"></fefuncg><fefuncb type="table" tablevalues="0.84705882352941 0.41960784313725"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg>
+
+<div id="page" class="site">
+
+	<a class="skip-link screen-reader-text" href="#primary">Skip to content</a>
+
+	
+			<div class="top-bar visibility-desktop-only">
+				<div class="container-fluid">
+					<div class="top-bar-inner">
+						<div class="row valign">
+
+															<div class="col header-elements delimiter-none">
+									<div class="header-item top-bar-social"><div class="social-profile">
+<a target="_blank" href="https://www.facebook.com/watergrass0402/"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></i></a><a target="_blank" href="https://github.com/GeeHsu"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></i></a>
+</div></div>								</div>
+																						<div class="col header-elements delimiter-none">
+													
+			<nav class="header-item top-bar-secondary-navigation secondary-navigation">
+				<div class="menu-topbar-container"><ul id="secondary" class="menu">
+<li id="menu-item-143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143"><a href="/wordpress_blog/setup/">網站架設</a></li>
+<li id="menu-item-144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a href="/wordpress_blog/source/">資料來源</a></li>
+<li id="menu-item-262" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-262"><a href="/wordpress_blog/resource/">學習資源</a></li>
+</ul></div>			</nav>
+											</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			
+							
+				<header id="masthead" class="site-header header_layout_1">
+					<div class="container-fluid">
+						<div class="site-header-inner">
+							<div class="row valign">
+								<div class="col-md-5">
+										
+			<nav id="site-navigation" class="main-navigation">
+				<div class="menu-navbar-container"><ul id="primary-menu" class="menu">
+<li id="menu-item-109" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="/wordpress_blog/about/">關於</a></li>
+<li id="menu-item-110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-110">
+<a href="/wordpress_blog/learn/">學習</a><span tabindex="0" class="dropdown-symbol"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512.011 512.011"><path d="M505.755 123.592c-8.341-8.341-21.824-8.341-30.165 0L256.005 343.176 36.421 123.592c-8.341-8.341-21.824-8.341-30.165 0s-8.341 21.824 0 30.165l234.667 234.667a21.275 21.275 0 0015.083 6.251 21.275 21.275 0 0015.083-6.251l234.667-234.667c8.34-8.341 8.34-21.824-.001-30.165z"></path></svg></i></span>
+<ul class="sub-menu">
+	<li id="menu-item-140" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-140"><a href="/wordpress_blog/category/hexschool/">六角學院</a></li>
+	<li id="menu-item-141" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-141"><a href="/wordpress_blog/category/ninja/">The Net Ninja</a></li>
+	<li id="menu-item-483" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-483"><a href="/wordpress_blog/category/youtube/">Youtube</a></li>
+</ul>
+</li>
+<li id="menu-item-111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="/wordpress_blog/linestore/">LINE STORE</a></li>
+</ul></div>			</nav><!-- #site-navigation -->
+											</div>
+								<div class="col-md-2">
+												<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+											</div>
+								<div class="col-md-5 header-elements">
+																	</div>							
+							</div>
+						</div>
+					</div>
+								<div class="header-search-form">
+			<form role="search" method="get" class="search-form" action="/">
+	<label class="screen-reader-text" for="search-form-1">Search&hellip;</label>
+	<input type="search" id="search-form-1" class="search-field" value="" name="s" placeholder="Search &hellip;">
+	<button type="submit" class="search-submit" value="Search"><i class="ws-svg-icon"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 100 14.25 7.125 7.125 0 000-14.25zM2.25 10.875a8.625 8.625 0 1117.25 0 8.625 8.625 0 01-17.25 0z"></path><path fill-rule="evenodd" d="M15.913 15.914a.75.75 0 011.06 0l4.557 4.556a.75.75 0 01-1.06 1.06l-4.557-4.556a.75.75 0 010-1.06z"></path></svg></i></button>
+</form>
+			</div>
+			
+									</header>
+
+										<div class="search-overlay"></div>
+			
+			<div class="botiga-offcanvas-menu">
+				<div class="mobile-header-item">
+					<div class="row">
+						<div class="col">
+										<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+									</div>
+						<div class="col align-right">
+							<a class="mobile-menu-close" href="#"><i class="ws-svg-icon icon-cancel"><svg width="16" height="16" fill="none" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.219.781L.78 2.22 9.562 11l-8.78 8.781 1.437 1.438L11 12.437l8.781 8.782 1.438-1.438L12.437 11l8.782-8.781L19.78.78 11 9.562 2.219.783z"></path></svg></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="mobile-header-item">
+						
+			<nav id="site-navigation" class="main-navigation">
+				<div class="menu-navbar-container"><ul id="primary-menu" class="menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="/wordpress_blog/about/">關於</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-110">
+<a href="/wordpress_blog/learn/">學習</a><span tabindex="0" class="dropdown-symbol"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512.011 512.011"><path d="M505.755 123.592c-8.341-8.341-21.824-8.341-30.165 0L256.005 343.176 36.421 123.592c-8.341-8.341-21.824-8.341-30.165 0s-8.341 21.824 0 30.165l234.667 234.667a21.275 21.275 0 0015.083 6.251 21.275 21.275 0 0015.083-6.251l234.667-234.667c8.34-8.341 8.34-21.824-.001-30.165z"></path></svg></i></span>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-140"><a href="/wordpress_blog/category/hexschool/">六角學院</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-141"><a href="/wordpress_blog/category/ninja/">The Net Ninja</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-483"><a href="/wordpress_blog/category/youtube/">Youtube</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="/wordpress_blog/linestore/">LINE STORE</a></li>
+</ul></div>			</nav><!-- #site-navigation -->
+							</div>
+				<div class="mobile-header-item">
+									<a target="&quot;_blank&quot;" class="button header-item" href="https://www.facebook.com/watergrass0402/">聯絡我</a>
+							</div>			
+			</div>
+			
+							<header id="masthead-mobile" class="site-header mobile-header">
+					<div class="container-fluid">
+						<div class="row valign flex-nowrap">
+							<div class="col-sm-6 col-md-4 col-grow-mobile">
+											<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+										</div>
+							<div class="col-auto col-sm-6 col-md-8 col-grow-mobile header-elements valign align-right">
+																	
+															<a href="#" class="menu-toggle">
+				<i class="ws-svg-icon"><svg width="16" height="11" viewbox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="16" height="1"></rect><rect y="5" width="16" height="1"></rect><rect y="10" width="16" height="1"></rect></svg></i>
+			</a>
+																		</div>						
+						</div>
+					</div>
+								<div class="header-search-form">
+			<form role="search" method="get" class="search-form" action="/">
+	<label class="screen-reader-text" for="search-form-2">Search&hellip;</label>
+	<input type="search" id="search-form-2" class="search-field" value="" name="s" placeholder="Search &hellip;">
+	<button type="submit" class="search-submit" value="Search"><i class="ws-svg-icon"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 100 14.25 7.125 7.125 0 000-14.25zM2.25 10.875a8.625 8.625 0 1117.25 0 8.625 8.625 0 01-17.25 0z"></path><path fill-rule="evenodd" d="M15.913 15.914a.75.75 0 011.06 0l4.557 4.556a.75.75 0 01-1.06 1.06l-4.557-4.556a.75.75 0 010-1.06z"></path></svg></i></button>
+</form>
+			</div>
+			
+									</header>
+						<div class="search-overlay"></div>
+			<div class="header-image"><img src="/wordpress_blog/wp-content/uploads/2022/03/seashore.jpg" width="1920" height="500" alt=""></div>
+<div class="container content-wrapper"><div class="row main-row">			
+	<main id="primary" class="site-main no-sidebar">
+
+		
+
+<article id="post-472" class="post-472 post type-post status-publish format-standard hentry category-ninja">
+	
+		
+	<header class="entry-header">
+		
+		
+		<h1 class="entry-title">HTML &#038; CSS Crash Course Tutorial</h1>			<div class="entry-meta entry-meta-below delimiter-none">
+<span class="posted-on"><a href="/wordpress_blog/htmlcss-crash/" rel="bookmark"><time class="entry-date published" datetime="2022-01-09T09:36:00+08:00">2022 年 1 月 9 日</time><time class="updated" datetime="2022-04-02T09:36:53+08:00">2022 年 4 月 2 日</time></a></span><span class="byline"> <span class="author vcard"><a class="url fn n" href="/wordpress_blog/author/gee-hsu/">gee.hsu</a></span></span>
+</div>			</header><!-- .entry-header -->
+
+	
+	<div class="entry-content">
+		
+<h2>#01 – Introduction</h2>
+
+
+
+<p>Hey gang &amp; welcome to your very first HTML &amp; CSS tutorial. Throughout this crash course series I’ll take you from total beginner to create great-looking sites with HTML &amp; CSS. In this video, we’ll cover what HTML &amp; CSS are, as well as setting up our dev environment.</p>
+
+
+
+<h3>HTML &amp; CSS</h3>
+
+
+
+<ul>
+<li>No prior HTML or CSS knowledge is required</li>
+<li>Set up a local development environment</li>
+<li>Use newer, modern HTML5 features &amp; specification</li>
+<li>Learn about responsive &amp; mobile design</li>
+<li>Create a web page project from scratch using HTML &amp; CSS</li>
+</ul>
+
+
+
+<h4>Course Links:</h4>
+
+
+
+<ul><li><a href="https://github.com/iamshaunjp/html-and-css-crash-course" target="_blank" rel="noreferrer noopener">Course files</a></li></ul>
+
+
+
+<h3>What is HTML?</h3>
+
+
+
+<p><strong>H</strong>yper<strong>t</strong>ext&nbsp;<strong>M</strong>arkup&nbsp;<strong>L</strong>anguage (超文本標記語言)</p>
+
+
+
+<ul>
+<li>Used to structure content on a web page (images, text, forms etc)</li>
+<li>We structure content using&nbsp;<strong><em>HTML tags</em></strong>
+</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>&lt;p&gt; content &lt;/p&gt;
+&lt;a&gt; link &lt;/a&gt;
+&lt;img&gt;</code></pre>
+
+
+
+<h3>What is CSS?</h3>
+
+
+
+<p><strong>C</strong>ascading&nbsp;<strong>S</strong>tyle&nbsp;<strong>S</strong>heets (階層式樣式表)</p>
+
+
+
+<ul>
+<li>Works alongside HTML</li>
+<li>Used to style web pages to make them look better<ul><li>Change colours, position, effects, font sizes etc</li></ul>
+</li>
+</ul>
+
+
+
+<h4>程式編輯器</h4>
+
+
+
+<ul>
+<li><a rel="noreferrer noopener" href="https://code.visualstudio.com/" target="_blank">VS Code download</a></li>
+<li>Sublime Text</li>
+<li>Atom</li>
+<li>Notepad++</li>
+</ul>
+
+
+
+<h4>網頁瀏覽器</h4>
+
+
+
+<ul><li><a href="https://www.google.com/intl/zh-TW/chrome/" target="_blank" rel="noreferrer noopener">Google Chrome</a></li></ul>
+
+
+
+<h4>打開資料夾</h4>
+
+
+
+<ul><li>點擊 Open Folder 選擇要開啟的資料夾</li></ul>
+
+
+
+<h4>新增檔案方式</h4>
+
+
+
+<ul>
+<li>右鍵 New File</li>
+<li>左鍵點擊 New File 圖示</li>
+</ul>
+
+
+
+<p>檔案命名為 index.html。</p>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Learning HTML&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    
+    &lt;p&gt;hello, world&lt;/p&gt;
+    &lt;p&gt;my first web page!&lt;/p&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<h4>Extensioins</h4>
+
+
+
+<ul>
+<li>安裝 Live Server</li>
+<li>在 index.html 檔案中右鍵 Open with Live Server</li>
+</ul>
+
+
+
+<h4>在瀏覽器檢視程式碼</h4>
+
+
+
+<ul><li>在網頁畫面中點擊右鍵檢查(Inspect)</li></ul>
+
+
+
+<h3>Summary</h3>
+
+
+
+<ul>
+<li>HTML is markup language to structure content</li>
+<li>CSS is the language used to style web pages</li>
+<li>How to create HTML file using VS Code as our editor</li>
+<li>Seen what HTML tags are and how we use them</li>
+<li>Know that the visible part of a web page goes in the &lt;body&gt; tag</li>
+<li>Seen how to preview the HTML page in a browser</li>
+</ul>
+
+
+
+<h2>#02 – HTML Basics</h2>
+
+
+
+<p>In this HTML tutorial I’ll show you the basics of HTML syntaxt and how to construct HTML tags &amp; documents.</p>
+
+
+
+<h4>HTML Tags</h4>
+
+
+
+<ul>
+<li>&lt;strong&gt;</li>
+<li>&lt;em&gt;</li>
+<li>&lt;small&gt;</li>
+<li>&lt;h1&gt;~ &lt;h6&gt;</li>
+<li>&lt;ul&gt;、&lt;li&gt;</li>
+<li>&lt;ol&gt;、&lt;li&gt;</li>
+<li>&lt;div&gt;</li>
+<li>&lt;span&gt;</li>
+<li>&lt;br&gt;</li>
+<li>&lt;hr&gt;</li>
+<li>&lt;img&gt;</li>
+<li>&lt;a&gt;</li>
+<li>&lt;blockquote&gt;</li>
+<li>&lt;!–&gt;</li>
+</ul>
+
+
+
+<h4>快捷鍵</h4>
+
+
+
+<ul>
+<li>Emmet abbreviation：HTML Tags + tab</li>
+<li>註釋：Ctrl + /</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Learning HTML&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    
+    &lt;div&gt;
+      &lt;p&gt;hello, &lt;strong&gt;world&lt;/strong&gt;&lt;/p&gt;
+      &lt;p&gt;my &lt;small&gt;first&lt;/small&gt; web &lt;em&gt;page!&lt;/em&gt;&lt;/p&gt;
+      &lt;a href="https://www.thenetninja.co.uk"&gt;the net ninja website&lt;/a&gt;
+      &lt;a href="about.html"&gt;about page&lt;/a&gt;
+    &lt;/div&gt;
+
+    &lt;div&gt;
+      &lt;h1&gt;heading 1&lt;/h1&gt;
+      &lt;h2&gt;heading 2&lt;/h2&gt;
+      &lt;h3&gt;heading 3&lt;/h3&gt;
+      &lt;h4&gt;heading 4&lt;/h4&gt;
+    &lt;/div&gt;
+
+    &lt;div&gt;
+      &lt;ul&gt;
+        &lt;li&gt;yoshi&lt;/li&gt;
+        &lt;li&gt;luigi&lt;/li&gt;
+        &lt;li&gt;toad&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;div&gt;
+      &lt;ol&gt;
+        &lt;li&gt;yoshi&lt;/li&gt;
+        &lt;li&gt;luigi&lt;/li&gt;
+        &lt;li&gt;toad&lt;/li&gt;
+      &lt;/ol&gt;
+    &lt;/div&gt;
+
+    &lt;!-- span tag below --&gt;
+    &lt;span&gt;I am a &lt;br&gt;span tag&lt;/span&gt;
+    
+    &lt;hr&gt;
+
+    &lt;img src="img/ninja.png" alt="a picture of a ninja"&gt;
+
+    &lt;blockquote cite="http://www.oscarwildesite.com"&gt;
+      we are all in the gutter, but some of us are looking at the stars
+    &lt;/blockquote&gt;
+
+    &lt;p style="color: orange;"&gt;style me :)&lt;/p&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// about.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Learning HTML&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    
+    &lt;h1&gt;about us&lt;/h1&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<h3>Summary</h3>
+
+
+
+<ul>
+<li>Learnt some of the most common HTML tags in web pages<ul><li>p, ul, li, div, a, img, etc</li></ul>
+</li>
+<li>Talked about attributes (src, href, cite ,alt etc)</li>
+<li>How to create comments in an HTML file</li>
+</ul>
+
+
+
+<h2>#03 – HTML Forms</h2>
+
+
+
+<p>In this HTML tutorial I’ll explain how to create forms in HTML, (using some newer HTML 5 input fields too). We’ll look at email fields, text fields, password fields and more.</p>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;HTML Forms&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    
+    &lt;h1&gt;HTML Forms&lt;/h1&gt;
+
+    &lt;form action=""&gt;
+      &lt;label for="username"&gt;enter username:&lt;/label&gt;
+      &lt;input type="text" id="username" name="username" placeholder="username" required&gt;
+      &lt;br&gt;&lt;br&gt;
+      &lt;label for="email"&gt;enter email:&lt;/label&gt;
+      &lt;input type="email" id="email" name="email" placeholder="your email" required&gt;
+      &lt;br&gt;&lt;br&gt;
+      &lt;label for="password"&gt;password:&lt;/label&gt;
+      &lt;input type="password" id="password" name="password" placeholder="choose a password" required&gt;
+
+      &lt;p&gt;Select your age:&lt;/p&gt;
+
+      &lt;input type="radio" name="age" value="0-25" id="option-1"&gt;
+      &lt;label for="option-1"&gt;0-25&lt;/label&gt;
+      &lt;input type="radio" name="age" value="26-50" id="option-2"&gt;
+      &lt;label for="option-2"&gt;26-50&lt;/label&gt;
+      &lt;input type="radio" name="age" value="51+" id="option-3"&gt;
+      &lt;label for="option-3"&gt;51+&lt;/label&gt;
+
+      &lt;br&gt;&lt;br&gt;
+
+      &lt;label for="question"&gt;Security question:&lt;/label&gt;
+      &lt;select name="question" id="question"&gt;
+        &lt;option value="q1"&gt;What colour are your favourite pair of socks?&lt;/option&gt;
+        &lt;option value="q2"&gt;If you could be a vegetable, what it be?&lt;/option&gt;
+        &lt;option value="q3"&gt;What is your best ever security question?&lt;/option&gt;
+      &lt;/select&gt;
+
+      &lt;br&gt;&lt;br&gt;
+
+      &lt;label for="answer"&gt;Security question answer:&lt;/label&gt;
+      &lt;input type="text" id="answer" name="answer"&gt;
+
+      &lt;br&gt;&lt;br&gt;
+
+      &lt;label for="bio"&gt;Your bio:&lt;/label&gt;&lt;br&gt;
+      &lt;textarea name="bio" id="bio" cols="30" rows="10" placeholder="about your..."&gt;&lt;/textarea&gt;
+
+      &lt;br&gt;&lt;br&gt;
+
+      &lt;input type="submit" value="submit the form"&gt;
+
+    &lt;/form&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<h4>快捷鍵</h4>
+
+
+
+<ul><li>多處程式碼一次輸入：alt + 滑鼠左鍵</li></ul>
+
+
+
+<h4>補充文件</h4>
+
+
+
+<ul><li><a href="https://www.w3schools.com/html/html_form_input_types.asp" target="_blank" rel="noreferrer noopener">HTML Input Types</a></li></ul>
+
+
+
+<h3>Summary</h3>
+
+
+
+<ul>
+<li>How to create a web form and what the ‘action’ attribute is for</li>
+<li>Seen a lot of the most common input types<ul><li>text, email, password, radio, select, textarea</li></ul>
+</li>
+<li>How to use labels, the id attribute &amp; the name attribute</li>
+<li>How forms are submitted and validated</li>
+</ul>
+
+
+
+<h2>#04 – CSS Basics</h2>
+
+
+
+<p>In this CSS tutorial for beginners we’ll have a look at the basic syntax of CSS and how we can use it to make our web pages look better.</p>
+
+
+
+<h3>CSS (Style Sheets)</h3>
+
+
+
+<p><strong>style sheet</strong>&nbsp;– a list of CSS rules / rule sets</p>
+
+
+
+<pre class="wp-block-code"><code>// 範例程式碼
+div {
+  color: red;
+  margin: 20px;
+}
+
+p {
+  font-weight: bold;
+}</code></pre>
+
+
+
+<h4>selectors (選擇器)</h4>
+
+
+
+<ul>
+<li>div</li>
+<li>p</li>
+</ul>
+
+
+
+<h4>declarations (宣告)</h4>
+
+
+
+<ul>
+<li>color: red;</li>
+<li>margin: 20px;</li>
+<li>font-weight: bold;</li>
+</ul>
+
+
+
+<p><a href="https://developer.mozilla.org/zh-TW/docs/Learn/Getting_started_with_the_web/CSS_basics" target="_blank" rel="noreferrer noopener">CSS 基本 – MDN文件</a></p>
+
+
+
+<pre class="wp-block-code"><code>// index.html - 1
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;CSS Basics&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    
+    &lt;h1&gt;CSS Basics&lt;/h1&gt;
+
+    &lt;p&gt;Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit aliquid obcaecati neque sunt beatae quis saepe asperiores ea nobis dolorem. Unde quis nobis facere iure, veritatis placeat iusto ratione facilis!&lt;/p&gt;
+    
+    &lt;div&gt;
+      &lt;h2&gt;Ninja available for hire&lt;/h2&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit id labore, similique quod hic reprehenderit delectus quaerat reiciendis maiores pariatur, nam cum harum non aliquam, vel cumque quae! Quisquam, architecto.&lt;/p&gt;
+      &lt;ul&gt;
+        &lt;li&gt;Ninja Yoshi&lt;/li&gt;
+        &lt;li&gt;Ninja Mario&lt;/li&gt;
+        &lt;li&gt;Ninja Shaun&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// about.html - 1
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;CSS Basics&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;About me&lt;/h1&gt;
+
+    &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed necessitatibus fugit ducimus hic qui eligendi repellat debitis rem molestias reiciendis, quos commodi possimus voluptatum provident natus, ipsam veritatis tenetur doloribus.&lt;/p&gt;
+    
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.html - 2
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      h1 {
+        color: orange;
+      }
+      p {
+        color: slategray;
+      }
+    &lt;/style&gt;
+    &lt;title&gt;CSS Basics&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    
+    &lt;h1&gt;CSS Basics&lt;/h1&gt;
+
+    &lt;p&gt;Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit aliquid obcaecati neque sunt beatae quis saepe asperiores ea nobis dolorem. Unde quis nobis facere iure, veritatis placeat iusto ratione facilis!&lt;/p&gt;
+    
+    &lt;div&gt;
+      &lt;h2&gt;Ninja available for hire&lt;/h2&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit id labore, similique quod hic reprehenderit delectus quaerat reiciendis maiores pariatur, nam cum harum non aliquam, vel cumque quae! Quisquam, architecto.&lt;/p&gt;
+      &lt;ul&gt;
+        &lt;li&gt;Ninja Yoshi&lt;/li&gt;
+        &lt;li&gt;Ninja Mario&lt;/li&gt;
+        &lt;li&gt;Ninja Shaun&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// about.html - 2
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      h1{
+        color: orange;
+      }
+      p{
+        color: slategray;
+      }
+    &lt;/style&gt;
+    &lt;title&gt;CSS Basics&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;About me&lt;/h1&gt;
+
+    &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed necessitatibus fugit ducimus hic qui eligendi repellat debitis rem molestias reiciendis, quos commodi possimus voluptatum provident natus, ipsam veritatis tenetur doloribus.&lt;/p&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.html - 3
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+    &lt;title&gt;CSS Basics&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    
+    &lt;h1&gt;CSS Basics&lt;/h1&gt;
+
+    &lt;p&gt;Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit aliquid obcaecati neque sunt beatae quis saepe asperiores ea nobis dolorem. Unde quis nobis facere iure, veritatis placeat iusto ratione facilis!&lt;/p&gt;
+    
+    &lt;div&gt;
+      &lt;h2&gt;Ninja available for hire&lt;/h2&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit id labore, similique quod hic reprehenderit delectus quaerat reiciendis maiores pariatur, nam cum harum non aliquam, vel cumque quae! Quisquam, architecto.&lt;/p&gt;
+      &lt;ul&gt;
+        &lt;li&gt;Ninja Yoshi&lt;/li&gt;
+        &lt;li&gt;Ninja Mario&lt;/li&gt;
+        &lt;li&gt;Ninja Shaun&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// style.css - 3
+
+h1 {
+  color: orange;
+
+  background-color: slategray;
+  font-size: 20px;
+  text-decoration: underline;
+  font-family: arial;
+  text-align: center;
+}
+p {
+  color: slategray;
+}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// about.html - 3
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+    &lt;title&gt;CSS Basics&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;About me&lt;/h1&gt;
+
+    &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed necessitatibus fugit ducimus hic qui eligendi repellat debitis rem molestias reiciendis, quos commodi possimus voluptatum provident natus, ipsam veritatis tenetur doloribus.&lt;/p&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<h4>text-decoration</h4>
+
+
+
+<ul>
+<li>line-through</li>
+<li>underline</li>
+<li>none</li>
+</ul>
+
+
+
+<h4>CSS Web Safe Fonts</h4>
+
+
+
+<ul><li><a href="https://www.w3schools.com/cssref/css_websafe_fonts.asp" target="_blank" rel="noreferrer noopener">Web safe fonts</a></li></ul>
+
+
+
+<h4>text-align</h4>
+
+
+
+<ul>
+<li>left</li>
+<li>right</li>
+<li>center</li>
+</ul>
+
+
+
+<h4>light-height</h4>
+
+
+
+<ul><li>30px</li></ul>
+
+
+
+<h4>letter-spacing</h4>
+
+
+
+<ul><li>3px</li></ul>
+
+
+
+<h4>column-count</h4>
+
+
+
+<ul><li>3</li></ul>
+
+
+
+<h4>column-gap</h4>
+
+
+
+<ul><li>60px</li></ul>
+
+
+
+<h4>border</h4>
+
+
+
+<ul>
+<li>border-width: 4px;</li>
+<li>border-style: solid;</li>
+<li>border-color: crimson;</li>
+<li>border: 4px solid crimson;</li>
+</ul>
+
+
+
+<ul>
+<li>border-left</li>
+<li>border-top</li>
+<li>border-right</li>
+<li>border-bottom</li>
+</ul>
+
+
+
+<ul>
+<li>solid</li>
+<li>dashed</li>
+<li>dotted</li>
+</ul>
+
+
+
+<h4>comment</h4>
+
+
+
+<ul><li>/* */</li></ul>
+
+
+
+<h4>list-style-type</h4>
+
+
+
+<ul>
+<li>disc</li>
+<li>square</li>
+<li>none</li>
+</ul>
+
+
+
+<h4>text-shadow</h4>
+
+
+
+<ul><li>2px 2px lightgray;</li></ul>
+
+
+
+<pre class="wp-block-code"><code>// style.css - 4
+
+h1 {
+  color: orange;
+  background-color: slategray;
+  font-size: 20px;
+  text-decoration: underline;
+  font-family: arial;
+  text-align: center;
+}
+p {
+  color: slategray;
+  text-align: right;
+  line-height: 30px;
+  letter-spacing: 3px;
+  column-count: 3;
+  column-gap: 60px;
+}
+ul {
+  /* border-width: 4px;
+  border-style: solid;
+  border-color: crimson; */
+  /* border: 4px solid crimson; */
+  border-bottom: 4px solid crimson;
+  border-left: 8px dashed crimson;
+}
+li {
+  list-style-type: disc;
+  text-shadow: 2px 2px lightgray;
+}</code></pre>
+
+
+
+<h3>Colours / Hex Codes</h3>
+
+
+
+<ul>
+<li>white、black、yellow、green</li>
+<li>#42f4f1、#ab55ef</li>
+</ul>
+
+
+
+<h4>#42f4f1</h4>
+
+
+
+<ul>
+<li>42 – R</li>
+<li>f4 – G</li>
+<li>f1 – B</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// style.css - 5
+
+h1 {
+  color: orange;
+  background-color: slategray;
+  font-size: 20px;
+  text-decoration: underline;
+  font-family: arial;
+  text-align: center;
+}
+p {
+  color: slategray;
+  text-align: right;
+  line-height: 30px;
+  letter-spacing: 3px;
+  column-count: 3;
+  column-gap: 60px;
+}
+ul {
+  /* border-width: 4px;
+  border-style: solid;
+  border-color: crimson; */
+  /* border: 4px solid crimson; */
+  border-bottom: 4px solid crimson;
+  border-left: 8px dashed #25bb2d;
+}
+li {
+  list-style-type: disc;
+  /* text-shadow: 2px 2px lightgray; */
+  text-shadow: 2px 2px #e9e9e9;
+}</code></pre>
+
+
+
+<h3>Inline Elements</h3>
+
+
+
+<ul>
+<li>Don’t take up any more room than their content needs</li>
+<li>span, img, strong, em, a and more…</li>
+</ul>
+
+
+
+<h3>Block-level Elements</h3>
+
+
+
+<ul>
+<li>Take up the whole width of a page regardless of content</li>
+<li>p, div, h1, h2, h3, ul, li and more…</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+    &lt;title&gt;CSS Basics&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    
+    &lt;h2&gt;Inline elements&lt;/h2&gt;
+    
+    &lt;span&gt;span tag&lt;/span&gt;
+    &lt;em&gt;em tag&lt;/em&gt;
+    &lt;a href=""&gt;anchor tag&lt;/a&gt;
+    &lt;span&gt;span tag&lt;/span&gt;
+
+    &lt;h2&gt;Block-level elements&lt;/h2&gt;
+
+    &lt;div&gt;div tag&lt;/div&gt;
+    &lt;div&gt;another div tag&lt;/div&gt;
+    &lt;h3&gt;h3 tag&lt;/h3&gt;
+    &lt;p&gt;paragraph tag&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;li tag&lt;/li&gt;
+      &lt;li&gt;another li tag&lt;/li&gt;
+    &lt;/ul&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<h4>Inline、Block-level elements 區分</h4>
+
+
+
+<ul>
+<li>使用 Google Elements 查看元素</li>
+<li>透過 Google Styles 查看是否有 display: block;</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+    &lt;title&gt;CSS Basics&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    
+    &lt;h2&gt;Inline elements&lt;/h2&gt;
+    
+    &lt;span&gt;span tag&lt;/span&gt;
+    &lt;em&gt;em tag&lt;/em&gt;
+    &lt;a href=""&gt;anchor tag&lt;/a&gt;
+    &lt;span&gt;span tag&lt;/span&gt;
+
+    &lt;h2&gt;Block-level elements&lt;/h2&gt;
+
+    &lt;div&gt;div tag&lt;/div&gt;
+    &lt;div&gt;another div tag&lt;/div&gt;
+    &lt;h3&gt;h3 tag&lt;/h3&gt;
+    &lt;p&gt;paragraph tag&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;li tag&lt;/li&gt;
+      &lt;li&gt;another li tag&lt;/li&gt;
+    &lt;/ul&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// style.css - Inline、Block-level elements 修改
+
+span {
+  display: block;
+}
+div {
+  display: inline;
+}</code></pre>
+
+
+
+<h3>Margin &amp; Padding</h3>
+
+
+
+<figure class="wp-block-gallery has-nested-images columns-1 is-cropped">
+<figure class="wp-block-image size-large"><img width="1494" height="679" data-id="474" src="/wordpress_blog/wp-content/uploads/2022/04/div-marinpadding.jpg" alt="" class="wp-image-474"><figcaption>div &#8211; margin &amp; padding</figcaption></figure>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" width="952" height="496" data-id="475" src="/wordpress_blog/wp-content/uploads/2022/04/span-marginpadding.jpg" alt="" class="wp-image-475"><figcaption>span &#8211; margin &amp; padding</figcaption></figure>
+</figure>
+
+
+
+<ul>
+<li>span – margin 只能左右增加空間。</li>
+<li>margin collapse – 邊界重疊</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+    &lt;title&gt;CSS Basics&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    
+    &lt;h2&gt;Inline elements&lt;/h2&gt;
+    
+    &lt;span&gt;span tag&lt;/span&gt;
+    &lt;em&gt;em tag&lt;/em&gt;
+    &lt;a href=""&gt;anchor tag&lt;/a&gt;
+    &lt;span&gt;span tag&lt;/span&gt;
+
+    &lt;h2&gt;Block-level elements&lt;/h2&gt;
+
+    &lt;div&gt;div tag&lt;/div&gt;
+    &lt;div&gt;another div tag&lt;/div&gt;
+    &lt;h3&gt;h3 tag&lt;/h3&gt;
+    &lt;p&gt;paragraph tag&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;li tag&lt;/li&gt;
+      &lt;li&gt;another li tag&lt;/li&gt;
+    &lt;/ul&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// style.css - 1
+
+span {
+  /* display: block; */
+  margin: 20px;
+  padding: 20px;
+}
+div {
+  /* display: inline; */
+  border: 2px solid crimson;
+  margin: 20px;
+  padding: 20px;
+}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// style.css - 2
+
+span {
+  display: block;
+  margin: 20px;
+  padding: 20px;
+}
+div {
+  /* display: inline; */
+  border: 2px solid crimson;
+  margin: 20px;
+  padding: 20px;
+}</code></pre>
+
+
+
+<h4>Default Browser Styles (瀏覽器預設樣式)</h4>
+
+
+
+<h3>Summary</h3>
+
+
+
+<ul>
+<li>What CSS is and how to add it to a webpage</li>
+<li>Basic selectors and some different declarations / properties</li>
+<li>Hex codes and the VS Code colour picker</li>
+<li>Inline and Block-level elements (and inline-block)</li>
+<li>Margin &amp; Padding</li>
+<li>Default browser styles</li>
+</ul>
+
+
+
+<h2>#05 – CSS Classes &amp; Selectors</h2>
+
+
+
+<h4>ID</h4>
+
+
+
+<ul>
+<li>一個頁面每個 id 名稱只能有一個</li>
+<li>絕大部分我們只會使用在 JavaScript</li>
+</ul>
+
+
+
+<h4>a[href]</h4>
+
+
+
+<ul>
+<li>a[href=”https://www.google.com”]</li>
+<li>a[href*=”google”]</li>
+<li>a[href$=”.com”]</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+    &lt;title&gt;CSS Basics&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    
+    &lt;div id="content"&gt;
+
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio quae eos quaerat a assumenda nesciunt dolorum necessitatibus ea tenetur accusantium vel aspernatur maxime ipsa, rem, reprehenderit excepturi, veritatis eligendi laudantium.&lt;/p&gt;
+
+      &lt;p class="error"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, eius ullam corrupti nam modi nemo, necessitatibus officia laboriosam quaerat explicabo provident, temporibus nobis aperiam ipsam sequi accusamus iusto? Ut, exercitationem.&lt;/p&gt;
+
+      &lt;p class="success"&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos non culpa tempore. Voluptatum maxime, et doloribus repellat cupiditate ipsum, consectetur qui iure quod obcaecati, inventore voluptatem fuga! Tempora, similique velit?&lt;/p&gt;
+
+      &lt;p class="success feedback"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim cum harum et, vitae reprehenderit iure error, amet eius facere ullam odio porro! In deleniti expedita nisi tempora temporibus illum rerum.&lt;/p&gt;
+
+    &lt;/div&gt;
+
+    &lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas, voluptatum nemo, quae molestias expedita saepe dicta velit iste esse temporibus, ex labore perferendis ratione eos. Et blanditiis eius fugiat suscipit.&lt;/p&gt;
+
+    &lt;div class="error"&gt;I am an error&lt;/div&gt;
+
+    &lt;a href="https://www.thenetninja.co.uk"&gt;the best site on the web&lt;/a&gt;
+    &lt;a href="https://www.google.com"&gt;Google Website&lt;/a&gt;
+    &lt;a href="https://www.thenetninja.co.uk"&gt;the best site on the web&lt;/a&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// style.css
+
+/* p.error {
+  color: red;
+}
+p.success {
+  color: #4fdb4f;
+}
+p.success.feedback {
+  border: 1px dashed #4fdb4f;
+}
+#content {
+  background-color: #ebebeb;
+  padding: 20px;
+} */
+
+/* div .error{
+  color: red;
+} */
+
+a&#91;href*="thenetninja"]{
+  background-color: #3dd13d;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+a&#91;href$=".com"]{
+  color: white;
+  background: red;
+  border: 2px solid blue;
+}</code></pre>
+
+
+
+<h3>The Cascade</h3>
+
+
+
+<h3>Inheritance(繼承)</h3>
+
+
+
+<ul><li>HTML elements can inherit CSS properties that are applied to their parents</li></ul>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+    &lt;title&gt;CSS Basics&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    
+    &lt;div id="content"&gt;
+      ninja
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio quae eos quaerat a assumenda nesciunt dolorum necessitatibus ea tenetur accusantium vel aspernatur maxime ipsa, rem, reprehenderit excepturi, veritatis eligendi laudantium.&lt;/p&gt;
+
+      &lt;p class="error"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, eius ullam corrupti nam modi nemo, necessitatibus officia laboriosam quaerat explicabo provident, temporibus nobis aperiam ipsam sequi accusamus iusto? Ut, exercitationem.&lt;/p&gt;
+
+      &lt;p class="success"&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos non culpa tempore. Voluptatum maxime, et doloribus repellat cupiditate ipsum, consectetur qui iure quod obcaecati, inventore voluptatem fuga! Tempora, similique velit?&lt;/p&gt;
+
+      &lt;p class="success feedback"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim cum harum et, vitae reprehenderit iure error, amet eius facere ullam odio porro! In deleniti expedita nisi tempora temporibus illum rerum.&lt;/p&gt;
+
+    &lt;/div&gt;
+
+    &lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas, voluptatum nemo, quae molestias expedita saepe dicta velit iste esse temporibus, ex labore perferendis ratione eos. Et blanditiis eius fugiat suscipit.&lt;/p&gt;
+
+    &lt;div class="error"&gt;I am an error&lt;/div&gt;
+
+    &lt;a href="https://www.thenetninja.co.uk"&gt;the best site on the web&lt;/a&gt;
+    &lt;a href="https://www.google.com"&gt;Google Website&lt;/a&gt;
+    &lt;a href="https://www.thenetninja.co.uk"&gt;the best site on the web&lt;/a&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// style.css
+
+/* p.error {
+  color: red;
+}
+p.success {
+  color: #4fdb4f;
+}
+p.success.feedback {
+  border: 1px dashed #4fdb4f;
+}
+#content {
+  background-color: #ebebeb;
+  padding: 20px;
+} */
+
+/* div .error{
+  color: red;
+} */
+
+/* a&#91;href*="thenetninja"]{
+  background-color: #3dd13d;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+a&#91;href$=".com"]{
+  color: white;
+  background: red;
+  border: 2px solid blue;
+} */
+
+div{
+  color: lightcoral;
+  border: 1px solid gray;
+  margin: 40px;
+  font-weight: bold;
+}
+div p{
+  border: inherit;
+  margin: inherit;
+  color: crimson;
+}
+p{
+  color: orange;
+}</code></pre>
+
+
+
+<ul><li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade" target="_blank" rel="noreferrer noopener">More about the cascade</a></li></ul>
+
+
+
+<h2 class="has-background" style="background-color:#ff6663">#06 – HTML 5 Semantics</h2>
+
+
+
+<p>In this HTML &amp; CSS tutorial for beginners we’ll take a look at some of the newer HTML semantic tags, like section, article, header, nav and aside.</p>
+
+
+
+<ul>
+<li><a rel="noreferrer noopener" href="https://www.w3schools.com/html/html5_semantic_elements.asp" target="_blank">HTML 5 Semantic tags, more information</a></li>
+<li><a href="https://github.com/iamshaunjp/html-and-css-crash-course" target="_blank" rel="noreferrer noopener">Course files</a></li>
+</ul>
+
+
+
+<h3>HTML5 Semantic Tags</h3>
+
+
+
+<pre class="wp-block-code"><code>&lt;article&gt;
+  &lt;p&gt;some content&lt;/p&gt;
+  &lt;p&gt;some more content&lt;/p&gt;
+&lt;/article&gt;</code></pre>
+
+
+
+<ul>
+<li>&lt;main&gt;<br>For the main content of a webpage, unique to that page</li>
+<li>&lt;section&gt;<br>Defines a certain section of a webpage (e.g. blog list, contact info)</li>
+<li>&lt;article&gt;<br>Defines a bit of content which makes up an article (e.g. a blog post)</li>
+<li>&lt;aside&gt;<br>Defines some content related to something else (e.g. similar blogs)</li>
+<li>&lt;header&gt;<br>For the header of a website – contains the nav, title etc</li>
+<li>&lt;footer&gt;<br>For the footer of a website</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+  &lt;title&gt;Marioclub&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  
+  &lt;header&gt;
+    &lt;h1&gt;Marioclub&lt;/h1&gt;
+  &lt;/header&gt;
+  &lt;section class="banner"&gt;
+    &lt;img src="img/banner.png" alt="marioclub welcome banner"&gt;
+    &lt;div class="welcome"&gt;
+      &lt;h2&gt;Welcome to &lt;br&gt;&lt;span&gt;Marioclub&lt;/span&gt;&lt;/h2&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+  &lt;nav class="main-nav"&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="/join.html" class="join"&gt;Join the club&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="/news.html"&gt;Latest news&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="/games.html"&gt;New games&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="/contact.html"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+  &lt;main&gt;
+    &lt;article&gt;
+      &lt;h2&gt;It's a me, Mario&lt;/h2&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident modi vitae voluptatibus nulla fugiat nihil ut! Natus, repellendus asperiores veritatis non assumenda hic veniam aperiam vitae doloribus eius fugit magni?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sunt voluptates ullam, neque vitae aperiam! Corporis odio exercitationem iure fugiat cum. A obcaecati molestias officiis aperiam ad velit dolor non?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum modi quas iste accusantium dolorem a! Sit tenetur, assumenda illo facilis culpa dolore dolores molestiae amet possimus autem nobis quasi recusandae.&lt;/p&gt;
+    &lt;/article&gt;
+    &lt;ul class="images"&gt;
+      &lt;li&gt;&lt;img src="img/thumb-1.png" alt="mario thumb 1"&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;img src="img/thumb-2.png" alt="mario thumb 2"&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/main&gt;
+  &lt;section class="join"&gt;
+    &lt;h2&gt;Join Today!&lt;/h2&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda itaque deleniti maxime nesciunt quod recusandae dolorem, aperiam quis enim&lt;/p&gt;
+    &lt;form&gt;
+      &lt;input type="email" name="email" placeholder="Type email &amp; hit enter" required&gt;
+    &lt;/form&gt;
+  &lt;/section&gt;
+  &lt;footer&gt;
+    &lt;p class="copyright"&gt;Copyright 2019 Marioclub&lt;/p&gt;
+  &lt;/footer&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<h2>#07 – Chrome Dev Tools</h2>
+
+
+
+<p>In this HTML &amp; CSS tutorial for beginners I’ll go through what Google Chrome dev tools are – and how they can help us when creating websites. We’ll look at inspecting elements, getting CSS selectors, editing attributes &amp; CSS rules on the fly and also importing project folders into Chrome for live coding.</p>
+
+
+
+<h4>打開 Chrome Dev Tools</h4>
+
+
+
+<ul>
+<li>滑鼠右鍵、檢查</li>
+<li>直接按 F12</li>
+</ul>
+
+
+
+<h4>講解 Chrome Dev Tools 功能</h4>
+
+
+
+<ul>
+<li>Chrome Elements<ul><li>Elements</li></ul>
+<ul>
+<li>Copy → Copy Selector</li>
+<li>Edit as HTML</li>
+<li>Scroll into view</li>
+<li>Hide element</li>
+<li>Delete element</li>
+<li>Add attribute</li>
+<li>Styles</li>
+<li>Select an element in the page to inspect it</li>
+</ul>
+</li>
+<li>Chrome Sources<ul>
+<li>Page</li>
+<li>Filesystem</li>
+</ul>
+</li>
+<li>Chrome Console</li>
+<li>Toggle device toolbar</li>
+</ul>
+
+
+
+<h2 class="has-background" style="background-color:#ff6663">#08 – CSS Layout &amp; Position</h2>
+
+
+
+<p>In this HTML &amp; CSS Tutorial we’ll look at how to layout our content on the page. We’ll do this by using a mixture of display types (block, inline &amp; inline-block) as well as looking in detail at the ‘position’ property.</p>
+
+
+
+<h3>Position &amp; Layout</h3>
+
+
+
+<ul>
+<li>Static</li>
+<li>Relative</li>
+<li>Fixed</li>
+<li>Absolute</li>
+<li>Sticky<ul><li>… A mixture of ‘static’ and ‘fixed’</li></ul>
+</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// Relative
+
+{
+  position: relative;
+  left: 20px;
+  bottom: 20px;
+}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Fiexed
+
+{
+  position: fixed;
+  left: 0px;
+  top: 0px;
+}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Absolute
+
+{
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+}</code></pre>
+
+
+
+<h4>專案範例 – Marioclub</h4>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+  &lt;title&gt;Marioclub&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  
+  &lt;header&gt;
+    &lt;h1&gt;Marioclub&lt;/h1&gt;
+  &lt;/header&gt;
+  &lt;section class="banner"&gt;
+    &lt;img src="img/banner.png" alt="marioclub welcome banner"&gt;
+    &lt;div class="welcome"&gt;
+      &lt;h2&gt;Welcome to &lt;br&gt;&lt;span&gt;Marioclub&lt;/span&gt;&lt;/h2&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+  &lt;nav class="main-nav"&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="/join.html" class="join"&gt;Join the club&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="/news.html"&gt;Latest news&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="/games.html"&gt;New games&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="/contact.html"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+  &lt;main&gt;
+    &lt;article&gt;
+      &lt;h2&gt;It's a me, Mario&lt;/h2&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident modi vitae voluptatibus nulla fugiat nihil ut! Natus, repellendus asperiores veritatis non assumenda hic veniam aperiam vitae doloribus eius fugit magni?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sunt voluptates ullam, neque vitae aperiam! Corporis odio exercitationem iure fugiat cum. A obcaecati molestias officiis aperiam ad velit dolor non?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum modi quas iste accusantium dolorem a! Sit tenetur, assumenda illo facilis culpa dolore dolores molestiae amet possimus autem nobis quasi recusandae.&lt;/p&gt;
+    &lt;/article&gt;
+    &lt;ul class="images"&gt;
+      &lt;li&gt;&lt;img src="img/thumb-1.png" alt="mario thumb 1"&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;img src="img/thumb-2.png" alt="mario thumb 2"&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/main&gt;
+  &lt;section class="join"&gt;
+    &lt;h2&gt;Join Today!&lt;/h2&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda itaque deleniti maxime nesciunt quod recusandae dolorem, aperiam quis enim&lt;/p&gt;
+    &lt;form&gt;
+      &lt;input type="email" name="email" placeholder="Type email &amp; hit enter" required&gt;
+    &lt;/form&gt;
+  &lt;/section&gt;
+  &lt;footer&gt;
+    &lt;p class="copyright"&gt;Copyright 2019 Marioclub&lt;/p&gt;
+  &lt;/footer&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// style.css
+
+body, ul, li, h1, h2, a{
+  margin: 0;
+  padding: 0;
+  font-family: arial;
+}
+
+header{
+  background-color: #F63232;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+header h1{
+  color: white;
+  border: 8px solid white;
+  padding: 6px 12px;
+  display: inline-block;
+  border-radius: 36px;
+}
+.banner{
+  position: relative;
+}
+.banner img{
+  max-width: 100%;
+}
+.banner .welcome{
+  background-color: #FEB614;
+  color: white;
+  padding: 30px;
+  position: absolute;
+  left: 0;
+  /* 設定 % 可自適應延伸 */
+  top: 30%; 
+}
+.banner h2{
+  font-size: 74px;
+}
+.banner h2 span{
+  font-size: 1.3em;
+}
+nav{
+  background-color: #F4F4F4;
+  padding: 20px;
+  position: sticky;
+  /* top: 148px; */
+  /* top: 147px; */
+  /* top: 106px; */
+  top: 104px;
+}
+nav ul{
+  white-space: nowrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+nav li{
+  width: 25%;
+  display: inline-block;
+  font-size: 24px;
+}
+nav li a{
+  text-decoration: none;
+  color: #4B4B4B;
+}
+nav li a.join{
+  color: #F63232;
+}
+main{
+  max-width: 100%;
+  width: 1200px;
+  margin: 80px auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+article h2{
+  color: #F63232;
+  font-size: 48px;
+}
+article p{
+  line-height: 2em;
+  color: #4B4B4B;
+}
+.images{
+  text-align: center;
+  margin: 80px 0;
+  white-space: nowrap;
+}
+.images li{
+  display: inline-block;
+  width: 40%;
+  margin: 20px 5%;
+}
+.images li img{
+  max-width: 100%;
+}
+section.join{
+  background: #F4F4F4;
+  text-align: center;
+  padding: 60px 20px;
+  color: #4B4B4B;
+}
+.join h2{
+  font-size: 36px;
+}
+form input{
+  margin: 20px 0;
+  padding: 10px 20px;
+  font-size: 24px;
+  border-radius: 28px;
+  border: 4px solid white;
+}
+footer{
+  background: #F63232;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}</code></pre>
+
+
+
+<h2 class="has-background" style="background-color:#ff6663">#09 – Pseudo Classes &amp; Elements (虛擬類別、偽類別 &amp; 虛擬元素、偽元素)</h2>
+
+
+
+<p>In this HTML &amp; CSS tutorial for beginners we’ll talk about pseudo classes and pseudo elements. These two things allow us to create more powerful &amp; flexible selectors in our CSS as well as target elements in a particular state (e.g. hover state, active state or focus state).</p>
+
+
+
+<ul><li><a href="https://www.w3schools.com/css/css_pseudo_elements.asp" target="_blank" rel="noreferrer noopener">List of pseudo classes / elements</a></li></ul>
+
+
+
+<h3>Pseudo Classes</h3>
+
+
+
+<ul>
+<li>Style elements when they’re in a particular state<ul><li>hover, focus, first child of a parent</li></ul>
+</li>
+<li>:hover</li>
+<li>:focus</li>
+<li>:first-child</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+  &lt;title&gt;Marioclub&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  
+  &lt;header&gt;
+    &lt;h1&gt;Marioclub&lt;/h1&gt;
+  &lt;/header&gt;
+  &lt;section class="banner"&gt;
+    &lt;img src="img/banner.png" alt="marioclub welcome banner"&gt;
+    &lt;div class="welcome"&gt;
+      &lt;h2&gt;Welcome to &lt;br&gt;&lt;span&gt;Marioclub&lt;/span&gt;&lt;/h2&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+  &lt;nav class="main-nav"&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="/join.html" class="join"&gt;Join the club&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="/news.html"&gt;Latest news&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="/games.html"&gt;New games&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="/contact.html"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+  &lt;main&gt;
+    &lt;article&gt;
+      &lt;h2&gt;It's a me, Mario&lt;/h2&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident modi vitae voluptatibus nulla fugiat nihil ut! Natus, repellendus asperiores veritatis non assumenda hic veniam aperiam vitae doloribus eius fugit magni?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sunt voluptates ullam, neque vitae aperiam! Corporis odio exercitationem iure fugiat cum. A obcaecati molestias officiis aperiam ad velit dolor non?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum modi quas iste accusantium dolorem a! Sit tenetur, assumenda illo facilis culpa dolore dolores molestiae amet possimus autem nobis quasi recusandae.&lt;/p&gt;
+    &lt;/article&gt;
+    &lt;ul class="images"&gt;
+      &lt;li&gt;&lt;img src="img/thumb-1.png" alt="mario thumb 1"&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;img src="img/thumb-2.png" alt="mario thumb 2"&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/main&gt;
+  &lt;section class="join"&gt;
+    &lt;h2&gt;Join Today!&lt;/h2&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda itaque deleniti maxime nesciunt quod recusandae dolorem, aperiam quis enim&lt;/p&gt;
+    &lt;form&gt;
+      &lt;input type="email" name="email" placeholder="Type email &amp; hit enter" required&gt;
+    &lt;/form&gt;
+  &lt;/section&gt;
+  &lt;footer&gt;
+    &lt;p class="copyright"&gt;Copyright 2019 Marioclub&lt;/p&gt;
+  &lt;/footer&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// style.css
+
+body, ul, li, h1, h2, a{
+  margin: 0;
+  padding: 0;
+  font-family: arial;
+}
+
+header{
+  background-color: #F63232;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+header h1{
+  color: white;
+  border: 8px solid white;
+  padding: 6px 12px;
+  display: inline-block;
+  border-radius: 36px;
+}
+.banner{
+  position: relative;
+}
+.banner img{
+  max-width: 100%;
+}
+.banner .welcome{
+  background-color: #FEB614;
+  color: white;
+  padding: 30px;
+  position: absolute;
+  left: 0;
+  /* 設定 % 可自適應延伸 */
+  top: 30%; 
+}
+.banner h2{
+  font-size: 74px;
+}
+.banner h2 span{
+  font-size: 1.3em;
+}
+nav{
+  background-color: #F4F4F4;
+  padding: 20px;
+  position: sticky;
+  /* top: 148px; */
+  /* top: 147px; */
+  /* top: 106px; */
+  top: 104px;
+}
+nav ul{
+  white-space: nowrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+nav li{
+  width: 25%;
+  display: inline-block;
+  font-size: 24px;
+}
+nav li a{
+  text-decoration: none;
+  color: #4B4B4B;
+}
+nav li a.join{
+  color: #F63232;
+}
+main{
+  max-width: 100%;
+  width: 1200px;
+  margin: 80px auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+article h2{
+  color: #F63232;
+  font-size: 48px;
+}
+article p{
+  line-height: 2em;
+  color: #4B4B4B;
+}
+.images{
+  text-align: center;
+  margin: 80px 0;
+  white-space: nowrap;
+}
+.images li{
+  display: inline-block;
+  width: 40%;
+  margin: 20px 5%;
+}
+.images li img{
+  max-width: 100%;
+}
+section.join{
+  background: #F4F4F4;
+  text-align: center;
+  padding: 60px 20px;
+  color: #4B4B4B;
+}
+.join h2{
+  font-size: 36px;
+}
+form input{
+  margin: 20px 0;
+  padding: 10px 20px;
+  font-size: 24px;
+  border-radius: 28px;
+  border: 4px solid white;
+}
+footer{
+  background: #F63232;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+/* pseudo classes */
+
+nav li a:hover{
+  text-decoration: underline;
+}
+.images li:hover{
+  position: relative;
+  top: -4px;
+}
+form input:focus{
+  border: 4px dashed #4B4B4B;
+  outline: none;
+}
+form input:valid{
+  border: 4px solid #71D300;
+}
+/* 說明講解 :first-child */
+/* nav li:first-child{
+  border: 3px solid #F63232;
+} */
+article p::first-line{
+  font-weight: bold;
+  font-size: 1.2em;
+}
+section.join p::first-letter{
+  font-size: 1.5em;
+}
+p::selection{
+  background-color: #F63232;
+  color: white;
+}
+p::after{
+  content: '...';
+}</code></pre>
+
+
+
+<h4>偽元素</h4>
+
+
+
+<ul>
+<li>::after</li>
+<li>::before</li>
+<li>::first-line</li>
+<li>::first-letter</li>
+<li>::selection</li>
+</ul>
+
+
+
+<h2 class="has-background" style="background-color:#ff6663">#10 – Intro to Media Queries</h2>
+
+
+
+<p>In this CSS tutorial I’ll give you a quick introduction to the concept of responsive design and media queries. We’ll use those to make our Mario web page look nice on mobile devices.</p>
+
+
+
+<h3>Responsive Design (響應式設計)</h3>
+
+
+
+<h4>Media Queries</h4>
+
+
+
+<p>Tell the browser how to style an element at particular viewport dimensions</p>
+
+
+
+<h4>Viewport meta tag</h4>
+
+
+
+<p>Tells the browser what width the viewport should be</p>
+
+
+
+<h4>Responsive images</h4>
+
+
+
+<p>Only load smaller images for mobile devices</p>
+
+
+
+<h4>關於 Responsive Web Design 介紹</h4>
+
+
+
+<ul>
+<li><a rel="noreferrer noopener" href="https://www.w3schools.com/css/css_rwd_viewport.asp" target="_blank">RWD Viewport</a></li>
+<li><a href="https://www.w3schools.com/css/css_rwd_mediaqueries.asp" target="_blank" rel="noreferrer noopener">RWD Media Queries</a></li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+  &lt;title&gt;Marioclub&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  
+  &lt;header&gt;
+    &lt;h1&gt;Marioclub&lt;/h1&gt;
+  &lt;/header&gt;
+  &lt;section class="banner"&gt;
+    &lt;img src="img/banner.png" alt="marioclub welcome banner"&gt;
+    &lt;div class="welcome"&gt;
+      &lt;h2&gt;Welcome to &lt;br&gt;&lt;span&gt;Marioclub&lt;/span&gt;&lt;/h2&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+  &lt;nav class="main-nav"&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="/join.html" class="join"&gt;Join the club&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="/news.html"&gt;Latest news&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="/games.html"&gt;New games&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="/contact.html"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+  &lt;main&gt;
+    &lt;article&gt;
+      &lt;h2&gt;It's a me, Mario&lt;/h2&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident modi vitae voluptatibus nulla fugiat nihil ut! Natus, repellendus asperiores veritatis non assumenda hic veniam aperiam vitae doloribus eius fugit magni?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sunt voluptates ullam, neque vitae aperiam! Corporis odio exercitationem iure fugiat cum. A obcaecati molestias officiis aperiam ad velit dolor non?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum modi quas iste accusantium dolorem a! Sit tenetur, assumenda illo facilis culpa dolore dolores molestiae amet possimus autem nobis quasi recusandae.&lt;/p&gt;
+    &lt;/article&gt;
+    &lt;ul class="images"&gt;
+      &lt;li&gt;&lt;img src="img/thumb-1.png" alt="mario thumb 1"&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;img src="img/thumb-2.png" alt="mario thumb 2"&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/main&gt;
+  &lt;section class="join"&gt;
+    &lt;h2&gt;Join Today!&lt;/h2&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda itaque deleniti maxime nesciunt quod recusandae dolorem, aperiam quis enim&lt;/p&gt;
+    &lt;form&gt;
+      &lt;input type="email" name="email" placeholder="Type email &amp; hit enter" required&gt;
+    &lt;/form&gt;
+  &lt;/section&gt;
+  &lt;footer&gt;
+    &lt;p class="copyright"&gt;Copyright 2019 Marioclub&lt;/p&gt;
+  &lt;/footer&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// style.css
+
+body, ul, li, h1, h2, a{
+  margin: 0;
+  padding: 0;
+  font-family: arial;
+}
+
+header{
+  background-color: #F63232;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+header h1{
+  color: white;
+  border: 8px solid white;
+  padding: 6px 12px;
+  display: inline-block;
+  border-radius: 36px;
+}
+.banner{
+  position: relative;
+}
+.banner img{
+  max-width: 100%;
+}
+.banner .welcome{
+  background-color: #FEB614;
+  color: white;
+  padding: 30px;
+  position: absolute;
+  left: 0;
+  /* 設定 % 可自適應延伸 */
+  top: 30%; 
+}
+.banner h2{
+  font-size: 74px;
+}
+.banner h2 span{
+  font-size: 1.3em;
+}
+nav{
+  background-color: #F4F4F4;
+  padding: 20px;
+  position: sticky;
+  /* top: 148px; */
+  /* top: 147px; */
+  /* top: 106px; */
+  top: 104px;
+}
+nav ul{
+  white-space: nowrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+nav li{
+  width: 25%;
+  display: inline-block;
+  font-size: 24px;
+}
+nav li a{
+  text-decoration: none;
+  color: #4B4B4B;
+}
+nav li a.join{
+  color: #F63232;
+}
+main{
+  max-width: 100%;
+  width: 1200px;
+  margin: 80px auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+article h2{
+  color: #F63232;
+  font-size: 48px;
+}
+article p{
+  line-height: 2em;
+  color: #4B4B4B;
+}
+.images{
+  text-align: center;
+  margin: 80px 0;
+  white-space: nowrap;
+}
+.images li{
+  display: inline-block;
+  width: 40%;
+  margin: 20px 5%;
+}
+.images li img{
+  max-width: 100%;
+}
+section.join{
+  background: #F4F4F4;
+  text-align: center;
+  padding: 60px 20px;
+  color: #4B4B4B;
+}
+.join h2{
+  font-size: 36px;
+}
+form input{
+  margin: 20px 0;
+  padding: 10px 20px;
+  font-size: 24px;
+  border-radius: 28px;
+  border: 4px solid white;
+}
+footer{
+  background: #F63232;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+/* pseudo classes */
+
+nav li a:hover{
+  text-decoration: underline;
+}
+.images li:hover{
+  position: relative;
+  top: -4px;
+}
+form input:focus{
+  border: 4px dashed #4B4B4B;
+  outline: none;
+}
+form input:valid{
+  border: 4px solid #71D300;
+}
+/* 說明講解 :first-child */
+/* nav li:first-child{
+  border: 3px solid #F63232;
+} */
+article p::first-line{
+  font-weight: bold;
+  font-size: 1.2em;
+}
+section.join p::first-letter{
+  font-size: 1.5em;
+}
+p::selection{
+  background-color: #F63232;
+  color: white;
+}
+p::after{
+  content: '...';
+}
+
+/* responsive styles */
+
+@media screen and (max-width: 1400px){
+
+  .banner .welcome h2{
+    font-size: 60px;
+  }
+  nav li{
+    font-size: 18px;
+  }
+
+}
+
+@media screen and (max-width: 960px){
+
+  .banner .welcome h2{
+    font-size: 40px;
+  }
+
+}
+
+@media screen and (max-width: 700px){
+
+  .banner .welcome{
+    position: relative;
+    text-align: center;
+    padding: 10px;
+  }
+  .banner .welcome br{
+    display: none;
+  }
+  .banner .welcome h2{
+    font-size: 25px;
+  }
+  .banner .welcome span{
+    font-size: 1em;
+  }
+  .images li{
+    width: 100%;
+    margin: 20px auto;
+    display: block;
+  }
+
+}
+
+@media screen and (max-width: 560px){
+
+  nav li{
+    font-size: 20px;
+    display: block;
+    width: 100%;
+    margin: 12px 0;
+  }
+  header{
+    position: relative;
+  }
+  nav{
+    top: 0;
+  }
+
+}</code></pre>
+
+
+
+<h2>#11 – Next Steps</h2>
+
+
+
+<p>In this final video I’ll offer you some tips on what to study next, including other playlists from my YouTube channel, and my novice-to-ninja Udemy course about JavaScript:</p>
+
+
+
+<ul><li><a href="https://www.udemy.com/course/modern-javascript-from-novice-to-ninja/?couponCode=5B740E26BCA431311F66" target="_blank" rel="noreferrer noopener">Udemy Modern JavaScript Course (with discount applied)</a></li></ul>
+
+
+
+<h4>其他課程清單</h4>
+
+
+
+<ul>
+<li><a href="https://www.youtube.com/playlist?list=PL4cUxeGkcC9iGYgmEd2dm3zAKzyCGDtM5" target="_blank" rel="noreferrer noopener">CSS Animation playlist</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PL4cUxeGkcC9itC4TxYMzFCfveyutyPOCY" target="_blank" rel="noreferrer noopener">CSS Grid playlist</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PL4cUxeGkcC9i3FXJSUfmsNOx8E7u6UuhG" target="_blank" rel="noreferrer noopener">CSS Flexbox playlist</a></li>
+<li><a href="https://www.youtube.com/watch?v=iWOYAxlnaww&amp;list=PL4cUxeGkcC9haFPT7J25Q9GRB_ZkFrQAc" target="_blank" rel="noreferrer noopener">Modern JavaScript preview</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PL4cUxeGkcC9g5_p_BVUGWykHfqx6bb7qK" target="_blank" rel="noreferrer noopener">Styling HTML Forms</a></li>
+</ul>
+	</div>
+<!-- .entry-content -->
+
+	<footer class="entry-footer">
+			</footer><!-- .entry-footer -->
+</article><!-- #post-472 -->
+
+	<nav class="navigation post-navigation" aria-label="文章">
+		<h2 class="screen-reader-text">文章導覽</h2>
+		<div class="nav-links">
+<div class="nav-previous"><a href="/wordpress_blog/bs5-crash-course-tutorial/" rel="prev"><span class="nav-subtitle">Previous:</span> <span class="nav-title">Bootstrap 5 Crash Course Tutorial</span></a></div>
+<div class="nav-next"><a href="/wordpress_blog/web-development-in-2022/" rel="next"><span class="nav-subtitle">Next:</span> <span class="nav-title">Web Development In 2022 &#8211; A Practical Guide</span></a></div>
+</div>
+	</nav>
+	</main><!-- #main -->
+
+
+	</div></div>
+			
+			<footer id="colophon" class="site-footer">
+
+				
+				<div class="container-fluid">
+					<div class="site-info">
+						<div class="row">
+
+															
+								<div class="col-12 footer-copyright-elements footer-copyright-alignment-center">
+
+									<div class="botiga-credits">&copy; 2022 wordpress_blog. 
+Created by Gee Hsu. 
+<br>Proudly powered by <a rel="nofollow" href="https://athemes.com/theme/botiga/">Botiga</a>
+</div>
+<div class="social-profile">
+<a target="_blank" href="https://www.facebook.com/watergrass0402/"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></i></a><a target="_blank" href="https://github.com/GeeHsu"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></i></a>
+</div>
+								</div>
+														
+						</div>
+					</div>
+				</div>
+<!-- .site-info -->
+
+				
+			</footer><!-- #colophon -->
+
+			
+			<div class="back-to-top visibility-all position-right"><i class="ws-svg-icon"><svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 15l7-7 7 7" stroke-width="3" stroke-linejoin="round"></path></svg></i></div>
+</div>
+<!-- #page -->
+
+
+<script id="botiga-custom-js-extra">
+var botiga = {"ajaxurl":"\/wp-admin\/admin-ajax.php","i18n":{"botiga_sharebox_copy_link":"Copy link","botiga_sharebox_copy_link_copied":"Copied!"}};
+</script>
+<script src="/wordpress_blog/wp-content/themes/botiga/assets/js/custom.min.js?ver=1.1.2" id="botiga-custom-js"></script>
+
+</body>
+</html>

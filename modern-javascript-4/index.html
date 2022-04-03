@@ -1,0 +1,4992 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<title>Modern JavaScript (4) &#8211; wordpress_blog</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="訂閱《wordpress_blog》&raquo; 資訊提供" href="/wordpress_blog/feed/">
+<link rel="alternate" type="application/rss+xml" title="訂閱《wordpress_blog》&raquo; 留言的資訊提供" href="/wordpress_blog/comments/feed/">
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.9.2"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style>img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="/wordpress_blog/wp-includes/css/dist/block-library/style.min.css?ver=5.9.2" media="all">
+<style id="global-styles-inline-css">body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--palette-1-color-0: #212121;--wp--preset--color--palette-1-color-1: #757575;--wp--preset--color--palette-1-color-2: #212121;--wp--preset--color--palette-1-color-3: #212121;--wp--preset--color--palette-1-color-4: #212121;--wp--preset--color--palette-1-color-5: #f5f5f5;--wp--preset--color--palette-1-color-6: #ffffff;--wp--preset--color--palette-1-color-7: #ffffff;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 14px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 18px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--normal: 16px;--wp--preset--font-size--larger: 24px;--wp--preset--font-size--extra-large: 32px;--wp--preset--font-size--huge: 48px;--wp--preset--font-size--gigantic: 64px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}</style>
+<link rel="stylesheet" id="botiga-style-css" href="/wordpress_blog/wp-content/themes/botiga/style.css?ver=1.1.2" media="all">
+<link rel="stylesheet" id="botiga-style-min-css" href="/wordpress_blog/wp-content/themes/botiga/assets/css/styles.min.css?ver=1.1.2" media="all">
+<link rel="stylesheet" id="botiga-custom-styles-css" href="/wordpress_blog/wp-content/uploads/botiga/custom-styles.css?ver=1648804469" media="all">
+<link rel="https://api.w.org/" href="/wordpress_blog/wp-json/">
+<link rel="alternate" type="application/json" href="/wordpress_blog/wp-json/wp/v2/posts/527">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/wordpress_blog/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wordpress_blog/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 5.9.2">
+<link rel="canonical" href="/wordpress_blog/modern-javascript-4/">
+<link rel="shortlink" href="/wordpress_blog/?p=527">
+<link rel="alternate" type="application/json+oembed" href="/wordpress_blog/wp-json/oembed/1.0/embed?url=%2Fmodern-javascript-4%2F">
+<link rel="alternate" type="text/xml+oembed" href="/wordpress_blog/wp-json/oembed/1.0/embed?url=%2Fmodern-javascript-4%2F&#038;format=xml">
+<link rel="icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png" sizes="32x32">
+<link rel="icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png" sizes="192x192">
+<link rel="apple-touch-icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png">
+<meta name="msapplication-TileImage" content="/wp-content/uploads/2022/03/logo.png">
+	
+</head>
+
+<body class="post-template-default single single-post postid-527 single-format-standard wp-custom-logo wp-embed-responsive header-header_layout_1 blog-single-layout1">
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0.49803921568627"></fefuncr><fefuncg type="table" tablevalues="0 0.49803921568627"></fefuncg><fefuncb type="table" tablevalues="0 0.49803921568627"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.54901960784314 0.98823529411765"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.71764705882353 0.25490196078431"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 0.27843137254902"></fefuncg><fefuncb type="table" tablevalues="0.5921568627451 0.27843137254902"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0"></fefuncr><fefuncg type="table" tablevalues="0 0.64705882352941"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.78039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.94901960784314"></fefuncg><fefuncb type="table" tablevalues="0.35294117647059 0.47058823529412"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.65098039215686 0.40392156862745"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.44705882352941 0.4"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.098039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.66274509803922"></fefuncg><fefuncb type="table" tablevalues="0.84705882352941 0.41960784313725"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg>
+
+<div id="page" class="site">
+
+	<a class="skip-link screen-reader-text" href="#primary">Skip to content</a>
+
+	
+			<div class="top-bar visibility-desktop-only">
+				<div class="container-fluid">
+					<div class="top-bar-inner">
+						<div class="row valign">
+
+															<div class="col header-elements delimiter-none">
+									<div class="header-item top-bar-social"><div class="social-profile">
+<a target="_blank" href="https://www.facebook.com/watergrass0402/"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></i></a><a target="_blank" href="https://github.com/GeeHsu"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></i></a>
+</div></div>								</div>
+																						<div class="col header-elements delimiter-none">
+													
+			<nav class="header-item top-bar-secondary-navigation secondary-navigation">
+				<div class="menu-topbar-container"><ul id="secondary" class="menu">
+<li id="menu-item-143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143"><a href="/wordpress_blog/setup/">網站架設</a></li>
+<li id="menu-item-144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a href="/wordpress_blog/source/">資料來源</a></li>
+<li id="menu-item-262" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-262"><a href="/wordpress_blog/resource/">學習資源</a></li>
+</ul></div>			</nav>
+											</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			
+							
+				<header id="masthead" class="site-header header_layout_1">
+					<div class="container-fluid">
+						<div class="site-header-inner">
+							<div class="row valign">
+								<div class="col-md-5">
+										
+			<nav id="site-navigation" class="main-navigation">
+				<div class="menu-navbar-container"><ul id="primary-menu" class="menu">
+<li id="menu-item-109" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="/wordpress_blog/about/">關於</a></li>
+<li id="menu-item-110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-110">
+<a href="/wordpress_blog/learn/">學習</a><span tabindex="0" class="dropdown-symbol"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512.011 512.011"><path d="M505.755 123.592c-8.341-8.341-21.824-8.341-30.165 0L256.005 343.176 36.421 123.592c-8.341-8.341-21.824-8.341-30.165 0s-8.341 21.824 0 30.165l234.667 234.667a21.275 21.275 0 0015.083 6.251 21.275 21.275 0 0015.083-6.251l234.667-234.667c8.34-8.341 8.34-21.824-.001-30.165z"></path></svg></i></span>
+<ul class="sub-menu">
+	<li id="menu-item-140" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-140"><a href="/wordpress_blog/category/hexschool/">六角學院</a></li>
+	<li id="menu-item-141" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-141"><a href="/wordpress_blog/category/ninja/">The Net Ninja</a></li>
+	<li id="menu-item-483" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-483"><a href="/wordpress_blog/category/youtube/">Youtube</a></li>
+</ul>
+</li>
+<li id="menu-item-111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="/wordpress_blog/linestore/">LINE STORE</a></li>
+</ul></div>			</nav><!-- #site-navigation -->
+											</div>
+								<div class="col-md-2">
+												<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+											</div>
+								<div class="col-md-5 header-elements">
+																	</div>							
+							</div>
+						</div>
+					</div>
+								<div class="header-search-form">
+			<form role="search" method="get" class="search-form" action="/">
+	<label class="screen-reader-text" for="search-form-1">Search&hellip;</label>
+	<input type="search" id="search-form-1" class="search-field" value="" name="s" placeholder="Search &hellip;">
+	<button type="submit" class="search-submit" value="Search"><i class="ws-svg-icon"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 100 14.25 7.125 7.125 0 000-14.25zM2.25 10.875a8.625 8.625 0 1117.25 0 8.625 8.625 0 01-17.25 0z"></path><path fill-rule="evenodd" d="M15.913 15.914a.75.75 0 011.06 0l4.557 4.556a.75.75 0 01-1.06 1.06l-4.557-4.556a.75.75 0 010-1.06z"></path></svg></i></button>
+</form>
+			</div>
+			
+									</header>
+
+										<div class="search-overlay"></div>
+			
+			<div class="botiga-offcanvas-menu">
+				<div class="mobile-header-item">
+					<div class="row">
+						<div class="col">
+										<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+									</div>
+						<div class="col align-right">
+							<a class="mobile-menu-close" href="#"><i class="ws-svg-icon icon-cancel"><svg width="16" height="16" fill="none" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.219.781L.78 2.22 9.562 11l-8.78 8.781 1.437 1.438L11 12.437l8.781 8.782 1.438-1.438L12.437 11l8.782-8.781L19.78.78 11 9.562 2.219.783z"></path></svg></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="mobile-header-item">
+						
+			<nav id="site-navigation" class="main-navigation">
+				<div class="menu-navbar-container"><ul id="primary-menu" class="menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="/wordpress_blog/about/">關於</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-110">
+<a href="/wordpress_blog/learn/">學習</a><span tabindex="0" class="dropdown-symbol"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512.011 512.011"><path d="M505.755 123.592c-8.341-8.341-21.824-8.341-30.165 0L256.005 343.176 36.421 123.592c-8.341-8.341-21.824-8.341-30.165 0s-8.341 21.824 0 30.165l234.667 234.667a21.275 21.275 0 0015.083 6.251 21.275 21.275 0 0015.083-6.251l234.667-234.667c8.34-8.341 8.34-21.824-.001-30.165z"></path></svg></i></span>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-140"><a href="/wordpress_blog/category/hexschool/">六角學院</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-141"><a href="/wordpress_blog/category/ninja/">The Net Ninja</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-483"><a href="/wordpress_blog/category/youtube/">Youtube</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="/wordpress_blog/linestore/">LINE STORE</a></li>
+</ul></div>			</nav><!-- #site-navigation -->
+							</div>
+				<div class="mobile-header-item">
+									<a target="&quot;_blank&quot;" class="button header-item" href="https://www.facebook.com/watergrass0402/">聯絡我</a>
+							</div>			
+			</div>
+			
+							<header id="masthead-mobile" class="site-header mobile-header">
+					<div class="container-fluid">
+						<div class="row valign flex-nowrap">
+							<div class="col-sm-6 col-md-4 col-grow-mobile">
+											<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+										</div>
+							<div class="col-auto col-sm-6 col-md-8 col-grow-mobile header-elements valign align-right">
+																	
+															<a href="#" class="menu-toggle">
+				<i class="ws-svg-icon"><svg width="16" height="11" viewbox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="16" height="1"></rect><rect y="5" width="16" height="1"></rect><rect y="10" width="16" height="1"></rect></svg></i>
+			</a>
+																		</div>						
+						</div>
+					</div>
+								<div class="header-search-form">
+			<form role="search" method="get" class="search-form" action="/">
+	<label class="screen-reader-text" for="search-form-2">Search&hellip;</label>
+	<input type="search" id="search-form-2" class="search-field" value="" name="s" placeholder="Search &hellip;">
+	<button type="submit" class="search-submit" value="Search"><i class="ws-svg-icon"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 100 14.25 7.125 7.125 0 000-14.25zM2.25 10.875a8.625 8.625 0 1117.25 0 8.625 8.625 0 01-17.25 0z"></path><path fill-rule="evenodd" d="M15.913 15.914a.75.75 0 011.06 0l4.557 4.556a.75.75 0 01-1.06 1.06l-4.557-4.556a.75.75 0 010-1.06z"></path></svg></i></button>
+</form>
+			</div>
+			
+									</header>
+						<div class="search-overlay"></div>
+			<div class="header-image"><img src="/wordpress_blog/wp-content/uploads/2022/03/seashore.jpg" width="1920" height="500" alt=""></div>
+<div class="container content-wrapper"><div class="row main-row">			
+	<main id="primary" class="site-main no-sidebar">
+
+		
+
+<article id="post-527" class="post-527 post type-post status-publish format-standard hentry category-ninja">
+	
+		
+	<header class="entry-header">
+		
+		
+		<h1 class="entry-title">Modern JavaScript (4)</h1>			<div class="entry-meta entry-meta-below delimiter-none">
+<span class="posted-on"><a href="/wordpress_blog/modern-javascript-4/" rel="bookmark"><time class="entry-date published" datetime="2022-02-15T14:17:00+08:00">2022 年 2 月 15 日</time><time class="updated" datetime="2022-04-03T14:18:05+08:00">2022 年 4 月 3 日</time></a></span><span class="byline"> <span class="author vcard"><a class="url fn n" href="/wordpress_blog/author/gee-hsu/">gee.hsu</a></span></span>
+</div>			</header><!-- .entry-header -->
+
+	
+	<div class="entry-content">
+		
+<p>(Complete guide, from Novice to Ninja)</p>
+
+
+
+<blockquote class="wp-block-quote">
+<p>Learning Udemy Course：<a href="https://www.udemy.com/course/modern-javascript-from-novice-to-ninja/" target="_blank" rel="noreferrer noopener">Modern JavaScript</a></p>
+<cite>建立者：The Net Ninja (Shaun Pelling)</cite>
+</blockquote>
+
+
+
+<p>Learn Modern JavaScript from the very start to ninja-level &amp; build awesome JavaScript applications.</p>
+
+
+
+<h4>您會學到</h4>
+
+
+
+<ul>
+<li>Learn how to program with modern JavaScript, from the very beginning to more advanced topics</li>
+<li>Learn all about OOP (object-oriented programming) with JavaScript, working with prototypes &amp; classes</li>
+<li>Learn how to create real-world front-end applications with JavaScript (quizes, weather apps, chat rooms etc)</li>
+<li>Learn how to make useful JavaScript driven UI components like popups, drop-downs, tabs, tool-tips &amp; more.</li>
+<li>Learn how to use modern, cutting-edge JavaScript features today by using a modern workflow (Babel &amp; Webpack)</li>
+<li>Learn how to use real-time databases to store, retrieve and update application data</li>
+<li>Explore API’s to make the most of third-party data (such as weather information)</li>
+</ul>
+
+
+
+<h2>Modern Workflow with Babel &amp; Webpack</h2>
+
+
+
+<h3>Modern Feature Support</h3>
+
+
+
+<h4>MDN 文件</h4>
+
+
+
+<ul>
+<li><a rel="noreferrer noopener" href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Classes#%E7%80%8F%E8%A6%BD%E5%99%A8%E7%9B%B8%E5%AE%B9%E6%80%A7" target="_blank">瀏覽器兼容性</a></li>
+<li><a rel="noreferrer noopener" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#browser_compatibility" target="_blank">Browser compatibility</a></li>
+<li><a rel="noreferrer noopener" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#browser_compatibility" target="_blank">Template literals Browser Compatibility</a></li>
+</ul>
+
+
+
+<h4>工具</h4>
+
+
+
+<ul>
+<li><a rel="noreferrer noopener" href="https://babeljs.io/" target="_blank">Babel</a></li>
+<li><a href="https://webpack.js.org/" target="_blank" rel="noreferrer noopener">webpack</a></li>
+</ul>
+
+
+
+<h3>An Introduction to Babel</h3>
+
+
+
+<p>Modern Code 編譯成 以前版本的 Code</p>
+
+
+
+<h4>資源</h4>
+
+
+
+<ul><li><a rel="noreferrer noopener" href="https://babeljs.io/" target="_blank">Babel Website</a></li></ul>
+
+
+
+<h4>操作</h4>
+
+
+
+<ul><li>點擊 Try it out 使用</li></ul>
+
+
+
+<p>沒有顯示舊版本的程式碼，Left side menu – ENV PRESET – FORCE ALL TRANSFORMS select.</p>
+
+
+
+<pre class="wp-block-code"><code>// Babel 網頁版使用 - 1
+
+function greet() {
+  console.log('hello');
+}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Babel 網頁版使用 - 2
+
+const greet = function() {
+  console.log('hello');
+}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Babel 網頁版使用 - 3
+
+const greet = function(name){
+  console.log(`hello ${name}`);
+}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Babel 網頁版使用 - 4
+
+const greet = (name) =&gt; {
+  console.log(`hello ${name}`);
+}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Babel 網頁版使用 - 5
+
+const greet = (name) =&gt; {
+  console.log(`hello ${name}`);
+}
+
+class User {
+  constructor(name){
+    this.name = name;
+  }
+}</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Installing Node.js &amp; Babel</h3>
+
+
+
+<p>可重複觀看、練習。</p>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ul>
+<li>使用 Terminal 終端機查詢有無安裝 node.js<ul><li>輸入指令 node -v</li></ul>
+</li>
+<li>沒有就到Node.js官網下載、安裝，有就繼續以下步驟</li>
+<li>清除 Terminal 終端機介面內容 clear</li>
+<li>移動到專案資料夾 – cd 資料夾名稱</li>
+<li>在 Terminal 終端機輸入 npm init 指令初始化項目，這裡沒有要特別設定就全部按 enter 就可以了，完成後會產生 package.json 檔案</li>
+<li>使用 Terminal 終端機安裝 Babel core、Babel cli<ul><li>指令 npm install @babel/core @babel/cli –save-dev</li></ul>
+</li>
+<li>接著再使用 Terminal 終端機安裝 Babel preset-env<ul><li>指令 npm install @babel/preset-env –save-dev</li></ul>
+</li>
+<li>安裝好的套件會在 package.json 檔案呈現安裝的名稱、版本</li>
+<li>建立一個 .babelrc 檔案</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// .babelrc
+
+{
+  "presets": &#91;"@babel/preset-env"]
+}</code></pre>
+
+
+
+<h4>Using Babel</h4>
+
+
+
+<ol>
+<li>Install Node.js (and npm) on our computer</li>
+<li>Use npm init to create a package.json file in the project directory</li>
+<li>Use npm to install babel/core &amp; babel/cli packages</li>
+<li>Install the babel preset (env) &amp; register it in .babelrc</li>
+</ol>
+
+
+
+<h3>Using the Babel CLI</h3>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ul>
+<li>建立 before.js 檔案</li>
+<li>使用 Terminal 終端機輸入指令<ul><li>node_modules/.bin/babel before.js -o after.js</li></ul>
+</li>
+<li>完成後會產生 after.js 檔案、以及以前版本的程式碼</li>
+<li>移除 node_modules 資料夾</li>
+<li>使用 npm install 指令安裝 node_modules 資料夾</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// before.js
+
+const greet = (name) =&gt; {
+  console.log(`hello ${name}`);
+};
+
+ greet();</code></pre>
+
+
+
+<h4>講解</h4>
+
+
+
+<p>可以使用 npm install 安裝 package.json 檔案套件名稱、版本</p>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">NPM Scripts &amp; Watching Files</h3>
+
+
+
+<p>可重複觀看、練習。</p>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ul>
+<li>建立一個資料夾 src</li>
+<li>在 src 資料夾裡面建立 index.js 檔案</li>
+<li>建立一個資料夾 dist</li>
+<li>在 dist 資料夾裡面建立 assets 資料夾</li>
+<li>在 assets 資料夾裡面建立 bundle.js</li>
+<li>在 dist 資料夾裡面建立 index.html 檔案</li>
+<li>會在 src/index.js 檔案撰寫 js 程式碼</li>
+<li>在 Terminal 終端機輸入指令<ul><li>node_modules/.bin/babel src/index.js -o dist/assets/bundle.js</li></ul>
+</li>
+<li>完成後 index.js 程式碼就會編譯到 bundle.js</li>
+<li>可以在 package.json 新增 “scripts” 指令</li>
+<li>執行 “scripts” 指令 (因為沒有變動程式碼，所以接著以下步驟)<ul><li>npm run babel</li></ul>
+</li>
+<li>在 index.js 檔案刪除這一行程式碼 greet(‘link’);、然後儲存</li>
+<li>執行 “scripts” 指令<ul><li>npm run babel</li></ul>
+</li>
+<li>Watching Files 需要修改 “scripts” 指令</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// dist/index.html
+
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  
+  &lt;script src="assets/bundle.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.js
+
+const greet = name =&gt; {
+  console.log(`hello ${name}`);
+};
+
+greet('mario');
+greet('luigi');
+greet('link');</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// package.json - 1
+
+{
+  "name": "modern-javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "babel": "node_modules/.bin/babel src/index.js -o dist/assets/bundle.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.17.0",
+    "@babel/core": "^7.17.0",
+    "@babel/preset-env": "^7.16.11"
+  }
+}
+</code></pre>
+
+
+
+<h4>使用 “scripts” 指令產生錯誤無法執行</h4>
+
+
+
+<ul><li>修改成以下程式碼<ul><li>“babel” “babel src/index.js -o dist/assets/bundle.js</li></ul>
+</li></ul>
+
+
+
+<pre class="wp-block-code"><code>// package.json - 2
+
+{
+  "name": "modern-javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "babel": "babel src/index.js -o dist/assets/bundle.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.17.0",
+    "@babel/core": "^7.17.0",
+    "@babel/preset-env": "^7.16.11"
+  }
+}
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// package.json - 3 Watching Files
+
+{
+  "name": "modern-javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "babel": "babel src/index.js -w -o dist/assets/bundle.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.17.0",
+    "@babel/core": "^7.17.0",
+    "@babel/preset-env": "^7.16.11"
+  }
+}
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.js - 3 Watching Files
+
+const greet = name =&gt; {
+  console.log(`hello ${name}`);
+};
+
+greet('mario');
+greet('luigi');
+greet('link');
+
+class User {
+  constructor(){
+    this.score = 0;
+  }
+}</code></pre>
+
+
+
+<h3>What is Webpack?</h3>
+
+
+
+<h4>Webpack</h4>
+
+
+
+<ul>
+<li>Webpack is a&nbsp;<strong>module bundler</strong>(模組打包工具)</li>
+<li>Works well with babel</li>
+<li>Local development server</li>
+</ul>
+
+
+
+<figure class="wp-block-image size-full"><img width="1399" height="533" src="/wordpress_blog/wp-content/uploads/2022/04/bundle.png" alt="" class="wp-image-529"><figcaption>bundle</figcaption></figure>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Setting up a Webpack File</h3>
+
+
+
+<p>可重複觀看、練習。</p>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ul>
+<li>在專案裡建立 webpack.config.js 檔案</li>
+<li>entry 進入點、output 輸出點</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// webpack.config.js
+
+const path = require('path');
+
+module.exports = {
+  entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, 'dist/assets'),
+    filename: 'bundle.js'
+  }
+};
+
+</code></pre>
+
+
+
+<h4>webpack 文件</h4>
+
+
+
+<ul><li><a href="https://webpack.js.org/concepts/" target="_blank" rel="noreferrer noopener">Concepts 連結</a></li></ul>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Webpack CLI (Command-Line Interface 命令列介面)</h3>
+
+
+
+<p>可重複觀看、練習。</p>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ul>
+<li>使用 Terminal 終端機移動到專案位置 cd 專案名稱</li>
+<li>使用 Terminal 終端機輸入指令安裝 webpack、webpack-cli<ul><li>npm install webpack webpack-cli –save-dev</li></ul>
+</li>
+<li>使用 Terminal 終端機輸入指令執行 webpack、在這之前調整 src/index.js 檔案內容，確認 webpack.config.js 有儲存、然後執行以下指令<ul><li>node_modules/.bin/webpack</li></ul>
+</li>
+<li>完成後會發現 dist/assets/bundle.js 檔案有很大的不同，會變成只有一行程式碼</li>
+<li>在 package.json 檔案 “scripts” 新增指令<ul><li>“webpack”: “node_modules/.bin/webpack”</li></ul>
+</li>
+<li>在 index.js 修改程式碼內容後，執行 package.json 裡面的 “scripts” 的 “webpack” 指令<ul><li>執行指令 npm run webpack</li></ul>
+</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// index.js - 1
+
+const greet = name =&gt; {
+  console.log(`hello ${name}`);
+};
+
+greet('mario');
+greet('luigi');
+greet('link');
+
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// package.json - 新增 "scripts" 指令 "webpack"
+
+{
+  "name": "modern-javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "babel": "babel src/index.js -w -o dist/assets/bundle.js",
+    "webpack": "node_modules/.bin/webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.17.0",
+    "@babel/core": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "webpack": "^5.68.0",
+    "webpack-cli": "^4.9.2"
+  }
+}
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.js - 2
+
+const greet = name =&gt; {
+  console.log(`hello ${name}`);
+};
+
+greet('mario');
+greet('luigi');
+greet('link');
+greet('link');
+
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// package.json - 1 產生錯誤
+
+{
+  "name": "modern-javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "babel": "babel src/index.js -w -o dist/assets/bundle.js",
+    "webpack": "node_modules/.bin/webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.17.0",
+    "@babel/core": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "webpack": "^5.68.0",
+    "webpack-cli": "^4.9.2"
+  }
+}
+</code></pre>
+
+
+
+<h4>執行 webpack 指令產生錯誤</h4>
+
+
+
+<ul><li>package.json 檔案裡面的 “scripts” 指令的 “webpack” 做修改<ul><li>“webpack”: “webpack”</li></ul>
+</li></ul>
+
+
+
+<pre class="wp-block-code"><code>// package.json - 2 修改 "webpack" 指令
+
+{
+  "name": "modern-javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "babel": "babel src/index.js -w -o dist/assets/bundle.js",
+    "webpack": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.17.0",
+    "@babel/core": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "webpack": "^5.68.0",
+    "webpack-cli": "^4.9.2"
+  }
+}
+</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Introduction to Modules</h3>
+
+
+
+<p>比較複雜，不懂可重複觀看、練習。</p>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ul>
+<li>刪除 src/index.js 裡面所有程式碼</li>
+<li>在 src 資料夾裡面建立 dom.js 檔案</li>
+<li>在 src/index.js 載入 dom.js</li>
+<li>執行 webpack 指令<ul><li>npm run webpack</li></ul>
+</li>
+<li>在 dist/assets/bundle.js 可以看到編譯後的程式碼</li>
+<li>網頁出現錯誤、重新執行 live server，可以看到網頁畫面、以及 console.log 的結果</li>
+<li>用 index.js 講解變數、函式無法從 dom.js 拿來 index.js 用，每個檔案有自己的獨特的範圍</li>
+<li>執行 webpack 指令</li>
+<li>dom.js 新增 export</li>
+<li>index.js 修改 import</li>
+<li>儲存後、執行 npm run webpack 指令，可以看到網頁新增 test 標題</li>
+<li>dom.js 刪除一些程式碼</li>
+<li>index.js 新增一些程式碼</li>
+<li>執行 npm run webpack 指令，這樣仍會運作</li>
+<li>在 dom.js 再新增 export</li>
+<li>在 index.js 再新增 import</li>
+<li>儲存後、執行 npm run webpack 指令</li>
+<li>dom.js 在底下一起 export</li>
+<li>index.js 一樣、不用變動</li>
+<li>執行 npm run webpack 指令、一樣運作</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// dom.js - 1
+
+console.log('dom file');
+
+const body = document.querySelector('body');
+
+const styleBody = () =&gt; {
+  body.style.background = 'peachpuff';
+};
+
+const addTitle = (text) =&gt; {
+  const title = document.createElement('h1');
+  title.textContent = text;
+  body.appendChild(title)
+};
+
+styleBody();
+addTitle('hello, world from the dom file');</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.js - 1
+
+import './dom';
+
+console.log('index file');
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.js - 2
+
+import './dom';
+
+console.log('index file');
+addTitle('test');
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 2
+   dom file
+   index file
+x  Uncaught ReferenceError: addTitle is not defined
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// dom.js - 3
+
+console.log('dom file');
+
+const body = document.querySelector('body');
+
+export const styleBody = () =&gt; {
+  body.style.background = 'peachpuff';
+};
+
+export const addTitle = (text) =&gt; {
+  const title = document.createElement('h1');
+  title.textContent = text;
+  body.appendChild(title)
+};
+
+styleBody();
+addTitle('hello, world from the dom file');</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.js - 3
+
+import {styleBody, addTitle} from './dom';
+
+console.log('index file');
+addTitle('test');
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// dom.js - 4 刪除一些程式碼
+
+console.log('dom file');
+
+const body = document.querySelector('body');
+
+export const styleBody = () =&gt; {
+  body.style.background = 'peachpuff';
+};
+
+export const addTitle = (text) =&gt; {
+  const title = document.createElement('h1');
+  title.textContent = text;
+  body.appendChild(title)
+};
+
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.js - 4 新增一些程式碼
+
+import {styleBody, addTitle} from './dom';
+
+console.log('index file');
+addTitle('test');
+styleBody();</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// dom.js - 5 再新增 export
+
+console.log('dom file');
+
+const body = document.querySelector('body');
+
+export const styleBody = () =&gt; {
+  body.style.background = 'peachpuff';
+};
+
+export const addTitle = (text) =&gt; {
+  const title = document.createElement('h1');
+  title.textContent = text;
+  body.appendChild(title)
+};
+
+export const contact = 'mario@thenetninja.co.uk';
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.js - 5 再新增 import
+
+import {styleBody, addTitle, contact} from './dom';
+
+console.log('index file');
+addTitle('test');
+styleBody();
+console.log(contact);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// dom.js - 6 在底下一起 export
+
+console.log('dom file');
+
+const body = document.querySelector('body');
+
+const styleBody = () =&gt; {
+  body.style.background = 'peachpuff';
+};
+
+const addTitle = (text) =&gt; {
+  const title = document.createElement('h1');
+  title.textContent = text;
+  body.appendChild(title)
+};
+
+const contact = 'mario@thenetninja.co.uk';
+
+export { styleBody, addTitle, contact };</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Default Exports</h3>
+
+
+
+<p>可重複觀看、練習。</p>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ul>
+<li>在 src 資料夾建立 data.js 檔案</li>
+<li>在 data.js 檔案新增程式碼內容</li>
+<li>在 index.js 檔案 import 載入 data.js</li>
+<li>執行 webpack 指令</li>
+<li>查看 Google Console</li>
+<li>在 data.js 新增函式</li>
+<li>在 index.js 程式碼新增</li>
+<li>儲存後、執行 webpack 指令</li>
+<li>查看 Google Console</li>
+<li>在 data.js 另一種 export 寫法、其他不變</li>
+<li>儲存後、執行 webpack 指令，所有仍然運作</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// data.js - 1
+
+const users = &#91;
+  { name: 'mario', premium: true },
+  { name: 'luigi', premium: false },
+  { name: 'yoshi', premium: true },
+  { name: 'toad', premium: true },
+  { name: 'peach', premium: false }
+];
+
+export default users;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.js - 1
+
+import {styleBody, addTitle, contact} from './dom';
+import users from './data';
+
+console.log(users);
+
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 1
+   dom file
+   (5) &#91;{...}, {...}, {...}, {...}, {...}]
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// data.js - 2 新增函式
+
+const users = &#91;
+  { name: 'mario', premium: true },
+  { name: 'luigi', premium: false },
+  { name: 'yoshi', premium: true },
+  { name: 'toad', premium: true },
+  { name: 'peach', premium: false }
+];
+
+export const getPremUsers = (users) =&gt; {
+  return users.filter(user =&gt; user.premium);
+};
+
+export default users;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.js - 2
+
+import {styleBody, addTitle, contact} from './dom';
+import users, { getPremUsers } from './data';
+
+const premUsers = getPremUsers(users);
+console.log(users, premUsers);
+
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 2
+   dom file
+   (5) &#91;{...}, {...}, {...}, {...}, {...}] (3) &#91;{...}, {...}, {...}]
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// data.js - 3 另一種 export 寫法
+
+const users = &#91;
+  { name: 'mario', premium: true },
+  { name: 'luigi', premium: false },
+  { name: 'yoshi', premium: true },
+  { name: 'toad', premium: true },
+  { name: 'peach', premium: false }
+];
+
+const getPremUsers = (users) =&gt; {
+  return users.filter(user =&gt; user.premium);
+};
+
+export { getPremUsers, users as default }</code></pre>
+
+
+
+<h3>Watching for Changes</h3>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ul>
+<li>在 package.json 修改 “scripts” 中 “webpack” 指令<ul>
+<li>修改前 “node_modules/.bin/webpack -w”</li>
+<li>修改後 “webpack”: “webpack -w”</li>
+</ul>
+</li>
+<li>用 index.js 檔案測試 watching 是否有正確使用</li>
+<li>查看 Google Console 看是否有執行</li>
+<li>停止 watching 可以在 Terminal 終端機使用 Ctrl + c、然後輸入 Y 停止</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// package.json
+
+{
+  "name": "modern-javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "babel": "babel src/index.js -w -o dist/assets/bundle.js",
+    "webpack": "webpack -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.17.0",
+    "@babel/core": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "webpack": "^5.68.0",
+    "webpack-cli": "^4.9.2"
+  }
+}
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.js
+
+import {styleBody, addTitle, contact} from './dom';
+import users, { getPremUsers } from './data';
+
+const premUsers = getPremUsers(users);
+console.log(users, premUsers);
+
+console.log('test');</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   dom file
+   (5) &#91;{...}, {...}, {...}, {...}, {...}] (3) &#91;{...}, {...}, {...}]
+   test
+&gt;</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">The Webpack Dev Server</h3>
+
+
+
+<p>可重複觀看、練習。</p>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ul>
+<li>停止 live server</li>
+<li>使用 Terminal 終端機安裝套件<ul>
+<li>產生錯誤 npm install webpack-dev-server@3.2.1</li>
+<li>修正後 npm install webpack-dev-server 版本是 4.7.4</li>
+</ul>
+</li>
+<li>在 webpack.config.js 新增關於 devServer 程式碼</li>
+<li>在 package.json 新增 “scripts” 指令<ul><li>“serve”: “webpack-dev-server”</li></ul>
+</li>
+<li>執行 serve 指令、產生錯誤</li>
+<li>修改 webpack.config.js 的 devServer</li>
+<li>在終端機 Project is running at 連結，使用 ctrl+左鍵打開網頁</li>
+<li>用 index.js 來測試是否又正確執行，結果出現 test 沒有變動</li>
+<li>再次修改 webpack.config.js 的 devServer，test 會變動了</li>
+<li>有一個問題是虛擬檔案、沒有編譯程式碼到 bundle.js</li>
+<li>藉由刪除 bundle.js 所有程式碼來展示確實沒有編譯程式碼到 bundle.js</li>
+<li>用 index.js 來測試，bundle.js 一樣沒有編譯完成的程式碼</li>
+</ul>
+
+
+
+<h4>webpack 文件</h4>
+
+
+
+<ul>
+<li><a rel="noreferrer noopener" href="https://webpack.js.org/api/webpack-dev-server/" target="_blank">webpack-dev-server API</a></li>
+<li><a href="https://webpack.js.org/configuration/dev-server/" target="_blank" rel="noreferrer noopener">DevServer</a></li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// package.json
+
+{
+  "name": "modern-javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "babel": "babel src/index.js -w -o dist/assets/bundle.js",
+    "webpack": "webpack -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.17.0",
+    "@babel/core": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "webpack": "^5.68.0",
+    "webpack-cli": "^4.9.2"
+  },
+  "dependencies": {
+    "webpack-dev-server": "^4.7.4"
+  }
+}
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// webpack.config.js - 修改前
+
+const path = require('path');
+
+module.exports = {
+  entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, 'dist/assets'),
+    filename: 'bundle.js'
+  },
+  devServer: {
+    contentBase: path.resolve(__dirname, 'dist'),
+    publicPath: '/assets/'
+  }
+};
+
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// package.json - 修改前
+
+{
+  "name": "modern-javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "babel": "babel src/index.js -w -o dist/assets/bundle.js",
+    "webpack": "webpack -w",
+    "serve": "webpack-dev-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.17.0",
+    "@babel/core": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "webpack": "^5.68.0",
+    "webpack-cli": "^4.9.2"
+  },
+  "dependencies": {
+    "webpack-dev-server": "^4.7.4"
+  }
+}
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// webpack.config.js - 修改後
+
+const path = require('path');
+
+module.exports = {
+  entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, 'dist/assets'),
+    filename: 'bundle.js'
+  },
+  devServer: {
+    static: {
+      directory: path.join(__dirname, 'dist'),
+    }
+  }
+};
+
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.js - 測試
+
+import {styleBody, addTitle, contact} from './dom';
+import users, { getPremUsers } from './data';
+
+const premUsers = getPremUsers(users);
+console.log(users, premUsers);
+
+console.log('test 2');</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// webpack.config.js - 再次修改 devServer
+
+const path = require('path');
+
+module.exports = {
+  mode: 'none',
+  entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, 'dist/assets'),
+    filename: 'bundle.js'
+  },
+  devServer: {
+    static: {
+      directory: path.join(__dirname, 'dist')
+    },
+    devMiddleware: {
+      publicPath: '/assets'
+    }
+  },
+};
+
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.js - 再測試
+
+import {styleBody, addTitle, contact} from './dom';
+import users, { getPremUsers } from './data';
+
+const premUsers = getPremUsers(users);
+console.log(users, premUsers);
+
+console.log('test 3');</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Production &amp; Development Modes</h3>
+
+
+
+<p>可重複觀看、練習。</p>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ul>
+<li>修改 package.json 的 “scripts” 指令<ul>
+<li>移除 “babel” 指令</li>
+<li>修改 “webpack” 指令改成 “build” 指令</li>
+</ul>
+</li>
+<li>停止 Terminal 終端機 Ctrl + c</li>
+<li>執行指令 npm run build，就會看到 bundle.js 編譯出程式碼</li>
+<li>終端機出現警告是關於沒有設定 mode 的訊息</li>
+<li>在 package.json “scripts” 指令 “build”、”serve” 設定 mode<ul>
+<li>“build”: “webpack –mode production”</li>
+<li>“serve”: “webpack-dev-server –mode development”</li>
+</ul>
+</li>
+<li>在終端機先使用 clear 清楚終端機畫面，執行 npm run build 指令</li>
+<li>執行 npm run serve 指令</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// package.json - 1
+
+{
+  "name": "modern-javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "serve": "webpack-dev-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.17.0",
+    "@babel/core": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "webpack": "^5.68.0",
+    "webpack-cli": "^4.9.2"
+  },
+  "dependencies": {
+    "webpack-dev-server": "^4.7.4"
+  }
+}
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// webpack.config.js - 把 mode 移除
+
+const path = require('path');
+
+module.exports = {
+  entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, 'dist/assets'),
+    filename: 'bundle.js'
+  },
+  devServer: {
+    static: {
+      directory: path.join(__dirname, 'dist')
+    },
+    devMiddleware: {
+      publicPath: '/assets'
+    }
+  },
+};
+
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// package.json - 2 mode 設定
+
+{
+  "name": "modern-javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "serve": "webpack-dev-server --mode development"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.17.0",
+    "@babel/core": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "webpack": "^5.68.0",
+    "webpack-cli": "^4.9.2"
+  },
+  "dependencies": {
+    "webpack-dev-server": "^4.7.4"
+  }
+}
+</code></pre>
+
+
+
+<h4>webpack 指令模式</h4>
+
+
+
+<ul>
+<li>production mode 上線模式</li>
+<li>development mode 開發模式</li>
+</ul>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Babel &amp; Webpack Together</h3>
+
+
+
+<p>可重複觀看、練習。</p>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ul>
+<li>安裝 babel-loader 套件<ul><li>終端機指令 npm install babel-loader –save-dev</li></ul>
+</li>
+<li>在 webpack.config.js 新增 module 程式碼</li>
+<li>在 data.js 我們有使用箭頭函式</li>
+<li>在 Terminal 終端機輸入指令<ul><li>npm run build</li></ul>
+</li>
+<li>查看 bundle.js 是否有編譯成以前的程式碼</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// webpack.config.js
+
+const path = require('path');
+
+module.exports = {
+  entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, 'dist/assets'),
+    filename: 'bundle.js'
+  },
+  devServer: {
+    static: {
+      directory: path.join(__dirname, 'dist')
+    },
+    devMiddleware: {
+      publicPath: '/assets'
+    }
+  },
+  module: {
+    rules: &#91;{
+      test: /\.js$/,
+      exclude: /node_modules/,
+      use: {
+        loader: 'babel-loader',
+        options: {
+          presets: &#91;'@babel/preset-env']
+        }
+      }
+    }]
+  }
+};
+
+</code></pre>
+
+
+
+<h3>Webpack Boilerplate (Webpack 樣板)</h3>
+
+
+
+<p>可以下載 Webpack Boilerplate (Webpack 樣板) 使用。</p>
+
+
+
+<h4>資源</h4>
+
+
+
+<ul><li><a href="https://github.com/iamshaunjp/modern-javascript/tree/lesson-165" target="_blank" rel="noreferrer noopener">Link to Boilerplate Webpack Template on GitHub</a></li></ul>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ul>
+<li>下載 Webpack Boilerplate</li>
+<li>複製 Boilerplate 裡面的檔案，貼到自己的 project 專案</li>
+<li>可以藉由 package.json 檔案裡面的套件名稱、版本安裝 node_modules 資料夾<ul><li>終端機指令 npm install</li></ul>
+</li>
+<li>在 package.json 找到 “scripts” 指令，並執行 “serve” 指令<ul><li>npm run serve</li></ul>
+</li>
+<li>打開終端機出現的本地端網址，在 Google Console 上並沒有出現任何程式碼</li>
+<li>在 index.js 撰寫程式碼</li>
+<li>查看 Google Console 是否有出現 console 結果</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// index.js
+
+console.log('hello, ninjas');</code></pre>
+
+
+
+<h2 class="has-background" style="background-color:#ff6663">Project – UI Library</h2>
+
+
+
+<p>比較複雜，可重複觀看、練習。</p>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Project Preview &amp; Setup</h3>
+
+
+
+<p>可重複觀看、練習。</p>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ul>
+<li>下載 Webpack Boilerplate</li>
+<li>建立一個資料夾 ui-lib-project</li>
+<li>複製 Webpack Boilerplate 裡面的檔案到 ui-lib-project 資料夾</li>
+<li>打開 Terminal 終端機移動到專案位置 cd ui-lib-project</li>
+<li>安裝 package.json 裡面的所有套件<ul><li>指令 npm install</li></ul>
+</li>
+<li>查看 package.json 上的 “scripts” 指令中的 “serve” 指令<ul><li>執行指令 npm run serve</li></ul>
+</li>
+<li>開啟終端機上的本地端網址</li>
+<li>藉由 index.js 測試是否有正常運行</li>
+<li>查看 Google Console 有無出現 console 結果</li>
+<li>在 src 資料夾裡面建立 ninja-ui 資料夾</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// index.js
+
+console.log('test');</code></pre>
+
+
+
+<h4>UI Library CSS</h4>
+
+
+
+<p>Keep the library css in JavaScript together inside the folder right here. And that means we’re going to need to process our css through webpack using css loader, because this is in the source folder, not the distribution folder.</p>
+
+
+
+<p>在下一章節會講到如何透過 Webpack 處理 CSS。</p>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">CSS &amp; Style Loaders (webpack)</h3>
+
+
+
+<p>可重複觀看、練習。</p>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ul>
+<li>停止終端機 Ctrl + C</li>
+<li>安裝 css-loader、style-loader 套件<ul><li>終端機指令 npm install css-loader style-loader –save-dev</li></ul>
+</li>
+<li>在 webpack.config.js module 的 rules 裡面程式碼新增第二個</li>
+<li>執行 “scripts” 指令 npm run serve</li>
+<li>在 src 資料夾新增一個 test.css 檔案</li>
+<li>使用終端機打開本地端網頁，沒有產生渲染結果，因為我們沒有 import 這個 css 檔案</li>
+<li>在 index.js import 載入 test.css</li>
+<li>查看 Goolge Elemets 在 &lt;head&gt; 可以看到 CSS 樣式</li>
+<li>在 ninja_ui 資料夾建立一個 styles 資料夾</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// webpack.config.js
+
+const path = require('path');
+
+module.exports = {
+  entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, 'dist/assets'),
+    filename: 'bundle.js'
+  },
+  devServer: {
+    static: {
+      directory: path.join(__dirname, 'dist')
+    },
+    devMiddleware: {
+      publicPath: '/assets'
+    }
+  },
+  module: {
+    rules: &#91;
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: &#91;'@babel/preset-env']
+          }
+        }
+      },
+      {
+        test: /\.css$/,
+        use: &#91;'style-loader', 'css-loader']
+      }
+    ]
+  }
+};
+
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// test.css
+
+body {
+  background: orange;
+}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.js
+
+import './test.css';
+
+console.log('test');</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Tooltips (工具提示框)</h3>
+
+
+
+<p>可重複觀看、練習。</p>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ul>
+<li>在 index.html 新增程式碼內容、樣式</li>
+<li>在 ninja-ui 資料夾建立 tooltip.js 檔案</li>
+<li>在 index.js import 載入 Tooltip、並 create a tooltip，在那之前要先在 tooltip.js export 匯出</li>
+<li>在 styles 資料夾建立 tooltip.css 檔案</li>
+<li>在 tooltip.js import 載入 tooltip.css</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;UI Library&lt;/title&gt;
+  &lt;style&gt;
+    body {
+      font-size: 1.5em;
+    }
+
+    .container {
+      margin: 40px;
+      margin-top: 60px;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  
+  &lt;div class="container"&gt;
+    &lt;!-- tooltop --&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, reiciendis vel mollitia neque libero nulla, earum, nisi a distinctio doloremque porro aliquam. Alias, ratione. Laudantium neque enim et ipsa corrupti. &lt;span class="tooltip" data-message="I'm a tooltip!!"&gt;Lorem, ipsum.&lt;/span&gt;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi sequi natus pariatur odio repudiandae provident. Accusamus quidem quaerat, enim beatae dolorum iusto in iure similique esse tempora animi, non eveniet!&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;script src="assets/bundle.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// tooltip.js - 1
+
+class Tooltip {
+  constructor(element){
+    this.element = element;
+    this.message = element.getAttribute('data-message');
+  }
+  init(){
+    const tip = document.createElement('div');
+    tip.classList.add('tip');
+    tip.textContent = this.message;
+    this.element.appendChild(tip);
+  }
+}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// tooltip.js - 2 export 匯出
+
+class Tooltip {
+  constructor(element){
+    this.element = element;
+    this.message = element.getAttribute('data-message');
+  }
+  init(){
+    const tip = document.createElement('div');
+    tip.classList.add('tip');
+    tip.textContent = this.message;
+    this.element.appendChild(tip);
+  }
+}
+
+export { Tooltip as default };</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.js
+
+import Tooltip from './ninja-ui/tooltip';
+
+// create a tooltip
+const tooltip = new Tooltip(document.querySelector('.tooltip'));
+
+tooltip.init();
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// tooltip.js - 3 addEventListener
+
+class Tooltip {
+  constructor(element){
+    this.element = element;
+    this.message = element.getAttribute('data-message');
+  }
+  init(){
+    const tip = document.createElement('div');
+    tip.classList.add('tip');
+    tip.textContent = this.message;
+    this.element.appendChild(tip);
+
+    this.element.addEventListener('mouseenter', () =&gt; {
+      tip.classList.add('active');
+    });
+
+    this.element.addEventListener('mouseleave', () =&gt; {
+      tip.classList.remove('active');
+    });
+  }
+}
+
+export { Tooltip as default };</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// styles/tooltip.css
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  color: #ff6565;
+  border-bottom: 1px dotted #ff6565;
+  cursor: help;
+}
+.tip {
+  visibility: hidden;
+  width: 150px;
+  background-color: #ff6565;
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px 0;
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.tip.active {
+  visibility: visible;
+  opacity: 1;
+}
+.tip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -4px;
+  border-width: 4px;
+  border-style: solid;
+  border-color: transparent;
+  border-top-color: #ff6565;
+}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// tooltip.js - 4
+
+import './styles/tooltip.css';
+
+class Tooltip {
+  constructor(element){
+    this.element = element;
+    this.message = element.getAttribute('data-message');
+  }
+  init(){
+    const tip = document.createElement('div');
+    tip.classList.add('tip');
+    tip.textContent = this.message;
+    this.element.appendChild(tip);
+
+    this.element.addEventListener('mouseenter', () =&gt; {
+      tip.classList.add('active');
+    });
+
+    this.element.addEventListener('mouseleave', () =&gt; {
+      tip.classList.remove('active');
+    });
+  }
+}
+
+export { Tooltip as default };</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Dropdowns</h3>
+
+
+
+<p>可重複觀看、練習。</p>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ul>
+<li>在 index.html 新增程式碼內容</li>
+<li>在 ninja-ui 資料夾建立 dropdown.js 檔案</li>
+<li>在 index.js import 載入 Dropdown、並 create dropdowns</li>
+<li>使用 Google 檢查、藉由點擊觸發監聽行為</li>
+<li>在 styles 資料夾建立 dropdown.css 檔案、新增程式碼內容</li>
+<li>在 dropdown.js import 載入 dropdown.css</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;UI Library&lt;/title&gt;
+  &lt;style&gt;
+    body {
+      font-size: 1.5em;
+    }
+
+    .container {
+      margin: 40px;
+      margin-top: 60px;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  
+  &lt;div class="container"&gt;
+    &lt;!-- tooltop --&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, reiciendis vel mollitia neque libero nulla, earum, nisi a distinctio doloremque porro aliquam. Alias, ratione. Laudantium neque enim et ipsa corrupti. &lt;span class="tooltip" data-message="I'm a tooltip!!"&gt;Lorem, ipsum.&lt;/span&gt;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi sequi natus pariatur odio repudiandae provident. Accusamus quidem quaerat, enim beatae dolorum iusto in iure similique esse tempora animi, non eveniet!&lt;/p&gt;
+    &lt;h2&gt;Services&lt;/h2&gt;
+    &lt;!-- dropdowns --&gt;
+    &lt;div class="dropdown"&gt;
+      &lt;div class="trigger"&gt;Awesome T-shirt Designs&lt;/div&gt;
+      &lt;div class="content"&gt;
+        &lt;p&gt;Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi minus non sed assumenda molestiae amet quisquam temporibus ratione dolorem. Ea non quibusdam eveniet eum tempora molestiae asperiores labore, dolorum iste.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="dropdown"&gt;
+      &lt;div class="trigger"&gt;Cool Sticker Printing&lt;/div&gt;
+      &lt;div class="content"&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quidem nihil nam quasi consequatur deserunt nemo alias corrupti ex at nisi fugit veritatis veniam voluptate error recusandae, dolorem debitis unde.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;script src="assets/bundle.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// dropdown.js
+
+class Dropdown {
+  constructor(container){
+    this.container = container;
+    this.trigger = container.querySelector('.trigger');
+    this.content = container.querySelector('.content');
+  }
+  init(){
+    this.trigger.addEventListener('click', () =&gt; {
+      this.trigger.classList.toggle('active');
+      this.content.classList.toggle('active');
+    })
+  }
+}
+
+export { Dropdown as default };</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.js
+
+import Tooltip from './ninja-ui/tooltip';
+import Dropdown from './ninja-ui/dropdown';
+
+// create a tooltip
+const tooltip = new Tooltip(document.querySelector('.tooltip'));
+
+tooltip.init();
+
+// create dropdowns
+const dropdowns = document.querySelectorAll('.dropdown');
+
+dropdowns.forEach(dropdown =&gt; {
+  const instance = new Dropdown(dropdown);
+  instance.init();
+})</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// dropdown.css
+
+.dropdown .trigger{
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+  position: relative;
+  cursor: pointer;
+}
+.dropdown .trigger::after{
+  content: "&gt;";
+  display: inline-block;
+  position: absolute;
+  right: 15px;
+  transform: rotate(90deg) scale(0.5, 1);
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+.dropdown .trigger.active::after{
+  transform: rotate(-90deg) scale(0.5, 1);
+}
+.dropdown .content{
+  display: none;
+}
+.dropdown .content.active{
+  display: block;
+}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// dropdown.js import 載入 dropdown.css
+
+import './styles/dropdown.css';
+
+class Dropdown {
+  constructor(container){
+    this.container = container;
+    this.trigger = container.querySelector('.trigger');
+    this.content = container.querySelector('.content');
+  }
+  init(){
+    this.trigger.addEventListener('click', () =&gt; {
+      this.trigger.classList.toggle('active');
+      this.content.classList.toggle('active');
+    })
+  }
+}
+
+export { Dropdown as default };</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Tabbed Content (頁籤內容)</h3>
+
+
+
+<p>可重複觀看、練習。</p>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ul>
+<li>新增 index.html Tabbed Content 內容</li>
+<li>使用終端機執行指令 npm run serve 看網頁是否有新增 Tabbed Content 內容</li>
+<li>在 ninja-ui 資料夾建立 tabs.js 檔案，新增 tabs.js 程式碼、export 預設匯出 Tabs</li>
+<li>在 index.js import 載入 Tabs 從 tabs.js，並在下面 create tabs</li>
+<li>在 Google Console 出現錯誤，在 tabs.js 的地方、我們必需把 querySelector 改成 querySelectorAll</li>
+<li>在 Google Elements 測試點擊頁籤看是否會切換 active</li>
+<li>在 styles 資料夾新增 tabs.css 檔案，並新增 CSS 樣式</li>
+<li>在 tabs.js import 載入 tabs.css</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;UI Library&lt;/title&gt;
+  &lt;style&gt;
+    body {
+      font-size: 1.5em;
+    }
+
+    .container {
+      margin: 40px;
+      margin-top: 60px;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  
+  &lt;div class="container"&gt;
+    &lt;!-- tooltop --&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, reiciendis vel mollitia neque libero nulla, earum, nisi a distinctio doloremque porro aliquam. Alias, ratione. Laudantium neque enim et ipsa corrupti. &lt;span class="tooltip" data-message="I'm a tooltip!!"&gt;Lorem, ipsum.&lt;/span&gt;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi sequi natus pariatur odio repudiandae provident. Accusamus quidem quaerat, enim beatae dolorum iusto in iure similique esse tempora animi, non eveniet!&lt;/p&gt;
+    &lt;h2&gt;Services&lt;/h2&gt;
+    &lt;!-- dropdowns --&gt;
+    &lt;div class="dropdown"&gt;
+      &lt;div class="trigger"&gt;Awesome T-shirt Designs&lt;/div&gt;
+      &lt;div class="content"&gt;
+        &lt;p&gt;Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi minus non sed assumenda molestiae amet quisquam temporibus ratione dolorem. Ea non quibusdam eveniet eum tempora molestiae asperiores labore, dolorum iste.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="dropdown"&gt;
+      &lt;div class="trigger"&gt;Cool Sticker Printing&lt;/div&gt;
+      &lt;div class="content"&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quidem nihil nam quasi consequatur deserunt nemo alias corrupti ex at nisi fugit veritatis veniam voluptate error recusandae, dolorem debitis unde.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;h2&gt;More information&lt;/h2&gt;
+    &lt;!-- tabs --&gt;
+    &lt;div class="tabs"&gt;
+      &lt;ul&gt;
+        &lt;li class="trigger active" data-target="#about"&gt;About&lt;/li&gt;
+        &lt;li class="trigger" data-target="#delivery"&gt;Delivery info&lt;/li&gt;
+        &lt;li class="trigger" data-target="#returns"&gt;Returns info&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;div id="about" class="content active"&gt;
+        &lt;h3&gt;about&lt;/h3&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo natus sequi nemo sint error cupiditate praesentium nisi commodi, beatae laborum quisquam ea, atque recusandae totam optio suscipit, ab corrupti illo.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div id="delivery" class="content"&gt;
+        &lt;h3&gt;delivery&lt;/h3&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore autem quisquam architecto aliquam. Corporis veniam recusandae doloribus, vitae illum voluptate earum impedit molestiae deleniti voluptatum inventore voluptates! Delectus, quia excepturi?&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div id="returns" class="content"&gt;
+        &lt;h3&gt;returns&lt;/h3&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, ullam aut! Saepe, pariatur! Est aperiam provident dicta cum. Dolorum doloremque error id! Veniam aut architecto necessitatibus reiciendis officiis quisquam delectus!&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;script src="assets/bundle.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// tabs.js
+
+class Tabs{
+  constructor(container){
+    this.container = container;
+    this.tabs = container.querySelector('.trigger');
+  }
+  init(){
+    this.tabs.forEach(tab =&gt; {
+      tab.addEventListener('click', e =&gt; {
+        this.toggleTabs(e);
+        this.toggleContent(e);
+      })
+    })
+  }
+  toggleTabs(e){
+    // remove current active classes
+    this.tabs.forEach(tab =&gt; tab.classList.remove('active'));
+    // add new active class to clicked tab
+    e.target.classList.add('active'); 
+  }
+  toggleContent(e){
+    // remove current active classes from content
+    this.container.querySelectorAll('.content').forEach(item =&gt; {
+      item.classList.remove('active');
+    });
+    // add new active class to content
+    const selector = e.target.getAttribute('data-target');
+    const content = this.container.querySelector(selector);
+    content.classList.add('active');
+  }
+}
+
+export { Tabs as default };</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.js
+
+import Tooltip from './ninja-ui/tooltip';
+import Dropdown from './ninja-ui/dropdown';
+import Tabs from './ninja-ui/tabs';
+
+// create a tooltip
+const tooltip = new Tooltip(document.querySelector('.tooltip'));
+
+tooltip.init();
+
+// create dropdowns
+const dropdowns = document.querySelectorAll('.dropdown');
+
+dropdowns.forEach(dropdown =&gt; {
+  const instance = new Dropdown(dropdown);
+  instance.init();
+});
+
+// create tabs
+const tabs = new Tabs(document.querySelector('.tabs'));
+tabs.init();</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// tabs.js - 把第4行 querySelector 改成 querySelectorAll
+
+class Tabs{
+  constructor(container){
+    this.container = container;
+    this.tabs = container.querySelectorAll('.trigger');
+  }
+  init(){
+    this.tabs.forEach(tab =&gt; {
+      tab.addEventListener('click', e =&gt; {
+        this.toggleTabs(e);
+        this.toggleContent(e);
+      })
+    })
+  }
+  toggleTabs(e){
+    // remove current active classes
+    this.tabs.forEach(tab =&gt; tab.classList.remove('active'));
+    // add new active class to clicked tab
+    e.target.classList.add('active'); 
+  }
+  toggleContent(e){
+    // remove current active classes from content
+    this.container.querySelectorAll('.content').forEach(item =&gt; {
+      item.classList.remove('active');
+    });
+    // add new active class to content
+    const selector = e.target.getAttribute('data-target');
+    const content = this.container.querySelector(selector);
+    content.classList.add('active');
+  }
+}
+
+export { Tabs as default };</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// tabs.css
+
+.tabs &gt; ul {
+  padding: 0;
+}
+.tabs .trigger {
+  list-style-type: none;
+  padding: 10px;
+  background: #f2f2f2;
+  margin: 4px;
+  border-radius: 6px;
+  display: inline-block;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.tabs .trigger.active {
+  background: #ff6565;
+  color: white;
+}
+.tabs .content {
+  background: #fbfbfb;
+  padding: 10px 20px;
+  border-radius: 6px;
+  display: none;
+}
+.tabs .content.active {
+  display: block;
+}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// tabs.js
+
+import './styles/tabs.css';
+
+class Tabs{
+  constructor(container){
+    this.container = container;
+    this.tabs = container.querySelectorAll('.trigger');
+  }
+  init(){
+    this.tabs.forEach(tab =&gt; {
+      tab.addEventListener('click', e =&gt; {
+        this.toggleTabs(e);
+        this.toggleContent(e);
+      })
+    })
+  }
+  toggleTabs(e){
+    // remove current active classes
+    this.tabs.forEach(tab =&gt; tab.classList.remove('active'));
+    // add new active class to clicked tab
+    e.target.classList.add('active'); 
+  }
+  toggleContent(e){
+    // remove current active classes from content
+    this.container.querySelectorAll('.content').forEach(item =&gt; {
+      item.classList.remove('active');
+    });
+    // add new active class to content
+    const selector = e.target.getAttribute('data-target');
+    const content = this.container.querySelector(selector);
+    content.classList.add('active');
+  }
+}
+
+export { Tabs as default };</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Snackbars</h3>
+
+
+
+<p>可重複觀看、練習。</p>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ul>
+<li>在 index.html 新增 snackbars 內容、以及按鈕的 CSS 樣式</li>
+<li>在 ninja-ui 資料夾建立 snackbar.js 檔案，新增 Snackbar 程式碼內容、以及 export 預設載入 Snackbar</li>
+<li>在 index.js import 匯入 Snackbar 從 snackbar.js，並在下面 create snackbar</li>
+<li>在 Google Elements 可在 &lt;body&gt; 之前看到 snackbar 類別</li>
+<li>在 snackbar.js 新增 show() 方法</li>
+<li>在 index.js 新增關於 button addEventListener 按鈕監聽</li>
+<li>在網頁點擊按鈕後會出現文字</li>
+<li>在 styles 資料夾建立 snackbar.css 檔案、並新增 CSS 內容</li>
+<li>在 snackbar.js import 載入 snackbar.css</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;UI Library&lt;/title&gt;
+  &lt;style&gt;
+    body {
+      font-size: 1.5em;
+    }
+
+    .container {
+      margin: 40px;
+      margin-top: 60px;
+    }
+
+    button {
+      width: 200px;
+      background: #eee;
+      padding: 10px;
+      margin: 20px auto;
+      border: none;
+      border-radius: 4px;
+      font-size: 1em;
+      cursor: pointer;
+      display: block;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  
+  &lt;div class="container"&gt;
+    &lt;!-- tooltop --&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, reiciendis vel mollitia neque libero nulla, earum, nisi a distinctio doloremque porro aliquam. Alias, ratione. Laudantium neque enim et ipsa corrupti. &lt;span class="tooltip" data-message="I'm a tooltip!!"&gt;Lorem, ipsum.&lt;/span&gt;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi sequi natus pariatur odio repudiandae provident. Accusamus quidem quaerat, enim beatae dolorum iusto in iure similique esse tempora animi, non eveniet!&lt;/p&gt;
+    &lt;h2&gt;Services&lt;/h2&gt;
+    &lt;!-- dropdowns --&gt;
+    &lt;div class="dropdown"&gt;
+      &lt;div class="trigger"&gt;Awesome T-shirt Designs&lt;/div&gt;
+      &lt;div class="content"&gt;
+        &lt;p&gt;Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi minus non sed assumenda molestiae amet quisquam temporibus ratione dolorem. Ea non quibusdam eveniet eum tempora molestiae asperiores labore, dolorum iste.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="dropdown"&gt;
+      &lt;div class="trigger"&gt;Cool Sticker Printing&lt;/div&gt;
+      &lt;div class="content"&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quidem nihil nam quasi consequatur deserunt nemo alias corrupti ex at nisi fugit veritatis veniam voluptate error recusandae, dolorem debitis unde.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;h2&gt;More information&lt;/h2&gt;
+    &lt;!-- tabs --&gt;
+    &lt;div class="tabs"&gt;
+      &lt;ul&gt;
+        &lt;li class="trigger active" data-target="#about"&gt;About&lt;/li&gt;
+        &lt;li class="trigger" data-target="#delivery"&gt;Delivery info&lt;/li&gt;
+        &lt;li class="trigger" data-target="#returns"&gt;Returns info&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;div id="about" class="content active"&gt;
+        &lt;h3&gt;about&lt;/h3&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo natus sequi nemo sint error cupiditate praesentium nisi commodi, beatae laborum quisquam ea, atque recusandae totam optio suscipit, ab corrupti illo.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div id="delivery" class="content"&gt;
+        &lt;h3&gt;delivery&lt;/h3&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore autem quisquam architecto aliquam. Corporis veniam recusandae doloribus, vitae illum voluptate earum impedit molestiae deleniti voluptatum inventore voluptates! Delectus, quia excepturi?&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div id="returns" class="content"&gt;
+        &lt;h3&gt;returns&lt;/h3&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, ullam aut! Saepe, pariatur! Est aperiam provident dicta cum. Dolorum doloremque error id! Veniam aut architecto necessitatibus reiciendis officiis quisquam delectus!&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;button class="snackbar-trigger"&gt;click me&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;script src="assets/bundle.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// snackbar.js
+
+class Snackbar {
+  constructor(){
+    this.snackbar = document.createElement('div');
+  }
+  init(){
+    this.snackbar.classList.add('snackbar');
+    document.querySelector('body').appendChild(this.snackbar);
+  }
+}
+
+export { Snackbar as default };</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.js
+
+import Tooltip from './ninja-ui/tooltip';
+import Dropdown from './ninja-ui/dropdown';
+import Tabs from './ninja-ui/tabs';
+import Snackbar from './ninja-ui/snackbar';
+
+// create a tooltip
+const tooltip = new Tooltip(document.querySelector('.tooltip'));
+
+tooltip.init();
+
+// create dropdowns
+const dropdowns = document.querySelectorAll('.dropdown');
+
+dropdowns.forEach(dropdown =&gt; {
+  const instance = new Dropdown(dropdown);
+  instance.init();
+});
+
+// create tabs
+const tabs = new Tabs(document.querySelector('.tabs'));
+tabs.init();
+
+// create snackbar
+const snackbar = new Snackbar();
+snackbar.init();</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// snackbar.js - show()
+
+class Snackbar {
+  constructor(){
+    this.snackbar = document.createElement('div');
+  }
+  init(){
+    this.snackbar.classList.add('snackbar');
+    document.querySelector('body').appendChild(this.snackbar);
+  }
+  show(message){
+    this.snackbar.textContent = message;
+    this.snackbar.classList.add('active');
+    setTimeout(() =&gt; {
+      this.snackbar.classList.remove('active');
+    }, 4000);
+  }
+}
+
+export { Snackbar as default };</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.js - button addEventListener
+
+import Tooltip from './ninja-ui/tooltip';
+import Dropdown from './ninja-ui/dropdown';
+import Tabs from './ninja-ui/tabs';
+import Snackbar from './ninja-ui/snackbar';
+
+// create a tooltip
+const tooltip = new Tooltip(document.querySelector('.tooltip'));
+
+tooltip.init();
+
+// create dropdowns
+const dropdowns = document.querySelectorAll('.dropdown');
+
+dropdowns.forEach(dropdown =&gt; {
+  const instance = new Dropdown(dropdown);
+  instance.init();
+});
+
+// create tabs
+const tabs = new Tabs(document.querySelector('.tabs'));
+tabs.init();
+
+// create snackbar
+const snackbar = new Snackbar();
+snackbar.init();
+
+const button = document.querySelector('button');
+button.addEventListener('click', () =&gt; {
+  snackbar.show('you clicked me :)');
+});</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// styles/snackbar.css
+
+.snackbar {
+  width: 200px;
+  padding: 20px;
+  position: fixed;
+  left: 50%;
+  margin-left: -120px;
+  top: 0;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 1px 3px 5px rgba(0,0,0,0.2);
+  background: #ff6565;
+  text-align: center;
+  color: #fff;
+  margin-top: -100%;
+  transition: all 0.2s;
+}
+.snackbar.active {
+  margin-top: 0;
+}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// snackbar.js - import 載入 snackbar.css
+
+import './styles/snackbar.css';
+
+class Snackbar {
+  constructor(){
+    this.snackbar = document.createElement('div');
+  }
+  init(){
+    this.snackbar.classList.add('snackbar');
+    document.querySelector('body').appendChild(this.snackbar);
+  }
+  show(message){
+    this.snackbar.textContent = message;
+    this.snackbar.classList.add('active');
+    setTimeout(() =&gt; {
+      this.snackbar.classList.remove('active');
+    }, 4000);
+  }
+}
+
+export { Snackbar as default };</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Extending the Library</h3>
+
+
+
+<h4>build and upload our final project (建立以及上傳你最終專案)</h4>
+
+
+
+<ul>
+<li>在 package.json 查看 “scripts” 指令</li>
+<li>執行 “build” 指令 npm run build</li>
+</ul>
+
+
+
+<h4>延伸使用 Library</h4>
+
+
+
+<ul><li>ninja-ui 資料夾可以複製到不同專案上使用</li></ul>
+
+
+
+<h2 class="has-background" style="background-color:#ff6663">Using Firebase Database (&amp; Auth) Version 9</h2>
+
+
+
+<p>更新之前 Databases (Firebase) 章節。</p>
+
+
+
+<h3>What’s New in Firebase 9?</h3>
+
+
+
+<h4>Firebase Documentation</h4>
+
+
+
+<ul>
+<li><a href="https://firebase.google.com/docs/web/modular-upgrade?authuser=0" target="_blank" rel="noreferrer noopener">升級到 v9 模塊化 SDK</a></li>
+<li><a rel="noreferrer noopener" href="https://firebase.google.com/docs/auth/web/password-auth?authuser=0" target="_blank">密碼驗證</a></li>
+</ul>
+
+
+
+<h4>資源</h4>
+
+
+
+<ul>
+<li><a rel="noreferrer noopener" href="https://github.com/iamshaunjp/Getting-Started-with-Firebase-9" target="_blank">Getting-Started-with-Firebase-9 GitHub</a></li>
+<li><a rel="noreferrer noopener" href="https://nodejs.org/en/" target="_blank">Node.js</a></li>
+</ul>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Webpack Setup</h3>
+
+
+
+<p>可重複觀看、練習。</p>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ul>
+<li>建立一個專案資料夾 firebase-9-dojo</li>
+<li>在專案裡面建立 src 資料夾</li>
+<li>在 src 資料夾建立 index.js 檔案，當作 entry file 進入點</li>
+<li>在專案裡面建立 dist 資料夾</li>
+<li>在 dist 資料夾建立 index.html 檔案，並新增 index.html 內容</li>
+<li>打開 Terminal 終端機執行初始化指令 npm init -y 快速建立 package.json 檔案</li>
+<li>使用 Terminal 終端機安裝 webpack、webpack-cli 套件<ul><li>npm i webpack webpack-cli -D</li></ul>
+</li>
+<li>在專案裡新增 webpack.config.js 檔案、並設定 webpack</li>
+<li>在 package.json “scripts” 指令設定客製化指令<ul><li>“build”: “webpack”，build 可以自行設定指令名稱</li></ul>
+</li>
+<li>在 index.js 新增一些程式碼，確認是否能正確運作</li>
+<li>打開 Terminal 終端機，先使用 clear 指令清除終端機畫面、接著執行 npm run build，會產生 bundle.js 檔案</li>
+<li>在 index.html 新增&lt;script&gt; 把 bundle.js 載入</li>
+<li>使用 live server 插件 (沒有安裝需到 Extensions 搜尋安裝)、執行 live server</li>
+<li>查看 Google Console 看是否有正確顯示</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Firebase 9&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Getting started with firebase 9&lt;/h1&gt;
+  
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// webpack.config.js
+
+const path = require('path');
+
+module.exports = {
+  mode: 'development',
+  entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js'
+  },
+  watch: true
+}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// package.json
+
+{
+  "name": "firebase-9-dojo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" &amp;&amp; exit 1",
+    "build": "webpack"
+  },
+  "keywords": &#91;],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.68.0",
+    "webpack-cli": "^4.9.2"
+  }
+}
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.js
+
+console.log('hello from index.js');</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Firebase 9&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Getting started with firebase 9&lt;/h1&gt;
+  
+  &lt;script src="bundle.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Creating a Firebase Project</h3>
+
+
+
+<p>可重複觀看、練習。</p>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ul>
+<li>到 Firebase Console (控制台)</li>
+<li>Add project (新增專案)</li>
+<li>Firebase name – Firebase 9 Dojo、然後按下繼續</li>
+<li>我們這個專案不需要 Google Analytics (Google 分析)、然後按下建立專案、完成後按繼續</li>
+<li>將 Firebase 新增至應用程式即可開始使用，點選網頁</li>
+<li>Register app (註冊應用程式)<ul><li>App nickname: firebase 9 dojo website</li></ul>
+</li>
+<li>Continue to console (前往控制台)</li>
+<li>點擊 1個 個應用程式、設定按鈕</li>
+<li>在 SDK 設定和配置，選擇設定、並複製下面的程式碼</li>
+<li>在 index.js 先把 console.log 程式碼移除、並把剛複製的程式碼貼上、在儲存之前我們先打開終端機安裝 firebase 套件，安裝後儲存<ul><li>npm install firebase</li></ul>
+</li>
+<li>在 index.js import 載入 firebase、複習 8 的版本、如何使用 9 的版本</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// index.js - 1 API串接資料查詢 Firebase
+
+const firebaseConfig = {
+  apiKey: "",
+  authDomain: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: ""
+};</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.js - 2 Firebase 8 版本
+
+import firebase from 'firebase/app'
+
+const firebaseConfig = {
+  apiKey: "",
+  authDomain: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: ""
+};
+
+firebase.initializeApp(firebaseConfig)</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.js - 3 Firebase 9 版本
+
+import { initializeApp } from 'firebase/app'
+
+const firebaseConfig = {
+  apiKey: "",
+  authDomain: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: ""
+};
+
+initializeApp(firebaseConfig)</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Firestore Setup &amp; Fetching Data</h3>
+
+
+
+<p>可重複觀看、練習。</p>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ul>
+<li>建立 Firestore Database</li>
+<li>點擊建立資料庫、在這我們先使用以測試模式啟動</li>
+<li>設定 Cloud Firestore 位置、然後啟用</li>
+<li>點擊新增集合、集合 ID 叫做 books、然後按下一步</li>
+<li>新增第一份文件、文件 ID 使用自動產生的 ID、欄位 title, 類型 string, 值 the name of the wind、欄位 author, 類型 string, 值 patrick rothfuss，然後按下儲存</li>
+<li>再新增兩份類似的文件，欄位 title, 類型 string, 值 the wise man’s fear、欄位 author, 類型 string, 值 patrick rothfuss，然後按下儲存，欄位 title, 類型 string, 值 the final empire、欄位 author, 類型 string, 值 brandon sanders，然後按下儲存</li>
+<li>在 index.js 新增新的註解、程式碼</li>
+<li>使用 live server、查看 Google Console</li>
+<li>修改 index.js get collection data 程式碼，然後再次查看 Google Console</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// index.js - API串接資料查看 Firebase
+
+import { initializeApp } from 'firebase/app'
+import {
+  getFirestore, collection, getDocs
+} from 'firebase/firestore'
+
+const firebaseConfig = {
+  apiKey: "",
+  authDomain: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: ""
+};
+
+// init firebase app
+initializeApp(firebaseConfig)
+
+// init services
+const db = getFirestore()
+
+// collection ref
+const colRef = collection(db, 'books')
+
+// get collection data
+getDocs(colRef)
+  .then((snapshot) =&gt; {
+    console.log(snapshot.docs)
+  })</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.js 修改 get collection data
+// API 串接資料查閱 Firebase
+
+import { initializeApp } from 'firebase/app'
+import {
+  getFirestore, collection, getDocs
+} from 'firebase/firestore'
+
+const firebaseConfig = {
+  apiKey: "",
+  authDomain: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: ""
+};
+
+// init firebase app
+initializeApp(firebaseConfig)
+
+// init services
+const db = getFirestore()
+
+// collection ref
+const colRef = collection(db, 'books')
+
+// get collection data
+getDocs(colRef)
+  .then((snapshot) =&gt; {
+    let books = &#91;]
+    snapshot.docs.forEach((doc) =&gt; {
+      books.push({ ...doc.data(), id: doc.id })
+    })
+    console.log(books)
+  })
+  .catch(err =&gt; {
+    console.log(err.message)
+  })</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Adding &amp; Deleting Documents</h3>
+
+
+
+<p>可重複觀看、練習。</p>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ul>
+<li>在 index.html 新增樣板內容</li>
+<li>在 index.js 新增增加文件、刪除文件程式碼</li>
+<li>在 index.js 增加 import 內容、addDoc，然後儲存</li>
+<li>使用 live server 開啟網頁輸入標題 the way of kings、作者 brandon anderson、然後新增書本</li>
+<li>在 index.js 增加 import 內容、deleteDoc, doc，然後儲存</li>
+<li>在網頁的 Google Console 找到資料 id、然後複製貼到 Document id 欄位並且按下刪除書本，會清除欄位，在網頁重新整理後會剩下3筆資料</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Firebase 9&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Getting started with firebase 9&lt;/h1&gt;
+  
+  &lt;h2&gt;Firebase Firestore&lt;/h2&gt;
+
+  &lt;form class="add"&gt;
+    &lt;label for="title"&gt;Title:&lt;/label&gt;
+    &lt;input type="text" name="title" required&gt;
+    &lt;label for="author"&gt;Author:&lt;/label&gt;
+    &lt;input type="text" name="author" required&gt;
+
+    &lt;button&gt;add a new book&lt;/button&gt;
+  &lt;/form&gt;
+
+  &lt;form class="delete"&gt;
+    &lt;label for="id"&gt;Document id:&lt;/label&gt;
+    &lt;input type="text" name="id" required&gt;
+
+    &lt;button&gt;delete a book&lt;/button&gt;
+  &lt;/form&gt;
+  
+  &lt;script src="bundle.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.js - 1 adding, deleting documents
+// API 串接資料查閱 Firebase
+
+import { initializeApp } from 'firebase/app'
+import {
+  getFirestore, collection, getDocs
+} from 'firebase/firestore'
+
+const firebaseConfig = {
+  apiKey: "",
+  authDomain: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: ""
+};
+
+// init firebase app
+initializeApp(firebaseConfig)
+
+// init services
+const db = getFirestore()
+
+// collection ref
+const colRef = collection(db, 'books')
+
+// get collection data
+getDocs(colRef)
+  .then((snapshot) =&gt; {
+    let books = &#91;]
+    snapshot.docs.forEach((doc) =&gt; {
+      books.push({ ...doc.data(), id: doc.id })
+    })
+    console.log(books)
+  })
+  .catch(err =&gt; {
+    console.log(err.message)
+  })
+  
+// adding documents
+const addBookForm = document.querySelector('.add')
+addBookForm.addEventListener('submit', (e) =&gt; {
+  e.preventDefault()
+
+
+})
+
+// deleting documents
+const deleteBookForm = document.querySelector('.delete')
+deleteBookForm.addEventListener('submit', (e) =&gt; {
+  e.preventDefault()
+  
+})</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.js - 2 增加 import 內容、addDoc
+// API 串接資料查閱 Firebase
+
+import { initializeApp } from 'firebase/app'
+import {
+  getFirestore, collection, getDocs,
+  addDoc
+} from 'firebase/firestore'
+
+const firebaseConfig = {
+  apiKey: "",
+  authDomain: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: ""
+};
+
+// init firebase app
+initializeApp(firebaseConfig)
+
+// init services
+const db = getFirestore()
+
+// collection ref
+const colRef = collection(db, 'books')
+
+// get collection data
+getDocs(colRef)
+  .then((snapshot) =&gt; {
+    let books = &#91;]
+    snapshot.docs.forEach((doc) =&gt; {
+      books.push({ ...doc.data(), id: doc.id })
+    })
+    console.log(books)
+  })
+  .catch(err =&gt; {
+    console.log(err.message)
+  })
+  
+// adding documents
+const addBookForm = document.querySelector('.add')
+addBookForm.addEventListener('submit', (e) =&gt; {
+  e.preventDefault()
+
+  addDoc(colRef, {
+    title: addBookForm.title.value,
+    author: addBookForm.author.value,
+  })
+  .then(() =&gt; {
+    addBookForm.reset()
+  })
+
+})
+
+// deleting documents
+const deleteBookForm = document.querySelector('.delete')
+deleteBookForm.addEventListener('submit', (e) =&gt; {
+  e.preventDefault()
+
+})</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.js - 3 增加 import 內容、deleteDoc, doc
+// API 串接資料查閱 Firebase
+
+import { initializeApp } from 'firebase/app'
+import {
+  getFirestore, collection, getDocs,
+  addDoc, deleteDoc, doc
+} from 'firebase/firestore'
+
+const firebaseConfig = {
+  apiKey: "",
+  authDomain: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: ""
+};
+
+// init firebase app
+initializeApp(firebaseConfig)
+
+// init services
+const db = getFirestore()
+
+// collection ref
+const colRef = collection(db, 'books')
+
+// get collection data
+getDocs(colRef)
+  .then((snapshot) =&gt; {
+    let books = &#91;]
+    snapshot.docs.forEach((doc) =&gt; {
+      books.push({ ...doc.data(), id: doc.id })
+    })
+    console.log(books)
+  })
+  .catch(err =&gt; {
+    console.log(err.message)
+  })
+  
+// adding documents
+const addBookForm = document.querySelector('.add')
+addBookForm.addEventListener('submit', (e) =&gt; {
+  e.preventDefault()
+
+  addDoc(colRef, {
+    title: addBookForm.title.value,
+    author: addBookForm.author.value,
+  })
+  .then(() =&gt; {
+    addBookForm.reset()
+  })
+
+})
+
+// deleting documents
+const deleteBookForm = document.querySelector('.delete')
+deleteBookForm.addEventListener('submit', (e) =&gt; {
+  e.preventDefault()
+
+  const docRef = doc(db, 'books', deleteBookForm.id.value)
+
+  deleteDoc(docRef)
+    .then(() =&gt; {
+      deleteBookForm.reset()
+    })
+})</code></pre>
+
+
+
+<h4>Google Console 出現警告 – DevTools failed to load source map</h4>
+
+
+
+<ul><li>F12 &gt; 設定圖示 &gt; Preferences &gt; Sources 取消勾選<ul>
+<li>Enable JavaScript source maps</li>
+<li>Enable CSS source maps</li>
+</ul>
+</li></ul>
+
+
+
+<h4>新增一筆資料，Google Console 沒有顯示新增的資料</h4>
+
+
+
+<ul><li>執行”build” 指令 npm run build</li></ul>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Real Time Collection Data</h3>
+
+
+
+<p>可重複觀看、練習。</p>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ul>
+<li>修改 index.js 檔案 get collection data 改成 real time collection data、import 的 getDocs 改成 onSnapshot，新增 onSnapshot 方法、刪除 getDocs 方法、然後儲存</li>
+<li>在 Google Console 複製 “the wise man’s fear” 這筆資料 id、然後貼到欄位、按下刪除書本，可即時刪除剩下3筆資料</li>
+<li>新增一筆資料，標題 the wise man’s fear、作者 patrick rothfuss、按下新增書本，可即時新增變成4筆資料</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// index.js - 修改 index.js 檔案
+// api 串接資料查閱 Firebase
+
+import { initializeApp } from 'firebase/app'
+import {
+  getFirestore, collection, onSnapshot,
+  addDoc, deleteDoc, doc
+} from 'firebase/firestore'
+
+const firebaseConfig = {
+  apiKey: "",
+  authDomain: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: ""
+};
+
+// init firebase app
+initializeApp(firebaseConfig)
+
+// init services
+const db = getFirestore()
+
+// collection ref
+const colRef = collection(db, 'books')
+
+// real time collection data
+onSnapshot(colRef, (snapshot) =&gt; {
+  let books = &#91;]
+  snapshot.docs.forEach((doc) =&gt; {
+    books.push({ ...doc.data(), id: doc.id })
+  })
+  console.log(books)
+})
+  
+// adding documents
+const addBookForm = document.querySelector('.add')
+addBookForm.addEventListener('submit', (e) =&gt; {
+  e.preventDefault()
+
+  addDoc(colRef, {
+    title: addBookForm.title.value,
+    author: addBookForm.author.value,
+  })
+  .then(() =&gt; {
+    addBookForm.reset()
+  })
+
+})
+
+// deleting documents
+const deleteBookForm = document.querySelector('.delete')
+deleteBookForm.addEventListener('submit', (e) =&gt; {
+  e.preventDefault()
+
+  const docRef = doc(db, 'books', deleteBookForm.id.value)
+
+  deleteDoc(docRef)
+    .then(() =&gt; {
+      deleteBookForm.reset()
+    })
+})</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   (4) &#91;{...}, {...}, {...}, {...}]
+     0: {author: 'patrick rothfuss', title: 'the name of the wind'}
+     1: {author: 'brandon sanderson', title: 'the final empire'}
+     2: {title: "the wise man's fear", author: 'patrick rothfuss'}
+     3: {author: 'brandon sanderson', title: 'the way of kings'}
+     &#91;&#91;Prototype]]: Array(0)
+&gt;</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Firestore Queries</h3>
+
+
+
+<p>可重複觀看、練習。</p>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ul>
+<li>在 index.js 增加 import 內容、新增 queries 註解</li>
+<li>在網頁欄位標題 abc、作者 def，然後新增書本不會顯示新增資料</li>
+<li>在網頁欄位標題 abc、作者 patrick rothfuss，會新增資料</li>
+<li>複製標題為 abc 資料的 id 貼到欄位，然後刪除書本</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// index.js 增加 import 內容、新增 queries 註解、修改 real time collection data
+// api 串接資料查閱 Firebase
+
+import { initializeApp } from 'firebase/app'
+import {
+  getFirestore, collection, onSnapshot,
+  addDoc, deleteDoc, doc,
+  query, where
+} from 'firebase/firestore'
+
+const firebaseConfig = {
+  apiKey: "",
+  authDomain: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: ""
+};
+
+// init firebase app
+initializeApp(firebaseConfig)
+
+// init services
+const db = getFirestore()
+
+// collection ref
+const colRef = collection(db, 'books')
+
+// queries
+const q = query(colRef, where("author", "==", "patrick rothfuss"))
+
+// real time collection data
+onSnapshot(q, (snapshot) =&gt; {
+  let books = &#91;]
+  snapshot.docs.forEach((doc) =&gt; {
+    books.push({ ...doc.data(), id: doc.id })
+  })
+  console.log(books)
+})
+  
+// adding documents
+const addBookForm = document.querySelector('.add')
+addBookForm.addEventListener('submit', (e) =&gt; {
+  e.preventDefault()
+
+  addDoc(colRef, {
+    title: addBookForm.title.value,
+    author: addBookForm.author.value,
+  })
+  .then(() =&gt; {
+    addBookForm.reset()
+  })
+
+})
+
+// deleting documents
+const deleteBookForm = document.querySelector('.delete')
+deleteBookForm.addEventListener('submit', (e) =&gt; {
+  e.preventDefault()
+
+  const docRef = doc(db, 'books', deleteBookForm.id.value)
+
+  deleteDoc(docRef)
+    .then(() =&gt; {
+      deleteBookForm.reset()
+    })
+})</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Timestamps &amp; Ordering Data</h3>
+
+
+
+<p>可重複觀看、練習。</p>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ul>
+<li>在 index.js 新增 import 內容、在 queries 新增 orderBy，然後到 Google Console 查看會顯示錯誤</li>
+<li>依 Google Console 顯示錯誤指示點擊連結、點擊建立索引(建立需要一些時間，完成後狀態會是已啟用)</li>
+<li>在 Cloud Firestore 點擊資料、然後刪除集合</li>
+<li>在 index.js adding documents 的 addDoc 新增 createdAt，在 import 新增 serverTimestamp，在 queries 修改 orderBy、移除 where，然後儲存</li>
+<li>從網頁新增資料，標題 the wise man’s fear、作者 patrick rothfuss、然後新增書本，再新增標題 the name of the wind、作者 patrick rothfuss、然後新增書本，再新增標題 the way of kings、作者 brandon sanderson、然後新增書本</li>
+<li>我們可以看到 Google Console 資料有依時間序列排列，在網頁新增資料，標題 the final empire、作者 brandon sanderson、然後新增書本</li>
+<li>新增資料時可以看到 Google Console 顯示兩次資料</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// index.js - 1 新增 import 內容、在 queries 新增 orderBy
+// API 串接資料查閱 Firebase
+
+import { initializeApp } from 'firebase/app'
+import {
+  getFirestore, collection, onSnapshot,
+  addDoc, deleteDoc, doc,
+  query, where,
+  orderBy
+} from 'firebase/firestore'
+
+const firebaseConfig = {
+  apiKey: "",
+  authDomain: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: ""
+};
+
+// init firebase app
+initializeApp(firebaseConfig)
+
+// init services
+const db = getFirestore()
+
+// collection ref
+const colRef = collection(db, 'books')
+
+// queries
+const q = query(colRef, where("author", "==", "patrick rothfuss"), orderBy('title', 'desc'))
+
+// real time collection data
+onSnapshot(q, (snapshot) =&gt; {
+  let books = &#91;]
+  snapshot.docs.forEach((doc) =&gt; {
+    books.push({ ...doc.data(), id: doc.id })
+  })
+  console.log(books)
+})
+  
+// adding documents
+const addBookForm = document.querySelector('.add')
+addBookForm.addEventListener('submit', (e) =&gt; {
+  e.preventDefault()
+
+  addDoc(colRef, {
+    title: addBookForm.title.value,
+    author: addBookForm.author.value,
+  })
+  .then(() =&gt; {
+    addBookForm.reset()
+  })
+
+})
+
+// deleting documents
+const deleteBookForm = document.querySelector('.delete')
+deleteBookForm.addEventListener('submit', (e) =&gt; {
+  e.preventDefault()
+
+  const docRef = doc(db, 'books', deleteBookForm.id.value)
+
+  deleteDoc(docRef)
+    .then(() =&gt; {
+      deleteBookForm.reset()
+    })
+})</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 顯示錯誤資訊
+x  Uncaught Error in snapshot listener: FirebaseError: The query requires an index. You can create it here: url
+x  GET url net::ERR_FAILED 200
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.js - 2 新增 createdAt、serverTimestamp，修改 orderBy，移除 where
+// API 串接資料查閱 Firebase
+
+import { initializeApp } from 'firebase/app'
+import {
+  getFirestore, collection, onSnapshot,
+  addDoc, deleteDoc, doc,
+  query, where,
+  orderBy, serverTimestamp
+} from 'firebase/firestore'
+
+const firebaseConfig = {
+  apiKey: "",
+  authDomain: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: ""
+};
+
+// init firebase app
+initializeApp(firebaseConfig)
+
+// init services
+const db = getFirestore()
+
+// collection ref
+const colRef = collection(db, 'books')
+
+// queries
+const q = query(colRef, orderBy('createdAt'))
+
+// real time collection data
+onSnapshot(q, (snapshot) =&gt; {
+  let books = &#91;]
+  snapshot.docs.forEach((doc) =&gt; {
+    books.push({ ...doc.data(), id: doc.id })
+  })
+  console.log(books)
+})
+  
+// adding documents
+const addBookForm = document.querySelector('.add')
+addBookForm.addEventListener('submit', (e) =&gt; {
+  e.preventDefault()
+
+  addDoc(colRef, {
+    title: addBookForm.title.value,
+    author: addBookForm.author.value,
+    createdAt: serverTimestamp()
+  })
+  .then(() =&gt; {
+    addBookForm.reset()
+  })
+
+})
+
+// deleting documents
+const deleteBookForm = document.querySelector('.delete')
+deleteBookForm.addEventListener('submit', (e) =&gt; {
+  e.preventDefault()
+
+  const docRef = doc(db, 'books', deleteBookForm.id.value)
+
+  deleteDoc(docRef)
+    .then(() =&gt; {
+      deleteBookForm.reset()
+    })
+})</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Fetching Single Documents</h3>
+
+
+
+<p>可重複觀看、練習。</p>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ul>
+<li>在 index.js import 新增 getDoc、在下面新增 get a single document 內容，然後儲存查看 Google Console</li>
+<li>在 index.js get a single document 新增 onSnapshot 內容，然後上面的 getDoc 刪除，然後儲存</li>
+<li>在 Cloud Firestore 更改該 id 的值為大寫 T，值 The wise man’s fear 、然後更新，查看 Google Console 可以看到標題開頭變成大寫</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// index.js - 1 import 新增 getDoc、新增 get a single document
+// API 串接資料查閱 Firebase
+
+import { initializeApp } from 'firebase/app'
+import {
+  getFirestore, collection, onSnapshot,
+  addDoc, deleteDoc, doc,
+  query, where,
+  orderBy, serverTimestamp,
+  getDoc
+} from 'firebase/firestore'
+
+const firebaseConfig = {
+  apiKey: "",
+  authDomain: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: ""
+};
+
+// init firebase app
+initializeApp(firebaseConfig)
+
+// init services
+const db = getFirestore()
+
+// collection ref
+const colRef = collection(db, 'books')
+
+// queries
+const q = query(colRef, orderBy('createdAt'))
+
+// real time collection data
+onSnapshot(q, (snapshot) =&gt; {
+  let books = &#91;]
+  snapshot.docs.forEach((doc) =&gt; {
+    books.push({ ...doc.data(), id: doc.id })
+  })
+  console.log(books)
+})
+  
+// adding documents
+const addBookForm = document.querySelector('.add')
+addBookForm.addEventListener('submit', (e) =&gt; {
+  e.preventDefault()
+
+  addDoc(colRef, {
+    title: addBookForm.title.value,
+    author: addBookForm.author.value,
+    createdAt: serverTimestamp()
+  })
+  .then(() =&gt; {
+    addBookForm.reset()
+  })
+
+})
+
+// deleting documents
+const deleteBookForm = document.querySelector('.delete')
+deleteBookForm.addEventListener('submit', (e) =&gt; {
+  e.preventDefault()
+
+  const docRef = doc(db, 'books', deleteBookForm.id.value)
+
+  deleteDoc(docRef)
+    .then(() =&gt; {
+      deleteBookForm.reset()
+    })
+})
+
+// get a single document
+const docRef = doc(db, 'books', 'lS9bzDHdk7rwUNknNtnz')
+
+getDoc(docRef)
+  .then((doc) =&gt; {
+    console.log(doc.data(), doc.id)
+  })</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.js - 2 在最下面新增 onSnapshot 內容、移除上面的 getDoc
+// API 串接資料查閱 Firebase
+
+import { initializeApp } from 'firebase/app'
+import {
+  getFirestore, collection, onSnapshot,
+  addDoc, deleteDoc, doc,
+  query, where,
+  orderBy, serverTimestamp,
+  getDoc
+} from 'firebase/firestore'
+
+const firebaseConfig = {
+  apiKey: "",
+  authDomain: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: ""
+};
+
+// init firebase app
+initializeApp(firebaseConfig)
+
+// init services
+const db = getFirestore()
+
+// collection ref
+const colRef = collection(db, 'books')
+
+// queries
+const q = query(colRef, orderBy('createdAt'))
+
+// real time collection data
+onSnapshot(q, (snapshot) =&gt; {
+  let books = &#91;]
+  snapshot.docs.forEach((doc) =&gt; {
+    books.push({ ...doc.data(), id: doc.id })
+  })
+  console.log(books)
+})
+  
+// adding documents
+const addBookForm = document.querySelector('.add')
+addBookForm.addEventListener('submit', (e) =&gt; {
+  e.preventDefault()
+
+  addDoc(colRef, {
+    title: addBookForm.title.value,
+    author: addBookForm.author.value,
+    createdAt: serverTimestamp()
+  })
+  .then(() =&gt; {
+    addBookForm.reset()
+  })
+
+})
+
+// deleting documents
+const deleteBookForm = document.querySelector('.delete')
+deleteBookForm.addEventListener('submit', (e) =&gt; {
+  e.preventDefault()
+
+  const docRef = doc(db, 'books', deleteBookForm.id.value)
+
+  deleteDoc(docRef)
+    .then(() =&gt; {
+      deleteBookForm.reset()
+    })
+})
+
+// get a single document
+const docRef = doc(db, 'books', 'lS9bzDHdk7rwUNknNtnz')
+
+onSnapshot(docRef, (doc) =&gt; {
+  console.log(doc.data(), doc.id)
+})</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Updating Documents</h3>
+
+
+
+<p>可重複觀看、練習。</p>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ul>
+<li>修改、新增 index.html 內容</li>
+<li>在 index.js 新增 updating a document、在 import 新增 updateDoc，然後儲存</li>
+<li>在 Google Console 複製文件的 id 到網頁上、按下更新書本</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Firebase 9&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Getting started with firebase 9&lt;/h1&gt;
+  
+  &lt;h2&gt;Firebase Firestore&lt;/h2&gt;
+
+  &lt;form class="add"&gt;
+    &lt;label for="title"&gt;Title:&lt;/label&gt;
+    &lt;input type="text" name="title" required&gt;
+    &lt;label for="author"&gt;Author:&lt;/label&gt;
+    &lt;input type="text" name="author" required&gt;
+
+    &lt;button&gt;add a new book&lt;/button&gt;
+  &lt;/form&gt;
+
+  &lt;form class="delete"&gt;
+    &lt;label for="id"&gt;Document id:&lt;/label&gt;
+    &lt;input type="text" name="id" required&gt;
+
+    &lt;button&gt;delete a book&lt;/button&gt;
+  &lt;/form&gt;
+
+  &lt;form class="update"&gt;
+    &lt;label for="id"&gt;Document id:&lt;/label&gt;
+    &lt;input type="text" name="id" required&gt;
+
+    &lt;button&gt;update a book&lt;/button&gt;
+  &lt;/form&gt;
+
+  &lt;script src="bundle.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.js - 1 updating a document、在 import 新增 updateDoc
+// API 串接資料查閱 Firebase
+
+import { initializeApp } from 'firebase/app'
+import {
+  getFirestore, collection, onSnapshot,
+  addDoc, deleteDoc, doc,
+  query, where,
+  orderBy, serverTimestamp,
+  getDoc, updateDoc
+} from 'firebase/firestore'
+
+const firebaseConfig = {
+  apiKey: "",
+  authDomain: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: ""
+};
+
+// init firebase app
+initializeApp(firebaseConfig)
+
+// init services
+const db = getFirestore()
+
+// collection ref
+const colRef = collection(db, 'books')
+
+// queries
+const q = query(colRef, orderBy('createdAt'))
+
+// real time collection data
+onSnapshot(q, (snapshot) =&gt; {
+  let books = &#91;]
+  snapshot.docs.forEach((doc) =&gt; {
+    books.push({ ...doc.data(), id: doc.id })
+  })
+  console.log(books)
+})
+  
+// adding documents
+const addBookForm = document.querySelector('.add')
+addBookForm.addEventListener('submit', (e) =&gt; {
+  e.preventDefault()
+
+  addDoc(colRef, {
+    title: addBookForm.title.value,
+    author: addBookForm.author.value,
+    createdAt: serverTimestamp()
+  })
+  .then(() =&gt; {
+    addBookForm.reset()
+  })
+
+})
+
+// deleting documents
+const deleteBookForm = document.querySelector('.delete')
+deleteBookForm.addEventListener('submit', (e) =&gt; {
+  e.preventDefault()
+
+  const docRef = doc(db, 'books', deleteBookForm.id.value)
+
+  deleteDoc(docRef)
+    .then(() =&gt; {
+      deleteBookForm.reset()
+    })
+})
+
+// get a single document
+const docRef = doc(db, 'books', 'lS9bzDHdk7rwUNknNtnz')
+
+onSnapshot(docRef, (doc) =&gt; {
+  console.log(doc.data(), doc.id)
+})
+
+// updating a document
+const updateForm = document.querySelector('.update')
+updateForm.addEventListener('submit', (e) =&gt; {
+  e.preventDefault()
+
+  const docRef = doc(db, 'books', updateForm.id.value)
+
+  updateDoc(docRef, {
+    title: 'updated title'
+  })
+  .then(() =&gt; {
+    updateForm.reset()
+  })
+
+})</code></pre>
+
+
+
+<h3>Firebase Auth Setup</h3>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ul>
+<li>點擊左邊建立的 Authentication、開始使用</li>
+<li>選擇電子郵件/密碼、然後啟用、儲存</li>
+<li>在前端需要初始化驗證服務，在 index.js 新增 import、在 init services 新增內容</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// index.js - 新增 import、在 init services 新增內容
+// API 串接資料查閱 Firebase
+
+import { initializeApp } from 'firebase/app'
+import {
+  getFirestore, collection, onSnapshot,
+  addDoc, deleteDoc, doc,
+  query, where,
+  orderBy, serverTimestamp,
+  getDoc, updateDoc
+} from 'firebase/firestore'
+import {
+  getAuth
+} from 'firebase/auth'
+
+const firebaseConfig = {
+  apiKey: "",
+  authDomain: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: ""
+};
+
+// init firebase app
+initializeApp(firebaseConfig)
+
+// init services
+const db = getFirestore()
+const auth = getAuth()
+
+// collection ref
+const colRef = collection(db, 'books')
+
+// queries
+const q = query(colRef, orderBy('createdAt'))
+
+// real time collection data
+onSnapshot(q, (snapshot) =&gt; {
+  let books = &#91;]
+  snapshot.docs.forEach((doc) =&gt; {
+    books.push({ ...doc.data(), id: doc.id })
+  })
+  console.log(books)
+})
+  
+// adding documents
+const addBookForm = document.querySelector('.add')
+addBookForm.addEventListener('submit', (e) =&gt; {
+  e.preventDefault()
+
+  addDoc(colRef, {
+    title: addBookForm.title.value,
+    author: addBookForm.author.value,
+    createdAt: serverTimestamp()
+  })
+  .then(() =&gt; {
+    addBookForm.reset()
+  })
+
+})
+
+// deleting documents
+const deleteBookForm = document.querySelector('.delete')
+deleteBookForm.addEventListener('submit', (e) =&gt; {
+  e.preventDefault()
+
+  const docRef = doc(db, 'books', deleteBookForm.id.value)
+
+  deleteDoc(docRef)
+    .then(() =&gt; {
+      deleteBookForm.reset()
+    })
+})
+
+// get a single document
+const docRef = doc(db, 'books', 'lS9bzDHdk7rwUNknNtnz')
+
+onSnapshot(docRef, (doc) =&gt; {
+  console.log(doc.data(), doc.id)
+})
+
+// updating a document
+const updateForm = document.querySelector('.update')
+updateForm.addEventListener('submit', (e) =&gt; {
+  e.preventDefault()
+
+  const docRef = doc(db, 'books', updateForm.id.value)
+
+  updateDoc(docRef, {
+    title: 'updated title'
+  })
+  .then(() =&gt; {
+    updateForm.reset()
+  })
+
+})</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Signing Users Up</h3>
+
+
+
+<p>可重複觀看、練習。</p>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ul>
+<li>在 index.html 新增 Firebase Auth 內容</li>
+<li>在 index.js 新增 signing users up 內容，在最上面 import 新增 createUserWithEmailAndPassword，再新增 email、password 程式碼內容，然後儲存</li>
+<li>接著到網頁輸入 email, password (隨意信箱、密碼測試)，產生錯誤，密碼需要至少6個字元 mario@netninja.dev、test12345，點擊註冊就會在 Google Console 顯示資料</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// index.html - 1 新增 Firebase Auth 內容
+
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Firebase 9&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Getting started with firebase 9&lt;/h1&gt;
+  
+  &lt;h2&gt;Firebase Firestore&lt;/h2&gt;
+
+  &lt;form class="add"&gt;
+    &lt;label for="title"&gt;Title:&lt;/label&gt;
+    &lt;input type="text" name="title" required&gt;
+    &lt;label for="author"&gt;Author:&lt;/label&gt;
+    &lt;input type="text" name="author" required&gt;
+
+    &lt;button&gt;add a new book&lt;/button&gt;
+  &lt;/form&gt;
+
+  &lt;form class="delete"&gt;
+    &lt;label for="id"&gt;Document id:&lt;/label&gt;
+    &lt;input type="text" name="id" required&gt;
+
+    &lt;button&gt;delete a book&lt;/button&gt;
+  &lt;/form&gt;
+
+  &lt;form class="update"&gt;
+    &lt;label for="id"&gt;Document id:&lt;/label&gt;
+    &lt;input type="text" name="id" required&gt;
+
+    &lt;button&gt;update a book&lt;/button&gt;
+  &lt;/form&gt;
+
+  &lt;h2&gt;Firebase Auth&lt;/h2&gt;
+
+  &lt;form class="signup"&gt;
+    &lt;label for="email"&gt;email:&lt;/label&gt;
+    &lt;input type="email" name="email"&gt;
+    &lt;label for="password"&gt;password:&lt;/label&gt;
+    &lt;input type="password" name="password"&gt;
+    &lt;button&gt;signup&lt;/button&gt;
+  &lt;/form&gt;
+
+  &lt;script src="bundle.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.js - 1 新增 signing users up 內容
+// API 串接資料查閱 Firebase
+
+import { initializeApp } from 'firebase/app'
+import {
+  getFirestore, collection, onSnapshot,
+  addDoc, deleteDoc, doc,
+  query, where,
+  orderBy, serverTimestamp,
+  getDoc, updateDoc
+} from 'firebase/firestore'
+import {
+  getAuth,
+  createUserWithEmailAndPassword
+} from 'firebase/auth'
+
+const firebaseConfig = {
+  apiKey: "",
+  authDomain: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: ""
+};
+
+// init firebase app
+initializeApp(firebaseConfig)
+
+// init services
+const db = getFirestore()
+const auth = getAuth()
+
+// collection ref
+const colRef = collection(db, 'books')
+
+// queries
+const q = query(colRef, orderBy('createdAt'))
+
+// real time collection data
+onSnapshot(q, (snapshot) =&gt; {
+  let books = &#91;]
+  snapshot.docs.forEach((doc) =&gt; {
+    books.push({ ...doc.data(), id: doc.id })
+  })
+  console.log(books)
+})
+  
+// adding documents
+const addBookForm = document.querySelector('.add')
+addBookForm.addEventListener('submit', (e) =&gt; {
+  e.preventDefault()
+
+  addDoc(colRef, {
+    title: addBookForm.title.value,
+    author: addBookForm.author.value,
+    createdAt: serverTimestamp()
+  })
+  .then(() =&gt; {
+    addBookForm.reset()
+  })
+
+})
+
+// deleting documents
+const deleteBookForm = document.querySelector('.delete')
+deleteBookForm.addEventListener('submit', (e) =&gt; {
+  e.preventDefault()
+
+  const docRef = doc(db, 'books', deleteBookForm.id.value)
+
+  deleteDoc(docRef)
+    .then(() =&gt; {
+      deleteBookForm.reset()
+    })
+})
+
+// get a single document
+const docRef = doc(db, 'books', 'lS9bzDHdk7rwUNknNtnz')
+
+onSnapshot(docRef, (doc) =&gt; {
+  console.log(doc.data(), doc.id)
+})
+
+// updating a document
+const updateForm = document.querySelector('.update')
+updateForm.addEventListener('submit', (e) =&gt; {
+  e.preventDefault()
+
+  const docRef = doc(db, 'books', updateForm.id.value)
+
+  updateDoc(docRef, {
+    title: 'updated title'
+  })
+  .then(() =&gt; {
+    updateForm.reset()
+  })
+
+})
+
+// signing users up
+const signupForm = document.querySelector('.signup')
+signupForm.addEventListener('submit', (e) =&gt; {
+  e.preventDefault()
+
+  const email = signupForm.email.value
+  const password = signupForm.password.value
+
+  createUserWithEmailAndPassword(auth, email, password)
+    .then((cred) =&gt; {
+      console.log('user created:', cred.user)
+      signupForm.reset()
+    })
+    .catch((err) =&gt; {
+      console.log(err.message)
+    })
+
+})</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Logging in &amp; Logging Out</h3>
+
+
+
+<p>可重複觀看、練習。</p>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ul>
+<li>在 index.html 新增 login、logout 內容</li>
+<li>在 index.js 新增 logging in and out 內容，在最上面新增 import signOut，接著新增 logout 內容，回到網頁測試登出是否能正確執行，在最上面新增 import signInWithEmailAndPassword，接著新增 login 內容、email、password，然後儲存</li>
+<li>到網頁使用登入功能，先使用未註冊的 email 測試，會回傳 Error (auth/user-not-found)，接著測試有註冊的 email、錯誤的密碼，會回傳 Error (auth/wrong-password)，接著使用正確已註冊的 email、密碼登入，會成功回傳訊息</li>
+<li>點擊登出按鈕也會回傳訊息</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// index.html - 新增 login、logout 內容
+
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Firebase 9&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Getting started with firebase 9&lt;/h1&gt;
+  
+  &lt;h2&gt;Firebase Firestore&lt;/h2&gt;
+
+  &lt;form class="add"&gt;
+    &lt;label for="title"&gt;Title:&lt;/label&gt;
+    &lt;input type="text" name="title" required&gt;
+    &lt;label for="author"&gt;Author:&lt;/label&gt;
+    &lt;input type="text" name="author" required&gt;
+
+    &lt;button&gt;add a new book&lt;/button&gt;
+  &lt;/form&gt;
+
+  &lt;form class="delete"&gt;
+    &lt;label for="id"&gt;Document id:&lt;/label&gt;
+    &lt;input type="text" name="id" required&gt;
+
+    &lt;button&gt;delete a book&lt;/button&gt;
+  &lt;/form&gt;
+
+  &lt;form class="update"&gt;
+    &lt;label for="id"&gt;Document id:&lt;/label&gt;
+    &lt;input type="text" name="id" required&gt;
+
+    &lt;button&gt;update a book&lt;/button&gt;
+  &lt;/form&gt;
+
+  &lt;h2&gt;Firebase Auth&lt;/h2&gt;
+
+  &lt;form class="signup"&gt;
+    &lt;label for="email"&gt;email:&lt;/label&gt;
+    &lt;input type="email" name="email"&gt;
+    &lt;label for="password"&gt;password:&lt;/label&gt;
+    &lt;input type="password" name="password"&gt;
+    &lt;button&gt;signup&lt;/button&gt;
+  &lt;/form&gt;
+
+  &lt;form class="login"&gt;
+    &lt;label for="email"&gt;email:&lt;/label&gt;
+    &lt;input type="email" name="email"&gt;
+    &lt;label for="password"&gt;password:&lt;/label&gt;
+    &lt;input type="password" name="password"&gt;
+    &lt;button&gt;login&lt;/button&gt;
+  &lt;/form&gt;
+
+  &lt;button class="logout"&gt;logout&lt;/button&gt;
+
+  &lt;script src="bundle.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.js - 新增 logging in and out
+// API 串接資料查閱 Firebase
+
+import { initializeApp } from 'firebase/app'
+import {
+  getFirestore, collection, onSnapshot,
+  addDoc, deleteDoc, doc,
+  query, where,
+  orderBy, serverTimestamp,
+  getDoc, updateDoc
+} from 'firebase/firestore'
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signOut, signInWithEmailAndPassword
+} from 'firebase/auth'
+
+const firebaseConfig = {
+  apiKey: "",
+  authDomain: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: ""
+};
+
+// init firebase app
+initializeApp(firebaseConfig)
+
+// init services
+const db = getFirestore()
+const auth = getAuth()
+
+// collection ref
+const colRef = collection(db, 'books')
+
+// queries
+const q = query(colRef, orderBy('createdAt'))
+
+// real time collection data
+onSnapshot(q, (snapshot) =&gt; {
+  let books = &#91;]
+  snapshot.docs.forEach((doc) =&gt; {
+    books.push({ ...doc.data(), id: doc.id })
+  })
+  console.log(books)
+})
+  
+// adding documents
+const addBookForm = document.querySelector('.add')
+addBookForm.addEventListener('submit', (e) =&gt; {
+  e.preventDefault()
+
+  addDoc(colRef, {
+    title: addBookForm.title.value,
+    author: addBookForm.author.value,
+    createdAt: serverTimestamp()
+  })
+  .then(() =&gt; {
+    addBookForm.reset()
+  })
+
+})
+
+// deleting documents
+const deleteBookForm = document.querySelector('.delete')
+deleteBookForm.addEventListener('submit', (e) =&gt; {
+  e.preventDefault()
+
+  const docRef = doc(db, 'books', deleteBookForm.id.value)
+
+  deleteDoc(docRef)
+    .then(() =&gt; {
+      deleteBookForm.reset()
+    })
+})
+
+// get a single document
+const docRef = doc(db, 'books', 'lS9bzDHdk7rwUNknNtnz')
+
+onSnapshot(docRef, (doc) =&gt; {
+  console.log(doc.data(), doc.id)
+})
+
+// updating a document
+const updateForm = document.querySelector('.update')
+updateForm.addEventListener('submit', (e) =&gt; {
+  e.preventDefault()
+
+  const docRef = doc(db, 'books', updateForm.id.value)
+
+  updateDoc(docRef, {
+    title: 'updated title'
+  })
+  .then(() =&gt; {
+    updateForm.reset()
+  })
+
+})
+
+// signing users up
+const signupForm = document.querySelector('.signup')
+signupForm.addEventListener('submit', (e) =&gt; {
+  e.preventDefault()
+
+  const email = signupForm.email.value
+  const password = signupForm.password.value
+
+  createUserWithEmailAndPassword(auth, email, password)
+    .then((cred) =&gt; {
+      console.log('user created:', cred.user)
+      signupForm.reset()
+    })
+    .catch((err) =&gt; {
+      console.log(err.message)
+    })
+
+})
+
+// logging in and out
+const logoutButton = document.querySelector('.logout')
+logoutButton.addEventListener('click', () =&gt; {
+  signOut(auth)
+    .then(() =&gt; {
+      console.log('the user signed out')
+    })
+    .catch((err) =&gt; {
+      console.log(err.message)
+    })
+})
+
+const loginForm = document.querySelector('.login')
+loginForm.addEventListener('submit', (e) =&gt; {
+  e.preventDefault()
+
+  const email = loginForm.email.value
+  const password = loginForm.password.value
+
+  signInWithEmailAndPassword(auth, email, password)
+    .then((cred) =&gt; {
+      console.log('user logged in:', cred.user)
+    })
+    .catch((err) =&gt; {
+      console.log(err.message)
+    })
+
+})</code></pre>
+
+
+
+<p>這個章節沒有提到關於使用 HTML 操作登入、登出。</p>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Listening to Auth Changes</h3>
+
+
+
+<p>可重複觀看、練習。</p>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ul>
+<li>在 index.js import 新增 onAuthStateChanged，在最下面新增 subscribing to auth changes 內容，把 signing users up、logging in and out 的 console 註解，然後儲存</li>
+<li>接著到網頁重新整理，可以在 Google Console 看到 user status changed: null 的顯示</li>
+<li>在 email 輸入 mario@netninja.dev、password 輸入 test12345，然後按下登入會回傳 user status changed: 資料內容</li>
+<li>接著按下登出就會回傳 user status changed: null</li>
+<li>在註冊欄位 email 輸入 luigi@netninja.dev、password 輸入 test12345，然後按下註冊，就會回傳 user status changed: 資料內容</li>
+<li>在點擊登出，在 Google Console 會回傳訊息 user status changed: null</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// index.js - import 新增 onAuthStateChanged，新增 subscribing to auth changes 內容
+// API 串接資料查閱 Firebase
+
+import { initializeApp } from 'firebase/app'
+import {
+  getFirestore, collection, onSnapshot,
+  addDoc, deleteDoc, doc,
+  query, where,
+  orderBy, serverTimestamp,
+  getDoc, updateDoc
+} from 'firebase/firestore'
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signOut, signInWithEmailAndPassword,
+  onAuthStateChanged
+} from 'firebase/auth'
+
+const firebaseConfig = {
+  apiKey: "",
+  authDomain: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: ""
+};
+
+// init firebase app
+initializeApp(firebaseConfig)
+
+// init services
+const db = getFirestore()
+const auth = getAuth()
+
+// collection ref
+const colRef = collection(db, 'books')
+
+// queries
+const q = query(colRef, orderBy('createdAt'))
+
+// real time collection data
+onSnapshot(q, (snapshot) =&gt; {
+  let books = &#91;]
+  snapshot.docs.forEach((doc) =&gt; {
+    books.push({ ...doc.data(), id: doc.id })
+  })
+  console.log(books)
+})
+  
+// adding documents
+const addBookForm = document.querySelector('.add')
+addBookForm.addEventListener('submit', (e) =&gt; {
+  e.preventDefault()
+
+  addDoc(colRef, {
+    title: addBookForm.title.value,
+    author: addBookForm.author.value,
+    createdAt: serverTimestamp()
+  })
+  .then(() =&gt; {
+    addBookForm.reset()
+  })
+
+})
+
+// deleting documents
+const deleteBookForm = document.querySelector('.delete')
+deleteBookForm.addEventListener('submit', (e) =&gt; {
+  e.preventDefault()
+
+  const docRef = doc(db, 'books', deleteBookForm.id.value)
+
+  deleteDoc(docRef)
+    .then(() =&gt; {
+      deleteBookForm.reset()
+    })
+})
+
+// get a single document
+const docRef = doc(db, 'books', 'lS9bzDHdk7rwUNknNtnz')
+
+onSnapshot(docRef, (doc) =&gt; {
+  console.log(doc.data(), doc.id)
+})
+
+// updating a document
+const updateForm = document.querySelector('.update')
+updateForm.addEventListener('submit', (e) =&gt; {
+  e.preventDefault()
+
+  const docRef = doc(db, 'books', updateForm.id.value)
+
+  updateDoc(docRef, {
+    title: 'updated title'
+  })
+  .then(() =&gt; {
+    updateForm.reset()
+  })
+
+})
+
+// signing users up
+const signupForm = document.querySelector('.signup')
+signupForm.addEventListener('submit', (e) =&gt; {
+  e.preventDefault()
+
+  const email = signupForm.email.value
+  const password = signupForm.password.value
+
+  createUserWithEmailAndPassword(auth, email, password)
+    .then((cred) =&gt; {
+      // console.log('user created:', cred.user)
+      signupForm.reset()
+    })
+    .catch((err) =&gt; {
+      console.log(err.message)
+    })
+
+})
+
+// logging in and out
+const logoutButton = document.querySelector('.logout')
+logoutButton.addEventListener('click', () =&gt; {
+  signOut(auth)
+    .then(() =&gt; {
+      // console.log('the user signed out')
+    })
+    .catch((err) =&gt; {
+      console.log(err.message)
+    })
+})
+
+const loginForm = document.querySelector('.login')
+loginForm.addEventListener('submit', (e) =&gt; {
+  e.preventDefault()
+
+  const email = loginForm.email.value
+  const password = loginForm.password.value
+
+  signInWithEmailAndPassword(auth, email, password)
+    .then((cred) =&gt; {
+      // console.log('user logged in:', cred.user)
+    })
+    .catch((err) =&gt; {
+      console.log(err.message)
+    })
+
+})
+
+// subscribing to auth changes
+onAuthStateChanged(auth, (user) =&gt; {
+  console.log('user status changed:', user)
+})</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Unsubscribing from Changes</h3>
+
+
+
+<p>可重複觀看、練習。</p>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ul>
+<li>在 index.html 新增 unsubscribing</li>
+<li>在 index.js 新增 unsubscribing from changes (auth &amp; db) 內容，在 real time collection data 的 onSnapshot 的地方修改新增 unsubCol 變數，在 get a single document 的 onSnapshot 的地方修改新增 unsubDoc 變數，在 subscribing to auth changes 的 onAuthStateChanged 的地方修改新增 unsubAuth 變數，接著回到 unsubscribing from changes (auth &amp; db) 繼續新增內容，然後儲存</li>
+<li>到網頁介面，先展示上面的功能還是能使用，Firebase Firestore 的 Title abc、Author def，Firebase Auth 的 email mario@netninja.dev、password test12345、然後登入，一樣有回傳訊息</li>
+<li>接著在Google Console按下清楚 console 內容，然後按下 unsubscribing 的按鈕，會回傳 unsubscribing 訊息，再次使用 Firebase Firestore、Firebase Auth 功能</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Firebase 9&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Getting started with firebase 9&lt;/h1&gt;
+  
+  &lt;h2&gt;Firebase Firestore&lt;/h2&gt;
+
+  &lt;form class="add"&gt;
+    &lt;label for="title"&gt;Title:&lt;/label&gt;
+    &lt;input type="text" name="title" required&gt;
+    &lt;label for="author"&gt;Author:&lt;/label&gt;
+    &lt;input type="text" name="author" required&gt;
+
+    &lt;button&gt;add a new book&lt;/button&gt;
+  &lt;/form&gt;
+
+  &lt;form class="delete"&gt;
+    &lt;label for="id"&gt;Document id:&lt;/label&gt;
+    &lt;input type="text" name="id" required&gt;
+
+    &lt;button&gt;delete a book&lt;/button&gt;
+  &lt;/form&gt;
+
+  &lt;form class="update"&gt;
+    &lt;label for="id"&gt;Document id:&lt;/label&gt;
+    &lt;input type="text" name="id" required&gt;
+
+    &lt;button&gt;update a book&lt;/button&gt;
+  &lt;/form&gt;
+
+  &lt;h2&gt;Firebase Auth&lt;/h2&gt;
+
+  &lt;form class="signup"&gt;
+    &lt;label for="email"&gt;email:&lt;/label&gt;
+    &lt;input type="email" name="email"&gt;
+    &lt;label for="password"&gt;password:&lt;/label&gt;
+    &lt;input type="password" name="password"&gt;
+    &lt;button&gt;signup&lt;/button&gt;
+  &lt;/form&gt;
+
+  &lt;form class="login"&gt;
+    &lt;label for="email"&gt;email:&lt;/label&gt;
+    &lt;input type="email" name="email"&gt;
+    &lt;label for="password"&gt;password:&lt;/label&gt;
+    &lt;input type="password" name="password"&gt;
+    &lt;button&gt;login&lt;/button&gt;
+  &lt;/form&gt;
+
+  &lt;button class="logout"&gt;logout&lt;/button&gt;
+
+  &lt;h2&gt;Unsubscribing&lt;/h2&gt;
+  &lt;button class="unsub"&gt;unsubscribe from db/auth changes&lt;/button&gt;
+
+  &lt;script src="bundle.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.js
+// API串接資料查閱 Firebase
+
+import { initializeApp } from 'firebase/app'
+import {
+  getFirestore, collection, onSnapshot,
+  addDoc, deleteDoc, doc,
+  query, where,
+  orderBy, serverTimestamp,
+  getDoc, updateDoc
+} from 'firebase/firestore'
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signOut, signInWithEmailAndPassword,
+  onAuthStateChanged
+} from 'firebase/auth'
+
+const firebaseConfig = {
+  apiKey: "",
+  authDomain: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: ""
+};
+
+// init firebase app
+initializeApp(firebaseConfig)
+
+// init services
+const db = getFirestore()
+const auth = getAuth()
+
+// collection ref
+const colRef = collection(db, 'books')
+
+// queries
+const q = query(colRef, orderBy('createdAt'))
+
+// real time collection data
+const unsubCol = onSnapshot(q, (snapshot) =&gt; {
+  let books = &#91;]
+  snapshot.docs.forEach((doc) =&gt; {
+    books.push({ ...doc.data(), id: doc.id })
+  })
+  console.log(books)
+})
+  
+// adding documents
+const addBookForm = document.querySelector('.add')
+addBookForm.addEventListener('submit', (e) =&gt; {
+  e.preventDefault()
+
+  addDoc(colRef, {
+    title: addBookForm.title.value,
+    author: addBookForm.author.value,
+    createdAt: serverTimestamp()
+  })
+  .then(() =&gt; {
+    addBookForm.reset()
+  })
+
+})
+
+// deleting documents
+const deleteBookForm = document.querySelector('.delete')
+deleteBookForm.addEventListener('submit', (e) =&gt; {
+  e.preventDefault()
+
+  const docRef = doc(db, 'books', deleteBookForm.id.value)
+
+  deleteDoc(docRef)
+    .then(() =&gt; {
+      deleteBookForm.reset()
+    })
+})
+
+// get a single document
+const docRef = doc(db, 'books', 'lS9bzDHdk7rwUNknNtnz')
+
+const unsubDoc = onSnapshot(docRef, (doc) =&gt; {
+  console.log(doc.data(), doc.id)
+})
+
+// updating a document
+const updateForm = document.querySelector('.update')
+updateForm.addEventListener('submit', (e) =&gt; {
+  e.preventDefault()
+
+  const docRef = doc(db, 'books', updateForm.id.value)
+
+  updateDoc(docRef, {
+    title: 'updated title'
+  })
+  .then(() =&gt; {
+    updateForm.reset()
+  })
+
+})
+
+// signing users up
+const signupForm = document.querySelector('.signup')
+signupForm.addEventListener('submit', (e) =&gt; {
+  e.preventDefault()
+
+  const email = signupForm.email.value
+  const password = signupForm.password.value
+
+  createUserWithEmailAndPassword(auth, email, password)
+    .then((cred) =&gt; {
+      // console.log('user created:', cred.user)
+      signupForm.reset()
+    })
+    .catch((err) =&gt; {
+      console.log(err.message)
+    })
+
+})
+
+// logging in and out
+const logoutButton = document.querySelector('.logout')
+logoutButton.addEventListener('click', () =&gt; {
+  signOut(auth)
+    .then(() =&gt; {
+      // console.log('the user signed out')
+    })
+    .catch((err) =&gt; {
+      console.log(err.message)
+    })
+})
+
+const loginForm = document.querySelector('.login')
+loginForm.addEventListener('submit', (e) =&gt; {
+  e.preventDefault()
+
+  const email = loginForm.email.value
+  const password = loginForm.password.value
+
+  signInWithEmailAndPassword(auth, email, password)
+    .then((cred) =&gt; {
+      // console.log('user logged in:', cred.user)
+    })
+    .catch((err) =&gt; {
+      console.log(err.message)
+    })
+
+})
+
+// subscribing to auth changes
+const unsubAuth = onAuthStateChanged(auth, (user) =&gt; {
+  console.log('user status changed:', user)
+})
+
+// unsubscribing from changes (auth &amp; db)
+const unsubButton = document.querySelector('.unsub')
+unsubButton.addEventListener('click', () =&gt; {
+  console.log('unsubscribing')
+  unsubCol()
+  unsubDoc()
+  unsubAuth()
+})</code></pre>
+
+
+
+<p>最後，關於 Firebase 更多學習應用，可以參考瀏覽說明文件 Firebase Documentation 來使用。</p>
+
+
+
+<h2>Next Steps</h2>
+
+
+
+<h3>Bonus Lecture: Next Steps</h3>
+
+
+
+<h4>資源</h4>
+
+
+
+<ul>
+<li><a rel="noreferrer noopener" href="https://www.youtube.com/c/TheNetNinja/playlists" target="_blank">The Net Ninja Youtube Playlists 連結</a></li>
+<li><a rel="noreferrer noopener" href="https://www.youtube.com/watch?v=aN1LnNq4z54&amp;list=PL4cUxeGkcC9jUPIes_B8vRjn1_GaplOPQ" target="_blank">Firebase Auth Tutorial</a></li>
+<li><a rel="noreferrer noopener" href="https://www.youtube.com/watch?v=r6I-Ahc0HB4&amp;list=PL4cUxeGkcC9g6m_6Sld9Q4jzqdqHd2HiD" target="_blank">Regular Expressions (RegEx) Tutorial</a></li>
+<li>
+<a rel="noreferrer noopener" href="https://www.youtube.com/watch?v=w-7RQ46RgxU&amp;list=PL4cUxeGkcC9gcy9lrvMJ75z9maRw4byYp" target="_blank">Node JS Tutorial for Beginners</a>&nbsp;(舊版)</li>
+<li><a rel="noreferrer noopener" href="https://www.youtube.com/watch?v=OxIDLw0M-m0&amp;list=PL4cUxeGkcC9ij8CfkAY2RAGb-tmkNwQHG" target="_blank">Complete React Tutorial (with Redux)</a></li>
+<li><a href="https://www.udemy.com/user/47fd83f6-5e4a-4e87-a0f0-519ac51f91b6/" target="_blank" rel="noreferrer noopener">Udemy Course – The Net Ninja(Shaun Pelling)</a></li>
+<li>
+<a rel="noreferrer noopener" href="https://www.youtube.com/watch?v=zb3Qk8SG5Ms&amp;list=PL4cUxeGkcC9jsz4LDYc6kv3ymONOKxwBU" target="_blank">Node.js Crash Course Tutorial</a>&nbsp;(新版)</li>
+</ul>
+	</div>
+<!-- .entry-content -->
+
+	<footer class="entry-footer">
+			</footer><!-- .entry-footer -->
+</article><!-- #post-527 -->
+
+	<nav class="navigation post-navigation" aria-label="文章">
+		<h2 class="screen-reader-text">文章導覽</h2>
+		<div class="nav-links">
+<div class="nav-previous"><a href="/wordpress_blog/modern-javascript-3/" rel="prev"><span class="nav-subtitle">Previous:</span> <span class="nav-title">Modern JavaScript (3)</span></a></div>
+<div class="nav-next"><a href="/wordpress_blog/vuejs3firebase-1/" rel="next"><span class="nav-subtitle">Next:</span> <span class="nav-title">Build Web Apps With Vue JS 3 &#038; Firebase (1)</span></a></div>
+</div>
+	</nav>
+	</main><!-- #main -->
+
+
+	</div></div>
+			
+			<footer id="colophon" class="site-footer">
+
+				
+				<div class="container-fluid">
+					<div class="site-info">
+						<div class="row">
+
+															
+								<div class="col-12 footer-copyright-elements footer-copyright-alignment-center">
+
+									<div class="botiga-credits">&copy; 2022 wordpress_blog. 
+Created by Gee Hsu. 
+<br>Proudly powered by <a rel="nofollow" href="https://athemes.com/theme/botiga/">Botiga</a>
+</div>
+<div class="social-profile">
+<a target="_blank" href="https://www.facebook.com/watergrass0402/"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></i></a><a target="_blank" href="https://github.com/GeeHsu"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></i></a>
+</div>
+								</div>
+														
+						</div>
+					</div>
+				</div>
+<!-- .site-info -->
+
+				
+			</footer><!-- #colophon -->
+
+			
+			<div class="back-to-top visibility-all position-right"><i class="ws-svg-icon"><svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 15l7-7 7 7" stroke-width="3" stroke-linejoin="round"></path></svg></i></div>
+</div>
+<!-- #page -->
+
+
+<script id="botiga-custom-js-extra">
+var botiga = {"ajaxurl":"\/wp-admin\/admin-ajax.php","i18n":{"botiga_sharebox_copy_link":"Copy link","botiga_sharebox_copy_link_copied":"Copied!"}};
+</script>
+<script src="/wordpress_blog/wp-content/themes/botiga/assets/js/custom.min.js?ver=1.1.2" id="botiga-custom-js"></script>
+
+</body>
+</html>

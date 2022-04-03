@@ -1,0 +1,5658 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<title>Build Web Apps With Vue JS 3 &#038; Firebase (1) &#8211; wordpress_blog</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="訂閱《wordpress_blog》&raquo; 資訊提供" href="/wordpress_blog/feed/">
+<link rel="alternate" type="application/rss+xml" title="訂閱《wordpress_blog》&raquo; 留言的資訊提供" href="/wordpress_blog/comments/feed/">
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.9.2"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style>img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="/wordpress_blog/wp-includes/css/dist/block-library/style.min.css?ver=5.9.2" media="all">
+<style id="global-styles-inline-css">body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--palette-1-color-0: #212121;--wp--preset--color--palette-1-color-1: #757575;--wp--preset--color--palette-1-color-2: #212121;--wp--preset--color--palette-1-color-3: #212121;--wp--preset--color--palette-1-color-4: #212121;--wp--preset--color--palette-1-color-5: #f5f5f5;--wp--preset--color--palette-1-color-6: #ffffff;--wp--preset--color--palette-1-color-7: #ffffff;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 14px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 18px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--normal: 16px;--wp--preset--font-size--larger: 24px;--wp--preset--font-size--extra-large: 32px;--wp--preset--font-size--huge: 48px;--wp--preset--font-size--gigantic: 64px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}</style>
+<link rel="stylesheet" id="botiga-style-css" href="/wordpress_blog/wp-content/themes/botiga/style.css?ver=1.1.2" media="all">
+<link rel="stylesheet" id="botiga-style-min-css" href="/wordpress_blog/wp-content/themes/botiga/assets/css/styles.min.css?ver=1.1.2" media="all">
+<link rel="stylesheet" id="botiga-custom-styles-css" href="/wordpress_blog/wp-content/uploads/botiga/custom-styles.css?ver=1648804469" media="all">
+<link rel="https://api.w.org/" href="/wordpress_blog/wp-json/">
+<link rel="alternate" type="application/json" href="/wordpress_blog/wp-json/wp/v2/posts/536">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/wordpress_blog/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wordpress_blog/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 5.9.2">
+<link rel="canonical" href="/wordpress_blog/vuejs3firebase-1/">
+<link rel="shortlink" href="/wordpress_blog/?p=536">
+<link rel="alternate" type="application/json+oembed" href="/wordpress_blog/wp-json/oembed/1.0/embed?url=%2Fvuejs3firebase-1%2F">
+<link rel="alternate" type="text/xml+oembed" href="/wordpress_blog/wp-json/oembed/1.0/embed?url=%2Fvuejs3firebase-1%2F&#038;format=xml">
+<link rel="icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png" sizes="32x32">
+<link rel="icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png" sizes="192x192">
+<link rel="apple-touch-icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png">
+<meta name="msapplication-TileImage" content="/wp-content/uploads/2022/03/logo.png">
+	
+</head>
+
+<body class="post-template-default single single-post postid-536 single-format-standard wp-custom-logo wp-embed-responsive header-header_layout_1 blog-single-layout1">
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0.49803921568627"></fefuncr><fefuncg type="table" tablevalues="0 0.49803921568627"></fefuncg><fefuncb type="table" tablevalues="0 0.49803921568627"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.54901960784314 0.98823529411765"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.71764705882353 0.25490196078431"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 0.27843137254902"></fefuncg><fefuncb type="table" tablevalues="0.5921568627451 0.27843137254902"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0"></fefuncr><fefuncg type="table" tablevalues="0 0.64705882352941"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.78039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.94901960784314"></fefuncg><fefuncb type="table" tablevalues="0.35294117647059 0.47058823529412"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.65098039215686 0.40392156862745"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.44705882352941 0.4"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.098039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.66274509803922"></fefuncg><fefuncb type="table" tablevalues="0.84705882352941 0.41960784313725"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg>
+
+<div id="page" class="site">
+
+	<a class="skip-link screen-reader-text" href="#primary">Skip to content</a>
+
+	
+			<div class="top-bar visibility-desktop-only">
+				<div class="container-fluid">
+					<div class="top-bar-inner">
+						<div class="row valign">
+
+															<div class="col header-elements delimiter-none">
+									<div class="header-item top-bar-social"><div class="social-profile">
+<a target="_blank" href="https://www.facebook.com/watergrass0402/"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></i></a><a target="_blank" href="https://github.com/GeeHsu"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></i></a>
+</div></div>								</div>
+																						<div class="col header-elements delimiter-none">
+													
+			<nav class="header-item top-bar-secondary-navigation secondary-navigation">
+				<div class="menu-topbar-container"><ul id="secondary" class="menu">
+<li id="menu-item-143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143"><a href="/wordpress_blog/setup/">網站架設</a></li>
+<li id="menu-item-144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a href="/wordpress_blog/source/">資料來源</a></li>
+<li id="menu-item-262" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-262"><a href="/wordpress_blog/resource/">學習資源</a></li>
+</ul></div>			</nav>
+											</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			
+							
+				<header id="masthead" class="site-header header_layout_1">
+					<div class="container-fluid">
+						<div class="site-header-inner">
+							<div class="row valign">
+								<div class="col-md-5">
+										
+			<nav id="site-navigation" class="main-navigation">
+				<div class="menu-navbar-container"><ul id="primary-menu" class="menu">
+<li id="menu-item-109" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="/wordpress_blog/about/">關於</a></li>
+<li id="menu-item-110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-110">
+<a href="/wordpress_blog/learn/">學習</a><span tabindex="0" class="dropdown-symbol"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512.011 512.011"><path d="M505.755 123.592c-8.341-8.341-21.824-8.341-30.165 0L256.005 343.176 36.421 123.592c-8.341-8.341-21.824-8.341-30.165 0s-8.341 21.824 0 30.165l234.667 234.667a21.275 21.275 0 0015.083 6.251 21.275 21.275 0 0015.083-6.251l234.667-234.667c8.34-8.341 8.34-21.824-.001-30.165z"></path></svg></i></span>
+<ul class="sub-menu">
+	<li id="menu-item-140" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-140"><a href="/wordpress_blog/category/hexschool/">六角學院</a></li>
+	<li id="menu-item-141" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-141"><a href="/wordpress_blog/category/ninja/">The Net Ninja</a></li>
+	<li id="menu-item-483" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-483"><a href="/wordpress_blog/category/youtube/">Youtube</a></li>
+</ul>
+</li>
+<li id="menu-item-111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="/wordpress_blog/linestore/">LINE STORE</a></li>
+</ul></div>			</nav><!-- #site-navigation -->
+											</div>
+								<div class="col-md-2">
+												<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+											</div>
+								<div class="col-md-5 header-elements">
+																	</div>							
+							</div>
+						</div>
+					</div>
+								<div class="header-search-form">
+			<form role="search" method="get" class="search-form" action="/">
+	<label class="screen-reader-text" for="search-form-1">Search&hellip;</label>
+	<input type="search" id="search-form-1" class="search-field" value="" name="s" placeholder="Search &hellip;">
+	<button type="submit" class="search-submit" value="Search"><i class="ws-svg-icon"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 100 14.25 7.125 7.125 0 000-14.25zM2.25 10.875a8.625 8.625 0 1117.25 0 8.625 8.625 0 01-17.25 0z"></path><path fill-rule="evenodd" d="M15.913 15.914a.75.75 0 011.06 0l4.557 4.556a.75.75 0 01-1.06 1.06l-4.557-4.556a.75.75 0 010-1.06z"></path></svg></i></button>
+</form>
+			</div>
+			
+									</header>
+
+										<div class="search-overlay"></div>
+			
+			<div class="botiga-offcanvas-menu">
+				<div class="mobile-header-item">
+					<div class="row">
+						<div class="col">
+										<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+									</div>
+						<div class="col align-right">
+							<a class="mobile-menu-close" href="#"><i class="ws-svg-icon icon-cancel"><svg width="16" height="16" fill="none" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.219.781L.78 2.22 9.562 11l-8.78 8.781 1.437 1.438L11 12.437l8.781 8.782 1.438-1.438L12.437 11l8.782-8.781L19.78.78 11 9.562 2.219.783z"></path></svg></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="mobile-header-item">
+						
+			<nav id="site-navigation" class="main-navigation">
+				<div class="menu-navbar-container"><ul id="primary-menu" class="menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="/wordpress_blog/about/">關於</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-110">
+<a href="/wordpress_blog/learn/">學習</a><span tabindex="0" class="dropdown-symbol"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512.011 512.011"><path d="M505.755 123.592c-8.341-8.341-21.824-8.341-30.165 0L256.005 343.176 36.421 123.592c-8.341-8.341-21.824-8.341-30.165 0s-8.341 21.824 0 30.165l234.667 234.667a21.275 21.275 0 0015.083 6.251 21.275 21.275 0 0015.083-6.251l234.667-234.667c8.34-8.341 8.34-21.824-.001-30.165z"></path></svg></i></span>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-140"><a href="/wordpress_blog/category/hexschool/">六角學院</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-141"><a href="/wordpress_blog/category/ninja/">The Net Ninja</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-483"><a href="/wordpress_blog/category/youtube/">Youtube</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="/wordpress_blog/linestore/">LINE STORE</a></li>
+</ul></div>			</nav><!-- #site-navigation -->
+							</div>
+				<div class="mobile-header-item">
+									<a target="&quot;_blank&quot;" class="button header-item" href="https://www.facebook.com/watergrass0402/">聯絡我</a>
+							</div>			
+			</div>
+			
+							<header id="masthead-mobile" class="site-header mobile-header">
+					<div class="container-fluid">
+						<div class="row valign flex-nowrap">
+							<div class="col-sm-6 col-md-4 col-grow-mobile">
+											<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+										</div>
+							<div class="col-auto col-sm-6 col-md-8 col-grow-mobile header-elements valign align-right">
+																	
+															<a href="#" class="menu-toggle">
+				<i class="ws-svg-icon"><svg width="16" height="11" viewbox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="16" height="1"></rect><rect y="5" width="16" height="1"></rect><rect y="10" width="16" height="1"></rect></svg></i>
+			</a>
+																		</div>						
+						</div>
+					</div>
+								<div class="header-search-form">
+			<form role="search" method="get" class="search-form" action="/">
+	<label class="screen-reader-text" for="search-form-2">Search&hellip;</label>
+	<input type="search" id="search-form-2" class="search-field" value="" name="s" placeholder="Search &hellip;">
+	<button type="submit" class="search-submit" value="Search"><i class="ws-svg-icon"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 100 14.25 7.125 7.125 0 000-14.25zM2.25 10.875a8.625 8.625 0 1117.25 0 8.625 8.625 0 01-17.25 0z"></path><path fill-rule="evenodd" d="M15.913 15.914a.75.75 0 011.06 0l4.557 4.556a.75.75 0 01-1.06 1.06l-4.557-4.556a.75.75 0 010-1.06z"></path></svg></i></button>
+</form>
+			</div>
+			
+									</header>
+						<div class="search-overlay"></div>
+			<div class="header-image"><img src="/wordpress_blog/wp-content/uploads/2022/03/seashore.jpg" width="1920" height="500" alt=""></div>
+<div class="container content-wrapper"><div class="row main-row">			
+	<main id="primary" class="site-main no-sidebar">
+
+		
+
+<article id="post-536" class="post-536 post type-post status-publish format-standard hentry category-ninja">
+	
+		
+	<header class="entry-header">
+		
+		
+		<h1 class="entry-title">Build Web Apps With Vue JS 3 &#038; Firebase (1)</h1>			<div class="entry-meta entry-meta-below delimiter-none">
+<span class="posted-on"><a href="/wordpress_blog/vuejs3firebase-1/" rel="bookmark"><time class="entry-date published" datetime="2022-02-16T15:01:00+08:00">2022 年 2 月 16 日</time><time class="updated" datetime="2022-04-03T15:02:27+08:00">2022 年 4 月 3 日</time></a></span><span class="byline"> <span class="author vcard"><a class="url fn n" href="/wordpress_blog/author/gee-hsu/">gee.hsu</a></span></span>
+</div>			</header><!-- .entry-header -->
+
+	
+	<div class="entry-content">
+		
+<blockquote class="wp-block-quote">
+<p>Learn Vue JS 3 &amp; Firebase by creating &amp; deploying dynamic web apps (including Authentication).</p>
+<cite>建立者: The Net Ninja (Shaun Pelling)</cite>
+</blockquote>
+
+
+
+<h3>您會學到</h3>
+
+
+
+<ul>
+<li>Learn how to create Vue 3 applications from the ground-up</li>
+<li>Get in-depth knowledge of Vue features like the Vue Router, Vue CLI, Options API, Composition API, Teleport etc</li>
+<li>Get hands-on &amp; in-depth experience using the latest Vue 3 features (such as the Composition API)</li>
+<li>Learn how to use Firebase as a back-end to your Vue applications (as a database, authentication service, hosting etc)</li>
+<li>Build &amp; deploy 4 real-word web apps with Vue &amp; Firebase</li>
+<li>Learn how to implement an authentication system into your Vue js apps using Firebase Auth</li>
+<li>Become a Vue 3 ninja!</li>
+</ul>
+
+
+
+<h2>第1節：Introduction &amp; Setup</h2>
+
+
+
+<h3>What is Vue?</h3>
+
+
+
+<h4>What is Vue?</h4>
+
+
+
+<ul>
+<li>Front-end, JavaScript / TypeScript framework</li>
+<li>Used to create dynamic &amp; data-driven websites (SPA’s)</li>
+<li>Can also be used to create stand-alone widgets</li>
+</ul>
+
+
+
+<h4>Vue Widgets</h4>
+
+
+
+<figure class="wp-block-image size-full"><img width="1536" height="823" src="/wordpress_blog/wp-content/uploads/2022/04/Vue-Widgets.png" alt="" class="wp-image-538"><figcaption>Vue Widgets</figcaption></figure>
+
+
+
+<h4>Vue Websites</h4>
+
+
+
+<ul>
+<li>Vue is used to create a whole website with multiple pages &amp; components</li>
+<li>These websites are normally called Single Page Applications</li>
+<li>All routing is done in the browser &amp; not on the server</li>
+</ul>
+
+
+
+<h4>Typical non-Vue Websites</h4>
+
+
+
+<figure class="wp-block-gallery has-nested-images columns-1 is-cropped">
+<figure class="wp-block-image size-large"><img loading="lazy" width="1755" height="603" data-id="545" src="/wordpress_blog/wp-content/uploads/2022/04/Typical-non-Vue-Websites-01.png" alt="" class="wp-image-545"><figcaption>Typical non-Vue Website 01</figcaption></figure>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" width="1765" height="615" data-id="546" src="/wordpress_blog/wp-content/uploads/2022/04/Typical-non-Vue-Websites-02.png" alt="" class="wp-image-546"><figcaption>Typical non-Vue Website 02</figcaption></figure>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" width="1743" height="579" data-id="547" src="/wordpress_blog/wp-content/uploads/2022/04/Typical-non-Vue-Websites-03.png" alt="" class="wp-image-547"><figcaption>Typical non-Vue Website 03</figcaption></figure>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" width="1769" height="605" data-id="548" src="/wordpress_blog/wp-content/uploads/2022/04/Typical-non-Vue-Websites-04.png" alt="" class="wp-image-548"><figcaption>Typical non-Vue Website 04</figcaption></figure>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" width="1759" height="705" data-id="549" src="/wordpress_blog/wp-content/uploads/2022/04/Typical-non-Vue-Websites-05.png" alt="" class="wp-image-549"><figcaption>Typical non-Vue Website 05</figcaption></figure>
+</figure>
+
+
+
+<h4>Vue Websites</h4>
+
+
+
+<figure class="wp-block-gallery has-nested-images columns-1 is-cropped">
+<figure class="wp-block-image size-large"><img loading="lazy" width="1747" height="609" data-id="554" src="/wordpress_blog/wp-content/uploads/2022/04/Vue-Websites-01.png" alt="" class="wp-image-554"><figcaption>Vue Websites 01</figcaption></figure>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" width="1743" height="595" data-id="552" src="/wordpress_blog/wp-content/uploads/2022/04/Vue-Websites-02.png" alt="" class="wp-image-552"><figcaption>Vue Websites 02</figcaption></figure>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" width="1741" height="571" data-id="553" src="/wordpress_blog/wp-content/uploads/2022/04/Vue-Websites-03.png" alt="" class="wp-image-553"><figcaption>Vue Websites 03</figcaption></figure>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" width="1747" height="593" data-id="551" src="/wordpress_blog/wp-content/uploads/2022/04/Vue-Websites-04.png" alt="" class="wp-image-551"><figcaption>Vue Websites 04</figcaption></figure>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" width="1745" height="597" data-id="555" src="/wordpress_blog/wp-content/uploads/2022/04/Vue-Websites-05.png" alt="" class="wp-image-555"><figcaption>Vue Websites 05</figcaption></figure>
+</figure>
+
+
+
+<h4>Single Page Application (SPA)</h4>
+
+
+
+<ul>
+<li>Only a single HTML page sent (initially) to the browser</li>
+<li>Vue intercepts subsequent requests and handles “page” changes in the browser by swapping what components are shown on the page</li>
+<li>Results in a much faster and smoother website experience</li>
+</ul>
+
+
+
+<h3>New Features in Vue 3</h3>
+
+
+
+<h4>Vue 3 New Features</h4>
+
+
+
+<h4>The Composition API</h4>
+
+
+
+<ul>
+<li>Improves on reusablility, organization &amp; readability</li>
+<li>It does this by giving us a new setup( ) function</li>
+</ul>
+
+
+
+<h4>Multiple Root Elements</h4>
+
+
+
+<ul><li>Can have many root elements side-by-side in a component</li></ul>
+
+
+
+<pre class="wp-block-code"><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;p&gt;Hello, World!&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;p&gt;Hello, again!&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/template&gt;</code></pre>
+
+
+
+<h4>Teleport Component</h4>
+
+
+
+<ul>
+<li>Render content from one component in a different place in the DOM</li>
+<li>Useful for things like modals</li>
+</ul>
+
+
+
+<h4>Suspense Component</h4>
+
+
+
+<ul>
+<li>Used to handle asynchronous components easily</li>
+<li>Can provide fall-back content (e.g. a spinner) until data is loaded</li>
+</ul>
+
+
+
+<h4>TypeScript Support</h4>
+
+
+
+<ul><li>Can now write Vue applications using TypeScript</li></ul>
+
+
+
+<h4>More Changes</h4>
+
+
+
+<ul>
+<li>Multiple v-models for custom components</li>
+<li>Improved Reactivity</li>
+<li>Performance gains</li>
+</ul>
+
+
+
+<h3>What You Should Already Know</h3>
+
+
+
+<h4>資源</h4>
+
+
+
+<ul>
+<li><a rel="noreferrer noopener" href="https://www.youtube.com/c/TheNetNinja" target="_blank">Net Ninja Youtube Channel (more free tutorials)</a></li>
+<li><a rel="noreferrer noopener" href="https://www.udemy.com/course/modern-javascript-from-novice-to-ninja/" target="_blank">Modern JavaScript Course</a></li>
+<li><a href="https://www.youtube.com/watch?v=hu-q2zYwEYs&amp;list=PL4cUxeGkcC9ivBf_eKCPIAYXWzLlPAm6G" target="_blank" rel="noreferrer noopener">HTML &amp; CSS Free Crash Course</a></li>
+</ul>
+
+
+
+<h4>Before You Start…</h4>
+
+
+
+<ul>
+<li>Understand the foundations of JavaScript<ul><li>functions, objects, arrays, etc</li></ul>
+</li>
+<li>HTML &amp; (some) CSS</li>
+</ul>
+
+
+
+<h3>Environment Setup</h3>
+
+
+
+<ul>
+<li>網頁編輯器：VSCode</li>
+<li>擴充套件(Extensions)：Live Server、Vetur、Material Icon Theme</li>
+</ul>
+
+
+
+<h3>Course Files</h3>
+
+
+
+<h4>資源</h4>
+
+
+
+<ul>
+<li><a rel="noreferrer noopener" href="https://github.com/iamshaunjp/Vue-3-Firebase" target="_blank">GitHub Course Files</a></li>
+<li><a href="https://github.com/iamshaunjp/Vue-3-Firebase/blob/Installing-Dependencies/README.md" target="_blank" rel="noreferrer noopener">Guide for using the course files (for later lessons)</a></li>
+</ul>
+
+
+
+<h2>Vue Basics</h2>
+
+
+
+<h3>How to use Vue (using the CDN)</h3>
+
+
+
+<h4>資源</h4>
+
+
+
+<ul><li><a href="https://v3.vuejs.org/guide/introduction.html" target="_blank" rel="noreferrer noopener">Vue Documentation</a></li></ul>
+
+
+
+<h4>Vue CDN</h4>
+
+
+
+<ul><li>使用以下版本</li></ul>
+
+
+
+<pre class="wp-block-code"><code>&lt;script src="https://unpkg.com/vue@3.0.2"&gt;&lt;/script&gt;</code></pre>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ul>
+<li>&lt;script&gt; 載入 Vue CDN vue@3.0.2 版本</li>
+<li>新增 app.js 檔案</li>
+<li>&lt;script&gt; 載入 app.js</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Learning Vue&lt;/title&gt;
+  &lt;script src="https://unpkg.com/vue@3.0.2"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello, Vue :)&lt;/h1&gt;
+
+  &lt;script src="app.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// app.js
+
+console.log('hello, vue')</code></pre>
+
+
+
+<h3>Creating a Vue App</h3>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Learning Vue&lt;/title&gt;
+  &lt;script src="https://unpkg.com/vue@3.0.2"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello, Vue :)&lt;/h1&gt;
+
+  &lt;div id="app"&gt;
+    &lt;h2&gt;I am the template now&lt;/h2&gt;
+  &lt;/div&gt;
+
+
+  &lt;script src="app.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// app.js
+
+const app = Vue.createApp({
+  // data, functions
+  // template: '&lt;h2&gt;I am the template&lt;/h2&gt;'
+})
+
+app.mount('#app')</code></pre>
+
+
+
+<h3>Templates &amp; Data</h3>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Learning Vue&lt;/title&gt;
+  &lt;script src="https://unpkg.com/vue@3.0.2"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello, Vue :)&lt;/h1&gt;
+
+  &lt;div id="app"&gt;
+    &lt;p&gt;{{ title }} - {{ author }} - {{ age }}&lt;/p&gt;
+  &lt;/div&gt;
+
+
+  &lt;script src="app.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// app.js
+
+const app = Vue.createApp({
+  data() {
+    return {
+      title: 'The Final Empire',
+      author: 'Brandon Sanderson',
+      age: 45
+    }
+  }
+})
+
+app.mount('#app')</code></pre>
+
+
+
+<h3>Methods &amp; Click Events</h3>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Learning Vue&lt;/title&gt;
+  &lt;script src="https://unpkg.com/vue@3.0.2"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello, Vue :)&lt;/h1&gt;
+
+  &lt;div id="app"&gt;
+    &lt;p&gt;{{ title }} - {{ author }} - {{ age }}&lt;/p&gt;
+
+    &lt;button v-on:click="age++"&gt;Increase age&lt;/button&gt;
+    &lt;button v-on:click="age--"&gt;Decrease age&lt;/button&gt;
+    &lt;div @click="changeTitle('Oathbringer')"&gt;Change book title&lt;/div&gt;
+  &lt;/div&gt;
+
+
+  &lt;script src="app.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// app.js
+
+const app = Vue.createApp({
+  data() {
+    return {
+      title: 'The Final Empire',
+      author: 'Brandon Sanderson',
+      age: 45
+    }
+  },
+  methods: {
+    changeTitle(title) {
+      // this.title = 'Words of Randiance'
+      this.title = title
+    }
+  }
+})
+
+app.mount('#app')</code></pre>
+
+
+
+<h3>Conditional Rendering (條件渲染)</h3>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Learning Vue&lt;/title&gt;
+  &lt;script src="https://unpkg.com/vue@3.0.2"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello, Vue :)&lt;/h1&gt;
+
+  &lt;div id="app"&gt;
+    &lt;div v-if="showBooks"&gt;
+      &lt;p&gt;{{ title }} - {{ author }} - {{ age }}&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;button @click="toggleShowBooks"&gt;
+      &lt;span v-if="showBooks"&gt;Hide Books&lt;/span&gt;
+      &lt;span v-else&gt;Show Books&lt;/span&gt;
+    &lt;/button&gt;
+
+    &lt;div v-show="showBooks"&gt;currently showing books&lt;/div&gt;
+  &lt;/div&gt;
+
+
+  &lt;script src="app.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// app.js
+
+const app = Vue.createApp({
+  data() {
+    return {
+      showBooks: true,
+      title: 'The Final Empire',
+      author: 'Brandon Sanderson',
+      age: 45
+    }
+  },
+  methods: {
+    toggleShowBooks() {
+      this.showBooks = !this.showBooks
+    }
+  }
+})
+
+app.mount('#app')</code></pre>
+
+
+
+<h3>Other Mouse Events</h3>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Learning Vue&lt;/title&gt;
+  &lt;script src="https://unpkg.com/vue@3.0.2"&gt;&lt;/script&gt;
+  &lt;style&gt;
+    .box {
+      padding: 100px 0;
+      width: 400px;
+      text-align: center;
+      background: #ddd;
+      margin: 20px;
+      display: inline-block;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello, Vue :)&lt;/h1&gt;
+
+  &lt;div id="app"&gt;
+    &lt;div v-if="showBooks"&gt;
+      &lt;p&gt;{{ title }} - {{ author }} - {{ age }}&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;button @click="toggleShowBooks"&gt;
+      &lt;span v-if="showBooks"&gt;Hide Books&lt;/span&gt;
+      &lt;span v-else&gt;Show Books&lt;/span&gt;
+    &lt;/button&gt;
+
+    &lt;br&gt;
+    &lt;!-- mouse events --&gt;
+    &lt;div class="box" @mouseover="handleEvent($event, 5)"&gt;mouseover (enter)&lt;/div&gt;
+    &lt;div class="box" @mouseleave="handleEvent"&gt;mouseleave&lt;/div&gt;
+    &lt;div class="box" @dblclick="handleEvent"&gt;double click&lt;/div&gt;
+    &lt;div class="box" @mousemove="handleMousemove"&gt;position - {{ x }} {{ y }}&lt;/div&gt;
+    
+  &lt;/div&gt;
+
+  &lt;script src="app.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// app.js
+
+const app = Vue.createApp({
+  data() {
+    return {
+      showBooks: true,
+      title: 'The Final Empire',
+      author: 'Brandon Sanderson',
+      age: 45,
+      x: 0,
+      y: 0
+    }
+  },
+  methods: {
+    toggleShowBooks() {
+      this.showBooks = !this.showBooks
+    },
+    handleEvent(e, data) {
+      console.log(e, e.type)
+      if (data) {
+        console.log(data)
+      }
+    },
+    handleMousemove(e) {
+      this.x = e.offsetX
+      this.y = e.offsetY
+    }
+  }
+})
+
+app.mount('#app')</code></pre>
+
+
+
+<h3>Outputting Lists (v-for)</h3>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Learning Vue&lt;/title&gt;
+  &lt;script src="https://unpkg.com/vue@3.0.2"&gt;&lt;/script&gt;
+  &lt;style&gt;
+    .box {
+      padding: 100px 0;
+      width: 400px;
+      text-align: center;
+      background: #ddd;
+      margin: 20px;
+      display: inline-block;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello, Vue :)&lt;/h1&gt;
+
+  &lt;div id="app"&gt;
+    &lt;div v-if="showBooks"&gt;
+      &lt;ul&gt;
+        &lt;li v-for="book in books"&gt;
+          &lt;h3&gt;{{ book.title }}&lt;/h3&gt;
+          &lt;p&gt;{{ book.author }}&lt;/p&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;button @click="toggleShowBooks"&gt;
+      &lt;span v-if="showBooks"&gt;Hide Books&lt;/span&gt;
+      &lt;span v-else&gt;Show Books&lt;/span&gt;
+    &lt;/button&gt;
+
+    
+  &lt;/div&gt;
+
+  &lt;script src="app.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// app.js
+
+const app = Vue.createApp({
+  data() {
+    return {
+      showBooks: true,
+      books: &#91;
+        { title: 'name of the wind', author: 'patrick rothfuss'},
+        { title: 'the way of kings', author: 'brandon sanderson'},
+        { title: 'the final empire', author: 'brandon sanderson'},
+      ]
+    }
+  },
+  methods: {
+    toggleShowBooks() {
+      this.showBooks = !this.showBooks
+    },
+  }
+})
+
+app.mount('#app')</code></pre>
+
+
+
+<h3>Attribute Binding</h3>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Learning Vue&lt;/title&gt;
+  &lt;script src="https://unpkg.com/vue@3.0.2"&gt;&lt;/script&gt;
+  &lt;style&gt;
+    .box {
+      padding: 100px 0;
+      width: 400px;
+      text-align: center;
+      background: #ddd;
+      margin: 20px;
+      display: inline-block;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello, Vue :)&lt;/h1&gt;
+
+  &lt;div id="app"&gt;
+    &lt;!-- attribute binding --&gt;
+    &lt;!-- &lt;a :href="url"&gt;Best website ever&lt;/a&gt; --&gt;
+
+    &lt;div v-if="showBooks"&gt;
+      &lt;ul&gt;
+        &lt;li v-for="book in books"&gt;
+          &lt;img :src="book.img" :alt="book.title"&gt;
+          &lt;h3&gt;{{ book.title }}&lt;/h3&gt;
+          &lt;p&gt;{{ book.author }}&lt;/p&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;button @click="toggleShowBooks"&gt;
+      &lt;span v-if="showBooks"&gt;Hide Books&lt;/span&gt;
+      &lt;span v-else&gt;Show Books&lt;/span&gt;
+    &lt;/button&gt;
+
+    
+  &lt;/div&gt;
+
+  &lt;script src="app.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// app.js
+
+const app = Vue.createApp({
+  data() {
+    return {
+      url: 'http://www.thenetninja.co.uk',
+      showBooks: true,
+      books: &#91;
+        { title: 'name of the wind', author: 'patrick rothfuss', img: 'assets/1.jpg'},
+        { title: 'the way of kings', author: 'brandon sanderson', img: 'assets/2.jpg'},
+        { title: 'the final empire', author: 'brandon sanderson', img: 'assets/3.jpg'},
+      ]
+    }
+  },
+  methods: {
+    toggleShowBooks() {
+      this.showBooks = !this.showBooks
+    },
+  }
+})
+
+app.mount('#app')</code></pre>
+
+
+
+<h4>縮寫</h4>
+
+
+
+<pre class="wp-block-code"><code>v-on = @
+v-bind = :</code></pre>
+
+
+
+<h3>Dynamic Classes</h3>
+
+
+
+<h4>資源</h4>
+
+
+
+<ul><li><a href="https://www.youtube.com/watch?v=Y8zMYaD1bz0&amp;list=PL4cUxeGkcC9i3FXJSUfmsNOx8E7u6UuhG" target="_blank" rel="noreferrer noopener">Free Flexbox Tutorial</a></li></ul>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Learning Vue&lt;/title&gt;
+  &lt;script src="https://unpkg.com/vue@3.0.2"&gt;&lt;/script&gt;
+  &lt;style&gt;
+    body {
+      background: #eee;
+      max-width: 960px;
+      margin: 20px auto;
+    }
+    p, h3, ul {
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      list-style-type: none;
+      background: #fff;
+      margin: 20px auto;
+      padding: 10px 20px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    li.fav {
+      background: #ff9ed2;
+      color: #fff;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello, Vue :)&lt;/h1&gt;
+
+  &lt;div id="app"&gt;
+    &lt;!-- attribute binding --&gt;
+    &lt;!-- &lt;a :href="url"&gt;Best website ever&lt;/a&gt; --&gt;
+
+    &lt;div v-if="showBooks"&gt;
+      &lt;ul&gt;
+        &lt;li v-for="book in books" :class="{ fav: book.isFav }"&gt;
+          &lt;img :src="book.img" :alt="book.title"&gt;
+          &lt;h3&gt;{{ book.title }}&lt;/h3&gt;
+          &lt;p&gt;{{ book.author }}&lt;/p&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;button @click="toggleShowBooks"&gt;
+      &lt;span v-if="showBooks"&gt;Hide Books&lt;/span&gt;
+      &lt;span v-else&gt;Show Books&lt;/span&gt;
+    &lt;/button&gt;
+
+  &lt;/div&gt;
+
+  &lt;script src="app.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// app.js
+
+const app = Vue.createApp({
+  data() {
+    return {
+      url: 'http://www.thenetninja.co.uk',
+      showBooks: true,
+      books: &#91;
+        { title: 'name of the wind', author: 'patrick rothfuss', img: 'assets/1.jpg', isFav: true },
+        { title: 'the way of kings', author: 'brandon sanderson', img: 'assets/2.jpg', isFav: false },
+        { title: 'the final empire', author: 'brandon sanderson', img: 'assets/3.jpg', isFav: true },
+      ]
+    }
+  },
+  methods: {
+    toggleShowBooks() {
+      this.showBooks = !this.showBooks
+    },
+  }
+})
+
+app.mount('#app')</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">CHALLENGE – Add to Favs</h3>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Learning Vue&lt;/title&gt;
+  &lt;script src="https://unpkg.com/vue@3.0.2"&gt;&lt;/script&gt;
+  &lt;style&gt;
+    body {
+      background: #eee;
+      max-width: 960px;
+      margin: 20px auto;
+    }
+    p, h3, ul {
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      list-style-type: none;
+      background: #fff;
+      margin: 20px auto;
+      padding: 10px 20px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    li.fav {
+      background: #ff9ed2;
+      color: #fff;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello, Vue :)&lt;/h1&gt;
+
+  &lt;div id="app"&gt;
+    &lt;!-- attribute binding --&gt;
+    &lt;!-- &lt;a :href="url"&gt;Best website ever&lt;/a&gt; --&gt;
+
+    &lt;div v-if="showBooks"&gt;
+      &lt;ul&gt;
+        &lt;li v-for="book in books" :class="{ fav: book.isFav }"&gt;
+          &lt;img :src="book.img" :alt="book.title"&gt;
+          &lt;h3&gt;{{ book.title }}&lt;/h3&gt;
+          &lt;p&gt;{{ book.author }}&lt;/p&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;button @click="toggleShowBooks"&gt;
+      &lt;span v-if="showBooks"&gt;Hide Books&lt;/span&gt;
+      &lt;span v-else&gt;Show Books&lt;/span&gt;
+    &lt;/button&gt;
+
+    
+  &lt;/div&gt;
+
+  &lt;script src="app.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// app.js
+
+const app = Vue.createApp({
+  data() {
+    return {
+      url: 'http://www.thenetninja.co.uk',
+      showBooks: true,
+      books: &#91;
+        { title: 'name of the wind', author: 'patrick rothfuss', img: 'assets/1.jpg', isFav: true },
+        { title: 'the way of kings', author: 'brandon sanderson', img: 'assets/2.jpg', isFav: false },
+        { title: 'the final empire', author: 'brandon sanderson', img: 'assets/3.jpg', isFav: true },
+      ]
+    }
+  },
+  methods: {
+    toggleShowBooks() {
+      this.showBooks = !this.showBooks
+    },
+  }
+})
+
+app.mount('#app')
+
+// Challenge - Add to Favs
+// - attach a click event to each li tag (for each book)
+// - when a user clicks an li, toggle the 'isFav' property of that book</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">SOLUTION – Add to Favs</h3>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Learning Vue&lt;/title&gt;
+  &lt;script src="https://unpkg.com/vue@3.0.2"&gt;&lt;/script&gt;
+  &lt;style&gt;
+    body {
+      background: #eee;
+      max-width: 960px;
+      margin: 20px auto;
+    }
+    p, h3, ul {
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      list-style-type: none;
+      background: #fff;
+      margin: 20px auto;
+      padding: 10px 20px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    li.fav {
+      background: #ff9ed2;
+      color: #fff;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello, Vue :)&lt;/h1&gt;
+
+  &lt;div id="app"&gt;
+    &lt;!-- attribute binding --&gt;
+    &lt;!-- &lt;a :href="url"&gt;Best website ever&lt;/a&gt; --&gt;
+
+    &lt;div v-if="showBooks"&gt;
+      &lt;ul&gt;
+        &lt;li v-for="book in books" :class="{ fav: book.isFav }" @click="toggleFav(book)"&gt;
+          &lt;img :src="book.img" :alt="book.title"&gt;
+          &lt;h3&gt;{{ book.title }}&lt;/h3&gt;
+          &lt;p&gt;{{ book.author }}&lt;/p&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;button @click="toggleShowBooks"&gt;
+      &lt;span v-if="showBooks"&gt;Hide Books&lt;/span&gt;
+      &lt;span v-else&gt;Show Books&lt;/span&gt;
+    &lt;/button&gt;
+    
+  &lt;/div&gt;
+
+  &lt;script src="app.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// app.js
+
+const app = Vue.createApp({
+  data() {
+    return {
+      url: 'http://www.thenetninja.co.uk',
+      showBooks: true,
+      books: &#91;
+        { title: 'name of the wind', author: 'patrick rothfuss', img: 'assets/1.jpg', isFav: true },
+        { title: 'the way of kings', author: 'brandon sanderson', img: 'assets/2.jpg', isFav: false },
+        { title: 'the final empire', author: 'brandon sanderson', img: 'assets/3.jpg', isFav: true },
+      ]
+    }
+  },
+  methods: {
+    toggleShowBooks() {
+      this.showBooks = !this.showBooks
+    },
+    toggleFav(book) {
+      book.isFav = !book.isFav
+    }
+  }
+})
+
+app.mount('#app')
+
+// Challenge - Add to Favs
+// - attach a click event to each li tag (for each book)
+// - when a user clicks an li, toggle the 'isFav' property of that book</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Computes Properties</h3>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Learning Vue&lt;/title&gt;
+  &lt;script src="https://unpkg.com/vue@3.0.2"&gt;&lt;/script&gt;
+  &lt;style&gt;
+    body {
+      background: #eee;
+      max-width: 960px;
+      margin: 20px auto;
+    }
+    p, h3, ul {
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      list-style-type: none;
+      background: #fff;
+      margin: 20px auto;
+      padding: 10px 20px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    li.fav {
+      background: #ff9ed2;
+      color: #fff;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello, Vue :)&lt;/h1&gt;
+
+  &lt;div id="app"&gt;
+    &lt;!-- attribute binding --&gt;
+    &lt;!-- &lt;a :href="url"&gt;Best website ever&lt;/a&gt; --&gt;
+
+    &lt;div v-if="showBooks"&gt;
+      &lt;ul&gt;
+        &lt;li v-for="book in filteredBooks" :class="{ fav: book.isFav }" @click="toggleFav(book)"&gt;
+          &lt;img :src="book.img" :alt="book.title"&gt;
+          &lt;h3&gt;{{ book.title }}&lt;/h3&gt;
+          &lt;p&gt;{{ book.author }}&lt;/p&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;button @click="toggleShowBooks"&gt;
+      &lt;span v-if="showBooks"&gt;Hide Books&lt;/span&gt;
+      &lt;span v-else&gt;Show Books&lt;/span&gt;
+    &lt;/button&gt;
+    
+  &lt;/div&gt;
+
+  &lt;script src="app.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// app.js
+
+const app = Vue.createApp({
+  data() {
+    return {
+      url: 'http://www.thenetninja.co.uk',
+      showBooks: true,
+      books: &#91;
+        { title: 'name of the wind', author: 'patrick rothfuss', img: 'assets/1.jpg', isFav: true },
+        { title: 'the way of kings', author: 'brandon sanderson', img: 'assets/2.jpg', isFav: false },
+        { title: 'the final empire', author: 'brandon sanderson', img: 'assets/3.jpg', isFav: true },
+      ]
+    }
+  },
+  methods: {
+    toggleShowBooks() {
+      this.showBooks = !this.showBooks
+    },
+    toggleFav(book) {
+      book.isFav = !book.isFav
+    }
+  },
+  computed: {
+    filteredBooks() {
+      return this.books.filter((book) =&gt; book.isFav)
+    }
+  }
+})
+
+app.mount('#app')
+</code></pre>
+
+
+
+<h2>第3節：The Vue CLI (for Bigger Projects)</h2>
+
+
+
+<h3>Why Use the Vue CLI?</h3>
+
+
+
+<h4>Vue Websites</h4>
+
+
+
+<ul>
+<li>Use modern JavaScript features</li>
+<li>Provides us with a live-reload dev server</li>
+<li>Optimize our code for production</li>
+</ul>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">How to Use the Vue CLI</h3>
+
+
+
+<ul>
+<li>Node.js – 必要</li>
+<li>Command line – 必要，Node.js command prompt、終端機、命令提示字元</li>
+<li>Node.js 版本查詢 node -v</li>
+<li>Vue CLI，npm install -g @vue/cli</li>
+<li>移動到專案位置，cd 專案名稱位置</li>
+<li>執行指令 vue create modal-project</li>
+</ul>
+
+
+
+<h4>關於舊版本</h4>
+
+
+
+<p>Vue CLI 的包名稱由&nbsp;<code>vue-cli</code>&nbsp;改成了<code>@vue/cli</code>。如果你已經全局安裝了舊版本的<code>vue-cli</code>(1.x 或2.x)，你需要先通過&nbsp;<code>npm uninstall vue-cli -g</code>&nbsp;或&nbsp;<code>yarn global remove vue-cli</code>&nbsp;卸載它。</p>
+
+
+
+<ul><li><a href="https://cli.vuejs.org/zh/guide/installation.html" target="_blank" rel="noreferrer noopener">Vue CLI 安裝連結</a></li></ul>
+
+
+
+<h4>執行指令步驟 vue create modal-project</h4>
+
+
+
+<ul>
+<li>Manually select features</li>
+<li>Check the features needed for your project:<ul>
+<li>Choose Vue version</li>
+<li>Babel</li>
+</ul>
+</li>
+<li>Choose a version of Vue.js that you want to start the project with<ul><li>3.x</li></ul>
+</li>
+<li>Where do you prefer placing config for Babel, ESLint, etc.?<ul><li>In dedicated config files</li></ul>
+</li>
+<li>Save this as a preset for future projects<ul><li>N</li></ul>
+</li>
+</ul>
+
+
+
+<h4>安裝完成後指令</h4>
+
+
+
+<ul>
+<li>cd 專案名稱</li>
+<li>使用 code . 打開 VSCode 編輯器</li>
+</ul>
+
+
+
+<h3>New Project Walkthrough</h3>
+
+
+
+<h3>Vue Files &amp; Templates</h3>
+
+
+
+<h4>打開 VSCode 終端機</h4>
+
+
+
+<ul><li>執行指令：npm run serve</li></ul>
+
+
+
+<pre class="wp-block-code"><code>// App.vue
+
+&lt;template&gt;
+  &lt;h1&gt;{{ title }}&lt;/h1&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  name: 'App',
+  data() {
+    return {
+      title: 'My First Vue App :)'
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+h1 {
+  border-bottom: 1px solid #ddd;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+&lt;/style&gt;
+</code></pre>
+
+
+
+<h4>下載 GitHub Course Files 須知</h4>
+
+
+
+<ul>
+<li>安裝 node_modules</li>
+<li>開啟 Terminal</li>
+<li>執行指令 npm install</li>
+</ul>
+
+
+
+<h3>Template Refs (模板引用)</h3>
+
+
+
+<pre class="wp-block-code"><code>// App.vue
+
+&lt;template&gt;
+  &lt;h1&gt;{{ title }}&lt;/h1&gt;
+  &lt;input type="text" ref="name"&gt;
+  &lt;button @click="handleClick"&gt;click me&lt;/button&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  name: 'App',
+  data() {
+    return {
+      title: 'My First Vue App :)'
+    }
+  },
+  methods: {
+    handleClick() {
+      console.log(this.$refs.name)
+      this.$refs.name.classList.add('active')
+      this.$refs.name.focus()
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+h1 {
+  border-bottom: 1px solid #ddd;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+&lt;/style&gt;
+</code></pre>
+
+
+
+<h3>Multiple Components</h3>
+
+
+
+<h4>Multiple Components</h4>
+
+
+
+<ul><li>App.vue – root component<ul>
+<li>Header.vue</li>
+<li>Article.vue<ul>
+<li>Content.vue</li>
+<li>Comments.vue</li>
+</ul>
+</li>
+<li>Footer.vue</li>
+</ul>
+</li></ul>
+
+
+
+<h4>Terminology</h4>
+
+
+
+<ul>
+<li>Article.vue – parent component<ul><li>Content.vue, Comments.vue – child components</li></ul>
+</li>
+<li>App.vue – parent component<ul><li>Header.vue, Article.vue, Footer.vue- child components</li></ul>
+</li>
+</ul>
+
+
+
+<p>Component Tree，App.vue, Header.vue, Article.vue, Footer,vue, Content.vue, Comments.vue。</p>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ul>
+<li>移除 Components 裡面的 HelloWorld.vue</li>
+<li>在 Components 裡面新增 Modal.vue</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// Modal.vue
+
+&lt;template&gt;
+  &lt;div class="backdrop"&gt;
+    &lt;div class="modal"&gt;
+      &lt;p&gt;modal content&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;style&gt;
+  .modal {
+    width: 400px;
+    padding: 20px;
+    margin: 100px auto;
+    background: white;
+    border-radius: 10px;
+  }
+  .backdrop {
+    top: 0;
+    position: fixed;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+  }
+&lt;/style&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// App.vue
+
+&lt;template&gt;
+  &lt;h1&gt;{{ title }}&lt;/h1&gt;
+  &lt;Modal /&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import Modal from './components/Modal.vue'
+
+export default {
+  name: 'App',
+  components: { Modal },
+  data() {
+    return {
+      title: 'My First Vue App :)'
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+h1 {
+  border-bottom: 1px solid #ddd;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+&lt;/style&gt;
+</code></pre>
+
+
+
+<h3>Component Styles &amp; Global Styles</h3>
+
+
+
+<h4>Modal.vue style 設定方式</h4>
+
+
+
+<ul>
+<li>&lt;style&gt; 加上 scoped</li>
+<li>make the selector more specific</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// Modal.vue - 1
+
+&lt;template&gt;
+  &lt;div class="backdrop"&gt;
+    &lt;div class="modal"&gt;
+      &lt;h1&gt;Modal Title&lt;/h1&gt;
+      &lt;p&gt;modal content&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;style scoped&gt;
+  .modal {
+    width: 400px;
+    padding: 20px;
+    margin: 100px auto;
+    background: white;
+    border-radius: 10px;
+  }
+  .backdrop {
+    top: 0;
+    position: fixed;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+  }
+  h1 {
+    color: #03cfb4;
+    border: none;
+    padding: 0;
+  }
+&lt;/style&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Modal.vue - 2
+
+&lt;template&gt;
+  &lt;div class="backdrop"&gt;
+    &lt;div class="modal"&gt;
+      &lt;h1&gt;Modal Title&lt;/h1&gt;
+      &lt;p&gt;modal content&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;style&gt;
+  .modal {
+    width: 400px;
+    padding: 20px;
+    margin: 100px auto;
+    background: white;
+    border-radius: 10px;
+  }
+  .backdrop {
+    top: 0;
+    position: fixed;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+  }
+  .modal h1 {
+    color: #03cfb4;
+    border: none;
+    padding: 0;
+  }
+&lt;/style&gt;</code></pre>
+
+
+
+<h4>global styles</h4>
+
+
+
+<ul>
+<li>新增 global.css 在 assets 資料夾裡面</li>
+<li>設定進入點 main.js import 匯入 global.css 檔案</li>
+<li>覆蓋 global.css 樣式，在 Modal.vue 修改樣式</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// assets/global.css
+
+body {
+  margin: 0;
+}
+p {
+  font-style: italic;
+}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// src/main.js
+
+import { createApp } from 'vue'
+import App from './App.vue'
+import './assets/global.css'
+
+createApp(App).mount('#app')
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// components/Modal.vue
+
+&lt;template&gt;
+  &lt;div class="backdrop"&gt;
+    &lt;div class="modal"&gt;
+      &lt;h1&gt;Modal Title&lt;/h1&gt;
+      &lt;p&gt;modal content&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;style&gt;
+  .modal {
+    width: 400px;
+    padding: 20px;
+    margin: 100px auto;
+    background: white;
+    border-radius: 10px;
+  }
+  .backdrop {
+    top: 0;
+    position: fixed;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+  }
+  .modal h1 {
+    color: #03cfb4;
+    border: none;
+    padding: 0;
+  }
+  .modal p {
+    font-style: normal;
+  }
+&lt;/style&gt;</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Passing Data with Props (使用 Props 傳遞資料)</h3>
+
+
+
+<h4>we do this by using what’s known as props in vue, and we can pass props from a parent component to a child component</h4>
+
+
+
+<h4>為什麼我們要這樣做，兩個原因</h4>
+
+
+
+<ul>
+<li>more dynamic and more reusable(可重複使用的)</li>
+<li>multiple components and they all use the same data</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// App.vue - 1
+
+&lt;template&gt;
+  &lt;h1&gt;{{ title }}&lt;/h1&gt;
+  &lt;Modal header="Sign up for the Giveway!" text="Grab your ninja swag for half price!" /&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import Modal from './components/Modal.vue'
+
+export default {
+  name: 'App',
+  components: { Modal },
+  data() {
+    return {
+      title: 'My First Vue App :)'
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+h1 {
+  border-bottom: 1px solid #ddd;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+&lt;/style&gt;
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Modal.vue - 1
+
+&lt;template&gt;
+  &lt;div class="backdrop"&gt;
+    &lt;div class="modal"&gt;
+      &lt;h1&gt;{{ header }}&lt;/h1&gt;
+      &lt;p&gt;{{ text }}&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  props: &#91;'header', 'text']
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+  .modal {
+    width: 400px;
+    padding: 20px;
+    margin: 100px auto;
+    background: white;
+    border-radius: 10px;
+  }
+  .backdrop {
+    top: 0;
+    position: fixed;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+  }
+  .modal h1 {
+    color: #03cfb4;
+    border: none;
+    padding: 0;
+  }
+  .modal p {
+    font-style: normal;
+  }
+&lt;/style&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// App.vue - 2
+
+&lt;template&gt;
+  &lt;h1&gt;{{ title }}&lt;/h1&gt;
+  &lt;Modal :header="header" :text="text" /&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import Modal from './components/Modal.vue'
+
+export default {
+  name: 'App',
+  components: { Modal },
+  data() {
+    return {
+      title: 'My First Vue App :)',
+      header: 'Sign up for the Giveway',
+      text: 'Grab your ninja swag for half price!'
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+h1 {
+  border-bottom: 1px solid #ddd;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+&lt;/style&gt;
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Modal.vue - 2
+
+&lt;template&gt;
+  &lt;div class="backdrop"&gt;
+    &lt;div class="modal"&gt;
+      &lt;h1&gt;{{ header }}&lt;/h1&gt;
+      &lt;p&gt;{{ text }}&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  props: &#91;'header', 'text']
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+  .modal {
+    width: 400px;
+    padding: 20px;
+    margin: 100px auto;
+    background: white;
+    border-radius: 10px;
+  }
+  .backdrop {
+    top: 0;
+    position: fixed;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+  }
+  .modal h1 {
+    color: #03cfb4;
+    border: none;
+    padding: 0;
+  }
+  .modal p {
+    font-style: normal;
+  }
+&lt;/style&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// App.vue - 3
+
+&lt;template&gt;
+  &lt;h1&gt;{{ title }}&lt;/h1&gt;
+  &lt;Modal :header="header" :text="text" theme="sale" /&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import Modal from './components/Modal.vue'
+
+export default {
+  name: 'App',
+  components: { Modal },
+  data() {
+    return {
+      title: 'My First Vue App :)',
+      header: 'Sign up for the Giveway',
+      text: 'Grab your ninja swag for half price!'
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+h1 {
+  border-bottom: 1px solid #ddd;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+&lt;/style&gt;
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Modal.vue - 3
+
+&lt;template&gt;
+  &lt;div class="backdrop"&gt;
+    &lt;div class="modal" :class="{ sale: theme === 'sale'}"&gt;
+      &lt;h1&gt;{{ header }}&lt;/h1&gt;
+      &lt;p&gt;{{ text }}&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  props: &#91;'header', 'text', 'theme']
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+  .modal {
+    width: 400px;
+    padding: 20px;
+    margin: 100px auto;
+    background: white;
+    border-radius: 10px;
+  }
+  .backdrop {
+    top: 0;
+    position: fixed;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+  }
+  .modal h1 {
+    color: #03cfb4;
+    border: none;
+    padding: 0;
+  }
+  .modal p {
+    font-style: normal;
+  }
+
+  .modal.sale {
+    background: crimson;
+    color: white;
+  }
+  .modal.sale h1 {
+    color: white;
+  }
+&lt;/style&gt;</code></pre>
+
+
+
+<p>And this is how we pass data as props into components, which A makes them more reusable, B makes them customizable, and C allows us to have a single source of truth when it comes to data.</p>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Emitting Custom Events</h3>
+
+
+
+<p>show / hide Modal</p>
+
+
+
+<pre class="wp-block-code"><code>// App.vue
+
+&lt;template&gt;
+  &lt;h1&gt;{{ title }}&lt;/h1&gt;
+  &lt;p&gt;Welcome...&lt;/p&gt;
+  &lt;div v-if="showModal"&gt;
+    &lt;Modal :header="header" :text="text" theme="sale" @close="toggleModal" /&gt;
+  &lt;/div&gt;
+  &lt;button @click="toggleModal"&gt;open modal&lt;/button&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import Modal from './components/Modal.vue'
+
+export default {
+  name: 'App',
+  components: { Modal },
+  data() {
+    return {
+      title: 'My First Vue App :)',
+      header: 'Sign up for the Giveway',
+      text: 'Grab your ninja swag for half price!',
+      showModal: false
+    }
+  },
+  methods: {
+    toggleModal() {
+      this.showModal = !this.showModal
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+h1 {
+  border-bottom: 1px solid #ddd;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+&lt;/style&gt;
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Modal.vue
+
+&lt;template&gt;
+  &lt;div class="backdrop" @click="closeModal"&gt;
+    &lt;div class="modal" :class="{ sale: theme === 'sale'}"&gt;
+      &lt;h1&gt;{{ header }}&lt;/h1&gt;
+      &lt;p&gt;{{ text }}&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  props: &#91;'header', 'text', 'theme'],
+  methods: {
+    closeModal() {
+      this.$emit('close')
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+  .modal {
+    width: 400px;
+    padding: 20px;
+    margin: 100px auto;
+    background: white;
+    border-radius: 10px;
+  }
+  .backdrop {
+    top: 0;
+    position: fixed;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+  }
+  .modal h1 {
+    color: #03cfb4;
+    border: none;
+    padding: 0;
+  }
+  .modal p {
+    font-style: normal;
+  }
+
+  .modal.sale {
+    background: crimson;
+    color: white;
+  }
+  .modal.sale h1 {
+    color: white;
+  }
+&lt;/style&gt;</code></pre>
+
+
+
+<h3>Click Event Modifiers</h3>
+
+
+
+<h4>open modal</h4>
+
+
+
+<ul>
+<li>@click.right=”toggleModal”</li>
+<li>@click.shift=”toggleModal”</li>
+<li>@click.alt=”toggleModal”</li>
+</ul>
+
+
+
+<h4>close modal</h4>
+
+
+
+<ul><li>@click.self=”closeModal”</li></ul>
+
+
+
+<pre class="wp-block-code"><code>// App.vue
+
+&lt;template&gt;
+  &lt;h1&gt;{{ title }}&lt;/h1&gt;
+  &lt;p&gt;Welcome...&lt;/p&gt;
+  &lt;div v-if="showModal"&gt;
+    &lt;Modal :header="header" :text="text" theme="sale" @close="toggleModal" /&gt;
+  &lt;/div&gt;
+  &lt;button @click.alt="toggleModal"&gt;open modal (alt)&lt;/button&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import Modal from './components/Modal.vue'
+
+export default {
+  name: 'App',
+  components: { Modal },
+  data() {
+    return {
+      title: 'My First Vue App :)',
+      header: 'Sign up for the Giveway',
+      text: 'Grab your ninja swag for half price!',
+      showModal: false
+    }
+  },
+  methods: {
+    toggleModal() {
+      this.showModal = !this.showModal
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+h1 {
+  border-bottom: 1px solid #ddd;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+&lt;/style&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Modal.vue
+
+&lt;template&gt;
+  &lt;div class="backdrop" @click.self="closeModal"&gt;
+    &lt;div class="modal" :class="{ sale: theme === 'sale'}"&gt;
+      &lt;h1&gt;{{ header }}&lt;/h1&gt;
+      &lt;p&gt;{{ text }}&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  props: &#91;'header', 'text', 'theme'],
+  methods: {
+    closeModal() {
+      this.$emit('close')
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+  .modal {
+    width: 400px;
+    padding: 20px;
+    margin: 100px auto;
+    background: white;
+    border-radius: 10px;
+  }
+  .backdrop {
+    top: 0;
+    position: fixed;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+  }
+  .modal h1 {
+    color: #03cfb4;
+    border: none;
+    padding: 0;
+  }
+  .modal p {
+    font-style: normal;
+  }
+
+  .modal.sale {
+    background: crimson;
+    color: white;
+  }
+  .modal.sale h1 {
+    color: white;
+  }
+&lt;/style&gt;</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Slots(插槽)</h3>
+
+
+
+<pre class="wp-block-code"><code>// App.vue - 1
+
+&lt;template&gt;
+  &lt;h1&gt;{{ title }}&lt;/h1&gt;
+  &lt;p&gt;Welcome...&lt;/p&gt;
+  &lt;div v-if="showModal"&gt;
+    &lt;Modal  theme="sale" @close="toggleModal"&gt;
+      &lt;template v-slot:links&gt;
+        &lt;a href="#"&gt;sign up now&lt;/a&gt;
+        &lt;a href="#"&gt;more info&lt;/a&gt;
+      &lt;/template&gt;
+      &lt;h1&gt;Ninja Givaway&lt;/h1&gt;
+      &lt;p&gt;Grab your ninja swag for half price!&lt;/p&gt;
+    &lt;/Modal&gt;
+  &lt;/div&gt;
+  &lt;button @click.alt="toggleModal"&gt;open modal (alt)&lt;/button&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import Modal from './components/Modal.vue'
+
+export default {
+  name: 'App',
+  components: { Modal },
+  data() {
+    return {
+      title: 'My First Vue App :)',
+      header: 'Sign up for the Giveway',
+      text: 'Grab your ninja swag for half price!',
+      showModal: false
+    }
+  },
+  methods: {
+    toggleModal() {
+      this.showModal = !this.showModal
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+h1 {
+  border-bottom: 1px solid #ddd;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+&lt;/style&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Modal.vue - 1
+
+&lt;template&gt;
+  &lt;div class="backdrop" @click.self="closeModal"&gt;
+    &lt;div class="modal" :class="{ sale: theme === 'sale'}"&gt;
+      &lt;slot&gt;&lt;/slot&gt;
+      &lt;div class="actions"&gt;
+        &lt;slot name="links"&gt;&lt;/slot&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  props: &#91;'theme'],
+  methods: {
+    closeModal() {
+      this.$emit('close')
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+  .modal {
+    width: 400px;
+    padding: 20px;
+    margin: 100px auto;
+    background: white;
+    border-radius: 10px;
+  }
+  .backdrop {
+    top: 0;
+    position: fixed;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+  }
+  .modal h1 {
+    color: #03cfb4;
+    border: none;
+    padding: 0;
+  }
+  .modal p {
+    font-style: normal;
+  }
+  .modal .actions {
+    text-align: center;
+    margin: 30px 0 10px 0;
+  }
+  .modal .actions a {
+    color: #333;
+    padding: 8px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    text-decoration: none;
+    margin: 10px;
+  }
+
+  .modal.sale {
+    background: crimson;
+    color: white;
+  }
+  .modal.sale h1 {
+    color: white;
+  }
+  .modal.sale .actions {
+    color: white;
+  }
+  .modal.sale .actions a {
+    color: white;
+  }
+&lt;/style&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// App.vue - 2
+
+&lt;template&gt;
+  &lt;h1&gt;{{ title }}&lt;/h1&gt;
+  &lt;p&gt;Welcome...&lt;/p&gt;
+  &lt;div v-if="showModal"&gt;
+    &lt;Modal  theme="sale" @close="toggleModal"&gt;
+      &lt;template v-slot:links&gt;
+        &lt;a href="#"&gt;sign up now&lt;/a&gt;
+        &lt;a href="#"&gt;more info&lt;/a&gt;
+      &lt;/template&gt;
+
+    &lt;/Modal&gt;
+  &lt;/div&gt;
+  &lt;button @click.alt="toggleModal"&gt;open modal (alt)&lt;/button&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import Modal from './components/Modal.vue'
+
+export default {
+  name: 'App',
+  components: { Modal },
+  data() {
+    return {
+      title: 'My First Vue App :)',
+      header: 'Sign up for the Giveway',
+      text: 'Grab your ninja swag for half price!',
+      showModal: false
+    }
+  },
+  methods: {
+    toggleModal() {
+      this.showModal = !this.showModal
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+h1 {
+  border-bottom: 1px solid #ddd;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+&lt;/style&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Modal.vue - 2
+
+&lt;template&gt;
+  &lt;div class="backdrop" @click.self="closeModal"&gt;
+    &lt;div class="modal" :class="{ sale: theme === 'sale'}"&gt;
+      &lt;slot&gt;default content&lt;/slot&gt;
+      &lt;div class="actions"&gt;
+        &lt;slot name="links"&gt;&lt;/slot&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  props: &#91;'theme'],
+  methods: {
+    closeModal() {
+      this.$emit('close')
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+  .modal {
+    width: 400px;
+    padding: 20px;
+    margin: 100px auto;
+    background: white;
+    border-radius: 10px;
+  }
+  .backdrop {
+    top: 0;
+    position: fixed;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+  }
+  .modal h1 {
+    color: #03cfb4;
+    border: none;
+    padding: 0;
+  }
+  .modal p {
+    font-style: normal;
+  }
+  .modal .actions {
+    text-align: center;
+    margin: 30px 0 10px 0;
+  }
+  .modal .actions a {
+    color: #333;
+    padding: 8px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    text-decoration: none;
+    margin: 10px;
+  }
+
+  .modal.sale {
+    background: crimson;
+    color: white;
+  }
+  .modal.sale h1 {
+    color: white;
+  }
+  .modal.sale .actions {
+    color: white;
+  }
+  .modal.sale .actions a {
+    color: white;
+  }
+&lt;/style&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// App.vue - 3
+
+&lt;template&gt;
+  &lt;h1&gt;{{ title }}&lt;/h1&gt;
+  &lt;p&gt;Welcome...&lt;/p&gt;
+  &lt;div v-if="showModal"&gt;
+    &lt;Modal  theme="" @close="toggleModal"&gt;
+      &lt;template v-slot:links&gt;
+        &lt;a href="#"&gt;sign up now&lt;/a&gt;
+        &lt;a href="#"&gt;more info&lt;/a&gt;
+      &lt;/template&gt;
+      &lt;h1&gt;Ninja Givaway&lt;/h1&gt;
+      &lt;p&gt;Grab your ninja swag for half price!&lt;/p&gt;
+    &lt;/Modal&gt;
+  &lt;/div&gt;
+  &lt;button @click.alt="toggleModal"&gt;open modal (alt)&lt;/button&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import Modal from './components/Modal.vue'
+
+export default {
+  name: 'App',
+  components: { Modal },
+  data() {
+    return {
+      title: 'My First Vue App :)',
+      header: 'Sign up for the Giveway',
+      text: 'Grab your ninja swag for half price!',
+      showModal: false
+    }
+  },
+  methods: {
+    toggleModal() {
+      this.showModal = !this.showModal
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+h1 {
+  border-bottom: 1px solid #ddd;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+&lt;/style&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Modal.vue - 3
+
+&lt;template&gt;
+  &lt;div class="backdrop" @click.self="closeModal"&gt;
+    &lt;div class="modal" :class="{ sale: theme === 'sale'}"&gt;
+      &lt;slot&gt;&lt;/slot&gt;
+      &lt;div class="actions"&gt;
+        &lt;slot name="links"&gt;&lt;/slot&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  props: &#91;'theme'],
+  methods: {
+    closeModal() {
+      this.$emit('close')
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+  .modal {
+    width: 400px;
+    padding: 20px;
+    margin: 100px auto;
+    background: white;
+    border-radius: 10px;
+  }
+  .backdrop {
+    top: 0;
+    position: fixed;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+  }
+  .modal h1 {
+    color: #03cfb4;
+    border: none;
+    padding: 0;
+  }
+  .modal p {
+    font-style: normal;
+  }
+  .modal .actions {
+    text-align: center;
+    margin: 30px 0 10px 0;
+  }
+  .modal .actions a {
+    color: #333;
+    padding: 8px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    text-decoration: none;
+    margin: 10px;
+  }
+
+  .modal.sale {
+    background: crimson;
+    color: white;
+  }
+  .modal.sale h1 {
+    color: white;
+  }
+  .modal.sale .actions {
+    color: white;
+  }
+  .modal.sale .actions a {
+    color: white;
+  }
+&lt;/style&gt;</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">CHALLENGE – Reusing Components</h3>
+
+
+
+<pre class="wp-block-code"><code>// App.vue
+
+&lt;template&gt;
+  &lt;h1&gt;{{ title }}&lt;/h1&gt;
+  &lt;p&gt;Welcome...&lt;/p&gt;
+  &lt;div v-if="showModal"&gt;
+    &lt;Modal  theme="" @close="toggleModal"&gt;
+      &lt;template v-slot:links&gt;
+        &lt;a href="#"&gt;sign up now&lt;/a&gt;
+        &lt;a href="#"&gt;more info&lt;/a&gt;
+      &lt;/template&gt;
+      &lt;h1&gt;Ninja Givaway&lt;/h1&gt;
+      &lt;p&gt;Grab your ninja swag for half price!&lt;/p&gt;
+    &lt;/Modal&gt;
+  &lt;/div&gt;
+
+  &lt;div v-if="showModalTwo"&gt;
+    &lt;Modal @close="toggleModalTwo"&gt;
+      &lt;h1&gt;Sign up to the newsletter&lt;/h1&gt;
+      &lt;p&gt;For updates and promo codes!&lt;/p&gt;
+    &lt;/Modal&gt;
+  &lt;/div&gt;
+  &lt;button @click.alt="toggleModal"&gt;open modal (alt)&lt;/button&gt;
+  &lt;button @click="toggleModalTwo"&gt;open modal&lt;/button&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+// challenge
+// - create an extra button to poen a different modal
+// - use the same modal component but pass in a different template (slot)
+// - use a different method (e.g. toggleModalTwo) and data (e.g. showModalTwo)
+
+import Modal from './components/Modal.vue'
+
+export default {
+  name: 'App',
+  components: { Modal },
+  data() {
+    return {
+      title: 'My First Vue App :)',
+      showModal: false,
+      showModalTwo: false,
+    }
+  },
+  methods: {
+    toggleModal() {
+      this.showModal = !this.showModal
+    },
+    toggleModalTwo() {
+      this.showModalTwo = !this.showModalTwo
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+h1 {
+  border-bottom: 1px solid #ddd;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+&lt;/style&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Modal.vue
+
+&lt;template&gt;
+  &lt;div class="backdrop" @click.self="closeModal"&gt;
+    &lt;div class="modal" :class="{ sale: theme === 'sale'}"&gt;
+      &lt;slot&gt;&lt;/slot&gt;
+      &lt;div class="actions"&gt;
+        &lt;slot name="links"&gt;&lt;/slot&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  props: &#91;'theme'],
+  methods: {
+    closeModal() {
+      this.$emit('close')
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+  .modal {
+    width: 400px;
+    padding: 20px;
+    margin: 100px auto;
+    background: white;
+    border-radius: 10px;
+  }
+  .backdrop {
+    top: 0;
+    position: fixed;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+  }
+  .modal h1 {
+    color: #03cfb4;
+    border: none;
+    padding: 0;
+  }
+  .modal p {
+    font-style: normal;
+  }
+  .modal .actions {
+    text-align: center;
+    margin: 30px 0 10px 0;
+  }
+  .modal .actions a {
+    color: #333;
+    padding: 8px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    text-decoration: none;
+    margin: 10px;
+  }
+
+  .modal.sale {
+    background: crimson;
+    color: white;
+  }
+  .modal.sale h1 {
+    color: white;
+  }
+  .modal.sale .actions {
+    color: white;
+  }
+  .modal.sale .actions a {
+    color: white;
+  }
+&lt;/style&gt;</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Using Teleport (new features 新功能)</h3>
+
+
+
+<ul><li><a href="https://v3.vuejs.org/guide/teleport.html" target="_blank" rel="noreferrer noopener">Vue.js 3 – Teleport</a></li></ul>
+
+
+
+<h4>class, id 都可以使用 e.g. – .modals、#modals</h4>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang=""&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width,initial-scale=1.0"&gt;
+    &lt;link rel="icon" href="&lt;%= BASE_URL %&gt;favicon.ico"&gt;
+    &lt;title&gt;&lt;%= htmlWebpackPlugin.options.title %&gt;&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;noscript&gt;
+      &lt;strong&gt;We're sorry but &lt;%= htmlWebpackPlugin.options.title %&gt; doesn't work properly without JavaScript enabled. Please enable it to continue.&lt;/strong&gt;
+    &lt;/noscript&gt;
+    &lt;div id="app"&gt;&lt;/div&gt;
+    &lt;!-- built files will be auto injected --&gt;
+    &lt;div class="modals"&gt;&lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// App.vue
+
+&lt;template&gt;
+  &lt;h1&gt;{{ title }}&lt;/h1&gt;
+  &lt;p&gt;Welcome...&lt;/p&gt;
+  &lt;teleport to=".modals" v-if="showModal"&gt;
+    &lt;Modal  theme="" @close="toggleModal"&gt;
+      &lt;template v-slot:links&gt;
+        &lt;a href="#"&gt;sign up now&lt;/a&gt;
+        &lt;a href="#"&gt;more info&lt;/a&gt;
+      &lt;/template&gt;
+      &lt;h1&gt;Ninja Givaway&lt;/h1&gt;
+      &lt;p&gt;Grab your ninja swag for half price!&lt;/p&gt;
+    &lt;/Modal&gt;
+  &lt;/teleport&gt;
+
+  &lt;teleport to=".modals" v-if="showModalTwo"&gt;
+    &lt;Modal @close="toggleModalTwo"&gt;
+      &lt;h1&gt;Sign up to the newsletter&lt;/h1&gt;
+      &lt;p&gt;For updates and promo codes!&lt;/p&gt;
+    &lt;/Modal&gt;
+  &lt;/teleport&gt;
+
+  &lt;button @click.alt="toggleModal"&gt;open modal (alt)&lt;/button&gt;
+  &lt;button @click="toggleModalTwo"&gt;open modal&lt;/button&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+// challenge
+// - create an extra button to poen a different modal
+// - use the same modal component but pass in a different template (slot)
+// - use a different method (e.g. toggleModalTwo) and data (e.g. showModalTwo)
+
+import Modal from './components/Modal.vue'
+
+export default {
+  name: 'App',
+  components: { Modal },
+  data() {
+    return {
+      title: 'My First Vue App :)',
+      showModal: false,
+      showModalTwo: false,
+    }
+  },
+  methods: {
+    toggleModal() {
+      this.showModal = !this.showModal
+    },
+    toggleModalTwo() {
+      this.showModalTwo = !this.showModalTwo
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+#app, .modals {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+h1 {
+  border-bottom: 1px solid #ddd;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+&lt;/style&gt;</code></pre>
+
+
+
+<h2>第4節：PROJECT BUILD – Reaction Timer</h2>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Project 1 Preview &amp; Setup</h3>
+
+
+
+<h4>Reaction Timer Project</h4>
+
+
+
+<ul><li>App.vue<ul>
+<li>Block.vue</li>
+<li>Results.vue</li>
+</ul>
+</li></ul>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ul>
+<li>打開終端機</li>
+<li>移動到要安裝位置</li>
+<li>輸入指令：vue create reaction-timer</li>
+<li>Please pick a preset: Manually select features</li>
+<li>Check the features needed for your project: Choose Vue version, Babel</li>
+<li>Choose a version of Vue.js that you want to start the project with 3.x</li>
+<li>Where do you prefer placing config for Babel, ESLint, etc.? In dedicated config file</li>
+<li>Save this as a preset for future projects? N</li>
+<li>移動到檔案位置：cd reaction-timer</li>
+<li>打開 VSCode：code .</li>
+<li>移除 HelloWorld.vue 檔案</li>
+<li>修改 App.vue 檔案、移除不用的內容</li>
+<li>在 components 資料夾裡新增 Block.vue、Results.vue 檔案</li>
+<li>打開終端機、執行指令：npm run serve</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// App.vue
+
+&lt;template&gt;
+  &lt;h1&gt;Ninja Reaction Timer&lt;/h1&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+
+
+export default {
+  name: 'App',
+  components: { }
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #444;
+  margin-top: 60px;
+}
+&lt;/style&gt;
+</code></pre>
+
+
+
+<h4>參考文件</h4>
+
+
+
+<ul><li><a href="https://router.vuejs.org/guide/essentials/history-mode.html" target="_blank" rel="noreferrer noopener">Vue Router Guide – Different History modes</a></li></ul>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Starting a New Game</h3>
+
+
+
+<pre class="wp-block-code"><code>// App.vue
+
+&lt;template&gt;
+  &lt;h1&gt;Ninja Reaction Timer&lt;/h1&gt;
+  &lt;button @click="start" :disabled="isPlaying"&gt;play&lt;/button&gt;
+  &lt;Block v-if="isPlaying" :delay="delay" /&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import Block from './components/Block.vue'
+
+export default {
+  name: 'App',
+  components: { Block },
+  data() {
+    return {
+      isPlaying: false,
+      delay: null
+    }
+  },
+  methods: {
+    start() {
+      this.delay = 2000 + Math.random() * 5000
+      this.isPlaying = true
+      // console.log(this.delay)
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #444;
+  margin-top: 60px;
+}
+&lt;/style&gt;
+</code></pre>
+
+
+
+<ul><li>快速建立 &lt;template&gt;、&lt;script&gt;、&lt;style&gt;，快捷鍵 &lt;vue&gt; with default.vue</li></ul>
+
+
+
+<pre class="wp-block-code"><code>// Block.vue
+
+&lt;template&gt;
+  &lt;div class="block"&gt;
+    click me
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  props: &#91;'delay']
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+  .block {
+    width: 400px;
+    border-radius: 20px;
+    background: #0faf87;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    margin: 40px auto;
+  }
+&lt;/style&gt;</code></pre>
+
+
+
+<h4>Vetur can’t find&nbsp;<code>tsconfig.json</code>,&nbsp;<code>jsconfig.json</code>&nbsp;in /xxxx/xxxxxx.</h4>
+
+
+
+<ul><li><a href="https://vuejs.github.io/vetur/guide/FAQ.html#vetur-can-t-find-tsconfig-json-jsconfig-json-in-xxxx-xxxxxx" target="_blank" rel="noreferrer noopener">Vetur 文件</a></li></ul>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Component Lifecycle Hooks (組件生命週期鉤子) 重要!</h3>
+
+
+
+<h4>資源</h4>
+
+
+
+<ul><li><a rel="noreferrer noopener" href="https://v3.vuejs.org/guide/instance.html#lifecycle-hooks" target="_blank">Lifecycle Diagram</a></li></ul>
+
+
+
+<pre class="wp-block-code"><code>// Block.vue
+
+&lt;template&gt;
+  &lt;div class="block" v-if="showBlock"&gt;
+    click me
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  props: &#91;'delay'],
+  data() {
+    return {
+      showBlock: false
+    }
+  },
+  mounted() {
+    // console.log('component mounted')
+    setTimeout(() =&gt; {
+      this.showBlock = true
+      // console.log(this.delay)
+    }, this.delay)
+  },
+  // updated() {
+  //   console.log('component updated')
+  // },
+  // unmounted() {
+  //   console.log('unmounted')
+  // }
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+  .block {
+    width: 400px;
+    border-radius: 20px;
+    background: #0faf87;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    margin: 40px auto;
+  }
+&lt;/style&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// App.vue
+
+&lt;template&gt;
+  &lt;h1&gt;Ninja Reaction Timer&lt;/h1&gt;
+  &lt;button @click="start" :disabled="isPlaying"&gt;play&lt;/button&gt;
+  &lt;Block v-if="isPlaying" :delay="delay" /&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import Block from './components/Block.vue'
+
+export default {
+  name: 'App',
+  components: { Block },
+  data() {
+    return {
+      isPlaying: false,
+      delay: null
+    }
+  },
+  methods: {
+    start() {
+      this.delay = 2000 + Math.random() * 5000
+      this.isPlaying = true
+      // console.log(this.delay)
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #444;
+  margin-top: 60px;
+}
+&lt;/style&gt;
+</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Creating the Reaction Timer</h3>
+
+
+
+<pre class="wp-block-code"><code>// Block.vue
+
+&lt;template&gt;
+  &lt;div class="block" v-if="showBlock" @click="stopTimer"&gt;
+    click me
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  props: &#91;'delay'],
+  data() {
+    return {
+      showBlock: false,
+      timer: null,
+      reactionTime: 0
+    }
+  },
+  mounted() {
+    setTimeout(() =&gt; {
+      this.showBlock = true
+      this.startTimer()
+    }, this.delay)
+  },
+  methods: {
+    startTimer() {
+      this.timer = setInterval(() =&gt; {
+        this.reactionTime += 10
+      }, 10)
+    },
+    stopTimer() {
+      clearInterval(this.timer)
+      console.log(this.reactionTime)
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+  .block {
+    width: 400px;
+    border-radius: 20px;
+    background: #0faf87;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    margin: 40px auto;
+  }
+&lt;/style&gt;</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Emitting Custom Events with Data</h3>
+
+
+
+<pre class="wp-block-code"><code>// Block.vue
+
+&lt;template&gt;
+  &lt;div class="block" v-if="showBlock" @click="stopTimer"&gt;
+    click me
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  props: &#91;'delay'],
+  data() {
+    return {
+      showBlock: false,
+      timer: null,
+      reactionTime: 0
+    }
+  },
+  mounted() {
+    setTimeout(() =&gt; {
+      this.showBlock = true
+      this.startTimer()
+    }, this.delay)
+  },
+  methods: {
+    startTimer() {
+      this.timer = setInterval(() =&gt; {
+        this.reactionTime += 10
+      }, 10)
+    },
+    stopTimer() {
+      clearInterval(this.timer)
+      this.$emit('end', this.reactionTime)
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+  .block {
+    width: 400px;
+    border-radius: 20px;
+    background: #0faf87;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    margin: 40px auto;
+  }
+&lt;/style&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// App.vue
+
+&lt;template&gt;
+  &lt;h1&gt;Ninja Reaction Timer&lt;/h1&gt;
+  &lt;button @click="start" :disabled="isPlaying"&gt;play&lt;/button&gt;
+  &lt;Block v-if="isPlaying" :delay="delay" @end="endGame" /&gt;
+  &lt;p v-if="showResults"&gt;Reaction time: {{ score }} ms&lt;/p&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import Block from './components/Block.vue'
+
+export default {
+  name: 'App',
+  components: { Block },
+  data() {
+    return {
+      isPlaying: false,
+      delay: null,
+      score: null,
+      showResults: false
+    }
+  },
+  methods: {
+    start() {
+      this.delay = 2000 + Math.random() * 5000
+      this.isPlaying = true
+      this.showResults = false
+    },
+    endGame(reactionTime) {
+      this.score = reactionTime
+      this.isPlaying = false
+      this.showResults = true
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #444;
+  margin-top: 60px;
+}
+&lt;/style&gt;
+</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">CHALLENGE – Showing a Results Component</h3>
+
+
+
+<pre class="wp-block-code"><code>// App.vue
+
+&lt;template&gt;
+  &lt;h1&gt;Ninja Reaction Timer&lt;/h1&gt;
+  &lt;button @click="start" :disabled="isPlaying"&gt;play&lt;/button&gt;
+  &lt;Block v-if="isPlaying" :delay="delay" @end="endGame" /&gt;
+  &lt;Results v-if="showResults" :score="score" /&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+// Challenge
+// - when the game ends, show the results component
+// - output the score inside the results component
+
+import Block from './components/Block.vue'
+import Results from './components/Results.vue'
+
+export default {
+  name: 'App',
+  components: { Block, Results },
+  data() {
+    return {
+      isPlaying: false,
+      delay: null,
+      score: null,
+      showResults: false
+    }
+  },
+  methods: {
+    start() {
+      this.delay = 2000 + Math.random() * 5000
+      this.isPlaying = true
+      this.showResults = false
+    },
+    endGame(reactionTime) {
+      this.score = reactionTime
+      this.isPlaying = false
+      this.showResults = true
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #444;
+  margin-top: 60px;
+}
+&lt;/style&gt;
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Results.vue
+
+&lt;template&gt;
+  &lt;p&gt;Reaction time - {{ score }} ms&lt;/p&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  props: &#91;'score']
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+
+&lt;/style&gt;</code></pre>
+
+
+
+<h3>Finishing Touches</h3>
+
+
+
+<pre class="wp-block-code"><code>// Results.vue
+
+&lt;template&gt;
+  &lt;p&gt;Reaction time - {{ score }} ms&lt;/p&gt;
+  &lt;p class="rank"&gt;{{ rank }}&lt;/p&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  props: &#91;'score'],
+  data() {
+    return {
+      rank: null
+    }
+  },
+  mounted() {
+    if (this.score &lt; 250) {
+      this.rank = 'Ninja Fingers'
+    }
+    else if (this.score &lt; 400) {
+      this.rank = 'Rapid Reflexes'
+    }
+    else {
+      this.rank = 'Snail pace...'
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+  .rank {
+    font-size: 1.4em;
+    color: #0faf87;
+    font-weight: bold;
+  }
+&lt;/style&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// App.vue
+
+&lt;template&gt;
+  &lt;h1&gt;Ninja Reaction Timer&lt;/h1&gt;
+  &lt;button @click="start" :disabled="isPlaying"&gt;play&lt;/button&gt;
+  &lt;Block v-if="isPlaying" :delay="delay" @end="endGame" /&gt;
+  &lt;Results v-if="showResults" :score="score" /&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+// Challenge
+// - when the game ends, show the results component
+// - output the score inside the results component
+
+import Block from './components/Block.vue'
+import Results from './components/Results.vue'
+
+export default {
+  name: 'App',
+  components: { Block, Results },
+  data() {
+    return {
+      isPlaying: false,
+      delay: null,
+      score: null,
+      showResults: false
+    }
+  },
+  methods: {
+    start() {
+      this.delay = 2000 + Math.random() * 5000
+      this.isPlaying = true
+      this.showResults = false
+    },
+    endGame(reactionTime) {
+      this.score = reactionTime
+      this.isPlaying = false
+      this.showResults = true
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #444;
+  margin-top: 60px;
+}
+button {
+  background: #0faf87;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin: 10px;
+}
+button&#91;disabled] {
+  opacity: 0.2;
+  cursor: not-allowed;
+}
+&lt;/style&gt;
+</code></pre>
+
+
+
+<h2>第5節：Forms &amp; Data Binding</h2>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Forms Intro &amp; Setup (表單介紹 &amp; 安裝)</h3>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ul>
+<li>打開終端機(Terminal)</li>
+<li>移動到要安裝專案的位置</li>
+<li>建立專案、輸入指令 vue create web-form</li>
+<li>Please pick a preset: Manually select features</li>
+<li>Check the features needed for your project: Choose Vue version, Babel</li>
+<li>Choose a version of Vue.js that you want to start the project with 3.x (Preview)</li>
+<li>Where do you prefer placing config for Babel, ESLint, etc.? In dedicated config files</li>
+<li>Save this as a preset for the future projects? N</li>
+<li>建立完成後、移動到專案位置 cd web-form</li>
+<li>輸入指令、打開網頁編輯器：code .</li>
+<li>移除 components/HelloWorld.vue 檔案</li>
+<li>修改 App.vue 檔案內容</li>
+<li>新增檔案 SignupForm.vue 在 components 資料夾裡面、新增內容</li>
+<li>執行指令：npm run serve</li>
+<li>在這之前要記得在 App.vue 檔案 import SignupForm from ‘./components/SignupForm.vue’</li>
+<li>在 App.vue 做些內容調整</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// App.vue - 1
+
+&lt;template&gt;
+
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  name: 'App',
+  components: {}
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+body {
+  margin: 0;
+  background: #eee;
+}
+&lt;/style&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// SignupForm.vue
+
+&lt;template&gt;
+  &lt;form&gt;
+    &lt;label&gt;Email:&lt;/label&gt;
+    &lt;input type="email" required&gt;
+  &lt;/form&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+  form {
+    max-width: 420px;
+    margin: 30px auto;
+    background: white;
+    text-align: left;
+    padding: 40px;
+    border-radius: 10px;
+  }
+  label {
+    color: #aaa;
+    display: inline-block;
+    margin: 25px 0 15px;
+    font-size: 0.6em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+  }
+  input {
+    display: block;
+    padding: 10px 6px;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    color: #555;
+  }
+&lt;/style&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// App.vue - 2
+
+&lt;template&gt;
+  &lt;SignupForm /&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import SignupForm from './components/SignupForm.vue'
+
+export default {
+  name: 'App',
+  components: { SignupForm }
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+body {
+  margin: 0;
+  background: #eee;
+}
+&lt;/style&gt;</code></pre>
+
+
+
+<h3>Two-way Data Binding (雙向綁定)</h3>
+
+
+
+<pre class="wp-block-code"><code>// SignupForm.vue
+
+&lt;template&gt;
+  &lt;form&gt;
+    &lt;label&gt;Email:&lt;/label&gt;
+    &lt;input type="email" required v-model="email"&gt;
+
+    &lt;label&gt;Password:&lt;/label&gt;
+    &lt;input type="password" required v-model="password"&gt;
+    
+  &lt;/form&gt;
+  &lt;p&gt;Email: {{ email }}&lt;/p&gt;
+  &lt;p&gt;Password: {{ password }}&lt;/p&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  data() {
+    return {
+      email: 'mario',
+      password: ''
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+  form {
+    max-width: 420px;
+    margin: 30px auto;
+    background: white;
+    text-align: left;
+    padding: 40px;
+    border-radius: 10px;
+  }
+  label {
+    color: #aaa;
+    display: inline-block;
+    margin: 25px 0 15px;
+    font-size: 0.6em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+  }
+  input {
+    display: block;
+    padding: 10px 6px;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    color: #555;
+  }
+&lt;/style&gt;</code></pre>
+
+
+
+<h4>Vue.js 文件</h4>
+
+
+
+<ul><li><a href="https://v3.vuejs.org/api/directives.html#v-model" target="_blank" rel="noreferrer noopener">v-model</a></li></ul>
+
+
+
+<h3>Select Fields</h3>
+
+
+
+<pre class="wp-block-code"><code>// SignupForm.vue
+
+&lt;template&gt;
+  &lt;form&gt;
+    &lt;label&gt;Email:&lt;/label&gt;
+    &lt;input type="email" required v-model="email"&gt;
+
+    &lt;label&gt;Password:&lt;/label&gt;
+    &lt;input type="password" required v-model="password"&gt;
+    
+    &lt;label&gt;Role:&lt;/label&gt;
+    &lt;select v-model="role"&gt;
+      &lt;option value="developer"&gt;Web Developer&lt;/option&gt;
+      &lt;option value="designer"&gt;Web Designer&lt;/option&gt;
+    &lt;/select&gt;
+
+  &lt;/form&gt;
+  &lt;p&gt;Email: {{ email }}&lt;/p&gt;
+  &lt;p&gt;Password: {{ password }}&lt;/p&gt;
+  &lt;p&gt;Role: {{ role }}&lt;/p&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  data() {
+    return {
+      email: 'mario',
+      password: '',
+      role: 'designer'
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+  form {
+    max-width: 420px;
+    margin: 30px auto;
+    background: white;
+    text-align: left;
+    padding: 40px;
+    border-radius: 10px;
+  }
+  label {
+    color: #aaa;
+    display: inline-block;
+    margin: 25px 0 15px;
+    font-size: 0.6em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+  }
+  input, select {
+    display: block;
+    padding: 10px 6px;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    color: #555;
+  }
+&lt;/style&gt;</code></pre>
+
+
+
+<h3>Checkboxes</h3>
+
+
+
+<h4>使用方式</h4>
+
+
+
+<ul>
+<li>Boolean (布林值)</li>
+<li>Array (陣列)</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// SignupForm.vue
+
+&lt;template&gt;
+  &lt;form&gt;
+    &lt;label&gt;Email:&lt;/label&gt;
+    &lt;input type="email" required v-model="email"&gt;
+
+    &lt;label&gt;Password:&lt;/label&gt;
+    &lt;input type="password" required v-model="password"&gt;
+    
+    &lt;label&gt;Role:&lt;/label&gt;
+    &lt;select v-model="role"&gt;
+      &lt;option value="developer"&gt;Web Developer&lt;/option&gt;
+      &lt;option value="designer"&gt;Web Designer&lt;/option&gt;
+    &lt;/select&gt;
+
+    &lt;div class="terms"&gt;
+      &lt;input type="checkbox" v-model="terms" required&gt;
+      &lt;label&gt;Accept terms and conditions&lt;/label&gt;
+    &lt;/div&gt;
+
+    &lt;!-- &lt;div&gt;
+      &lt;input type="checkbox" value="shaun" v-model="names"&gt;
+      &lt;label&gt;Shaun&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;input type="checkbox" value="yoshi" v-model="names"&gt;
+      &lt;label&gt;Yoshi&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;input type="checkbox" value="mario" v-model="names"&gt;
+      &lt;label&gt;Mario&lt;/label&gt;
+    &lt;/div&gt; --&gt;
+
+  &lt;/form&gt;
+  &lt;p&gt;Email: {{ email }}&lt;/p&gt;
+  &lt;p&gt;Password: {{ password }}&lt;/p&gt;
+  &lt;p&gt;Role: {{ role }}&lt;/p&gt;
+  &lt;p&gt;Terms accepted: {{ terms }}&lt;/p&gt;
+  &lt;!-- &lt;p&gt;Names: {{ names }}&lt;/p&gt; --&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  data() {
+    return {
+      email: 'mario',
+      password: '',
+      role: 'designer',
+      terms: false,
+      // names: &#91;]
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+  form {
+    max-width: 420px;
+    margin: 30px auto;
+    background: white;
+    text-align: left;
+    padding: 40px;
+    border-radius: 10px;
+  }
+  label {
+    color: #aaa;
+    display: inline-block;
+    margin: 25px 0 15px;
+    font-size: 0.6em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+  }
+  input, select {
+    display: block;
+    padding: 10px 6px;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    color: #555;
+  }
+  input&#91;type="checkbox"] {
+    display: inline-block;
+    width: 16px;
+    margin: 0 10px 0 0;
+    position: relative;
+    top: 2px;
+  }
+&lt;/style&gt;</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Keyboard Events &amp; Modifiers</h3>
+
+
+
+<ul>
+<li>@keypress</li>
+<li>@keydown</li>
+<li>@keyup</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// SignupForm.vue
+
+&lt;template&gt;
+  &lt;form&gt;
+    &lt;label&gt;Email:&lt;/label&gt;
+    &lt;input type="email" required v-model="email"&gt;
+
+    &lt;label&gt;Password:&lt;/label&gt;
+    &lt;input type="password" required v-model="password"&gt;
+    
+    &lt;label&gt;Role:&lt;/label&gt;
+    &lt;select v-model="role"&gt;
+      &lt;option value="developer"&gt;Web Developer&lt;/option&gt;
+      &lt;option value="designer"&gt;Web Designer&lt;/option&gt;
+    &lt;/select&gt;
+
+    &lt;label&gt;Skills:&lt;/label&gt;
+    &lt;input type="text" v-model="tempSkill" @keyup.alt="addSkill"&gt;
+    &lt;div v-for="skill in skills" :key="skill" class="pill"&gt;
+      {{ skill }}
+    &lt;/div&gt;
+
+    &lt;div class="terms"&gt;
+      &lt;input type="checkbox" v-model="terms" required&gt;
+      &lt;label&gt;Accept terms and conditions&lt;/label&gt;
+    &lt;/div&gt;
+
+  &lt;/form&gt;
+  &lt;p&gt;Email: {{ email }}&lt;/p&gt;
+  &lt;p&gt;Password: {{ password }}&lt;/p&gt;
+  &lt;p&gt;Role: {{ role }}&lt;/p&gt;
+  &lt;p&gt;Terms accepted: {{ terms }}&lt;/p&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  data() {
+    return {
+      email: 'mario',
+      password: '',
+      role: 'designer',
+      terms: false,
+      tempSkill: '',
+      skills: &#91;]
+    }
+  },
+  methods: {
+    addSkill(e) {
+      // console.log(e)
+      if (e.key === ',' &amp;&amp; this.tempSkill) {
+        if (!this.skills.includes(this.tempSkill)) {
+          this.skills.push(this.tempSkill)
+        }
+        this.tempSkill = ''
+      }
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+  form {
+    max-width: 420px;
+    margin: 30px auto;
+    background: white;
+    text-align: left;
+    padding: 40px;
+    border-radius: 10px;
+  }
+  label {
+    color: #aaa;
+    display: inline-block;
+    margin: 25px 0 15px;
+    font-size: 0.6em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+  }
+  input, select {
+    display: block;
+    padding: 10px 6px;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    color: #555;
+  }
+  input&#91;type="checkbox"] {
+    display: inline-block;
+    width: 16px;
+    margin: 0 10px 0 0;
+    position: relative;
+    top: 2px;
+  }
+&lt;/style&gt;</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">CHALLENGE – Deleting Skills</h3>
+
+
+
+<pre class="wp-block-code"><code>// SignupForm.vue
+
+&lt;template&gt;
+  &lt;form&gt;
+    &lt;label&gt;Email:&lt;/label&gt;
+    &lt;input type="email" required v-model="email"&gt;
+
+    &lt;label&gt;Password:&lt;/label&gt;
+    &lt;input type="password" required v-model="password"&gt;
+    
+    &lt;label&gt;Role:&lt;/label&gt;
+    &lt;select v-model="role"&gt;
+      &lt;option value="developer"&gt;Web Developer&lt;/option&gt;
+      &lt;option value="designer"&gt;Web Designer&lt;/option&gt;
+    &lt;/select&gt;
+
+    &lt;label&gt;Skills:&lt;/label&gt;
+    &lt;input type="text" v-model="tempSkill" @keyup.alt="addSkill"&gt;
+    &lt;div v-for="skill in skills" :key="skill" class="pill"&gt;
+      &lt;span @click="deleteSkill(skill)"&gt;{{ skill }}&lt;/span&gt;
+    &lt;/div&gt;
+
+    &lt;div class="terms"&gt;
+      &lt;input type="checkbox" v-model="terms" required&gt;
+      &lt;label&gt;Accept terms and conditions&lt;/label&gt;
+    &lt;/div&gt;
+
+  &lt;/form&gt;
+  &lt;p&gt;Email: {{ email }}&lt;/p&gt;
+  &lt;p&gt;Password: {{ password }}&lt;/p&gt;
+  &lt;p&gt;Role: {{ role }}&lt;/p&gt;
+  &lt;p&gt;Terms accepted: {{ terms }}&lt;/p&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+// challenge
+// - when a user clicks on a skill, delete that skill
+
+export default {
+  data() {
+    return {
+      email: 'mario',
+      password: '',
+      role: 'designer',
+      terms: false,
+      tempSkill: '',
+      skills: &#91;]
+    }
+  },
+  methods: {
+    addSkill(e) {
+      if (e.key === ',' &amp;&amp; this.tempSkill) {
+        if (!this.skills.includes(this.tempSkill)) {
+          this.skills.push(this.tempSkill)
+        }
+        this.tempSkill = ''
+      }
+    },
+    deleteSkill(skill) {
+      this.skills = this.skills.filter((item) =&gt;{
+        return skill !== item
+      })
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+  form {
+    max-width: 420px;
+    margin: 30px auto;
+    background: white;
+    text-align: left;
+    padding: 40px;
+    border-radius: 10px;
+  }
+  label {
+    color: #aaa;
+    display: inline-block;
+    margin: 25px 0 15px;
+    font-size: 0.6em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+  }
+  input, select {
+    display: block;
+    padding: 10px 6px;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    color: #555;
+  }
+  input&#91;type="checkbox"] {
+    display: inline-block;
+    width: 16px;
+    margin: 0 10px 0 0;
+    position: relative;
+    top: 2px;
+  }
+  .pill {
+    display: inline-block;
+    margin: 20px 10px 0 0;
+    background: #eee;
+    border-radius: 20px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: #777;
+    cursor: pointer;
+  }
+&lt;/style&gt;</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Submitting the Form</h3>
+
+
+
+<pre class="wp-block-code"><code>// SignupForm.vue
+
+&lt;template&gt;
+  &lt;form @submit.prevent="handleSubmit"&gt;
+    &lt;label&gt;Email:&lt;/label&gt;
+    &lt;input type="email" required v-model="email"&gt;
+
+    &lt;label&gt;Password:&lt;/label&gt;
+    &lt;input type="password" required v-model="password"&gt;
+    &lt;div v-if="passwordError" class="error"&gt;{{ passwordError }}&lt;/div&gt;
+    
+    &lt;label&gt;Role:&lt;/label&gt;
+    &lt;select v-model="role"&gt;
+      &lt;option value="developer"&gt;Web Developer&lt;/option&gt;
+      &lt;option value="designer"&gt;Web Designer&lt;/option&gt;
+    &lt;/select&gt;
+
+    &lt;label&gt;Skills:&lt;/label&gt;
+    &lt;input type="text" v-model="tempSkill" @keyup.alt="addSkill"&gt;
+    &lt;div v-for="skill in skills" :key="skill" class="pill"&gt;
+      &lt;span @click="deleteSkill(skill)"&gt;{{ skill }}&lt;/span&gt;
+    &lt;/div&gt;
+
+    &lt;div class="terms"&gt;
+      &lt;input type="checkbox" v-model="terms" required&gt;
+      &lt;label&gt;Accept terms and conditions&lt;/label&gt;
+    &lt;/div&gt;
+
+    &lt;div class="submit"&gt;
+      &lt;button&gt;Create an Account&lt;/button&gt;
+    &lt;/div&gt;
+
+  &lt;/form&gt;
+  &lt;p&gt;Email: {{ email }}&lt;/p&gt;
+  &lt;p&gt;Password: {{ password }}&lt;/p&gt;
+  &lt;p&gt;Role: {{ role }}&lt;/p&gt;
+  &lt;p&gt;Terms accepted: {{ terms }}&lt;/p&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+// challenge
+// - when a user clicks on a skill, delete that skill
+
+export default {
+  data() {
+    return {
+      email: '',
+      password: '',
+      role: 'designer',
+      terms: false,
+      tempSkill: '',
+      skills: &#91;],
+      passwordError: ''
+    }
+  },
+  methods: {
+    addSkill(e) {
+      if (e.key === ',' &amp;&amp; this.tempSkill) {
+        if (!this.skills.includes(this.tempSkill)) {
+          this.skills.push(this.tempSkill)
+        }
+        this.tempSkill = ''
+      }
+    },
+    deleteSkill(skill) {
+      this.skills = this.skills.filter((item) =&gt;{
+        return skill !== item
+      })
+    },
+    handleSubmit() {
+      // console.log('form submitted')
+      // validate password
+      this.passwordError = this.password.length &gt; 5 ?
+        '' : 'Password must be at least 6 chars long'
+
+      if(!this.passwordError) {
+        console.log('email: ', this.email)
+        console.log('password: ', this.password)
+        console.log('role: ', this.role)
+        console.log('skills: ', this.skills)
+        console.log('terms accepted: ', this.terms)
+      }
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+  form {
+    max-width: 420px;
+    margin: 30px auto;
+    background: white;
+    text-align: left;
+    padding: 40px;
+    border-radius: 10px;
+  }
+  label {
+    color: #aaa;
+    display: inline-block;
+    margin: 25px 0 15px;
+    font-size: 0.6em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+  }
+  input, select {
+    display: block;
+    padding: 10px 6px;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    color: #555;
+  }
+  input&#91;type="checkbox"] {
+    display: inline-block;
+    width: 16px;
+    margin: 0 10px 0 0;
+    position: relative;
+    top: 2px;
+  }
+  .pill {
+    display: inline-block;
+    margin: 20px 10px 0 0;
+    background: #eee;
+    border-radius: 20px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: #777;
+    cursor: pointer;
+  }
+  button {
+    background: #0b6dff;
+    border: 0;
+    padding: 10px 20px;
+    margin-top: 20px;
+    color: white;
+    border-radius: 20px;
+  }
+  .submit {
+    text-align: center;
+  }
+  .error {
+    color: #ff0062;
+    margin-top: 10px;
+    font-size: 0.8em;
+    font-weight: bold;
+  }
+&lt;/style&gt;</code></pre>
+
+
+
+<h2 class="has-background" style="background-color:#ff6663">第6節：Vue Router Basics</h2>
+
+
+
+<p>Vue 路由可重複觀看、練習。</p>
+
+
+
+<h3>Why Use the Vue Router?</h3>
+
+
+
+<p>可重複觀看了解觀念。</p>
+
+
+
+<h4>The Vue Router (圖片講解)</h4>
+
+
+
+<figure class="wp-block-gallery has-nested-images columns-1 is-cropped">
+<figure class="wp-block-image size-large"><img loading="lazy" width="753" height="611" data-id="558" src="/wordpress_blog/wp-content/uploads/2022/04/The-Vue-Router-01.png" alt="" class="wp-image-558"><figcaption>The Vue Router 01</figcaption></figure>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" width="1791" height="563" data-id="557" src="/wordpress_blog/wp-content/uploads/2022/04/The-Vue-Router-02.png" alt="" class="wp-image-557"><figcaption>The Vue Router 02</figcaption></figure>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" width="1785" height="581" data-id="560" src="/wordpress_blog/wp-content/uploads/2022/04/The-Vue-Router-03.png" alt="" class="wp-image-560"><figcaption>The Vue Router 03</figcaption></figure>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" width="1737" height="563" data-id="562" src="/wordpress_blog/wp-content/uploads/2022/04/The-Vue-Router-04.png" alt="" class="wp-image-562"><figcaption>The Vue Router 04</figcaption></figure>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" width="1771" height="569" data-id="559" src="/wordpress_blog/wp-content/uploads/2022/04/The-Vue-Router-05.png" alt="" class="wp-image-559"><figcaption>The Vue Router 05</figcaption></figure>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" width="1171" height="611" data-id="561" src="/wordpress_blog/wp-content/uploads/2022/04/The-Vue-Router-06.png" alt="" class="wp-image-561"><figcaption>The Vue Router 06</figcaption></figure>
+</figure>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Router Setup for New Projects</h3>
+
+
+
+<p>很重要，可重複觀看、練習。</p>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ol>
+<li>開啟終端機、移動到要建立專案資料夾的位置、輸入終端機指令 vue create ninja-jobs</li>
+<li>Vue CLI v4.5.8 (我的版本是 Vue CLI v4.5.15)</li>
+<li>Please pick a preset: Manually select feature</li>
+<li>Check the features needed for your project: Choose Vue version, Babel, Router</li>
+<li>Choose a version of Vue.js that you want to start the project with 3.x (Preview)</li>
+<li>Use history mode for router? (Requires proper server setup for index fallback in production) Yes</li>
+<li>Where do you prefer placing config for Babel, ESLint, etc.? In dedicated config files</li>
+<li>Save this as a preset for future projects? n</li>
+<li>移動到專案資料夾位置 cd ninja-jobs</li>
+<li>打開 VSCode 輸入指令 code .</li>
+<li>首先看新的樣板專案在 package.json 檔案，擁有新的 dependency 是 “vue-router”</li>
+<li>第二個不同的地方在 src 資料夾，有 router 資料夾、裡面有 index.js 檔案，可以看到有 routes 陣列、裡面的物件有 path, name, component 三個屬性</li>
+<li>在 src/router/index.js 修改 about</li>
+<li>介紹 src/main.js</li>
+<li>介紹 App.vue &lt;router-view/&gt;</li>
+<li>打開終端機，執行指令 npm run serve</li>
+<li>使用 Ctrl + 滑鼠左鍵打開本地端網頁</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// src/router/index.js - 13 修改 about
+
+import { createRouter, createWebHistory } from 'vue-router'
+import Home from '../views/Home.vue'
+import About from '../views/About.vue'
+
+const routes = &#91;
+  {
+    path: '/',
+    name: 'Home',
+    component: Home
+  },
+  {
+    path: '/about',
+    name: 'About',
+    component: About
+  }
+]
+
+const router = createRouter({
+  history: createWebHistory(process.env.BASE_URL),
+  routes
+})
+
+export default router
+</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Router Links (路由連結)</h3>
+
+
+
+<p>可重複觀看、練習。</p>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ol>
+<li>講解 router link 和 a 連結的差別，用 Google Network 說明 router link 並不是向伺服器請求</li>
+<li>App.vue 把 a 連結移除、然後儲存，查看 Google Elements 的 a 連結可以看到類別在變動，把 App.vue 的 #nav a.router-link-exact-active 修改、#nav a 修改</li>
+<li>App.vue router link to 也可以改成 :to 使用，同樣都能運作，並說明使用上的差異，在路徑需要更新上使用 :to 會比較好，因為 name 不用更動</li>
+<li>移除專案用不到的內容，到 Home.vue 檔案、移除 import HelloWorld、移除 components/HelloWorld.vue 檔案</li>
+<li>在 About.vue 修改內容</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// App.vue - 1
+
+&lt;template&gt;
+  &lt;div id="nav"&gt;
+    &lt;router-link to="/"&gt;Home&lt;/router-link&gt; |
+    &lt;router-link to="/about"&gt;About&lt;/router-link&gt; |
+    &lt;a href="/about"&gt;about&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;router-view/&gt;
+&lt;/template&gt;
+
+&lt;style&gt;
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
+}
+&lt;/style&gt;
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// App.vue - 2 修改
+
+
+&lt;template&gt;
+  &lt;div id="nav"&gt;
+    &lt;router-link to="/"&gt;Home&lt;/router-link&gt; |
+    &lt;router-link to="/about"&gt;About&lt;/router-link&gt;
+  &lt;/div&gt;
+  &lt;router-view/&gt;
+&lt;/template&gt;
+
+&lt;style&gt;
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+#nav a.router-link-exact-active {
+  color: #fff;
+  background: crimson;
+}
+&lt;/style&gt;
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// App.vue - 3 講解 to 的使用方法
+
+&lt;template&gt;
+  &lt;div id="nav"&gt;
+    &lt;router-link to="/"&gt;Home&lt;/router-link&gt; |
+    &lt;router-link :to="{ name: 'About' }"&gt;About&lt;/router-link&gt;
+  &lt;/div&gt;
+  &lt;router-view/&gt;
+&lt;/template&gt;
+
+&lt;style&gt;
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+#nav a.router-link-exact-active {
+  color: #fff;
+  background: crimson;
+}
+&lt;/style&gt;
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Home.vue - 4 移除 import HelloWorld、修改 &lt;template&gt; 內容、移除 components 裡面的 HelloWorld
+
+&lt;template&gt;
+  &lt;div class="home"&gt;
+    &lt;h1&gt;Homepage&lt;/h1&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia incidunt accusantium deserunt praesentium debitis voluptate, ex numquam facere ut sed, odio quasi amet sint quae unde. Porro accusamus nobis eius? Perferendis magnam rem possimus natus ducimus pariatur expedita ad sequi minima. Eum ex vero impedit dolores corporis voluptate architecto, sit commodi, quaerat nihil laborum, repellendus accusamus. Minus quaerat labore soluta error consectetur voluptates placeat eum maiores. Ullam delectus omnis dolorum unde cupiditate officiis repudiandae nostrum? Qui est possimus maiores. Est, nihil deleniti, voluptate tenetur pariatur distinctio, et earum minima quo ullam libero quae atque delectus voluptatum esse ut. Ut, et?&lt;/p&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia incidunt accusantium deserunt praesentium debitis voluptate, ex numquam facere ut sed, odio quasi amet sint quae unde. Porro accusamus nobis eius? Perferendis magnam rem possimus natus ducimus pariatur expedita ad sequi minima. Eum ex vero impedit dolores corporis voluptate architecto, sit commodi, quaerat nihil laborum, repellendus accusamus. Minus quaerat labore soluta error consectetur voluptates placeat eum maiores. Ullam delectus omnis dolorum unde cupiditate officiis repudiandae nostrum? Qui est possimus maiores. Est, nihil deleniti, voluptate tenetur pariatur distinctio, et earum minima quo ullam libero quae atque delectus voluptatum esse ut. Ut, et?&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  name: 'Home',
+  components: { }
+}
+&lt;/script&gt;
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// About.vue - 5 修改內容
+
+&lt;template&gt;
+  &lt;div class="about"&gt;
+    &lt;h1&gt;This is an about page&lt;/h1&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat placeat debitis impedit repudiandae adipisci incidunt veritatis sit praesentium nulla. Laudantium numquam eos error. Laborum laudantium necessitatibus fugiat et obcaecati fuga repellendus? Consequatur mollitia eos expedita itaque suscipit corrupti nesciunt ducimus sint odio possimus architecto ipsa debitis, explicabo distinctio amet optio, iure tenetur quas ipsum, cum nam dicta quasi dolore at? Eligendi placeat facere iusto dignissimos delectus fugiat incidunt temporibus, veniam cum. Unde quaerat iste vero deserunt dicta facilis consequatur fugit omnis? Dicta reiciendis a rem culpa iste aliquam porro dolores, laudantium obcaecati veniam tenetur fugiat facilis voluptates eos excepturi quo?&lt;/p&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat placeat debitis impedit repudiandae adipisci incidunt veritatis sit praesentium nulla. Laudantium numquam eos error. Laborum laudantium necessitatibus fugiat et obcaecati fuga repellendus? Consequatur mollitia eos expedita itaque suscipit corrupti nesciunt ducimus sint odio possimus architecto ipsa debitis, explicabo distinctio amet optio, iure tenetur quas ipsum, cum nam dicta quasi dolore at? Eligendi placeat facere iusto dignissimos delectus fugiat incidunt temporibus, veniam cum. Unde quaerat iste vero deserunt dicta facilis consequatur fugit omnis? Dicta reiciendis a rem culpa iste aliquam porro dolores, laudantium obcaecati veniam tenetur fugiat facilis voluptates eos excepturi quo?&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Folder Structure (資料夾結構)</h3>
+
+
+
+<p>可重複觀看、練習。</p>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ol>
+<li>在 views 資料夾建立 Jobs.vue 檔案、內容，輸入 &lt;vue&gt; 出現下拉提示快捷建立</li>
+<li>在 src/router/index.js 新增 routes 物件、import Jobs</li>
+<li>在 App.vue 新增 Jobs 的 &lt;router-link&gt;</li>
+<li>在 views 資料夾建立 JobDetails.vue 檔案，因為 Jobs.vue 與 JobDetails.vue 同類型的區域，會在 views 資料夾建立 jobs 資料夾、並把 Jobs.vue、JobDetails.vue 移動到 jobs 資料夾裡面，在移動後會產生錯誤，因此在 index.js 檔案要修改 Jobs.vue 位置</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// Jobs.vue - 1 新增內容
+
+&lt;template&gt;
+  &lt;h1&gt;Jobs&lt;/h1&gt;
+  &lt;div v-for="job in jobs" :key="job.id"&gt;
+    &lt;h2&gt;{{ job.title }}&lt;/h2&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  data() {
+    return {
+      jobs: &#91;
+        { title: 'Ninja UX Designer', id: 1, details: 'lorem'},
+        { title: 'Ninja Web Developer', id: 2, details: 'lorem'},
+        { title: 'Ninja Vue Developer', id: 3, details: 'lorem'}
+      ]
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+
+&lt;/style&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// src/router/Jobs.vue - 2 新增 route 物件、import Jobs
+
+import { createRouter, createWebHistory } from 'vue-router'
+import Home from '../views/Home.vue'
+import About from '../views/About.vue'
+import Jobs from '../views/Jobs.vue'
+
+const routes = &#91;
+  {
+    path: '/',
+    name: 'Home',
+    component: Home
+  },
+  {
+    path: '/about',
+    name: 'About',
+    component: About
+  },
+  {
+    path: '/jobs',
+    name: 'Jobs',
+    component: Jobs
+  }
+]
+
+const router = createRouter({
+  history: createWebHistory(process.env.BASE_URL),
+  routes
+})
+
+export default router
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// App.vue - 3 新增 Jobs 的 &lt;router-link&gt;
+
+&lt;template&gt;
+  &lt;div id="nav"&gt;
+    &lt;router-link to="/"&gt;Home&lt;/router-link&gt; |
+    &lt;router-link :to="{ name: 'About' }"&gt;About&lt;/router-link&gt; |
+    &lt;router-link :to="{ name: 'Jobs' }"&gt;Jobs&lt;/router-link&gt;
+  &lt;/div&gt;
+  &lt;router-view/&gt;
+&lt;/template&gt;
+
+&lt;style&gt;
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+#nav a.router-link-exact-active {
+  color: #fff;
+  background: crimson;
+}
+&lt;/style&gt;
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.js - 修改 import Jobs 的位置
+
+import { createRouter, createWebHistory } from 'vue-router'
+import Home from '../views/Home.vue'
+import About from '../views/About.vue'
+import Jobs from '../views/jobs/Jobs.vue'
+
+const routes = &#91;
+  {
+    path: '/',
+    name: 'Home',
+    component: Home
+  },
+  {
+    path: '/about',
+    name: 'About',
+    component: About
+  },
+  {
+    path: '/jobs',
+    name: 'Jobs',
+    component: Jobs
+  }
+]
+
+const router = createRouter({
+  history: createWebHistory(process.env.BASE_URL),
+  routes
+})
+
+export default router
+</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Route Parameters (路由參數)</h3>
+
+
+
+<p>可重複觀看、練習。</p>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ol>
+<li>講解 Route Parameters 觀念</li>
+<li>在 src/router/index.js 新增 routes 物件、新增 import JobsDetails，然後儲存</li>
+<li>在 JobDetails.vue 新增內容，然後到網頁連結加上 /1，就會顯示 Job Details Page 頁面，不論 / 後面加上什麼都會顯示 Job Details Page 頁面</li>
+<li>接著在 JobDetails.vue 新增 p 段落，(:id 的命名可以客製化)，然後儲存、到網頁畫面可以看到 p 段落內容會與 /jobs/:id 一起更動</li>
+<li>在 JobDetails.vue 我們也可以使用 export default 物件，也可以做相同的事情</li>
+</ol>
+
+
+
+<h4>Route Parameters</h4>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" width="1757" height="707" src="/wordpress_blog/wp-content/uploads/2022/04/Route-Parameters.png" alt="" class="wp-image-564"><figcaption>Route Parameters</figcaption></figure>
+
+
+
+<pre class="wp-block-code"><code>// src/router/index.js - 2 新增 routes 物件、新增 import JobDetails
+
+import { createRouter, createWebHistory } from 'vue-router'
+import Home from '../views/Home.vue'
+import About from '../views/About.vue'
+import Jobs from '../views/jobs/Jobs.vue'
+import JobDetails from '../views/jobs/JobDetails.vue'
+
+const routes = &#91;
+  {
+    path: '/',
+    name: 'Home',
+    component: Home
+  },
+  {
+    path: '/about',
+    name: 'About',
+    component: About
+  },
+  {
+    path: '/jobs',
+    name: 'Jobs',
+    component: Jobs
+  },
+  {
+    path: '/jobs/:id',
+    name: 'JobDetails',
+    component: JobDetails
+  }
+]
+
+const router = createRouter({
+  history: createWebHistory(process.env.BASE_URL),
+  routes
+})
+
+export default router
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// JobDetails.vue - 3 新增內容
+
+&lt;template&gt;
+  &lt;h1&gt;Job Details Page&lt;/h1&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+
+&lt;/style&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// JobDetails.vue - 4 新增 p 段落
+
+&lt;template&gt;
+  &lt;h1&gt;Job Details Page&lt;/h1&gt;
+  &lt;p&gt;The job id is {{ $route.params.id }}&lt;/p&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+
+&lt;/style&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// JobDetails.vue - 5 使用 export default 做相同的事情
+
+&lt;template&gt;
+  &lt;h1&gt;Job Details Page&lt;/h1&gt;
+  &lt;p&gt;The job id is {{ id }}&lt;/p&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  data() {
+    return {
+      id: this.$route.params.id
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+
+&lt;/style&gt;</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Dynamic Links (動態連結)</h3>
+
+
+
+<p>可重複觀看、練習。</p>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ol>
+<li>在 Jobs.vue 把 &lt;h2&gt; 剪下，新增 &lt;router-link&gt;、把 &lt;h2&gt; 貼上，然後增加 :to 屬性</li>
+<li>到網頁畫面 Google 檢視 Elements 可以看到 &lt;a&gt; href 屬性有 /jobs/1、/jobs/2、/jobs/3</li>
+<li>在 JobDetails.vue export default 新增 props 屬性</li>
+<li>在 index.js routes 的 JobDetails 那個物件新增 props 屬性</li>
+<li>接著 JobDetails.vue export default 的 data() 就可以註解起來</li>
+<li>到網頁畫面一切的功能仍可運作</li>
+<li>在 jobs.vue 新增樣式，Jobs 頁面下方連結樣式</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// Jobs.vue - 1 新增 &lt;router-link&gt; 修改內容
+
+&lt;template&gt;
+  &lt;h1&gt;Jobs&lt;/h1&gt;
+  &lt;div v-for="job in jobs" :key="job.id"&gt;
+    &lt;router-link :to="{ name: 'JobDetails', params: { id: job.id } }"&gt;
+      &lt;h2&gt;{{ job.title }}&lt;/h2&gt;
+    &lt;/router-link&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  data() {
+    return {
+      jobs: &#91;
+        { title: 'Ninja UX Designer', id: 1, details: 'lorem'},
+        { title: 'Ninja Web Developer', id: 2, details: 'lorem'},
+        { title: 'Ninja Vue Developer', id: 3, details: 'lorem'}
+      ]
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+
+&lt;/style&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// JobDetails.vue - 3 在 export default 新增 props 屬性
+
+&lt;template&gt;
+  &lt;h1&gt;Job Details Page&lt;/h1&gt;
+  &lt;p&gt;The job id is {{ id }}&lt;/p&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  props: &#91;'id'],
+  data() {
+    return {
+      id: this.$route.params.id
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+
+&lt;/style&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.js - 4 在 routes 的 JobDetails 那個物件新增 props 屬性
+
+import { createRouter, createWebHistory } from 'vue-router'
+import Home from '../views/Home.vue'
+import About from '../views/About.vue'
+import Jobs from '../views/jobs/Jobs.vue'
+import JobDetails from '../views/jobs/JobDetails.vue'
+
+const routes = &#91;
+  {
+    path: '/',
+    name: 'Home',
+    component: Home
+  },
+  {
+    path: '/about',
+    name: 'About',
+    component: About
+  },
+  {
+    path: '/jobs',
+    name: 'Jobs',
+    component: Jobs
+  },
+  {
+    path: '/jobs/:id',
+    name: 'JobDetails',
+    component: JobDetails,
+    props: true
+  }
+]
+
+const router = createRouter({
+  history: createWebHistory(process.env.BASE_URL),
+  routes
+})
+
+export default router
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// JobDetails.vue - 5 data() 註解起來
+
+&lt;template&gt;
+  &lt;h1&gt;Job Details Page&lt;/h1&gt;
+  &lt;p&gt;The job id is {{ id }}&lt;/p&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  props: &#91;'id'],
+  // data() {
+  //   return {
+  //     id: this.$route.params.id
+  //   }
+  // }
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+
+&lt;/style&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// jobs.vue - 7 新增 Jobs 下方連結樣式
+
+&lt;template&gt;
+  &lt;h1&gt;Jobs&lt;/h1&gt;
+  &lt;div v-for="job in jobs" :key="job.id" class="job"&gt;
+    &lt;router-link :to="{ name: 'JobDetails', params: { id: job.id } }"&gt;
+      &lt;h2&gt;{{ job.title }}&lt;/h2&gt;
+    &lt;/router-link&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  data() {
+    return {
+      jobs: &#91;
+        { title: 'Ninja UX Designer', id: 1, details: 'lorem'},
+        { title: 'Ninja Web Developer', id: 2, details: 'lorem'},
+        { title: 'Ninja Vue Developer', id: 3, details: 'lorem'}
+      ]
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+  .job h2 {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px auto;
+    max-width: 600px;
+    cursor: pointer;
+    color: #444;
+  }
+  .job h2:hover {
+    background: #ddd;
+  }
+  .job a {
+    text-decoration: none;
+  }
+&lt;/style&gt;</code></pre>
+
+
+
+<h3>404 Pages &amp; Redirects</h3>
+
+
+
+<p>可重複觀看、練習。</p>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ol>
+<li>在 index.js 新增 redirect</li>
+<li>到網頁瀏覽器網址輸入 all-jobs 會重定向到 jobs</li>
+<li>錯誤的網址輸入會出現錯誤頁面</li>
+<li>在 views 資料夾建立 NotFound.vue 檔案(也可以客製化名稱)，新增樣板內容</li>
+<li>在 src/router/index 新增 catchall 404 內容，新增 import NotFound</li>
+<li>到網頁測試錯誤網址是否能出現錯誤畫面</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// index.js - 1 新增 redirect
+
+import { createRouter, createWebHistory } from 'vue-router'
+import Home from '../views/Home.vue'
+import About from '../views/About.vue'
+import Jobs from '../views/jobs/Jobs.vue'
+import JobDetails from '../views/jobs/JobDetails.vue'
+
+const routes = &#91;
+  {
+    path: '/',
+    name: 'Home',
+    component: Home
+  },
+  {
+    path: '/about',
+    name: 'About',
+    component: About
+  },
+  {
+    path: '/jobs',
+    name: 'Jobs',
+    component: Jobs
+  },
+  {
+    path: '/jobs/:id',
+    name: 'JobDetails',
+    component: JobDetails,
+    props: true
+  },
+  // redirect
+  {
+    path: '/all-jobs',
+    redirect: '/jobs'
+  }
+]
+
+const router = createRouter({
+  history: createWebHistory(process.env.BASE_URL),
+  routes
+})
+
+export default router
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// NotFound.vue - 4 新增樣板內容
+
+&lt;template&gt;
+  &lt;h2&gt;404&lt;/h2&gt;
+  &lt;h3&gt;Page not found&lt;/h3&gt;
+&lt;/template&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.js - 5 新增 catchall 404 內容、新增 import NotFound
+
+import { createRouter, createWebHistory } from 'vue-router'
+import Home from '../views/Home.vue'
+import About from '../views/About.vue'
+import NotFound from '../views/NotFound.vue'
+import Jobs from '../views/jobs/Jobs.vue'
+import JobDetails from '../views/jobs/JobDetails.vue'
+
+const routes = &#91;
+  {
+    path: '/',
+    name: 'Home',
+    component: Home
+  },
+  {
+    path: '/about',
+    name: 'About',
+    component: About
+  },
+  {
+    path: '/jobs',
+    name: 'Jobs',
+    component: Jobs
+  },
+  {
+    path: '/jobs/:id',
+    name: 'JobDetails',
+    component: JobDetails,
+    props: true
+  },
+  // redirect
+  {
+    path: '/all-jobs',
+    redirect: '/jobs'
+  },
+  // catchall 404
+  {
+    path: '/:catchAll(.*)',
+    name: 'NotFound',
+    component: NotFound
+  }
+]
+
+const router = createRouter({
+  history: createWebHistory(process.env.BASE_URL),
+  routes
+})
+
+export default router
+</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Programmatic Navigation (程序化導航)</h3>
+
+
+
+<p>可重複觀看、練習。</p>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ol>
+<li>在 App.vue 新增三個按鈕、@click 事件、&lt;script&gt; export default、button 樣式</li>
+<li>開始撰寫 back() 內容($router 與之前$route 的不同)，並測試向前的功能。接著寫 forward() 內容，然後測試向後的功能。接著寫 redirect() 內容，然後測試重定向到 home 頁面的功能。</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// App.vue - 1 新增三個按鈕、@click 事件、&lt;script&gt; export default、button 樣式
+
+&lt;template&gt;
+  &lt;div id="nav"&gt;
+    &lt;router-link to="/"&gt;Home&lt;/router-link&gt; |
+    &lt;router-link :to="{ name: 'About' }"&gt;About&lt;/router-link&gt; |
+    &lt;router-link :to="{ name: 'Jobs' }"&gt;Jobs&lt;/router-link&gt;
+  &lt;/div&gt;
+
+  &lt;button @click="redirect"&gt;Redirect&lt;/button&gt;
+  &lt;button @click="back"&gt;Go back&lt;/button&gt;
+  &lt;button @click="forward"&gt;Go forward&lt;/button&gt;
+
+  &lt;router-view/&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  methods: {
+    redirect() {},
+    back() {},
+    forward() {}
+  }
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+#nav a.router-link-exact-active {
+  color: #fff;
+  background: crimson;
+}
+
+button {
+  margin: 0 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+}
+&lt;/style&gt;
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// App.vue - 2 撰寫 back()、forward()、redirect()
+
+&lt;template&gt;
+  &lt;div id="nav"&gt;
+    &lt;router-link to="/"&gt;Home&lt;/router-link&gt; |
+    &lt;router-link :to="{ name: 'About' }"&gt;About&lt;/router-link&gt; |
+    &lt;router-link :to="{ name: 'Jobs' }"&gt;Jobs&lt;/router-link&gt;
+  &lt;/div&gt;
+
+  &lt;button @click="redirect"&gt;Redirect&lt;/button&gt;
+  &lt;button @click="back"&gt;Go back&lt;/button&gt;
+  &lt;button @click="forward"&gt;Go forward&lt;/button&gt;
+
+  &lt;router-view/&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  methods: {
+    redirect() {
+      this.$router.push({ name: 'Home' })
+    },
+    back() {
+      this.$router.go(-1)
+    },
+    forward() {
+      this.$router.go(1)
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+#nav a.router-link-exact-active {
+  color: #fff;
+  background: crimson;
+}
+
+button {
+  margin: 0 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+}
+&lt;/style&gt;
+</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Lazy Loading Components</h3>
+
+
+
+<p>稍微簡單提及，可重複觀看、練習，查看文件。</p>
+
+
+
+<h4>資源</h4>
+
+
+
+<ul><li><a href="https://router.vuejs.org/guide/advanced/lazy-loading.html" target="_blank" rel="noreferrer noopener">Lazy Loading – Vue Router Docs</a></li></ul>
+
+
+
+<h4>操作步驟</h4>
+
+
+
+<ol><li>在 index.js 註解 import About、修改 route 的 About component</li></ol>
+
+
+
+<pre class="wp-block-code"><code>// index.js - 1 註解 import About、修改 route 的 About component
+
+import { createRouter, createWebHistory } from 'vue-router'
+import Home from '../views/Home.vue'
+// import About from '../views/About.vue'
+import NotFound from '../views/NotFound.vue'
+import Jobs from '../views/jobs/Jobs.vue'
+import JobDetails from '../views/jobs/JobDetails.vue'
+
+const routes = &#91;
+  {
+    path: '/',
+    name: 'Home',
+    component: Home
+  },
+  {
+    path: '/about',
+    name: 'About',
+    component: () =&gt; import('../views/About.vue')
+  },
+  {
+    path: '/jobs',
+    name: 'Jobs',
+    component: Jobs
+  },
+  {
+    path: '/jobs/:id',
+    name: 'JobDetails',
+    component: JobDetails,
+    props: true
+  },
+  // redirect
+  {
+    path: '/all-jobs',
+    redirect: '/jobs'
+  },
+  // catchall 404
+  {
+    path: '/:catchAll(.*)',
+    name: 'NotFound',
+    component: NotFound
+  }
+]
+
+const router = createRouter({
+  history: createWebHistory(process.env.BASE_URL),
+  routes
+})
+
+export default router</code></pre>
+	</div>
+<!-- .entry-content -->
+
+	<footer class="entry-footer">
+			</footer><!-- .entry-footer -->
+</article><!-- #post-536 -->
+
+	<nav class="navigation post-navigation" aria-label="文章">
+		<h2 class="screen-reader-text">文章導覽</h2>
+		<div class="nav-links">
+<div class="nav-previous"><a href="/wordpress_blog/modern-javascript-4/" rel="prev"><span class="nav-subtitle">Previous:</span> <span class="nav-title">Modern JavaScript (4)</span></a></div>
+<div class="nav-next"><a href="/wordpress_blog/vue-hexschool-4/" rel="next"><span class="nav-subtitle">Next:</span> <span class="nav-title">Vue 出一個電商網站 (4)</span></a></div>
+</div>
+	</nav>
+	</main><!-- #main -->
+
+
+	</div></div>
+			
+			<footer id="colophon" class="site-footer">
+
+				
+				<div class="container-fluid">
+					<div class="site-info">
+						<div class="row">
+
+															
+								<div class="col-12 footer-copyright-elements footer-copyright-alignment-center">
+
+									<div class="botiga-credits">&copy; 2022 wordpress_blog. 
+Created by Gee Hsu. 
+<br>Proudly powered by <a rel="nofollow" href="https://athemes.com/theme/botiga/">Botiga</a>
+</div>
+<div class="social-profile">
+<a target="_blank" href="https://www.facebook.com/watergrass0402/"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></i></a><a target="_blank" href="https://github.com/GeeHsu"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></i></a>
+</div>
+								</div>
+														
+						</div>
+					</div>
+				</div>
+<!-- .site-info -->
+
+				
+			</footer><!-- #colophon -->
+
+			
+			<div class="back-to-top visibility-all position-right"><i class="ws-svg-icon"><svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 15l7-7 7 7" stroke-width="3" stroke-linejoin="round"></path></svg></i></div>
+</div>
+<!-- #page -->
+
+
+<script id="botiga-custom-js-extra">
+var botiga = {"ajaxurl":"\/wp-admin\/admin-ajax.php","i18n":{"botiga_sharebox_copy_link":"Copy link","botiga_sharebox_copy_link_copied":"Copied!"}};
+</script>
+<script src="/wordpress_blog/wp-content/themes/botiga/assets/js/custom.min.js?ver=1.1.2" id="botiga-custom-js"></script>
+
+</body>
+</html>

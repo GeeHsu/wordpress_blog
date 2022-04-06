@@ -1,0 +1,6086 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<title>JavaScript 入門篇 &#8211; 學徒的試煉 &#8211; wordpress_blog</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="訂閱《wordpress_blog》&raquo; 資訊提供" href="/wordpress_blog/feed/">
+<link rel="alternate" type="application/rss+xml" title="訂閱《wordpress_blog》&raquo; 留言的資訊提供" href="/wordpress_blog/comments/feed/">
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.9.3"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style>img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="/wordpress_blog/wp-includes/css/dist/block-library/style.min.css?ver=5.9.3" media="all">
+<style id="global-styles-inline-css">body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--palette-1-color-0: #212121;--wp--preset--color--palette-1-color-1: #757575;--wp--preset--color--palette-1-color-2: #212121;--wp--preset--color--palette-1-color-3: #212121;--wp--preset--color--palette-1-color-4: #212121;--wp--preset--color--palette-1-color-5: #f5f5f5;--wp--preset--color--palette-1-color-6: #ffffff;--wp--preset--color--palette-1-color-7: #ffffff;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 14px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 18px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--normal: 16px;--wp--preset--font-size--larger: 24px;--wp--preset--font-size--extra-large: 32px;--wp--preset--font-size--huge: 48px;--wp--preset--font-size--gigantic: 64px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}</style>
+<link rel="stylesheet" id="botiga-style-css" href="/wordpress_blog/wp-content/themes/botiga/style.css?ver=1.1.2" media="all">
+<link rel="stylesheet" id="botiga-style-min-css" href="/wordpress_blog/wp-content/themes/botiga/assets/css/styles.min.css?ver=1.1.2" media="all">
+<link rel="stylesheet" id="botiga-custom-styles-css" href="/wordpress_blog/wp-content/uploads/botiga/custom-styles.css?ver=1648804469" media="all">
+<link rel="https://api.w.org/" href="/wordpress_blog/wp-json/">
+<link rel="alternate" type="application/json" href="/wordpress_blog/wp-json/wp/v2/posts/643">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/wordpress_blog/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wordpress_blog/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 5.9.3">
+<link rel="canonical" href="/wordpress_blog/javascript-beginner/">
+<link rel="shortlink" href="/wordpress_blog/?p=643">
+<link rel="alternate" type="application/json+oembed" href="/wordpress_blog/wp-json/oembed/1.0/embed?url=%2Fjavascript-beginner%2F">
+<link rel="alternate" type="text/xml+oembed" href="/wordpress_blog/wp-json/oembed/1.0/embed?url=%2Fjavascript-beginner%2F&#038;format=xml">
+<link rel="icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png" sizes="32x32">
+<link rel="icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png" sizes="192x192">
+<link rel="apple-touch-icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png">
+<meta name="msapplication-TileImage" content="/wp-content/uploads/2022/03/logo.png">
+	
+</head>
+
+<body class="post-template-default single single-post postid-643 single-format-standard wp-custom-logo wp-embed-responsive header-header_layout_1 blog-single-layout1">
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0.49803921568627"></fefuncr><fefuncg type="table" tablevalues="0 0.49803921568627"></fefuncg><fefuncb type="table" tablevalues="0 0.49803921568627"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.54901960784314 0.98823529411765"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.71764705882353 0.25490196078431"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 0.27843137254902"></fefuncg><fefuncb type="table" tablevalues="0.5921568627451 0.27843137254902"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0"></fefuncr><fefuncg type="table" tablevalues="0 0.64705882352941"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.78039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.94901960784314"></fefuncg><fefuncb type="table" tablevalues="0.35294117647059 0.47058823529412"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.65098039215686 0.40392156862745"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.44705882352941 0.4"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.098039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.66274509803922"></fefuncg><fefuncb type="table" tablevalues="0.84705882352941 0.41960784313725"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg>
+
+<div id="page" class="site">
+
+	<a class="skip-link screen-reader-text" href="#primary">Skip to content</a>
+
+	
+			<div class="top-bar visibility-desktop-only">
+				<div class="container-fluid">
+					<div class="top-bar-inner">
+						<div class="row valign">
+
+															<div class="col header-elements delimiter-none">
+									<div class="header-item top-bar-social"><div class="social-profile">
+<a target="_blank" href="https://www.facebook.com/watergrass0402/"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></i></a><a target="_blank" href="https://github.com/GeeHsu"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></i></a>
+</div></div>								</div>
+																						<div class="col header-elements delimiter-none">
+													
+			<nav class="header-item top-bar-secondary-navigation secondary-navigation">
+				<div class="menu-topbar-container"><ul id="secondary" class="menu">
+<li id="menu-item-143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143"><a href="/wordpress_blog/setup/">網站架設</a></li>
+<li id="menu-item-144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a href="/wordpress_blog/source/">資料來源</a></li>
+<li id="menu-item-262" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-262"><a href="/wordpress_blog/resource/">學習資源</a></li>
+</ul></div>			</nav>
+											</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			
+							
+				<header id="masthead" class="site-header header_layout_1">
+					<div class="container-fluid">
+						<div class="site-header-inner">
+							<div class="row valign">
+								<div class="col-md-5">
+										
+			<nav id="site-navigation" class="main-navigation">
+				<div class="menu-navbar-container"><ul id="primary-menu" class="menu">
+<li id="menu-item-109" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="/wordpress_blog/about/">關於</a></li>
+<li id="menu-item-110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-110">
+<a href="/wordpress_blog/learn/">學習</a><span tabindex="0" class="dropdown-symbol"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512.011 512.011"><path d="M505.755 123.592c-8.341-8.341-21.824-8.341-30.165 0L256.005 343.176 36.421 123.592c-8.341-8.341-21.824-8.341-30.165 0s-8.341 21.824 0 30.165l234.667 234.667a21.275 21.275 0 0015.083 6.251 21.275 21.275 0 0015.083-6.251l234.667-234.667c8.34-8.341 8.34-21.824-.001-30.165z"></path></svg></i></span>
+<ul class="sub-menu">
+	<li id="menu-item-140" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-140"><a href="/wordpress_blog/category/hexschool/">六角學院</a></li>
+	<li id="menu-item-141" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-141"><a href="/wordpress_blog/category/ninja/">The Net Ninja</a></li>
+	<li id="menu-item-483" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-483"><a href="/wordpress_blog/category/youtube/">Youtube</a></li>
+</ul>
+</li>
+<li id="menu-item-111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="/wordpress_blog/linestore/">LINE STORE</a></li>
+</ul></div>			</nav><!-- #site-navigation -->
+											</div>
+								<div class="col-md-2">
+												<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+											</div>
+								<div class="col-md-5 header-elements">
+																	</div>							
+							</div>
+						</div>
+					</div>
+								<div class="header-search-form">
+			<form role="search" method="get" class="search-form" action="/">
+	<label class="screen-reader-text" for="search-form-1">Search&hellip;</label>
+	<input type="search" id="search-form-1" class="search-field" value="" name="s" placeholder="Search &hellip;">
+	<button type="submit" class="search-submit" value="Search"><i class="ws-svg-icon"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 100 14.25 7.125 7.125 0 000-14.25zM2.25 10.875a8.625 8.625 0 1117.25 0 8.625 8.625 0 01-17.25 0z"></path><path fill-rule="evenodd" d="M15.913 15.914a.75.75 0 011.06 0l4.557 4.556a.75.75 0 01-1.06 1.06l-4.557-4.556a.75.75 0 010-1.06z"></path></svg></i></button>
+</form>
+			</div>
+			
+									</header>
+
+										<div class="search-overlay"></div>
+			
+			<div class="botiga-offcanvas-menu">
+				<div class="mobile-header-item">
+					<div class="row">
+						<div class="col">
+										<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+									</div>
+						<div class="col align-right">
+							<a class="mobile-menu-close" href="#"><i class="ws-svg-icon icon-cancel"><svg width="16" height="16" fill="none" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.219.781L.78 2.22 9.562 11l-8.78 8.781 1.437 1.438L11 12.437l8.781 8.782 1.438-1.438L12.437 11l8.782-8.781L19.78.78 11 9.562 2.219.783z"></path></svg></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="mobile-header-item">
+						
+			<nav id="site-navigation" class="main-navigation">
+				<div class="menu-navbar-container"><ul id="primary-menu" class="menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="/wordpress_blog/about/">關於</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-110">
+<a href="/wordpress_blog/learn/">學習</a><span tabindex="0" class="dropdown-symbol"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512.011 512.011"><path d="M505.755 123.592c-8.341-8.341-21.824-8.341-30.165 0L256.005 343.176 36.421 123.592c-8.341-8.341-21.824-8.341-30.165 0s-8.341 21.824 0 30.165l234.667 234.667a21.275 21.275 0 0015.083 6.251 21.275 21.275 0 0015.083-6.251l234.667-234.667c8.34-8.341 8.34-21.824-.001-30.165z"></path></svg></i></span>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-140"><a href="/wordpress_blog/category/hexschool/">六角學院</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-141"><a href="/wordpress_blog/category/ninja/">The Net Ninja</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-483"><a href="/wordpress_blog/category/youtube/">Youtube</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="/wordpress_blog/linestore/">LINE STORE</a></li>
+</ul></div>			</nav><!-- #site-navigation -->
+							</div>
+				<div class="mobile-header-item">
+									<a target="&quot;_blank&quot;" class="button header-item" href="https://www.facebook.com/watergrass0402/">聯絡我</a>
+							</div>			
+			</div>
+			
+							<header id="masthead-mobile" class="site-header mobile-header">
+					<div class="container-fluid">
+						<div class="row valign flex-nowrap">
+							<div class="col-sm-6 col-md-4 col-grow-mobile">
+											<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+										</div>
+							<div class="col-auto col-sm-6 col-md-8 col-grow-mobile header-elements valign align-right">
+																	
+															<a href="#" class="menu-toggle">
+				<i class="ws-svg-icon"><svg width="16" height="11" viewbox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="16" height="1"></rect><rect y="5" width="16" height="1"></rect><rect y="10" width="16" height="1"></rect></svg></i>
+			</a>
+																		</div>						
+						</div>
+					</div>
+								<div class="header-search-form">
+			<form role="search" method="get" class="search-form" action="/">
+	<label class="screen-reader-text" for="search-form-2">Search&hellip;</label>
+	<input type="search" id="search-form-2" class="search-field" value="" name="s" placeholder="Search &hellip;">
+	<button type="submit" class="search-submit" value="Search"><i class="ws-svg-icon"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 100 14.25 7.125 7.125 0 000-14.25zM2.25 10.875a8.625 8.625 0 1117.25 0 8.625 8.625 0 01-17.25 0z"></path><path fill-rule="evenodd" d="M15.913 15.914a.75.75 0 011.06 0l4.557 4.556a.75.75 0 01-1.06 1.06l-4.557-4.556a.75.75 0 010-1.06z"></path></svg></i></button>
+</form>
+			</div>
+			
+									</header>
+						<div class="search-overlay"></div>
+			<div class="header-image"><img src="/wordpress_blog/wp-content/uploads/2022/03/seashore.jpg" width="1920" height="500" alt=""></div>
+<div class="container content-wrapper"><div class="row main-row">			
+	<main id="primary" class="site-main no-sidebar">
+
+		
+
+<article id="post-643" class="post-643 post type-post status-publish format-standard hentry category-hexschool">
+	
+		
+	<header class="entry-header">
+		
+		
+		<h1 class="entry-title">JavaScript 入門篇 &#8211; 學徒的試煉</h1>			<div class="entry-meta entry-meta-below delimiter-none">
+<span class="posted-on"><a href="/wordpress_blog/javascript-beginner/" rel="bookmark"><time class="entry-date published" datetime="2020-12-09T11:11:00+08:00">2020 年 12 月 9 日</time><time class="updated" datetime="2022-04-06T11:12:15+08:00">2022 年 4 月 6 日</time></a></span><span class="byline"> <span class="author vcard"><a class="url fn n" href="/wordpress_blog/author/gee-hsu/">gee.hsu</a></span></span>
+</div>			</header><!-- .entry-header -->
+
+	
+	<div class="entry-content">
+		
+<h2>JavaScript 的前世今生</h2>
+
+
+
+<h4>JavaScript 環境設定 (編輯器、jsbin、console)</h4>
+
+
+
+<p>編輯器功能</p>
+
+
+
+<ol>
+<li>自動補全</li>
+<li>下拉提示</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// document - 選取這個網頁上的內容
+// . - 去使用裡面相關 JavaScript 的功能
+document.getElementById('footer');</code></pre>
+
+
+
+<p>編輯器 – 使用 Visual Studio Code</p>
+
+
+
+<h4>建構第一個 JS 環境</h4>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+    &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;1234&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>alert("Hello world!!");</code></pre>
+
+
+
+<h4>HTML、CSS、JavaScript 的關聯性</h4>
+
+
+
+<ul>
+<li>HTML – 內容</li>
+<li>CSS – 樣式</li>
+<li>JS – 行為</li>
+</ul>
+
+
+
+<h4>ID 寫法、textcontent</h4>
+
+
+
+<p>index.html</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+    &lt;style&gt;
+        h1{color: red;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    // emmet ul&gt;li*3&gt;a{標題$}
+    // 錨點
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#title1"&gt;標題1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#title2"&gt;標題2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#title3"&gt;標題3&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="page.html#title3"&gt;標題4&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;h1 id="title1"&gt;標題一&lt;/h1&gt;
+    &lt;p&gt;lorem300&lt;/p&gt;
+    &lt;h1 id="title2"&gt;標題二&lt;/h1&gt;
+    &lt;p&gt;lorem300&lt;/p&gt;
+    &lt;h1 id="title3"&gt;標題三&lt;/h1&gt;
+    &lt;p&gt;lorem&lt;/p&gt;
+
+    &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<p>page.html</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+    &lt;script src="js/all.js"&gt;&lt;/script&gt;
+    &lt;style&gt;
+        h1{color: red;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    // emmet ul&gt;li*3&gt;a{標題$}
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#title1"&gt;標題1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#title2"&gt;標題2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#title3"&gt;標題3&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;h1 id="title1"&gt;標題一&lt;/h1&gt;
+    &lt;p&gt;lorem300&lt;/p&gt;
+    &lt;h1 id="title2"&gt;標題二&lt;/h1&gt;
+    &lt;p&gt;lorem300&lt;/p&gt;
+    &lt;h1 id="title3"&gt;標題三&lt;/h1&gt;
+    &lt;p&gt;lorem&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>document.getElementById('title1').textContent = '修改後的標題';</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// document - 目前你網頁上的主體
+// .getElementById - 透過這樣的方式去指定裡面 id 的內容
+// 指定裡面 id 的內容使用''或""的方式去讀取裡面的內容
+// .textContent - JavaScript 其中一個語法
+// 修改裡面的值 = ''或""來變成修改後的內容</code></pre>
+
+
+
+<pre class="wp-block-code"><code>&lt;script src="js/all.js"&gt;&lt;/script&gt;，因為瀏覽器渲染內容由上到下，因此要放在&lt;/body&gt;的前面。</code></pre>
+
+
+
+<p>練習</p>
+
+
+
+<ol>
+<li>錨點功能</li>
+<li>利用上面所教的語法去修改 h1 裡面的內容</li>
+</ol>
+
+
+
+<h4>直譯器流程介紹</h4>
+
+
+
+<p>interpreter (解譯器) – 引擎<br>每個瀏覽器都有每個瀏覽器的 JavaScript 的引擎。<br>Chrome 的引擎 – V8</p>
+
+
+
+<p>DOM (Document Object Model)<br>文件物件模型 – 提供了一個文件(樹)的結構化表示法，並定義讓程式可以存取並改變文件架構、風格和內容的方法。<br><br><a href="https://www.w3schools.com/js/js_htmldom.asp" target="_blank" rel="noreferrer noopener">JavaScript HTML DOM</a></p>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+
+    &lt;style&gt;
+        h1{color: red;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#title1"&gt;標題1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#title2"&gt;標題2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#title3"&gt;標題3&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="page.html#title3"&gt;標題4&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;h1 id="title1"&gt;標題一&lt;/h1&gt;
+    &lt;p&gt;lorem300&lt;/p&gt;
+    &lt;h1 id="title2"&gt;標題二&lt;/h1&gt;
+    &lt;p&gt;lorem300&lt;/p&gt;
+    &lt;h1 id="title3"&gt;標題三&lt;/h1&gt;
+    &lt;p&gt;lorem300&lt;/p&gt;
+    &lt;script src="js/all.js"&gt;&lt;/script&gt;
+    &lt;h1&gt;js後的標題&lt;/h1&gt;
+    &lt;p&gt;1234&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>alert('qq');</code></pre>
+
+
+
+<p>預期會先彈跳 all.js 的功能，h1、p是不會被渲染到的。</p>
+
+
+
+<p>開發人員工具 – Console</p>
+
+
+
+<h2>變數</h2>
+
+
+
+<h4>變數簡介</h4>
+
+
+
+<p>變數 – 常見資料型別</p>
+
+
+
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td>數字</td>
+<td>字串</td>
+<td>布林</td>
+</tr>
+<tr>
+<td>35</td>
+<td>“Hello world!!”</td>
+<td>true、false</td>
+</tr>
+</tbody></table></figure>
+
+
+
+<pre class="wp-block-code"><code>// 數字
+翻口袋 10，
+35 -10 = 25
+紅豆餅:35
+你身上的錢:10
+差多少:25
+
+// 字串
+我的名字叫做 小杰
+
+對方在腦袋裡記住了 「我的名字」
+
+很高興認識你，小杰
+
+// 布林
+
+true、false
+
+餓或不餓
+</code></pre>
+
+
+
+<h4>變數 number 介紹</h4>
+
+
+
+<pre class="wp-block-code"><code>// 變數寫法
+// var - 宣告變數
+// price - 變數名稱
+// = - 指定內容
+var price = 30;</code></pre>
+
+
+
+<p>all.js</p>
+
+
+
+<pre class="wp-block-code"><code>var cookiePrice = 35;
+alert(cookiePrice);
+cookiePrice = 25;
+alert(cookiePrice);</code></pre>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;這一顆紅豆餅&lt;em id="price"&gt;&lt;/em&gt;元&lt;/p&gt;
+    &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>var cookiePrice = 35;
+document.getElementById('price').textContent = cookiePrice;</code></pre>
+
+
+
+<h4>變數 string 介紹</h4>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="gift"&gt;
+        &lt;img src="images/gift.png" width="150" height="150" alt="gift"&gt;
+        &lt;p&gt;&lt;em id="myName"&gt;&lt;/em&gt;：&lt;/p&gt;
+        &lt;h2&gt;祝你生日快樂&lt;/h2&gt;
+        &lt;p class="sendName"&gt;小花&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/* CSS RESET */
+/* CSS STYLES */
+.gift{
+    width: 300px;
+    height: 300px;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    background: #14cc99;
+    margin: 30px auto;
+    border-radius: 5px;
+    padding: 10px;
+}
+.gift p{
+    text-align: left;
+    padding: 0;
+    margin: 10px 0;
+}
+.gift h2{
+    font-size: 36px;
+    margin: 20px 0;
+    padding: 0;
+}
+.gift .sendName{
+    text-align: right;
+    font-size: 12px;
+}</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>var polite = "Hello ";
+var indexName = "小杰";
+var totalPolite = polite + indexName;
+
+document.getElementById('myName').textContent = totalPolite;</code></pre>
+
+
+
+<h4>如何輸出內容？</h4>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>var score = 90;
+console.log(score);</code></pre>
+
+
+
+<h4>變數規則</h4>
+
+
+
+<p>變數 注意事項</p>
+
+
+
+<ul>
+<li>開頭不能用數字</li>
+<li>不能用 – 跟 .</li>
+<li>不能使用<a rel="noreferrer noopener" href="https://www.w3schools.com/js/js_reserved.asp" target="_blank">關鍵字</a>
+</li>
+<li>大小寫有分</li>
+<li>變數需有語意化 (建議)</li>
+</ul>
+
+
+
+<h4>變數 – 數字新增刪除修改</h4>
+
+
+
+<pre class="wp-block-code"><code>// 每一個內容都是半形，全形會出錯。
+
+var cookiePrice = 35;
+var myMoney = 15;
+var total = cookiePrice - myMoney;
+
+document.getElementById('cookiePriceId').textContent = cookiePrice;
+document.getElementById('myMoneyId').textContent = myMoney;
+document.getElementById('totalId').textContent = total;</code></pre>
+
+
+
+<h4>undefined 介紹</h4>
+
+
+
+<p>已經賦予出來一個變數名稱，但是變數名稱內容是空值。</p>
+
+
+
+<p>Chrome – Console</p>
+
+
+
+<pre class="wp-block-code"><code>&gt; var box = 20;
+&lt; undefined
+
+// var box;
+// box = 20;</code></pre>
+
+
+
+<h2>函式</h2>
+
+
+
+<h4>為什麼需要 function？</h4>
+
+
+
+<pre class="wp-block-code"><code>// 情境 - 顧客點餐
+// 服務生：歡迎光臨，請問您要點什麼？漢堡剩下最後 8 個哦！
+// 　顧客：不用薯條，給我 8 個漢堡，再一杯可樂吧！
+// 服務生：好的，總計是 420 元</code></pre>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="wrap"&gt;
+        &lt;div class="wrap-inner"&gt;
+            &lt;h1&gt;六角西餐廳 - 顧客點餐篇&lt;/h1&gt;
+            &lt;p&gt;服務生：&lt;span id="greetId"&gt;&lt;/span&gt;&lt;/p&gt;
+            &lt;p&gt;　顧客：不用薯條，給我&lt;em class="tag"&gt;8&lt;/em&gt;個漢堡，再&lt;em class="tag"&gt;1&lt;/em&gt;杯可樂吧！&lt;/p&gt;
+            &lt;p&gt;服務生：好的，總計是&lt;em id="totalId" class="tag"&gt;&lt;/em&gt;元&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>// 打招呼
+function greet(){
+  var greetNote = '歡迎光臨，請問您要點什麼？漢堡剩下最後 8 個哦！'
+  
+  document.getElementById('greetId').textContent = greetNote;
+  console.log(greetNote);
+}
+greet();
+
+// 點餐回應
+function order(hamNum,cokeNum){
+  var total = (hamNum * 50) + (cokeNum * 20);
+  document.getElementById('totalId').textContent = total;
+  console.log(total);
+}
+order(8,1);
+</code></pre>
+
+
+
+<h4>function 的寫法</h4>
+
+
+
+<p>函式寫法</p>
+
+
+
+<pre class="wp-block-code"><code>宣告函式 函式名稱
+function greet(){
+  alert('歡迎光臨！');
+  alert('請問你要點些什麼？');
+}
+
+// 執行函式
+greet();
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>var price = 30;
+
+function greet(){
+  console.log('Hello');
+  console.log('請問您想要點什麼？')
+}
+
+greet();</code></pre>
+
+
+
+<p>Chrome – Console</p>
+
+
+
+<pre class="wp-block-code"><code>window
+
+// 把 greet、price 記錄在 windows 裡面。
+// 瀏覽器就可以記錄這個網頁所有的 JavaScript 的狀態。</code></pre>
+
+
+
+<h4>function 帶參數</h4>
+
+
+
+<pre class="wp-block-code"><code>// 函式帶參數
+                參數
+function count(oneNum){
+  var total = oneNum * 10;
+  console.log('總數等於：'+total);
+}
+count(10);</code></pre>
+
+
+
+<p>範例1</p>
+
+
+
+<pre class="wp-block-code"><code>function count(oneNum){
+  var total = oneNum * 10;
+  console.log("總價格："+total+"元");
+}
+
+count(8);</code></pre>
+
+
+
+<p>範例2-1</p>
+
+
+
+<pre class="wp-block-code"><code>function count(oneNum,twoNum){
+  var total = oneNum + twoNum;
+  console.log("總價格："+total+"元")
+}
+
+count(8,2);</code></pre>
+
+
+
+<p>範例2-2</p>
+
+
+
+<pre class="wp-block-code"><code>function count(oneNum,twoNum){
+  var total = oneNum * twoNum;
+  console.log("總價格："+total+"元");
+}
+count(8,49);</code></pre>
+
+
+
+<h4>全域與區域變數</h4>
+
+
+
+<p>全域變數</p>
+
+
+
+<pre class="wp-block-code"><code>// 全域變數
+var total;
+
+function count(oneNum,twoNum){
+  total = oneNum * twoNum;
+  console.log("總價格："+total+"元");
+}
+
+count(8,10);
+
+console.log(total);</code></pre>
+
+
+
+<p>區域變數 – 執行完就銷毀了</p>
+
+
+
+<pre class="wp-block-code"><code>function count(oneNum,twoNum){
+  // 區域變數
+  var total = oneNum * twoNum;
+  console.log(total);
+  console.log("總價格："+total+"元")
+}
+
+count(8,10);</code></pre>
+
+
+
+<h4>hoisting 、 var 觀念</h4>
+
+
+
+<p>function 有個 Hoisting(提升) 觀念。</p>
+
+
+
+<pre class="wp-block-code"><code>// Hoisting 觀念
+
+console.log(a);
+var a = 3;
+console.log(a);
+
+count();
+
+function count(){
+  console.log('hello!');
+}
+
+// 還是習慣把這個 function 放在上面由上到下去做執行</code></pre>
+
+
+
+<h4>function 計算機案例 (1)</h4>
+
+
+
+<h4>function 計算機案例 (2)</h4>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;顧客點餐篇&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="wrap"&gt;
+        &lt;div class="wrap-inner"&gt;
+            &lt;h1&gt;六角西餐廳 ─ 顧客點餐篇&lt;/h1&gt;
+            &lt;p&gt;服務生：Hello，請問您想要點什麼？&lt;/p&gt;
+            &lt;p&gt;　顧客：給我 &lt;input type="text" id="hamNumId"&gt; 個漢堡，再 &lt;input type="text" id="cokeNumId"&gt; 杯可樂吧！&lt;/p&gt;
+            &lt;p&gt;服務生：&lt;input type="button" id="countId" value="計算中"&gt;，好的，總計是&lt;em id="totalId" class="tag"&gt;&lt;/em&gt;元&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/* CSS RESET */
+/* CSS STYLES */
+html{
+    background: #000;
+    font-family: MicrosoftJhengHeiRegular;
+}
+*,*:before,*:after{
+    box-sizing: border-box;
+}
+.wrap{
+    background: url(images/desktop.png) 50% 50%;
+    max-width: 1049px;
+    height: 420px;
+    margin: 200px auto;
+    padding-top: 50px;
+}
+.wrap-inner{
+    background: rgba(0,0,0,.65);
+    margin: 0 auto;
+    width: 600px;
+    color: #fff;
+    padding: 50px;
+}
+.wrap-inner h1{
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: .5em;
+}
+.wrap-inner p{
+    font-size: 16px;
+    line-height: 24px;
+}
+.wrap-inner .tag{
+    color: yellow;
+}
+.wrap-inner input&#91;type=text]{
+    width: 30px;
+}</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>document.getElementById('countId').onclick = function(){
+    // 事件 - onclick
+    // 觸發到事件就會去執行裡面的內容
+    var hamNum = document.getElementById('hamNumId').value;
+    var cokeNum = document.getElementById('cokeNumId').value;
+    alert(hamNum);
+    alert(cokeNum);
+}</code></pre>
+
+
+
+<h4>function 計算機案例 (3)</h4>
+
+
+
+<p>typeof() – 用來判斷參數是什麼型別。</p>
+
+
+
+<pre class="wp-block-code"><code>Chrome - Console
+
+&gt; typeof(3)
+&lt; "number"
+&gt; typeof('hello')
+&lt; "string"
+&gt; typeof(function(){alert('q')})
+&lt; "function"
+&gt; typeof({tom:'john'})
+&lt; "object"</code></pre>
+
+
+
+<p>parseInt() – 字串轉成數字。</p>
+
+
+
+<pre class="wp-block-code"><code>// Chrome - Console
+
+&gt; var num = "3";
+&lt; undefined
+&gt; typeof(num)
+&lt; "string"
+&gt; num = parseInt(num)
+&lt; 3
+&gt; num
+&lt; 3
+&gt; typeof(num)
+&lt; "number"</code></pre>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;顧客點餐篇&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="wrap"&gt;
+        &lt;div class="wrap-inner"&gt;
+            &lt;h1&gt;六角西餐廳 ─ 顧客點餐篇&lt;/h1&gt;
+            &lt;p&gt;服務生：Hello，請問您想要點什麼？&lt;/p&gt;
+            &lt;p&gt;　顧客：給我 &lt;input type="text" id="hamNumId"&gt; 個漢堡，再 &lt;input type="text" id="cokeNumId"&gt; 杯可樂吧！&lt;/p&gt;
+            &lt;p&gt;服務生：&lt;input type="button" id="countId" value="計算中"&gt;，好的，總計是&lt;em id="totalId" class="tag"&gt;&lt;/em&gt;元&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/* CSS RESET */
+/* CSS STYLES */
+html{
+    background: #000;
+    font-family: MicrosoftJhengHeiRegular;
+}
+*,*:before,*:after{
+    box-sizing: border-box;
+}
+.wrap{
+    background: url(images/desktop.png) 50% 50%;
+    max-width: 1049px;
+    height: 420px;
+    margin: 200px auto;
+    padding-top: 50px;
+}
+.wrap-inner{
+    background: rgba(0,0,0,.65);
+    margin: 0 auto;
+    width: 600px;
+    color: #fff;
+    padding: 50px;
+}
+.wrap-inner h1{
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: .5em;
+}
+.wrap-inner p{
+    font-size: 16px;
+    line-height: 24px;
+}
+.wrap-inner .tag{
+    color: yellow;
+}
+.wrap-inner input&#91;type=text]{
+    width: 30px;
+}</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>document.getElementById('countId').onclick = function(){
+    var hamPrice = 50;
+    var cokePrice = 20;
+    var hamNum = parseInt(document.getElementById('hamNumId').value)*hamPrice;
+    var cokeNum = parseInt(document.getElementById('cokeNumId').value)*cokePrice;
+    document.getElementById('totalId').textContent = hamNum + cokeNum;
+    console.log(hamNum+cokeNum);
+}</code></pre>
+
+
+
+<h4>function 搭配 return 寫法</h4>
+
+
+
+<pre class="wp-block-code"><code>// 計算漢堡的總價
+
+function getHamPrice(num){
+  var hamPrice = 50;
+  var total = hamPrice * num;
+  return total;
+}
+
+var tom = getHamPrice(10);
+console.log(tom);</code></pre>
+
+
+
+<h2>陣列與物件</h2>
+
+
+
+<p>陣列(Array)、物件(Object)</p>
+
+
+
+<h4>為什麼需要陣列？</h4>
+
+
+
+<p>更有效率的或者是更好維護的方式，來去紀錄有各個的東西。</p>
+
+
+
+<h4>陣列簡報介紹</h4>
+
+
+
+<p>農莊現在想協助地方的農夫做統計，希望卡斯柏的農場使用<strong>陣列、物件</strong>的格式。</p>
+
+
+
+<pre class="wp-block-code"><code>// 農夫
+var farmer = '卡斯柏';
+// 有幾個玉米
+var cornField = 8;
+// 多個玉米田各有幾個玉米
+var cornField = &#91;8,5,6];
+// 狗的名字分別是
+var dogs = &#91;'張姆士', '龐的'];</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 農場
+var farmer = '卡斯柏';
+var dogs = &#91;'張姆士', '龐的']
+var chick = 15;
+var cornField = &#91;8, 5, 6];
+var broccoliField = &#91;6,6,6,6];
+var scarecrow = 9;</code></pre>
+
+
+
+<h4>陣列寫法教學</h4>
+
+
+
+<pre class="wp-block-code"><code>var cornField = &#91;8, 5, 6]
+// 陣列第一個是0。
+
+var cornField1 = cornField&#91;0];
+
+console.log(cornField1);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>var cornField = &#91;];
+cornField.push(5);
+cornField.push(8);
+cornField.push(6);
+
+cornField&#91;0] = 10;
+
+cornField&#91;3] = 100;
+
+// 陣列裡面的值有幾個
+console.log('我總共有'+cornField.length+'個玉米田');
+
+console.log(cornField);</code></pre>
+
+
+
+<h4>物件簡報介紹</h4>
+
+
+
+<pre class="wp-block-code"><code>var farm = {
+  // 屬性 (property): 值 (value)
+  farmer: '卡斯柏',
+  dogs: &#91;'張姆士', '龐的'],
+  chick: 15,
+  cornField: &#91;8, 5, 6],
+  broccoliField: &#91;6, 6, 6, 6],
+  scarecrow: 9
+}</code></pre>
+
+
+
+<h4>物件寫法教學</h4>
+
+
+
+<pre class="wp-block-code"><code>var farm = {
+  farmer: '卡斯柏',
+  chick: 15,
+  dog: &#91;'張姆士','龐的']
+};
+
+farm.chick = 30;
+
+var dog1 = farm.dog&#91;0];
+
+// 顯示農場的物件
+console.log(farm);
+// 顯示農場的小雞有幾隻
+console.log(farm.chick);
+// 第一隻狗的名字
+console.log('我農場裡的第一隻狗叫'+dog1);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>var house ={
+  room: 3,
+  father: 'tom',
+  son: &#91;'john','bob'],
+  mom: 'mary'
+}
+// 第一個兒子
+console.log(house.son&#91;0]);</code></pre>
+
+
+
+<h4>物件+function 運用技巧</h4>
+
+
+
+<p>物件可以放字串、數字、布林值還有可以放 function。</p>
+
+
+
+<pre class="wp-block-code"><code>var farm = {
+  farmer: '卡斯柏',
+  chick: 15,
+  duck: 3,
+  dog: &#91;'張姆士','龐的'],
+  goDinner: function(){
+    console.log(farm.farmer+'，該回家吃晚飯);
+  },
+  poultryTotal: function(){
+    var num = farm.chick + farm.duck;
+    console.log('我的農場總共有'+num+'隻家禽');
+  }
+};
+
+farm.goDinner();
+farm.poultryTotal();</code></pre>
+
+
+
+<p>串接API、後端資料庫，會傳遞資料格式(JSON)到其他伺服器或服務。</p>
+
+
+
+<h4>物件+陣列設計流程</h4>
+
+
+
+<pre class="wp-block-code"><code>var farms = &#91;
+  {
+    farmer: '卡斯柏'
+  },
+  {
+    farmer: '小杰'
+  }
+]
+console.log(farms&#91;1].farmer);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 物件和陣列的讀取方式
+var farms = &#91;{
+  farmer: '卡斯柏',
+  dogs: &#91;'張姆士', '龐的'],
+  chick: 15,
+  cornField: &#91;8, 5, 6],
+  broccoliField: &#91;6, 6, 6, 6],
+  scarecrow: 9
+}, {
+  farmer: '查理',
+  dogs: &#91;'皮皮'],
+  chick: 30,
+  cornField: &#91;18, 12],
+  borccoliField: &#91;8, 8, 8],
+  scarecrow: 6
+}];
+
+// 第二個農場的狗，皮皮的資料
+console.log(farms&#91;1].dogs&#91;0]);</code></pre>
+
+
+
+<h2>控制判斷(運算子、if、switch)</h2>
+
+
+
+<h4>以日常生活為例探討為何需要控制判斷</h4>
+
+
+
+<p>if – 讓程式幫你下判斷<br><br>– 人類具有判斷的能力，我們在饑餓的時候會去找東西吃。<br><br>條件 | 執行<br>飽足→什麼也不做<br>飢餓→進食</p>
+
+
+
+<pre class="wp-block-code"><code>if (hungry &lt;= 3) {
+  eat('披薩');
+} else if (hungry &lt; 7 &amp;&amp; hungry &gt; 3) {
+  eat('沙拉');
+}</code></pre>
+
+
+
+<h4>比較運算子：==、!==</h4>
+
+
+
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td>等於</td>
+<td>不等於</td>
+<td>布林</td>
+</tr>
+<tr>
+<td>==</td>
+<td>!==</td>
+<td>true、false</td>
+</tr>
+</tbody></table></figure>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+// = ，賦予一個值
+// ==，比較的時候
+&gt; var myAge = 18;
+&lt; undefined
+&gt; var bAge = 18;
+&lt; undefined
+&gt; myAge == bAge
+&lt; true</code></pre>
+
+
+
+<h4>比較運算子：==、!==，程式碼範例</h4>
+
+
+
+<pre class="wp-block-code"><code>var myMonth = 5;
+var thisMonth = 10;
+var birthdayCheck = myMonth == thisMonth;
+console.log(birthdayCheck);
+document.getElementById('birthdayId').textContent = birthdayCheck;
+
+var nowPeople = 1;
+var totalPeople = 2;
+var allPeopleNoHereCheck = totalPeople !== nowPeople;
+console.log(allPeopleNoHereCheck);
+document.getElementById('peopleId').textContent = allPeopleNoHereCheck;
+</code></pre>
+
+
+
+<h4>比較運算子：嚴謹模式 ===</h4>
+
+
+
+<p>判斷型別之後再去判斷內容的正確性，使用 === 。</p>
+
+
+
+<pre class="wp-block-code"><code>// Chrome Console
+&gt; 1 == 1
+&lt; true
+&gt; 1 == "1"
+&lt; true
+&gt; 1 === "1"
+&lt; false
+&gt; '1' === '1'
+&lt; true
+&gt; true == 1
+&lt; true
+&gt; false == 0
+&lt; true</code></pre>
+
+
+
+<h4>比較運算子：!= 與 !== 的差異</h4>
+
+
+
+<p>前面章節為確保資料嚴謹性，使用 == 和 !== 一同說明</p>
+
+
+
+<p>為避免同學誤解，這邊增加說明 != 與 !== 的差異。</p>
+
+
+
+<p>!= 是不等於，而 !== 是嚴謹模式的不等於，差別與前面章節提到的 == 和 === 是相同依據。</p>
+
+
+
+<p>!= 在運算元不相等時返回 true</p>
+
+
+
+<p>!== 則在運算元不相等或類型不相同時返回 true</p>
+
+
+
+<p>舉例：</p>
+
+
+
+<pre class="wp-block-code"><code>3 != '3' // false
+3 !== '3' // true</code></pre>
+
+
+
+<h4>比較運算子：&gt;、&lt;</h4>
+
+
+
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td>大於</td>
+<td>小於</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>&lt;</td>
+</tr>
+<tr>
+<td>大於等於</td>
+<td>小於等於</td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td>&lt;=</td>
+</tr>
+</tbody></table></figure>
+
+
+
+<pre class="wp-block-code"><code>// Chrome Console
+&gt; 80 &gt; 10
+&lt; true
+&gt; 80 &lt; 10
+&lt; false
+&gt; 80 &gt;= 79
+&lt; true
+&gt; 80 &gt;= 80
+&lt; true
+&gt; 80 &gt; 80
+&lt; false</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Chrome Console
+&gt; 1250 &gt; 1000
+&lt; true
+&gt; var myCost = 1250
+&lt; undefined
+&gt; myCost &gt; 1000
+&lt; true</code></pre>
+
+
+
+<h4>邏輯運算子：&amp;&amp;、||、!</h4>
+
+
+
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td>And</td>
+<td>OR</td>
+<td>NOT</td>
+</tr>
+<tr>
+<td>&amp;&amp;</td>
+<td>||</td>
+<td>!</td>
+</tr>
+</tbody></table></figure>
+
+
+
+<p>And<br>我：你好，我要辦銀行帳戶<br>銀行專員：請問你有帶「身分證」、「印章」嗎？<br>我：我只有帶到身分證可以辦嗎？<br>銀行專員：不好意思，一定得兩個都帶才有辦法辦哦</p>
+
+
+
+<p>OR<br>服務員：請問你機天的帳單有滿一千元，或是 VIP 嗎？有送禮！<br>我：我不是VIP，但剛好我有滿 1000 元耶！</p>
+
+
+
+<pre class="wp-block-code"><code>var isID = true;
+var isIN = false;
+isID == true;
+true
+isID == true &amp;&amp; isIn == true
+false</code></pre>
+
+
+
+<pre class="wp-block-code"><code>&gt; var isID = true;
+&gt; var isIn = true;
+&gt; isID == true &amp;&amp; isIn == true;
+&lt; true
+&gt; var isID = true;
+&gt; var isIn = true;
+&gt; var isPaper = true;
+&gt; isID == true &amp;&amp; isIn == true &amp;&amp; isPaper == true;
+&lt; true</code></pre>
+
+
+
+<p>範例</p>
+
+
+
+<pre class="wp-block-code"><code>&gt; var billFull = 1200;
+&gt; var isVIP = false;
+&gt; billFull &gt; 1000 || isVIP == true;
+&lt; true
+&gt; isVIP == true
+&lt; false
+&gt; billFull &gt; 1000
+&lt; true</code></pre>
+
+
+
+<p>範例</p>
+
+
+
+<pre class="wp-block-code"><code>&gt; 2&gt;3
+&lt; false
+&gt; !(2&gt;3)
+&lt; true</code></pre>
+
+
+
+<h4>邏輯運算子：範例程式碼</h4>
+
+
+
+<p>六角西餐廳 – 贈品篇</p>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;顧客點餐篇&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="wrap"&gt;
+        &lt;div class="wrap-inner"&gt;
+            &lt;h1&gt;六角西餐廳 ─ 贈品篇&lt;/h1&gt;
+            &lt;p&gt;服務生：請問你是 VIP 嗎？帳單有滿千嗎？兩者達到可送贈品哦。&lt;/p&gt;
+            &lt;p&gt;　顧客：&lt;em class="tag" id="andId"&gt;&lt;/em&gt;&lt;/p&gt;
+            &lt;p&gt;服務生：抱歉我記錯了，只要一個有達到就送贈品囉，你有嗎？&lt;/p&gt;
+            &lt;p&gt;　顧客：&lt;em class="tag" id="orId"&gt;&lt;/em&gt;&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>var myBill = 1250;
+var VIP = false;
+var andCheck = myBill &gt; 1000 &amp;&amp; VIP == true;
+// alert(andCheck);
+var orCheck = myBill &gt; 1000 || VIP == true;
+// alert(orCheck);
+
+document.getElementById('andId').textContent = andCheck;
+document.getElementById('orId').textContent = orCheck;</code></pre>
+
+
+
+<h4>if – 簡報介紹</h4>
+
+
+
+<p><strong>控制判斷</strong><br>if, else if, switch</p>
+
+
+
+<pre class="wp-block-code"><code>// 以吃飯為範例
+if(hungry == '飢餓'){ →判斷式
+  eat(); →陳述式
+ }
+
+if(hungry == '飢餓')
+hungry = '飽足' → false
+hungry = '飢餓' → true → 進食 / eat();</code></pre>
+
+
+
+<h4>if – 程式碼教學</h4>
+
+
+
+<pre class="wp-block-code"><code>var hungry == '飽足';
+// console.log(hungry == '飢餓');
+if(hungry == '飢餓'){
+  console.log('我現在好餓');
+}else{
+  console.log('我現在一點都不想吃東西');
+  console.log('我們走吧！');
+}</code></pre>
+
+
+
+<h4>else if 簡報介紹</h4>
+
+
+
+<p>以飽足感為例</p>
+
+
+
+<pre class="wp-block-code"><code>很飽
+不餓，但想吃東西 → 吃沙拉
+餓到不行 → 吃披薩
+var hungry = 8; // 1~10 的數值
+
+if (hungry &lt;= 3) {
+  eat('披薩');
+} else if (hungry &lt; 7 &amp;&amp; hungry &gt; 3) {
+  eat('沙拉');
+}
+// 飢餓度，小於等於 3 時吃披薩
+// 介於 4 ~ 7 之間吃沙拉
+
+hungry = 8; 什麼都不做
+hungry = 5; 吃沙拉
+hungry = 1; 吃披薩</code></pre>
+
+
+
+<h4>else if – 程式碼教學</h4>
+
+
+
+<pre class="wp-block-code"><code>var hungry = 8;
+// 飢餓程度 1~10
+// hungry 改成 3 時會要吃披薩
+// hungry 改成 5 時會要吃沙拉
+// hungry 改成 6 時會要吃餅乾
+// hungry 改成 9 時我超飽不想吃東西
+
+function eat(food){
+  console.log('我現在要吃'+food);
+}
+// console.log(hungry &lt;= 3);
+if(hungry &lt;= 3){
+  eat('披薩');
+}else if(hungry &lt;= 5 &amp;&amp; hungry &gt;3){
+  eat('沙拉');
+}else if(hungry == 6){
+  eat('餅乾');
+}else{
+  console.log('我超飽不想吃東西');
+}</code></pre>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;顧客點餐篇&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="wrap"&gt;
+        &lt;div class="wrap-inner"&gt;
+            &lt;h1&gt;六角西餐廳 ─ 飽足篇&lt;/h1&gt;
+            &lt;p&gt;飽足感：&lt;em class="tag" id="hungryId"&gt;&lt;/em&gt;&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>var hungry = 9;
+// 飢餓程度 1~10
+
+function eat(food){
+    document.getElementById('hungryId').textContent ="我現在要吃"+food;
+}
+if(hungry &lt;= 3){
+    eat('披薩');
+}else if(hungry &lt;= 5 &amp;&amp; hungry &gt; 3){
+    eat('沙拉');
+}else if(hungry==6){
+    eat('餅乾');
+}else{
+    document.getElementById('hungryId').textContent ="我超飽不想吃東西";
+}</code></pre>
+
+
+
+<h4>switch – 簡報介紹</h4>
+
+
+
+<pre class="wp-block-code"><code>// 以喜好為例
+var prefer = '拉麵';
+
+function eat(food){
+  console.log('我現在要去吃' + food);
+}
+
+switch (prefer){
+  case '牛排':
+    eat('牛排');
+    break;
+  case '生菜沙拉':
+    eat('生菜沙拉');
+    break;
+  default:
+    eat('拉麵');
+    break;
+}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>switch(prefer) → 設立一個表達式 switch() 且包含一個條件。
+case '生菜沙拉' → case: 後方會開始比對，如果符合就會執行相關連的程式碼
+break → 每個 case:後方皆會補上 break; 來阻止已完成的區塊後方繼續執行。</code></pre>
+
+
+
+<h4>switch – 程式碼教學</h4>
+
+
+
+<pre class="wp-block-code"><code>// 警戒狀態為例
+var light = 'red';
+
+switch(light){
+  case 'red':
+  alert('紅色警戒');
+  alert('快跑！');
+  break;
+
+  case 'blue':
+  alert('藍色警戒');
+  break;
+
+  // 都沒有以上狀況，使用 default
+  default:
+  alert('沒有任何資料');
+  break;
+}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>var light = 'blue';
+function lightFun(str){
+    console.log('目前是'+ str +'警戒');
+}
+
+switch(light){
+    case 'red':
+    alert('紅色警戒');
+    alert('快跑！');
+    break;
+
+    case 'blue':
+    lightFun(light);
+    break;
+    
+    // 都沒有以上狀況，使用 default
+    default:
+    alert('沒有任何資料');
+    break;
+}</code></pre>
+
+
+
+<p>跟 if 的差別是 switch 裡面的程式碼一定會跑。<br><br>default 放前面或後面都可以執行，不像是 if else 一定要放在最後面。</p>
+
+
+
+<h2>迴圈</h2>
+
+
+
+<h4>為什麼需要學習迴圈？</h4>
+
+
+
+<pre class="wp-block-code"><code>var farms = &#91;
+  farmer: '卡斯柏',
+  dogs: &#91;'張姆士', '龐的'],
+  chick: 15,
+  cornField: &#91;8, 5, 6],
+  broccoliField: &#91;6, 6, 6, 6],
+  scarecrow: 9
+}, {
+  farmer: '查理',
+  dogs: &#91;'皮皮'],
+  chick: 30,
+  cornField: &#91;18, 12],
+  broccoliField: &#91;8, 8, 8],
+  scarecrow: 6
+}];
+
+// 語法
+console.log(farms.length); → 取得陣列長度
+// 2
+
+console.log(farms&#91;1].farmer); → 取得第 X 個陣列值</code></pre>
+
+
+
+<pre class="wp-block-code"><code>for (var i = 0; i &lt; farms.length; i++) {
+  console.log('第' + (i + 1) + ' 個農場主人是 ' + farms&#91;i].farmer);
+}
+// "第 1 個農場主人是 卡斯柏"
+// "第 2 個農場主人是 查理"</code></pre>
+
+
+
+<h4>for 寫法</h4>
+
+
+
+<pre class="wp-block-code"><code>// 初始狀態;條件;更新內容
+for (var i = 0; i &lt; 3; i++){
+  console.log(i);
+}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 九九乘法表
+// 初始狀態;條件;更新內容
+for (var i = 1; i &lt; 10; i++){
+  console.log(i+'*'+i+'='+ i*i);
+  // "1*1=1"
+  // "2*2=4"
+}</code></pre>
+
+
+
+<h4>for-array 寫法</h4>
+
+
+
+<p>範例一</p>
+
+
+
+<pre class="wp-block-code"><code>var farms = &#91;
+  {
+    farmer: '卡斯柏',
+    field: 6
+  },
+  {
+    farmer: '查理',
+    field: 10
+  }
+]
+var farmsTotal = farms.length;
+for(var i=0;i&lt;farmsTotal;i++){
+  console.log(farms&#91;i].farmer);
+}</code></pre>
+
+
+
+<p>範例二</p>
+
+
+
+<pre class="wp-block-code"><code>var farms = &#91;
+  {
+    farmer: '卡斯柏',
+    field: 6
+  },
+  {
+    farmer: '查理',
+    field: 10
+  }
+]
+var farmsTotal = farms.length;
+for(var i=0;i&lt;farmsTotal;i++){
+  console.log('第'+ (i+1) +'個農場主人是'+ farms&#91;i].farmer);
+  // 第1個農場主人是卡斯柏
+  // 第2個農場主人是查理</code></pre>
+
+
+
+<h4>for if 寫法</h4>
+
+
+
+<pre class="wp-block-code"><code>var farms = &#91;
+  {
+    farmer: '卡斯柏',
+    field: 6,
+    chick: 200
+  },
+  {
+    farmer: '查理',
+    field: 10,
+    chick: 50
+  },
+  {
+    farmer: '約翰',
+    field: 6,
+    chick: 120
+  }
+]
+// 撈出哪些的農場的小雞數量超過 100 隻以上
+
+var farmsTotal = farms.length;
+
+for(var i = 0;i&lt;farmsTotal;i++){
+  console.log(farms&#91;i].chick);
+  if(farms&#91;i].chick&gt;100){
+    console.log(farms&#91;i].farmer+'的小雞超過100隻以上');
+  }
+}
+</code></pre>
+
+
+
+<h4>for – i++ 寫法</h4>
+
+
+
+<pre class="wp-block-code"><code>// Google Chrome Console
+&gt; var i = 0;
+&lt; undefined
+&gt; console.log(i)
+  0
+&lt; undefined
+&gt; i = i+1
+&lt; 1
+&gt; i+=1
+&lt; 2
+&gt; i++
+&lt; 2
+&gt; i
+&lt; 3
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 練習
+&gt; var total = 501
+&lt; undefined
+&gt; total++
+&lt; 501
+&gt; total
+&lt; 502
+&gt; total+=1
+&lt; 503
+&gt; total
+&lt; 503
+&gt;</code></pre>
+
+
+
+<p>有三種寫法</p>
+
+
+
+<ul>
+<li>i = i+1</li>
+<li>i+=1</li>
+<li>i++</li>
+</ul>
+
+
+
+<h4>for – 加總</h4>
+
+
+
+<pre class="wp-block-code"><code>var farms = &#91;
+  {
+    farmer: '卡斯柏',
+    field: 6,
+    chick: 200,
+    banana: 5000
+  },
+  {
+    farmer: '查理',
+    field: 10,
+    chick: 50,
+    banana: 1000
+  },
+  {
+    farmer: '約翰',
+    field: 6,
+    chick: 120,
+    banana: 3215
+  }
+]
+// 計算今年的香蕉採收總數
+var farmsTotal = farms.length;
+var bananaTotal = 0;
+for(var i = 0;i&lt;farmsTotal;i++){
+    bananaTotal+= farms&#91;i].banana;
+}
+
+console.log('今年村子的香蕉採收量:'+bananaTotal);</code></pre>
+
+
+
+<h4>for 與 break 運用</h4>
+
+
+
+<p>break – 中斷<br><br>當滿足中斷條件時，就離開迴圈。</p>
+
+
+
+<pre class="wp-block-code"><code>var farms = &#91;
+  {
+    farmer: '卡斯柏',
+    field: 6,
+    chick: 200,
+    banana: 5000
+  },
+  {
+    farmer: '查理',
+    field: 10,
+    chick: 50,
+    banana: 1000
+  },
+  {
+    farmer: '約翰',
+    field: 6,
+    chick: 120,
+    banana: 3215
+  }
+]
+// 我要找一個農場，買50隻小雞
+var farmsTotal = farms.length;
+for(var i = 0;i&lt;farmsTotal;i++){
+  if(farms&#91;i].chick&gt;=50){
+    console.log(farms&#91;i].farmer+'的農場小雞有50隻以上');
+    farms&#91;i].chick -= 50;
+    console.log(farms&#91;i].farmer+'的小雞剩下'+farms&#91;i].chick);
+    break;
+  }
+}
+console.log(farms&#91;0].chick);</code></pre>
+
+
+
+<h4>json 格式介紹</h4>
+
+
+
+<p>WIKI –&nbsp;<a rel="noreferrer noopener" href="https://zh.wikipedia.org/wiki/JSON" target="_blank">JSON</a>&nbsp;：資料交換的格式</p>
+
+
+
+<p><a href="https://data.kcg.gov.tw/" target="_blank" rel="noreferrer noopener">高雄市政府資料開放</a></p>
+
+
+
+<h4>JSON VIEW chrome 插件</h4>
+
+
+
+<p><a href="https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc?hl=zh-TW" target="_blank" rel="noreferrer noopener">下載連結</a></p>
+
+
+
+<h4>擷取 JSON 格式流程</h4>
+
+
+
+<pre class="wp-block-code"><code>var data = &#91;{},{},{},{},{}]
+
+console.log(data.length);</code></pre>
+
+
+
+<h4>for – opendata 範例 (上)</h4>
+
+
+
+<p>以宗教為範例</p>
+
+
+
+<pre class="wp-block-code"><code>var data = &#91;{},{},{},{},{}];
+
+// 撈出所有高雄市前鎮區的宗教
+var total = data.length;
+for(i=0;i&lt;total;i++){
+  if(data&#91;i].District=='高雄市前鎮區'){
+    console.log('宗教類別'+data&#91;i].Religion+'　宗教名字：'+data&#91;i].Name);
+  }
+}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 把資料多行轉換成一行
+
+全選資料後，案右鍵點選 Command Palette，輸入 Join Lines</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 資料為中文時
+// 以農產交易價格為練習
+
+var data = &#91;{},{},{},{},{}...{}];
+
+var dataTotal = data.length;
+for(i=0;i&lt;dataTotal;i++){
+    if(data&#91;i]&#91;"作物名稱"]=='酪梨'){
+        console.log('交易日期：'+data&#91;i]&#91;"交易日期"]+'市場名稱：'+data&#91;i]&#91;"市場名稱"]+'作物名稱：'+data&#91;i]&#91;"作物名稱"]);
+        console.log('上價價格：'+data&#91;i]&#91;"上價"]+'元/公斤'+'中價價格：'+data&#91;i]&#91;"中價"]+'元/公斤'+'下價價格：'+data&#91;i]&#91;"下價"]+'元/公斤'+'平均價格：'+data&#91;i]&#91;"平均價"]+'元/公斤'+'交易數量：'+data&#91;i]&#91;"交易量"]+'公斤');
+    }
+}
+</code></pre>
+
+
+
+<h4>OPEN DATA 範例 (下)</h4>
+
+
+
+<p>OpenData.epa –&nbsp;<a href="https://opendata.epa.gov.tw/" target="_blank" rel="noreferrer noopener">行政院環境保護署</a></p>
+
+
+
+<pre class="wp-block-code"><code>// 以十分鐘雨量為範例
+
+var data = &#91;{},{},{},{},{}...{}];
+
+// 測試資料是否能正常使用
+console.log(data.length);
+
+// 查詢10分鐘內哪個地區有下雨
+var dataTotal = data.length;
+for(var i = 0; i &lt; dataTotal; i++){
+  if(data&#91;i].Rainfall10min &gt; 0){
+    var County = data&#91;i].County;
+    var Township = data&#91;i].Township;
+    var Rain = data&#91;i].Rainfall10min;
+    console.log(County+Township+':'+Rain);
+  }
+}
+
+// 3個資料，過濾出想要的資料
+// 可以用 codepen、jsbin 線上編譯器練習</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 以農產交易為練習
+var data = &#91;{},{},{},{},{}...{}];
+
+var dataTotal = data.length;
+for(var i = 0; i &lt; dataTotal; i++){
+  if(data&#91;i]&#91;"作物名稱"] == '酪梨'){
+    var date = '交易日期:' + data&#91;i]&#91;"交易日期"];
+    var name = '作物名稱:' + data&#91;i]&#91;"作物名稱"];
+    var place = '市場名稱:' + data&#91;i]&#91;"市場名稱"];
+    var num = '交易量:' + data&#91;i]&#91;"交易量"];
+    var price = '價格(元/公斤):' + '上價:' + data&#91;i]&#91;"上價"] + '中價:' + data&#91;i]&#91;"中價"] + '下價' + data&#91;i]&#91;"下價"] + '平均價:' + data&#91;i]&#91;平均價];
+    var TWprice = '價格(元/斤):' + '上價:' + data&#91;i]&#91;"上價"]*0.6 + '中價：' + data&#91;i]&#91;"中價"]*0.6 + '下價:' + data&#91;i]&#91;"下價]*0.6 +　'平均價:' + data&#91;i]&#91;"平均價"]*0.6;
+
+    console.log(date+name+place+num);
+    console.log(price);
+    console.log(TWprice);
+  }
+}</code></pre>
+
+
+
+<h2>DOM</h2>
+
+
+
+<h4>什麼是 DOM ？</h4>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;MyTitle&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Header&lt;/h1&gt;
+  &lt;a href="#"&gt;MyLink&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<p>DOM –&nbsp;<a href="https://zh.wikipedia.org/wiki/%E6%96%87%E6%A1%A3%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B" target="_blank" rel="noreferrer noopener">文件物件模型</a></p>
+
+
+
+<h4>querySelector – 選擇單一元素</h4>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;h1 id="titleId" class="titleClass"&gt;&lt;em&gt;&lt;/em&gt;&lt;/h1&gt;</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>// 語法一
+document.getElementById('titleId').textContent = "修改後的標題";
+// 語法二
+var el = document.getElementById('titleId');
+el.textContent = '修改後的標題';</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// querySelector
+
+// 選擇 id
+var el = document.querySelector('#titleId');
+el.textContent = '選擇 id';
+// 選擇 class
+var el = document.querySelector('.titleClass');
+el.textContent = '選擇 class';
+// 選擇 class 裡面的 em
+var el = document.querySelector('.titleClass em);
+el.textContent = '選擇 class';</code></pre>
+
+
+
+<p>觀念：一個網頁上只能出現一個 id 名稱，不可以出現兩個。</p>
+
+
+
+<h4>querySelectorAll – 可重複選取多個元素</h4>
+
+
+
+<p>撈多筆資料可以使用 querySelctorAll。</p>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;h1 class="titleClass"&gt;&lt;em&gt;&lt;/em&gt;&lt;/h1&gt;
+&lt;h1 class="titleClass"&gt;&lt;em&gt;&lt;/em&gt;&lt;/h1&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>#strId{
+    color: blue;
+    font-size: 48px;
+}</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>var el = document.querySelectorAll('.titleClass em');
+console.log(el);
+// 是一個陣列
+el&#91;0].textContent = "第一個內容";
+el&#91;1].textContent = "第二個內容";
+
+// 使用 for 迴圈
+var elLen = el.length;
+
+for(var i = 0;i&lt;elLen;i++){
+  el&#91;i].textContent = 'for迴圈：'+i;
+}</code></pre>
+
+
+
+<h4>setAttribute – 增加標籤屬性</h4>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;h1 class="titleClass"&gt;
+  &lt;a href="#"&gt;增加標籤 href 屬性&lt;/a&gt;
+&lt;/h1&gt;
+&lt;div class="str"&gt;增加標籤 id 屬性&lt;/div&gt;</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>var el = document.querySelector('.titleClass a');
+el.setAttribute('href','https://www.google.com.tw');
+
+var el2 = document.querySelector('.str');
+el2.setAttribute('id','strId');
+
+// 取得標籤屬性的值
+var el3 = document.querySelector('.titleClass a').getAttribute('href');
+console.log(el3);
+
+// 用 textContent 單純撈出裡面文字
+var el4 = document.querySelector('.titleClass a').textContent;
+
+// 用 innerHTML 撈出 HTML 的標籤的內容
+var el5 = document.querySelector('.titleClass a').innerHTML;
+
+// 用 innerHTML 只撈 titleClass
+var el6 = document.querySelector('.titleClass).innerHTML;</code></pre>
+
+
+
+<h4>插入 HTML 標籤的兩種方法</h4>
+
+
+
+<p>用 JavaScript 操控 HTML 的方法</p>
+
+
+
+<h5>innerHTML</h5>
+
+
+
+<ul>
+<li>方法：組完字串後，傳進語法進行渲染</li>
+<li>優點：效能快</li>
+<li>缺點：資安風險，要確保來源沒問題</li>
+</ul>
+
+
+
+<h5>createElement</h5>
+
+
+
+<ul>
+<li>方法：以 DOM 節點來處理</li>
+<li>優點：安全性高</li>
+<li>缺點：效能差</li>
+</ul>
+
+
+
+<h4><strong><em>innerHTML 寫法 (上)</em></strong></h4>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div id="main"&gt;&lt;/div&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>.blue{
+  color: blue;
+}</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>var el = document.getElementByIs('main');
+el.innerHTML = '&lt;h1 class="blue"&gt;Heading1 標題&lt;/h1&gt;'
+// 外面用單引號，裡面用雙引號。</code></pre>
+
+
+
+<pre class="wp-block-code"><code>var el = document.getElementById('main');
+var str = '&lt;h1 class="blue"&gt;Heading1 標題&lt;/h1&gt;';
+el.innerHTML = str+str;</code></pre>
+
+
+
+<p>節點 – 各個網頁結構，都是一個節點。<br><br>innerHTML 的特性，會把裡面的值給清空，再去賦予設定的值。</p>
+
+
+
+<h4><strong><em>innerHTML 寫法 (下)</em></strong></h4>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;ul class="list"&gt;&lt;ul&gt;</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>var el = document.querySelector('.list');
+var link = 'https://www.google.com.tw';
+var name = '卡斯柏';
+
+el.innerHTML = '&lt;li&gt;&lt;a href="'+link+'"&gt;'+name+'&lt;/a&gt;&lt;/li&gt;';</code></pre>
+
+
+
+<h4><strong><em>innerHTML 與 for 運用</em></strong></h4>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;h1&gt;每個農場的農夫名字&lt;/h1&gt;
+&lt;ul class="list"&gt;&lt;/ul&gt;</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>var farms = &#91;
+  {
+    farmer: '卡斯柏',
+    dogs: &#91;'張姆士','龐的']
+  },
+  {
+    farmer: '查理',
+    dogs: &#91;'皮皮']
+  }
+];
+
+var el = document.querySelector('.list');
+var farmLen = farms.length;
+// 使用 console.log 來看所寫的程式碼是否正確
+console.log(farmLen);
+var str = '';
+for(var i = 0;i&lt;farmLen;i++){
+  var content = '&lt;li&gt;'+ farms&#91;i].farmer +'&lt;/li&gt;';
+  str+=content;
+  console.log(str);
+}
+el.innerHTML = str;</code></pre>
+
+
+
+<h5>練習一</h5>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;h1&gt;每個農場的資料&lt;/h1&gt;
+&lt;table class="list"&gt;
+&lt;/table&gt;</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>var farms = &#91;
+  {
+    farmer: '卡斯柏',
+    dogs: &#91;'張姆士','龐的']
+  },
+  {
+    farmer: '查理',
+    dogs: &#91;'皮皮']
+  }
+];
+
+var el = document.querySelector('.list');
+var farmLen = farms.length;
+
+console.log(farmLen);
+
+var str = '';
+for(var i=0;i&lt;farmLen;i++){
+  var farmer = '&lt;td&gt;'+farms&#91;i].farmer+'&lt;/td&gt;';
+  var dogs = '&lt;td&gt;'+farms&#91;i].dogs+'&lt;/td&gt;';
+  var farm = '&lt;tr&gt;'+farmer+dogs+'&lt;/tr&gt;';
+  str+=farm;
+  console.log(str);
+}
+
+var title = '&lt;tr&gt;'+'&lt;th&gt;'+'農夫名字'+'&lt;/th&gt;'+'&lt;th&gt;'+'小狗名字'+'&lt;/th&gt;'+'&lt;/tr&gt;';
+el.innerHTML = title + str;</code></pre>
+
+
+
+<h5>練習二</h5>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div class="wrap"&gt;
+  &lt;div class="container"&gt;
+    &lt;h1&gt;市場交易價格&lt;/h1&gt;
+    &lt;table class="list"&gt;&lt;/table&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/* CSS STYLES RESET */
+/* CSS STYLES SETTINGS START*/
+html{
+  font-family: sans-serif;
+}
+*,*:before,*:after{
+  box-sizing: border-box;
+}
+/* CSS STYLES SETTINGS END */
+.wrap{
+  max-width: 1440px;
+  margin: 0 auto;
+  background: #97d077;
+  padding: 20px 0;
+  color: #111;
+}
+.wrap h1{
+  font-size: 48px;
+  text-align: center;
+  padding: 30px 0;
+}
+.wrap h2{
+  font-size: 32px;
+  padding: 20px 0;
+}
+.list{
+  margin: 0 auto;
+  background: #67ab8f;
+}
+th, td{
+  border: 1px solid #fff;
+  padding: 10px;
+  text-algin: center;
+}
+
+@media screen and (max-width: 569px){
+  .container{
+    overflow-x: auto;
+  }
+  .list{
+    width: 768px;
+  }
+}</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>var data = &#91;{},{},{},{},{},...{}];
+
+var el = document.querySelector('.list');
+var dataLen = data.length;
+
+console.log(dataLen);
+
+var str = '';
+var strText = '';
+
+for(var i=0;i&lt;dataLen;i++){
+  if(data&#91;i]&#91;"作物名稱"] == '酪梨'){
+    var date = data&#91;i]&#91;"交易日期"];
+    var name = data&#91;i]&#91;"作物名稱"];
+    var place = '&lt;td&gt;+data&#91;i]&#91;"市場名稱"]+'&lt;/td&gt;';
+    var num = '&lt;td&gt;'+data&#91;i]&#91;"交易量"]+'&lt;/td&gt;';
+    var topPrice = '&lt;td&gt;'+data&#91;i]&#91;"上價"]+'&lt;/td&gt;';
+    var midPrice = '&lt;td&gt;'+data&#91;i]&#91;"中價"]+'&lt;/td&gt;';
+    var lowerPrice = '&lt;td&gt;'+data&#91;i]&#91;"下價"]+'&lt;/td&gt;';
+    var avgPrice = '&lt;td&gt;'+data&#91;i]&#91;"平均價"]+'&lt;/td&gt;';
+
+    var numTW = data&#91;i]&#91;"交易量"]*(5/3);
+    var topTWPrice = data&#91;i]&#91;"上價"] * 0.6;
+    var midTWPrice = data&#91;i]&#91;"中價"] * 0.6;
+    var lowerTWPrice = data&#91;i]&#91;"下價"] * 0.6;
+    var avgTWPrice = data&#91;i]&#91;"平均價"] * 0.6;
+
+    numTW = numTW.toFixed(1);
+    topTWPrice = topTWPrice.toFixed(1);
+    midTWPrice = midTWPrice.toFixed(1);
+    lowerTWPrice = lowerTWPrice.toFixed(1);
+    avgTWPrice = avgTWPrice.toFixed(1);
+
+    num = '&lt;td&gt;'+data&#91;i]&#91;"交易量"]+' | '+numTW+'&lt;/td&gt;';
+    topPrice = '&lt;td&gt;'+data&#91;i]&#91;"上價"]+' | '+topTWPrice+'&lt;/td&gt;';
+    midPrice = '&lt;td&gt;'+data&#91;i]&#91;"中價"]+' | '+midTWPrice+'&lt;/td&gt;';
+    lowerPrice = '&lt;td&gt;'+data&#91;i]&#91;"下價"]+' | '+lowerTWPrice+'&lt;/td&gt;';
+    avgPrice = '&lt;td&gt;'+data&#91;i]&#91;"平均價"]+' | '+avgTWPrice+'&lt;/td&gt;';
+
+    var info = '&lt;tr&gt;'+place+num+topPrice+midPrice+lowerPrice+avgPrice+'&lt;/tr&gt;';
+    str+=info;
+    var text = '&lt;h2&gt;'+date+'　'＋name+'&lt;/h2&gt;';
+  }
+}
+
+var title = '&lt;tr&gt;'+'&lt;th width="20%"&gt;'+'市場名稱'+'&lt;/th&gt;'+'&lt;th&gt;'+'交易量&lt;br&gt; (公斤) | (斤)'+'&lt;/th&gt;'+'&lt;th&gt;'+'上價&lt;br&gt;(元/公斤) | (元/斤)'+'&lt;/th&gt;'+'&lt;th&gt;'+'中價&lt;br&gt;(元/公斤) | (元/斤)'+'&lt;/th&gt;'+'&lt;th&gt;'+'下價&lt;br&gt;(元/公斤) | (元/斤)'+'&lt;/th&gt;'+'&lt;th&gt;'+'平均價&lt;br&gt;(元/公斤) | (元/斤)'+'&lt;/th&gt;'+'&lt;/tr&gt;';
+
+el.innerHTML = text+title+str;
+</code></pre>
+
+
+
+<h4><strong><em>createElement 寫法</em></strong></h4>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;h1 class="title&gt;
+  &lt;em&gt;title&lt;/em&gt;
+&lt;/h1&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>.blue{
+  color: blue;
+}</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>// 新增一個元素 - createElement()
+var str = document.createElement('em');
+str.textContent = '字串內容';
+str.setAttribute('class','blue');
+
+// 增加子節點 - appendChild()
+document.querySelector('.title').appendChild(str);</code></pre>
+
+
+
+<p>createElement – 不會刪除原本的內容，會新增在後面。</p>
+
+
+
+<h5>補充：JavaScript 動態建立 table 表格的方法</h5>
+
+
+
+<p>最原始的方法，依序建立元素。</p>
+
+
+
+<pre class="wp-block-code"><code>var el1 = document.createElement('table');
+var el2 = document.createElement('tbody');
+var el3 = document.createElement('tr');
+var el4 = document.createElement('td');
+// 使用子節點 - appendChild()追加各個元素
+el3.appendChild(el4);
+el2.appendChild(el3);
+el1.appendChild(el2);</code></pre>
+
+
+
+<h4><strong><em>createElement 與 for 運用</em></strong></h4>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;h1&gt;每個農場的農夫名字&lt;/h1&gt;
+&lt;ul class="list"&gt;&lt;/ul&gt;</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>var farms = &#91;
+  {
+    farmer: '卡斯柏',
+    dogs: &#91;'張姆士','龐的']
+  },
+  {
+    farmer: '查理',
+    dogs: &#91;'皮皮']
+  }
+];
+
+var el = document.querySelector('.list');
+var farmLen = farms.length;
+console.log(farmLen);
+
+for(var i=0;i&lt;farmLen;i++){
+  var str = document.createElement('li');
+  console.log(farms&#91;i].farmer);
+  str.textContent = farms&#91;i].farmer;
+  el.appendChild(str);
+}</code></pre>
+
+
+
+<h4>XSS 跨網站指令碼注意事項 (Cross-site scripting)</h4>
+
+
+
+<p>使用 innerHTML 資安上的問題。</p>
+
+
+
+<p>範例程式碼</p>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;textarea name="" id="content" cols="30" rows="10"&gt;&lt;/textarea&gt;
+&lt;input id="send" type="button" value="送出"&gt;
+&lt;div id="main"&gt;&lt;/div&gt;</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>document.getElementById('send').onclick = function(){
+  var str = document.getElementById('content').value;
+
+  document.getElementById('main').innerHTML = str;
+}</code></pre>
+
+
+
+<p>舉例：文字欄位填寫後送出</p>
+
+
+
+<pre class="wp-block-code"><code>// 會被新增 script 惡意程式碼，竊取資料、攻擊網站。
+Hello!!!
+&lt;script&gt;
+  alert('你被入侵了');
+&lt;/script&gt;</code></pre>
+
+
+
+<p>innerHTML 使用時機：可以信任的資料。<br><br>避免表單資料的送出使用 innerHTML 。<br><br>XSS：跨站指令攻擊 (Cross-site scriptint)，是一種網站應用程式的安全漏洞攻擊，是代碼注入的一種。</p>
+
+
+
+<h2>event (事件)</h2>
+
+
+
+<h4>什麼是 event (事件)？</h4>
+
+
+
+<p><a rel="noreferrer noopener" href="https://www.w3schools.com/jsref/dom_obj_event.asp" target="_blank">HTML DOM Events</a></p>
+
+
+
+<p>HTML DOM events allow JavaScript to register different event handlers on events in an HTML document.<br><br>Events are normally used in combination with functions, and the function will not be executed before the event occurs (such as when a user clicks a button).</p>
+
+
+
+<h4>event 物件 – 告知你當下元件資訊</h4>
+
+
+
+<p>用 onclick、或者其他事件綁定的時候，當你觸發那些事件時，console.log(e) 會提供你一些相關資訊。</p>
+
+
+
+<p>範例程式碼</p>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;input type="button" value="點擊" class="btn"&gt;</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>var el = document.querySelector('.btn');
+
+el.onclick = function(){
+  // 測試點擊事件功能是否能執行
+  alert("hello");
+}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>var el = document.querySelector('.btn');
+  // 參數：ｅ 或者 event
+el.onclick = function(e){
+  // eg1
+  console.log(e);
+  // eg2
+  console.log(e.x);
+}</code></pre>
+
+
+
+<h4>觀念篇 – 各種事件綁定的差異</h4>
+
+
+
+<h5>範例程式碼</h5>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;input type="button" class="btn" value="點擊一"&gt;
+
+&lt;input onclick="現在已經不建議使用的onclick寫法" type="button" value="點擊二"&gt;
+
+&lt;input type="button" class="btn2" value="點擊三"&gt;</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>// 寫法一
+var btn = document.querySelector('.btn');
+
+btn.onclick = function(){
+  alert('hello!');
+}
+
+// 寫法二
+var btn2 = document.querySelector('.btn2');
+    // 監聽
+btn.addEventListener('click',function(){
+  alert('hello!!');
+},false);</code></pre>
+
+
+
+<h4>addEventListener – 事件監聽</h4>
+
+
+
+<h5>範例程式碼</h5>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;input type="button" value="點擊" class="btn"&gt;</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>var el = document.querySelector('.btn');
+// 選擇事件,代入匿名function,false
+// 監聽
+el.addEventListener('click',function(e){
+  alert('hello');
+},false)</code></pre>
+
+
+
+<h4>綁定事件的語法差異</h4>
+
+
+
+<p>onclick 跟 addEventListener 的差別：</p>
+
+
+
+<ul>
+<li>onclick – 不能同時綁定兩個以上的事件</li>
+<li>addEventListener – 可以同時綁定兩個以上的事件</li>
+</ul>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;input type="button" class="btnOn" value="on點擊"&gt;
+&lt;input type="button" class="btnAdd" value="add點擊"&gt;</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>// onclick
+var elOn = document.querySelector('.btnOn');
+elOn.onclick = function(){
+  alert('on點擊-1);
+}
+
+elOn.onclick = function(){
+  alert('on點擊-2);
+}
+
+// addEventListener - 事件監聽
+var elAdd = document.querySelector('.btnAdd');
+elAdd.addEventListener('click',function(){
+  alert('add點擊-1');
+},false)
+elAdd.addEventListener('click',function(){
+  alert('add點擊-2');
+},false)</code></pre>
+
+
+
+<p>講解不同的綁定事件方式，是因為還是有機會看到其他事件綁定方式。</p>
+
+
+
+<h4>Event Bubbling、Event Capturing 差異</h4>
+
+
+
+<h5>程式碼範例</h5>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;body class="body"&gt;
+  &lt;div class="box"&gt;&lt;/div&gt;
+
+  &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>.box{
+  width: 100px;
+  height: 100px;
+  background: #000;
+}</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>var el = document.querySelector('.box');
+el.addEventListener('click',function(){
+  alert('box');
+  console.log('box');
+},false);
+
+var elBody = document.querySelector('.body');
+elBody.addEventListener('click',function(){
+  alert('body');
+  console.log('body');
+},false);
+
+// false (事件氣泡：Event Bubbling) - 從指定元素往外層找
+// true (事件捕捉：Event Capturing) - 從最外層找到指定元素
+// 第三個參數不寫的話，預設是 false</code></pre>
+
+
+
+<h4>stopPropagation – 中止冒泡事件</h4>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;body class="body"&gt;
+  &lt;div class="box"&gt;&lt;/div&gt;
+
+  &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>.box{
+  width: 100px;
+  height: 100px;
+  background: #000;
+}</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>var el = document.querySelector('.box');
+el.addEventListener('click',function(e){
+  // 中止冒泡事件
+  e.stopPropagation();
+  alert('box');
+  console.log('box');
+},false);
+
+var elBody = document.querySelector('.body');
+elBody.addEventListener('click',function(){
+  alert('你沒有點到box');
+  console.log('你沒有點到box');
+},false);</code></pre>
+
+
+
+<h4>preventDefault – 取消預設觸發行為</h4>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;body class="body"&gt;
+  &lt;a class="link" href="https://www.google.com.tw" style="margin-top:1800px;display:block;"&gt;menu icon&lt;/a&gt;
+  &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>var el = document.querySelector('.link');
+
+el.addEventListener('click',function(e){
+  // 取消元素的默認行為
+
+  // 原本點連結會跳轉到指定網頁
+
+  // submit 按鈕，先透過我的 js 去查詢表單有無錯誤，post來傳送
+  e.preventDefault();
+  console.log('test');
+},false);</code></pre>
+
+
+
+<h4>e.target – 了解目前所在元素位置</h4>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div class="header"&gt;
+  &lt;ul style="padding-top:100px;border:1px solid #000;"&gt;
+    &lt;li&gt;&lt;a href="#"&gt;123&lt;/a&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>var el = document.querySelector('.header');
+
+el.addEventListener('click',function(e){
+  // 當下元素資訊
+  console.log(e);
+  // 目前所在元素位置
+  console.log(e.target);
+  // 目前所在元素位置的節點名稱
+  console.log(e.target.nodeName);
+},false);</code></pre>
+
+
+
+<h4><strong><em>change – 表單內容更動內容時觸發</em></strong></h4>
+
+
+
+<p>程式碼範例</p>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;select id="areaId"&gt;
+  &lt;option value="--請選擇地區--"&gt;--請選擇地區--&lt;/option&gt;
+  &lt;option value="前鎮區"&gt;前鎮區&lt;/option&gt;
+  &lt;option value="苓雅區"&gt;苓雅區&lt;/option&gt;
+&lt;/select&gt;
+&lt;ul class="list"&gt;&lt;/ul&gt;</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>var area = document.getElementById('areaId');
+var list = document.querySelector('.list');
+var country = &#91;
+  {
+    farmer: '查理',
+    place: '前鎮區'
+  },
+  {
+    farmer: '卡斯柏',
+    place: '苓雅區'
+  },
+  {
+    farmer: '小花',
+    place: '苓雅區'
+  }
+];
+
+var len = country.length;
+// 使用 console.log 來看所寫的程式碼是否可以執行
+console.log(len);
+
+function updateList(e){
+  alert('測試事件監聽');
+  var select = e.target.value;
+  console.log(select);
+  var str = '';
+  for(var i=0;i&lt;len;i++){
+    console.log(country&#91;i].farmer);
+    if(select == country&#91;i].place){
+      str += '&lt;li&gt;'+country&#91;i].farmer+'&lt;/li&gt;';
+    }
+  }
+  list.innerHTML = str;
+}
+area.addEventListener('change',updateList,false);</code></pre>
+
+
+
+<p>練習</p>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;select id="areaId"&gt;
+  &lt;option value="請選擇地區"&gt;請選擇地區&lt;/option&gt;
+  &lt;option value="中部地區"&gt;中部地區&lt;/option&gt;
+  &lt;option value="南部地區"&gt;南部地區&lt;/option&gt;
+&lt;/select&gt;
+&lt;ul class="list"&gt;&lt;/ul&gt;</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>var area = document.getElementById('areaId');
+var list = document.querySelector('.list');
+var region = &#91;
+  {
+    owner: '查理',
+    place: '南部地區'
+  },
+  {
+    owner: '卡斯柏',
+    place: '南部地區'
+  },
+  {
+    owner: '約翰',
+    place: '中部地區'
+  },
+  {
+    owner: '艾咪',
+    place: '中部地區'
+  },
+  {
+    owner: '傑克',
+    place: '南部地區'
+  },
+  {
+    owner: '雪莉',
+    place: '南部地區'
+  }
+];
+
+var len = region.length;
+// console.log(len);
+function updateList(e){
+  // alert('測試監聽');
+  var select = e.target.value;
+  // console.log(select);
+  var str = '';
+  for(var i=0;i&lt;len;i++){
+    // console.log(region&#91;i].owner);
+    if(select == region&#91;i].place){
+      str += '&lt;li&gt;'+region&#91;i].owner+'&lt;/li&gt;';
+    }
+  }
+  list.innerHTML = str;
+}
+area.addEventListener('change',updateList,false);</code></pre>
+
+
+
+<h4>keyCode – 點擊鍵盤，射發火箭！</h4>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div class="map"&gt;
+  &lt;img class="rocket rocket-1" src="./images/rocket.png"&gt;
+  &lt;img class="rocket rocket-2" src="./images/rocket.png"&gt;
+  &lt;img class="rocket rocket-3" src="./images/rocket.png"&gt;
+&lt;/div&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/* CSS RESET */
+/* CSS STYLES */
+/* CSS STYLES */
+html{
+    height: 100%;
+}
+body{
+    background-image: url('./images/map.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: bottom;
+}
+.rocket{
+    position: absolute;
+    bottom: 0;
+    transition: all 5s cubic-bezier(1, 0.08, 0, 1.19);
+    /* ease、linear、ease-in、ease-out、ease-in-out */
+}
+.rocket-1{
+    left: 30px;
+}
+.rocket-2{
+    left: 330px;
+}
+.rocket-3{
+    left: 630px;
+}</code></pre>
+
+
+
+<p>chrome – console 可以調整 cubic-bezier 來看怎麼移動。</p>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>var body = document.body;
+
+function goRocket(e){
+    console.log(e.keyCode);
+    switch(e.keyCode){
+        case 49:
+            document.querySelector('.rocket-1').style.bottom = '2000px';
+            break;
+        case 50:
+            document.querySelector('.rocket-2').style.bottom = '2000px';
+            break;
+        case 51:
+            document.querySelector('.rocket-3').style.bottom = '2000px';
+            break;
+        
+    }
+}
+
+body.addEventListener('keydown',goRocket,false);</code></pre>
+
+
+
+<h4>blur – 離開焦點時進行事件觸發</h4>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div class="wrap"&gt;
+  &lt;div class="wrap-inner"&gt;
+    &lt;h1&gt;六角西餐廳 - 顧客點餐篇&lt;/h1&gt;
+    &lt;p&gt;服務生：Hello，請問您想要點什麼？&lt;/p&gt;
+    &lt;p&gt;　顧客：給我&lt;input type="text" id="hamNumId"&gt;個漢堡，再&lt;input type="text" id="cokeNumId"&gt;杯可樂吧！&lt;/p&gt;
+    &lt;p&gt;服務生：&lt;input type="button" id="countId" value="計算中"&gt;，好的，總計是&lt;em id="totalId" class="tag"&gt;&lt;/em&gt;元&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/* CSS RESET */
+/* CSS STYLES */
+html{
+  background: #000;
+  font-family: 'MicrosoftJhengHeiRegular';
+}
+*,*:before,*:after{
+  box-sizing: border-box;
+}
+.wrap{
+  background: url(./images/desktop.png) 50% 50%;
+  max-width: 1049px;
+  height: 420px;
+  margin: 200px auto;
+  padding-top: 50px;
+}
+.wrap-inner{
+  background: rgba(0,0,0,.65);
+  margin: 0 auto;
+  width: 600px;
+  color: #fff;
+  padding: 50px;
+}
+.wrap-inner h1{
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: .5em;
+}
+.wrap-inner p{
+  font-size: 16px;
+  line-height: 24px;
+}
+.wrap-inner .tag{
+  color: yellow;
+}
+.wrap-inner input&#91;type=text]{
+  width: 30px;
+}</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>function count(){
+  var hamPrice = 50;
+  var cokePrice = 20;
+  var hamNum = parseInt(document.getElementById('hamNumId').value)*hamPrice;
+  var cokeNum = parseInt(document.getElementById('cokeNumId').value)*cokePrice;
+  document.getElementById('totalId').textContent = hamNum + cokeNum;
+}
+function checkContent(e){
+  var str = e.target.value;
+  if(str ==''){
+    alert('此欄位不可為空');
+  }
+}
+var el = document.getElementById('countId');
+el.addEventListener('click',count,false);
+
+// focus 所在焦點
+// blur 離開焦點
+
+var ham = document.getElementById('hamNumId');
+ham.addEventListener('blur',checkContent,false);
+var coke = document.getElementById('cokeNumId');
+coke.addEventListener('blur',checkContent,false);</code></pre>
+
+
+
+<h4>mouse – 當滑鼠滑入指定內容時觸發</h4>
+
+
+
+<p>範例一</p>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div class="box"&gt;&lt;/div&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/* CSS RESET */
+/* CSS STYLES */
+.box{
+  width: 150px;
+  height: 150px;
+  background: green;
+}</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>// mousemove - 當滑鼠滑入指定內容時觸發
+
+var el = document.querySelector('.box');
+
+el.addEventListener('mousemove',function(){
+  alert('測試監聽事件');
+},false);</code></pre>
+
+
+
+<p>範例二</p>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div class="box box1"&gt;&lt;/div&gt;
+&lt;div class="box box2"&gt;&lt;/div&gt;
+&lt;div class="box box3"&gt;&lt;/div&gt;
+&lt;div class="box box4"&gt;&lt;/div&gt;
+&lt;div class="box box5"&gt;&lt;/div&gt;
+&lt;div class="box box6"&gt;&lt;/div&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>.box{
+  background: green;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+}
+.box1{
+  top: 0px;
+  left: 50px;
+  animation: fontbulger 2s infinite;
+}
+.box2{
+  top: 0px;
+  left: 90px;
+  animation: fontbulger 3s infinite;
+}
+.box3{
+  top: 0px;
+  left: 140px;
+  animation: fontbulger 2.5s infinite;
+}
+.box4{
+  top: 0px;
+  left: 180px;
+  animation: fontbulger 1.2s infinite;
+}
+.box5{
+  top: 0px;
+  left: 230px;
+  animation: fontbulger 4s infinite;
+}
+.box6{
+  top: 0px;
+  left: 250px;
+  animation: fontbulger 4s infinite;</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>var el = document.querySelectorAll('.box');
+
+var Len = el.length;
+
+for (var i=0;i&lt;Len;i++){
+  el&#91;i].addEventListener('mousemove',function(e){
+  alert('你輸了！');
+  });
+}</code></pre>
+
+
+
+<h4>網頁座標 – 了解 screen、page、client 箇中差異</h4>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div class="wrap"&gt;
+  &lt;div class="header"&gt;
+    &lt;p&gt;
+      screenX: &lt;span class="screenX"&gt;&lt;/span&gt;
+      screeny: &lt;span class="screenY"&gt;&lt;/span&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+      pageX: &lt;span class="pageX"&gt;&lt;/span&gt;
+      pageY: &lt;span class="pageY"&gt;&lt;/span&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+      clientX: &lt;span class="clientX"&gt;&lt;/span&gt;
+      clientY: &lt;span class="clientY"&gt;&lt;/span&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/* CSS RESET */
+/* CSS STYLES */
+html{
+    height: 100%;
+}
+.wrap{
+    max-width: 1920px;
+    height: 5000px;
+    background: url('./images/dark.png') bottom #404747 no-repeat;
+}
+.header{
+    height: 100px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    background: slateblue;
+}
+.header p{
+    padding: .5em;
+}</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>var screenX = document.querySelector('.screenX');
+var screenY = document.querySelector('.screenY');
+var pageX = document.querySelector('.pageX');
+var pageY = document.querySelector('.pageY');
+var clientX = document.querySelector('.clientX');
+var clientY = document.querySelector('.clientY');
+
+function getPosition(e){
+    screenX.textContent = e.screenX;
+    screenY.textContent = e.screenY;
+    pageX.textContent = e.pageX;
+    pageY.textContent = e.pageY;
+    clientX.textContent = e.clientX;
+    clientY.textContent = e.clientY;
+}
+
+var el = document.body;
+el.addEventListener('mousemove',getPosition,false);</code></pre>
+
+
+
+<ul>
+<li>screen：整個螢幕的解析度大小</li>
+<li>page：整個網頁內容高度、寬度</li>
+<li>client：瀏覽器視窗的大小</li>
+</ul>
+
+
+
+<h4>網頁座標 – 應用篇</h4>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div class="wrap"&gt;
+  &lt;div class="header"&gt;
+    &lt;p&gt;
+      screenX: &lt;span class="screenX"&gt;&lt;/span&gt;
+      screeny: &lt;span class="screenY"&gt;&lt;/span&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+      pageX: &lt;span class="pageX"&gt;&lt;/span&gt;
+      pageY: &lt;span class="pageY"&gt;&lt;/span&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+      clientX: &lt;span class="clientX"&gt;&lt;/span&gt;
+      clientY: &lt;span class="clientY"&gt;&lt;/span&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="mouseImg"&gt;
+  &lt;img src="images/pic.png" width="100"&gt;
+&lt;/div&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/* CSS RESET */
+/* CSS STYLES */
+html{
+  height: 100%;
+}
+body{
+  cursor: none;
+}
+.wrap{
+  max-width: 1920px;
+  height: 5000px;
+  background: url('./images/dark.png') bottom #404747 no-repeat;
+}
+.header{
+  height: 100px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  background: slateblue;
+}
+.header p{
+  padding: .5em;
+}
+.mouseImg{
+  position: fiexe;
+}</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>var screenX = document.querySelector('.screenX');
+var screenY = document.querySelector('.screenY');
+var pageX = document.querySelector('.pageX');
+var pageY = document.querySelector('.pageY');
+var clientX = document.querySelector('.clientX');
+var clientY = document.querySelector('.clientY');
+
+var mouseImg = document.querySelector('.mouseImg');
+
+function getPosition(e){
+    screenX.textContent = e.screenX;
+    screenY.textContent = e.screenY;
+    pageX.textContent = e.pageX;
+    pageY.textContent = e.pageY;
+    clientX.textContent = e.clientX;
+    clientY.textContent = e.clientY;
+    mouseImg.style.left = e.clientX + 'px';
+    mouseImg.style.top = e.clientY + 'px';
+}
+
+var el = document.body;
+el.addEventListener('mousemove',getPosition,false);</code></pre>
+
+
+
+<p>mouse CSS – 改變滑鼠圖片</p>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+    &lt;title&gt;JavaScript 入門篇 - 學徒的試煉&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;mouse CSS 改變滑鼠圖片&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>*{
+  cursor: url('../img/pic1.png), auto;
+}</code></pre>
+
+
+
+<h4>事件監聽優化篇 – 從父元素來監聽子元素內容</h4>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;ul class="list"&gt;
+  &lt;h2&gt;Heading 2 - 標題&lt;/h2&gt;
+  &lt;li&gt;查理&lt;/li&gt;
+  &lt;li&gt;卡斯柏&lt;/li&gt;
+  &lt;a href="#"&gt;網頁連結&lt;/a&gt;
+&lt;/ul&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/* CSS STYLES */
+.list{
+  padding: 50px;
+  border: 10px solid #000;
+}
+a{
+  color: blue;
+}</code></pre>
+
+
+
+<h2>localStorage – 瀏覽器資料儲存</h2>
+
+
+
+<h4>什麼是 localStorage？</h4>
+
+
+
+<p>瀏覽器裡面的資料庫。</p>
+
+
+
+<p>Google Chrome – Console – Application – Local Storage</p>
+
+
+
+<p>業界常實作的功能</p>
+
+
+
+<ul>
+<li>Local Storage</li>
+<li>Session Storage</li>
+<li>Cookies</li>
+</ul>
+
+
+
+<p>舉例網站：博客來、萌典</p>
+
+
+
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td>Key</td>
+<td>Value</td>
+</tr>
+<tr>
+<td>font-size</td>
+<td>14</td>
+</tr>
+<tr>
+<td>prev-id</td>
+<td>“萌”</td>
+</tr>
+</tbody></table></figure>
+
+
+
+<h4>setItem、getItem 基本操作</h4>
+
+
+
+<p>儲存資料 – setItem<br>取出資料 – getItem</p>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>var str = 'tom';
+
+localStorage.setItem("myName",str);
+console.log(localStorage.getItem('myName');</code></pre>
+
+
+
+<p>範例程式碼</p>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;h2&gt;請輸入你的姓名&lt;/h2&gt;
+&lt;input type="text" class="textClass"&gt;
+&lt;input type="button" class="btnClass" value="點擊"&gt;
+&lt;input type="button" class="btnCall" value="點擊呼叫名字"&gt;</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>var btn = document.querySelector('.btnClass');
+var call = document.querySelector('.btnCall');
+
+function saveName(e){
+  console.log('測試監聽');
+  var str = document.querySelector('.textClass').value;
+  console.log(str);
+  localStorage.setItem('myName',str);
+}
+
+btn.addEventListener('click',saveName,false);
+call.addEventListener('click',function(){
+  var str = localStorage.getItem('myName');
+  alert('你的名字叫做'+str);
+},false);</code></pre>
+
+
+
+<h4>透過 JSON.parse、JSON.stringify 來編譯資料</h4>
+
+
+
+<p>HTML</p>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>// 1.將 array 轉為 string - JSON.stringify()
+// 2.將 string 轉為 array - JSON.parse()
+// 學以上兩點是因為 Local Storage 只會保存、取出 string 資料
+
+var country = &#91;
+  {farmer: '卡斯柏'};
+];
+var countryString = JSON.stringify(country);
+console.log(countryString);
+localStorage.setItem('countryItem',countryString);
+
+var getData = localStorage.getItem('countryItem');
+var getDataAry = JSON.parse(getData);
+
+console.log(typeof(getData));
+console.log(typeof(getDataAry));
+console.log(getDataAry&#91;0].farmer);</code></pre>
+
+
+
+<h4>data-* – 透過 dataset 讀取自訂資料</h4>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;ul class="list"&gt;
+  &lt;li data-num="0" data-dog="3" class="listli"&gt;卡斯柏&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+
+
+<p>Google Console</p>
+
+
+
+<pre class="wp-block-code"><code>&gt; document.querySelector('.list li').dataset
+&lt; DOMStringMap {num: "0", dog: "3"}
+&gt; document.querySelector('.list li').dataset.dog
+&lt; "3"</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>var list = document.querySelector('.list li');
+
+// 確認點擊的農夫，以及相關的資訊
+function checkList(e){
+  console.log('測試監聽');
+  var num = e.target.dataset.num;
+  var dog = e.target.dataset.dog;
+  console.log('農夫編號是'+num);
+  console.log('有'+dog+'隻狗');
+}
+
+list.addEventListener('click',checkList,false);</code></pre>
+
+
+
+<h4>dataset、array 運用</h4>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;ul class="list"&gt;&lt;/ul&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/* CSS STYLES */
+.list{
+  padding: 50px;
+  background: #000;
+  color: #fff;
+}</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<p>監聽綁定之後，並不代表裡面的其他元素也會跟著做綁定。<br><br>一個網頁上有太多監聽的事件，會導致效能變的非常不好。<br><br>因此比較好的做法是去指定ul，然後去查詢。</p>
+
+
+
+<pre class="wp-block-code"><code>var country = &#91;
+  {
+    farmer: '卡斯柏'
+  },
+  {
+    farmer: '查理'
+  }
+];
+var list = document.querySelector('.list');
+
+// 更新農場資料
+function updateList(){
+  var str = '';
+  var len = country.length;
+  for(var i=0;i&lt;len;i++){
+    str+='&lt;li data-num="'+i+'"&gt;'+country&#91;i].farmer+'&lt;/li&gt;;
+  }
+  list.innerHTML = str;
+}
+updateList();
+
+function checkList(e){
+  console.log(e.target.nodeName);
+  var num = e.target.nodeName;
+  if(num !=="LI"){return};
+  var str = e.target.dataset.num;
+  console.log('您現在選擇的農夫是'+country&#91;str].farmer);
+}
+
+list.addEventListener('click',checkList,false);</code></pre>
+
+
+
+<h4>splice – 刪除 array 資料</h4>
+
+
+
+<p>Chrome – Console</p>
+
+
+
+<pre class="wp-block-code"><code>&gt; var colors = &#91;'black','red'];
+&lt; undefined
+&gt; colors
+&lt; &#91;"black", "red"]
+&gt; colors.push('yellow');
+&lt; 3
+&gt; colors
+&lt; &#91;"black", "red", "yellow"]
+
+// splice - 刪除 array 資料
+// splice(從第幾筆開始,刪除幾筆)
+&gt; colors.splice(0,2);
+&lt; &#91;"black", "red"]
+&gt; colors
+&lt; &#91;"yellow"]</code></pre>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;ul class="list"&gt;&lt;/ul&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/* CSS STYLES */
+.list{
+  padding: 50px;
+  background: #000;
+  color: #fff;
+}</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>var country = &#91;
+  {
+    farmer: '卡斯柏'
+  },
+  {
+    farmer: '查理'
+  },
+  {
+    farmer: '約翰'
+  }
+];
+var list = document.querySelector('.list');
+
+// 更新農場資料
+function updateList(){
+  var str = '';
+  var len = country.length;
+  for(var i=0;i&lt;len;i++){
+    str+='&lt;li data-num="'+i+'"&gt;'+country&#91;i].farmer+'&lt;/li&gt;';
+    }
+    list.innerHTML = str;
+}
+updateList();
+
+// 確認點擊的農夫是誰
+function checkList(e){
+  var num = e.target.dataset.num;
+  // console.log(e.target.nodeName);
+  if(e.target.nodeName !== 'LI'){return};
+  country.splice(num,1);
+  updateList();
+}
+
+list.addEventListener('click',checkList,false);</code></pre>
+
+
+
+<h4><strong><em>localStorage 作業介紹</em></strong></h4>
+
+
+
+<p>農場備忘(to do list)，功能有兩種：</p>
+
+
+
+<ul>
+<li>新增備忘</li>
+<li>刪除備忘</li>
+</ul>
+
+
+
+<h4>localStorage 作業講解</h4>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en zh-hant"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;JavaScript - 學徒的試煉&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;div class="wrap clearfix"&gt;
+        &lt;div class="img"&gt;
+            &lt;img class="logo" src="./images/logo.svg"&gt;
+        &lt;/div&gt;
+        &lt;div class="content"&gt;
+            &lt;div class="addList"&gt;
+                &lt;input type="text" class="text" placeholder="請填寫代辦內容" required&gt;
+                &lt;input type="button" class="send" value="加入代辦"&gt;
+            &lt;/div&gt;
+            &lt;ul class="list"&gt;&lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/* CSS RESET */
+/* CSS STYLES */
+html{
+	background-color: #000;
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+}
+.wrap{
+	width: 600px;
+	margin: 0 auto;
+	background: #fff;
+	margin: 100px auto;
+	padding: 1em;
+	text-align: center;
+}
+.img{
+	float: left;
+	width: 200px;
+}
+.content{
+	float: right;
+	width: 350px;
+	text-align: left;
+}
+.clearfix{
+	overflow: auto;
+	zoom: 1;
+}
+.list{
+	margin: 0;
+	padding: 50px 100px 100px 0;
+	text-align: left;
+	list-style: none;
+}
+.list li{
+	border-bottom: 1px solid gray;
+	padding: 10px 0;
+}
+.addList{
+	margin-top: 20px;
+}
+.addList .text{
+	padding: 10px;
+	border: 2px solid rgba(73, 41, 10);
+}
+.addList .send{
+	padding: 10px;
+	cursor: pointer;
+	background: #e8a874;
+}</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>// 指定 DOM
+var list = document.querySelector('.list');
+var sendData = document.querySelector('.send');
+var data = JSON.parse(localStorage.getItem('listData')) || &#91;];
+
+// 監聽與更新
+sendData.addEventListener('click',addData,false);
+list.addEventListener('click',toggleDone,false);
+updateList(data);
+
+// 加入列表，並同步更新網頁與 Local Storage
+function addData(e){
+    e.preventDefault();
+    var txt = document.querySelector('.text').value;
+    var todo = {
+        content: txt
+    };
+    data.push(todo);
+    updateList(data);
+    localStorage.setItem('listData',JSON.stringify(data),false);
+}
+
+// 更新網頁內容
+function updateList(items){
+    str = '';
+    var len = items.length;
+    for(var i=0;i&lt;len;i++){
+        str += '&lt;li&gt;&lt;a href="#" data-index='+i+'&gt;刪除&lt;/a&gt;&lt;span&gt;　'+ items&#91;i].content + '&lt;/span&gt;&lt;/li&gt;';
+    }
+    list.innerHTML = str;
+}
+
+// 刪除代辦事項
+function toggleDone(e){
+    e.preventDefault();
+    if(e.target.nodeName !== 'A'){return};
+    var index = e.target.dataset.index;
+    data.splice(index, 1);
+    localStorage.setItem('listData',JSON.stringify(data),false);
+    updateList(data);
+}</code></pre>
+
+
+
+<h5>網路資料觀念補充：</h5>
+
+
+
+<p>tagName 和 nodeName 的語意是一樣的，都是返回所包含標籤的名稱，例如上面的h2標籤，都是返回h2，但是tagName只能在元素標籤上使用，而nodeName則可以在所有的節點上使用。</p>
+
+
+
+<h2>瀏覽器功能探索 (BOM)</h2>
+
+
+
+<h4>瀏覽器功能簡介</h4>
+
+
+
+<p>BOM (Browser Object Model)</p>
+
+
+
+<p>開啟瀏覽器一個網頁的話(ex：Google Chrome、IE、Firefox)，會開啟一個window的物件，來操作、讀取瀏覽器資訊。</p>
+
+
+
+<p>window 裡面的各種效果：</p>
+
+
+
+<ul>
+<li>history</li>
+<li>frames</li>
+<li>location</li>
+<li>DOM (document)</li>
+<li>screen</li>
+<li>navigator</li>
+</ul>
+
+
+
+<p>Chrome – Console</p>
+
+
+
+<pre class="wp-block-code"><code>&gt; window
+&lt; Window&nbsp;{window: Window, self: Window, document: document, name: "", location: Location,&nbsp;…}
+&gt; var str = 3;
+&lt; undefined
+&gt; str
+&lt; 3
+&gt; window.str
+&lt; 3
+
+// 舉例
+&gt; window.screen
+&lt; Screen&nbsp;{availWidth: 1280, availHeight: 683, width: 1280, height: 720, colorDepth: 24,&nbsp;…}
+&gt; window.screen.width
+&lt; 1280</code></pre>
+
+
+
+<h4>回上頁功能實作</h4>
+
+
+
+<p>history – 回上頁功能</p>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+&lt;h1&gt;第一頁&lt;/h1&gt;
+&lt;a href="b.html"&gt;連到第二頁&lt;/a&gt;
+&lt;br&gt;
+&lt;a href="#" id="next"&gt;下一頁(JS版)&lt;/a&gt;
+
+&lt;script&gt;
+  document.getElementById('next').onclick = function(){
+  window.history.forward();
+  }
+&lt;/script&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// b.html
+&lt;h1&gt;第二頁&lt;/h1&gt;
+&lt;input type="button" id="back" value="回到上一頁"&gt;
+
+&lt;script&gt;
+  document.getElementById('back').onclick = function(){
+  window.history.back();
+  }
+&lt;/script&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>body{
+  background: #000;
+}
+h1{
+  font-size: 48px;
+  color: #fff;
+}
+a{
+  font-size: 36px;
+  color: #fff;
+}</code></pre>
+
+
+
+<p>討論區：把 js 寫在同一頁，如何正常執行？</p>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+&lt;h1&gt;第一頁&lt;/h1&gt;
+&lt;a href="b.html"&gt;連到第二頁&lt;/a&gt;
+&lt;br&gt;
+&lt;a href="#" id="next"&gt;下一頁(JS版)&lt;/a&gt;
+
+&lt;script src="js/all.js"&gt;&lt;/script&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// b.html
+&lt;h1&gt;第二頁&lt;/h1&gt;
+&lt;input type="button" id="back" value="回到上一頁"&gt;
+
+&lt;script src="ja/all.js"&gt;&lt;/script&gt;</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>var next = document.getElementById('next');
+var back = document.getElementById('back');
+
+// 到index頁面，back為null，到b.html頁面，next為null
+console.log(next,back);
+
+if(next){
+  next.onclick = function(){
+    window.history.forward();
+  }
+}else{
+  back.onclick = function(){
+    window.history.back();
+}</code></pre>
+
+
+
+<h4>透過 JS 設計列印功能</h4>
+
+
+
+<p>列印功能常見應用在票券、QRCODE、訂單資訊、發票…等。<br><br>location 提供了很多讀取所在網址的相關資訊，並可以用來跳轉網址。</p>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;input type="button" id="print" value="列印"&gt;
+&lt;input type="button" id="locat" value="瀏覽location資訊"&gt;
+&lt;input type="button" id="open" value="移動到google首頁"&gt;
+
+&lt;script src="js/all.js"&gt;&lt;/script&gt;</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>// 列印功能
+document.getElementById('print').onclick = function(){
+  window.print();
+}
+// 瀏覽location資訊
+document.getElementById('locat').onclick = function(){
+  console.log(location);
+  // 轉網址
+  location.href = 'https://www.google.com.tw';
+}
+// 開啟網頁
+document.getElementById('open').onclick = function(){
+  window.open('https://www.google.com.tw');
+}</code></pre>
+
+
+
+<h4>動態擷取瀏覽器高度 – innerHeight</h4>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div class="hero"&gt;&lt;/div&gt;
+&lt;div class="section2"&gt;
+  section2
+&lt;/div&gt;
+&lt;script src="js/all.js"&gt;&lt;/script&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>.hero{
+  height: 400px;
+  background-image: url('./images/hero.jpg');
+  background-size: cover;
+  background-position: top center;
+}
+.section2{
+  background: lightgreen;
+  text-align: center;
+  color: #fff;
+  font-size: 80px;
+  padding: 100px;</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>document.querySelector('.hero').style.height = window.innerHeight+"px";
+
+window.onresize = function(){
+  document.querySelector('.hero').style.height = window.innerHeight+"px";</code></pre>
+
+
+
+<h2>JS 開發邏輯思維</h2>
+
+
+
+<h4>JS 開發邏輯思維</h4>
+
+
+
+<p><a rel="noreferrer noopener" href="https://quip.com/h0KbA7QAH1Ss" target="_blank">共筆文件</a></p>
+
+
+
+<h5><strong>JS 新手都能聽懂的開發邏輯思維養成</strong></h5>
+
+
+
+<h6>JS 初學者起手式：資料(model) &gt; 事件(event) &gt; 介面(View)</h6>
+
+
+
+<p>三個步驟來規劃 JS 網頁應用</p>
+
+
+
+<ol>
+<li>model：先處理好資料的新增、刪除、修改</li>
+<li>event：使用者行為觸發程式</li>
+</ol>
+
+
+
+<h6>資料</h6>
+
+
+
+<ol>
+<li>用<strong>陣列</strong>與<strong>物件</strong>規畫你的資料</li>
+<li>JS 記憶體儲存 (變數)</li>
+<li>LocalStorage</li>
+</ol>
+
+
+
+<h6>事件(event)</h6>
+
+
+
+<p>使用者行為觸發事件，一般都用 function 函式來規劃：</p>
+
+
+
+<ol>
+<li>更新 model</li>
+<li>更新 view</li>
+</ol>
+
+
+
+<p><strong>常見使用者行為</strong></p>
+
+
+
+<ol>
+<li>網頁預設載入 (init)</li>
+<li>使用者行為<ul>
+<li>滑鼠滑入</li>
+<li>點擊</li>
+</ul>
+</li>
+</ol>
+
+
+
+<h6>畫面更新</h6>
+
+
+
+<ol>
+<li>innerHTML</li>
+<li>appendChild</li>
+</ol>
+
+
+
+<h6>傳統 JS 寫法</h6>
+
+
+
+<ul>
+<li>
+<a rel="noreferrer noopener" href="https://drive.google.com/drive/folders/1dVKllw6EfEYsPpaMIkM6BtfOQHUmnl9d" target="_blank">localstorage 基礎 JS 範例</a><ul><li>event 裡面同時處理<strong>資料</strong>與<strong>介面更新</strong>
+</li></ul>
+</li>
+<li>
+<a rel="noreferrer noopener" href="http://jsbin.com/gugilijixa/1/edit?html,js,console,output" target="_blank">Vue JS 範例</a><ul><li>藉由框架上的包裝<ul>
+<li>變更 model, view 就會更新</li>
+<li>變更 view, model 就會更新</li>
+</ul>
+</li></ul>
+</li>
+</ul>
+
+
+
+<h6>Vue MVVM (資料>介面>介面>資料)</h6>
+
+
+
+<figure class="wp-block-image size-full"><img width="1600" height="850" src="/wordpress_blog/wp-content/uploads/2022/04/mvvm.png" alt="" class="wp-image-645"><figcaption>VuE MVVM</figcaption></figure>
+
+
+
+<h6>題目分享</h6>
+
+
+
+<p>JS 範例</p>
+
+
+
+<ul>
+<li><a rel="noreferrer noopener" href="https://codepen.io/linxin/pen/rZxgXW" target="_blank">旅遊網學生範例</a></li>
+<li><a rel="noreferrer noopener" href="https://buggyho.github.io/BMIcalculate/" target="_blank">BMI學生範例</a></li>
+<li><a href="https://codepen.io/Jimmywei01/pen/PRrWZe" target="_blank" rel="noreferrer noopener">BMI學生範例二</a></li>
+</ul>
+
+
+
+<p>99乘法表</p>
+
+
+
+<p>資料：[‘2′,’3′,’4′,’5′,’6′,’7′,’8′,’9’]<br>觸發：init<br>畫面更新：innerHTML</p>
+
+
+
+<p>時鐘</p>
+
+
+
+<ul>
+<li><a rel="noreferrer noopener" href="http://underground-colck.surge.sh/" target="_blank">MooJi 範例</a></li>
+<li><a href="https://kenchan1604.github.io/js_underground_city/F2/index.html" target="_blank" rel="noreferrer noopener">Oliver</a></li>
+</ul>
+
+
+
+<p>計算機</p>
+
+
+
+<ul>
+<li><a rel="noreferrer noopener" href="https://codepen.io/woodytsai/pen/omZBRa" target="_blank">MooJi 範例</a></li>
+<li><a rel="noreferrer noopener" href="https://codepen.io/MASKLIN/pen/BMWLxp" target="_blank">林一元</a></li>
+<li><a href="https://pvt5r486.github.io/JSD3_Calc/index" target="_blank" rel="noreferrer noopener">宇軒</a></li>
+</ul>
+
+
+
+<p>時區</p>
+
+
+
+<ul>
+<li><a rel="noreferrer noopener" href="https://noobtw.github.io/js-underground/4f/" target="_blank">Noob</a></li>
+<li><a href="https://codepen.io/Kanboo/full/JxJjVr" target="_blank" rel="noreferrer noopener">Kanboo</a></li>
+</ul>
+
+
+
+<p>AQI</p>
+
+
+
+<ul>
+<li><a rel="noreferrer noopener" href="https://codepen.io/wilightmoment/pen/LqXywa" target="_blank">穎然</a></li>
+<li><a href="https://mini-ghost.github.io/JSunderground/05/public/" target="_blank" rel="noreferrer noopener">翰璋</a></li>
+</ul>
+
+
+
+<p>60 秒倒數</p>
+
+
+
+<ul>
+<li><s>汶穎</s></li>
+<li><a href="https://noobtw.github.io/js-underground/6f/" target="_blank" rel="noreferrer noopener">Noob</a></li>
+</ul>
+
+
+
+<h6>BLOG</h6>
+
+
+
+<ul>
+<li>針對此次分享寫 BLOG 分享</li>
+<li>何謂 MVC</li>
+</ul>
+
+
+
+<h4>講座 – JS 開發邏輯思維養成</h4>
+
+
+
+<pre class="wp-block-code"><code>// 講座筆記
+1. 資料 (Model)
+2. 事件 (Event)
+3. 介面 (View)
+
+// 首先需要先定義資料出來
+
+// 資料太多
+
+// 10筆資料
+//  3筆資料
+
+// 資料的新增、刪除、修改
+
+// 事件
+
+// click
+
+// init() 抽象
+
+// 介面
+// 1. innerHTML
+// 2. createElement
+// 寫入 DOM 元素到網頁上</code></pre>
+
+
+
+<p>定義以下程式碼分別是以下哪一種？</p>
+
+
+
+<ol>
+<li>資料 (Model)</li>
+<li>事件 (Event)</li>
+<li>介面 (View)</li>
+</ol>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>// 指定 dom
+var list = document.querySelector('.list');
+var sendData = document.querySelector('.send');
+var data = JSON.parse(localStorage.getItem('listData')) || &#91;]; // → 1
+
+// 監聽與更新
+sendData.addEventListener('click', addData); // → 2
+list.addEventListener('click', toggleDone);
+updateList(data);
+
+//加入列表，並同步更新網頁與 localstorage
+function addData(e) {
+  e.preventDefault();
+  var txt = document.querySelector('.text').value;
+  var todo = {
+    content: txt
+  };
+  data.push(todo); // → 1
+  updateList(data); // → 3
+  localStorage.setItem('listData', JSON.stringify(data)); // → 1
+}
+// 更新網頁內容
+function updateList(items) {
+  str = '';
+  var len = items.length;
+  for (var i = 0; len &gt; i; i++) {
+    str += '&lt;li&gt;&lt;a href="#" data-index=' + i + ' /&gt;刪除&lt;/a&gt; &lt;span&gt;' + items&#91;i].content + '&lt;/span&gt;&lt;/li&gt;';
+  }
+  list.innerHTML = str; // → 3
+}
+// 刪除代辦事項
+function toggleDone(e) {
+  e.preventDefault();
+  if(e.target.nodeName !== 'A'){return};
+  var index = e.target.dataset.index; // → 1
+  data.splice(index, 1); // → 1
+  localStorage.setItem('listData', JSON.stringify(data)); // → 1
+  updateList(data); // → 3
+}</code></pre>
+
+
+
+<h6>Vue JS 範例</h6>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en zh-hant"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;JavaScript - 學徒的試煉&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;div class="app"&gt;
+        &lt;input type="text" placeholder="請輸入代辦事項" @keyup.enter="addTodo(newTodo)" v-model="newTodo"&gt;
+        &lt;!-- @keyup.enter → 1 --&gt;
+        &lt;h2&gt;事項列表&lt;/h2&gt;
+        &lt;ul&gt;
+            &lt;li v-for="todo in todos"&gt;
+                {{todo.content}}
+                - &lt;a href="#" @click.prevent="removeTodo(todo)"&gt;刪除&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;!-- v-for → 3 --&gt;
+        &lt;!-- todos → 1 --&gt;
+    &lt;/div&gt;
+
+    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"&gt;&lt;/script&gt;
+    &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>var app = new Vue({
+  el: '.app',
+  data:{
+    todos:&#91;], → 1
+    newTodo:'' → 1
+  },
+  methods:{
+    addTodo: function(todo){
+      this.todos.push({content:todo,completed: false})
+    },
+    removeTodo: function(todo){
+      this.todos.splice(this.todos.indexOf(todo), 1);
+    }
+  }
+})</code></pre>
+
+
+
+<p>程式碼範例檢視是哪種定義。<br><br>Ex：99乘法表、時鐘、計算機、時區</p>
+
+
+
+<pre class="wp-block-code"><code>// 不會寫的地方
+1. 資料 (Model) - 抓時間資料、刪除第六筆資料
+2. 事件 (Event)
+3. 介面 (View) - 有20筆資料、跑for迴圈不會、某個CSS效果寫不出來、不會算角度</code></pre>
+
+
+
+<h2>最終作業與總結</h2>
+
+
+
+<h4>最終作業寄送變更</h4>
+
+
+
+<h4>最終作業介紹</h4>
+
+
+
+<p><a rel="noreferrer noopener" href="https://hexschool.github.io/JavaScript_HomeWork/" target="_blank">作業標示文件</a></p>
+
+
+
+<p><a rel="noreferrer noopener" href="https://drive.google.com/file/d/0B2e3VLlpmcU4ekJEaGJmWWxlWTg/view" target="_blank">圖片檔案下載</a></p>
+
+
+
+<p><a href="https://zh.wikipedia.org/wiki/%E8%BA%AB%E9%AB%98%E9%AB%94%E9%87%8D%E6%8C%87%E6%95%B8" target="_blank" rel="noreferrer noopener">BMI 公式</a></p>
+
+
+
+<h4>高雄旅遊景點 API 說明</h4>
+
+
+
+<p><a rel="noreferrer noopener" href="https://raw.githubusercontent.com/hexschool/KCGTravel/master/datastore_search.json" target="_blank">高雄旅遊景點 API</a></p>
+
+
+
+<p><a rel="noreferrer noopener" href="https://github.com/hexschool/KCGTravel" target="_blank">GitHub</a></p>
+
+
+
+<h4>JS 百題斬</h4>
+
+
+
+<p><a href="https://docs.google.com/forms/d/e/1FAIpQLSeBrQ9NspE3_6MCk2Fi0rMfu3baVcnNrPIEhvKz5ZsB3pwnNw/viewform?c=0&amp;w=1" target="_blank" rel="noreferrer noopener">測驗</a></p>
+
+
+
+<h4>問答區精彩討論</h4>
+
+
+
+<h2>AJAX</h2>
+
+
+
+<h4>什麼是 AJAX？</h4>
+
+
+
+<p>AJAX 是「Asynchronous JavaScript and XML」（非同步的 JavaScript 與 XML 技術）的縮寫，簡單說就是網頁不用重新整理，就能即時地透過瀏覽器去跟伺服器溝通，撈出資料。</p>
+
+
+
+<p>Chrome 開發人員工具 – Network 講解，EX：Google<br><br>以奇摩信箱註冊網頁為範例講解 AJAX 運用技巧。<br><br>以 PCHOME 購買 MAC 為範例，如加入購物車，與後端確認產品剩餘數量。<br><br>以 GOOGLE 搜尋引擎來輸入查詢名稱，會下拉顯示其他延伸名稱。</p>
+
+
+
+<h4>透過 XMLHttpsRequest 物件跨瀏覽器撈資料</h4>
+
+
+
+<p><a rel="noreferrer noopener" href="https://hexschool.github.io/ajaxHomework/data.json" target="_blank">練習用的 JSON 連結</a></p>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>var xhr = new XMLHttpRequest();
+
+// readyState
+// 0 - 你已經產生一個XMLHttpRequest，但是還沒有連結你要撈的資料
+// 1 - 你用了open()，但你還沒有把資料傳送過去
+// 2 - 偵測到你有用 send
+// 3 - loading (載入中)
+// 4 - 你撈到資料了，數據已經完全接受到了
+
+// open()的三個參數分別是，格式、要讀取的網址、同步與非同步
+// 格式：get(讀取資料)、post(傳送資料到伺服器)
+xhr.open('get','https://hexschool.github.io/ajaxHomework/data.json',true);
+// null - 空的資料
+xhr.send(null);</code></pre>
+
+
+
+<h4>AJAX 非同步觀念 (上)</h4>
+
+
+
+<p>非同步與同步的觀念</p>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>var xhr = new XMLHttpRequest();
+
+xhr.open('get','https://hexschool.github.io/ajaxHomework/data.json',true);
+
+// true - 非同步，不等資料傳回來，就讓程式繼續往下跑，等到回傳才會自動回傳。
+// false - 同步，會等資料傳回來，才讓程式碼繼續往下跑。
+
+xhr.send(null);
+
+console.log(xhr.responseText);</code></pre>
+
+
+
+<p>大部分會使用非同步，因為要撈取的資料龐大，所以大部分的時候我們都會使用true來去做設計。</p>
+
+
+
+<h4>AJAX 非同步觀念 (下)</h4>
+
+
+
+<p>網路資料：onload 事件用來設計當網頁載入完成後，觸發特定的 JavaScript 函式去執行特定的工作。</p>
+
+
+
+<p>HTML</p>
+
+
+
+<p>&lt;div class=”message”&gt;&lt;/div&gt;</p>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>var xhr = new XMLHttpRequest();
+
+xhr.open('get','https://hexschool.github.io/ajaxHomework/data.json',true);
+xhr.send(null);
+
+// onload - 當確認跑完以後再去執行這個事件，會自動觸發這個事件的內容。
+xhr.onload = function(){
+  console.log(xhr.responseText);
+  var str = JSON.parse(xhr.responseText);
+  document.querySelector('.message').textContent = str&#91;0].name;
+}
+
+// 1. 建立了一個 XMLHttpRequest
+// 2. 傳送到對方伺服器要資料
+// 3. 回傳資料到自己的瀏覽器
+// 4. 拿到資料後再看要怎麼處理</code></pre>
+
+
+
+<h4>HTTP狀態碼</h4>
+
+
+
+<p>Chrome – Network 中的 Status，以 Google 為講解</p>
+
+
+
+<pre class="wp-block-code"><code>// 200 資料有正確回傳，有撈到
+// 404 資料讀取錯誤，沒有撈到
+
+var xhr = new XMLHttpRequest();
+
+xhr.open('get','https://hexschool.github.io/ajaxHomework/data.json',true);
+xhr.send(null);
+
+xhr.onload = function(){
+  console.log(xhr.responseText);
+  if(xhr.status == 200){
+    var str = JSON.parse(xhr.responseText);
+    document.querySelector('.message').textContent = str&#91;0].name;
+  } else {
+    console.log('資料錯誤!');
+  }
+}</code></pre>
+
+
+
+<h4>什麼是 Cross-Origin Resource Sharing (CORS) ？</h4>
+
+
+
+<p>網路資料：<br>跨來源資源共用（Cross-Origin Resource Sharing (CORS)）是一種使用額外 HTTP 標頭令目前瀏覽網站的使用者代理取得存取其他來源（網域）伺服器特定資源權限的機制。</p>
+
+
+
+<p><a rel="noreferrer noopener" href="http://www.test-cors.org/" target="_blank">CORS 偵測服務</a></p>
+
+
+
+<p><a rel="noreferrer noopener" href="http://opendata2.epa.gov.tw/UV/UV.json" target="_blank">練習用 JSON</a></p>
+
+
+
+<p><a rel="noreferrer noopener" href="https://opendata.epa.gov.tw/" target="_blank">練習用網站 (無提供CORS)</a></p>
+
+
+
+<pre class="wp-block-code"><code>// CORS - 是否可以跨網域撈取資料
+XHR status: 200 - 可以
+XHR status: 0 - 不行</code></pre>
+
+
+
+<h4>傳統表單輸入介紹</h4>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;form action="index.html"&gt;
+  帳號：
+  &lt;input type="text" name="account"&gt;
+  &lt;br&gt;
+  密碼：
+  &lt;input type="password" name="password"&gt;
+  &lt;br&gt;
+  &lt;input type="submit" value="送出"&gt;
+&lt;/form&gt;</code></pre>
+
+
+
+<p>表單送出後，這個網址上面的內容<br>後面接參數，?，連接多個內容時，會用&amp;</p>
+
+
+
+<h4>AJAX POST 寫法 (提供 API 練習)</h4>
+
+
+
+<p><a rel="noreferrer noopener" href="https://github.com/hexschool/nodejs_ajax_tutorial" target="_blank">六角 POST API 連結</a></p>
+
+
+
+<pre class="wp-block-code"><code>六角學院 AJAX 練習
+注意，此範例僅供練習，並不會儲存用戶資料至資料庫(僅緩存)。
+
+註冊
+新增一個帳號。
+
+Method: POST
+URL: https://hexschool-tutorial.herokuapp.com/api/signup
+Data:
+{
+  email: 'lovef2e@hexschool.com',
+  password: '12345678'
+}
+Success Response:
+{
+  "success": true,
+  "result": {},
+  "message": "帳號註冊成功"
+}
+Error Response:
+{
+  "success": false,
+  "result": {},
+  "message": "此帳號已被使用"
+}
+登入
+登入一個已存在的帳號。
+
+Method: POST
+URL: https://hexschool-tutorial.herokuapp.com/api/signin
+Data:
+{
+  email: 'lovef2e@hexschool.com',
+  password: '12345678'
+}
+Success Response:
+{
+  "success": true,
+  "result": {},
+  "message": "登入成功"
+}
+Error Response:
+{
+  "success": false,
+  "result": {},
+  "message": "此帳號不存在或帳號密碼錯誤"
+}</code></pre>
+
+
+
+<p>這邊用 Console 練習</p>
+
+
+
+<pre class="wp-block-code"><code>&gt; var xhr = new XMLHttpRequest();
+&lt; undefined
+&gt; xhr
+&lt; XMLHttpRequest&nbsp;{onreadystatechange: null, readyState: 0, timeout: 0, withCredentials: false, upload: XMLHttpRequestUpload,&nbsp;…}
+&gt; xhr.open('post','https://hexschool-tutorial.herokuapp.com/api/signup',true);
+&lt; undefined
+&gt; xhr
+&lt; XMLHttpRequest&nbsp;{onreadystatechange: null, readyState: 1, timeout: 0, withCredentials: false, upload: XMLHttpRequestUpload,&nbsp;…}
+&gt; xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+&lt; undefined
+&gt; xhr.send('email=learning123@gmail.com&amp;password=123456');
+&lt; undefined
+&gt; xhr
+&lt; XMLHttpRequest&nbsp;{onreadystatechange: null, readyState: 4, timeout: 0, withCredentials: false, upload: XMLHttpRequestUpload,&nbsp;…}</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>var xhr = new XMLHttpRequest();
+xhr.open('post','https://hexschool-tutorial.herokuapp.com/api/signup',true);
+xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+xhr.send('email=learning123@gmail.com&amp;password=123456');</code></pre>
+
+
+
+<h4>從 chrome 開發人員工具檢視 AJAX post</h4>
+
+
+
+<p>用圖片去做講解 get 跟 post 的差異。</p>
+
+
+
+<pre class="wp-block-code"><code>get
+瀏覽器 → 發出 XMLHttpRequest 請求 → 伺服器
+伺服器 → 回傳資料 → 瀏覽器</code></pre>
+
+
+
+<pre class="wp-block-code"><code>post
+格式是 content-type: application/x-www-form-urlencoded
+瀏覽器 → 發出 XMLHttpRequest 請求 → 伺服器
+'email=xx@gmail.com&amp;password=1234'
+伺服器 → 回傳資料 → 瀏覽器
+{
+  "success: true",
+  "result: {},
+  "message: "帳號註冊成功"
+}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 格式是 content-type: application/json
+瀏覽器 → 發出 XMLHttpRequest 請求 → 伺服器
+{
+  "email": "xx@gmail.com",
+  "password": "1234"
+}
+伺服器 → 回傳資料 → 瀏覽器
+{
+  "success: true",
+  "result: {},
+  "message: "帳號註冊成功"
+}</code></pre>
+
+
+
+<p>用 Chrome – Network 可以看相關資訊。</p>
+
+
+
+<h4>AJAX JSON 傳遞</h4>
+
+
+
+<p>需轉成字串的內容。</p>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;form action="index.html"&gt;
+    帳號：
+    &lt;input type="text" name="account"&gt;
+    &lt;br&gt;
+    密碼：
+    &lt;input type="password" name="password"&gt;
+    &lt;br&gt;
+    &lt;input type="submit" value="送出"&gt;
+&lt;/form&gt;</code></pre>
+
+
+
+<p>Google Console</p>
+
+
+
+<pre class="wp-block-code"><code>var account = {
+  email: 'xx@gmail.com',
+  password: '1234'
+}
+var xhr = new XMLHttpRequest();
+xhr.open('post','https://hexschool-tutorial.herokuapp.com/api/signup',true);
+xhr.setRequestHeader('Content-type','application/json');
+var data = JSON.stringify(account);
+xhr.send();</code></pre>
+
+
+
+<h4>AJAX 實務範例設計</h4>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>帳號：
+&lt;input  type="text' class="account'&gt;
+&lt;br&gt;
+密碼：
+&lt;input type="password" class="password"&gt;
+&lt;br&gt;
+&lt;input type="button" class="send" value="送出"&gt;</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>
+var send = document.querySelector('.send');
+
+send.addEventListener('click',signup,false);
+
+
+function signup(){
+    // alert('測試');
+    var emailStr = document.querySelector('.account').value;
+    var passwordStr = document.querySelector('.password').value;
+    var account = {};
+    account.email = emailStr;
+    account.password = passwordStr;
+    // console.log(account);
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('post','https://hexschool-tutorial.herokuapp.com/api/signup',true);
+    xhr.setRequestHeader('Content-type','application/json');
+    var data = JSON.stringify(account);
+    xhr.send(data);
+    xhr.onload = function(){
+        // console.log(xhr);
+        var callbackData = JSON.parse(xhr.responseText);
+        console.log(callbackData);
+        var veriStr = callbackData.message;
+        if(veriStr == "帳號註冊成功"){
+            alert('帳號註冊成功!!');
+        } else {
+            alert('帳號註冊失敗!');
+        }
+    }
+}</code></pre>
+
+
+
+<h4>AJAX 作業設計</h4>
+
+
+
+<p>範例是註冊，作業設計練習登入。</p>
+
+
+
+<h4>資源補充</h4>
+
+
+
+<p>AJAX 章節練習完畢之後，若您還想額外多練習一些 API 串接的練習，可以參考 Ray 助教整理的&nbsp;<a href="https://github.com/hsiangfeng/APIList" target="_blank" rel="noreferrer noopener">APIList</a>&nbsp;。</p>
+
+
+
+<h2>Google Map API</h2>
+
+
+
+<h4>Google Map API 提醒</h4>
+
+
+
+<p>由於 Google Maps 更新開發條件，在初始設定上改用了付費制，不論是否達到Google地圖收費的標準，都得申請API key，並且綁定信用卡卡號。</p>
+
+
+
+<p>由於申請 API 變得較為繁瑣，所以建議這章節先請學員跳過，往後面 ES6 章節投入。</p>
+
+
+
+<h4>什麼是 API ？</h4>
+
+
+
+<h4>如何評估 API 的可用性</h4>
+
+
+
+<h4>Google Map API 初始化與金鑰設定</h4>
+
+
+
+<h4>Google Map API 原理介紹</h4>
+
+
+
+<h4>增加標記</h4>
+
+
+
+<h4>新增多個標記</h4>
+
+
+
+<h4>標記 + 第三方 JSON 資料設計</h4>
+
+
+
+<h4>繪製客製化 Google Map 樣式</h4>
+
+
+
+<h4>客製化 Google Map 標記 icon</h4>
+
+
+
+<h4>Google Map API 常見應用</h4>
+
+
+
+<h2>Leaflet + OpenStreetMap 地圖應用</h2>
+
+
+
+<h4>章節簡介</h4>
+
+
+
+<p>本章節為 2020 年發生新冠肺炎(武漢肺炎)時，台灣開發者們提供口罩地圖，以方便民眾購買口罩的教學應用。同學們可以藉由本章節的資源，來設計成口罩地圖介面，並提交最終作業給我們來檢視。</p>
+
+
+
+<ul>
+<li><a rel="noreferrer noopener" href="https://raw.githubusercontent.com/kiang/pharmacies/master/json/points.json" target="_blank">口罩剩餘數量 JSON API</a></li>
+<li><a href="https://challenge.thef2e.com/works/uiux?stage=10&amp;orderBy=created_at&amp;sort=desc" target="_blank" rel="noreferrer noopener">口罩搞列表、本章教學設計稿</a></li>
+</ul>
+
+
+
+<h4>AJAX 與函式應用教學</h4>
+
+
+
+<h4>Leaflet + OpenStreetMap 教學</h4>
+
+
+
+<ul>
+<li>
+<a rel="noreferrer noopener" href="https://www.youtube.com/watch?v=pUizu62dlnY" target="_blank">Leaflet + OpenStreetMap 地圖應用開發(影片)</a><ul><li><a href="https://quip.com/vdqYAiFHHkaV">共筆文件</a></li></ul>
+</li>
+<li>
+<a rel="noreferrer noopener" href="https://www.youtube.com/watch?v=7CXnNMVMXeo&amp;feature=youtu.be" target="_blank">示範：使用 Vuejs 結合 Open Street Map 製作口罩地圖(影片)</a><ul>
+<li>活動簡報</li>
+<li><a rel="noreferrer noopener" href="https://github.com/Wcc723/wheremask" target="_blank">Github</a></li>
+<li><a href="https://wcc723.github.io/wheremask/#/" target="_blank" rel="noreferrer noopener">示範作品</a></li>
+</ul>
+</li>
+</ul>
+
+
+
+<h4>學員範例作品</h4>
+
+
+
+<h2>ECMAScript 6 入門 – let、const</h2>
+
+
+
+<h4>ES 6 介紹</h4>
+
+
+
+<p>ES 6 – 提升 JS 程式碼品質最佳利器。</p>
+
+
+
+<p>JavaScript compiler：<a rel="noreferrer noopener" href="https://babeljs.io/" target="_blank">Babel</a></p>
+
+
+
+<h4>window、var 特性</h4>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>// 盡量避免汙染全域變數
+// let、const
+var a = 1;
+console.log(a);
+for(var i=0;i&lt;3;i++){
+  console.log(i);
+}</code></pre>
+
+
+
+<p>Google Console</p>
+
+
+
+<pre class="wp-block-code"><code>1
+&gt; window
+&lt; Window {window: Window, self: Window, document: document, name: "", location: Location, …}
+a: 1
+&gt; window.a
+&lt; 1
+&gt; window
+&lt; Window {window: Window, self: Window, document: document, name: "", location: Location, …}
+a: 1
+history: History {length: 1, scrollRestoration: "auto", state: null}
+i: 3</code></pre>
+
+
+
+<h4>let – if、function 用法</h4>
+
+
+
+<p>範例一</p>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>// let 與 const 用來宣告區塊裡的變數
+// 區塊 = {  }
+if (3 &gt; 2){
+  let a = 1;
+}</code></pre>
+
+
+
+<p>Google Console</p>
+
+
+
+<pre class="wp-block-code"><code>&gt; a
+VM56:1 Uncaught ReferenceError: a is not defined
+    at &lt;anonymous&gt;:1:1
+&gt; window
+&lt; Window&nbsp;{window: Window, self: Window, document: document, name: "", location: Location,&nbsp;…}</code></pre>
+
+
+
+<p>範例二</p>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>// let 與 const 用來宣告區塊裡的變數
+// 區塊 = {  }
+var a = 0;
+
+// 函數式
+function changeA(){
+  let a = 0;
+  console.log(a);
+}
+changeA();
+console.log(a);</code></pre>
+
+
+
+<p>Google Console</p>
+
+
+
+<pre class="wp-block-code"><code>1
+0</code></pre>
+
+
+
+<h4>let – for 用法</h4>
+
+
+
+<p>範例一</p>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>for(let i=0;i&lt;3;i++){
+  console.log(i);
+}</code></pre>
+
+
+
+<p>Google Console</p>
+
+
+
+<pre class="wp-block-code"><code>0
+1
+2
+&gt; i
+VM176:1 Uncaught ReferenceError: i is not defined
+    at &lt;anonymous&gt;:1:1</code></pre>
+
+
+
+<p>範例二</p>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;ul class="list"&gt;
+  &lt;li&gt;1&lt;/li&gt;
+  &lt;li&gt;2&lt;/li&gt;
+  &lt;li&gt;3&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>const listLen = document.querySelectorAll('.list li').length;
+for(let i=0;i&lt;listLen;i++){
+  document.querySelectorAll('.list li')&#91;i].addEventListener('click',function(){
+  alert(i+1);
+  },false)
+}</code></pre>
+
+
+
+<p>Google Console</p>
+
+
+
+<pre class="wp-block-code"><code>// 使用 var 會影響到全域變數
+&gt; i
+&lt; 3
+// 使用 let 會在區塊裡去做重新綁定的動作
+&gt; i
+  VM246:1 Uncaught ReferenceError: i is not defined
+    at &lt;anonymous&gt;:1:1</code></pre>
+
+
+
+<h4>const 特性</h4>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>// const 唯讀變數 - 不能去做修改
+// 變數是不能被更改 - url網址
+// {}、&#91;] 是有辦法變更裡面的值
+const obj = {
+  url: 'https://www.google.com.tw';
+};
+obj.url = 'https://www.yahoo.com.tw';
+console.log(obj.url);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>const obj = {
+    url: 'https://www.google.com.tw'
+};
+// 凍結裡面任何的內容
+Object.freeze(obj);
+obj.url = 'https://www.yahoo.com.tw';
+console.log(obj.url);</code></pre>
+
+
+
+<h4>let、const 注意事項與使用時機</h4>
+
+
+
+<p>範例一</p>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>// var 有向上提升的特性
+// let、const
+// 不可犯的錯誤，特性介紹
+console.log(a);
+let a = 3;
+console.log(a);</code></pre>
+
+
+
+<p>Google Console</p>
+
+
+
+<pre class="wp-block-code"><code>Uncaught ReferenceError: Cannot access 'a' before initialization
+    at all.js:3</code></pre>
+
+
+
+<p>範例二</p>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>// 第二點，同個區塊上不能重複命名
+// {}
+let a = 1;
+let a = 2;
+
+// 不會變成全域變數、不會在window上面</code></pre>
+
+
+
+<p>Google Console</p>
+
+
+
+<pre class="wp-block-code"><code>Uncaught SyntaxError: Identifier 'a' has already been declared</code></pre>
+
+
+
+<h2>ECMAScript 6 入門 – 字串篇</h2>
+
+
+
+<h4>Template literals – 輕鬆進行字串相加</h4>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;ul class="list"&gt;
+
+&lt;/ul&gt;</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>const list = document.querySelector('.list');
+const imgUrl = 'images/logo.png';
+const title = '六角學院';
+// list.innerHTML = '&lt;li&gt;&lt;img src='+imgUrl+'&gt;&lt;/li&gt;'
+
+// 重音符：`
+list.innerHTML = `&lt;li&gt;&lt;h2&gt;${title}&lt;/h2&gt;&lt;img src="${imgUrl}"&gt;&lt;/li&gt;`;
+</code></pre>
+
+
+
+<h4>編輯器與格式支援小技巧</h4>
+
+
+
+<p>Windows系統上的設定是：檔案→偏好→設定，點選 Open Settings (JSON)</p>
+
+
+
+<pre class="wp-block-code"><code>  "emmet.includeLanguages": {
+    "javascript": "html"
+},
+"emmet.triggerExpansionOnTab": true</code></pre>
+
+
+
+<p>Mac系統</p>
+
+
+
+<pre class="wp-block-code"><code>"emmet.syntaxProfiles": {
+  "javascript": "html"
+}</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>const list = document.querySelector('.list');
+const imgUrl = 'images/logo.png';
+const title = '六角學院';
+
+// emmet
+list.innerHTML = `
+  &lt;li&gt;
+    &lt;h2&gt;${title}&lt;/h2&gt;
+    &lt;img src="${imgUrl}" alt=""&gt;
+  &lt;/li&gt;
+`</code></pre>
+
+
+
+<h2>Vue.js 2.0 – 8小時線上影音課程</h2>
+
+
+
+<h4>投入 Vue.js 前，你必須要會的基礎知識</h4>
+
+
+
+<p>想學 Vue.js，必須要先學會</p>
+
+
+
+<ul>
+<li>HTML、CSS</li>
+<li>需要有基礎 JS 技能，此<a href="https://docs.google.com/forms/d/e/1FAIpQLSeBrQ9NspE3_6MCk2Fi0rMfu3baVcnNrPIEhvKz5ZsB3pwnNw/viewform?c=0&amp;w=1" target="_blank" rel="noreferrer noopener">測驗</a>達 85 分以上便有到門檻</li>
+</ul>
+
+
+
+<p>開始進入 Vue.js 線上課程</p>
+
+
+
+<ul><li>你可以跟著課程章節往後面投入，也可以看此<a href="https://quip.com/N3iKAEDJEVmD" target="_blank" rel="noreferrer noopener">共筆整合文件</a>
+</li></ul>
+
+
+
+<p>官網教學</p>
+
+
+
+<ul>
+<li><a rel="noreferrer noopener" href="https://vuejs.org/v2/guide/installation.html" target="_blank">原文教學</a></li>
+<li>
+<a href="https://cn.vuejs.org/v2/guide/installation.html" target="_blank" rel="noreferrer noopener">簡體官方文件</a>&nbsp;(chrome 瀏覽器點選又見，便能即時翻譯成繁中版。)</li>
+</ul>
+
+
+
+<h4>Vue.js 幼幼班起手式(上)</h4>
+
+
+
+<h4>todolist 作業</h4>
+
+
+
+<h4>Vue.js 幼幼班起手式(下)</h4>
+
+
+
+<h4>從 Vue.js 初探 Web Component 的世界</h4>
+
+
+
+<h4>vue-cli</h4>
+
+
+
+<h4>Firebase</h4>
+
+
+
+<h4>Vuex</h4>
+
+
+
+<h4>作業1：颱風防災網</h4>
+	</div>
+<!-- .entry-content -->
+
+	<footer class="entry-footer">
+			</footer><!-- .entry-footer -->
+</article><!-- #post-643 -->
+
+	<nav class="navigation post-navigation" aria-label="文章">
+		<h2 class="screen-reader-text">文章導覽</h2>
+		<div class="nav-links">
+<div class="nav-previous"><a href="/wordpress_blog/hexschoolcolumn/" rel="prev"><span class="nav-subtitle">Previous:</span> <span class="nav-title">網頁前端養成專欄 &#8211; 來自六角學院</span></a></div>
+<div class="nav-next"><a href="/wordpress_blog/git-github-hexschool/" rel="next"><span class="nav-subtitle">Next:</span> <span class="nav-title">掌握 Git 與 GitHub 版本控制</span></a></div>
+</div>
+	</nav>
+	</main><!-- #main -->
+
+
+	</div></div>
+			
+			<footer id="colophon" class="site-footer">
+
+				
+				<div class="container-fluid">
+					<div class="site-info">
+						<div class="row">
+
+															
+								<div class="col-12 footer-copyright-elements footer-copyright-alignment-center">
+
+									<div class="botiga-credits">&copy; 2022 wordpress_blog. 
+Created by Gee Hsu. 
+<br>Proudly powered by <a rel="nofollow" href="https://athemes.com/theme/botiga/">Botiga</a>
+</div>
+<div class="social-profile">
+<a target="_blank" href="https://www.facebook.com/watergrass0402/"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></i></a><a target="_blank" href="https://github.com/GeeHsu"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></i></a>
+</div>
+								</div>
+														
+						</div>
+					</div>
+				</div>
+<!-- .site-info -->
+
+				
+			</footer><!-- #colophon -->
+
+			
+			<div class="back-to-top visibility-all position-right"><i class="ws-svg-icon"><svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 15l7-7 7 7" stroke-width="3" stroke-linejoin="round"></path></svg></i></div>
+</div>
+<!-- #page -->
+
+
+<script id="botiga-custom-js-extra">
+var botiga = {"ajaxurl":"\/wp-admin\/admin-ajax.php","i18n":{"botiga_sharebox_copy_link":"Copy link","botiga_sharebox_copy_link_copied":"Copied!"}};
+</script>
+<script src="/wordpress_blog/wp-content/themes/botiga/assets/js/custom.min.js?ver=1.1.2" id="botiga-custom-js"></script>
+
+</body>
+</html>

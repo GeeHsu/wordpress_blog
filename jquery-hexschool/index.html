@@ -1,0 +1,4317 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<title>使用 jQuery 打造互動性網頁動畫效果 &#8211; wordpress_blog</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="訂閱《wordpress_blog》&raquo; 資訊提供" href="/wordpress_blog/feed/">
+<link rel="alternate" type="application/rss+xml" title="訂閱《wordpress_blog》&raquo; 留言的資訊提供" href="/wordpress_blog/comments/feed/">
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.9.3"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style>img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="/wordpress_blog/wp-includes/css/dist/block-library/style.min.css?ver=5.9.3" media="all">
+<style id="global-styles-inline-css">body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--palette-1-color-0: #212121;--wp--preset--color--palette-1-color-1: #757575;--wp--preset--color--palette-1-color-2: #212121;--wp--preset--color--palette-1-color-3: #212121;--wp--preset--color--palette-1-color-4: #212121;--wp--preset--color--palette-1-color-5: #f5f5f5;--wp--preset--color--palette-1-color-6: #ffffff;--wp--preset--color--palette-1-color-7: #ffffff;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 14px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 18px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--normal: 16px;--wp--preset--font-size--larger: 24px;--wp--preset--font-size--extra-large: 32px;--wp--preset--font-size--huge: 48px;--wp--preset--font-size--gigantic: 64px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}</style>
+<link rel="stylesheet" id="botiga-style-css" href="/wordpress_blog/wp-content/themes/botiga/style.css?ver=1.1.2" media="all">
+<link rel="stylesheet" id="botiga-style-min-css" href="/wordpress_blog/wp-content/themes/botiga/assets/css/styles.min.css?ver=1.1.2" media="all">
+<link rel="stylesheet" id="botiga-custom-styles-css" href="/wordpress_blog/wp-content/uploads/botiga/custom-styles.css?ver=1648804469" media="all">
+<link rel="https://api.w.org/" href="/wordpress_blog/wp-json/">
+<link rel="alternate" type="application/json" href="/wordpress_blog/wp-json/wp/v2/posts/632">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/wordpress_blog/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wordpress_blog/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 5.9.3">
+<link rel="canonical" href="/wordpress_blog/jquery-hexschool/">
+<link rel="shortlink" href="/wordpress_blog/?p=632">
+<link rel="alternate" type="application/json+oembed" href="/wordpress_blog/wp-json/oembed/1.0/embed?url=%2Fjquery-hexschool%2F">
+<link rel="alternate" type="text/xml+oembed" href="/wordpress_blog/wp-json/oembed/1.0/embed?url=%2Fjquery-hexschool%2F&#038;format=xml">
+<link rel="icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png" sizes="32x32">
+<link rel="icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png" sizes="192x192">
+<link rel="apple-touch-icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png">
+<meta name="msapplication-TileImage" content="/wp-content/uploads/2022/03/logo.png">
+	
+</head>
+
+<body class="post-template-default single single-post postid-632 single-format-standard wp-custom-logo wp-embed-responsive header-header_layout_1 blog-single-layout1">
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0.49803921568627"></fefuncr><fefuncg type="table" tablevalues="0 0.49803921568627"></fefuncg><fefuncb type="table" tablevalues="0 0.49803921568627"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.54901960784314 0.98823529411765"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.71764705882353 0.25490196078431"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 0.27843137254902"></fefuncg><fefuncb type="table" tablevalues="0.5921568627451 0.27843137254902"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0"></fefuncr><fefuncg type="table" tablevalues="0 0.64705882352941"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.78039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.94901960784314"></fefuncg><fefuncb type="table" tablevalues="0.35294117647059 0.47058823529412"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.65098039215686 0.40392156862745"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.44705882352941 0.4"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.098039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.66274509803922"></fefuncg><fefuncb type="table" tablevalues="0.84705882352941 0.41960784313725"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg>
+
+<div id="page" class="site">
+
+	<a class="skip-link screen-reader-text" href="#primary">Skip to content</a>
+
+	
+			<div class="top-bar visibility-desktop-only">
+				<div class="container-fluid">
+					<div class="top-bar-inner">
+						<div class="row valign">
+
+															<div class="col header-elements delimiter-none">
+									<div class="header-item top-bar-social"><div class="social-profile">
+<a target="_blank" href="https://www.facebook.com/watergrass0402/"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></i></a><a target="_blank" href="https://github.com/GeeHsu"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></i></a>
+</div></div>								</div>
+																						<div class="col header-elements delimiter-none">
+													
+			<nav class="header-item top-bar-secondary-navigation secondary-navigation">
+				<div class="menu-topbar-container"><ul id="secondary" class="menu">
+<li id="menu-item-143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143"><a href="/wordpress_blog/setup/">網站架設</a></li>
+<li id="menu-item-144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a href="/wordpress_blog/source/">資料來源</a></li>
+<li id="menu-item-262" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-262"><a href="/wordpress_blog/resource/">學習資源</a></li>
+</ul></div>			</nav>
+											</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			
+							
+				<header id="masthead" class="site-header header_layout_1">
+					<div class="container-fluid">
+						<div class="site-header-inner">
+							<div class="row valign">
+								<div class="col-md-5">
+										
+			<nav id="site-navigation" class="main-navigation">
+				<div class="menu-navbar-container"><ul id="primary-menu" class="menu">
+<li id="menu-item-109" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="/wordpress_blog/about/">關於</a></li>
+<li id="menu-item-110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-110">
+<a href="/wordpress_blog/learn/">學習</a><span tabindex="0" class="dropdown-symbol"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512.011 512.011"><path d="M505.755 123.592c-8.341-8.341-21.824-8.341-30.165 0L256.005 343.176 36.421 123.592c-8.341-8.341-21.824-8.341-30.165 0s-8.341 21.824 0 30.165l234.667 234.667a21.275 21.275 0 0015.083 6.251 21.275 21.275 0 0015.083-6.251l234.667-234.667c8.34-8.341 8.34-21.824-.001-30.165z"></path></svg></i></span>
+<ul class="sub-menu">
+	<li id="menu-item-140" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-140"><a href="/wordpress_blog/category/hexschool/">六角學院</a></li>
+	<li id="menu-item-141" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-141"><a href="/wordpress_blog/category/ninja/">The Net Ninja</a></li>
+	<li id="menu-item-483" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-483"><a href="/wordpress_blog/category/youtube/">Youtube</a></li>
+</ul>
+</li>
+<li id="menu-item-111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="/wordpress_blog/linestore/">LINE STORE</a></li>
+</ul></div>			</nav><!-- #site-navigation -->
+											</div>
+								<div class="col-md-2">
+												<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+											</div>
+								<div class="col-md-5 header-elements">
+																	</div>							
+							</div>
+						</div>
+					</div>
+								<div class="header-search-form">
+			<form role="search" method="get" class="search-form" action="/">
+	<label class="screen-reader-text" for="search-form-1">Search&hellip;</label>
+	<input type="search" id="search-form-1" class="search-field" value="" name="s" placeholder="Search &hellip;">
+	<button type="submit" class="search-submit" value="Search"><i class="ws-svg-icon"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 100 14.25 7.125 7.125 0 000-14.25zM2.25 10.875a8.625 8.625 0 1117.25 0 8.625 8.625 0 01-17.25 0z"></path><path fill-rule="evenodd" d="M15.913 15.914a.75.75 0 011.06 0l4.557 4.556a.75.75 0 01-1.06 1.06l-4.557-4.556a.75.75 0 010-1.06z"></path></svg></i></button>
+</form>
+			</div>
+			
+									</header>
+
+										<div class="search-overlay"></div>
+			
+			<div class="botiga-offcanvas-menu">
+				<div class="mobile-header-item">
+					<div class="row">
+						<div class="col">
+										<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+									</div>
+						<div class="col align-right">
+							<a class="mobile-menu-close" href="#"><i class="ws-svg-icon icon-cancel"><svg width="16" height="16" fill="none" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.219.781L.78 2.22 9.562 11l-8.78 8.781 1.437 1.438L11 12.437l8.781 8.782 1.438-1.438L12.437 11l8.782-8.781L19.78.78 11 9.562 2.219.783z"></path></svg></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="mobile-header-item">
+						
+			<nav id="site-navigation" class="main-navigation">
+				<div class="menu-navbar-container"><ul id="primary-menu" class="menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="/wordpress_blog/about/">關於</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-110">
+<a href="/wordpress_blog/learn/">學習</a><span tabindex="0" class="dropdown-symbol"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512.011 512.011"><path d="M505.755 123.592c-8.341-8.341-21.824-8.341-30.165 0L256.005 343.176 36.421 123.592c-8.341-8.341-21.824-8.341-30.165 0s-8.341 21.824 0 30.165l234.667 234.667a21.275 21.275 0 0015.083 6.251 21.275 21.275 0 0015.083-6.251l234.667-234.667c8.34-8.341 8.34-21.824-.001-30.165z"></path></svg></i></span>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-140"><a href="/wordpress_blog/category/hexschool/">六角學院</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-141"><a href="/wordpress_blog/category/ninja/">The Net Ninja</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-483"><a href="/wordpress_blog/category/youtube/">Youtube</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="/wordpress_blog/linestore/">LINE STORE</a></li>
+</ul></div>			</nav><!-- #site-navigation -->
+							</div>
+				<div class="mobile-header-item">
+									<a target="&quot;_blank&quot;" class="button header-item" href="https://www.facebook.com/watergrass0402/">聯絡我</a>
+							</div>			
+			</div>
+			
+							<header id="masthead-mobile" class="site-header mobile-header">
+					<div class="container-fluid">
+						<div class="row valign flex-nowrap">
+							<div class="col-sm-6 col-md-4 col-grow-mobile">
+											<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+										</div>
+							<div class="col-auto col-sm-6 col-md-8 col-grow-mobile header-elements valign align-right">
+																	
+															<a href="#" class="menu-toggle">
+				<i class="ws-svg-icon"><svg width="16" height="11" viewbox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="16" height="1"></rect><rect y="5" width="16" height="1"></rect><rect y="10" width="16" height="1"></rect></svg></i>
+			</a>
+																		</div>						
+						</div>
+					</div>
+								<div class="header-search-form">
+			<form role="search" method="get" class="search-form" action="/">
+	<label class="screen-reader-text" for="search-form-2">Search&hellip;</label>
+	<input type="search" id="search-form-2" class="search-field" value="" name="s" placeholder="Search &hellip;">
+	<button type="submit" class="search-submit" value="Search"><i class="ws-svg-icon"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 100 14.25 7.125 7.125 0 000-14.25zM2.25 10.875a8.625 8.625 0 1117.25 0 8.625 8.625 0 01-17.25 0z"></path><path fill-rule="evenodd" d="M15.913 15.914a.75.75 0 011.06 0l4.557 4.556a.75.75 0 01-1.06 1.06l-4.557-4.556a.75.75 0 010-1.06z"></path></svg></i></button>
+</form>
+			</div>
+			
+									</header>
+						<div class="search-overlay"></div>
+			<div class="header-image"><img src="/wordpress_blog/wp-content/uploads/2022/03/seashore.jpg" width="1920" height="500" alt=""></div>
+<div class="container content-wrapper"><div class="row main-row">			
+	<main id="primary" class="site-main no-sidebar">
+
+		
+
+<article id="post-632" class="post-632 post type-post status-publish format-standard hentry category-hexschool">
+	
+		
+	<header class="entry-header">
+		
+		
+		<h1 class="entry-title">使用 jQuery 打造互動性網頁動畫效果</h1>			<div class="entry-meta entry-meta-below delimiter-none">
+<span class="posted-on"><a href="/wordpress_blog/jquery-hexschool/" rel="bookmark"><time class="entry-date published" datetime="2020-06-01T10:57:00+08:00">2020 年 6 月 1 日</time><time class="updated" datetime="2022-04-06T10:58:33+08:00">2022 年 4 月 6 日</time></a></span><span class="byline"> <span class="author vcard"><a class="url fn n" href="/wordpress_blog/author/gee-hsu/">gee.hsu</a></span></span>
+</div>			</header><!-- .entry-header -->
+
+	
+	<div class="entry-content">
+		
+<h2>jQuery 入門</h2>
+
+
+
+<h4>JavaScript 與 jQuery</h4>
+
+
+
+<ul>
+<li>jQuery 如何在瀏覽器上運行</li>
+<li>瀏覽器可以解析所撰寫的 HTML、CSS 的能力</li>
+<li>JS 偵測瀏覽器的各種行為，JS 兼容各種瀏覽器是一件比較麻煩事情</li>
+<li>jQuery 底層還是JS，已經寫好兼容瀏覽器的 JS、動畫效果</li>
+</ul>
+
+
+
+<p>總結，jQuery 還是 JS 去做撰寫的，但是 jQuery 把程式碼包裝的非常漂亮。</p>
+
+
+
+<h4>初探 jQuery 強大之處(練習流程)</h4>
+
+
+
+<p>用瀏覽器練習時，請用 chrome 的無痕式視窗來進行練習</p>
+
+
+
+<h4>初探 jQuery 強大之處</h4>
+
+
+
+<p><a href="https://jquery.com/" target="_blank" rel="noreferrer noopener">jQuery</a></p>
+
+
+
+<p>使用 Google Console</p>
+
+
+
+<pre class="wp-block-code"><code>// 隱藏 a 連結
+$('a').hide();
+// 顯示 a 連結
+$('a').show();
+// 連結到其他網站
+$("a").attr('href','https://www.yahoo.com.tw');
+// slideUp 動畫效果
+$('a').slideUp();
+// 設定秒數
+$('a').slideUp(5500);
+// slideDown 動畫效果
+$('a').slideDown();
+// 淡出的動畫效果
+$('a').fadeOut();
+// 淡入的動畫效果
+$('a').fadeIn();</code></pre>
+
+
+
+<h4>下載jQuery檔案，介紹1.x與2.x的差別</h4>
+
+
+
+<p><a rel="noreferrer noopener" href="https://jquery.com/download/" target="_blank">jQuery 下載</a></p>
+
+
+
+<p>差別在於瀏覽器版本支援。</p>
+
+
+
+<p>種類</p>
+
+
+
+<ul>
+<li>compressed, production jQuery</li>
+<li>uncompressed, development jQuery</li>
+</ul>
+
+
+
+<h4>設定 jQuery 環境</h4>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;jQuery 練習&lt;/title&gt;
+    &lt;script src="js/jquery-3.5.1.js"&gt;&lt;/script&gt;
+    &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+    &lt;h1&gt;1234&lt;/h1&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<p>JS</p>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function () {
+    $('h1').hide();
+});</code></pre>
+
+
+
+<h4>jQuery 環境建置範例程式碼</h4>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function() {
+  $('h1').hide();
+});</code></pre>
+
+
+
+<h4>使用 Sublime 插件提升寫 jQuery 效率</h4>
+
+
+
+<p>插件: jQuery</p>
+
+
+
+<ol>
+<li>Ctrl + Shift + p</li>
+<li>Package Control: Install Package</li>
+<li>輸入 jQuery 安裝</li>
+</ol>
+
+
+
+<p>ready 快速鍵</p>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;jQuery 練習&lt;/title&gt;
+    &lt;script src="js/jquery-3.5.1.js"&gt;&lt;/script&gt;
+    &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+    &lt;input type="button" class="button" value="隱藏標題"&gt;
+    &lt;p&gt;段落內容&lt;/p&gt;
+    &lt;h1 id="box" class="title"&gt;1234&lt;/h1&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<p>JS</p>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function () {
+    
+    $(".button").click(function(){
+        $("h1").hide();
+    });
+    
+});</code></pre>
+
+
+
+<h5>Visual Studio Code 安裝插件提升效率 – jQuery Code Snippets</h5>
+
+
+
+<p>使用時前面要加 jq 前贅詞。</p>
+
+
+
+<h2>選擇器與事件：開始讓你的網頁具有互動性吧！</h2>
+
+
+
+<h4>選擇器：設定 CSS 般指定要操控的網頁元素</h4>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;jQuery 練習&lt;/title&gt;
+    &lt;script src="js/jquery-3.5.1.js"&gt;&lt;/script&gt;
+    &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+    &lt;div class="header"&gt;
+        &lt;h1 class="title"&gt;1234&lt;/h1&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<p>JS</p>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function () {
+    $(".header h1").hide();
+});</code></pre>
+
+
+
+<h4>選擇器範例程式碼</h4>
+
+
+
+<p>HTML 標籤選擇</p>
+
+
+
+<pre class="wp-block-code"><code>$('h1').hide();</code></pre>
+
+
+
+<p>Class 選擇</p>
+
+
+
+<pre class="wp-block-code"><code>$('.header').hide();</code></pre>
+
+
+
+<p>ID 選擇</p>
+
+
+
+<pre class="wp-block-code"><code>$('#box').hide();</code></pre>
+
+
+
+<h4>輕鬆撰寫第一個網頁設計互動效果</h4>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;jQuery 練習&lt;/title&gt;
+    &lt;script src="js/jquery-3.5.1.js"&gt;&lt;/script&gt;
+    &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;input type="button" class="button" value="隱藏標題"&gt;
+    &lt;h1 id="box" class="title"&gt;1234&lt;/h1&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<p>JS</p>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function () {
+    
+    $(".button").click(function(){
+        $("h1").hide();
+    });
+    
+});</code></pre>
+
+
+
+<h4>點擊事件範例程式碼</h4>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function() {
+  $('.button').click(function(event) {
+    $('h1').hide();
+  });
+});</code></pre>
+
+
+
+<h4>使用 toggle 切換開啟或隱藏效果</h4>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;jQuery 練習&lt;/title&gt;
+    &lt;script src="js/jquery-3.5.1.js"&gt;&lt;/script&gt;
+    &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;input type="button" class="button" value="切換開啟/關閉標題"&gt;
+    &lt;h1 id="box" class="title"&gt;1234&lt;/h1&gt;
+    &lt;h1 id="box" class="title" style="display: none;"&gt;5678&lt;/h1&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<p>JS</p>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function () {
+    
+    $(".button").click(function(){
+        $("h1").toggle();
+    });
+
+});</code></pre>
+
+
+
+<h4>教你如何除錯 jQuery</h4>
+
+
+
+<p>Google Chrome – Console</p>
+
+
+
+<p>可以在 JS 文字註解，以方便管理、除錯 JS 程式碼</p>
+
+
+
+<pre class="wp-block-code"><code>// 這是 JS 文字註解</code></pre>
+
+
+
+<h4>教你如何除錯 jQuery – 課程補充</h4>
+
+
+
+<p>「課程說明」<br><br>同學可能對於 event 很疑惑，在這邊 event 全名叫做「event handlers」也就是事件處理器，而它會記錄使用者的所有行為，因此同學只需要先知道它會紀錄你點擊這個事件時的動作，例如在哪裡點，點了什麼元素等。</p>
+
+
+
+<h4>jQuery 辭典 – 輕鬆查詢功能一把抓</h4>
+
+
+
+<p><a href="https://oscarotero.com/jquery/" target="_blank" rel="noreferrer noopener">JQuery 辭典</a></p>
+
+
+
+<h2>看看還有哪些動畫效果可以使用</h2>
+
+
+
+<h4>使用 Slide 設計滑動效果</h4>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;jQuery 練習&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+    &lt;script src="js/jquery-3.5.1.js"&gt;&lt;/script&gt;
+    &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;input type="button" class="button" value="留言"&gt;
+
+    &lt;div class="text"&gt;
+        &lt;textarea name="" id="" cols="30" rows="10"&gt;&lt;/textarea&gt;
+        &lt;input type="submit" value="送出"&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>.text{
+    display: none;
+}</code></pre>
+
+
+
+<p>JS</p>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function () {
+    $('.button').click(function(event){
+        $('.text').slideDown(6000);
+    });
+});</code></pre>
+
+
+
+<p>Slide 滑動效果</p>
+
+
+
+<ul>
+<li>slideDown();</li>
+<li>slideUp();</li>
+<li>slideToggle();</li>
+</ul>
+
+
+
+<h4>使用 Fade 設計淡入淡出效果</h4>
+
+
+
+<p>淡入淡出效果</p>
+
+
+
+<ul>
+<li>fadeIn();</li>
+<li>fadeOut();</li>
+<li>fadeToggle();</li>
+</ul>
+
+
+
+<p>// fadeIn 預設隱藏的東西給打開<br>// fadeOut 預設開啟的東西給關閉</p>
+
+
+
+<h4>都不喜歡？那使用 toggleClass、搭配 CSS3 Transition 自訂 CSS 效果吧！</h4>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;jQuery 練習&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+    &lt;script src="js/jquery-3.5.1.js"&gt;&lt;/script&gt;
+    &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;input type="button" class="button" value="留言"&gt;
+
+    &lt;div class="text"&gt;
+        &lt;textarea name="" id="" cols="30" rows="10"&gt;&lt;/textarea&gt;
+        &lt;input type="submit" value="送出"&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>.text{
+  opacity: 0;
+  transition: all 3s;
+}
+.text.active{
+  opacity: 1;
+}</code></pre>
+
+
+
+<p>JS</p>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function () {
+    $('.button').click(function(event){
+        $('.text').toggleClass('active');
+        // $('.text).addClass('active');
+        // $('.text).removeClass('active');
+    });
+});</code></pre>
+
+
+
+<h4>設計 CSS 動畫小密技：overflow、CSS3 transition</h4>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;jQuery 練習&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+    &lt;script src="js/jquery-3.5.1.js"&gt;&lt;/script&gt;
+    &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div class="box"&gt;
+        &lt;img src="img/jquery.jpg" alt=""&gt;
+        &lt;div class="title"&gt;產品標題&lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>.box{
+    width: 480px;
+    height: 300px;
+    border: 1px solid blue;
+    position: relative;
+    overflow: hidden;
+}
+.box:hover .title{
+    bottom: 0;
+}
+.title{
+    transition: all 1s;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    width: 100%;
+    position: absolute;
+    bottom: -30px;
+}</code></pre>
+
+
+
+<h4>jQuery 鏈式寫法</h4>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;jQuery 練習&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+    &lt;script src="js/jquery-3.5.1.js"&gt;&lt;/script&gt;
+    &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;input type="button" value="啟動" class="start"&gt;
+&lt;div class="box"&gt;&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>.box{
+    height: 300px;
+    width: 300px;
+    background: #000;
+}</code></pre>
+
+
+
+<p>JS</p>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function () {
+    $('.start').click(function(){
+        /* Act on the event */
+        $('.box').slideUp(3000).slideDown(1000);
+    });
+});</code></pre>
+
+
+
+<p>不是單純只能寫一個效果而已，後面可以鏈接多個效果。</p>
+
+
+
+<h4>善用 chrome 內建開發工具，提升撰寫 jQuery 效率</h4>
+
+
+
+<ul>
+<li>Console</li>
+<li>Sources</li>
+</ul>
+
+
+
+<h2>教你如何搭配 CSS + jQuery 各式各樣的動畫效果</h2>
+
+
+
+<h4>使用 preventDefault() 取消默認行為</h4>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;jQuery 練習&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+    &lt;script src="js/jquery-3.5.1.js"&gt;&lt;/script&gt;
+    &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;a class="close" href="#"&gt;連結&lt;/a&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>.box{
+    height: 500px;
+    background: #000;
+}</code></pre>
+
+
+
+<p>JS</p>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function () {
+    $('.close').click(function(event){
+        /* Act on the event */
+        event.preventDefault();
+        $('.box').slideUp();
+    });
+});</code></pre>
+
+
+
+<p>有些動畫效果會用很多a連結來去做一些觸發的行為。</p>
+
+
+
+<h4>preventDefault 程式碼範例</h4>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function() {
+ $('.close').click(function(event) {
+   event.preventDefault();
+   $('.box').slideUp();
+ });
+});</code></pre>
+
+
+
+<h4>css() – 教你如何動態載入 CSS style 設定</h4>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;jQuery 練習&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+    &lt;script src="js/jquery-3.5.1.js"&gt;&lt;/script&gt;
+    &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+    &lt;div class="box"&gt;&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>.box{
+    width: 300px;
+    height: 300px;
+    background: #000;
+}</code></pre>
+
+
+
+<p>JS</p>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function () {
+    $('.box').css('width','500px');
+});</code></pre>
+
+
+
+<h4>設定下拉式收闔選單</h4>
+
+
+
+<h6>下拉式滑動效果 – 範例</h6>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en zh-hant"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;jQuery 練習&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+    &lt;script src="js/jquery-3.5.1.js"&gt;&lt;/script&gt;
+    &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div class="wrap"&gt;
+        &lt;div class="header"&gt;
+            &lt;ul class="menu"&gt;
+                &lt;li&gt;&lt;a href="#"&gt;首頁&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;產品專區&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#"&gt;訂單查詢&lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;出貨進度&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;退貨申請&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;退換申請&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/* CSS RESET */
+/* CSS STYLES */
+.wrap{
+    width: 500px;
+    margin: 0 auto;
+}
+.header{
+    height: 80px;
+    background: pink;
+}
+.menu{
+    float: right;
+}
+.menu a{
+    text-decoration: none;
+    padding: .5em 0;
+    background: #fff;
+    border: 1px solid gray;
+    display: block;
+    text-align: center;
+    transition: all .3s; 
+}
+.menu a:hover{
+    background: blue;
+    color: #fff;
+}
+.menu &gt; li{
+    float: left;
+    width: 100px;
+}
+/* 關鍵語法 */
+.menu ul{
+    display: none;
+}
+/* 滑動下拉選單 */
+.menu li:hover ul{
+    display: block;
+}</code></pre>
+
+
+
+<h6>下拉式收闔選單 – 範例</h6>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en zh-hant"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;jQuery 練習&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+    &lt;script src="js/jquery-3.5.1.js"&gt;&lt;/script&gt;
+    &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div class="wrap"&gt;
+        &lt;div class="header"&gt;
+            &lt;ul class="menu"&gt;
+                &lt;li&gt;&lt;a href="#"&gt;首頁&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;產品專區&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#" class="dropdown"&gt;訂單查詢&lt;/a&gt;
+                    &lt;ul class="dropdown-open"&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;出貨進度&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;退貨申請&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;退換申請&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/* CSS RESET */
+/* CSS STYLES */
+.wrap{
+    width: 500px;
+    margin: 0 auto;
+}
+.header{
+    height: 80px;
+    background: pink;
+}
+.menu{
+    float: right;
+}
+.menu a{
+    text-decoration: none;
+    padding: .5em 0;
+    background: #fff;
+    border: 1px solid gray;
+    display: block;
+    text-align: center;
+    transition: all .3s; 
+}
+.menu a:hover, .menu a.active{
+    background: blue;
+    color: #fff;
+}
+.menu &gt; li{
+    float: left;
+    width: 100px;
+}
+.menu ul{
+    display: none;
+}</code></pre>
+
+
+
+<p>JS</p>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function () {
+    $('.dropdown').click(function(event){
+        /* Act on the event */
+        event.preventDefault();
+        $('.dropdown').toggleClass('active');
+        $('.dropdown-open').slideToggle();
+    });
+});</code></pre>
+
+
+
+<h6>自我練習 – 滑動下拉選單</h6>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en zh-hant"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;menu-hover&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+    &lt;script src="js/jquery-3.5.1.js"&gt;&lt;/script&gt;
+    &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div class="wrap"&gt;
+        &lt;div class="header"&gt;
+            &lt;div class="logo"&gt;
+            &lt;/div&gt;
+            &lt;ul class="menu"&gt;
+                &lt;li&gt;&lt;a href="#"&gt;首頁&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#"&gt;產品專區&lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;炸物&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;甜點&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;飲料&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#"&gt;訂單查詢&lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;出貨進度&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;退貨申請&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;退換申請&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;a href="#" class="showmenu"&gt;Menu&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/* CSS RESET */
+/* CSS STYLES */
+/* img reset */
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* box-sizing */
+*,*:before,*:after{
+    box-sizing: border-box;
+}
+
+.wrap{
+    max-width: 960px;
+    margin: 0 auto;
+}
+.header{
+    background: pink;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.logo{
+    width: 150px;
+    height: 36px;
+    background: orangered;
+}
+.menu{
+    display: flex;
+}
+.menu &gt; li{
+    position: relative;
+    padding-right: 8px;
+}
+.menu &gt; li a{
+    display: block;
+    width: 120px;
+    text-decoration: none;
+    text-align: center;
+    color: slateblue;
+    background: #222;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.menu &gt; li a:hover{
+    color: #222;
+    background: slateblue;
+}
+/* 下拉式收闔選單 */
+.menu ul{
+    display: none;
+    position: absolute;
+}
+
+.menu &gt; li:hover ul{
+    display: block;
+}
+
+@media (max-width: 767px){
+    .menu &gt; li{
+        width: 100%;
+    }
+    .menu &gt; li a{
+        background: slateblue;
+        color: #222;
+        width: 100%;
+    }
+    .menu ul{
+        width: 100%;
+        z-index: 2;
+    }
+}
+
+/* 在PC上隱藏漢堡選單 */
+.showmenu{
+    display: none;
+}
+@media (max-width: 767px){
+    .menu{
+        /* 隱藏選單開始 */
+        max-height: 0px;
+        overflow: hidden;
+        transition: max-height 2.3s;
+        position: absolute;
+        z-index: 100;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: slateblue;
+        flex-wrap: wrap;
+    }
+    .menu &gt; li{
+        width: 100%;
+        padding: 0;
+    }
+    .menu &gt; li a{
+        transition: all .3s;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-size: 24px;
+        border-bottom: 1px solid #222;
+    }
+    .menu &gt; li a:hover{
+        background: #222;
+        color: slateblue;
+    }
+    /* Menu icon */
+    .showmenu{
+        display: flex;
+        margin: 10px;
+        text-decoration: none;
+        font-size: 32px;
+        color: slateblue;
+    }
+    /* jQuery 點擊後動態在 body 加上 class */
+    .menu-show .menu{
+        max-height: 500px;
+    }
+    .menu-show .menu:hover{
+        overflow: visible;
+    }
+}
+
+@media (max-width: 767px){
+    .menu &gt; li:hover ul li a{
+        background: steelblue;
+        color: #fff
+    }
+    .menu &gt; li:hover ul li a:hover{
+        background: crimson;
+    }
+}</code></pre>
+
+
+
+<p>JS</p>
+
+
+
+<pre class="wp-block-code"><code>// 漢堡選單
+$(document).ready(function () {
+    $('.showmenu').on('click',function(event){
+        event.preventDefault();
+        $('body').toggleClass('menu-show');
+    });
+});</code></pre>
+
+
+
+<h6>自我練習 – 下拉式收闔選單</h6>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en zh-hant"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;jQuery 練習&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+    &lt;script src="js/jquery-3.5.1.js"&gt;&lt;/script&gt;
+    &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div class="wrap"&gt;
+        &lt;div class="header"&gt;
+            &lt;div class="logo"&gt;
+            &lt;/div&gt;
+            &lt;ul class="menu"&gt;
+                &lt;li&gt;&lt;a href="#"&gt;首頁&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#"&gt;產品專區&lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;炸物&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;甜點&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;飲料&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#" class="dropdown"&gt;訂單查詢&lt;/a&gt;
+                    &lt;ul class="dropdown-open"&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;出貨進度&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;退貨申請&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;退換申請&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;a href="#" class="showmenu"&gt;Menu&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/* CSS RESET */
+/* CSS STYLES */
+/* img reset */
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* box-sizing */
+*,*:before,*:after{
+    box-sizing: border-box;
+}
+
+.wrap{
+    max-width: 960px;
+    margin: 0 auto;
+}
+.header{
+    background: pink;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.logo{
+    width: 150px;
+    height: 36px;
+    background: orangered;
+}
+.menu{
+    display: flex;
+}
+.menu &gt; li{
+    position: relative;
+    padding-right: 8px;
+}
+.menu &gt; li a{
+    display: block;
+    width: 120px;
+    text-decoration: none;
+    text-align: center;
+    color: slateblue;
+    background: #222;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.menu &gt; li a:hover, .menu &gt; li a.active{
+    color: #222;
+    background: slateblue;
+}
+/* 下拉式收闔選單 */
+.menu ul{
+    display: none;
+    position: absolute;
+}
+
+@media (max-width: 767px){
+    .menu &gt; li{
+        width: 100%;
+    }
+    .menu &gt; li a{
+        background: slateblue;
+        color: #222;
+        width: 100%;
+    }
+    .menu ul{
+        width: 100%;
+        z-index: 2;
+    }
+}
+
+/* 在PC上隱藏漢堡選單 */
+.showmenu{
+    display: none;
+}
+@media (max-width: 767px){
+    .menu{
+        /* 隱藏選單開始 */
+        max-height: 0px;
+        overflow: hidden;
+        transition: max-height 2.3s;
+        position: absolute;
+        z-index: 100;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: slateblue;
+        flex-wrap: wrap;
+    }
+    .menu &gt; li{
+        width: 100%;
+        padding: 0;
+    }
+    .menu &gt; li a{
+        transition: all .3s;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-size: 24px;
+        border-bottom: 1px solid #222;
+    }
+    .menu &gt; li a:hover, .menu &gt; li a.active{
+        background: #222;
+        color: slateblue;
+    }
+    /* Menu icon */
+    .showmenu{
+        display: flex;
+        margin: 10px;
+        text-decoration: none;
+        font-size: 32px;
+        color: slateblue;
+    }
+    /* jQuery 點擊後動態在 body 加上 class */
+    .menu-show .menu{
+        max-height: 500px;
+        overflow: visible;
+    }
+}
+
+@media (max-width: 767px){
+    .menu &gt; li:hover ul li a{
+        background: steelblue;
+        color: #fff
+    }
+    .menu &gt; li:hover ul li a:hover{
+        background: crimson;
+    }
+}</code></pre>
+
+
+
+<p>JS</p>
+
+
+
+<pre class="wp-block-code"><code>// 漢堡選單
+$(document).ready(function () {
+    $('.showmenu').on('click',function(e){
+        e.preventDefault();
+        $('body').toggleClass('menu-show');
+    });
+});
+
+// 下拉式收闔選單
+$(document).ready(function () {
+    $('.dropdown').click(function(event){
+        /* Act on the event */
+        event.preventDefault();
+        $('.dropdown').toggleClass('active');
+        $('.dropdown-open').slideToggle();
+    });
+});</code></pre>
+
+
+
+<h4>delay() – 延遲動畫效果的好用語法</h4>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en zh-hant"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;jQuery 練習&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+    &lt;script src="js/jquery-3.5.1.js"&gt;&lt;/script&gt;
+    &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;input type="button" class="open" value="開始動畫效果"&gt;
+    &lt;div class="box1"&gt;&lt;/div&gt;
+    &lt;div class="box2"&gt;&lt;/div&gt;
+    &lt;div class="box3"&gt;&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/* CSS RESET */
+/* CSS STYLES */
+.box1, .box2, .box3{
+    width: 100px;
+    height: 100px;
+    display: none;
+}
+.box1{
+    background: #000;
+}
+.box2{
+    background: orange;
+}
+.box3{
+    background: pink;
+}</code></pre>
+
+
+
+<p>JS</p>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function () {
+    $('.open').click(function(event){
+        /* Act on the event */
+        $('.box1').delay(0).fadeIn();
+        $('.box2').delay(1000).slideDown();
+        $('.box3').delay(2000).show(0);
+    })
+});</code></pre>
+
+
+
+<p>slideDown()、fadeIn() 本身就有動畫時間，show() 本身沒有動畫時間，因此需要寫數字 0或1 毫秒。</p>
+
+
+
+<h4>即時放大縮小字型好簡單</h4>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en zh-hant"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;jQuery 練習&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+    &lt;script src="js/jquery-3.5.1.js"&gt;&lt;/script&gt;
+    &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div class="wrap"&gt;
+        &lt;div class="header"&gt;
+            &lt;div class="menu"&gt;
+                &lt;li&gt;&lt;a href="#" class="font-b"&gt;大&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#" class="font-m"&gt;中&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#" class="font-s"&gt;小&lt;/a&gt;&lt;/li&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="content"&gt;
+            &lt;p&gt;文字段落&lt;/p&gt;
+            &lt;p&gt;文字段落&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/* CSS RESET */
+/* CSS STYLES */
+.wrap{
+	width: 500px;
+	margin: 0 auto;
+}
+.header{
+	height: 80px;
+	background: pink;
+}
+.menu{
+	float: right;
+	list-style: none;
+}
+.menu li{
+	float: left;
+}
+.menu a{
+	width: 30px;
+	font-size: 16px;
+	background: #000;
+	color: #fff;
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	padding: 0.5em;
+}
+.menu a:hover{
+	background: blue;
+	color: #fff;
+}
+.content p{
+	line-height: 1.5;
+	font-size: 16px;
+	margin-bottom: 2em;
+}</code></pre>
+
+
+
+<p>JS</p>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function () {
+    // 字體放大
+    $('.font-b').click(function (event) {
+        /* Act on the event */
+        event.preventDefault();
+        $('.content p').css('font-size', '20px');
+    })
+    // 字體放中
+    $('.font-m').click(function (event) {
+        /* Act on the event */
+        event.preventDefault();
+        $('.content p').css('font-size', '16px');
+    })
+    // 字體放小
+    $('.font-s').click(function (event) {
+        /* Act on the event */
+        event.preventDefault();
+        $('.content p').css('font-size', '13px');
+    });
+});</code></pre>
+
+
+
+<h4>fixed 固定網頁內容</h4>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en zh-hant"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;jQuery 練習&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+    &lt;script src="js/jquery-3.5.1.js"&gt;&lt;/script&gt;
+    &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div class="wrap"&gt;
+        &lt;div class="header"&gt;
+            &lt;div class="menu"&gt;
+                &lt;li&gt;&lt;a href="#" class="font-b"&gt;大&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#" class="font-m"&gt;中&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#" class="font-s"&gt;小&lt;/a&gt;&lt;/li&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="content"&gt;
+            &lt;p&gt;文字段落&lt;/p&gt;
+            &lt;p&gt;文字段落&lt;/p&gt;
+            &lt;p&gt;文字段落&lt;/p&gt;
+            &lt;p&gt;文字段落&lt;/p&gt;
+            &lt;p&gt;文字段落&lt;/p&gt;
+            &lt;p&gt;文字段落&lt;/p&gt;
+            &lt;p&gt;文字段落&lt;/p&gt;
+            &lt;p&gt;文字段落&lt;/p&gt;
+            &lt;p&gt;文字段落&lt;/p&gt;
+            &lt;p&gt;文字段落&lt;/p&gt;
+            &lt;p&gt;文字段落&lt;/p&gt;
+            &lt;p&gt;文字段落&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="ad"&gt;
+        &lt;p&gt;
+            如果喜歡我們的網站， &lt;br&gt;
+            歡迎把我們加到書籤
+        &lt;/p&gt;
+        &lt;a href="#" class="ad-close"&gt;關閉&lt;/a&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/* CSS RESET */
+/* CSS STYLES */
+.wrap{
+	width: 500px;
+	margin: 0 auto;
+}
+.header{
+	height: 80px;
+	background: pink;
+}
+.menu{
+	float: right;
+	list-style: none;
+}
+.menu li{
+	float: left;
+}
+.menu a{
+	width: 30px;
+	font-size: 16px;
+	background: #000;
+	color: #fff;
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	padding: 0.5em;
+}
+.menu a:hover{
+	background: blue;
+	color: #fff;
+}
+.content p{
+	line-height: 1.5;
+	font-size: 16px;
+	margin-bottom: 2em;
+}
+.ad{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 250px;
+	height: 100px;
+	background: #000;
+	color: #fff;
+}
+.ad p{
+	padding: 30px;
+}
+.ad .ad-close{
+	position: absolute;
+	top: 0;
+	right: 0;
+	text-decoration: none;
+	background: red;
+	color: #fff;
+	padding: .5em;
+}
+.ad .ad-close:hover{
+	background: blue;
+}</code></pre>
+
+
+
+<p>JS</p>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function () {
+    // 字體放大
+    $('.font-b').click(function (event) {
+        /* Act on the event */
+        event.preventDefault();
+        $('.content p').css('font-size', '20px');
+    })
+    // 字體放中
+    $('.font-m').click(function (event) {
+        /* Act on the event */
+        event.preventDefault();
+        $('.content p').css('font-size', '16px');
+    })
+    // 字體放小
+    $('.font-s').click(function (event) {
+        /* Act on the event */
+        event.preventDefault();
+        $('.content p').css('font-size', '13px');
+    });
+
+    // close效果
+    $('.ad-close').click(function(event){
+        /* Act on the event */
+        event.preventDefault();
+        $(".ad").fadeOut();
+    });
+});</code></pre>
+
+
+
+<h4>使用 stop() 讓你的動畫效果更滑順</h4>
+
+
+
+<p>stop() 可以中斷動畫效果</p>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en zh-hant"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;jQuery 練習&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+    &lt;script src="js/jquery-3.5.1.js"&gt;&lt;/script&gt;
+    &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;input type="button" value="啟動" class="start"&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/* CSS RESET */
+/* CSS STYLES */
+.box{
+	height: 300px;
+	width: 300px;
+	background: #000;
+}</code></pre>
+
+
+
+<p>JS</p>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function () {
+    $('.start').click(function(event){
+        /* Act on the event */
+        $('.box').stop().slideToggle(3000);
+    })
+});</code></pre>
+
+
+
+<h4>設定 offcanvas 左右選單切換</h4>
+
+
+
+<h6>程式碼範例</h6>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en zh-hant"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;jQuery 練習&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+    &lt;script src="js/jquery-3.5.1.js"&gt;&lt;/script&gt;
+    &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div class="container"&gt;
+        &lt;div class="aside"&gt;&lt;/div&gt;
+        &lt;div class="main"&gt;
+            &lt;div class="header"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/* CSS RESET */
+/* CSS STYLES */
+.container{
+	position: relative;
+}
+.main{
+	width: 100%;
+	height: 300px;
+	background: #000;
+	float: right;
+	transition: 0.3s ease;
+}
+.header{
+	height: 50px;
+	background: red;
+}
+.aside{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 270px;
+	height: 300px;
+	background: yellow;
+	overflow: hidden;
+	transform: translateX(-270px);
+        transition: 0.3s ease;
+}
+.open .main{
+	transform: translateX(270px);
+}
+.open .aside{
+	transform: translateX(0px);
+}</code></pre>
+
+
+
+<p>JS</p>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function () {
+    $('.header').click(function(event){
+        /* Act on the event */
+        $('body').toggleClass('open');
+    });
+});</code></pre>
+
+
+
+<h4>Animate.css 更新說明</h4>
+
+
+
+<p>2020/06/02 更新</p>
+
+
+
+<p>下一章節即將進入 Animate.css 教學章節<br>因應 Animate.css 改版，class 有些許調整，因此增加此章節做為說明：</p>
+
+
+
+<p>原本寫在 GitHub 的說明都已經改至 Animate 官方網站左側，同學只需要點旁邊就可以看到效果囉</p>
+
+
+
+<p>class 變更舉例：</p>
+
+
+
+<p>改版前：$(‘.text’).addClass(‘animated bounce’);<br>改版後：$(‘.text’).addClass(‘animate__animated animate__bounce’);</p>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.0/animate.min.css"&gt;
+&lt;button id="add"&gt;Add Animate&lt;/button&gt;
+&lt;p class="text"&gt;Animate&lt;/p&gt;
+
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"&gt;&lt;/script&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>.text {
+  text-align: center;
+  font-size: 60px;
+}</code></pre>
+
+
+
+<p>JS</p>
+
+
+
+<pre class="wp-block-code"><code>$('#add').click(function() {
+  $('.text').addClass('animate__animated animate__bounce');
+});
+$('.text').on('animationend', function() { // 監聽當動畫結束後移除 class
+  $(this).removeClass('animate__animated animate__bounce');
+});</code></pre>
+
+
+
+<ul>
+<li><a rel="noreferrer noopener" href="https://animate.style/" target="_blank">Animate.css</a></li>
+<li><a rel="noreferrer noopener" href="https://github.com/animate-css/animate.css" target="_blank">Github</a></li>
+<li><a rel="noreferrer noopener" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.0/animate.min.css" target="_blank">CDN</a></li>
+<li><a href="https://codepen.io/TzuHui/pen/WNreKKp" target="_blank" rel="noreferrer noopener">Demo</a></li>
+</ul>
+
+
+
+<h4>Animate.css – 載入第三方插件 – 增添網頁動畫豐富度</h4>
+
+
+
+<p><a rel="noreferrer noopener" href="https://animate.style/" target="_blank">Animate.css</a></p>
+
+
+
+<p>載入 CDN 或者下載載入網頁中</p>
+
+
+
+<h6>程式碼範例一</h6>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en zh-hant"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;jQuery 練習&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+    &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"&gt;
+    &lt;script src="js/jquery-3.5.1.js"&gt;&lt;/script&gt;
+    &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;input type="button" class="open" value="開啟動畫效果"&gt;
+    &lt;div class="box animate__animated"&gt;&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/* CSS RESET */
+/* CSS STYLES */
+.box{
+	background: #000;
+	color: #fff;
+	width: 300px;
+	height: 300px;
+}</code></pre>
+
+
+
+<p>JS</p>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function () {
+    $('.open').click(function(event){
+        /* Act on the event */
+        $('.box').addClass('animate__shakeX');
+    });
+});</code></pre>
+
+
+
+<h6>程式碼範例二</h6>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;button class="btn"&gt;按鈕&lt;/button&gt;
+&lt;div id="box"&gt;&lt;/div&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/* CSS RESET */
+/* CSS STYLES */
+#box {
+  width: 100px;
+  height: 100px;
+  background-color: #000;
+}</code></pre>
+
+
+
+<p>JS</p>
+
+
+
+<pre class="wp-block-code"><code>$(".btn").click(function() {
+  $('#box').removeClass().addClass('tada animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+      $(this).removeClass();
+    });
+});</code></pre>
+
+
+
+<h2>教你如何操控網頁元素</h2>
+
+
+
+<h4>this – 教你如何操作本身元素</h4>
+
+
+
+<p>什麼是 this？</p>
+
+
+
+<p>簡報</p>
+
+
+
+<ul>
+<li>呼叫 #Martin</li>
+<li>自己 微笑</li>
+<li>自己 說 ‘Hello’</li>
+</ul>
+
+
+
+<h6>jQuery 小訣竅</h6>
+
+
+
+<p>在 jQuery 中 $(this) 就代表自己，如果事件觸發了，需要對自己操作可使用 $(this)。</p>
+
+
+
+<h6>程式碼範例</h6>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en zh-hant"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;jQuery 練習&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+    &lt;script src="js/jquery-3.5.1.js"&gt;&lt;/script&gt;
+    &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;ul class="menu"&gt;
+        &lt;li&gt;選單1&lt;/li&gt;
+        &lt;li&gt;選單2&lt;/li&gt;
+        &lt;li&gt;選單3&lt;/li&gt;
+        &lt;li&gt;選單4&lt;/li&gt;
+        &lt;li&gt;選單5&lt;/li&gt;
+        &lt;li&gt;選單6&lt;/li&gt;
+    &lt;/ul&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/* CSS RESET */
+/* CSS STYLES */
+.menu{
+	width: 500px;
+	margin: 20px auto;
+}
+.menu li{
+	padding: 5px;
+	border: 1px solid;
+	margin-bottom: 1em;
+}
+.menu li:hover, .menu li.active{
+	background: blue;
+	color: #fff;
+}</code></pre>
+
+
+
+<p>JS</p>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function () {
+    $('.menu li').click(function(event){
+        $(this).addClass('active');
+    });
+});</code></pre>
+
+
+
+<h4>parent() – 找到父階層元素</h4>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en zh-hant"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;jQuery 練習&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+    &lt;script src="js/jquery-3.5.1.js"&gt;&lt;/script&gt;
+    &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div class="cart"&gt;
+        &lt;h2&gt;購物車&lt;/h2&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;input type="button" class="addCart" value="加入購物車"&gt;腳踏車
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="button" class="addCart" value="加入購物車"&gt;冷氣機
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="button" class="addCart" value="加入購物車"&gt;電視
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="button" class="addCart" value="加入購物車"&gt;電腦
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="button" class="addCart" value="加入購物車"&gt;平板電腦
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="button" class="addCart" value="加入購物車"&gt;智慧型手機
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/* CSS RESET */
+/* CSS STYLES */
+.cart{
+	width: 300px;
+	margin: 20px auto;
+}
+.cart h2{
+	margin-bottom: 1em;
+	font-size: 20px;
+}
+.cart li{
+	border: 1px solid gray;
+	padding: 5px;
+	margin-bottom: 2em;
+}
+.cart li.active{
+	background: #0095d4;
+	color: #fff;
+}
+.addCart{
+	background: blue;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	margin-right: 10px;
+}
+.addCart:hover, .addCart.active{
+	background: #008dd8;
+}</code></pre>
+
+
+
+<p>JS</p>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function () {
+    $('.addCart').click(function(event){
+        $(this).parent().toggleClass('active');
+    });
+});</code></pre>
+
+
+
+<h6>簡報</h6>
+
+
+
+<ul>
+<li>呼叫 #Steven</li>
+<li>#Steven自己 的父層 書本</li>
+<li>父層書本 燒毀</li>
+</ul>
+
+
+
+<h4>siblings() – 同層元素</h4>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en zh-hant"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;jQuery 練習&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+    &lt;script src="js/jquery-3.5.1.js"&gt;&lt;/script&gt;
+    &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;ul class="menu"&gt;
+        &lt;li&gt;選單1&lt;/li&gt;
+        &lt;li&gt;選單2&lt;/li&gt;
+        &lt;li&gt;選單3&lt;/li&gt;
+        &lt;li&gt;選單4&lt;/li&gt;
+        &lt;li&gt;選單5&lt;/li&gt;
+        &lt;li&gt;選單6&lt;/li&gt;
+    &lt;/ul&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/* CSS RESET */
+/* CSS STYLES */
+.menu{
+	width: 500px;
+	margin: 20px auto;
+}
+.menu li{
+	padding: 5px;
+	border: 1px solid;
+	margin-bottom: 1em;
+}
+.menu li:hover, .menu li.active{
+	background: blue;
+	color: #fff;
+}</code></pre>
+
+
+
+<p>JS</p>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function () {
+    $('.menu li').click(function(event){
+        /* Act on the event */
+        $(this).addClass('active').siblings().removeClass('active');
+    });
+});</code></pre>
+
+
+
+<p>簡報</p>
+
+
+
+<ul>
+<li>呼叫 #Ryan</li>
+<li>選擇 #Ryan 以外的所有 同學 微笑</li>
+<li>並且說 ‘Hello’</li>
+</ul>
+
+
+
+<h6>jQuery 小訣竅</h6>
+
+
+
+<p>在 jQuery 中 .siblings() 可選擇除了當前以外的同階層元素。</p>
+
+
+
+<h5>同學問與答，<br>ul &gt; li &gt; a 的 siblings 無法移除 class 問題</h5>
+
+
+
+<p>在這個結構上，兩個&lt;a&gt;並不屬於同一個層級，它都被包在&lt;li&gt;底下，所以點擊以後必需往外找到 li，再尋找 li 內部的 a，這樣才能夠順利運作。</p>
+
+
+
+<p>範例程式碼</p>
+
+
+
+<pre class="wp-block-code"><code>$(this).addClass('active').parent('li').siblings().find('a').removeClass('active');</code></pre>
+
+
+
+<h4>find() – 輕鬆找到子元素內容</h4>
+
+
+
+<p>子元素、子階層元素</p>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en zh-hant"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;jQuery 練習&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+    &lt;script src="js/jquery-3.5.1.js"&gt;&lt;/script&gt;
+    &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div class="cart"&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;h3&gt;產品1&lt;/h3&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;h3&gt;產品2&lt;/h3&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;h3&gt;產品3&lt;/h3&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;h3&gt;產品4&lt;/h3&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;h3&gt;產品5&lt;/h3&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;h3&gt;產品6&lt;/h3&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/* CSS RESET */
+/* CSS STYLES */
+.cart{
+	width: 500px;
+	margin: 20px auto;
+}
+.cart li{
+	width: 30%;
+	float: left;
+	height: 100px;
+	margin: 1%;
+	border: 1px solid #000;
+	cursor: pointer;
+}
+
+.cart h3.active{
+	background: blue;
+}</code></pre>
+
+
+
+<p>JS</p>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function () {
+    $('.cart li').click(function(event){
+        $(this).find('h3').toggleClass('active');
+    });
+});</code></pre>
+
+
+
+<h4>設定 QA 折疊選單</h4>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en zh-hant"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;jQuery 練習&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+    &lt;script src="js/jquery-3.5.1.js"&gt;&lt;/script&gt;
+    &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div class="question-list"&gt;
+        &lt;div class="question"&gt;
+            &lt;h3&gt;1.請問1+1=多少&lt;/h3&gt;
+            &lt;p&gt;答案記得沒錯的話，應該是2吧！&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="question"&gt;
+            &lt;h3&gt;2.那假如是2+2的話呢&lt;/h3&gt;
+            &lt;p&gt;當然是4啊！&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="question"&gt;
+            &lt;h3&gt;3.ok，所以3+3就等於7喽&lt;/h3&gt;
+            &lt;p&gt;...我看你還是重讀小學吧！&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/* CSS RESET */
+/* CSS STYLES */
+.question-list{
+	margin: 0 auto;
+	width: 500px;
+}
+.question h3{
+	border: 1px solid gray;
+	padding: 5px;
+	font-size: 18px;
+}
+.question h3:hover, .question h3.active{
+	background: blue;
+	color: #fff;
+}
+.question p{
+	display: none;
+	padding: 5px;
+}</code></pre>
+
+
+
+<p>JS</p>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function () {
+    $('.question h3').click(function(event){
+        // 讓點擊到的 h3 亮起來，其他h3移除active樣式
+        $(this).toggleClass('active');
+        // 讓點擊到的 h3 找到父元素 .question ，再找裡面的 p 判斷收闔
+        $(this).parent().find('p').slideToggle();
+        // 自己以外的 p 隱藏起來
+        $(this).parent().siblings().find('p').slideUp();
+        // 自己以外的 h3 移除u樣式
+        $(this).parent().siblings().find('h3').removeClass('active');
+    });
+});</code></pre>
+
+
+
+<p>簡報</p>
+
+
+
+<ul>
+<li>呼叫 #Amy</li>
+<li>#Amy自己 的父階層 書本</li>
+<li>書本中 尋找 深褐髮色的同學 並且 微笑</li>
+<li>深褐髮色的同學 說 ‘Hello’</li>
+</ul>
+
+
+
+<h6>jQuery 小訣竅</h6>
+
+
+
+<p>在 jQuery 中 .find() 可選擇符合特定條件的內層元素，所以可以透過 .parent() 選取到外層元素後再選取特定條件的內層元素。</p>
+
+
+
+<h4>二階層式折疊選單設計</h4>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en zh-hant"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;jQuery 練習&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+    &lt;script src="js/jquery-3.5.1.js"&gt;&lt;/script&gt;
+    &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;ul class="cart"&gt;
+        &lt;li&gt;
+            &lt;a href="#"&gt;選單1&lt;/a&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#"&gt;選單1-1&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;選單1-2&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;選單1-3&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#"&gt;選單2&lt;/a&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#"&gt;選單2-1&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;選單2-2&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;選單2-3&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#"&gt;選單3&lt;/a&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#"&gt;選單3-1&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;選單3-2&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;選單3-3&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/* CSS RESET */
+/* CSS STYLES */
+.cart{
+	width: 500px;
+	margin: 20px auto;
+}
+.cart &gt; li{
+	margin-bottom: 1em;
+}
+.cart &gt; li &gt; a{
+	color: blue;
+	border: 1px solid gray;
+	display: block;
+	padding: 5px;
+	text-decoration: none;
+}
+.cart &gt; li li{
+	margin: 5px 0;
+}
+.cart ul{
+	display: none;
+}</code></pre>
+
+
+
+<p>JS</p>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function () {
+    $('.cart &gt; li &gt; a').click(function(event){
+        event.preventDefault();
+        // this 以外的都隱藏起來
+        $(this).parent().siblings().find('ul').slideUp();
+        // 我自己的 ul 做摺疊效果
+        $(this).parent().find('ul').slideToggle();
+    });
+});</code></pre>
+
+
+
+<h4>使用 html()、text() 載入內容</h4>
+
+
+
+<h6>程式碼範例一</h6>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en zh-hant"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;jQuery 練習&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+    &lt;script src="js/jquery-3.5.1.js"&gt;&lt;/script&gt;
+    &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<p>JS</p>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function () {
+    $('body').html('&lt;h1&gt;哈哈你看不到我&lt;/h1&gt;');
+});</code></pre>
+
+
+
+<h6>程式碼範例二</h6>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en zh-hant"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;jQuery 練習&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+    &lt;script src="js/jquery-3.5.1.js"&gt;&lt;/script&gt;
+    &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div class="box"&gt;&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<p>JS</p>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function () {
+    $('.box').html('&lt;h1&gt;哈哈你看不到我&lt;/h1&gt;');
+});</code></pre>
+
+
+
+<h6>程式碼範例三</h6>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en zh-hant"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;jQuery 練習&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+    &lt;script src="js/jquery-3.5.1.js"&gt;&lt;/script&gt;
+    &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div class="box"&gt;
+        &lt;h1&gt;&lt;/h1&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<p>JS</p>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function () {
+    $('.box h1').text('哈哈你看不到');
+});</code></pre>
+
+
+
+<h4>click()、on() 的差別</h4>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en zh-hant"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;jQuery 練習&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+    &lt;script src="js/jquery-3.5.1.js"&gt;&lt;/script&gt;
+    &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div class="wrap"&gt;
+        &lt;div class="box1"&gt;
+
+        &lt;/div&gt;
+
+        &lt;div class="box2"&gt;
+            &lt;h1&gt;寫在HTML裡面的&lt;/h1&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/* CSS RESET */
+/* CSS STYLES */
+.wrap{
+	width: 500px;
+	margin: 20px auto;
+}
+.box1{
+	border: 1px solid #000;
+	margin: 20px;
+	padding: 20px;
+}
+.box2{
+	border: 1px solid #000;
+	margin: 20px;
+	padding: 20px;
+}</code></pre>
+
+
+
+<p>JS</p>
+
+
+
+<p>1.</p>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function () {
+    $('h1').click(function(event){
+        alert('有效！');
+    });
+    $('.box1').html('&lt;h1&gt;用jQuery動態產生的');
+});</code></pre>
+
+
+
+<p>2.</p>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function () {
+    $('.box1').html('&lt;h1&gt;用jQuery動態產生的');
+    $('h1').click(function(event){
+        alert('有效！');
+    });
+});</code></pre>
+
+
+
+<pre class="wp-block-code"><code>$('.box1').html('&lt;h1&gt;用jQuery動態產生的');</code></pre>
+
+
+
+<p>放在前面能綁定到點擊效果，放在後面無法有綁訂到點擊效果。</p>
+
+
+
+<h6>程式碼範例 – on</h6>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en zh-hant"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;jQuery 練習&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+    &lt;script src="js/jquery-3.5.1.js"&gt;&lt;/script&gt;
+    &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div class="wrap"&gt;
+        &lt;div class="box1"&gt;
+
+        &lt;/div&gt;
+
+        &lt;div class="box2"&gt;
+            &lt;h1&gt;寫在HTML裡面的&lt;/h1&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/* CSS RESET */
+/* CSS STYLES */
+.wrap{
+	width: 500px;
+	margin: 20px auto;
+}
+.box1{
+	border: 1px solid #000;
+	margin: 20px;
+	padding: 20px;
+}
+.box2{
+	border: 1px solid #000;
+	margin: 20px;
+	padding: 20px;
+}</code></pre>
+
+
+
+<p>JS</p>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function () {
+    $('.wrap').on('click','h1', function(event){
+        // 監聽
+        event.preventDefault();
+        /* Act on the event */
+        alert('有效！');
+    });
+    $('.box1').html('&lt;h1&gt;用jQuery動態產生的');
+});</code></pre>
+
+
+
+<p>在範圍內用 on-click 事件去監聽所需監聽的元素，就不用擔心是用jQuery動態產生的或者寫在HTML裡面的，都可以去處理這樣的事情。</p>
+
+
+
+<h4>click 與 on 的範例程式碼</h4>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function() {
+  // click範例
+  $(".box").click(function(event) {
+    event.preventDefault();
+    //要執行的程式碼
+  });
+ 
+  // on 範例
+  $('body').on('click', '.selector', function(event) {
+    event.preventDefault();
+    //要執行的程式碼
+  });
+});</code></pre>
+
+
+
+<h4>總結回顧</h4>
+
+
+
+<p><a rel="noreferrer noopener" href="https://oscarotero.com/jquery/" target="_blank">jQuery辭典</a></p>
+
+
+
+<h2>jQuery 常用小技巧</h2>
+
+
+
+<h4>attr() – 動態增加 HTML 標籤屬性</h4>
+
+
+
+<h6>程式碼範例</h6>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en zh-hant"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;jQuery 練習&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+    &lt;script src="js/jquery-3.5.1.js"&gt;&lt;/script&gt;
+    &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;img src="img/jquery.jpg" width="250" alt=""&gt;
+    &lt;img src="img/jquery.jpg" width="250" alt=""&gt;
+    &lt;img src="img/jquery.jpg" width="250" alt=""&gt;
+    &lt;img src="img/jquery.jpg" width="250" alt=""&gt;
+    &lt;br&gt;
+    &lt;a href="#"&gt;Link&lt;/a&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<p>JS</p>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function () {
+    $('img').attr('width','50');
+    $('a').attr('href','https://www.google.com.tw');
+});</code></pre>
+
+
+
+<ul>
+<li>img：width、title</li>
+<li>a：href</li>
+</ul>
+
+
+
+<h4>remove() – 移除網頁標籤小工具</h4>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en zh-hant"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;jQuery 練習&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+    &lt;script src="js/jquery-3.5.1.js"&gt;&lt;/script&gt;
+    &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+    &lt;table&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;input type="button" class="remove" value="刪除"&gt;&lt;/td&gt;
+            &lt;td&gt;內容1&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;input type="button" class="remove" value="刪除"&gt;&lt;/td&gt;
+            &lt;td&gt;內容2&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;input type="button" class="remove" value="刪除"&gt;&lt;/td&gt;
+            &lt;td&gt;內容3&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/* CSS RESET */
+/* CSS STYLES */
+td, th{
+	border: 1px solid #000;
+}</code></pre>
+
+
+
+<p>JS</p>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function () {
+    $('.remove').click(function(event){
+        /* Act on the event */
+        $(this).parent().parent().remove();
+    });
+});</code></pre>
+
+
+
+<h4>top 滑動效果</h4>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en zh-hant"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;jQuery 練習&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+    &lt;script src="js/jquery-3.5.1.js"&gt;&lt;/script&gt;
+    &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+    &lt;div class="box"&gt;
+        &lt;h1&gt;標題&lt;/h1&gt;
+        &lt;p&gt;文字段落&lt;/p&gt;
+        &lt;p&gt;文字段落&lt;/p&gt;
+        &lt;p&gt;文字段落&lt;/p&gt;
+        &lt;p&gt;文字段落&lt;/p&gt;
+        &lt;p&gt;文字段落&lt;/p&gt;
+        &lt;p&gt;文字段落&lt;/p&gt;
+        &lt;p&gt;文字段落&lt;/p&gt;
+        &lt;p&gt;文字段落&lt;/p&gt;
+        &lt;p&gt;文字段落&lt;/p&gt;
+        &lt;p&gt;文字段落&lt;/p&gt;
+        &lt;p&gt;文字段落&lt;/p&gt;
+        &lt;p&gt;文字段落&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="top"&gt;
+        &lt;a href="#"&gt;
+            &lt;img src="img/f-top.png" alt=""&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/* CSS RESET */
+/* CSS STYLES */
+p{
+	margin: 50px 0;
+}
+.top{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+}</code></pre>
+
+
+
+<p>JS</p>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function () {
+    $('.top a').click(function(event){
+        event.preventDefault();
+        $('html,body').animate({
+            scrollTop: 0
+        }, 700);
+    });
+});</code></pre>
+
+
+
+<h4>使用 fontAwesome 動態加入連結 icon</h4>
+
+
+
+<p>Font Awesome 是一個由文字檔做出來的，可以改變大小、顏色。</p>
+
+
+
+<h6>需載入的檔案</h6>
+
+
+
+<ul>
+<li>fontawesome-all.css 放在css 資料夾裡面</li>
+<li>webfonts 資料夾 放在 project 裡面</li>
+</ul>
+
+
+
+<h6>程式碼範例一</h6>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en zh-hant"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;jQuery 練習&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+    &lt;link rel="stylesheet" href="css/fontawesome-all.css"&gt;
+    &lt;script src="js/jquery-3.5.1.js"&gt;&lt;/script&gt;
+    &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+    &lt;ul class="list"&gt;
+        &lt;li&gt;&lt;a href="doc/word.jpg"&gt;圖片檔案&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="doc/word.doc"&gt;word檔案&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="doc/word.zip"&gt;壓縮檔案&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/* CSS RESET */
+/* CSS STYLES */
+.list a{
+	text-decoration: none;
+	color: gray;
+}
+.list a:hover{
+	color: #434343;
+}
+.list a:before{
+	margin-right: 15px;
+}
+.list li{
+	margin-bottom: 20px;
+	font-size: 40px;
+}</code></pre>
+
+
+
+<p>JS</p>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function () {
+    $("a&#91;href$='.jpg']").addClass('far fa-file-image');
+    $("a&#91;href$='.doc']").addClass('far fa-file-word');
+    $("a&#91;href$='.zip']").addClass('far fa-file-archive');
+});</code></pre>
+
+
+
+<h6>範例程式碼二 – 動態切換 icon 效果</h6>
+
+
+
+<p>載入 css、js 程式碼</p>
+
+
+
+<ul>
+<li><a rel="noreferrer noopener" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css" target="_blank">fontawesome</a></li>
+<li><a href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" target="_blank" rel="noreferrer noopener">jquery</a></li>
+</ul>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div class="container"&gt;
+  &lt;div class="aside"&gt;&lt;/div&gt;
+  &lt;div class="main"&gt;
+    &lt;div class="header"&gt;
+      &lt;button class="btn"&gt;
+        &lt;i class="fas fa-bars"&gt;&lt;/i&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/* CSS RESET */
+/* CSS STYLES */
+.container{
+  position: relative;
+}
+.main{
+  width: 100%;
+  height: 300px;
+  background: #000;
+  float: right;
+  transition: .3s ease;
+}
+.header{
+  height: 50px;
+  background: red;
+}
+.aside{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 270px;
+  height: 300px;
+  background: yellow;
+  overflow: hidden;
+  transform: translateX(-270px);
+  transition: .3s ease;
+}
+.open .main{
+  transform: translateX(270px);
+}
+.open .aside{
+  transform: translateX(0px);
+}
+
+.btn{
+  background: transparent;
+  font-size: 36px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  padding-top: 7px;
+}</code></pre>
+
+
+
+<p>JS</p>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function(){
+  $('.btn').click(function(event){
+    /* Act on the event */
+    $('body').toggleClass('open');
+    $('.btn i').toggleClass('fa-bars').toggleClass('fa-times')
+  });
+});</code></pre>
+
+
+
+<p><a href="https://codepen.io/GeeHsu/pen/bGVXwyZ" target="_blank" rel="noreferrer noopener">Codepen</a></p>
+
+
+
+<h2>第三方 Plugin</h2>
+
+
+
+<h4>使用第三方 plugin 需要注意的細節</h4>
+
+
+
+<ul>
+<li>確認熱門瀏覽器有無支援，至少 IE9 以上</li>
+<li>確保該載入的 CSS、JS、IMG 皆有載入</li>
+<li>如果發現有問題時，打開 Console 確認是否有錯誤</li>
+<li>查詢插件的 JS 設定</li>
+<li>修改 CSS 成自己要的樣式</li>
+</ul>
+
+
+
+<h4>使用第三方plugin需要注意的細節-課程補充</h4>
+
+
+
+<p>「課程說明」</p>
+
+
+
+<p>由於老師課程錄製時間約 2016 年，當時在開發必需多加注意 IE 的相容性，但是因為時代背景的不同，目前瀏覽器的標準已經也不同，所以這邊會建議同學可以透過 Statcounter 來了解目前主流的瀏覽器是哪一個，以下老師會附上 Statcounter 的操作簡報以及連結</p>
+
+
+
+<ul><li><a rel="noreferrer noopener" href="https://gs.statcounter.com/" target="_blank">Statcounter</a></li></ul>
+
+
+
+<h4>Lightbox 2 – 圖片燈箱效果 (上)</h4>
+
+
+
+<p><a rel="noreferrer noopener" href="https://lokeshdhakar.com/projects/lightbox2/" target="_blank">Lightbox 2</a></p>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en zh-hant"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;jQuery 練習&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/lightbox.css"&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+    &lt;script src="js/jquery-3.5.1.js"&gt;&lt;/script&gt;
+    &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;section&gt;
+        &lt;h3&gt;Two Individual Images&lt;/h3&gt;
+        &lt;div&gt;
+          &lt;a class="example-image-link" href="http://lokeshdhakar.com/projects/lightbox2/images/image-1.jpg" data-lightbox="example-1"&gt;&lt;img class="example-image" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-1.jpg" alt="image-1" /&gt;&lt;/a&gt;
+          &lt;a class="example-image-link" href="http://lokeshdhakar.com/projects/lightbox2/images/image-2.jpg" data-lightbox="example-2" data-title="Optional caption."&gt;&lt;img class="example-image" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-2.jpg" alt="image-1"/&gt;&lt;/a&gt;
+        &lt;/div&gt;
+    
+        &lt;hr /&gt;
+    
+        &lt;h3&gt;A Four Image Set&lt;/h3&gt;
+        &lt;div&gt;
+          &lt;a class="example-image-link" href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward."&gt;&lt;img class="example-image" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-3.jpg" alt=""/&gt;&lt;/a&gt;
+          &lt;a class="example-image-link" href="http://lokeshdhakar.com/projects/lightbox2/images/image-4.jpg" data-lightbox="example-set" data-title="Or press the right arrow on your keyboard."&gt;&lt;img class="example-image" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-4.jpg" alt="" /&gt;&lt;/a&gt;
+          &lt;a class="example-image-link" href="http://lokeshdhakar.com/projects/lightbox2/images/image-5.jpg" data-lightbox="example-set" data-title="The next image in the set is preloaded as you're viewing."&gt;&lt;img class="example-image" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-5.jpg" alt="" /&gt;&lt;/a&gt;
+          &lt;a class="example-image-link" href="http://lokeshdhakar.com/projects/lightbox2/images/image-6.jpg" data-lightbox="example-set" data-title="Click anywhere outside the image or the X to the right to close."&gt;&lt;img class="example-image" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-6.jpg" alt="" /&gt;&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/section&gt;
+    
+      &lt;section&gt;
+        &lt;p&gt;
+          For more information, visit &lt;a href="http://lokeshdhakar.com/projects/lightbox2/"&gt;http://lokeshdhakar.com/projects/lightbox2/&lt;/a&gt;
+        &lt;/p&gt;
+      &lt;/section&gt;
+
+      &lt;script src="js/lightbox.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+
+
+
+<h4>Lightbox 2 – 圖片燈箱效果 (上)-課程補充</h4>
+
+
+
+<p>「課程說明」</p>
+
+
+
+<p>由於老師錄製時間較早，因此目前 Lightbox 2 已經有改版，所以這邊老師提供 lightbox2 方面同學練習唷</p>
+
+
+
+<ul>
+<li><a href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" target="_blank" rel="noreferrer noopener">CSS</a></li>
+<li><a href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js" target="_blank" rel="noreferrer noopener">JavaScript</a></li>
+</ul>
+
+
+
+<h4>Lightbox 2 – 圖片燈箱效果 (下)</h4>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/* CSS RESET */
+/* CSS STYLES */
+.lightboxOverlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	background-color: blueviolet;
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+	opacity: 0.5;
+	display: none;
+  }
+
+.lb-details{
+	display: none;
+}</code></pre>
+
+
+
+<p>JS</p>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function () {
+    // lightbox 效果
+    lightbox.option({
+        'resizeDuration': 2000,
+        'wrapAround': true
+      });
+});</code></pre>
+
+
+
+<h4>Swiper – 輪播效果 (上)</h4>
+
+
+
+<p><a rel="noreferrer noopener" href="https://swiperjs.com/" target="_blank">Swiper</a></p>
+
+
+
+<h6>載入 CSS、JS 檔案到程式碼，以及 Add Swiper HTML Layout。</h6>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en zh-hant"&gt;
+
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;jQuery 練習&lt;/title&gt;
+  &lt;link rel="stylesheet" href="css/swiper.css"&gt;
+  &lt;link rel="stylesheet" href="css/style.css"&gt;
+  &lt;script src="js/jquery-3.5.1.js"&gt;&lt;/script&gt;
+  &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+  &lt;!-- Slider main container --&gt;
+  &lt;div class="swiper-container"&gt;
+    &lt;!-- Additional required wrapper --&gt;
+    &lt;div class="swiper-wrapper"&gt;
+      &lt;!-- Slides --&gt;
+      &lt;div class="swiper-slide"&gt;Slide 1&lt;/div&gt;
+      &lt;div class="swiper-slide"&gt;Slide 2&lt;/div&gt;
+      &lt;div class="swiper-slide"&gt;Slide 3&lt;/div&gt;
+      ...
+    &lt;/div&gt;
+    &lt;!-- If we need pagination --&gt;
+    &lt;div class="swiper-pagination"&gt;&lt;/div&gt;
+
+    &lt;!-- If we need navigation buttons --&gt;
+    &lt;div class="swiper-button-prev"&gt;&lt;/div&gt;
+    &lt;div class="swiper-button-next"&gt;&lt;/div&gt;
+
+    &lt;!-- If we need scrollbar --&gt;
+    &lt;div class="swiper-scrollbar"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;script src="js/swiper.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/* CSS RESET */
+/* CSS STYLES */
+.swiper-container {
+    width: 600px;
+    height: 300px;
+}</code></pre>
+
+
+
+<p>JS</p>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function () {
+  //initialize swiper when document ready
+  var mySwiper = new Swiper ('.swiper-container', {
+    // Optional parameters
+    direction: 'vertical',
+    loop: true,
+
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  });
+});</code></pre>
+
+
+
+<h4>Swiper – 輪播效果 (上)-課程補充</h4>
+
+
+
+<p>「課程說明」</p>
+
+
+
+<p>由於 Swiper 官方頁面後來有更新，為了避免同學找不到 CDN 連結，因此老師這邊提供相關 CDN 讓學生可以練習唷。</p>
+
+
+
+<ul>
+<li><a href="https://unpkg.com/swiper/swiper-bundle.min.css" target="_blank" rel="noreferrer noopener">CSS</a></li>
+<li><a href="https://unpkg.com/swiper/swiper-bundle.min.js" target="_blank" rel="noreferrer noopener">JavaScript</a></li>
+</ul>
+
+
+
+<h4>Swiper – 輪播效果 (中)</h4>
+
+
+
+<p>使用 Swiper API 的 Swiper Parameters (Swiper 參數)，設定適合的功能和效果。</p>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en zh-hant"&gt;
+
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;jQuery 練習&lt;/title&gt;
+  &lt;link rel="stylesheet" href="css/swiper.css"&gt;
+  &lt;link rel="stylesheet" href="css/style.css"&gt;
+  &lt;script src="js/jquery-3.5.1.js"&gt;&lt;/script&gt;
+  &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+  &lt;!-- Slider main container --&gt;
+  &lt;div class="swiper-container"&gt;
+    &lt;!-- Additional required wrapper --&gt;
+    &lt;div class="swiper-wrapper"&gt;
+      &lt;!-- Slides --&gt;
+      &lt;div class="swiper-slide"&gt;Slide 1&lt;/div&gt;
+      &lt;div class="swiper-slide"&gt;Slide 2&lt;/div&gt;
+      &lt;div class="swiper-slide"&gt;Slide 3&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- If we need pagination --&gt;
+    &lt;div class="swiper-pagination"&gt;&lt;/div&gt;
+
+    &lt;!-- If we need navigation buttons --&gt;
+    &lt;div class="swiper-button-prev"&gt;&lt;/div&gt;
+    &lt;div class="swiper-button-next"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;script src="js/swiper.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/* CSS RESET */
+/* CSS STYLES */
+.swiper-container {
+    width: 600px;
+    height: 300px;
+}</code></pre>
+
+
+
+<p>JS</p>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function () {
+  //initialize swiper when document ready
+  var mySwiper = new Swiper ('.swiper-container', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    speed: 3000,
+    autoplay: {
+      delay: 5000,
+    },
+    effect: 'cube',
+
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+  });
+});</code></pre>
+
+
+
+<h4>Swiper – 輪播效果 (下)</h4>
+
+
+
+<p>新增輪播圖片到 HTML 以及設定 .swiper-container 的長度、寬度</p>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en zh-hant"&gt;
+
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;jQuery 練習&lt;/title&gt;
+  &lt;link rel="stylesheet" href="css/swiper.css"&gt;
+  &lt;link rel="stylesheet" href="css/style.css"&gt;
+  &lt;script src="js/jquery-3.5.1.js"&gt;&lt;/script&gt;
+  &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+  &lt;!-- Slider main container --&gt;
+  &lt;div class="swiper-container"&gt;
+    &lt;!-- Additional required wrapper --&gt;
+    &lt;div class="swiper-wrapper"&gt;
+      &lt;!-- Slides --&gt;
+      &lt;div class="swiper-slide"&gt;
+        &lt;img src="img/up.jpg" alt=""&gt;
+      &lt;/div&gt;
+      &lt;div class="swiper-slide"&gt;
+        &lt;img src="img/walle.jpg" alt=""&gt;
+      &lt;/div&gt;
+      &lt;div class="swiper-slide"&gt;
+        &lt;img src="img/toystory.jpg" alt=""&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- If we need pagination --&gt;
+    &lt;div class="swiper-pagination"&gt;&lt;/div&gt;
+
+    &lt;!-- If we need navigation buttons --&gt;
+    &lt;div class="swiper-button-prev"&gt;&lt;/div&gt;
+    &lt;div class="swiper-button-next"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;script src="js/swiper.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/* CSS RESET */
+/* CSS STYLES */
+.swiper-container {
+    width: 618px;
+    height: 246px;
+}</code></pre>
+
+
+
+<p>JS</p>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function () {
+  //initialize swiper when document ready
+  var mySwiper = new Swiper ('.swiper-container', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    speed: 3000,
+    autoplay: {
+      delay: 5000,
+    },
+    effect: 'slide',
+
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+  });
+});</code></pre>
+
+
+
+<h4>Swiper – 補充備註</h4>
+
+
+
+<p>swiper.css 與 swiper.min.css、swiper.js 與 swiper.min.js 的差別 – 有無壓縮</p>
+
+
+
+<h4>將上面的效果試著整合在一個網頁中吧!</h4>
+
+
+
+<p>css 放在 head、 js 放在 &lt;/body&gt; 之前，排列順序由上到下為插件 css、個人 css，jQuery核心、插件 js、個人 js。</p>
+
+
+
+<h6>程式碼範例</h6>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en zh-hant"&gt;
+
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;jQuery 練習&lt;/title&gt;
+  &lt;link rel="stylesheet" href="css/swiper.css"&gt;
+  &lt;link rel="stylesheet" href="css/lightbox.css"&gt;
+  &lt;link rel="stylesheet" href="css/style.css"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+  &lt;div class="wrap"&gt;
+
+    &lt;section&gt;
+      &lt;!-- Slider main container --&gt;
+      &lt;h3&gt;Swiper 輪播效果&lt;/h3&gt;
+      &lt;div class="swiper-container"&gt;
+        &lt;!-- Additional required wrapper --&gt;
+        &lt;div class="swiper-wrapper"&gt;
+          &lt;!-- Slides --&gt;
+          &lt;div class="swiper-slide"&gt;
+            &lt;img src="img/up.jpg" width="100%" alt=""&gt;
+          &lt;/div&gt;
+          &lt;div class="swiper-slide"&gt;
+            &lt;img src="img/walle.jpg" width="100%" alt=""&gt;
+          &lt;/div&gt;
+          &lt;div class="swiper-slide"&gt;
+            &lt;img src="img/toystory.jpg" width="100%" alt=""&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- If we need pagination --&gt;
+        &lt;div class="swiper-pagination"&gt;&lt;/div&gt;
+
+        &lt;!-- If we need navigation buttons --&gt;
+        &lt;div class="swiper-button-prev"&gt;&lt;/div&gt;
+        &lt;div class="swiper-button-next"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;section&gt;
+      &lt;h3&gt;Lightbox 燈箱圖片效果&lt;/h3&gt;
+      &lt;div&gt;
+        &lt;a class="light-box" href="img/image-2.jpg" data-lightbox="lightbox-set" data-title="案右邊向下一張圖片"&gt;&lt;img
+            class="light-box-img" src="img/thumb-2.jpg" alt="" /&gt;&lt;/a&gt;
+        &lt;a class="light-box" href="img/image-3.jpg" data-lightbox="lightbox-set" data-title="或者按鍵盤右鍵"&gt;&lt;img
+            class="light-box-img" src="img/thumb-3.jpg" alt="" /&gt;&lt;/a&gt;
+        &lt;a class="light-box" href="img/image-4.jpg" data-lightbox="lightbox-set" data-title="這是最後一張圖片"&gt;&lt;img
+            class="light-box-img" src="img/thumb-4.jpg" alt="" /&gt;&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+
+  &lt;/div&gt;
+
+  &lt;script src="js/jquery-3.5.1.js"&gt;&lt;/script&gt;
+  &lt;script src="js/swiper.js"&gt;&lt;/script&gt;
+  &lt;script src="js/lightbox.js"&gt;&lt;/script&gt;
+  &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/* CSS RESET */
+/* CSS STYLES */
+.wrap{
+	width: 960px;
+	margin: 10px auto;
+}
+.swiper-container {
+    width: 618px;
+    height: 246px;
+}
+.swiper-container h3{
+	text-align: center;
+	padding: 30px 0;
+}
+section{
+	text-align: center;
+}
+section h3{
+	padding: 30px 0;
+}</code></pre>
+
+
+
+<p>JS</p>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function () {
+  //initialize swiper when document ready
+  var mySwiper = new Swiper ('.swiper-container', {
+    // Optional parameters 可選參數
+    direction: 'horizontal',
+    loop: true,
+    speed: 3000,
+    autoplay: {
+      delay: 5000,
+    },
+    effect: 'slide',
+
+    // If we need pagination 如果需要分頁設置
+    pagination: {
+      el: '.swiper-pagination',
+    },
+
+    // Navigation arrows 上一個/下一個 按鈕
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+  });
+
+});</code></pre>
+
+
+
+<h4>如何去查詢別人使用的 jQuery 插件</h4>
+
+
+
+<p>查看網頁原始碼 – Ctrl + F，查詢 .js”&gt;&lt;/script&gt;</p>
+
+
+
+<p>網頁檢查從 class 名稱、id 名稱，例如：<a rel="noreferrer noopener" href="https://pixelcog.github.io/parallax.js/" target="_blank">parallax.js</a>、<a href="https://benpickles.github.io/peity/" target="_blank" rel="noreferrer noopener">Peity</a>。</p>
+
+
+
+<h2>開始喜歡 jQuery 了嗎？教你如何更精進！</h2>
+
+
+
+<h4>將 jQ 與 CSS 樣式抽離心法</h4>
+
+
+
+<p>樣式與 jQuery 綁定，命名：jq-名稱，沒綁定，直接命名。</p>
+
+
+
+<h4>最終作業講解</h4>
+
+
+
+<ul>
+<li>下拉式選單功能</li>
+<li>Swiper Banner 輪播</li>
+<li>lightbox 燈箱</li>
+<li>top 效果</li>
+</ul>
+
+
+
+<h2>最後，你還可以往哪些方向精進</h2>
+
+
+
+<h4>網頁關鍵字速記表</h4>
+
+
+
+<figure class="wp-block-image size-full"><img width="664" height="960" src="/wordpress_blog/wp-content/uploads/2022/04/keywords.png" alt="" class="wp-image-634"><figcaption>網頁關鍵字</figcaption></figure>
+
+
+
+<h4>如何從網站上找到適合自己的學習教材</h4>
+
+
+
+<ul>
+<li><a rel="noreferrer noopener" href="https://www.facebook.com/hexschool/posts/666230520192931" target="_blank">貼文</a></li>
+<li><a rel="noreferrer noopener" href="https://www.youtube.com/watch?v=DBjRl7IXNiQ" target="_blank">影片</a></li>
+</ul>
+	</div>
+<!-- .entry-content -->
+
+	<footer class="entry-footer">
+			</footer><!-- .entry-footer -->
+</article><!-- #post-632 -->
+
+	<nav class="navigation post-navigation" aria-label="文章">
+		<h2 class="screen-reader-text">文章導覽</h2>
+		<div class="nav-links">
+<div class="nav-previous"><a href="/wordpress_blog/develop-a-website/" rel="prev"><span class="nav-subtitle">Previous:</span> <span class="nav-title">使用 HTML、CSS 開發一個網站</span></a></div>
+<div class="nav-next"><a href="/wordpress_blog/rwd-hexschool/" rel="next"><span class="nav-subtitle">Next:</span> <span class="nav-title">一變應萬變的響應式網頁設計</span></a></div>
+</div>
+	</nav>
+	</main><!-- #main -->
+
+
+	</div></div>
+			
+			<footer id="colophon" class="site-footer">
+
+				
+				<div class="container-fluid">
+					<div class="site-info">
+						<div class="row">
+
+															
+								<div class="col-12 footer-copyright-elements footer-copyright-alignment-center">
+
+									<div class="botiga-credits">&copy; 2022 wordpress_blog. 
+Created by Gee Hsu. 
+<br>Proudly powered by <a rel="nofollow" href="https://athemes.com/theme/botiga/">Botiga</a>
+</div>
+<div class="social-profile">
+<a target="_blank" href="https://www.facebook.com/watergrass0402/"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></i></a><a target="_blank" href="https://github.com/GeeHsu"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></i></a>
+</div>
+								</div>
+														
+						</div>
+					</div>
+				</div>
+<!-- .site-info -->
+
+				
+			</footer><!-- #colophon -->
+
+			
+			<div class="back-to-top visibility-all position-right"><i class="ws-svg-icon"><svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 15l7-7 7 7" stroke-width="3" stroke-linejoin="round"></path></svg></i></div>
+</div>
+<!-- #page -->
+
+
+<script id="botiga-custom-js-extra">
+var botiga = {"ajaxurl":"\/wp-admin\/admin-ajax.php","i18n":{"botiga_sharebox_copy_link":"Copy link","botiga_sharebox_copy_link_copied":"Copied!"}};
+</script>
+<script src="/wordpress_blog/wp-content/themes/botiga/assets/js/custom.min.js?ver=1.1.2" id="botiga-custom-js"></script>
+
+</body>
+</html>

@@ -1,0 +1,6846 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<title>一變應萬變的響應式網頁設計 &#8211; wordpress_blog</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="訂閱《wordpress_blog》&raquo; 資訊提供" href="/wordpress_blog/feed/">
+<link rel="alternate" type="application/rss+xml" title="訂閱《wordpress_blog》&raquo; 留言的資訊提供" href="/wordpress_blog/comments/feed/">
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.9.3"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style>img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="/wordpress_blog/wp-includes/css/dist/block-library/style.min.css?ver=5.9.3" media="all">
+<style id="global-styles-inline-css">body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--palette-1-color-0: #212121;--wp--preset--color--palette-1-color-1: #757575;--wp--preset--color--palette-1-color-2: #212121;--wp--preset--color--palette-1-color-3: #212121;--wp--preset--color--palette-1-color-4: #212121;--wp--preset--color--palette-1-color-5: #f5f5f5;--wp--preset--color--palette-1-color-6: #ffffff;--wp--preset--color--palette-1-color-7: #ffffff;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 14px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 18px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--normal: 16px;--wp--preset--font-size--larger: 24px;--wp--preset--font-size--extra-large: 32px;--wp--preset--font-size--huge: 48px;--wp--preset--font-size--gigantic: 64px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}</style>
+<link rel="stylesheet" id="botiga-style-css" href="/wordpress_blog/wp-content/themes/botiga/style.css?ver=1.1.2" media="all">
+<link rel="stylesheet" id="botiga-style-min-css" href="/wordpress_blog/wp-content/themes/botiga/assets/css/styles.min.css?ver=1.1.2" media="all">
+<link rel="stylesheet" id="botiga-custom-styles-css" href="/wordpress_blog/wp-content/uploads/botiga/custom-styles.css?ver=1648804469" media="all">
+<link rel="https://api.w.org/" href="/wordpress_blog/wp-json/">
+<link rel="alternate" type="application/json" href="/wordpress_blog/wp-json/wp/v2/posts/637">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/wordpress_blog/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wordpress_blog/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 5.9.3">
+<link rel="canonical" href="/wordpress_blog/rwd-hexschool/">
+<link rel="shortlink" href="/wordpress_blog/?p=637">
+<link rel="alternate" type="application/json+oembed" href="/wordpress_blog/wp-json/oembed/1.0/embed?url=%2Frwd-hexschool%2F">
+<link rel="alternate" type="text/xml+oembed" href="/wordpress_blog/wp-json/oembed/1.0/embed?url=%2Frwd-hexschool%2F&#038;format=xml">
+<link rel="icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png" sizes="32x32">
+<link rel="icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png" sizes="192x192">
+<link rel="apple-touch-icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png">
+<meta name="msapplication-TileImage" content="/wp-content/uploads/2022/03/logo.png">
+	
+</head>
+
+<body class="post-template-default single single-post postid-637 single-format-standard wp-custom-logo wp-embed-responsive header-header_layout_1 blog-single-layout1">
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0.49803921568627"></fefuncr><fefuncg type="table" tablevalues="0 0.49803921568627"></fefuncg><fefuncb type="table" tablevalues="0 0.49803921568627"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.54901960784314 0.98823529411765"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.71764705882353 0.25490196078431"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 0.27843137254902"></fefuncg><fefuncb type="table" tablevalues="0.5921568627451 0.27843137254902"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0"></fefuncr><fefuncg type="table" tablevalues="0 0.64705882352941"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.78039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.94901960784314"></fefuncg><fefuncb type="table" tablevalues="0.35294117647059 0.47058823529412"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.65098039215686 0.40392156862745"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.44705882352941 0.4"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.098039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.66274509803922"></fefuncg><fefuncb type="table" tablevalues="0.84705882352941 0.41960784313725"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg>
+
+<div id="page" class="site">
+
+	<a class="skip-link screen-reader-text" href="#primary">Skip to content</a>
+
+	
+			<div class="top-bar visibility-desktop-only">
+				<div class="container-fluid">
+					<div class="top-bar-inner">
+						<div class="row valign">
+
+															<div class="col header-elements delimiter-none">
+									<div class="header-item top-bar-social"><div class="social-profile">
+<a target="_blank" href="https://www.facebook.com/watergrass0402/"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></i></a><a target="_blank" href="https://github.com/GeeHsu"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></i></a>
+</div></div>								</div>
+																						<div class="col header-elements delimiter-none">
+													
+			<nav class="header-item top-bar-secondary-navigation secondary-navigation">
+				<div class="menu-topbar-container"><ul id="secondary" class="menu">
+<li id="menu-item-143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143"><a href="/wordpress_blog/setup/">網站架設</a></li>
+<li id="menu-item-144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a href="/wordpress_blog/source/">資料來源</a></li>
+<li id="menu-item-262" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-262"><a href="/wordpress_blog/resource/">學習資源</a></li>
+</ul></div>			</nav>
+											</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			
+							
+				<header id="masthead" class="site-header header_layout_1">
+					<div class="container-fluid">
+						<div class="site-header-inner">
+							<div class="row valign">
+								<div class="col-md-5">
+										
+			<nav id="site-navigation" class="main-navigation">
+				<div class="menu-navbar-container"><ul id="primary-menu" class="menu">
+<li id="menu-item-109" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="/wordpress_blog/about/">關於</a></li>
+<li id="menu-item-110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-110">
+<a href="/wordpress_blog/learn/">學習</a><span tabindex="0" class="dropdown-symbol"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512.011 512.011"><path d="M505.755 123.592c-8.341-8.341-21.824-8.341-30.165 0L256.005 343.176 36.421 123.592c-8.341-8.341-21.824-8.341-30.165 0s-8.341 21.824 0 30.165l234.667 234.667a21.275 21.275 0 0015.083 6.251 21.275 21.275 0 0015.083-6.251l234.667-234.667c8.34-8.341 8.34-21.824-.001-30.165z"></path></svg></i></span>
+<ul class="sub-menu">
+	<li id="menu-item-140" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-140"><a href="/wordpress_blog/category/hexschool/">六角學院</a></li>
+	<li id="menu-item-141" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-141"><a href="/wordpress_blog/category/ninja/">The Net Ninja</a></li>
+	<li id="menu-item-483" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-483"><a href="/wordpress_blog/category/youtube/">Youtube</a></li>
+</ul>
+</li>
+<li id="menu-item-111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="/wordpress_blog/linestore/">LINE STORE</a></li>
+</ul></div>			</nav><!-- #site-navigation -->
+											</div>
+								<div class="col-md-2">
+												<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+											</div>
+								<div class="col-md-5 header-elements">
+																	</div>							
+							</div>
+						</div>
+					</div>
+								<div class="header-search-form">
+			<form role="search" method="get" class="search-form" action="/">
+	<label class="screen-reader-text" for="search-form-1">Search&hellip;</label>
+	<input type="search" id="search-form-1" class="search-field" value="" name="s" placeholder="Search &hellip;">
+	<button type="submit" class="search-submit" value="Search"><i class="ws-svg-icon"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 100 14.25 7.125 7.125 0 000-14.25zM2.25 10.875a8.625 8.625 0 1117.25 0 8.625 8.625 0 01-17.25 0z"></path><path fill-rule="evenodd" d="M15.913 15.914a.75.75 0 011.06 0l4.557 4.556a.75.75 0 01-1.06 1.06l-4.557-4.556a.75.75 0 010-1.06z"></path></svg></i></button>
+</form>
+			</div>
+			
+									</header>
+
+										<div class="search-overlay"></div>
+			
+			<div class="botiga-offcanvas-menu">
+				<div class="mobile-header-item">
+					<div class="row">
+						<div class="col">
+										<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+									</div>
+						<div class="col align-right">
+							<a class="mobile-menu-close" href="#"><i class="ws-svg-icon icon-cancel"><svg width="16" height="16" fill="none" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.219.781L.78 2.22 9.562 11l-8.78 8.781 1.437 1.438L11 12.437l8.781 8.782 1.438-1.438L12.437 11l8.782-8.781L19.78.78 11 9.562 2.219.783z"></path></svg></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="mobile-header-item">
+						
+			<nav id="site-navigation" class="main-navigation">
+				<div class="menu-navbar-container"><ul id="primary-menu" class="menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="/wordpress_blog/about/">關於</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-110">
+<a href="/wordpress_blog/learn/">學習</a><span tabindex="0" class="dropdown-symbol"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512.011 512.011"><path d="M505.755 123.592c-8.341-8.341-21.824-8.341-30.165 0L256.005 343.176 36.421 123.592c-8.341-8.341-21.824-8.341-30.165 0s-8.341 21.824 0 30.165l234.667 234.667a21.275 21.275 0 0015.083 6.251 21.275 21.275 0 0015.083-6.251l234.667-234.667c8.34-8.341 8.34-21.824-.001-30.165z"></path></svg></i></span>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-140"><a href="/wordpress_blog/category/hexschool/">六角學院</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-141"><a href="/wordpress_blog/category/ninja/">The Net Ninja</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-483"><a href="/wordpress_blog/category/youtube/">Youtube</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="/wordpress_blog/linestore/">LINE STORE</a></li>
+</ul></div>			</nav><!-- #site-navigation -->
+							</div>
+				<div class="mobile-header-item">
+									<a target="&quot;_blank&quot;" class="button header-item" href="https://www.facebook.com/watergrass0402/">聯絡我</a>
+							</div>			
+			</div>
+			
+							<header id="masthead-mobile" class="site-header mobile-header">
+					<div class="container-fluid">
+						<div class="row valign flex-nowrap">
+							<div class="col-sm-6 col-md-4 col-grow-mobile">
+											<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+										</div>
+							<div class="col-auto col-sm-6 col-md-8 col-grow-mobile header-elements valign align-right">
+																	
+															<a href="#" class="menu-toggle">
+				<i class="ws-svg-icon"><svg width="16" height="11" viewbox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="16" height="1"></rect><rect y="5" width="16" height="1"></rect><rect y="10" width="16" height="1"></rect></svg></i>
+			</a>
+																		</div>						
+						</div>
+					</div>
+								<div class="header-search-form">
+			<form role="search" method="get" class="search-form" action="/">
+	<label class="screen-reader-text" for="search-form-2">Search&hellip;</label>
+	<input type="search" id="search-form-2" class="search-field" value="" name="s" placeholder="Search &hellip;">
+	<button type="submit" class="search-submit" value="Search"><i class="ws-svg-icon"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 100 14.25 7.125 7.125 0 000-14.25zM2.25 10.875a8.625 8.625 0 1117.25 0 8.625 8.625 0 01-17.25 0z"></path><path fill-rule="evenodd" d="M15.913 15.914a.75.75 0 011.06 0l4.557 4.556a.75.75 0 01-1.06 1.06l-4.557-4.556a.75.75 0 010-1.06z"></path></svg></i></button>
+</form>
+			</div>
+			
+									</header>
+						<div class="search-overlay"></div>
+			<div class="header-image"><img src="/wordpress_blog/wp-content/uploads/2022/03/seashore.jpg" width="1920" height="500" alt=""></div>
+<div class="container content-wrapper"><div class="row main-row">			
+	<main id="primary" class="site-main no-sidebar">
+
+		
+
+<article id="post-637" class="post-637 post type-post status-publish format-standard hentry category-hexschool">
+	
+		
+	<header class="entry-header">
+		
+		
+		<h1 class="entry-title">一變應萬變的響應式網頁設計</h1>			<div class="entry-meta entry-meta-below delimiter-none">
+<span class="posted-on"><a href="/wordpress_blog/rwd-hexschool/" rel="bookmark"><time class="entry-date published" datetime="2020-06-15T11:02:00+08:00">2020 年 6 月 15 日</time><time class="updated" datetime="2022-04-06T11:03:38+08:00">2022 年 4 月 6 日</time></a></span><span class="byline"> <span class="author vcard"><a class="url fn n" href="/wordpress_blog/author/gee-hsu/">gee.hsu</a></span></span>
+</div>			</header><!-- .entry-header -->
+
+	
+	<div class="entry-content">
+		
+<h2>基本環境介紹</h2>
+
+
+
+<h4>什麼是響應式網頁設計？(上)</h4>
+
+
+
+<p>兼容各種螢幕解析度的網頁設計</p>
+
+
+
+<p>HTML5、CSS3</p>
+
+
+
+<ul>
+<li>桌面版</li>
+<li>行動版</li>
+</ul>
+
+
+
+<ul>
+<li>960 px 三欄式排版</li>
+<li>768 px 三欄式間距變少</li>
+<li>375 px 例如：Iphone6 單欄式呈現方式</li>
+</ul>
+
+
+
+<h6>響應式設計 CSS3 media queries 的語法</h6>
+
+
+
+<p>來去做到 PC IPad Mobile 都可以自適應螢幕解析度，來達到更好的瀏覽體驗。</p>
+
+
+
+<h4>什麼是響應式網頁設計?(下)</h4>
+
+
+
+<h6>網頁講解</h6>
+
+
+
+<ul>
+<li>PDA 版</li>
+<li>單欄式或固定</li>
+<li>響應式</li>
+</ul>
+
+
+
+<h4>基本環境建立 (上)</h4>
+
+
+
+<pre class="wp-block-code"><code>&lt;head&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+&lt;/head&gt;</code></pre>
+
+
+
+<p><a href="http://screensiz.es/" target="_blank" rel="noreferrer noopener">SCREEN SIZ.ES</a></p>
+
+
+
+<h4>基本環境建立 (下)</h4>
+
+
+
+<h6>Viewport</h6>
+
+
+
+<p>Viewport 可以解決 Chrome 醬的問題</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</code></pre>
+
+
+
+<ul>
+<li>瀏覽器顯示寬度 = 裝置的寬度</li>
+<li>縮放比為 1</li>
+</ul>
+
+
+
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td>device-width</td>
+<td>畫面寬度</td>
+</tr>
+<tr>
+<td>device-height</td>
+<td>畫面高度</td>
+</tr>
+<tr>
+<td>initial-scale</td>
+<td>初始縮放比</td>
+</tr>
+<tr>
+<td>minimun-scale</td>
+<td>最小可縮放比</td>
+</tr>
+<tr>
+<td>maximun-scale</td>
+<td>最大可縮放比</td>
+</tr>
+<tr>
+<td>user-scalable</td>
+<td>使用者是否可縮放</td>
+</tr>
+</tbody></table></figure>
+
+
+
+<p>maximum-scale = 2 最大縮放比為 2 倍。<br>emmet 熱鍵：meta:vp</p>
+
+
+
+<h4>基本環境建立 (下) – 課程補充</h4>
+
+
+
+<p>「Viewport 說明」</p>
+
+
+
+<p>同學可能會疑惑 viewport 是什麼，老師這邊額外簡單補充一下，viewport 主要是為了智慧型手機的顯示網頁時畫面較小的問題，那麼為了解決這問題 W3C 在 HTML 制定了專門的標籤語法給網頁使用</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+
+
+
+<p>因此這個標籤可以讓我們在智慧型手機上自動調整畫面顯示，所以這是格外重要的 HTML 屬性唷。</p>
+
+
+
+<h4>CSS 3 Media Query 觀念 (上)</h4>
+
+
+
+<p>CSS 程式碼</p>
+
+
+
+<pre class="wp-block-code"><code>/* CSS STYLES */
+/* PC */
+.title{
+  color: red;
+}
+.content{
+  color: #000;
+}
+/* TABLET */
+@media (max-width: 768px){
+  .title{
+    color: blue;
+  }
+  .content{
+    font-size: 30px;
+  }
+}
+/* MOBILES */
+@media (max-width: 375px){
+  .title{
+    color: yellow;
+  }
+}</code></pre>
+
+
+
+<h4>CSS 3 Media Query 觀念 (下)</h4>
+
+
+
+<p>在之前，已經知道 RWD 與裝置寬度有關，且 CSS 可以依據寬度設定版型。</p>
+
+
+
+<p>先來定義一下規則吧</p>
+
+
+
+<ul>
+<li>預設底色顯示紅色</li>
+<li>低於或等於 768px 的顯示藍色</li>
+<li>低於或等於 375px 的顯示綠色</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>body{
+  background: red;
+}
+
+@media (max-width: 768px) {
+  body{
+    background: blue;
+  }
+}
+
+@media (max-width: 375px) {
+  body{
+    background: green;
+  }
+}</code></pre>
+
+
+
+<h4>min-width 語法教學</h4>
+
+
+
+<p>先來定義一下規則吧</p>
+
+
+
+<ul>
+<li>預設底色顯示為綠色</li>
+<li>高於或等於 375 px 顯示為藍色</li>
+<li>高於或等於 768 px 顯示為紅色</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>body{
+  background: green;
+}
+
+@media (min-width: 375px){
+  body{
+    background: blue;
+  }
+}
+
+@media (min-width: 768px){
+  body{
+    background: red;
+  }
+}</code></pre>
+
+
+
+<ul>
+<li>max-width：由大到小</li>
+<li>min-width：由小到大</li>
+</ul>
+
+
+
+<h4>瀏覽器內建模擬 Mobile 介面工具</h4>
+
+
+
+<ul>
+<li>Chorme</li>
+<li>Safari</li>
+</ul>
+
+
+
+<p><a href="https://mediaqueri.es/" target="_blank" rel="noreferrer noopener">Meida Queries</a></p>
+
+
+
+<h2>常見版型布局設定</h2>
+
+
+
+<h4>Flex RWD 排版方式</h4>
+
+
+
+<p>Flex 是現今非常流行的排版方式</p>
+
+
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=t13Fvg0_xHk" target="_blank" rel="noreferrer noopener">伸縮自如的 RWD 排版術(上)</a></li>
+<li><a href="https://www.youtube.com/watch?v=Du_N0Vyh-Q0" target="_blank" rel="noreferrer noopener">伸縮自如的 RWD 排版術(下)</a></li>
+</ul>
+
+
+
+<h4>禁止顯示 x 軸法則</h4>
+
+
+
+<h4>max-width: 流體式佈局</h4>
+
+
+
+<p>程式碼範例</p>
+
+
+
+<pre class="wp-block-code"><code>.wrap{
+  max-width: 600px;
+  margin: 0 auto;
+}</code></pre>
+
+
+
+<h4>max-width: 一個小設定輕易將網頁設定成流體式佈局-課程補充</h4>
+
+
+
+<p>「課程說明」</p>
+
+
+
+<p>這邊額外補充一下，中文內文單行字元 30~40 會比較好閱讀，英文則是 32~80 個字元數</p>
+
+
+
+<p>更詳細一點的規範與說明可以看以下參考連結唷</p>
+
+
+
+<ul><li><a href="https://www.ibm.com/design/language/typography/type-basics/" target="_blank" rel="noreferrer noopener">連結</a></li></ul>
+
+
+
+<h4>版型單位 % 數觀念</h4>
+
+
+
+<pre class="wp-block-code"><code>&lt;body&gt;
+  &lt;div class="wrap"&gt;
+  &lt;/div&gt;
+&lt;/body&gt;</code></pre>
+
+
+
+<p>父元素 – wrap的父元素是body</p>
+
+
+
+<p>程式碼範例</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div class="wrap"&gt;
+  &lt;div class="menu"&gt;&lt;/div&gt;
+  &lt;div class="content"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>.wrap{
+  max-width: 500px;
+  margin: 0 auto;
+  height: 200px;
+  background: #000;
+}
+.menu{
+  width: 30%;
+  height: 100px;
+  background: orange;
+  float: left;
+}
+.content{
+  width: 70%;
+  height: 100px;
+  background: blue;
+  float: left;
+}</code></pre>
+
+
+
+<h4>三欄流體式設計</h4>
+
+
+
+<h6>版型：</h6>
+
+
+
+<ul>
+<li>三欄式：33.3333%</li>
+<li>兩欄式：50%</li>
+<li>單欄式：100%</li>
+</ul>
+
+
+
+<p>原則上全部的欄位加起來不超過100%</p>
+
+
+
+<h6>程式碼範例</h6>
+
+
+
+<pre class="wp-block-code"><code>&lt;div class="wrap"&gt;
+    &lt;ul class="news"&gt;
+        &lt;li&gt;
+            &lt;h2&gt;大標題&lt;/h2&gt;
+            &lt;p&gt;"It is often said that the pursuance of integrated collection of software engineering standards minimizes influnce of The Setting of Functional Event" (Heriberto Millard in The Book of the Application Rules)&lt;/p&gt;                
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;h2&gt;大標題&lt;/h2&gt;
+            &lt;p&gt;"It is often said that the pursuance of integrated collection of software engineering standards minimizes influnce of The Setting of Functional Event" (Heriberto Millard in The Book of the Application Rules)&lt;/p&gt;                
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;h2&gt;大標題&lt;/h2&gt;
+            &lt;p&gt;"It is often said that the pursuance of integrated collection of software engineering standards minimizes influnce of The Setting of Functional Event" (Heriberto Millard in The Book of the Application Rules)&lt;/p&gt;                
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;h2&gt;大標題&lt;/h2&gt;
+            &lt;p&gt;"It is often said that the pursuance of integrated collection of software engineering standards minimizes influnce of The Setting of Functional Event" (Heriberto Millard in The Book of the Application Rules)&lt;/p&gt;                
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;h2&gt;大標題&lt;/h2&gt;
+            &lt;p&gt;"It is often said that the pursuance of integrated collection of software engineering standards minimizes influnce of The Setting of Functional Event" (Heriberto Millard in The Book of the Application Rules)&lt;/p&gt;                
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;h2&gt;大標題&lt;/h2&gt;
+            &lt;p&gt;"It is often said that the pursuance of integrated collection of software engineering standards minimizes influnce of The Setting of Functional Event" (Heriberto Millard in The Book of the Application Rules)&lt;/p&gt;                
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;h2&gt;大標題&lt;/h2&gt;
+            &lt;p&gt;"It is often said that the pursuance of integrated collection of software engineering standards minimizes influnce of The Setting of Functional Event" (Heriberto Millard in The Book of the Application Rules)&lt;/p&gt;                
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+
+
+
+<h6>CSS 程式碼範例</h6>
+
+
+
+<pre class="wp-block-code"><code>/* CSS RESET */
+/* CSS STYLES */
+.wrap{
+	max-width: 960px;
+	padding-top: 20px;
+	margin: 0 auto;
+	line-height: 1.5;
+}
+.news h2{
+	color: #000000;
+	padding: .3em 0;
+	font-size: 20px;
+}
+.news li{
+	width: 31.33333%;
+	margin-right: 1%;
+	margin-left: 1%;
+	margin-bottom: 1em;
+	float: left;
+}
+/* iPad 直式 */
+@media (max-width: 768px){
+	.news li{
+		width: 48%;
+	}
+}
+/* iPhone 5 橫式 */
+@media (max-width: 569px){
+	.news li{
+		width: 98%;
+	}
+}</code></pre>
+
+
+
+<h4>左側 Float 固定、右側流體式設計</h4>
+
+
+
+<h6>程式碼範例</h6>
+
+
+
+<pre class="wp-block-code"><code>&lt;div class="wrap"&gt;
+    &lt;div class="menu"&gt;
+        &lt;ul&gt;
+            &lt;li&gt;心牆&lt;/li&gt;
+            &lt;li&gt;終於&lt;/li&gt;
+            &lt;li&gt;我是如此相信&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class="content"&gt;
+        &lt;h3&gt;心墻&lt;/h3&gt;
+        &lt;p&gt;
+            在長雨落花迷濛 思亂交錯中&lt;br&gt;
+            風嘯傳聲驚動心懸空&lt;br&gt;
+            千里埋伏迎來 誰處身世外&lt;br&gt;
+            避不過命運安排&lt;br&gt;
+            閉上眼我能看見你的臉&lt;br&gt;
+            睜開眼悲盡蒼涼刀劍滿天&lt;br&gt;
+            繁塵中誰與爭鋒&lt;br&gt;
+            無聲掀起暗湧&lt;br&gt;
+            命運的流轉看破人世變幻&lt;br&gt;
+            傷離別離別太殤 猶念驚鴻一瞥&lt;br&gt;
+            遇見你的那一天&lt;br&gt;
+            同偕到白髮攜手共度年華&lt;br&gt;
+            回眸間一眼萬年&lt;br&gt;
+            被淹沒隱藏的愛&lt;br&gt;&lt;br&gt;
+
+            終是不自來&lt;br&gt;
+            權弄一生盡時悔無奈 來世若再相見&lt;br&gt;
+            以身化作劍 護你一生的周全&lt;br&gt;
+            湖中倒影相依偎的姿態&lt;br&gt;
+            無憂絢爛的歲月一去不再&lt;br&gt;
+            繁塵中誰與爭鋒 無聲掀起暗湧&lt;br&gt;
+            命運的流轉看破人世變幻&lt;br&gt;
+            傷離別離別太殤 猶念驚鴻一瞥&lt;br&gt;
+            遇見你的那一天&lt;br&gt;
+            同偕到白髮攜手共度年華&lt;br&gt;
+            回眸間一眼萬年 宮牆外風雨欲來&lt;br&gt;
+            黑夜漫延角巷 錦服繡刀在追逐不懼成敗&lt;br&gt;
+            人離散咫尺天涯 淚光滿目悲愴&lt;br&gt;
+            獨留心中的凝望&lt;br&gt;
+            心牆若撕開冰冷中的期待&lt;br&gt;
+            奈何啊空留遺憾 回頭看思量難忘&lt;br&gt;
+        &lt;/p&gt;
+        &lt;h3&gt;終於&lt;/h3&gt;
+        &lt;p&gt;
+            流年低聲輕輕說一段溫柔的唇語&lt;br&gt;
+            光陰輾轉夢裡編織著動人的秘密&lt;br&gt;
+            夢中的漣漪穿梭在心裡&lt;br&gt;
+            陪我顛沛流離風浪起&lt;br&gt;
+            飄搖無依蜿蜒幾裡&lt;br&gt;
+            留下斑駁的痕跡&lt;br&gt;&lt;br&gt;
+
+            終於以約為期讓我在今夕遇見你&lt;br&gt;
+            撥亂宿命幾世等待一段 緣起&lt;br&gt;
+            眼中天地 是我背負的荊棘&lt;br&gt;
+            最想卻是和你再相聚&lt;br&gt;
+
+            兩世凡塵如你只為我抵擋這風雨&lt;br&gt;
+            也曾是你和我分享觸動人的憧憬&lt;br&gt;
+            眉目間沉溺綰幾許親密&lt;br&gt;&lt;br&gt;
+
+            心火搖曳在彼此眼裡&lt;br&gt;
+            成為知己山海約定&lt;br&gt;
+            願為此情去追尋&lt;br&gt;&lt;br&gt;
+
+            終於是你喚醒勇氣常駐在我心裡&lt;br&gt;
+            就算隔世一言為定不分 不離&lt;br&gt;
+            不再畏懼 命運送我的荊棘&lt;br&gt;
+            破繭成蝶飛舞在天地&lt;br&gt;
+
+            終於我能為你成為這更好的自己&lt;br&gt;
+            褪去繁華找回最初真心 不渝&lt;br&gt;
+            一路崎嶇 是我無悔的經歷&lt;br&gt;
+            哪怕有天記憶被抹去&lt;br&gt;&lt;br&gt;
+
+            終於漂泊好久的船停靠在你懷裡&lt;br&gt;
+            依然還會給我海闊天空的勇氣&lt;br&gt;
+            當分離 終有一天再相聚&lt;br&gt;
+            我的心還守在你這裡
+        &lt;/p&gt;
+        &lt;h3&gt;我是如此相信&lt;/h3&gt;
+        &lt;p&gt;
+            鳥群離開了森林 整座天空很灰心&lt;br&gt;
+            蝴蝶不再被吸引 玫瑰盛開的很安靜&lt;br&gt;
+            遠方的風雨不停 城市蒼白而孤寂&lt;br&gt;
+            徘徊無助的人群 焦慮著何時放晴&lt;br&gt;&lt;br&gt;
+
+            故事裡能毀壞的只有風景&lt;br&gt;
+            誰也摧毀不了我們的夢境&lt;br&gt;
+            弦月旁的流星劃過了天際&lt;br&gt;
+            我許下的願望該向誰去說明&lt;br&gt;&lt;br&gt;
+
+            隕石在浩瀚的宇宙間旅行&lt;br&gt;
+            璀璨的夜空裡漫天的水晶&lt;br&gt;
+            我的禱告終於有了回音&lt;br&gt;&lt;br&gt;
+
+            我是如此相信 在背後支撐的是你&lt;br&gt;
+            一直與我並肩而行 仰望等太陽升起&lt;br&gt;
+            聽見鳥群回來的聲音&lt;br&gt;&lt;br&gt;
+
+            為我守候的人是你 給了我堅定的信心&lt;br&gt;
+            雙手彈奏出黎明 原來愛如此的動聽&lt;br&gt;&lt;br&gt;
+
+            鳥群離開了森林 整座天空很灰心&lt;br&gt;
+            蝴蝶不再被吸引 玫瑰盛開的很安靜&lt;br&gt;
+            遠方的風雨不停 城市蒼白而孤寂&lt;br&gt;
+            徘徊無助的人群 焦慮著何時放晴&lt;br&gt;&lt;br&gt;
+
+            故事裡能毀壞的只有風景&lt;br&gt;
+            誰也摧毀不了我們的夢境&lt;br&gt;
+            弦月旁的流星劃過了天際&lt;br&gt;
+            我許下的願望該向誰去說明&lt;br&gt;&lt;br&gt;
+
+            隕石在浩瀚的宇宙間旅行&lt;br&gt;
+            璀璨的夜空裡漫天的水晶&lt;br&gt;
+            我的禱告終於有了回音&lt;br&gt;&lt;br&gt;
+
+            我是如此相信 在背後支撐的是你&lt;br&gt;
+            一直與我並肩而行 仰望等太陽升起&lt;br&gt;
+            聽見鳥群回來的聲音&lt;br&gt;&lt;br&gt;
+
+            為我守候的人是你 給了我堅定的信心&lt;br&gt;
+            雙手彈奏出黎明 原來愛如此的動聽&lt;br&gt;&lt;br&gt;
+
+            我是如此相信 在背後支撐的是你&lt;br&gt;
+            一直與我並肩而行 仰望等太陽升起&lt;br&gt;
+            聽見鳥群回來的聲音&lt;br&gt;&lt;br&gt;
+
+            為我守候的人是你 給了我堅定的信心&lt;br&gt;
+            雙手彈奏出黎明 原來愛如此的動聽
+        &lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+
+
+<h6>CSS 程式碼範例</h6>
+
+
+
+<pre class="wp-block-code"><code>/* CSS RESET */
+/* CSS STYLES */
+.wrap{
+	max-width: 800px;
+	margin: 0 auto;
+}
+.menu{
+	width: 200px;
+	float: left;
+	padding-top: 10px;
+	background: #000;
+}
+.menu li{
+	margin-bottom: 20px;
+	color: #fff;
+}
+.content{
+	margin-left: 210px;
+	background: orange;
+	color: #fff;
+}</code></pre>
+
+
+
+<h4>Float: none 清除浮動並排效果</h4>
+
+
+
+<h6>CSS 程式碼範例</h6>
+
+
+
+<pre class="wp-block-code"><code>@media (max-width: 768px){
+  .menu{
+    float: none;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px){
+  .content{
+    margin-left: 0;
+  }
+}</code></pre>
+
+
+
+<h4>網站版型框架設定</h4>
+
+
+
+<h6>CSS 事前設定</h6>
+
+
+
+<pre class="wp-block-code"><code>*,*:before,*:after{
+  box-sizing: border-box;
+}
+img{
+  max-width: 100%;
+  height: auto;
+}</code></pre>
+
+
+
+<h6>範例程式碼</h6>
+
+
+
+<pre class="wp-block-code"><code>&lt;div class="wrap"&gt;
+    &lt;div class="header"&gt;
+        &lt;h1 class="logo"&gt;&lt;a href="#"&gt;公司LOGO&lt;/a&gt;&lt;/h1&gt;
+        &lt;ul class="menu"&gt;
+            &lt;li&gt;&lt;a href="#"&gt;心墻&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;終於&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;我是如此相信&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class="content"&gt;
+        &lt;h2&gt;心墻&lt;/h2&gt;
+        &lt;p&gt;
+            在長雨落花迷濛 思亂交錯中&lt;br&gt;
+            風嘯傳聲驚動心懸空&lt;br&gt;
+            千里埋伏迎來 誰處身世外&lt;br&gt;
+            避不過命運安排&lt;br&gt;
+            閉上眼我能看見你的臉&lt;br&gt;
+            睜開眼悲盡蒼涼刀劍滿天&lt;br&gt;
+            繁塵中誰與爭鋒&lt;br&gt;
+            無聲掀起暗湧&lt;br&gt;
+            命運的流轉看破人世變幻&lt;br&gt;
+            傷離別離別太殤 猶念驚鴻一瞥&lt;br&gt;
+            遇見你的那一天&lt;br&gt;
+            同偕到白髮攜手共度年華&lt;br&gt;
+            回眸間一眼萬年&lt;br&gt;
+            被淹沒隱藏的愛&lt;br&gt;&lt;br&gt;
+
+            終是不自來&lt;br&gt;
+            權弄一生盡時悔無奈 來世若再相見&lt;br&gt;
+            以身化作劍 護你一生的周全&lt;br&gt;
+            湖中倒影相依偎的姿態&lt;br&gt;
+            無憂絢爛的歲月一去不再&lt;br&gt;
+            繁塵中誰與爭鋒 無聲掀起暗湧&lt;br&gt;
+            命運的流轉看破人世變幻&lt;br&gt;
+            傷離別離別太殤 猶念驚鴻一瞥&lt;br&gt;
+            遇見你的那一天&lt;br&gt;
+            同偕到白髮攜手共度年華&lt;br&gt;
+            回眸間一眼萬年 宮牆外風雨欲來&lt;br&gt;
+            黑夜漫延角巷 錦服繡刀在追逐不懼成敗&lt;br&gt;
+            人離散咫尺天涯 淚光滿目悲愴&lt;br&gt;
+            獨留心中的凝望&lt;br&gt;
+            心牆若撕開冰冷中的期待&lt;br&gt;
+            奈何啊空留遺憾 回頭看思量難忘&lt;br&gt;
+        &lt;/p&gt;
+        &lt;h2&gt;終於&lt;/h2&gt;
+        &lt;p&gt;
+            流年低聲輕輕說一段溫柔的唇語&lt;br&gt;
+            光陰輾轉夢裡編織著動人的秘密&lt;br&gt;
+            夢中的漣漪穿梭在心裡&lt;br&gt;
+            陪我顛沛流離風浪起&lt;br&gt;
+            飄搖無依蜿蜒幾裡&lt;br&gt;
+            留下斑駁的痕跡&lt;br&gt;&lt;br&gt;
+
+            終於以約為期讓我在今夕遇見你&lt;br&gt;
+            撥亂宿命幾世等待一段 緣起&lt;br&gt;
+            眼中天地 是我背負的荊棘&lt;br&gt;
+            最想卻是和你再相聚&lt;br&gt;
+
+            兩世凡塵如你只為我抵擋這風雨&lt;br&gt;
+            也曾是你和我分享觸動人的憧憬&lt;br&gt;
+            眉目間沉溺綰幾許親密&lt;br&gt;&lt;br&gt;
+
+            心火搖曳在彼此眼裡&lt;br&gt;
+            成為知己山海約定&lt;br&gt;
+            願為此情去追尋&lt;br&gt;&lt;br&gt;
+
+            終於是你喚醒勇氣常駐在我心裡&lt;br&gt;
+            就算隔世一言為定不分 不離&lt;br&gt;
+            不再畏懼 命運送我的荊棘&lt;br&gt;
+            破繭成蝶飛舞在天地&lt;br&gt;
+
+            終於我能為你成為這更好的自己&lt;br&gt;
+            褪去繁華找回最初真心 不渝&lt;br&gt;
+            一路崎嶇 是我無悔的經歷&lt;br&gt;
+            哪怕有天記憶被抹去&lt;br&gt;&lt;br&gt;
+
+            終於漂泊好久的船停靠在你懷裡&lt;br&gt;
+            依然還會給我海闊天空的勇氣&lt;br&gt;
+            當分離 終有一天再相聚&lt;br&gt;
+            我的心還守在你這裡
+        &lt;/p&gt;
+        &lt;h2&gt;我是如此相信&lt;/h2&gt;
+        &lt;p&gt;
+            鳥群離開了森林 整座天空很灰心&lt;br&gt;
+            蝴蝶不再被吸引 玫瑰盛開的很安靜&lt;br&gt;
+            遠方的風雨不停 城市蒼白而孤寂&lt;br&gt;
+            徘徊無助的人群 焦慮著何時放晴&lt;br&gt;&lt;br&gt;
+
+            故事裡能毀壞的只有風景&lt;br&gt;
+            誰也摧毀不了我們的夢境&lt;br&gt;
+            弦月旁的流星劃過了天際&lt;br&gt;
+            我許下的願望該向誰去說明&lt;br&gt;&lt;br&gt;
+
+            隕石在浩瀚的宇宙間旅行&lt;br&gt;
+            璀璨的夜空裡漫天的水晶&lt;br&gt;
+            我的禱告終於有了回音&lt;br&gt;&lt;br&gt;
+
+            我是如此相信 在背後支撐的是你&lt;br&gt;
+            一直與我並肩而行 仰望等太陽升起&lt;br&gt;
+            聽見鳥群回來的聲音&lt;br&gt;&lt;br&gt;
+
+            為我守候的人是你 給了我堅定的信心&lt;br&gt;
+            雙手彈奏出黎明 原來愛如此的動聽&lt;br&gt;&lt;br&gt;
+
+            鳥群離開了森林 整座天空很灰心&lt;br&gt;
+            蝴蝶不再被吸引 玫瑰盛開的很安靜&lt;br&gt;
+            遠方的風雨不停 城市蒼白而孤寂&lt;br&gt;
+            徘徊無助的人群 焦慮著何時放晴&lt;br&gt;&lt;br&gt;
+
+            故事裡能毀壞的只有風景&lt;br&gt;
+            誰也摧毀不了我們的夢境&lt;br&gt;
+            弦月旁的流星劃過了天際&lt;br&gt;
+            我許下的願望該向誰去說明&lt;br&gt;&lt;br&gt;
+
+            隕石在浩瀚的宇宙間旅行&lt;br&gt;
+            璀璨的夜空裡漫天的水晶&lt;br&gt;
+            我的禱告終於有了回音&lt;br&gt;&lt;br&gt;
+
+            我是如此相信 在背後支撐的是你&lt;br&gt;
+            一直與我並肩而行 仰望等太陽升起&lt;br&gt;
+            聽見鳥群回來的聲音&lt;br&gt;&lt;br&gt;
+
+            為我守候的人是你 給了我堅定的信心&lt;br&gt;
+            雙手彈奏出黎明 原來愛如此的動聽&lt;br&gt;&lt;br&gt;
+
+            我是如此相信 在背後支撐的是你&lt;br&gt;
+            一直與我並肩而行 仰望等太陽升起&lt;br&gt;
+            聽見鳥群回來的聲音&lt;br&gt;&lt;br&gt;
+
+            為我守候的人是你 給了我堅定的信心&lt;br&gt;
+            雙手彈奏出黎明 原來愛如此的動聽
+        &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="sidebar"&gt;
+        &lt;img src="img/1.jpg" alt=""&gt;
+        &lt;img src="img/1.jpg" alt=""&gt;
+        &lt;img src="img/1.jpg" alt=""&gt;
+    &lt;/div&gt;
+    &lt;div class="footer"&gt;
+        Copyright © 2016
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+
+
+<h6>CSS 程式碼範例</h6>
+
+
+
+<pre class="wp-block-code"><code>/* CSS RESET SETTINGS */
+*,*:before,*:after{
+	box-sizing: border-box;
+}
+img{
+	max-width: 100%;
+	height: auto;
+}
+
+/* CSS STYLES */
+.wrap{
+	max-width: 960px;
+	margin: 0 auto;
+}
+.header{
+	position: relative;
+	height: 350px;
+}
+@media (max-width: 768px){
+	.header{
+		height: auto;
+	}
+}
+.logo{
+	position: absolute;
+	top: 30px;
+	left: 0px;
+}
+.logo a{
+	display: block;
+	width: 250px;
+	text-indent: -99999px;
+	height: 250px;
+	background: url(../img/M1.png);
+}
+@media (max-width: 768px){
+	.logo{
+		position: relative;
+		margin: 0 auto;
+		width: 150px;
+	}
+	.logo a{
+		display: block;
+		width: 150px;
+		height: 170px;
+		background: url(../img/M2.png) no-repeat;
+	}
+}
+.menu{
+	float: right;
+	margin: 30px 0 0 0;
+}
+.menu li{
+	float: left;
+	background: #3399ff;
+	border-right: 1px solid #fff;
+}
+.menu li a{
+	color: #fff;
+	display: block;
+	width: 100px;
+	font-weight: bold;
+	text-align: center;
+	height: 30px;
+	line-height: 30px;
+	text-decoration: none;
+}
+@media (max-width: 768px){
+	.menu{
+		float: none; /* 拿掉浮動 */
+	}
+	.menu li{
+		width: 90%;
+		float: none; /* float style */
+		margin: 0 auto 10px auto;
+		border-radius: 3px;
+	}
+	.menu li a{
+		width: 100%;
+		text-align: center;
+	}
+}
+.content{
+	float: left;
+	width: 75%;
+	border: 2px solid #000;
+	padding: 10px;
+}
+.content h2{
+	font-weight: bold;
+	font-size: 26px;
+	padding: 30px 0 20px 0;
+}
+.content p{
+	line-height: 1.8;
+	letter-spacing: 1pt;
+	padding: 0 0 30px 0;
+}
+.sidebar{
+	float: right;
+	width: 20%;
+	border: 2px solid #000;
+	padding: 5px;
+	margin-left: 5%;
+}
+.sidebar img{
+	margin: 0 0 10px 0;
+}
+@media (max-width: 768px){
+	.content, .sidebar{
+		border: none;
+		float: none; /* 拿掉浮動 */
+		width: 100%; /* 百分比呈現寬度 */
+		margin: 0;
+	}
+	.sidebar img{
+		display: block;
+		max-width: 90%;
+		height: auto;
+		margin-bottom: 10px;
+	}
+}
+.footer{
+	clear: both;
+	padding: 1em 0;
+	text-align: center;
+}</code></pre>
+
+
+
+<h4>第二章作業</h4>
+
+
+
+<p>作業規範：</p>
+
+
+
+<ul>
+<li>先從 PC 開始再依序做到手機</li>
+<li>PC 寬度為 1000px</li>
+<li>表頭選單在 767px 後變成 2*2 選單排列</li>
+<li>課程列表在 1000px 以下時也能自適應，767px 後變成單欄式排版</li>
+</ul>
+
+
+
+<p>iPad 直式 – 768*1024</p>
+
+
+
+<h2>以 UI 設計角度切入響應式設計該注意的細節</h2>
+
+
+
+<h4>動線設計：並非所有內容都要全部塞到網頁內容</h4>
+
+
+
+<h4>斷點時機：設計多欄式佈局的必要觀念</h4>
+
+
+
+<p>以文字行數為例</p>
+
+
+
+<ul><li>左右留白大約在 10~20px 之間。</li></ul>
+
+
+
+<h4>斷點時機：設計多欄式布局的必要觀念-課程補充</h4>
+
+
+
+<p>「課程說明」</p>
+
+
+
+<p>這邊額外補充一下，中文內文單行字元 30~40 會比較好閱讀，英文則是 32~80 個字元數</p>
+
+
+
+<p>更詳細一點的規範與說明，可以看以下參考連結唷</p>
+
+
+
+<ul><li><a href="https://www.ibm.com/design/language/typography/type-basics/" target="_blank" rel="noreferrer noopener">連結</a></li></ul>
+
+
+
+<h4>點擊範圍：設計讓人好點選的元素</h4>
+
+
+
+<ul>
+<li>手指範圍約 44 px。</li>
+<li>設計點擊範圍至少高度都要滿足 44 px 以上會比較好。</li>
+</ul>
+
+
+
+<h4>少即是多：避免資訊量爆炸</h4>
+
+
+
+<p>PC 螢幕解析度下的內容</p>
+
+
+
+<ul>
+<li>縮圖</li>
+<li>標題</li>
+<li>局部內文</li>
+<li>其他說明</li>
+</ul>
+
+
+
+<p>Mobile 螢幕解析度下的內容</p>
+
+
+
+<ul>
+<li>縮圖</li>
+<li>標題</li>
+</ul>
+
+
+
+<h4>載具特性：使用者行為 touch、hover 傻傻分不清楚</h4>
+
+
+
+<ul>
+<li>PC 是滑過的事件</li>
+<li>iPad、Mobile 是點擊的事件</li>
+</ul>
+
+
+
+<h4>斷點元素：只有手機才會顯示的功能與Layout切換</h4>
+
+
+
+<p>舉例：漢堡選單</p>
+
+
+
+<p>斷點：960 px、768 px</p>
+
+
+
+<p>桌面版</p>
+
+
+
+<ul>
+<li>選單為水平排列</li>
+<li>隱藏漢堡選單</li>
+</ul>
+
+
+
+<p>行動版</p>
+
+
+
+<ul>
+<li>選單為垂直排列 (預設隱藏)</li>
+<li>顯示漢堡選單</li>
+</ul>
+
+
+
+<h6>程式碼</h6>
+
+
+
+<pre class="wp-block-code"><code>.navbar-menu &gt; li{
+  display: inline-block;
+}
+.button-toggle{
+  display: none;
+}
+@media screen and (max-width: 768px){
+  .navbar-menu{
+    display: none;
+  }
+  .navbar-menu.active{
+    display: block;
+  }
+  .navbar-menu &gt; li{
+    display: block;
+  }
+  .button-toggle{
+    display: inline-block;
+  }
+}</code></pre>
+
+
+
+<h4>斷點元素：只有手機才會顯示的功能與Layout切換-課程補充</h4>
+
+
+
+<p>「課程說明」</p>
+
+
+
+<p>因為同學可能沒聽過 「Layout」是什麼，所以老師這邊額外簡單補充一下</p>
+
+
+
+<p>Layout 是網頁的通用版型的意思，舉例來講，你在逛網頁時往往會有一些地方是相同的，通常是 header (首頁) 與 footer (頁尾)，但只有中間的內容(content)會隨著使用者切換，而這個 header 與 footer 就是 Layout 唷。</p>
+
+
+
+<h2>斷點規劃</h2>
+
+
+
+<h4>先要有個認知，響應式無法讓所有螢幕解析度都最佳化</h4>
+
+
+
+<pre class="wp-block-code"><code>/* 斷點 Breakpoint */
+
+@media (max-width: 768px){
+  .news li{
+    width: 48%;
+  }
+}
+@media (max-width: 569px){
+  .news li{
+    width: 98%;
+  }
+}</code></pre>
+
+
+
+<p>有些設計稿，會單純針對 768px 給予客製化的版型，因為剛好是 iPad 的尺寸，<br><br>所以在 768px 時就會顯示雙欄式排版，而假使解析度在 iPad 以下時，例如 767px 就會設計承單欄，以滿足手機版上較大的螢幕解析度。<br><br>所以在開發時，比較常用的就是 768px、767px 來下斷點，不會使用 769px 來下斷點。</p>
+
+
+
+<h4>遵循 80/20 法則，先兼容熱門瀏覽器吧！</h4>
+
+
+
+<p>如何替客戶設計響應式斷點？</p>
+
+
+
+<ul>
+<li>有舊網站時，先套 Google分析 觀察數據</li>
+<li>如果沒有，以最熱門的解析度為主</li>
+</ul>
+
+
+
+<h4>什麼是 Mobile First 與 Desktop First 優先？</h4>
+
+
+
+<h6>Mobile First 手機版型優先</h6>
+
+
+
+<pre class="wp-block-code"><code>.wrap{
+  padding-top: 20px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+@media (min-width: 960px){
+  .wrap{
+    max-width: 960px;
+  }
+}
+.news h2{
+  color: #000000;
+  padding: .3em 0;
+  font-size: 20px;
+}
+.news li{
+  width: 98%;
+  margin-right: 1%;
+  margin-left: 1%;
+}
+@media (min-width: 768px){
+  .news li{
+    width: 48%;
+    float: left;
+    margin-bottom: 1em;
+  }
+}
+@media (min-width: 960px){
+  .news li{
+    width: 31.33333%;
+  }
+}</code></pre>
+
+
+
+<h6>Desktop First 電腦版型優先</h6>
+
+
+
+<pre class="wp-block-code"><code>.wrap{
+  max-width: 960px;
+  padding-top: 20px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+.news h2{
+  color: #000000;
+  padding: .3em 0;
+  font-size: 20px;
+}
+.news li{
+  width: 31.33333%;
+  margin-right: 1%;
+  margin-left: 1%;
+  margin-bottom: 1em;
+  float: left;
+}
+
+/* 斷點 Breakpoint */
+
+@media (max-width: 768px){
+  .news li{
+    width: 48%;
+  }
+}
+@media (max-width: 569px){
+  .news li{
+    width: 98%;
+  }
+}</code></pre>
+
+
+
+<p>斷點順序</p>
+
+
+
+<ul>
+<li>Mobile First – 手機&gt;平板&gt;高螢幕解析度PC</li>
+<li>Desktop First – 高螢幕解析度PC&gt;平板&gt;手機</li>
+</ul>
+
+
+
+<h4>為何要考量 Mobile First 與 Desktop 優先的網頁版型？</h4>
+
+
+
+<p>依版型靈活度來決定。</p>
+
+
+
+<h4>常見 PC 解析度斷點設計</h4>
+
+
+
+<p><a rel="noreferrer noopener" href="https://gs.statcounter.com/" target="_blank">StatCounter</a></p>
+
+
+
+<p>中間內容的解析度</p>
+
+
+
+<ul>
+<li>960px (常見)</li>
+<li>1000px</li>
+<li>1280px</li>
+<li>1440px (少見還是有)</li>
+</ul>
+
+
+
+<h6>程式碼範例：表頭滿版設計</h6>
+
+
+
+<pre class="wp-block-code"><code>&lt;div class="header"&gt;
+  &lt;div class="container"&gt;
+    &lt;div class="logo"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="content container"&gt;
+  &lt;p&gt;1234&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>.header{
+  height: 80px;
+  background: #000;
+  margin-bottom: 30px;
+}
+.header .logo{
+  height: 50px;
+  width: 50px;
+  background: yellow;
+  float: left;
+}
+.container{
+  max-width: 960px;
+  margin: 0 auto;
+}</code></pre>
+
+
+
+<h4>Viewport Sizes 服務網站介紹</h4>
+
+
+
+<p><a rel="noreferrer noopener" href="https://viewportsizer.com/" target="_blank">Viewport Size</a></p>
+
+
+
+<h4>Viewport Sizes 服務網站介紹-課程補充</h4>
+
+
+
+<p>「課程說明」</p>
+
+
+
+<p>Viewport Sizes 目前已經更改網址成：<a href="http://viewportsizes.mattstow.com/" target="_blank" rel="noreferrer noopener">連結</a></p>
+
+
+
+<p>但由於該網站中沒有比較新的型號，因此這邊老師也提供其他查詢網址唷~</p>
+
+
+
+<ul>
+<li><a href="http://screensiz.es/" target="_blank" rel="noreferrer noopener">連結一</a></li>
+<li><a href="https://yesviz.com/" target="_blank" rel="noreferrer noopener">連結二</a></li>
+</ul>
+
+
+
+<h5>自我補充</h5>
+
+
+
+<ul><li><a href="https://viewportsizer.com/" target="_blank" rel="noreferrer noopener">連結</a></li></ul>
+
+
+
+<h4>六角講師斷點設計分享</h4>
+
+
+
+<p>分享老師自己必會設定的&nbsp;media&nbsp;斷點 ，<br>更新日期：2016/10/8</p>
+
+
+
+<ol>
+<li>iPad – 768px</li>
+<li>iPad以下 – 767px</li>
+<li>iPhone 6 Plus – 414px (視專案族群)</li>
+<li>iPhone 6 – 375px (視專案族群)</li>
+<li>iPone 5、SE – 320px</li>
+</ol>
+
+
+
+<p>有學生應該會很好奇，<br>為什麼 還會有一個 767px 的斷點，<br>因為通常 iPad 直式 是 Android、IOS 平版很常見的大小，<br>再接著&nbsp;767px~320px 我便會視為他們都是手機 size，<br>所以在 767 px 以下時就會直接把他變成手機版型，<br>畢竟 767px~6xx size 相當少見，一開始各位學生可以先確保一些熱門斷點上優化即可，<br>至少可以滿足 80% 以上的客戶，<br>不用太吹毛求疵，當然你力求優化的話也是 ok 的。<br><br>再來 320px 是你最小需要注意的 SIZE，<br>現在仍然有許多手機是 320px，尤其是小 size 的 iPhone，<br>以前甚至有 240px 的手機，但現在已經相當稀有了。</p>
+
+
+
+<p>所以如果是 PC 做到手機的話，語法就會有點像是這樣：</p>
+
+
+
+<p>Desktop First 範例程式碼</p>
+
+
+
+<pre class="wp-block-code"><code>.wrap{
+  max-width: 960px;
+}
+.header{
+  height: 80px;
+}
+.list li{
+  width: 33%;
+}
+.list h3{
+  font-size: 24px;
+}
+@media (max-width: 768px){
+  .header{
+    height: auto;
+  }
+  .list li{
+    width: 48%;
+    margin: 0 1%;
+  }
+}
+@media (max-width: 767px){
+  .list li{
+    width: 98%;
+  }
+}
+@media (max-width: 414px){
+  .list li{
+    font-size: 18px;
+  }
+}</code></pre>
+
+
+
+<h2>響應式表格與表單設計</h2>
+
+
+
+<h4>響應式表格設計 (上)</h4>
+
+
+
+<h6>範例程式碼</h6>
+
+
+
+<pre class="wp-block-code"><code>&lt;div class="container"&gt;
+    &lt;table class="order"&gt;
+        &lt;tr&gt;
+            &lt;th class="m-none" width="15%"&gt;編號&lt;/th&gt;
+            &lt;th width="15%"&gt;訂單日期&lt;/th&gt;
+            &lt;th width="15%"&gt;姓名&lt;/th&gt;
+            &lt;th width="20%"&gt;品項&lt;/th&gt;
+            &lt;th width="15%"&gt;總金額&lt;/th&gt;
+            &lt;th class="m-none" width="15%"&gt;管理&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td class="m-none"&gt;000001&lt;/td&gt;
+            &lt;td&gt;2020/05/04&lt;/td&gt;
+            &lt;td&gt;買家一&lt;/td&gt;
+            &lt;td&gt;冰箱&lt;/td&gt;
+            &lt;td&gt;20000&lt;/td&gt;
+            &lt;td class="m-none"&gt;
+                &lt;input type="button" value="修改"&gt;
+                &lt;input type="button" value="刪除"&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td class="m-none"&gt;000002&lt;/td&gt;
+            &lt;td&gt;2020/05/04&lt;/td&gt;
+            &lt;td&gt;買家二&lt;/td&gt;
+            &lt;td&gt;電風扇&lt;/td&gt;
+            &lt;td&gt;5000&lt;/td&gt;
+            &lt;td class="m-none"&gt;
+                &lt;input type="button" value="修改"&gt;
+                &lt;input type="button" value="刪除"&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td class="m-none"&gt;000003&lt;/td&gt;
+            &lt;td&gt;2020/05/04&lt;/td&gt;
+            &lt;td&gt;買家三&lt;/td&gt;
+            &lt;td&gt;電腦&lt;/td&gt;
+            &lt;td&gt;15000&lt;/td&gt;
+            &lt;td class="m-none"&gt;
+                &lt;input type="button" value="修改"&gt;
+                &lt;input type="button" value="刪除"&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>/*  css reset
+============================*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1;
+	font-family: 標楷體;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+:focus {
+	outline: 0;
+}
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+html body div.clear, html body span.clear {
+	background: none;
+	border: 0;
+	clear: both;
+	display: block;
+	float: none;
+	font-size: 0;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+.container{
+	max-width: 800px;
+}
+.order{
+	width: 100%;
+}
+.order th,.order td{
+	border: 1px solid green;
+	padding: 5px;
+	text-align: center;
+}
+.order th{
+	background: green;
+	color: #fff;
+}
+@media(max-width: 569px){
+	.m-none{
+		display: none;
+	}
+}</code></pre>
+
+
+
+<h4>響應式表格設計 (下)</h4>
+
+
+
+<h6>範例程式碼</h6>
+
+
+
+<pre class="wp-block-code"><code>&lt;h1&gt;個人家電&lt;/h1&gt;
+&lt;p&gt;大部分的家電用品在這都可以找到，就算找不到，該公司可以代為訂購所需家電用品，價格與市面上的一樣，而在服務我們提供了售後服務以及回購的折扣。&lt;/p&gt;
+&lt;div class="container"&gt;
+    &lt;table class="order"&gt;
+        &lt;tr&gt;
+            &lt;th width="15%"&gt;編號&lt;/th&gt;
+            &lt;th width="10%"&gt;訂單日期&lt;/th&gt;
+            &lt;th width="10%"&gt;姓名&lt;/th&gt;
+            &lt;th width="20%"&gt;品項&lt;/th&gt;
+            &lt;th width="20%"&gt;地址&lt;/th&gt;
+            &lt;th width="10%"&gt;總金額&lt;/th&gt;
+            &lt;th width="15%"&gt;管理&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;000001&lt;/td&gt;
+            &lt;td&gt;2020/05/04&lt;/td&gt;
+            &lt;td&gt;買家一&lt;/td&gt;
+            &lt;td&gt;冰箱&lt;/td&gt;
+            &lt;td&gt;台北市XX區XX路&lt;/td&gt;
+            &lt;td&gt;20000&lt;/td&gt;
+            &lt;td&gt;
+                &lt;input type="button" value="修改"&gt;
+                &lt;input type="button" value="刪除"&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;000002&lt;/td&gt;
+            &lt;td&gt;2020/05/04&lt;/td&gt;
+            &lt;td&gt;買家二&lt;/td&gt;
+            &lt;td&gt;電風扇&lt;/td&gt;
+            &lt;td&gt;台南市XX區XX路&lt;/td&gt;
+            &lt;td&gt;5000&lt;/td&gt;
+            &lt;td&gt;
+                &lt;input type="button" value="修改"&gt;
+                &lt;input type="button" value="刪除"&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;000003&lt;/td&gt;
+            &lt;td&gt;2020/05/04&lt;/td&gt;
+            &lt;td&gt;買家三&lt;/td&gt;
+            &lt;td&gt;電腦&lt;/td&gt;
+            &lt;td&gt;高雄市XX區XX路&lt;/td&gt;
+            &lt;td&gt;15000&lt;/td&gt;
+            &lt;td&gt;
+                &lt;input type="button" value="修改"&gt;
+                &lt;input type="button" value="刪除"&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+&lt;/div&gt;
+&lt;h1&gt;個人家電&lt;/h1&gt;
+&lt;p&gt;大部分的家電用品在這都可以找到，就算找不到，該公司可以代為訂購所需家電用品，價格與市面上的一樣，而在服務我們提供了售後服務以及回購的折扣。&lt;/p&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>/*  css reset
+============================*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1;
+	font-family: 標楷體;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+:focus {
+	outline: 0;
+}
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+html body div.clear, html body span.clear {
+	background: none;
+	border: 0;
+	clear: both;
+	display: block;
+	float: none;
+	font-size: 0;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+h1{
+	font-size: 24px;
+	line-height: 1.5;
+}
+
+.container{
+	max-width: 800px;
+	margin-bottom: 1em;
+}
+
+.order th,.order td{
+	border: 1px solid green;
+	padding: 5px;
+	text-align: center;
+}
+.order th{
+	background: green;
+	color: #fff;
+}
+@media (max-width:569px){
+	.container{
+		overflow-x: auto;
+	}
+	.order{
+		width: 768px;
+	}
+}</code></pre>
+
+
+
+<h4>pure.css：加強你對網頁元素的了解</h4>
+
+
+
+<p><a href="https://purecss.io/" target="_blank" rel="noreferrer noopener">pure.css</a></p>
+
+
+
+<h4>pure.css：按鈕設計原理</h4>
+
+
+
+<p>講解和範例</p>
+
+
+
+<pre class="wp-block-code"><code>.pure-button{
+  /* Structure */
+  display: inline-block;
+  zoom: 1;
+  line-height: normal;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Firefox: Get rid of the inner focus border */
+.pure-button::-moz-focus-inner{
+  padding: 0;
+  border: 0;
+}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>/*csslint outline-none:false*/
+
+.pure-button{
+  font-family: inherit;
+  font-size: 100%;
+  padding: 0.5em 1em;
+  color: #444; /* rgba not supported (IE 8) */
+  color: rgba(0, 0, 0,0.80); /* rgba supported */
+  border: none rgba(0, 0, 0, 0); /* IE 9 + everything else */
+  background-color: #e6e6e6;
+  text-decoration: none;
+  border-radius: 2px;
+}</code></pre>
+
+
+
+<h4>pure.css：自行新增子模組</h4>
+
+
+
+<p>同時選取相同字串 – Ctrl + d</p>
+
+
+
+<p>pure.css 中的 button.css 把 pure 更改成 btn 並貼在自己的程式碼上。</p>
+
+
+
+<h4>pure.css：重新認識表單狀態</h4>
+
+
+
+<pre class="wp-block-code"><code>&lt;input type="text" class="mail" /&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>.mail:focus{
+  border: 10px solid #000;
+  outline: 0;
+}</code></pre>
+
+
+
+<p>focus 的事件 聚焦在這在這個欄位上，去觸發CSS裡設定的值。</p>
+
+
+
+<p>瀏覽器預設會有淡淡的藍線，如果影響到外觀可以增加 outline: 0; 來拿掉那條線。</p>
+
+
+
+<h6>修改 placeholder 文字顏色:</h6>
+
+
+
+<p>placeholder 的話，會使用到 ::placeholder 這個選取器寫法</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;p class="demo-1"&gt;&lt;input  id="demo-1" name="fname" type="text" placeholder="輸入文字"&gt;&lt;/p&gt;
+
+&lt;p class="demo-2"&gt;&lt;input id="demo-2" name="fname" type="text" placeholder="輸入文字"&gt;&lt;/p&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>/*webkit瀏覽器專用*/
+.demo-2 ::-webkit-input-placeholder { color: red; }
+/*Firefox 4-18瀏覽器專用*/
+.demo-2 input::-moz-placeholder { color: red; }
+/*Firefox 19+瀏覽器專用*/
+.demo-2 input::-moz-placeholder{color:red;}
+/*IE10瀏覽器專用*/
+.demo-2:-ms-input-placeholder{color: red;}</code></pre>
+
+
+
+<h4>pure.css：如何將表單整合至網頁</h4>
+
+
+
+<h6>範例程式碼</h6>
+
+
+
+<pre class="wp-block-code"><code>&lt;div class="wrap"&gt;
+    &lt;div class="header"&gt;&lt;/div&gt;
+    &lt;div class="content"&gt;
+        &lt;div class="form-login"&gt;
+            &lt;h2&gt;六角西餐廳&lt;/h2&gt;
+            &lt;form class="pure-form pure-form-stacked"&gt;
+                &lt;fieldset&gt;
+                    &lt;label for="stacked-email"&gt;Email&lt;/label&gt;
+                    &lt;input class="form-login-text" type="email" id="stacked-email" placeholder="Email" /&gt;
+                    &lt;span class="pure-form-message"&gt;This is a required field.&lt;/span&gt;
+                    &lt;label for="stacked-password"&gt;Password&lt;/label&gt;
+                    &lt;input class="form-login-text" type="password" id="stacked-password" placeholder="Password" /&gt;
+                    &lt;label for="stacked-remember" class="pure-checkbox"&gt;
+                    &lt;button type="submit" class="pure-button pure-button-primary"&gt;Sign in&lt;/button&gt;
+                &lt;/fieldset&gt;
+            &lt;/form&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="footer"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>/* CSS RESET */
+/* CSS RESET SETTINGS */
+/* PURE CSS */
+/* CSS STYLES */
+.wrap{
+    max-width: 960px;
+    margin: 0 auto;
+}
+.header{
+    height: 80px;
+    background: red;
+}
+.content{
+    padding: 80px 0;
+}
+.form-login{
+    max-width: 375px;
+    margin: 0 auto;
+    color: red;
+}
+.form-login .pure-form-stacked .form-login-text{
+    margin: 1em 0;
+}
+.footer{
+    height: 80px;
+    background: blue;
+}</code></pre>
+
+
+
+<h4>表單設計：文字欄位並非只有「text」</h4>
+
+
+
+<h6>範例程式碼</h6>
+
+
+
+<pre class="wp-block-code"><code>email： &lt;input type="email"&gt;&lt;br&gt;
+電話： &lt;input type="tel"&gt;&lt;br&gt;
+數量： &lt;input type="number"&gt;&lt;br&gt;</code></pre>
+
+
+
+<h5>電腦上預覽手機畫面模擬器</h5>
+
+
+
+<ul>
+<li>Apple 官方提供的 iOS 模擬器，只要安裝 XCode 就能夠運行</li>
+<li>Windows 可以安裝 Android 模擬器，可以安裝 Android Studio 官方所提供的工具 –&nbsp;<a href="https://developer.android.com/studio/run/emulator" target="_blank" rel="noreferrer noopener">emulator</a>
+</li>
+</ul>
+
+
+
+<h4>表單設計：文字欄位並非只有「text」-課程補充</h4>
+
+
+
+<p>「課程補充」</p>
+
+
+
+<p>在這邊老師是使用 Mac 的 Xcode 模擬 iPhone 介面，但是這個功能只有在 Mac 上才有，因此這邊建議可以使用 Chrome 瀏覽器來模擬就可以囉。</p>
+
+
+
+<h2>響應式圖形設計</h2>
+
+
+
+<h4>基礎篇：響應式圖片設計</h4>
+
+
+
+<pre class="wp-block-code"><code>&lt;img src="img/img.jpg" alt&gt;</code></pre>
+
+
+
+<h6>方法一</h6>
+
+
+
+<pre class="wp-block-code"><code>img{
+  width: 100%;
+}</code></pre>
+
+
+
+<h6>方法二</h6>
+
+
+
+<pre class="wp-block-code"><code>img{
+  max-width: 100%;
+}</code></pre>
+
+
+
+<h4>基礎篇：響應式圖片reset 教學</h4>
+
+
+
+<pre class="wp-block-code"><code>/* img reset */
+img{
+  max-width: 100%;
+  height: auto;
+}</code></pre>
+
+
+
+<h4>心法篇：圖片 SIZE 規劃，刻意設計較大張一點的技巧</h4>
+
+
+
+<p>滿版圖片大小約600px。</p>
+
+
+
+<h4>心法篇：判斷圖片使用時機</h4>
+
+
+
+<ul>
+<li>Logo 使用 svg 圖片</li>
+<li>bar 上的社群圖片小圖大部分是 png</li>
+<li>banner 使用 jpg 或 png</li>
+<li>list 的圖片可能會用 jpg</li>
+</ul>
+
+
+
+<h4>SVG 篇：向量圖片介紹</h4>
+
+
+
+<p>SVG 是向量圖片，不會因為尺寸變大而模糊。</p>
+
+
+
+<p>PNG 是點陣圖片，會因為尺寸變大而模糊。</p>
+
+
+
+<h4>SVG 篇：繪圖軟體匯出 svg 與 png 圖片流程</h4>
+
+
+
+<p>工具：Illustrator</p>
+
+
+
+<ul>
+<li>svg：用Illustrator 另存新檔，檔案格式選為 svg 格式。</li>
+<li>png：檔案，存儲為網頁用，檔案格式選為 png24 格式。</li>
+</ul>
+
+
+
+<h4>SVG 篇：將 LOGO 取代為 SVG 格式</h4>
+
+
+
+<pre class="wp-block-code"><code>&lt;div class="logo"&gt;
+  &lt;a href="#"&gt;公司名稱&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>.logo a{
+  display: block;
+  background-image: url(../img/logo.png);
+  background-image: url(../img/logo.svg);
+  width: 128px;
+  height: 128px;
+  background-size: contain;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+}</code></pre>
+
+
+
+<h4>SVG 篇：將 LOGO 取代為 SVG 格式-課程補充</h4>
+
+
+
+<p>「課程說明」</p>
+
+
+
+<p>補充一下關於「text-indent: 101%; overflow: hidden; white-space: nowrap;」的程式碼意思</p>
+
+
+
+<p>text-indent: 101%; 是 CSS 語法的縮排或凸排的語法，概念就跟 Word 的首字凸排或縮排一樣。</p>
+
+
+
+<p>overflow: hidden; 當元素超出範圍時，元素就隱藏</p>
+
+
+
+<p>white-space: nowrap; 因為文字到達元素最大範圍時，通常會自動換行，但是這邊設置強制不讓它換行。</p>
+
+
+
+<p>也因此這三個屬性才能夠達到隱藏文字效果。</p>
+
+
+
+<h4>技巧篇：Banner 設計 – 縮放圖片原理</h4>
+
+
+
+<pre class="wp-block-code"><code>&lt;div class="header" style="height: 70px; background: red;"&gt;&lt;/div&gt;
+&lt;div class="banner"&gt;
+  &lt;img src="img/big.png" alt=""&gt;
+&lt;/div&gt;
+&lt;!-- 1000*400 比例：10:4 --&gt;
+&lt;!-- 500*200 比例：10:4 --&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>/* img reset */
+img{
+  max-width: 100%:
+  height: auto;
+}</code></pre>
+
+
+
+<p>需注意的是，表頭加上 banner 上的設計會不會超過裝置的高度或是其他。</p>
+
+
+
+<p>PC 和手機上因為裝置寬度不同，圖片大小和強調重點有所不同。</p>
+
+
+
+<ul>
+<li>PC 上因為是大張的圖片，可以呈現的物品比較多。</li>
+<li>手機上因為是小張的圖片，表達想強調的重點。</li>
+</ul>
+
+
+
+<p>以上所說，關於圖片的比例、呈現的東西、以及在各種手機系列的時候，會不會因為 Logo + banner 超過裝置的高度。</p>
+
+
+
+<h4>技巧篇：Banner 設計 – 背景擷取</h4>
+
+
+
+<h6>範例程式碼</h6>
+
+
+
+<pre class="wp-block-code"><code>&lt;div class="header"&gt;&lt;/div&gt;
+&lt;div class="banner"&gt;&lt;/div&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>.header{
+  height: 50px;
+  background: red;
+}
+.banner{
+  height: 420px;
+  background-color: black;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(../img/big.png);
+}
+@media screen and (max-width: 600px) {
+  .banner{
+    background-image: url(../img/small.png);
+}</code></pre>
+
+
+
+<p>程式碼範例：<a href="https://codepen.io/liao/pen/ozqArr" target="_blank" rel="noreferrer noopener">連結</a></p>
+
+
+
+<h4>工具篇：tinypng 壓縮圖片服務</h4>
+
+
+
+<p><a rel="noreferrer noopener" href="https://tinypng.com/" target="_blank">tinypng</a>，可以去壓縮圖片的大小。</p>
+
+
+
+<p>圖片有去做優化，網站瀏覽品質會比較好一點。<br>在手機頻寬下，還是可以瀏覽很順暢。</p>
+
+
+
+<p>開發響應式網站的時候，優化響應式網頁的載入速度。</p>
+
+
+
+<h2>常見響應式設計選單</h2>
+
+
+
+<h4>響應式選單常見樣式</h4>
+
+
+
+<ul>
+<li><a rel="noreferrer noopener" href="https://stuffandnonsense.co.uk/" target="_blank">一般選單範例</a></li>
+<li><a href="https://skinnyties.com/" target="_blank" rel="noreferrer noopener">一列式設計</a></li>
+<li><a rel="noreferrer noopener" href="https://mopcon.org/2014/" target="_blank">漢堡選單範例</a></li>
+<li><a rel="noreferrer noopener" href="https://www.japantimes.co.jp/" target="_blank">Off canvas 選單範例</a></li>
+</ul>
+
+
+
+<p>3*2<br>320/3 = 10x px<br>1字 = 16px<br>iPhone 320px = 20字</p>
+
+
+
+<h4>多欄多列式設計細節</h4>
+
+
+
+<ul>
+<li>320px 最小值 – iPhone 5、SE</li>
+<li>16px * 20 字 = 320px</li>
+<li>選單數字可能最多4個</li>
+<li>選單數量盡量不要奇數</li>
+<li>迷思：想要各種兼容、優化，實際上先抓大方向以滿足顧客要求為主</li>
+</ul>
+
+
+
+<h6>網頁排版所需時間</h6>
+
+
+
+<ul>
+<li>PC web layout 1~2天</li>
+<li>RWD web layout 3~7天</li>
+</ul>
+
+
+
+<h6>範例程式碼</h6>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div class="wrap"&gt;
+        &lt;div class="header clearfix"&gt;
+            &lt;div class="logo"&gt;
+                &lt;a href="#"&gt;公司名稱&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;ul class="menu"&gt;
+                &lt;li&gt;&lt;a href="#"&gt;選單內容&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;選單2&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;選單3&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;選單4&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;選單5&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;選單6&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;div class="banner"&gt;&lt;/div&gt;
+        &lt;ul class="news"&gt;
+            &lt;li&gt;
+                &lt;h2&gt;大標題&lt;/h2&gt;
+                &lt;img src="img/big.jpg" alt=""&gt;
+                &lt;p&gt;"It is often said that the pursuance of integrated collection of software engineering standards minimizes influnce of The Setting of Functional Event" (Heriberto Millard in The Book of the Application Rules)&lt;/p&gt;                
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;h2&gt;大標題&lt;/h2&gt;
+                &lt;img src="img/big.jpg" alt=""&gt;
+                &lt;p&gt;"It is often said that the pursuance of integrated collection of software engineering standards minimizes influnce of The Setting of Functional Event" (Heriberto Millard in The Book of the Application Rules)&lt;/p&gt;                
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;h2&gt;大標題&lt;/h2&gt;
+                &lt;img src="img/big.jpg" alt=""&gt;
+                &lt;p&gt;"It is often said that the pursuance of integrated collection of software engineering standards minimizes influnce of The Setting of Functional Event" (Heriberto Millard in The Book of the Application Rules)&lt;/p&gt;                
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;h2&gt;大標題&lt;/h2&gt;
+                &lt;img src="img/big.jpg" alt=""&gt;
+                &lt;p&gt;"It is often said that the pursuance of integrated collection of software engineering standards minimizes influnce of The Setting of Functional Event" (Heriberto Millard in The Book of the Application Rules)&lt;/p&gt;                
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;h2&gt;大標題&lt;/h2&gt;
+                &lt;img src="img/big.jpg" alt=""&gt;
+                &lt;p&gt;"It is often said that the pursuance of integrated collection of software engineering standards minimizes influnce of The Setting of Functional Event" (Heriberto Millard in The Book of the Application Rules)&lt;/p&gt;                
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;h2&gt;大標題&lt;/h2&gt;
+                &lt;img src="img/big.jpg" alt=""&gt;
+                &lt;p&gt;"It is often said that the pursuance of integrated collection of software engineering standards minimizes influnce of The Setting of Functional Event" (Heriberto Millard in The Book of the Application Rules)&lt;/p&gt;                
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;h2&gt;大標題&lt;/h2&gt;
+                &lt;img src="img/big.jpg" alt=""&gt;
+                &lt;p&gt;"It is often said that the pursuance of integrated collection of software engineering standards minimizes influnce of The Setting of Functional Event" (Heriberto Millard in The Book of the Application Rules)&lt;/p&gt;                
+            &lt;/li&gt;
+        &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/*  css reset
+============================*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1;
+	font-family: 標楷體;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+:focus {
+	outline: 0;
+}
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+html body div.clear, html body span.clear {
+	background: none;
+	border: 0;
+	clear: both;
+	display: block;
+	float: none;
+	font-size: 0;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+/* img reset */
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* clearfix */
+.clearfix:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* CSS STYLES */
+
+.wrap{
+    max-width: 1200px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+.header{
+    background: pink;
+}
+.logo{
+    float: left;
+}
+.logo a{
+    display: block;
+    background-image: url(../img/logo-01.png);
+    background-image: url(../img/logo-01.svg);
+    background-repeat: no-repeat;
+    width: 128px;
+    height: 56px;
+    background-size: contain;
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.menu{
+    float: right;
+}
+.menu li{
+    float: left;
+}
+.menu li a{
+    display: block;
+    background: slateblue;
+    color: #fff;
+    padding: 1em;
+    text-decoration: none;
+}
+.menu li a:hover{
+    background: #000;
+}
+
+@media (max-width: 767px){
+    .logo{
+        float: none;
+    }
+    .logo a{
+        margin: 0 auto;
+    }
+    .menu{
+        float: none;
+    }
+    .menu li{
+        width: 33.33333%;
+        text-align: center;
+    }
+    .menu li a{
+        padding: 1em .25em;
+    }
+}
+
+.banner{
+    height: 420px;
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url(../img/burger-big.png);
+}
+@media screen and (max-width: 600px) {
+    .banner{
+        background-image: url(../img/burger-small.png)
+    }
+}
+.news h2{
+    color: #000000;
+    padding: .3em 0;
+    font-size: 20px;
+}
+.news li{
+    width: 31.33333%;
+    margin-right: 1%;
+    margin-left: 1%;
+    margin-bottom: 1em;
+    float: left;
+}
+
+
+@media (max-width: 768px){
+    .news li{
+        width: 48%;
+    }
+}
+@media (max-width: 569px){
+    .news li{
+        width: 98%;
+    }
+}</code></pre>
+
+
+
+<h4>漢堡選單設計</h4>
+
+
+
+<h6>最重要的是以下這個語法</h6>
+
+
+
+<pre class="wp-block-code"><code>&lt;a href="#" class="showmenu"&gt;menu&lt;/a&gt;</code></pre>
+
+
+
+<h6>範例程式碼</h6>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div class="wrap"&gt;
+        &lt;div class="header"&gt;
+            &lt;div class="logo"&gt;
+                &lt;a href="#"&gt;公司名稱&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;ul class="menu"&gt;
+                &lt;li&gt;&lt;a href="#"&gt;選單一&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;選單二&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;選單三&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;選單四&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;選單五&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;選單六&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;選單七&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;a href="#" class="showmenu"&gt;menu&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class="banner"&gt;&lt;/div&gt;
+        &lt;ul class="news"&gt;
+            &lt;li&gt;
+                &lt;h2&gt;大標題&lt;/h2&gt;
+                &lt;img src="img/big.jpg" alt=""&gt;
+                &lt;p&gt;"It is often said that the pursuance of integrated collection of software engineering standards minimizes influnce of The Setting of Functional Event" (Heriberto Millard in The Book of the Application Rules)&lt;/p&gt;                
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;h2&gt;大標題&lt;/h2&gt;
+                &lt;img src="img/big.jpg" alt=""&gt;
+                &lt;p&gt;"It is often said that the pursuance of integrated collection of software engineering standards minimizes influnce of The Setting of Functional Event" (Heriberto Millard in The Book of the Application Rules)&lt;/p&gt;                
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;h2&gt;大標題&lt;/h2&gt;
+                &lt;img src="img/big.jpg" alt=""&gt;
+                &lt;p&gt;"It is often said that the pursuance of integrated collection of software engineering standards minimizes influnce of The Setting of Functional Event" (Heriberto Millard in The Book of the Application Rules)&lt;/p&gt;                
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;h2&gt;大標題&lt;/h2&gt;
+                &lt;img src="img/big.jpg" alt=""&gt;
+                &lt;p&gt;"It is often said that the pursuance of integrated collection of software engineering standards minimizes influnce of The Setting of Functional Event" (Heriberto Millard in The Book of the Application Rules)&lt;/p&gt;                
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;h2&gt;大標題&lt;/h2&gt;
+                &lt;img src="img/big.jpg" alt=""&gt;
+                &lt;p&gt;"It is often said that the pursuance of integrated collection of software engineering standards minimizes influnce of The Setting of Functional Event" (Heriberto Millard in The Book of the Application Rules)&lt;/p&gt;                
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;h2&gt;大標題&lt;/h2&gt;
+                &lt;img src="img/big.jpg" alt=""&gt;
+                &lt;p&gt;"It is often said that the pursuance of integrated collection of software engineering standards minimizes influnce of The Setting of Functional Event" (Heriberto Millard in The Book of the Application Rules)&lt;/p&gt;                
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;h2&gt;大標題&lt;/h2&gt;
+                &lt;img src="img/big.jpg" alt=""&gt;
+                &lt;p&gt;"It is often said that the pursuance of integrated collection of software engineering standards minimizes influnce of The Setting of Functional Event" (Heriberto Millard in The Book of the Application Rules)&lt;/p&gt;                
+            &lt;/li&gt;
+        &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/*  css reset
+============================*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1;
+	font-family: 標楷體;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+:focus {
+	outline: 0;
+}
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+html body div.clear, html body span.clear {
+	background: none;
+	border: 0;
+	clear: both;
+	display: block;
+	float: none;
+	font-size: 0;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+/* img reset */
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* CSS STYLES */
+body{
+    background: #0f222b;
+    color: slateblue;
+}
+a{
+    color: slateblue;
+    text-decoration: none;
+}
+
+
+.wrap{
+    max-width: 1200px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+.header{
+    height: 80px;
+    border-bottom: 1px solid slateblue;
+    position: relative;
+}
+.logo{
+    float: left;
+}
+.logo a{
+    display: block;
+    background-image: url(../img/logo-01.png);
+    background-image: url(../img/logo-01.svg);
+    background-repeat: no-repeat;
+    width: 128px;
+    height: 50px;
+    background-size: contain;
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.menu{
+    float: right;
+}
+.menu li{
+    float: left;
+}
+.menu li a{
+    display: block;
+    color: slateblue;
+    padding: 1em;
+    text-decoration: none;
+}
+/* 在PC上隱藏漢堡選單 */
+.showmenu{
+    display: none;
+}
+@media (max-width: 767px){
+    .menu{
+        /* 隱藏選單開始 */
+        max-height: 0px;
+        overflow: hidden;
+        /* 隱藏選單結束 */
+        transition: max-height 2.3s;
+        margin-top: 1px;
+        /* 絕對定位疊在網頁上 */
+        position: absolute;
+        z-index: 100;
+        /* header 80px+1px border 線條 */
+        top: 81px;
+        left: 0;
+        right: 0;
+        background: #0f222b;
+    }
+    .menu li{
+        float: none;
+        border-bottom: 1px solid slateblue;
+    }
+    .menu li a{
+        transition: all 0.3s;
+    }
+    .menu li a:hover{
+        background: slateblue;
+        color: #fff;
+    }
+    .showmenu{
+        display: block;
+        float: right;
+        margin: 1em;
+    }
+    /* jQuery 點擊後動態在 body 加上 class */
+    .menu-show .menu{
+        max-height: 500px;
+    }
+}
+.banner{
+    height: 420px;
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url(../img/burger-big.png);
+}
+@media screen and (max-width: 600px) {
+    .banner{
+        background-image: url(../img/burger-small.png);
+    }
+}
+.news h2{
+    color: #000000;
+    padding: .3em 0;
+    font-size: 20px;
+}
+.news li{
+    width: 31.33333%;
+    margin-right: 1%;
+    margin-left: 1%;
+    margin-bottom: 1em;
+    float: left;
+}
+
+
+@media (max-width: 768px){
+    .news li{
+        width: 48%;
+    }
+}
+@media (max-width: 569px){
+    .news li{
+        width: 98%;
+    }
+}</code></pre>
+
+
+
+<p>JS</p>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function () {
+    $('.showmenu').on('click', function(e){
+        e.preventDefault();
+        $('body').toggleClass('menu-show');
+    });
+});</code></pre>
+
+
+
+<h4>固定式選單 (Fixed)</h4>
+
+
+
+<pre class="wp-block-code"><code>@media (max-width: 767px){
+  .header{
+    position: fixed;
+    width: 100%;
+    background: #0f222b;
+  }
+  .banner{
+    padding-top: 91px;
+  }
+}</code></pre>
+
+
+
+<h4>Off Canvas 選單設計</h4>
+
+
+
+<h6>範例程式碼</h6>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div class="wrap"&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="aside"&gt;
+            &lt;a href="#" class="mobile-close"&gt;選單關閉&lt;/a&gt;
+            &lt;ul class="menu"&gt;
+                &lt;li&gt;&lt;a href="#"&gt;選單一&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;選單二&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;選單三&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;選單四&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;選單五&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;選單六&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;選單七&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;div class="main"&gt;
+            &lt;div class="header"&gt;
+                &lt;a href="#" class="mobile-link"&gt;選單連結&lt;/a&gt;
+                &lt;div class="logo"&gt;
+                    &lt;a href="#"&gt;公司名稱&lt;/a&gt;
+                &lt;/div&gt;
+                &lt;ul class="menu"&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;選單一&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;選單二&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;選單三&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;選單四&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;選單五&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;選單六&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;選單七&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;div class="banner"&gt;&lt;/div&gt;
+            &lt;ul class="news"&gt;
+                &lt;li&gt;
+                    &lt;h2&gt;大標題&lt;/h2&gt;
+                    &lt;img src="img/big.jpg" alt=""&gt;
+                    &lt;p&gt;"It is often said that the pursuance of integrated collection of software engineering
+                        standards
+                        minimizes influnce of The Setting of Functional Event" (Heriberto Millard in The Book of the
+                        Application Rules)&lt;/p&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;h2&gt;大標題&lt;/h2&gt;
+                    &lt;img src="img/big.jpg" alt=""&gt;
+                    &lt;p&gt;"It is often said that the pursuance of integrated collection of software engineering
+                        standards
+                        minimizes influnce of The Setting of Functional Event" (Heriberto Millard in The Book of the
+                        Application Rules)&lt;/p&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;h2&gt;大標題&lt;/h2&gt;
+                    &lt;img src="img/big.jpg" alt=""&gt;
+                    &lt;p&gt;"It is often said that the pursuance of integrated collection of software engineering
+                        standards
+                        minimizes influnce of The Setting of Functional Event" (Heriberto Millard in The Book of the
+                        Application Rules)&lt;/p&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;h2&gt;大標題&lt;/h2&gt;
+                    &lt;img src="img/big.jpg" alt=""&gt;
+                    &lt;p&gt;"It is often said that the pursuance of integrated collection of software engineering
+                        standards
+                        minimizes influnce of The Setting of Functional Event" (Heriberto Millard in The Book of the
+                        Application Rules)&lt;/p&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;h2&gt;大標題&lt;/h2&gt;
+                    &lt;img src="img/big.jpg" alt=""&gt;
+                    &lt;p&gt;"It is often said that the pursuance of integrated collection of software engineering
+                        standards
+                        minimizes influnce of The Setting of Functional Event" (Heriberto Millard in The Book of the
+                        Application Rules)&lt;/p&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;h2&gt;大標題&lt;/h2&gt;
+                    &lt;img src="img/big.jpg" alt=""&gt;
+                    &lt;p&gt;"It is often said that the pursuance of integrated collection of software engineering
+                        standards
+                        minimizes influnce of The Setting of Functional Event" (Heriberto Millard in The Book of the
+                        Application Rules)&lt;/p&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;h2&gt;大標題&lt;/h2&gt;
+                    &lt;img src="img/big.jpg" alt=""&gt;
+                    &lt;p&gt;"It is often said that the pursuance of integrated collection of software engineering
+                        standards
+                        minimizes influnce of The Setting of Functional Event" (Heriberto Millard in The Book of the
+                        Application Rules)&lt;/p&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>/*  css reset
+============================*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1;
+	font-family: 標楷體;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+:focus {
+	outline: 0;
+}
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+html body div.clear, html body span.clear {
+	background: none;
+	border: 0;
+	clear: both;
+	display: block;
+	float: none;
+	font-size: 0;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+/* img reset */
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* CSS STYLES */
+body{
+    background: #0f222b;
+    color: slateblue;
+}
+a{
+    color: slateblue;
+    text-decoration: none;
+}
+
+
+.wrap{
+    max-width: 1200px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+.container{
+    position: relative;
+    overflow: hidden;
+    max-width: 960px;
+    margin: 0 auto;
+}
+.mobile-link,.mobile-close{
+    background: slateblue;
+    color: #fff;
+    padding: 5px;
+    display: inline-block;
+    margin: 8px;
+    text-decoration: none;
+}
+.mobile-link{
+    display: none;
+}
+@media (max-width: 768px){
+    .mobile-link{
+        display: inline-block;
+    }
+}
+.main{
+    transition: all 0.3s;
+}
+.header{
+    height: 50px;
+    background: red;
+}
+.header .menu{
+    float: right;
+}
+.open .header .menu{
+    display: none;
+}
+@media (max-width: 767px){
+    .header .menu{
+        display: none;
+    }
+}
+.header .menu li{
+    float: left;
+}
+.header .menu li a{
+    color: #fff;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 1em;
+    display: block;
+    transition: all .8s;
+}
+.header .menu li a:hover{
+    background: orange;
+}
+.aside{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 270px;
+    height: 100%;
+    background: yellow;
+    overflow: hidden;
+    -webkit-transform: translateX(-270px);
+    transform: translateX(-270px);
+    transition: all .3s;
+}
+/* 增加 class open 觸發選單 */
+.open .main{
+    -webkit-transform: translateX(270px);
+    transform: translateX(270px);
+}
+.open .aside{
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+}
+.aside .menu li{
+    margin: 1em;
+    background: #000;
+    color: #fff;
+}
+.aside .menu li a{
+    color: #fff;
+    padding: 1em;
+    display: block;
+}
+.aside .menu li a:hover{
+    background: blue;
+}
+.logo{
+    float: left;
+}
+.logo a{
+    display: block;
+    background-image: url(../img/logo-01.png);
+    background-image: url(../img/logo-01.svg);
+    background-repeat: no-repeat;
+    width: 128px;
+    height: 50px;
+    background-size: contain;
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.banner{
+    height: 420px;
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url(../img/burger-big.png);
+}
+@media screen and (max-width: 600px) {
+    .banner{
+        background-image: url(../img/burger-small.png);
+    }
+}
+.news h2{
+    color: #000000;
+    padding: .3em 0;
+    font-size: 20px;
+}
+.news li{
+    width: 31.33333%;
+    margin-right: 1%;
+    margin-left: 1%;
+    margin-bottom: 1em;
+    float: left;
+}
+
+
+@media (max-width: 768px){
+    .news li{
+        width: 48%;
+    }
+}
+@media (max-width: 569px){
+    .news li{
+        width: 98%;
+    }
+}</code></pre>
+
+
+
+<p>JS</p>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function () {
+    // 打開左側選單
+    $('.mobile-link').click(function(event){
+        $('body').addClass('open');
+    });
+    // 關閉左側選單
+    $('.mobile-close').click(function(event){
+        $('body').removeClass('open');
+    });
+});</code></pre>
+
+
+
+<h4>選單設計總結</h4>
+
+
+
+<ul>
+<li>多欄多列式設計細節</li>
+<li>漢堡選單設計</li>
+<li>固定式選單 (Fixed)</li>
+<li>Off Canvas 選單設計</li>
+</ul>
+
+
+
+<h6>參考別人的程式碼</h6>
+
+
+
+<p><a rel="noreferrer noopener" href="https://codepen.io/" target="_blank">Codepen</a>&nbsp;– 關鍵字：responsive menu、offcanvas menu</p>
+
+
+
+<h2>開始實作前的注意事項</h2>
+
+
+
+<h4>確認你的 media query 設定</h4>
+
+
+
+<pre class="wp-block-code"><code>/* PC */
+/* iPad */
+@media (max-width: 768px){
+}
+/* 介於 iPad 到 Mobile 之間 */
+@media (max-width: 767px) and (min-width: 569px){
+}
+/* iPhone 5 橫式 */
+@media (max-width: 568px){
+}</code></pre>
+
+
+
+<p>比較常見的斷點解析度還有</p>
+
+
+
+<ul>
+<li>480px</li>
+<li>320px</li>
+</ul>
+
+
+
+<h4>media 到底要全部寫在一起還是隔離</h4>
+
+
+
+<p>以 div 的 class 名稱為一組來撰寫，以增加其可讀性。</p>
+
+
+
+<p>小技巧：摺疊程式碼，閱讀、修改程式碼比較方便。</p>
+
+
+
+<h4>請不要習慣寫死高度</h4>
+
+
+
+<pre class="wp-block-code"><code>.header{
+  position: relative;
+  height: 350px;
+  background: #000;
+}
+@media (max-width: 768px){
+  .header{
+    height: auto;
+    padding-bottom: 1em;
+  }
+}</code></pre>
+
+
+
+<p>響應式設計內容高度自適應延伸，絕對不能寫死高度。</p>
+
+
+
+<h2>最後，讓你的響應式網頁設計更專業</h2>
+
+
+
+<h4>最後一版作業練習</h4>
+
+
+
+<p>設計 3~4 頁的網頁，首頁、購物車頁、註冊頁、登錄頁。</p>
+
+
+
+<h4>最後一版作業細節 (多頁設計)</h4>
+
+
+
+<p>共用的元素，表頭、表尾。</p>
+
+
+
+<h4>最後一版作業評分標準</h4>
+
+
+
+<h6>一、語意命名設計</h6>
+
+
+
+<ul>
+<li>HTML 語意結構設計</li>
+<li>CSS class 命名設計</li>
+<li>head 資訊設計</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;HTML、CSS教學&lt;/title&gt;
+ 
+  &lt;link rel="shortcut icon" href="favicon.ico"&gt;
+  &lt;meta name="description" content="網站描述文字" /&gt;
+ 
+ 
+  &lt;meta property="og:title" content="FB的標題" /&gt;
+  &lt;meta property="og:description" content="FB的描述" /&gt;
+  &lt;meta property="og:type" content="website" /&gt;
+  &lt;meta property="og:url" content="FB上的網址" /&gt;
+  &lt;meta property="og:image" content="FB的圖片" /&gt;
+ 
+  &lt;link href="圖片路徑" rel="apple-touch-icon" /&gt;
+ 
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=Edge" /&gt;
+ 
+  &lt;link rel="stylesheet" href="CSS檔案路徑"&gt;
+  &lt;script type="text/javascript" src="JS檔案路徑"&gt;&lt;/script&gt;
+&lt;/head&gt;</code></pre>
+
+
+
+<h6>二、網頁排版設計</h6>
+
+
+
+<ul>
+<li>圖片細節處理</li>
+<li>網頁元素設計</li>
+<li>網頁斷點規劃</li>
+</ul>
+
+
+
+<h6>三、使用者體驗</h6>
+
+
+
+<ul>
+<li>版型動線規劃</li>
+<li>圖文排版細節</li>
+<li>元素點擊便利性</li>
+<li>載具特性設計 (hover、focus)</li>
+</ul>
+
+
+
+<h6>綜合建議</h6>
+
+
+
+<h2>PM、Sales、Art、F2E、Backend 之間如何真心合作</h2>
+
+
+
+<h4>業務篇：如何說服客戶導入響應式設計</h4>
+
+
+
+<ol>
+<li>客戶流量 – 數據為王</li>
+<li>電子商務 – 手機、PC 下單率分庭抗禮</li>
+<li>優化體驗 – 購物、登入流程</li>
+</ol>
+
+
+
+<p>線上服務：<a rel="noreferrer noopener" href="http://gs.statcounter.com/" target="_blank">StatCounter</a></p>
+
+
+
+<p>iPhone – 單月提升 50% 的訂單量</p>
+
+
+
+<p><a href="https://developers.google.com/search/mobile-sites/mobile-seo?hl=zh-tw" target="_blank" rel="noreferrer noopener">設計響應式可提升 Google 行動版搜尋引擎排名</a></p>
+
+
+
+<h4>業務篇：各部門投入人力時程比較</h4>
+
+
+
+<ul>
+<li>PM：增加 60% 工作量<ul>
+<li>版型動線規劃</li>
+<li>客戶討論資訊權重：可以透過 GA 來分析，客戶主要的流量來自於哪幾種裝置(解析度)，以及那些資訊被點擊率比較低，開發 RWD 時可以優先被省略</li>
+</ul>
+</li>
+<li>設計：增加 100% 工作量</li>
+<li>前端(切版)：增加 100% 工作量</li>
+<li>後端：增加 20% 工作量</li>
+</ul>
+
+
+
+<h4>企劃篇：為客戶量身打造客製化斷點設計</h4>
+
+
+
+<ol>
+<li>客戶沒有網站 – 以 IOS 系列優先設計</li>
+<li>客戶擁有網站 – 導入 Google 分析</li>
+</ol>
+
+
+
+<p>PM 開給設計師：mobile: 320px、375px、414px、iPad:768px、PC：1024px、1920px，為手機、平板、PC，選擇適合的斷點設計。</p>
+
+
+
+<h4>企劃篇：開發過程中，你需要與客戶溝通的建置與維護細節</h4>
+
+
+
+<p>再去做響應式設計的時候，有蠻多的細節會需要是你去跟客戶去討論。</p>
+
+
+
+<p>舉例：</p>
+
+
+
+<ul>
+<li>標籤頁(tabs)，與客戶討論文字大小和標籤頁數量對排版的影響。</li>
+<li>滿版式的 banner，主視覺的內容、位置，例如：airbnb、uber。</li>
+<li>漢堡選單(menu-burger)，經由點擊顯示和隱藏內容。</li>
+</ul>
+
+
+
+<p>設計網站時，向客戶講解一個原理，並非所有的內容都需要放到手機網頁版型裡。</p>
+
+
+
+<p>廣告或插件無法自適應延伸時，那就把他們隱藏起來。</p>
+
+
+
+<p>總結，企劃需要溝通的東西非常多，會花相當多的時間在溝通這些細節。</p>
+
+
+
+<h4>前端篇：設計一套讓客戶能夠自行上稿的 template</h4>
+
+
+
+<p>在後台去上稿的時候，會用類似&nbsp;<a href="https://ckeditor.com/" target="_blank" rel="noreferrer noopener">CKEditor</a>&nbsp;的編輯器，讓客戶去操作。</p>
+
+
+
+<h4>前端篇：注意網頁載入速度與效能問題</h4>
+
+
+
+<ol>
+<li>先載入 CSS，再載入 JS</li>
+<li>3秒內畫面至少要先顯示出來，使用 chrome network 內建測試</li>
+<li>不要放太多自動會跑的動畫效果</li>
+</ol>
+
+
+
+<h4>全部門：以電子商務網頁版型為例進行探討</h4>
+
+
+
+<ul>
+<li>設計師<ul>
+<li>確認圖片比例、文字字元數</li>
+<li>確認 desktop、768px、320px</li>
+<li>向前端、後端討論可行性</li>
+</ul>
+</li>
+<li>前端<ul><li>自適應延伸內容文案</li></ul>
+</li>
+<li>後端<ul>
+<li>上稿圖片：如果放太大張就自動縮圖成設計師要的大小</li>
+<li>上稿文字：在後台欄位限制字數</li>
+</ul>
+</li>
+<li>企劃<ul><li>吸收設計師、前端、後端所整理出來的細節，並提供上稿細節給客戶</li></ul>
+</li>
+</ul>
+
+
+
+<p>響應式設計要透過部門與部門之間的討論，才可以設計出一個讓客戶好上稿的一個響應式設計平台。</p>
+
+
+
+<h2>彩蛋課程：Sass、RWD 無痛整合，提升網頁開發效率</h2>
+
+
+
+<h4>Sass+Sublime Text 3 插件安裝</h4>
+
+
+
+<p>歡迎你來到此章節，<br>若要開始進行 Sass 教學，為了讓 Sublime Text 3 支援 Sass、Scss 語法，<br>請安裝&nbsp;<a rel="noreferrer noopener" href="https://packagecontrol.io/packages/Sass" target="_blank">Sass</a>、<a href="https://packagecontrol.io/packages/SCSS" target="_blank" rel="noreferrer noopener">Scss</a>&nbsp;Plugin</p>
+
+
+
+<h4>環境篇 – 簡單編譯環境，輕鬆好上手</h4>
+
+
+
+<p><a rel="noreferrer noopener" href="https://sass-lang.com/" target="_blank">Sass官網</a></p>
+
+
+
+<p>使用 Applications –&nbsp;<a rel="noreferrer noopener" href="https://prepros.io/" target="_blank">prepros</a></p>
+
+
+
+<h6>Sass 原理</h6>
+
+
+
+<ul><li>CSS 都寫在 SCSS 檔案裡面</li></ul>
+
+
+
+<p>all.scss→編譯→all.css</p>
+
+
+
+<h4>寫法篇 – 減少重工負擔</h4>
+
+
+
+<h6>Sass 提供兩種寫法</h6>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>.menu{...}
+.menu ul {...}
+.menu li {...}
+.menu a {...}</code></pre>
+
+
+
+<p>SCSS</p>
+
+
+
+<pre class="wp-block-code"><code>.menu{
+  ul {...}
+  li {...}
+  a  {...}
+}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>.header{
+    width: 50px;
+    height: 50px;
+    background: #000;
+    ul{
+        width: 500px;
+    }
+    li{
+        height: 30px;
+        a{
+            color: #000;
+        }
+    }
+}</code></pre>
+
+
+
+<p>SASS</p>
+
+
+
+<p>縮排用一個 tab 或兩個空白</p>
+
+
+
+<pre class="wp-block-code"><code>.menu
+  ..
+  ul
+    ..
+  li
+    ..
+  a</code></pre>
+
+
+
+<pre class="wp-block-code"><code>.header
+  width: 50px
+  height: 100px
+  li
+    width: 100px
+  ul
+    height: 100px
+    color: #000</code></pre>
+
+
+
+<h4>變數篇 – 整合相同設定好幫手</h4>
+
+
+
+<p>變數(variables)</p>
+
+
+
+<ul>
+<li>將時常需要設定的 CSS 放在變數來管理</li>
+<li>變數是用美元符號開頭</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>$text-color: #f00;
+$font-size: 13px;
+$width: 960px;
+.shop li{
+  width: $width / 4 編譯出 240px
+}</code></pre>
+
+
+
+<p>實作練習</p>
+
+
+
+<ul>
+<li>新增一個顏色變數，在scss處多個地方來使用該變數。</li>
+<li>修改變數色馬，觀察編譯出來的CSS是否都已修改。</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>$text-color: #f00;
+body{
+  color: $text-color;
+}
+h1{
+  color: $text-color;
+}</code></pre>
+
+
+
+<p>常使用在</p>
+
+
+
+<ul>
+<li>文字顏色、大小</li>
+<li>主色系</li>
+</ul>
+
+
+
+<p>Sass 有支援加減乘除的語法。</p>
+
+
+
+<h6>Scss 程式碼範例</h6>
+
+
+
+<pre class="wp-block-code"><code>$linkcolor: #000;
+$font-m: 16px;
+$font-l: $font-m * 1.2;
+$font-s: $font-m * 0.8;
+
+.header a{
+    color: $linkcolor;
+    font-size: $font-l;
+}
+
+.content a{
+    color: $linkcolor;
+}
+
+.footer a{
+    color: $linkcolor;
+}</code></pre>
+
+
+
+<h4>拆檔篇 – @import: 每隻 Sass 檔專心做一件事情</h4>
+
+
+
+<p>@import(匯入)</p>
+
+
+
+<p>使用@import可將SCSS彙整成一隻檔案</p>
+
+
+
+<p>_reset.scss、_base.scss→all.scss→編譯→all.css</p>
+
+
+
+<p>加下底線的SCSS是要被合併用的，並沒有要去編譯成CSS</p>
+
+
+
+<p>all.scss</p>
+
+
+
+<pre class="wp-block-code"><code>@import "reset";
+@import "index";</code></pre>
+
+
+
+<p>_reset.scss</p>
+
+
+
+<pre class="wp-block-code"><code>body{
+    margin: 0;
+}</code></pre>
+
+
+
+<p>_index.scss</p>
+
+
+
+<pre class="wp-block-code"><code>.header{
+    width: 100px;
+}</code></pre>
+
+
+
+<h4>工具篇 – @mixin: 將常用語法化簡為自己的知識庫</h4>
+
+
+
+<h6>@Mixin</h6>
+
+
+
+<p>@Mixin能幫你記住CSS技巧讓你不用再因回想原理而中斷思緒</p>
+
+
+
+<h6>這些CSS技巧你背得出幾個？</h6>
+
+
+
+<ul>
+<li>圖片取代文字</li>
+<li>兼容各瀏覽器的 Inline-block的寫法</li>
+<li>各CSS3語法瀏覽器支援解決方案</li>
+<li>清除浮動解決方案</li>
+<li>用CSS畫各方向的三角形</li>
+</ul>
+
+
+
+<p>SCSS</p>
+
+
+
+<pre class="wp-block-code"><code>@mixin hide-text {
+  text-indent: 110%;
+  white-space:nowrap;
+  overflow: hidden;
+}
+@mixin clearfix() {
+  &amp;:before,
+  &amp;:after {
+    content: " "; //1
+    display: table; //2
+  }
+  &amp;:after {
+    clear: both;
+  }
+}
+.header h1{
+  @include hide-text;
+}
+.bxo{
+  @include clearfix;
+}</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>.header h1{
+  text-indent:110%;
+  white-space:nowrap;
+  overflow:hidden;
+}</code></pre>
+
+
+
+<p>Sass寫法則是 =hide-text{}　　　.header h1{ +hide-text() }</p>
+
+
+
+<p>@Mixin 也可以使用變數</p>
+
+
+
+<p>SCSS</p>
+
+
+
+<pre class="wp-block-code"><code>@mixin circle($size,$bgcolor) {
+  border-radius: 50%;
+  height: $size;
+  width: $size;
+  font-size: $size / 3;
+  background: $bgcolor;
+}
+.box {
+  @include circle(30px,#fff)
+}</code></pre>
+
+
+
+<h4>載具篇 – @mixin + @content 設計響應式設計超方便</h4>
+
+
+
+<p>all.scss 程式碼範例</p>
+
+
+
+<pre class="wp-block-code"><code>@mixin pad{
+    @media (max-width: 768px){
+        @content
+    }
+}
+
+@mixin iphone5{
+    @media (max-width: 320px){
+        @content
+    }
+}
+
+.header{
+    width: 100px;
+    height: 100px;
+    @include pad(){
+        height: auto;
+    }
+    @include iphone5(){
+        height: 30px;
+    }
+    a{
+        color: #000;
+        @include iphone5(){
+            display: none;
+        }
+    }
+}</code></pre>
+
+
+
+<h4>結構篇 – 如何循序漸進優化網頁架構</h4>
+
+
+
+<p>Sass 結構</p>
+
+
+
+<p>第一次寫SCSS建議結構(all.scss)</p>
+
+
+
+<pre class="wp-block-code"><code>@import "mixin"; // 所有全域變數與Mixin
+@import "reset"; // reset.css
+@import "index"; // 首頁
+@import "page/.."; // 內頁</code></pre>
+
+
+
+<p>接著你可以這樣寫(all.scss)</p>
+
+
+
+<pre class="wp-block-code"><code>@import "mixin"; // 所有全域變數與Mixin
+@import "reset"; // reset.css
+@import "layout"; // 共同框架，第一層
+@import "module"; // button, form, table
+@import "pages/index、pages1、pages2";</code></pre>
+
+
+
+<p>如果編譯錯誤顯示Undefined mixin, 那就表示你尚未import compass/css 的檔案</p>
+
+
+
+<p>其他寫法範例(default.scss)</p>
+
+
+
+<pre class="wp-block-code"><code>@import "variable"
+@import "reset"
+@import "mix"
+@import "extent"
+@import "layout"
+// module
+@import "module/button"
+@import "module/video"
+@import "module/nivo"
+// page
+@import "page/index"
+@import "page/member"
+@import "page/product"
+@import "page/qa"
+@import "page/case"
+@import "page/rate"
+@import "page/forum"
+@import "page/cart"
+@import "page/sales"
+@import "page/sitemap"
+@import "page/other"
+@import "page/information"
+// @import "page/epaper
+@import "inbox"</code></pre>
+
+
+
+<p>在撰寫的時候，一定是先開始寫些比較初略的架構，到後面經由整合增加才會變得更好、完整。</p>
+
+
+
+<h4>作業篇 – 試著將作品改成 SASS 架構</h4>
+
+
+
+<ol>
+<li>設定常見變數(顏色、字體大小)</li>
+<li>import 設計<ol>
+<li>變數</li>
+<li>reset</li>
+<li>斷點 – grid.scss</li>
+<li>layout.scss</li>
+<li>index</li>
+<li>cart</li>
+</ol>
+</li>
+<li>區隔出 layout.scss 檔案</li>
+<li>斷點設計</li>
+<li>page sass 獨立</li>
+</ol>
+
+
+
+<h5>補充</h5>
+
+
+
+<ul><li>fontawesome放進input標籤 –&nbsp;<a href="https://webdesign.tutsplus.com/tutorials/css-experiments-with-a-search-form-input-and-button--cms-22069?ec_unit=translation-info-language" target="_blank" rel="noreferrer noopener">教學連結</a>
+</li></ul>
+
+
+
+<h2>彩蛋課程：視差滾動網頁設計</h2>
+
+
+
+<h4>視差滾動簡介</h4>
+
+
+
+<p>Parallax scrolling is a web site trend where the background content (i.e. an image) is moved at a different speed than the foreground content while scrolling.</p>
+
+
+
+<p>視差滾動 (parallax scrolling) 是一種網站趨勢，滾動時背景內容 (即圖像) 的移動速度不同於前景內容。</p>
+
+
+
+<h4>視差滾動練習範例</h4>
+
+
+
+<p>原始範例：<a rel="noreferrer noopener" href="https://codepen.io/GeeHsu/pen/QWyNQap" target="_blank">Codepen</a></p>
+
+
+
+<p>HTML</p>
+
+
+
+<p>viewport</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>&lt;div class="wrap"&gt;
+&lt;nav class="navbar navbar-default "&gt;
+  &lt;div class="container"&gt;
+    &lt;a href="#" class="logo pull-left"&gt;
+      &lt;span class="hidden-mobile"&gt;六角學院&lt;/span&gt; 視差滾動範例
+    &lt;/a&gt;
+    &lt;ul class="nav-menu pull-right clearfix hidden-mobile"&gt;
+      &lt;li&gt;&lt;a href="#three-point" class="scrollTop" title="三大重點"&gt;
+        三大重點
+        &lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href="#skills" class="scrollTop" title="技能熟練度"&gt;
+        技能熟練度
+        &lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href="#profiles" class="scrollTop" title="個人簡介"&gt;
+        個人簡介
+        &lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+
+&lt;section class="header-wrap"&gt;
+  &lt;div class="container h100 relative" id="header-ele"&gt;
+    &lt;div class="header-text text-white bg-gradient1"&gt;
+      &lt;h1 class=""&gt;六角學院&lt;/h1&gt;
+      &lt;h2&gt;視差滾動範例&lt;/h2&gt;
+    &lt;/div&gt;
+
+    &lt;div class="header-img hidden-mobile"&gt; &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section id="three-point" class="section bg-white section-rotate box-shadow"&gt;
+  &lt;div class="section-rotate-fixed"&gt;
+    &lt;div class="container p-y-3"&gt;
+      &lt;h2 class="text-center m-b-2"&gt;
+        三大重點
+      &lt;/h2&gt;
+      &lt;div class="row"&gt;
+        &lt;div class="col-three-one"&gt;
+          &lt;div class="text-center m-y-2"&gt;
+            &lt;span class="fa fa-mobile fa-5x"&gt;&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;h3 class="text-center m-y-1"&gt;
+            Fully Responsive
+          &lt;/h3&gt;
+          &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus aut dolorem in autem veniam, nisi repellendus amet a eum laboriosam veritatis doloremque consectetur.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="col-three-one"&gt;
+          &lt;div class="text-center m-y-2"&gt;
+            &lt;span class="fa fa-code fa-5x"&gt;&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;h3 class="text-center m-y-1"&gt;
+            Easy to learn
+          &lt;/h3&gt;
+          &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus aut dolorem in autem veniam, nisi repellendus amet a eum laboriosam veritatis doloremque consectetur.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="col-three-one"&gt;
+          &lt;div class="text-center m-y-2"&gt;
+            &lt;span class="fa fa-html5 fa-5x"&gt;&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;h3 class="text-center m-y-1"&gt;
+            HTML + CSS
+          &lt;/h3&gt;
+          &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus aut dolorem in autem veniam, nisi repellendus amet a eum laboriosam veritatis doloremque consectetur.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section id="skills" class="bg-gradient1 text-white section-rotate"&gt;
+  &lt;div class="section-rotate-fixed"&gt;
+    &lt;div class="container p-y-3"&gt;
+      &lt;h2 class="text-center m-b-2"&gt;
+        技能熟練度
+      &lt;/h2&gt;
+      &lt;div class="row"&gt;
+        &lt;div class="col-half"&gt;
+          &lt;div class="text-center m-y-2"&gt;
+            &lt;span class="fa fa-code fa-5x"&gt;&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;h3 class="text-center m-y-1"&gt;
+            HTML + CSS
+          &lt;/h3&gt;
+          &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus aut dolorem in autem veniam, nisi repellendus amet a eum laboriosam veritatis doloremque consectetur.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="col-half"&gt;
+          &lt;div class="m-b-1"&gt;
+            &lt;span&gt;&lt;span class="fa fa-html5"&gt;&lt;/span&gt; HTML&lt;/span&gt;
+            &lt;div class="progress"&gt;
+              &lt;div class="progress-bar" style="width: 85%"&gt;
+                85
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="m-b-1"&gt;
+            &lt;span&gt;&lt;span class="fa fa-css3"&gt;&lt;/span&gt; CSS3&lt;/span&gt;
+            &lt;div class="progress"&gt;
+              &lt;div class="progress-bar" style="width: 85%"&gt;
+                80
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="m-b-1"&gt;
+            &lt;span&gt;&lt;span class="fa fa-database"&gt;&lt;/span&gt; Database&lt;/span&gt;
+            &lt;div class="progress"&gt;
+              &lt;div class="progress-bar" style="width: 75%"&gt;
+                75
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="m-b-1"&gt;
+            &lt;span&gt;&lt;span class="fa fa-git"&gt;&lt;/span&gt; Git&lt;/span&gt;
+            &lt;div class="progress"&gt;
+              &lt;div class="progress-bar" style="width: 60%"&gt;
+                60
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="m-b-1"&gt;
+            &lt;span&gt;&lt;span class="fa fa-group"&gt;&lt;/span&gt; Team work&lt;/span&gt;
+            &lt;div class="progress"&gt;
+              &lt;div class="progress-bar" style="width: 90%"&gt;
+                90
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section id="profiles" class="p-y-3 section-rotate box-shadow" style="background: url('https://subtlepatterns.com/patterns/restaurant_icons.png');"&gt;
+  &lt;div class="section-rotate-fixed"&gt;
+    &lt;div class="container"&gt;
+      &lt;h2 class="text-center m-b-1"&gt;自我簡介&lt;/h2&gt;
+      &lt;div class="row"&gt;
+        &lt;div class="col-half m-b-2"&gt;
+          &lt;h3&gt;Casper&lt;/h3&gt;
+          &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam molestiae, perspiciatis deserunt provident tempora iusto quis rem accusantium, accusamus commodi iure aliquid animi cupiditate saepe autem corporis facilis ullam cumque!&lt;/p&gt;
+          &lt;div class="m-t-1 text-right"&gt;
+            &lt;a href="#" class="text-link"&gt;
+              &lt;span class="fa fa-facebook-official fa-2x"&gt;&lt;/span&gt;
+            &lt;/a&gt;
+            &lt;a href="#" class="text-link"&gt;
+              &lt;span class="fa fa-twitter-square fa-2x"&gt;&lt;/span&gt;
+            &lt;/a&gt;
+            &lt;a href="#" class="text-link"&gt;
+              &lt;span class="fa fa-google-plus-square fa-2x"&gt;&lt;/span&gt;
+            &lt;/a&gt;
+          &lt;/div&gt;
+          &lt;p class="text-right"&gt;accusamus commodi iure aliquid animi cupiditate saepe&lt;br /&gt; autem corporis facilis ullam cumque!&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="col-half"&gt;
+          &lt;img src="https://images.unsplash.com/photo-1456534231849-7d5fcd82d77b?dpr=2&amp;auto=format&amp;fit=crop&amp;w=750&amp;h=423&amp;q=80&amp;cs=tinysrgb&amp;crop=" alt="" class="img-fluid box-shadow" /&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt; 
+  &lt;/div&gt;
+&lt;/section&gt;
+  
+&lt;footer class="footer p-y-3 text-right"&gt;
+  &lt;div class="container"&gt;
+    視差滾動範例
+  &lt;/div&gt;
+&lt;/footer&gt;
+  
+&lt;/div&gt;
+
+</code></pre>
+
+
+
+<p>CSS (SCSS)</p>
+
+
+
+<p>CSS RESET</p>
+
+
+
+<p>載入&nbsp;<a rel="noreferrer noopener" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" target="_blank">Fontawesome cdn</a></p>
+
+
+
+<pre class="wp-block-code"><code>// font
+$font-family: "Microsoft JhengHei",PMingLiU,MingLiu,"Segoe UI","Helvetica",Garuda,Arial,sans-serif;
+$font-size: 16px;
+
+// gutter
+$gutter: 15px;
+
+// color
+$background-color: #fcfbf5;
+$font-color: #333;
+$font-color-gray: lighten($font-color, 55%);
+
+$brand-primary: #039dff;
+$brand-success: #00CC99;
+$brand-accent: #e26789;
+$brand-dark: $font-color;
+$brand-facebook: #4080ff;
+
+// navbar
+$navbar-height: 42px;
+
+// progress
+$progress-height: 20px;
+
+// section
+$section-gutter: 45px;
+
+// zindex
+$navbar-zindex: 1000;
+$fab-zindex: 1045;
+
+// breakpoint
+$mobile-size: 779px;
+
+//** Base **//
+* {
+  box-sizing: border-box;
+}
+body, html {
+  height: 100%;
+  line-height: 1.5;
+  font-family: $font-family;
+}
+h1 {
+  font-size: $font-size*3;
+}
+h2 {
+  font-size: $font-size*2.5;
+}
+h3 {
+  font-size: $font-size*2;
+}
+a {
+  color: $brand-primary
+}
+
+//** Grid **//
+.wrap {
+  overflow: hidden;
+  background-image: url(https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?dpr=2&amp;auto=format&amp;fit=crop&amp;w=450&amp;h=750&amp;q=50&amp;cs=tinysrgb&amp;crop=);
+  background-position: center center;
+  background-size: cover;
+}
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+  &amp;:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.col-half,
+.col-three-one,
+.col-quarter {
+  float: left;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.col-half {
+  width: 50%;
+}
+.col-half-center {
+  margin-left: 25%;
+}
+.col-three-one {
+  width: 33.33333%;
+}
+.col-three-one-center {
+  margin-left: 33.33333%;
+}
+.col-quarter {
+  width: 25%;
+}
+
+@media (max-width: $mobile-size) {
+  .col-half,
+  .col-three-one,
+  .col-quarter {
+    float: none;
+    width: 100%;
+  }
+
+  .col-half-center, .col-three-one-center {
+    margin-left: 0;
+  }
+}
+
+//** Navbar **//
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: $navbar-zindex;
+  &amp;.navbar-bottom {
+    top: auto;
+    bottom: 0;
+  }
+}
+
+.navbar-default {
+  background-color: rgba(black, .75);
+  box-shadow: 0 0 5px rgba(black, .15)
+}
+
+.logo {
+  display: block;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: white;
+  font-size: $font-size + 2;
+}
+
+.nav-menu {
+  margin: 0;
+  list-style: none;
+  li {
+    float: left;
+  }
+  a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: white;
+    font-size: $font-size + 2;
+    &amp;:hover, &amp;:active, &amp;:focus {
+      background-color: rgba(black, .05);
+    }
+    &amp;.active {
+      box-shadow: 0 -2px 0 $brand-accent inset;
+    }
+  }
+
+  // style
+  .nav-accent {
+    color: white;
+    background-color: $brand-accent;
+    &amp;:hover, &amp;:active, &amp;:focus {
+      color: white;
+      background-color: darken($brand-accent, 15%);
+    }
+    &amp;.active {
+      box-shadow: 0 -2px 0 darken($brand-accent, 15%) inset;
+    }
+  }
+}
+
+//** Section **//
+.section {
+  padding: 35px 0;
+}
+.section-rotate {
+  transform: rotate(-7deg);
+  margin-left: -80px;
+  margin-right: -80px;
+  padding: 35px 80px 35px 80px;
+  .section-rotate-fixed {
+    transform: rotate(7deg);
+  }
+}
+
+//** Progress bar **//
+.progress {
+  height: $progress-height;
+  overflow: hidden;
+  background-color: rgba(#fafafa, .45);
+  border-radius: 3px;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+  position: relative;
+}
+.progress-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  font-size: 12px;
+  line-height: $progress-height;
+  color: #fff;
+  text-align: center;
+  background-color: $brand-accent;
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+  transition: width 1s ease;
+}
+
+
+//** Partials Header **//
+.header-wrap {
+  height: 600px;
+  width: 130%;
+  margin: -10% -15% 0 -15%;
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 10%;
+  overflow: hidden;
+  transform: rotate(-7deg);
+}
+.header-img {
+  background-image: url(https://firebasestorage.googleapis.com/v0/b/hexschool-api.appspot.com/o/tutorials%2FRWD%2Fman-for-scroll-demo-light.png?alt=media&amp;token=625670d9-4180-434b-a4bd-c1b1db0d0604);
+  background-position: right 0;
+  background-size: cover;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.header-text {
+  padding: 25px 35px;
+  background-color: #555;
+  background-image: linear-gradient(45deg, #333, #555);
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  box-shadow: 2px 5px 15px rgba(black, .25);
+  &amp; &gt; * {
+    transform: rotate(7deg);
+  }
+}
+
+//** Utilities **//
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.h100 {
+  height: 100%;
+}
+.v-center {
+  top: 50%;
+  transform: translateY(-50%);
+  position: relative;
+}
+.relative {
+  position: relative;
+}
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+
+.circle-border {
+  border: transparent 2px solid;
+  border-radius: 100%;
+}
+.border-white {
+  border-color: white;
+}
+
+.bg-darker {
+  background-color: darken($background-color, 5%);
+}
+.bg-dark {
+  background-color: $brand-dark;
+}
+.bg-white {
+  background-color: #fff;
+}
+.text-primary {
+  color: $brand-primary;
+}
+.text-success {
+  color: $brand-success;
+}
+.text-accent {
+  color: $brand-accent;
+}
+.text-white {
+  color: white;
+  text-decoration: none;
+}
+.text-gray {
+  color: $font-color-gray
+}
+.text-right {
+  text-align: right;
+}
+.block {
+  display: block;
+}
+.box-shadow {
+  position: relative;
+  &amp;:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    box-shadow: 0 0 15px rgba(black, .15);
+  }
+}
+
+// margin
+.m-b-0 {
+  margin-bottom: 0;
+}
+.m-t-1 {
+  margin-top: $gutter;
+}
+.m-t-3 {
+  margin-top: $gutter*3;
+}
+.m-b-2 {
+  margin-bottom: $gutter*2;
+}
+.m-b-1 {
+  margin-bottom: $gutter*1;
+}
+.m-y-1 {
+  margin-top: $gutter;
+  margin-bottom: $gutter;
+}
+.m-y-2 {
+  margin-top: $gutter*2;
+  margin-bottom: $gutter*2;
+}
+.m-y-3 {
+  margin-top: $gutter*3;
+  margin-bottom: $gutter*3;
+}
+.m-x-1 {
+  margin-left: $gutter;
+  margin-right: $gutter;
+}
+.m-x-2 {
+  margin-left: $gutter*2;
+  margin-right: $gutter*2;
+}
+.p-y-1 {
+  padding-top: $gutter;
+  padding-bottom: $gutter;
+}
+.p-y-2 {
+  padding-top: $gutter * 2;
+  padding-bottom: $gutter * 2;
+}
+.p-y-3 {
+  padding-top: $gutter * 3;
+  padding-bottom: $gutter * 3;
+}
+.p-x-3 {
+  padding-left: $gutter * 3;
+  padding-right: $gutter * 3;
+}
+.p-a-3 {
+  padding: $gutter * 3;
+}
+
+// align
+.text-center {
+  text-align: center;
+}
+
+// rwd
+.img-fluid {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+// hidden
+@media (max-width: $mobile-size){
+  .hidden-mobile {
+    display: none !important;
+  }
+}
+@media (min-width: $mobile-size){
+  .hidden-desktop {
+    display: none !important;
+  }
+}
+
+// Gradients
+
+.bg-gradient1 {
+  background-image: linear-gradient(45deg, #59f0ff, $brand-primary);
+}
+</code></pre>
+
+
+
+<p>JS</p>
+
+
+
+<p>載入&nbsp;<a href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" target="_blank" rel="noreferrer noopener">jQuery cdn</a></p>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function(){
+   
+});</code></pre>
+
+
+
+<p>完成範例：<a rel="noreferrer noopener" href="https://codepen.io/GeeHsu/pen/WNrwMgj" target="_blank">Codepen</a></p>
+
+
+
+<p>HTML</p>
+
+
+
+<p>viewport</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>&lt;div class="wrap"&gt;
+&lt;nav class="navbar navbar-default "&gt;
+  &lt;div class="container"&gt;
+    &lt;a href="#" class="logo pull-left"&gt;
+      &lt;span class="hidden-mobile"&gt;六角學院&lt;/span&gt; 視差滾動範例
+    &lt;/a&gt;
+    &lt;ul class="nav-menu pull-right clearfix hidden-mobile"&gt;
+      &lt;li&gt;&lt;a href="#three-point" class="scrollTop" title="三大重點"&gt;
+        三大重點
+        &lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href="#skills" class="scrollTop" title="技能熟練度"&gt;
+        技能熟練度
+        &lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href="#profiles" class="scrollTop" title="個人簡介"&gt;
+        個人簡介
+        &lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+
+&lt;section class="header-wrap"&gt;
+  &lt;div class="container h100 relative" id="header-ele"&gt;
+    &lt;div class="header-text text-white bg-gradient1"&gt;
+      &lt;h1 class=""&gt;六角學院&lt;/h1&gt;
+      &lt;h2&gt;視差滾動範例&lt;/h2&gt;
+    &lt;/div&gt;
+
+    &lt;div class="header-img hidden-mobile"&gt; &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section id="three-point" class="section bg-white section-rotate box-shadow"&gt;
+  &lt;div class="section-rotate-fixed"&gt;
+    &lt;div class="container p-y-3"&gt;
+      &lt;h2 class="text-center m-b-2"&gt;
+        三大重點
+      &lt;/h2&gt;
+      &lt;div class="row"&gt;
+        &lt;div class="col-three-one animated"&gt;
+          &lt;div class="text-center m-y-2"&gt;
+            &lt;span class="fa fa-mobile fa-5x"&gt;&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;h3 class="text-center m-y-1"&gt;
+            Fully Responsive
+          &lt;/h3&gt;
+          &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus aut dolorem in autem veniam, nisi repellendus amet a eum laboriosam veritatis doloremque consectetur.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="col-three-one animated"&gt;
+          &lt;div class="text-center m-y-2"&gt;
+            &lt;span class="fa fa-code fa-5x"&gt;&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;h3 class="text-center m-y-1"&gt;
+            Easy to learn
+          &lt;/h3&gt;
+          &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus aut dolorem in autem veniam, nisi repellendus amet a eum laboriosam veritatis doloremque consectetur.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="col-three-one animated"&gt;
+          &lt;div class="text-center m-y-2"&gt;
+            &lt;span class="fa fa-html5 fa-5x"&gt;&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;h3 class="text-center m-y-1"&gt;
+            HTML + CSS
+          &lt;/h3&gt;
+          &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus aut dolorem in autem veniam, nisi repellendus amet a eum laboriosam veritatis doloremque consectetur.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section id="skills" class="bg-gradient1 text-white section-rotate"&gt;
+  &lt;div class="section-rotate-fixed"&gt;
+    &lt;div class="container p-y-3"&gt;
+      &lt;h2 class="text-center m-b-2"&gt;
+        技能熟練度
+      &lt;/h2&gt;
+      &lt;div class="row"&gt;
+        &lt;div class="col-half animated"&gt;
+          &lt;div class="text-center m-y-2"&gt;
+            &lt;span class="fa fa-code fa-5x"&gt;&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;h3 class="text-center m-y-1"&gt;
+            HTML + CSS
+          &lt;/h3&gt;
+          &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus aut dolorem in autem veniam, nisi repellendus amet a eum laboriosam veritatis doloremque consectetur.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="col-half"&gt;
+          &lt;div class="m-b-1"&gt;
+            &lt;span&gt;&lt;span class="fa fa-html5"&gt;&lt;/span&gt; HTML&lt;/span&gt;
+            &lt;div class="progress"&gt;
+              &lt;div class="progress-bar" data-progress="85"&gt;
+                85
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="m-b-1"&gt;
+            &lt;span&gt;&lt;span class="fa fa-css3"&gt;&lt;/span&gt; CSS3&lt;/span&gt;
+            &lt;div class="progress"&gt;
+              &lt;div class="progress-bar" data-progress="85"&gt;
+                80
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="m-b-1"&gt;
+            &lt;span&gt;&lt;span class="fa fa-database"&gt;&lt;/span&gt; Database&lt;/span&gt;
+            &lt;div class="progress"&gt;
+              &lt;div class="progress-bar" data-progress="75"&gt;
+                75
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="m-b-1"&gt;
+            &lt;span&gt;&lt;span class="fa fa-git"&gt;&lt;/span&gt; Git&lt;/span&gt;
+            &lt;div class="progress"&gt;
+              &lt;div class="progress-bar" data-progress="60"&gt;
+                60
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="m-b-1"&gt;
+            &lt;span&gt;&lt;span class="fa fa-group"&gt;&lt;/span&gt; Team work&lt;/span&gt;
+            &lt;div class="progress"&gt;
+              &lt;div class="progress-bar"  data-progress="90"&gt;
+                90
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section id="profiles" class="p-y-3 section-rotate box-shadow" style="background: url('https://subtlepatterns.com/patterns/restaurant_icons.png');"&gt;
+  &lt;div class="section-rotate-fixed"&gt;
+    &lt;div class="container"&gt;
+      &lt;h2 class="text-center m-b-1"&gt;自我簡介&lt;/h2&gt;
+      &lt;div class="row"&gt;
+        &lt;div class="col-half m-b-2 animated"&gt;
+          &lt;h3&gt;Casper&lt;/h3&gt;
+          &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam molestiae, perspiciatis deserunt provident tempora iusto quis rem accusantium, accusamus commodi iure aliquid animi cupiditate saepe autem corporis facilis ullam cumque!&lt;/p&gt;
+          &lt;div class="m-t-1 text-right"&gt;
+            &lt;a href="#" class="text-link"&gt;
+              &lt;span class="fa fa-facebook-official fa-2x"&gt;&lt;/span&gt;
+            &lt;/a&gt;
+            &lt;a href="#" class="text-link"&gt;
+              &lt;span class="fa fa-twitter-square fa-2x"&gt;&lt;/span&gt;
+            &lt;/a&gt;
+            &lt;a href="#" class="text-link"&gt;
+              &lt;span class="fa fa-google-plus-square fa-2x"&gt;&lt;/span&gt;
+            &lt;/a&gt;
+          &lt;/div&gt;
+          &lt;p class="text-right"&gt;accusamus commodi iure aliquid animi cupiditate saepe&lt;br /&gt; autem corporis facilis ullam cumque!&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="col-half animated"&gt;
+          &lt;img src="https://images.unsplash.com/photo-1456534231849-7d5fcd82d77b?dpr=2&amp;auto=format&amp;fit=crop&amp;w=750&amp;h=423&amp;q=80&amp;cs=tinysrgb&amp;crop=" alt="" class="img-fluid box-shadow" /&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt; 
+  &lt;/div&gt;
+&lt;/section&gt;
+  
+&lt;footer class="footer p-y-3 text-right"&gt;
+  &lt;div class="container"&gt;
+    視差滾動範例
+  &lt;/div&gt;
+&lt;/footer&gt;
+  
+&lt;/div&gt;
+
+</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<p>CSS RESET</p>
+
+
+
+<p>載入&nbsp;<a href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" target="_blank" rel="noreferrer noopener">Fontawesome cdn</a></p>
+
+
+
+<pre class="wp-block-code"><code>// font
+$font-family: "Microsoft JhengHei",PMingLiU,MingLiu,"Segoe UI","Helvetica",Garuda,Arial,sans-serif;
+$font-size: 16px;
+
+// gutter
+$gutter: 15px;
+
+// color
+$background-color: #fcfbf5;
+$font-color: #333;
+$font-color-gray: lighten($font-color, 55%);
+
+$brand-primary: #039dff;
+$brand-success: #00CC99;
+$brand-accent: #e26789;
+$brand-dark: $font-color;
+$brand-facebook: #4080ff;
+
+// navbar
+$navbar-height: 42px;
+
+// progress
+$progress-height: 20px;
+
+// section
+$section-gutter: 45px;
+
+// zindex
+$navbar-zindex: 1000;
+$fab-zindex: 1045;
+
+// breakpoint
+$mobile-size: 779px;
+
+//** Base **//
+* {
+  box-sizing: border-box;
+}
+body, html {
+  height: 100%;
+  line-height: 1.5;
+  font-family: $font-family;
+}
+h1 {
+  font-size: $font-size*3;
+}
+h2 {
+  font-size: $font-size*2.5;
+}
+h3 {
+  font-size: $font-size*2;
+}
+a {
+  color: $brand-primary
+}
+
+//** Grid **//
+.wrap {
+  overflow: hidden;
+  background-image: url(https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?dpr=2&amp;auto=format&amp;fit=crop&amp;w=450&amp;h=750&amp;q=50&amp;cs=tinysrgb&amp;crop=);
+  background-position: bottom center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+  &amp;:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.col-half,
+.col-three-one,
+.col-quarter {
+  float: left;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.col-half {
+  width: 50%;
+}
+.col-half-center {
+  margin-left: 25%;
+}
+.col-three-one {
+  width: 33.33333%;
+}
+.col-three-one-center {
+  margin-left: 33.33333%;
+}
+.col-quarter {
+  width: 25%;
+}
+
+@media (max-width: $mobile-size) {
+  .col-half,
+  .col-three-one,
+  .col-quarter {
+    float: none;
+    width: 100%;
+  }
+
+  .col-half-center, .col-three-one-center {
+    margin-left: 0;
+  }
+}
+
+//** Navbar **//
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: $navbar-zindex;
+  &amp;.navbar-bottom {
+    top: auto;
+    bottom: 0;
+  }
+}
+
+.navbar-default {
+  background-color: rgba(black, .75);
+  box-shadow: 0 0 5px rgba(black, .15)
+}
+
+.logo {
+  display: block;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: white;
+  font-size: $font-size + 2;
+}
+
+.nav-menu {
+  margin: 0;
+  list-style: none;
+  li {
+    float: left;
+  }
+  a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: white;
+    font-size: $font-size + 2;
+    &amp;:hover, &amp;:active, &amp;:focus {
+      background-color: rgba(black, .05);
+    }
+    &amp;.active {
+      box-shadow: 0 -2px 0 $brand-accent inset;
+    }
+  }
+
+  // style
+  .nav-accent {
+    color: white;
+    background-color: $brand-accent;
+    &amp;:hover, &amp;:active, &amp;:focus {
+      color: white;
+      background-color: darken($brand-accent, 15%);
+    }
+    &amp;.active {
+      box-shadow: 0 -2px 0 darken($brand-accent, 15%) inset;
+    }
+  }
+}
+
+//** Section **//
+.section {
+  padding: 35px 0;
+}
+.section-rotate {
+  transform: rotate(-7deg);
+  margin-left: -80px;
+  margin-right: -80px;
+  padding: 35px 80px 35px 80px;
+  .section-rotate-fixed {
+    transform: rotate(7deg);
+  }
+}
+
+//** Progress bar **//
+.progress {
+  height: $progress-height;
+  overflow: hidden;
+  background-color: rgba(#fafafa, .45);
+  border-radius: 3px;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+  position: relative;
+}
+.progress-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  font-size: 12px;
+  line-height: $progress-height;
+  color: #fff;
+  text-align: center;
+  background-color: $brand-accent;
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+  transition: width 3s ease;
+}
+
+
+//** Partials Header **//
+.header-wrap {
+  height: 600px;
+  width: 130%;
+  margin: -10% -15% 0 -15%;
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 10%;
+  overflow: hidden;
+  transform: rotate(-7deg);
+}
+.header-img {
+  background-image: url(https://firebasestorage.googleapis.com/v0/b/hexschool-api.appspot.com/o/tutorials%2FRWD%2Fman-for-scroll-demo-light.png?alt=media&amp;token=625670d9-4180-434b-a4bd-c1b1db0d0604);
+  background-position: right 0;
+  background-size: cover;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.header-text {
+  padding: 25px 35px;
+  background-color: #555;
+  background-image: linear-gradient(45deg, #333, #555);
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  box-shadow: 2px 5px 15px rgba(black, .25);
+  &amp; &gt; * {
+    transform: rotate(7deg);
+  }
+}
+
+//** Utilities **//
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.h100 {
+  height: 100%;
+}
+.v-center {
+  top: 50%;
+  transform: translateY(-50%);
+  position: relative;
+}
+.relative {
+  position: relative;
+}
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+
+.circle-border {
+  border: transparent 2px solid;
+  border-radius: 100%;
+}
+.border-white {
+  border-color: white;
+}
+
+.bg-darker {
+  background-color: darken($background-color, 5%);
+}
+.bg-dark {
+  background-color: $brand-dark;
+}
+.bg-white {
+  background-color: #fff;
+}
+.text-primary {
+  color: $brand-primary;
+}
+.text-success {
+  color: $brand-success;
+}
+.text-accent {
+  color: $brand-accent;
+}
+.text-white {
+  color: white;
+  text-decoration: none;
+}
+.text-gray {
+  color: $font-color-gray
+}
+.text-right {
+  text-align: right;
+}
+.block {
+  display: block;
+}
+.box-shadow {
+  position: relative;
+  &amp;:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    box-shadow: 0 0 15px rgba(black, .15);
+  }
+}
+
+// margin
+.m-b-0 {
+  margin-bottom: 0;
+}
+.m-t-1 {
+  margin-top: $gutter;
+}
+.m-t-3 {
+  margin-top: $gutter*3;
+}
+.m-b-2 {
+  margin-bottom: $gutter*2;
+}
+.m-b-1 {
+  margin-bottom: $gutter*1;
+}
+.m-y-1 {
+  margin-top: $gutter;
+  margin-bottom: $gutter;
+}
+.m-y-2 {
+  margin-top: $gutter*2;
+  margin-bottom: $gutter*2;
+}
+.m-y-3 {
+  margin-top: $gutter*3;
+  margin-bottom: $gutter*3;
+}
+.m-x-1 {
+  margin-left: $gutter;
+  margin-right: $gutter;
+}
+.m-x-2 {
+  margin-left: $gutter*2;
+  margin-right: $gutter*2;
+}
+.p-y-1 {
+  padding-top: $gutter;
+  padding-bottom: $gutter;
+}
+.p-y-2 {
+  padding-top: $gutter * 2;
+  padding-bottom: $gutter * 2;
+}
+.p-y-3 {
+  padding-top: $gutter * 3;
+  padding-bottom: $gutter * 3;
+}
+.p-x-3 {
+  padding-left: $gutter * 3;
+  padding-right: $gutter * 3;
+}
+.p-a-3 {
+  padding: $gutter * 3;
+}
+
+// align
+.text-center {
+  text-align: center;
+}
+
+// rwd
+.img-fluid {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+// hidden
+@media (max-width: $mobile-size){
+  .hidden-mobile {
+    display: none !important;
+  }
+}
+@media (min-width: $mobile-size){
+  .hidden-desktop {
+    display: none !important;
+  }
+}
+
+// Gradients
+
+.bg-gradient1 {
+  background-image: linear-gradient(45deg, #59f0ff, $brand-primary);
+}
+
+
+// animated
+.animated {
+  opacity: 0;
+  transition: all 1.5s;
+  transform: translateY(50px);
+}
+.fadeIn {
+  opacity: 1;
+  transform: translateY(0);
+}</code></pre>
+
+
+
+<p>JS</p>
+
+
+
+<p>載入&nbsp;<a href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" target="_blank" rel="noreferrer noopener">jQuery cdn</a></p>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function(){
+  var showSkill = false;
+  
+  $('.scrollTop').click(function(e){
+    e.preventDefault();
+    var target = $(this).attr('href');
+    var targetPos = $(target).offset().top;
+    $('html, body').animate({scrollTop: targetPos}, 1000);
+  });
+  
+  $(window).scroll(function(){
+    var scrollPos = $(window).scrollTop();
+    var windowHeight = $(window).height();
+    console.log(scrollPos, windowHeight);
+    
+    $('.scrollTop').each(function(){
+      var target = $(this).attr('href'); 
+      var targetPos = $(target).offset().top;
+      var targetHeight = $(target).outerHeight();
+      if (targetPos - 1 &lt;= scrollPos &amp;&amp; (targetPos + targetHeight) &gt; scrollPos){
+        $('.scrollTop').removeClass('active')
+        $(this).addClass('active');
+      } else {
+        $(this).removeClass('active')
+      }
+    });
+    
+    // progress bar
+    var skillTop = $('#skills').position().top;
+    // console.log('skillTop', skillTop);
+    if (skillTop &lt;= (scrollPos + windowHeight / 2) &amp;&amp; !showSkill) {
+      showSkill = true;
+      $('#skills .progress-bar').each(function(){
+        var thisValue = $(this).data('progress');
+        console.log('thisValue', thisValue);
+        $(this).css('width', thisValue + '%');
+      });
+    }
+    
+    // animated
+    $('.animated').each(function(){
+      var thisPos = $(this).offset().top;
+      if((windowHeight + scrollPos) &gt;= thisPos) {
+         $(this).addClass('fadeIn');
+      }
+    });
+    
+    // bg scroll 
+    $('#profiles').css('background-position-y', -(scrollPos / 2) + 'px')
+    $('#header-ele').css('transform', 'translateY( ' + (scrollPos / 2) + 'px )')
+  });
+  
+});</code></pre>
+
+
+
+<h4>視差滾動基本環境介紹</h4>
+
+
+
+<p>CSS 是用 SCSS 所撰寫，用到 CSS 變數、CSS 巢狀。</p>
+
+
+
+<p>HTML 分為幾個部分，<br>navbar，注意的地方是三個連結有對應的區塊，a連結 href 對應到 id 的地方，header，可以參考 SCSS 如何寫的，三大重點的地方有一些 icon 是用 fontawesome 去做的，排版的方式是用 CSS Grid 的概念去排版，技能熟練度的 progress-bar 進度條會在滾動到這個區塊的時候才把進度調顯示出來，顯示的方式是用 style 的寬度經由 JavaScript 的方式載入進來，自我簡介的部分，一張圖片和較淡的背景圖，在滾動的時候背景圖會往另外一個方向移動，另外這整個背景是一張大的背景圖，到時候會把它固定在頁面上。</p>
+
+
+
+<p>Codepen 的設定，<br>HTML 的地方加入 RWD 的 viewport，CSS 的部分，CSS Preprocessor 使用 SCSS、CSS Base 使用 RESET、載入 fontawesome cdn，JavaScript 載入 jQuery cdn，codepen changeview 有不同頁面的顯示方式、Chrome 檢查，可查看不同裝置下的畫面顯示，行動版把選單、人物隱藏，其他部分改成一欄的樣式。</p>
+
+
+
+<p>想要有一個自己版本的練習檔案，使用 Codepen fork 產生一個新的連結給你。</p>
+
+
+
+<h4>CSS 固定背景的手法</h4>
+
+
+
+<p>SCSS</p>
+
+
+
+<pre class="wp-block-code"><code>//** Grid **//
+.wrap{
+  overflow: hidden;
+  background-image: url(圖片位置);
+  background-position: bottom center;
+  /* 背景大小使用 cover 剛好充滿全畫面 */
+  background-size: cover;
+  /* CSS 固定背景 */
+  background-attachment: fixed;
+}</code></pre>
+
+
+
+<h4>一頁式宣傳頁常用的選單滑動效果</h4>
+
+
+
+<p>程式碼範例</p>
+
+
+
+<p>JS</p>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function () {
+    // 一頁式宣傳常用的選單滑動效果
+    $('.scrollTop').click(function(e){
+        // 取消事件的預設行為
+        e.preventDefault();
+        // 用 alert 確定選單是否有效果
+        // alert('a');
+        // 讀取 href 的值
+        var target = $(this).attr('href');
+        // alert(target);
+        // console.log(target);
+        // 取出這些 ID 的位置
+        var targetPos = $(target).offset().top;
+        // console.log(target, targetPos);
+        $('html, body').animate({scrollTop: targetPos}, 1000);
+    });
+
+    // 滾動視差核心內容，滾動的時候讀取出目前滾動的位置
+    $(window).scroll(function(){
+        // console.log('scroll');
+        // 把滾動的值存在 scrollPos 裡面
+        var scrollPos = $(window).scrollTop();
+        // console.log(scrollPos);
+
+        // 滾動到指定的區域的時候，把 active 效果加到選單上面
+        // each 就是說每次滾動都把三個值都讀出來
+        $('.scrollTop').each(function(){
+            // 目標的 href
+            var target = $(this).attr('href');
+            // 目標的位置
+            var targetPos = $(target).offset().top;
+            // 目標的高度
+            // outerHeight 的意思是連 padding 的外框範圍都讀進來
+            var targetHeight = $(target).outerHeight();
+            // console.log(target, targetPos, targetHeight);
+            // 定義一個範圍，在範圍內的時候經由判斷，加入指定的 class
+            // 誤差補上 -1
+            if (targetPos - 1 &lt;= scrollPos &amp;&amp; (targetPos + targetHeight) &gt; scrollPos){
+                // console.log(target);
+                // 先移除 active，再加上 active，在範圍外 else 移除 active
+                $('.scrollTop').removeClass('active');
+                $(this).addClass('active');
+            } else {
+                $(this).removeClass('active');
+            }
+        });
+    });
+
+});</code></pre>
+
+
+
+<h4>動態顯示的進度條</h4>
+
+
+
+<p>HTML 使用 data-progress=” “</p>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div class="col-half"&gt;
+    &lt;div class="m-b-1"&gt;
+        &lt;span&gt;&lt;span class="fa fa-html5"&gt;&lt;/span&gt; HTML&lt;/span&gt;
+        &lt;div class="progress"&gt;
+            &lt;div class="progress-bar" data-progress="85"&gt;
+                85
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="m-b-1"&gt;
+        &lt;span&gt;&lt;span class="fa fa-css3"&gt;&lt;/span&gt; CSS3&lt;/span&gt;
+        &lt;div class="progress"&gt;
+            &lt;div class="progress-bar" data-progress="80"&gt;
+                80
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="m-b-1"&gt;
+        &lt;span&gt;&lt;span class="fa fa-database"&gt;&lt;/span&gt; Database&lt;/span&gt;
+        &lt;div class="progress"&gt;
+            &lt;div class="progress-bar" data-progress="75"&gt;
+                75
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="m-b-1"&gt;
+        &lt;span&gt;&lt;span class="fa fa-git"&gt;&lt;/span&gt; Git&lt;/span&gt;
+        &lt;div class="progress"&gt;
+            &lt;div class="progress-bar" data-progress="60"&gt;
+                60
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="m-b-1"&gt;
+        &lt;span&gt;&lt;span class="fa fa-group"&gt;&lt;/span&gt; Team work&lt;/span&gt;
+        &lt;div class="progress"&gt;
+            &lt;div class="progress-bar" data-progress="90"&gt;
+                90
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;</code></pre>
+
+
+
+<p>CSS (SCSS)</p>
+
+
+
+<pre class="wp-block-code"><code>.progress-bar{
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	width: 0;
+	font-size: 12px;
+	line-height: $progress-height;
+	color: #fff;
+	text-align: center;
+	background-color: $brand-accent;
+	box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+        /* 需加入 transition 才會有動態效果 */
+        /* 秒數數值修改動畫速率 */
+	transition: width 3s ease;
+}</code></pre>
+
+
+
+<p>JS</p>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function () {
+    // 為了避免事件的重複觸發
+    var showSkill = false;
+
+    // 一頁式宣傳常用的選單滑動效果
+    $('.scrollTop').click(function(e){
+        // 取消事件的預設行為
+        e.preventDefault();
+        // 用 alert 確定選單是否有效果
+        // alert('a');
+        // 讀取 href 的值
+        var target = $(this).attr('href');
+        // alert(target);
+        // console.log(target);
+        // 取出這些 ID 的位置
+        var targetPos = $(target).offset().top;
+        // console.log(target, targetPos);
+        $('html, body').animate({scrollTop: targetPos}, 1000);
+    });
+
+    // 滾動視差核心內容，滾動的時候讀取出目前滾動的位置
+    $(window).scroll(function(){
+        // console.log('scroll');
+        // 把滾動的值存在 scrollPos 裡面
+        var scrollPos = $(window).scrollTop();
+        // 新增一個變數，把整個視窗的高度讀出來
+        var windowHeight = $(window).height();
+        // console.log(scrollPos, windowHeight);
+        // console.log(scrollPos);
+
+        // 滾動到指定的區域的時候，把 active 效果加到選單上面
+        // each 就是說每次滾動都把三個值都讀出來
+        $('.scrollTop').each(function(){
+            // 目標的 href
+            var target = $(this).attr('href');
+            // 目標的位置
+            var targetPos = $(target).offset().top;
+            // 目標的高度
+            // outerHeight 的意思是連 padding 的外框範圍都讀進來
+            var targetHeight = $(target).outerHeight();
+            // console.log(target, targetPos, targetHeight);
+            // 定義一個範圍，在範圍內的時候經由判斷，加入指定的 class
+            // 誤差補上 -1
+            if (targetPos - 1 &lt;= scrollPos &amp;&amp; (targetPos + targetHeight) &gt; scrollPos){
+                // console.log(target);
+                //先移除 active，再加上 active，在範圍外 else 移除 active
+                $('.scrollTop').removeClass('active');
+                $(this).addClass('active');
+            } else {
+                $(this).removeClass('active');
+            }
+        });
+
+        // progress bar
+
+        // 把技能熟練度這個區域定義起來，讀出這個區塊的高度在哪裡
+        var skillTop = $('#skills').position().top;
+        console.log('skillTop', skillTop);
+        // 用 if 來判斷，它的 scroll 的位置有沒有到我們指定的地方就觸發
+        // 使用 windowHeight / 2 讓技能熟練度在畫面的一半就會顯示出來
+        if (skillTop &lt;= (scrollPos + windowHeight / 2) &amp;&amp; !showSkill){
+            // 當變成 true 的時候就不會跑第二次
+            showSkill = true;
+            // console.log('Skill');
+            // each 把裡面的 progress bar 都執行一次
+            $('#skills .progress-bar').each(function(){
+                // 把 data-progress 裡面的數值讀出來
+                var thisValue = $(this).data('progress');
+                // console.log('thisValue', thisValue);
+                $(this).css('width', thisValue + '%');
+            });
+        }
+
+    });
+
+});</code></pre>
+
+
+
+<h4>滾動套用 CSS 效果</h4>
+
+
+
+<p>HTML 需要動畫效果的區域，加上 class 名稱 animated</p>
+
+
+
+<p>CSS (SCSS)</p>
+
+
+
+<pre class="wp-block-code"><code>// animated
+.animated{
+	// 透明度的隱藏方式
+	opacity: 0;
+	transition: all 1.5s;
+	transform: translateY(50px);
+}
+.fadeIn{
+	opacity: 1;
+	transform: translateY(0);
+}</code></pre>
+
+
+
+<p>JS</p>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function () {
+    // 為了避免事件的重複觸發
+    var showSkill = false;
+
+    // 一頁式宣傳常用的選單滑動效果
+    $('.scrollTop').click(function(e){
+        // 取消事件的預設行為
+        e.preventDefault();
+        // 用 alert 確定選單是否有效果
+        // alert('a');
+        // 讀取 href 的值
+        var target = $(this).attr('href');
+        // alert(target);
+        // console.log(target);
+        // 取出這些 ID 的位置
+        var targetPos = $(target).offset().top;
+        // console.log(target, targetPos);
+        $('html, body').animate({scrollTop: targetPos}, 1000);
+    });
+
+    // fadeIn 測試使用
+    // $('.animated').click(function(){
+    //     $(this).addClass('fadeIn');
+    // });
+
+    // 滾動視差核心內容，滾動的時候讀取出目前滾動的位置
+    $(window).scroll(function(){
+        // console.log('scroll');
+        // 把滾動的值存在 scrollPos 裡面
+        var scrollPos = $(window).scrollTop();
+        // 新增一個變數，把整個視窗的高度讀出來
+        var windowHeight = $(window).height();
+        // console.log(scrollPos, windowHeight);
+        // console.log(scrollPos);
+
+        // 滾動到指定的區域的時候，把 active 效果加到選單上面
+        // each 就是說每次滾動都把三個值都讀出來
+        $('.scrollTop').each(function(){
+            // 目標的 href
+            var target = $(this).attr('href');
+            // 目標的位置
+            var targetPos = $(target).offset().top;
+            // 目標的高度
+            // outerHeight 的意思是連 padding 的外框範圍都讀進來
+            var targetHeight = $(target).outerHeight();
+            // console.log(target, targetPos, targetHeight);
+            // 定義一個範圍，在範圍內的時候經由判斷，加入指定的 class
+            // 誤差補上 -1
+            if (targetPos - 1 &lt;= scrollPos &amp;&amp; (targetPos + targetHeight) &gt; scrollPos){
+                // console.log(target);
+                //先移除 active，再加上 active，在範圍外 else 移除 active
+                $('.scrollTop').removeClass('active');
+                $(this).addClass('active');
+            } else {
+                $(this).removeClass('active');
+            }
+        });
+
+        // progress bar
+
+        // 把技能熟練度這個區域定義起來，讀出這個區塊的高度在哪裡
+        var skillTop = $('#skills').position().top;
+        console.log('skillTop', skillTop);
+        // 用 if 來判斷，它的 scroll 的位置有沒有到我們指定的地方就觸發
+        // 使用 windowHeight / 2 讓技能熟練度在畫面的一半就會顯示出來
+        if (skillTop &lt;= (scrollPos + windowHeight / 2) &amp;&amp; !showSkill){
+            // 當變成 true 的時候就不會跑第二次
+            showSkill = true;
+            // console.log('Skill');
+            // each 把裡面的 progress bar 都執行一次
+            $('#skills .progress-bar').each(function(){
+                // 把 data-progress 裡面的數值讀出來
+                var thisValue = $(this).data('progress');
+                // console.log('thisValue', thisValue);
+                $(this).css('width', thisValue + '%');
+            });
+        }
+
+        // animated 滾動套用 CSS 效果
+        $('.animated').each(function(){
+            var thisPos = $(this).offset().top;
+            // console.log('animated', thisPos);
+            if((windowHeight + scrollPos) &gt;= thisPos){
+                // console.log('animated')
+                $(this).addClass('fadeIn');
+            }
+        });
+    });
+
+});</code></pre>
+
+
+
+<h4>滾動中持續改變物件位置 (CSS transform)</h4>
+
+
+
+<p>bg scroll 消耗效能</p>
+
+
+
+<p>JS</p>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function () {
+    // 為了避免事件的重複觸發
+    var showSkill = false;
+
+    // 一頁式宣傳常用的選單滑動效果
+    $('.scrollTop').click(function(e){
+        // 取消事件的預設行為
+        e.preventDefault();
+        // 用 alert 確定選單是否有效果
+        // alert('a');
+        // 讀取 href 的值
+        var target = $(this).attr('href');
+        // alert(target);
+        // console.log(target);
+        // 取出這些 ID 的位置
+        var targetPos = $(target).offset().top;
+        // console.log(target, targetPos);
+        $('html, body').animate({scrollTop: targetPos}, 1000);
+    });
+
+    // fadeIn 測試使用
+    // $('.animated').click(function(){
+    //     $(this).addClass('fadeIn');
+    // });
+
+    // 滾動視差核心內容，滾動的時候讀取出目前滾動的位置
+    $(window).scroll(function(){
+        // console.log('scroll');
+        // 把滾動的值存在 scrollPos 裡面
+        var scrollPos = $(window).scrollTop();
+        // 新增一個變數，把整個視窗的高度讀出來
+        var windowHeight = $(window).height();
+        // console.log(scrollPos, windowHeight);
+        // console.log(scrollPos);
+
+        // 滾動到指定的區域的時候，把 active 效果加到選單上面
+        // each 就是說每次滾動都把三個值都讀出來
+        $('.scrollTop').each(function(){
+            // 目標的 href
+            var target = $(this).attr('href');
+            // 目標的位置
+            var targetPos = $(target).offset().top;
+            // 目標的高度
+            // outerHeight 的意思是連 padding 的外框範圍都讀進來
+            var targetHeight = $(target).outerHeight();
+            // console.log(target, targetPos, targetHeight);
+            // 定義一個範圍，在範圍內的時候經由判斷，加入指定的 class
+            // 誤差補上 -1
+            if (targetPos - 1 &lt;= scrollPos &amp;&amp; (targetPos + targetHeight) &gt; scrollPos){
+                // console.log(target);
+                //先移除 active，再加上 active，在範圍外 else 移除 active
+                $('.scrollTop').removeClass('active');
+                $(this).addClass('active');
+            } else {
+                $(this).removeClass('active');
+            }
+        });
+
+        // progress bar
+
+        // 把技能熟練度這個區域定義起來，讀出這個區塊的高度在哪裡
+        var skillTop = $('#skills').position().top;
+        console.log('skillTop', skillTop);
+        // 用 if 來判斷，它的 scroll 的位置有沒有到我們指定的地方就觸發
+        // 使用 windowHeight / 2 讓技能熟練度在畫面的一半就會顯示出來
+        if (skillTop &lt;= (scrollPos + windowHeight / 2) &amp;&amp; !showSkill){
+            // 當變成 true 的時候就不會跑第二次
+            showSkill = true;
+            // console.log('Skill');
+            // each 把裡面的 progress bar 都執行一次
+            $('#skills .progress-bar').each(function(){
+                // 把 data-progress 裡面的數值讀出來
+                var thisValue = $(this).data('progress');
+                // console.log('thisValue', thisValue);
+                $(this).css('width', thisValue + '%');
+            });
+        }
+
+        // animated 滾動套用 CSS 效果
+        $('.animated').each(function(){
+            var thisPos = $(this).offset().top;
+            // console.log('animated', thisPos);
+            if((windowHeight + scrollPos) &gt;= thisPos){
+                // console.log('animated')
+                $(this).addClass('fadeIn');
+            }
+        });
+
+        // bg scroll 滾動中持續改變物件位置 (CSS transform)
+        $('#profiles').css('background-position-y', -(scrollPos / 2) + 'px');
+        $('#header-ele').css('transform', 'translateY( ' + (scrollPos / 2) + 'px )');
+    });
+
+});</code></pre>
+
+
+
+<h6>程式碼範例</h6>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;滾動視差(parallax scrolling)&lt;/title&gt;
+    &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+    &lt;div class="wrap"&gt;
+        &lt;nav class="navbar navbar-default"&gt;
+            &lt;div class="container"&gt;
+                &lt;a href="#" class="logo pull-left"&gt;
+                    &lt;span class="hidden-mobile"&gt;六角學院&lt;/span&gt; 視差滾動範例
+                &lt;/a&gt;
+                &lt;ul class="nav-menu pull-right clearfix hidden-mobile"&gt;
+                    &lt;li&gt;
+                        &lt;a href="#three-point" class="scrollTop" title="三大重點"&gt;
+                            三大重點
+                        &lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="#skills" class="scrollTop" title="技能熟練度"&gt;
+                            技能熟練度
+                        &lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="#profiles" class="scrollTop" title="個人簡介"&gt;
+                            個人簡介
+                        &lt;/a&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/nav&gt;
+
+        &lt;section class="header-wrap"&gt;
+            &lt;div class="container h100 relative" id="header-ele"&gt;
+                &lt;div class="header-text text-white bg-gradient1"&gt;
+                    &lt;h1 class=""&gt;六角學院&lt;/h1&gt;
+                    &lt;h2&gt;視差滾動範例&lt;/h2&gt;
+                &lt;/div&gt;
+                &lt;div class="header-img hidden-mobile"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+
+        &lt;section id="three-point" class="section bg-white section-rotate box-shadow"&gt;
+            &lt;div class="section-rotate-fixed"&gt;
+                &lt;div class="container p-y-3"&gt;
+                    &lt;h2 class="text-center m-b-2"&gt;
+                        三大重點
+                    &lt;/h2&gt;
+                    &lt;div class="row"&gt;
+                        &lt;div class="col-three-one animated"&gt;
+                            &lt;div class="text-center m-y-2"&gt;
+                                &lt;span class="fa fa-mobile fa-5x"&gt;&lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;h3 class="text-center m-y-1"&gt;
+                                Fully Responsive
+                            &lt;/h3&gt;
+                            &lt;p&gt;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis, adipisci neque nostrum facere officiis laborum quas voluptatibus a et, nihil dolore? Iusto eos fugit culpa officiis. Soluta doloremque odit dicta?&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;div class="col-three-one animated"&gt;
+                            &lt;div class="text-center m-y-2"&gt;
+                                &lt;span class="fa fa-code fa-5x"&gt;&lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;h3 class="text-center m-y-1"&gt;
+                                Easy to learn
+                            &lt;/h3&gt;
+                            &lt;p&gt;Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore perspiciatis esse unde iste quidem tempore similique rerum corporis explicabo dicta incidunt, nostrum quaerat dolorum quisquam numquam aperiam, architecto velit sapiente.&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;div class="col-three-one animated"&gt;
+                            &lt;div class="text-center m-y-2"&gt;
+                                &lt;span class="fa fa-html5 fa-5x"&gt;&lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;h3 class="text-center m-y-1"&gt;
+                                HTML + CSS
+                            &lt;/h3&gt;
+                            &lt;p&gt;Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut dicta neque nesciunt quos, libero nostrum rem temporibus culpa veritatis aperiam odio quae natus amet architecto, illum quasi dolorem obcaecati quam.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+
+        &lt;section id="skills" class="bg-gradient1 text-white section-rotate"&gt;
+            &lt;div class="section-rotate-fixed"&gt;
+                &lt;div class="container p-y-3"&gt;
+                    &lt;h2 class="text-center m-b-2"&gt;
+                        技巧熟練度
+                    &lt;/h2&gt;
+                    &lt;div class="row"&gt;
+                        &lt;div class="col-half animated"&gt;
+                            &lt;div class="text-center m-y-2"&gt;
+                                &lt;span class="fa fa-code fa-5x"&gt;&lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;h3 class="text-center m-y-1"&gt;
+                                HTML + CSS
+                            &lt;/h3&gt;
+                            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam maxime exercitationem veritatis aliquam, asperiores dignissimos ducimus vel soluta qui nihil illum pariatur? Dolor quos alias tenetur, modi sapiente earum ullam.&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;div class="col-half"&gt;
+                            &lt;div class="m-b-1"&gt;
+                                &lt;span&gt;&lt;span class="fa fa-html5"&gt;&lt;/span&gt; HTML&lt;/span&gt;
+                                &lt;div class="progress"&gt;
+                                    &lt;div class="progress-bar" data-progress="85"&gt;
+                                        85
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="m-b-1"&gt;
+                                &lt;span&gt;&lt;span class="fa fa-css3"&gt;&lt;/span&gt; CSS3&lt;/span&gt;
+                                &lt;div class="progress"&gt;
+                                    &lt;div class="progress-bar" data-progress="80"&gt;
+                                        80
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="m-b-1"&gt;
+                                &lt;span&gt;&lt;span class="fa fa-database"&gt;&lt;/span&gt; Database&lt;/span&gt;
+                                &lt;div class="progress"&gt;
+                                    &lt;div class="progress-bar" data-progress="75"&gt;
+                                        75
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="m-b-1"&gt;
+                                &lt;span&gt;&lt;span class="fa fa-git"&gt;&lt;/span&gt; Git&lt;/span&gt;
+                                &lt;div class="progress"&gt;
+                                    &lt;div class="progress-bar" data-progress="60"&gt;
+                                        60
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="m-b-1"&gt;
+                                &lt;span&gt;&lt;span class="fa fa-group"&gt;&lt;/span&gt; Team work&lt;/span&gt;
+                                &lt;div class="progress"&gt;
+                                    &lt;div class="progress-bar" data-progress="90"&gt;
+                                        90
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+
+        &lt;section id="profiles" class="p-y-3 section-rotate box-shadow" style="background:url('https://subtlepatterns.com/patterns/restaurant_icons.png')";&gt;
+            &lt;div class="section-rotate-fixed"&gt;
+                &lt;div class="container"&gt;
+                    &lt;h2 class="text-center m-b-1"&gt;自我簡介&lt;/h2&gt;
+                    &lt;div class="row"&gt;
+                        &lt;div class="col-half m-b-2 animated"&gt;
+                            &lt;h3&gt;Casper&lt;/h3&gt;
+                            &lt;p&gt;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio ut perspiciatis laudantium natus debitis? Quos perferendis voluptatem ratione architecto officiis laboriosam, expedita saepe libero aspernatur quibusdam quod dignissimos tenetur! Officiis!&lt;/p&gt;
+                            &lt;div class="m-t-1 text-right"&gt;
+                                &lt;a href="#" class="text-link"&gt;
+                                    &lt;span class="fa fa-facebook-official fa-2x"&gt;&lt;/span&gt;
+                                &lt;/a&gt;
+                                &lt;a href="#" class="text-link"&gt;
+                                    &lt;span class="fa fa-twitter-square fa-2x"&gt;&lt;/span&gt;
+                                &lt;/a&gt;
+                                &lt;a href="#" class="text-link"&gt;
+                                    &lt;span class="fa fa-google-plus-square fa-2x"&gt;&lt;/span&gt;
+                                &lt;/a&gt;
+                            &lt;/div&gt;
+                            &lt;p class="text-right"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora reprehenderit similique sequi&lt;br&gt; recusandae impedit possimus? Ipsum quidem nobis, ex, ea corporis consequatur pariatur nostrum eos nihil aspernatur minima sequi? Rerum.&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;div class="col-half animated"&gt;
+                            &lt;img src="https://images.unsplash.com/photo-1456534231849-7d5fcd82d77b?dpr=2&amp;auto=format&amp;fit=crop&amp;w=750&amp;h=423&amp;q=80&amp;cs=tinysrgb&amp;crop=" alt="" class="img-fluid box-shadow"&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+
+        &lt;footer class="footer p-y-3 text-right"&gt;
+            &lt;div class="container"&gt;
+                視差滾動範例
+            &lt;/div&gt;
+        &lt;/footer&gt;
+    &lt;/div&gt;
+
+
+    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<p>CSS (SCSS)</p>
+
+
+
+<pre class="wp-block-code"><code>/* CSS RESET */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* CSS STYLES */
+// font
+$font-family: "Microsoft JhengHei",PMingLiU,MingLiu,"Segoe UI","Helvetica",Garuda,Arial,sans-serif;
+$font-size: 16px;
+
+// gutter
+$gutter: 15px;
+
+// color
+$background-color: #fcfbf5;
+$font-color: #333;
+$font-color-gray: lighten($font-color, 55%);
+
+$brand-primary: #039dff;
+$brand-success: #00cc99;
+$brand-accent: #e26789;
+$brand-dark: $font-color;
+$brand-facebook: #4080ff;
+
+// navbar
+$navbar-height: 42px;
+
+// progress
+$progress-height: 20px;
+
+// section
+$section-gutter: 45px;
+
+// zindex
+$navbar-zindex: 1000;
+$fab-zindex: 1045;
+
+// breakpoint
+$mobile-size: 779px;
+
+//** Base **//
+*{
+	box-sizing: border-box;
+}
+body, html{
+	height: 100%;
+	line-height: 1.5;
+	font-family: $font-family;
+}
+h1{
+	font-size: $font-size*3;
+}
+h2{
+	font-size: $font-size*2.5;
+}
+h3{
+	font-size: $font-size*2;
+}
+a{
+	color: $brand-primary;
+}
+
+//** Grid **//
+.wrap{
+	overflow: hidden;
+	background-image: url(https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?dpr=2&amp;auto=format&amp;fit=crop&amp;w=450&amp;h=750&amp;q=50&amp;cs=tinysrgb&amp;crop=);
+	background-position: bottom center;
+	background-size: cover;
+	/* CSS 固定背景 */
+	background-attachment: fixed;
+}
+.container{
+	max-width: 1140px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.row{
+	margin-left: -15px;
+	margin-right: -15px;
+	&amp;:after{
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+.col-half,
+.col-three-one,
+.col-quarter{
+	float: left;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.col-half{
+	width: 50%;
+}
+.col-half-center{
+	margin-left: 25%;
+}
+.col-three-one{
+	width: 33.33333%;
+}
+.col-three-one-center{
+	margin-left: 33.33333%;
+}
+.col-quarter{
+	width: 25%;
+}
+
+@media (max-width: $mobile-size){
+	.col-half,
+	.col-three-one,
+	.col-quarter{
+		float: none;
+		width: 100%;
+	}
+
+	.col-half-center, .col-three-one-center{
+		margin-left: 0;
+	}
+}
+
+//** Navbar **//
+.navbar{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: $navbar-zindex;
+	&amp;.navbar-bottom{
+		top: auto;
+		bottom: 0;
+	}
+}
+
+.navbar-default{
+	background-color: rgba(black, .75);
+	box-shadow: 0 0 5px rgba(black,.15);
+}
+
+.logo{
+	display: block;
+	padding: 12px 16px;
+	text-decoration: none;
+	color: white;
+	font-size: $font-size + 2;
+}
+
+.nav-menu{
+	margin: 0;
+	list-style: none;
+	li{
+		float: left;
+	}
+	a{
+		display: block;
+		padding: 12px 16px;
+		text-decoration: none;
+		color: white;
+		font-size: $font-size + 2;
+		&amp;:hover, &amp;:active, &amp;:focus{
+			background-color: rgba(black, .05);
+		}
+		&amp;.active{
+			box-shadow: 0 -2px 0 $brand-accent inset;
+		}
+	}
+}
+
+// style
+.nav-accent{
+	color: white;
+	background-color: $brand-accent;
+	&amp;:hover, &amp;:active, &amp;:focus{
+		color: white;
+		background-color: darken($brand-accent, 15%);
+	}
+	&amp;.active{
+		box-shadow: 0 -2px 0 darken($brand-accent, 15%) inset;
+	}
+}
+
+//** Section **//
+.section{
+	padding: 35px 0;
+}
+.section-rotate{
+	transform: rotate(-7deg);
+	margin-left: -80px;
+	margin-right: -80px;
+	padding: 35px 80px 35px 80px;
+	.section-rotate-fixed{
+		transform: rotate(7deg);
+	}
+}
+
+//** Progress bar **//
+.progress{
+	height: $progress-height;
+	overflow: hidden;
+	background-color: rgba(#fafafa, .45);
+	border-radius: 3px;
+	box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+	position: relative;
+}
+.progress-bar{
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	width: 0;
+	font-size: 12px;
+	line-height: $progress-height;
+	color: #fff;
+	text-align: center;
+	background-color: $brand-accent;
+	box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+	/* 需要加入 transition 才會有動態效果 */
+	/* 秒數數值修改動畫速率 */
+	transition: width 3s ease;
+}
+
+//** Partials Header **//
+.header-wrap{
+	height: 600px;
+	width: 130%;
+	margin: -10% -15% 0 -15%;
+	padding-left: 15%;
+	padding-right: 15%;
+	padding-top: 10%;
+	overflow: hidden;
+	transform: rotate(-7deg);
+}
+.header-img{
+	background-image: url(https://firebasestorage.googleapis.com/v0/b/hexschool-api.appspot.com/o/tutorials%2FRWD%2Fman-for-scroll-demo-light.png?alt=media&amp;token=625670d9-4180-434b-a4bd-c1b1db0d0604);
+	background-position: right 0;
+	background-size: cover;
+	position: absolute;
+	bottom: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+.header-text{
+	padding: 25px 35px;
+	background-color: #555;
+	background-image: linear-gradient(45deg, #333, #555);
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 2;
+	box-shadow: 2px 5px 15px rgba(black, .25);
+	&amp; &gt; *{
+		transform: rotate(7deg);
+	}
+}
+
+//** Utilities - 通用類別 **//
+.clearfix:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+.h100{
+	height: 100%;
+}
+.v-center{
+	top: 50%;
+	transform: translateY(-50%);
+	position: relative;
+}
+.relative{
+	position: relative;
+}
+.pull-left{
+	float: left;
+}
+.pull-right{
+	float: right;
+}
+
+.circle-border{
+	border: transparent 2px solid;
+	border-radius: 100%;
+}
+.border-white{
+	border-color: white;
+}
+
+.bg-darker{
+	background-color: darken($background-color, 5%);
+}
+.bg-dark{
+	background-color: $brand-dark;
+}
+.bg-white{
+	background-color: #fff;
+}
+.text-primary{
+	color: $brand-primary;
+}
+.text-success{
+	color: $brand-success;
+}
+.text-accent{
+	color: $brand-accent;
+}
+.text-white{
+	color: white;
+	text-decoration: none;
+}
+.text-gray{
+	color: $font-color-gray;
+}
+.text-right{
+	text-align: right;
+}
+.block{
+	display: block;
+}
+.box-shadow{
+	position: relative;
+	&amp;:before{
+		content: "";
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: 0;
+		box-shadow: 0 0 15px rgba(black, .15);
+	}
+}
+
+// margin
+.m-b-0{
+	margin-bottom: 0;
+}
+.m-t-1{
+	margin-top: $gutter;
+}
+.m-t-3{
+	margin-top: $gutter*3;
+}
+.m-b-2{
+	margin-bottom: $gutter*2;
+}
+.m-b-1{
+	margin-bottom: $gutter;
+}
+.m-y-1{
+	margin-top: $gutter;
+	margin-bottom: $gutter;
+}
+.m-y-2{
+	margin-top: $gutter*2;
+	margin-bottom: $gutter*2;
+}
+.m-y-3{
+	margin-top: $gutter*3;
+	margin-bottom: $gutter*3;
+}
+.m-x-1{
+	margin-left: $gutter;
+	margin-right: $gutter;
+}
+.m-x-2{
+	margin-left: $gutter*2;
+	margin-right: $gutter*2;
+}
+.p-y-1{
+	padding-top: $gutter;
+	padding-bottom: $gutter;
+}
+.p-y-2{
+	padding-top: $gutter * 2;
+	padding-bottom: $gutter * 2;
+}
+.p-y-3{
+	padding-top: $gutter * 3;
+	padding-bottom: $gutter * 3;
+}
+.p-x-3{
+	padding-left: $gutter * 3;
+	padding-right: $gutter * 3;
+}
+.p-a-3{
+	padding: $gutter * 3;
+}
+
+// align
+.text-center{
+	text-align: center;
+}
+
+// rwd
+.img-fluid{
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+// hidden
+@media (max-width: $mobile-size){
+	.hidden-mobile{
+		display: none !important;
+	}
+}
+@media (min-width: $mobile-size){
+	.hidden-desktop{
+		display: none !important;
+	}
+}
+
+// Gradients
+
+.bg-gradient1{
+	background-image: linear-gradient(45deg, #59f0ff, $brand-primary);
+}
+
+// animated
+.animated{
+	// 透明度的隱藏方式
+	opacity: 0;
+	transition: all 1.5s;
+	transform: translateY(50px);
+}
+.fadeIn{
+	opacity: 1;
+	transform: translateY(0);
+}</code></pre>
+
+
+
+<p>JS</p>
+
+
+
+<pre class="wp-block-code"><code>$(document).ready(function () {
+    // 為了避免事件的重複觸發
+    var showSkill = false;
+
+    // 一頁式宣傳常用的選單滑動效果
+    $('.scrollTop').click(function(e){
+        // 取消事件的預設行為
+        e.preventDefault();
+        // 用 alert 確定選單是否有效果
+        // alert('a');
+        // 讀取 href 的值
+        var target = $(this).attr('href');
+        // alert(target);
+        // console.log(target);
+        // 取出這些 ID 的位置
+        var targetPos = $(target).offset().top;
+        // console.log(target, targetPos);
+        $('html, body').animate({scrollTop: targetPos}, 1000);
+    });
+
+    // fadeIn 測試使用
+    // $('.animated').click(function(){
+    //     $(this).addClass('fadeIn');
+    // });
+
+    // 滾動視差核心內容，滾動的時候讀取出目前滾動的位置
+    $(window).scroll(function(){
+        // console.log('scroll');
+        // 把滾動的值存在 scrollPos 裡面
+        var scrollPos = $(window).scrollTop();
+        // 新增一個變數，把整個視窗的高度讀出來
+        var windowHeight = $(window).height();
+        // console.log(scrollPos, windowHeight);
+        // console.log(scrollPos);
+
+        // 滾動到指定的區域的時候，把 active 效果加到選單上面
+        // each 就是說每次滾動都把三個值都讀出來
+        $('.scrollTop').each(function(){
+            // 目標的 href
+            var target = $(this).attr('href');
+            // 目標的位置
+            var targetPos = $(target).offset().top;
+            // 目標的高度
+            // outerHeight 的意思是連 padding 的外框範圍都讀進來
+            var targetHeight = $(target).outerHeight();
+            // console.log(target, targetPos, targetHeight);
+            // 定義一個範圍，在範圍內的時候經由判斷，加入指定的 class
+            // 誤差補上 -1
+            if (targetPos - 1 &lt;= scrollPos &amp;&amp; (targetPos + targetHeight) &gt; scrollPos){
+                // console.log(target);
+                //先移除 active，再加上 active，在範圍外 else 移除 active
+                $('.scrollTop').removeClass('active');
+                $(this).addClass('active');
+            } else {
+                $(this).removeClass('active');
+            }
+        });
+
+        // progress bar
+
+        // 把技能熟練度這個區域定義起來，讀出這個區塊的高度在哪裡
+        var skillTop = $('#skills').position().top;
+        console.log('skillTop', skillTop);
+        // 用 if 來判斷，它的 scroll 的位置有沒有到我們指定的地方就觸發
+        // 使用 windowHeight / 2 讓技能熟練度在畫面的一半就會顯示出來
+        if (skillTop &lt;= (scrollPos + windowHeight / 2) &amp;&amp; !showSkill){
+            // 當變成 true 的時候就不會跑第二次
+            showSkill = true;
+            // console.log('Skill');
+            // each 把裡面的 progress bar 都執行一次
+            $('#skills .progress-bar').each(function(){
+                // 把 data-progress 裡面的數值讀出來
+                var thisValue = $(this).data('progress');
+                // console.log('thisValue', thisValue);
+                $(this).css('width', thisValue + '%');
+            });
+        }
+
+        // animated 滾動套用 CSS 效果
+        $('.animated').each(function(){
+            var thisPos = $(this).offset().top;
+            // console.log('animated', thisPos);
+            if((windowHeight + scrollPos) &gt;= thisPos){
+                // console.log('animated')
+                $(this).addClass('fadeIn');
+            }
+        });
+
+        // bg scroll 滾動中持續改變物件位置 (CSS transform)
+        $('#profiles').css('background-position-y', -(scrollPos / 2) + 'px');
+        $('#header-ele').css('transform', 'translateY( ' + (scrollPos / 2) + 'px )');
+    });
+
+});</code></pre>
+
+
+
+<h2>響應式工具與服務介紹</h2>
+
+
+
+<h4>PageSpeed：使用 Google 線上服務觀察 Mobile 速度與使用體驗</h4>
+
+
+
+<p><a href="https://www.thinkwithgoogle.com/feature/testmysite/" target="_blank" rel="noreferrer noopener">Google mobile-friendly</a></p>
+
+
+
+<p><a rel="noreferrer noopener" href="https://search.google.com/test/mobile-friendly?utm_source=mft&amp;utm_medium=redirect&amp;utm_campaign=mft-redirect&amp;hl=zh-tw" target="_blank">Google 行動裝置測試</a></p>
+
+
+
+<p><a href="https://developers.google.com/speed/pagespeed/insights/" target="_blank" rel="noreferrer noopener">PageSpeed Insights</a></p>
+	</div>
+<!-- .entry-content -->
+
+	<footer class="entry-footer">
+			</footer><!-- .entry-footer -->
+</article><!-- #post-637 -->
+
+	<nav class="navigation post-navigation" aria-label="文章">
+		<h2 class="screen-reader-text">文章導覽</h2>
+		<div class="nav-links">
+<div class="nav-previous"><a href="/wordpress_blog/jquery-hexschool/" rel="prev"><span class="nav-subtitle">Previous:</span> <span class="nav-title">使用 jQuery 打造互動性網頁動畫效果</span></a></div>
+<div class="nav-next"><a href="/wordpress_blog/hexschoolcolumn/" rel="next"><span class="nav-subtitle">Next:</span> <span class="nav-title">網頁前端養成專欄 &#8211; 來自六角學院</span></a></div>
+</div>
+	</nav>
+	</main><!-- #main -->
+
+
+	</div></div>
+			
+			<footer id="colophon" class="site-footer">
+
+				
+				<div class="container-fluid">
+					<div class="site-info">
+						<div class="row">
+
+															
+								<div class="col-12 footer-copyright-elements footer-copyright-alignment-center">
+
+									<div class="botiga-credits">&copy; 2022 wordpress_blog. 
+Created by Gee Hsu. 
+<br>Proudly powered by <a rel="nofollow" href="https://athemes.com/theme/botiga/">Botiga</a>
+</div>
+<div class="social-profile">
+<a target="_blank" href="https://www.facebook.com/watergrass0402/"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></i></a><a target="_blank" href="https://github.com/GeeHsu"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></i></a>
+</div>
+								</div>
+														
+						</div>
+					</div>
+				</div>
+<!-- .site-info -->
+
+				
+			</footer><!-- #colophon -->
+
+			
+			<div class="back-to-top visibility-all position-right"><i class="ws-svg-icon"><svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 15l7-7 7 7" stroke-width="3" stroke-linejoin="round"></path></svg></i></div>
+</div>
+<!-- #page -->
+
+
+<script id="botiga-custom-js-extra">
+var botiga = {"ajaxurl":"\/wp-admin\/admin-ajax.php","i18n":{"botiga_sharebox_copy_link":"Copy link","botiga_sharebox_copy_link_copied":"Copied!"}};
+</script>
+<script src="/wordpress_blog/wp-content/themes/botiga/assets/js/custom.min.js?ver=1.1.2" id="botiga-custom-js"></script>
+
+</body>
+</html>

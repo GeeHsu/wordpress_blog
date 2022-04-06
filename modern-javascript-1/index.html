@@ -1,0 +1,3650 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<title>Modern JavaScript (1) &#8211; wordpress_blog</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="訂閱《wordpress_blog》&raquo; 資訊提供" href="/wordpress_blog/feed/">
+<link rel="alternate" type="application/rss+xml" title="訂閱《wordpress_blog》&raquo; 留言的資訊提供" href="/wordpress_blog/comments/feed/">
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.9.3"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style>img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="/wordpress_blog/wp-includes/css/dist/block-library/style.min.css?ver=5.9.3" media="all">
+<style id="global-styles-inline-css">body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--palette-1-color-0: #212121;--wp--preset--color--palette-1-color-1: #757575;--wp--preset--color--palette-1-color-2: #212121;--wp--preset--color--palette-1-color-3: #212121;--wp--preset--color--palette-1-color-4: #212121;--wp--preset--color--palette-1-color-5: #f5f5f5;--wp--preset--color--palette-1-color-6: #ffffff;--wp--preset--color--palette-1-color-7: #ffffff;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 14px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 18px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--normal: 16px;--wp--preset--font-size--larger: 24px;--wp--preset--font-size--extra-large: 32px;--wp--preset--font-size--huge: 48px;--wp--preset--font-size--gigantic: 64px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}</style>
+<link rel="stylesheet" id="botiga-style-css" href="/wordpress_blog/wp-content/themes/botiga/style.css?ver=1.1.2" media="all">
+<link rel="stylesheet" id="botiga-style-min-css" href="/wordpress_blog/wp-content/themes/botiga/assets/css/styles.min.css?ver=1.1.2" media="all">
+<link rel="stylesheet" id="botiga-custom-styles-css" href="/wordpress_blog/wp-content/uploads/botiga/custom-styles.css?ver=1648804469" media="all">
+<link rel="https://api.w.org/" href="/wordpress_blog/wp-json/">
+<link rel="alternate" type="application/json" href="/wordpress_blog/wp-json/wp/v2/posts/726">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/wordpress_blog/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wordpress_blog/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 5.9.3">
+<link rel="canonical" href="/wordpress_blog/modern-javascript-1/">
+<link rel="shortlink" href="/wordpress_blog/?p=726">
+<link rel="alternate" type="application/json+oembed" href="/wordpress_blog/wp-json/oembed/1.0/embed?url=%2Fmodern-javascript-1%2F">
+<link rel="alternate" type="text/xml+oembed" href="/wordpress_blog/wp-json/oembed/1.0/embed?url=%2Fmodern-javascript-1%2F&#038;format=xml">
+<link rel="icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png" sizes="32x32">
+<link rel="icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png" sizes="192x192">
+<link rel="apple-touch-icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png">
+<meta name="msapplication-TileImage" content="/wp-content/uploads/2022/03/logo.png">
+	
+</head>
+
+<body class="post-template-default single single-post postid-726 single-format-standard wp-custom-logo wp-embed-responsive header-header_layout_1 blog-single-layout1">
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0.49803921568627"></fefuncr><fefuncg type="table" tablevalues="0 0.49803921568627"></fefuncg><fefuncb type="table" tablevalues="0 0.49803921568627"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.54901960784314 0.98823529411765"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.71764705882353 0.25490196078431"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 0.27843137254902"></fefuncg><fefuncb type="table" tablevalues="0.5921568627451 0.27843137254902"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0"></fefuncr><fefuncg type="table" tablevalues="0 0.64705882352941"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.78039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.94901960784314"></fefuncg><fefuncb type="table" tablevalues="0.35294117647059 0.47058823529412"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.65098039215686 0.40392156862745"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.44705882352941 0.4"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.098039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.66274509803922"></fefuncg><fefuncb type="table" tablevalues="0.84705882352941 0.41960784313725"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg>
+
+<div id="page" class="site">
+
+	<a class="skip-link screen-reader-text" href="#primary">Skip to content</a>
+
+	
+			<div class="top-bar visibility-desktop-only">
+				<div class="container-fluid">
+					<div class="top-bar-inner">
+						<div class="row valign">
+
+															<div class="col header-elements delimiter-none">
+									<div class="header-item top-bar-social"><div class="social-profile">
+<a target="_blank" href="https://www.facebook.com/watergrass0402/"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></i></a><a target="_blank" href="https://github.com/GeeHsu"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></i></a>
+</div></div>								</div>
+																						<div class="col header-elements delimiter-none">
+													
+			<nav class="header-item top-bar-secondary-navigation secondary-navigation">
+				<div class="menu-topbar-container"><ul id="secondary" class="menu">
+<li id="menu-item-143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143"><a href="/wordpress_blog/setup/">網站架設</a></li>
+<li id="menu-item-144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a href="/wordpress_blog/source/">資料來源</a></li>
+<li id="menu-item-262" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-262"><a href="/wordpress_blog/resource/">學習資源</a></li>
+</ul></div>			</nav>
+											</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			
+							
+				<header id="masthead" class="site-header header_layout_1">
+					<div class="container-fluid">
+						<div class="site-header-inner">
+							<div class="row valign">
+								<div class="col-md-5">
+										
+			<nav id="site-navigation" class="main-navigation">
+				<div class="menu-navbar-container"><ul id="primary-menu" class="menu">
+<li id="menu-item-109" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="/wordpress_blog/about/">關於</a></li>
+<li id="menu-item-110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-110">
+<a href="/wordpress_blog/learn/">學習</a><span tabindex="0" class="dropdown-symbol"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512.011 512.011"><path d="M505.755 123.592c-8.341-8.341-21.824-8.341-30.165 0L256.005 343.176 36.421 123.592c-8.341-8.341-21.824-8.341-30.165 0s-8.341 21.824 0 30.165l234.667 234.667a21.275 21.275 0 0015.083 6.251 21.275 21.275 0 0015.083-6.251l234.667-234.667c8.34-8.341 8.34-21.824-.001-30.165z"></path></svg></i></span>
+<ul class="sub-menu">
+	<li id="menu-item-140" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-140"><a href="/wordpress_blog/category/hexschool/">六角學院</a></li>
+	<li id="menu-item-141" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-141"><a href="/wordpress_blog/category/ninja/">The Net Ninja</a></li>
+	<li id="menu-item-483" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-483"><a href="/wordpress_blog/category/youtube/">Youtube</a></li>
+</ul>
+</li>
+<li id="menu-item-111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="/wordpress_blog/linestore/">LINE STORE</a></li>
+</ul></div>			</nav><!-- #site-navigation -->
+											</div>
+								<div class="col-md-2">
+												<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+											</div>
+								<div class="col-md-5 header-elements">
+																	</div>							
+							</div>
+						</div>
+					</div>
+								<div class="header-search-form">
+			<form role="search" method="get" class="search-form" action="/">
+	<label class="screen-reader-text" for="search-form-1">Search&hellip;</label>
+	<input type="search" id="search-form-1" class="search-field" value="" name="s" placeholder="Search &hellip;">
+	<button type="submit" class="search-submit" value="Search"><i class="ws-svg-icon"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 100 14.25 7.125 7.125 0 000-14.25zM2.25 10.875a8.625 8.625 0 1117.25 0 8.625 8.625 0 01-17.25 0z"></path><path fill-rule="evenodd" d="M15.913 15.914a.75.75 0 011.06 0l4.557 4.556a.75.75 0 01-1.06 1.06l-4.557-4.556a.75.75 0 010-1.06z"></path></svg></i></button>
+</form>
+			</div>
+			
+									</header>
+
+										<div class="search-overlay"></div>
+			
+			<div class="botiga-offcanvas-menu">
+				<div class="mobile-header-item">
+					<div class="row">
+						<div class="col">
+										<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+									</div>
+						<div class="col align-right">
+							<a class="mobile-menu-close" href="#"><i class="ws-svg-icon icon-cancel"><svg width="16" height="16" fill="none" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.219.781L.78 2.22 9.562 11l-8.78 8.781 1.437 1.438L11 12.437l8.781 8.782 1.438-1.438L12.437 11l8.782-8.781L19.78.78 11 9.562 2.219.783z"></path></svg></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="mobile-header-item">
+						
+			<nav id="site-navigation" class="main-navigation">
+				<div class="menu-navbar-container"><ul id="primary-menu" class="menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="/wordpress_blog/about/">關於</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-110">
+<a href="/wordpress_blog/learn/">學習</a><span tabindex="0" class="dropdown-symbol"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512.011 512.011"><path d="M505.755 123.592c-8.341-8.341-21.824-8.341-30.165 0L256.005 343.176 36.421 123.592c-8.341-8.341-21.824-8.341-30.165 0s-8.341 21.824 0 30.165l234.667 234.667a21.275 21.275 0 0015.083 6.251 21.275 21.275 0 0015.083-6.251l234.667-234.667c8.34-8.341 8.34-21.824-.001-30.165z"></path></svg></i></span>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-140"><a href="/wordpress_blog/category/hexschool/">六角學院</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-141"><a href="/wordpress_blog/category/ninja/">The Net Ninja</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-483"><a href="/wordpress_blog/category/youtube/">Youtube</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="/wordpress_blog/linestore/">LINE STORE</a></li>
+</ul></div>			</nav><!-- #site-navigation -->
+							</div>
+				<div class="mobile-header-item">
+									<a target="&quot;_blank&quot;" class="button header-item" href="https://www.facebook.com/watergrass0402/">聯絡我</a>
+							</div>			
+			</div>
+			
+							<header id="masthead-mobile" class="site-header mobile-header">
+					<div class="container-fluid">
+						<div class="row valign flex-nowrap">
+							<div class="col-sm-6 col-md-4 col-grow-mobile">
+											<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+										</div>
+							<div class="col-auto col-sm-6 col-md-8 col-grow-mobile header-elements valign align-right">
+																	
+															<a href="#" class="menu-toggle">
+				<i class="ws-svg-icon"><svg width="16" height="11" viewbox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="16" height="1"></rect><rect y="5" width="16" height="1"></rect><rect y="10" width="16" height="1"></rect></svg></i>
+			</a>
+																		</div>						
+						</div>
+					</div>
+								<div class="header-search-form">
+			<form role="search" method="get" class="search-form" action="/">
+	<label class="screen-reader-text" for="search-form-2">Search&hellip;</label>
+	<input type="search" id="search-form-2" class="search-field" value="" name="s" placeholder="Search &hellip;">
+	<button type="submit" class="search-submit" value="Search"><i class="ws-svg-icon"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 100 14.25 7.125 7.125 0 000-14.25zM2.25 10.875a8.625 8.625 0 1117.25 0 8.625 8.625 0 01-17.25 0z"></path><path fill-rule="evenodd" d="M15.913 15.914a.75.75 0 011.06 0l4.557 4.556a.75.75 0 01-1.06 1.06l-4.557-4.556a.75.75 0 010-1.06z"></path></svg></i></button>
+</form>
+			</div>
+			
+									</header>
+						<div class="search-overlay"></div>
+			<div class="header-image"><img src="/wordpress_blog/wp-content/uploads/2022/03/seashore.jpg" width="1920" height="500" alt=""></div>
+<div class="container content-wrapper"><div class="row main-row">			
+	<main id="primary" class="site-main no-sidebar">
+
+		
+
+<article id="post-726" class="post-726 post type-post status-publish format-standard hentry category-ninja">
+	
+		
+	<header class="entry-header">
+		
+		
+		<h1 class="entry-title">Modern JavaScript (1)</h1>			<div class="entry-meta entry-meta-below delimiter-none">
+<span class="posted-on"><a href="/wordpress_blog/modern-javascript-1/" rel="bookmark"><time class="entry-date published" datetime="2021-12-14T15:11:00+08:00">2021 年 12 月 14 日</time><time class="updated" datetime="2022-04-06T15:11:52+08:00">2022 年 4 月 6 日</time></a></span><span class="byline"> <span class="author vcard"><a class="url fn n" href="/wordpress_blog/author/gee-hsu/">gee.hsu</a></span></span>
+</div>			</header><!-- .entry-header -->
+
+	
+	<div class="entry-content">
+		
+<p>(Complete guide, from Novice to Ninja)</p>
+
+
+
+<blockquote class="wp-block-quote">
+<p>Learning Udemy Course：<a href="https://www.udemy.com/course/modern-javascript-from-novice-to-ninja/" target="_blank" rel="noreferrer noopener">Modern JavaScript</a></p>
+<cite>建立者：The Net Ninja (Shaun Pelling)</cite>
+</blockquote>
+
+
+
+<p>Learn Modern JavaScript from the very start to ninja-level &amp; build awesome JavaScript applications.</p>
+
+
+
+<h4>您會學到</h4>
+
+
+
+<ul>
+<li>Learn how to program with modern JavaScript, from the very beginning to more advanced topics</li>
+<li>Learn all about OOP (object-oriented programming) with JavaScript, working with prototypes &amp; classes</li>
+<li>Learn how to create real-world front-end applications with JavaScript (quizes, weather apps, chat rooms etc)</li>
+<li>Learn how to make useful JavaScript driven UI components like popups, drop-downs, tabs, tool-tips &amp; more.</li>
+<li>Learn how to use modern, cutting-edge JavaScript features today by using a modern workflow (Babel &amp; Webpack)</li>
+<li>Learn how to use real-time databases to store, retrieve and update application data</li>
+<li>Explore API’s to make the most of third-party data (such as weather information)</li>
+</ul>
+
+
+
+<h2>Introduction</h2>
+
+
+
+<h3>Why You Should Take This Course</h3>
+
+
+
+<h4>JavaScript is a Universal Language</h4>
+
+
+
+<ul>
+<li>websites &amp; apps</li>
+<li>server-side code (node.js)</li>
+<li>programming robots</li>
+<li>and much more…</li>
+</ul>
+
+
+
+<h4>JavaScript on the Front-end</h4>
+
+
+
+<ul>
+<li>JavaScript that runs in a browser</li>
+<li>Add interactivity to web pages</li>
+<li>Animations, web forms, UI elements, using API’S &amp; data</li>
+<li>Using modern JavaScript syntax &amp; techniques</li>
+</ul>
+
+
+
+<h3>Why JavaScript is Amazing</h3>
+
+
+
+<h4>Why JavaScript is Amazing…</h4>
+
+
+
+<p>Making AWESOME things in a browser</p>
+
+
+
+<ul>
+<li>digital clocks, quizzes, chat rooms, weather apps…</li>
+<li>Server side JavaScript using Node.js</li>
+</ul>
+
+
+
+<h4>The Possibilities are Endless…</h4>
+
+
+
+<ul>
+<li>make mobile apps</li>
+<li>program robots</li>
+<li>create a VR game</li>
+</ul>
+
+
+
+<h4>Setting up Your Environment</h4>
+
+
+
+<h5>使用 Text Editor：<a rel="noreferrer noopener" href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a>
+</h5>
+
+
+
+<h5>Extensions</h5>
+
+
+
+<ul>
+<li><strong>Live Server</strong></li>
+<li>Material Icon Theme</li>
+<li>Monokai++</li>
+</ul>
+
+
+
+<h4>What is a Server？</h4>
+
+
+
+<figure class="wp-block-gallery has-nested-images columns-1 is-cropped">
+<figure class="wp-block-image size-large"><img width="1536" height="638" data-id="728" src="/wordpress_blog/wp-content/uploads/2022/04/server-1.png" alt="" class="wp-image-728"><figcaption>圖片觀念:伺服器-1</figcaption></figure>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" width="1536" height="540" data-id="729" src="/wordpress_blog/wp-content/uploads/2022/04/server-2.png" alt="" class="wp-image-729"><figcaption>圖片觀念:伺服器-2</figcaption></figure>
+</figure>
+
+
+
+<h5>建立環境</h5>
+
+
+
+<p>doc + tab 或者 doc + enter</p>
+
+
+
+<h5>使用 Live Server</h5>
+
+
+
+<p>滑鼠右鍵後點選 Open with Live Server</p>
+
+
+
+<h3>Course Files</h3>
+
+
+
+<p>資源：<a rel="noreferrer noopener" href="https://github.com/iamshaunjp/modern-javascript" target="_blank">Course Files on GitHub</a></p>
+
+
+
+<h2>JavaScript Basics</h2>
+
+
+
+<h3>Adding JavaScript to a Web Page</h3>
+
+
+
+<ul>
+<li>add it anywhere between the head tax<ul><li>99%不會使用這種方式</li></ul>
+</li>
+<li>add it anywhere between the body tax</li>
+<li>link to an external file</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Modern JavaScript&lt;/title&gt;
+    &lt;!-- &lt;script&gt;
+        alert('hello, world');
+    &lt;/script&gt; --&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;page title&lt;/h1&gt;
+
+    &lt;!-- &lt;script&gt;
+        alert('hello, world');
+    &lt;/script&gt; --&gt;
+    &lt;!-- external files --&gt;
+    &lt;script src="sandbox.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+alert('hello, world');</code></pre>
+
+
+
+<h3>The Browser Console</h3>
+
+
+
+<p>打開 Google Console：按下 F12 之後，點擊 Console。</p>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+alert('hello');</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+console.log(1);
+console.log(2);</code></pre>
+
+
+
+<p>We can use to log out values to the console and that is really going to help us when we’re learning.<br>We be using the console to test our code and see some results.</p>
+
+
+
+<h3>Variables, Constants &amp; Comments</h3>
+
+
+
+<h4>Variables</h4>
+
+
+
+<ul>
+<li>let – 用於宣告一個「只作用在當前區塊的變數」，初始值可選擇性的設定。<ul><li>主要使用</li></ul>
+</li>
+<li>const – 常數不能重複指定值，也不能重複宣告。</li>
+<li>var – 宣告一個變數, 同時可以非強制性地賦予一初始值。<ul><li>越來越少使用了</li></ul>
+</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+let age = 25;
+let year = 2019;
+
+ console.log(age, year);
+
+age = 30;
+console.log(age);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+// 覆蓋或重複會產生錯誤
+const points = 100;
+points = 50;
+console.log(points);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+var score = 75;
+console.log(score);</code></pre>
+
+
+
+<h5>限制</h5>
+
+
+
+<ul>
+<li>can’t be any spaces<ul><li>eg：my age，可以使用 myAge。</li></ul>
+</li>
+<li>can’t start with a number</li>
+<li>can’t use JavaScript Reserved Words</li>
+</ul>
+
+
+
+<h5>資源：<a href="https://www.w3schools.com/js/js_reserved.asp" target="_blank" rel="noreferrer noopener">Link to a list of reserved keywords in JavaScript</a>
+</h5>
+
+
+
+<h5>註解 – comments</h5>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+// 1. comments
+// log things to console
+// console.log(age, year);
+
+/* 2. comments */
+/* age = 30;
+console.log(age);
+
+const points = 100;
+console.log(points); */</code></pre>
+
+
+
+<h5>補充說明</h5>
+
+
+
+<p>不是所有的瀏覽器都支援 let、const 語法，因此建議在之後的課程使用較新版本的 Google Chrome 來學習、練習。</p>
+
+
+
+<h3>Data Types at a Glance</h3>
+
+
+
+<h4>JavaScript Data Types</h4>
+
+
+
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td>Number</td>
+<td>1, 2, 3, 100, 3.14</td>
+</tr>
+<tr>
+<td>String</td>
+<td>‘hello, world’ “mario@thenetninja.co.uk”</td>
+</tr>
+<tr>
+<td>Boolean</td>
+<td>true / false</td>
+</tr>
+<tr>
+<td>Null</td>
+<td>Explicitly(明確地) set a variable with no value</td>
+</tr>
+<tr>
+<td>Undefined</td>
+<td>For variables that have not yet been defined</td>
+</tr>
+<tr>
+<td>Object</td>
+<td>Complex data structures – Arrays, Dates, Literals etc</td>
+</tr>
+<tr>
+<td>Symbol</td>
+<td>Used with objects</td>
+</tr>
+</tbody></table></figure>
+
+
+
+<h3>Strings</h3>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+
+// strings
+console.log('hello, world');
+
+let email = 'mario@thenetninja.co.uk';
+console.log(email);
+
+// string concatenation
+let firstName = 'Brandon';
+let lastName = 'Sanderson';
+
+let fullName = firstName + ' ' + lastName;
+console.log(fullName);
+
+// getting characters
+console.log(fullName&#91;2]);
+
+// string length
+console.log(fullName.length);
+
+// string methods
+console.log(fullName.toUpperCase());
+let result = fullName.toLowerCase();
+console.log(result, fullName);
+
+let index = email.indexOf('@');
+console.log(index);</code></pre>
+
+
+
+<h3>Common String Methods</h3>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+// common string methods
+
+let email = 'mario@thenetninja.co.uk';
+
+// let result = email.lastIndexOf('n');
+
+// let  result = email.slice(2,5);
+
+// let result = email.substr(4,10);
+
+// let result = email.replace('m', 'w');
+
+// let result = email.replace('n', 'w');
+
+console.log(result);</code></pre>
+
+
+
+<h3>Numbers</h3>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+
+let radius = 10;
+const pi = 3.14;
+
+// console.log(radius, pi);
+
+// math operations +, -, *, / , **, %
+
+// console.log(10 / 2);
+// let result = radius % 3;
+// let result = pi * radius**2;
+
+// order of operation - B I D M A S
+
+// let result = 5 * (10-3)**2;
+
+// console.log(result);
+
+let likes = 10;
+
+// likes = likes + 1;
+// likes++;
+// likes--;
+
+// likes += 10;
+// likes -= 5;
+// likes *= 2;
+// likes /= 2;
+
+// console.log(likes);
+
+// NaN - not a number
+
+// console.log(5 / 'hello');
+// console.log(5 * 'hello');
+
+let result = 'the blog has ' + likes + ' likes';
+console.log(result);</code></pre>
+
+
+
+<h3>Template Strings (樣板字串)</h3>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+// template strings
+const title = 'Best reads of 2019';
+const author = 'Mario';
+const likes = 30;
+
+// concatenation way
+// let result = 'The blog called ' + title + ' by ' + author + ' has ' + likes + ' likes';
+// console.log(result);
+
+// template string way
+let result = `The blog called ${title} by ${author} has ${likes} likes`;
+console.log(result);
+
+// creating html templates
+let html = `
+  &lt;h2&gt;${title}&lt;/h2&gt;
+  &lt;p&gt;By ${author}&lt;/p&gt;
+  &lt;span&gt;This blog has ${likes} likes&lt;/span&gt;
+`;
+
+console.log(html);</code></pre>
+
+
+
+<h3>Arrays(陣列)</h3>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+let ninjas = &#91;'shaun', 'ryu', 'chun-li'];
+
+// ninjas&#91;1] = 'ken';
+// console.log(ninjas&#91;1]);
+
+// let ages = &#91;20,25,30,35];
+// console.log(ages&#91;2]);
+
+// let random = &#91;'shaun', 'crystal', 30, 20];
+// console.log(random);
+
+// console.log(ninjas.length);
+
+// array methods
+
+// let result = ninjas.join(',');
+// let result = ninjas.indexOf('chun-li');
+// let result = ninjas.concat(&#91;'ken', 'crystal']);
+let result = ninjas.push('ken');
+result = ninjas.pop();
+
+console.log(result);</code></pre>
+
+
+
+<h3>Null &amp; Undefined</h3>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+// let age;
+let age = null;
+
+console.log(age, age + 3, `the age is ${age}`);</code></pre>
+
+
+
+<h3>Booleans &amp; Comparisons</h3>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+// booleans &amp; comparisons
+console.log(true, false, "true", "false");
+
+// methods can return booleans
+let email = 'luigi@thenetninja.co.uk';
+let names = &#91;'mario', 'luigi', 'toad'];
+
+// let result = email.includes('!');
+// let result = names.includes('bowser');
+
+// console.log(result);
+
+// comparsion operators
+let age =  25;
+
+// console.log(age == 25);
+// console.log(age == 30);
+// console.log(age != 30);
+// console.log(age &gt; 20);
+// console.log(age &lt; 20);
+// console.log(age &lt;= 25);
+// console.log(age &gt;= 25);
+
+let name = 'shaun';
+
+console.log(name == 'shaun');
+console.log(name == 'Shaun');
+console.log(name &gt; 'crystal');
+console.log(name &gt; 'Shaun');
+console.log(name &gt; 'Crystal');</code></pre>
+
+
+
+<h3>Loose vs Strict Comparison</h3>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+let age = 25;
+
+// loose comparison (different types can still be equal)
+
+// console.log(age == 25);
+// console.log(age == '25');
+// console.log(age != 25);
+// console.log(age != '25');
+
+// strict comparison (different types cannot be equal)
+
+console.log(age === 25);
+console.log(age === '25');
+console.log(age !== 25);
+console.log(age !== '25');
+
+</code></pre>
+
+
+
+<h3>Type Conversion(類型轉換)</h3>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+// type conversion
+let score = '100';
+
+// score = Number(score);
+// console.log(score + 1);
+// console.log(typeof score);
+
+// let result = Number('hello');
+// let result = String(50);
+// let result = Boolean(0);
+let result = Boolean('');
+
+console.log(result, typeof result);</code></pre>
+
+
+
+<h2>Control Flow Basics</h2>
+
+
+
+<h3>What is Control Flow?</h3>
+
+
+
+<h4>Control Flow(控制流程)</h4>
+
+
+
+<p>Use Loops for cycling through data</p>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" width="1433" height="566" src="/wordpress_blog/wp-content/uploads/2022/04/control-flow.png" alt="" class="wp-image-731"><figcaption>control flow</figcaption></figure>
+
+
+
+<p>Use conditional statements for checking conditions</p>
+
+
+
+<pre class="wp-block-code"><code>if (some condition is true) {
+  do something...
+}</code></pre>
+
+
+
+<h3>For Loops</h3>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+// for loops
+
+// for(let i = 0; i &lt; 5; i++){
+//   console.log('in loop:', i);
+// }
+
+// console.log('loop finished');
+
+const names = &#91;'shaun', 'mario', 'luigi'];
+
+for(let i = 0; i &lt; names.length; i++){
+  // console.log(names&#91;i]);
+  let html = `&lt;div&gt;${names&#91;i]}&lt;/div&gt;`;
+  console.log(html);
+}</code></pre>
+
+
+
+<h3>While Loops(While迴圈)</h3>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+// while loops
+const names = &#91;'shaun', 'mario', 'luigi'];
+// let i = 0;
+
+// while(i &lt; 5){
+//   console.log('in loop: ', i);
+//   i++;
+// }
+
+let i = 0;
+while(i &lt; names.length){
+  console.log(names&#91;i]);
+  i++;
+}</code></pre>
+
+
+
+<h3>Do While Loops</h3>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+// do while loops
+
+let i = 3;
+
+do{
+  console.log('val of i is: ', i);
+  i++;
+} while(i &lt; 5);</code></pre>
+
+
+
+<h3>If Statements</h3>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+// if statements
+// const age = 25;
+
+// if(age &gt; 20){
+//   console.log('you are over 20 years old');
+// }
+
+// const ninjas = &#91;'shaun', 'ryu', 'chun-li', 'yoshi'];
+
+// if(ninjas.length &gt; 4){
+//   console.log("that's a lot of ninjas");
+// }
+
+const password = 'p@ss';
+
+if(password.length &gt;= 8){
+  console.log('that password is long enough!');
+}</code></pre>
+
+
+
+<h3>Else &amp; Else If</h3>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+// else if statements
+
+const password = 'p@ss';
+
+if(password.length &gt;= 12){
+  console.log('that password is mighty strong');
+} else if(password.length &gt;= 8){
+  console.log('that password is long enough!');
+} else {
+  console.log('password is not long enough');
+}</code></pre>
+
+
+
+<h3>Logical Operators(邏輯運算子)</h3>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+// logical operators - OR || and AND &amp;&amp;
+
+const password = 'p@ss12';
+
+if(password.length &gt;= 12 &amp;&amp; password.includes('@')){
+  console.log('that password is mighty strong');
+} else if(password.length &gt;= 8 || password.includes('@') &amp;&amp; password.length &gt;= 5){
+  console.log('that password is strong enough!');
+} else {
+  console.log('password is not strong enough');
+}</code></pre>
+
+
+
+<h3>Logical NOT</h3>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+// logical NOT (!)
+
+let user = false;
+
+if(!user){
+  console.log('you must be logged in to continue');
+}
+
+console.log(!true);
+console.log(!false);</code></pre>
+
+
+
+<h3>Break &amp; Continue</h3>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+// break and continue
+
+const scores = &#91;50, 25, 0, 30, 100, 20, 10];
+
+for(let i = 0; i &lt; scores.length; i++){
+
+  if(scores&#91;i] === 0){
+    continue;
+  }
+
+  console.log('your score: ', scores&#91;i]);
+
+  if(scores&#91;i] === 100){
+    console.log('congrats, you got the top score!');
+    break;
+  }
+
+}</code></pre>
+
+
+
+<h3>Switch Statements</h3>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+// switch statements
+const grade = '50';
+
+switch(grade){
+  case '50':
+    console.log('you got an A!');
+    break;
+  case 'B':
+    console.log('you got an B!');
+    break;
+  case 'C':
+    console.log('you got an C!');
+    break;
+  case 'D':
+    console.log('you got an D!');
+    break;
+  case 'E':
+    console.log('you got an E!');
+    break;
+  default:
+    console.log('not a valid grade');
+}
+
+// // using if statements
+// if(grade === 'A'){
+
+// } else if(grade === 'B'){
+
+// } else if(grade === 'C'){
+
+// } else if(grade === 'D'){
+
+// } else if(grade === 'E'){
+
+// } else {
+
+// }</code></pre>
+
+
+
+<h3>Variables &amp; Block Scope</h3>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+// variables &amp; block scope
+const age = 30;
+
+if(true){
+  const age = 40;
+  const name = 'shaun'
+  console.log('inside 1st code block: ', age, name);
+
+  if(true){
+    const age = 50;
+    console.log('inside 2nd code block: ', age);
+    // var test = 'hello';
+  }
+}
+
+console.log('outside code block: ', age, name);
+// console.log('outside code block: ', test);</code></pre>
+
+
+
+<h2>Functions &amp; Methods</h2>
+
+
+
+<h3>What are Functions?</h3>
+
+
+
+<h4>JavaScript Data Types</h4>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr>
+<td>Object</td>
+<td>Arrays, Object Literals,&nbsp;<strong>Functions</strong>, Dates etc</td>
+</tr></tbody></table></figure>
+
+
+
+<h4>Functions</h4>
+
+
+
+<figure class="wp-block-gallery has-nested-images columns-1 is-cropped">
+<figure class="wp-block-image size-large"><img loading="lazy" width="598" height="648" data-id="733" src="/wordpress_blog/wp-content/uploads/2022/04/function-1.png" alt="" class="wp-image-733"><figcaption>function &#8211; 1</figcaption></figure>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" width="1536" height="304" data-id="734" src="/wordpress_blog/wp-content/uploads/2022/04/function-2.png" alt="" class="wp-image-734"><figcaption>function &#8211; 2</figcaption></figure>
+</figure>
+
+
+
+<h3>Function Declarations &amp; Expressions(函式宣告 &amp; 表達式)</h3>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+// function expression 函式表達式
+const speak = function(){
+  console.log('good day!');
+};
+
+
+// greet();
+// greet();
+// greet();
+
+speak();
+speak();
+speak();
+
+// function declaration 函式宣告
+function greet(){
+  console.log('hello there');
+}</code></pre>
+
+
+
+<h5>JavaScript裡面的hoisting、是一種提升的觀念。</h5>
+
+
+
+<p>Hoisting works with function declarations but it doesn’t work with function expressions.</p>
+
+
+
+<p>JavaScript does not hoist function expressions only function declarations.</p>
+
+
+
+<h3>Arguments &amp; Parameters(引數 &amp; 參數)</h3>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+// arguments &amp; parameters 引數 &amp; 參數
+
+const speak = function(name = 'luigi', time = 'night'){ // 參數
+  console.log(`good ${time} ${name}`);
+};
+
+speak();
+speak('shaun'); // 引數</code></pre>
+
+
+
+<h5>引用 stack overflow 的解答：</h5>
+
+
+
+<ul>
+<li>An argument is an expression used when calling the method.</li>
+<li>A parameter is the variable which is part of the method’s signature (method declaration).</li>
+</ul>
+
+
+
+<h3>Returning Values(回傳值)</h3>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+// returning values
+
+const calcArea = function(radius){
+  let area = 3.14 * radius**2;
+  return area;
+}
+
+const area = calcArea(5);
+console.log(area);
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+// returning values
+const calcArea = function(radius){
+  let area = 3.14 * radius**2;
+  return area;
+}
+
+const a = calcArea(5);
+console.log(a);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+// returning values
+const calcArea = function(radius){
+  return 3.14 * radius**2;
+}
+
+const area = calcArea(5);
+console.log(area);</code></pre>
+
+
+
+<h3>Arrow Functions(箭頭函式)</h3>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+// regular function
+// const calcArea = function(radius) {
+//   return 3.14 * radius**2;
+// }
+
+// arrow function
+// const calcArea = (radius) =&gt; {
+//   return 3.14 * radius**2;
+// };
+
+// simplify arrow function
+// one parameter 才能使用
+// 兩個以上參數要(radius, something)
+// const calcArea = radius =&gt; {
+//   return 3.14 * radius**2;
+// };
+
+// one line arrow function
+const calcArea = radius =&gt; 3.14 * radius**2;
+
+const area = calcArea(5);
+console.log('area is:', area);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+// practise arrow functions
+
+// const greet = function() {
+//   return 'hello, world';
+// }
+
+// const greet = () =&gt; {
+//   return 'hello, world';
+// }
+
+// const greet = () =&gt; 'hello world';
+// const result = greet();
+// console.log(result);
+
+// const bill = function(products, tax) {
+//   let total = 0;
+//   for(let i = 0; i &lt; products.length; i++) {
+//     total += products&#91;i] + products&#91;i] * tax;
+//   }
+//   return total;
+// }
+
+const bill = (products, tax) =&gt; {
+  let total = 0;
+  for(let i = 0; i &lt; products.length; i++) {
+    total += products&#91;i] + products&#91;i] * tax;
+  }
+  return total;
+}
+
+console.log(bill(&#91;10, 15, 30], 0.2));
+</code></pre>
+
+
+
+<h3>Functions vs Methods</h3>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+const name = 'shaun';
+
+// functions
+
+const greet = () =&gt; 'hello';
+
+let resultOne = greet();
+console.log(resultOne);
+
+// methods
+
+let resultTwo = name.toUpperCase();
+console.log(resultTwo);
+</code></pre>
+
+
+
+<h3>Foreach Method &amp; Callbacks</h3>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+// callbacks &amp; foreach
+
+const myFunc = (callbackFunc) =&gt; {
+  // do something
+  let value = 50;
+  callbackFunc(value);
+};
+
+myFunc(function(value){
+  // do something
+  console.log(value);
+});
+
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+// callbacks &amp; foreach
+
+const myFunc = (callbackFunc) =&gt; {
+  // do something
+  let value = 50;
+  callbackFunc(value);
+};
+
+myFunc(value =&gt; {
+  // do something
+  console.log(value);
+});
+
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+// callbacks &amp; foreach
+
+let people = &#91;'mario', 'luigi', 'ryu', 'shaun', 'chun-li'];
+
+people.forEach(function(){
+  console.log('something');
+});</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+// callbacks &amp; foreach
+
+let people = &#91;'mario', 'luigi', 'ryu', 'shaun', 'chun-li'];
+
+people.forEach(function(person){
+  console.log(person);
+});</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+// callbacks &amp; foreach
+
+let people = &#91;'mario', 'luigi', 'ryu', 'shaun', 'chun-li'];
+
+people.forEach(person =&gt; {
+  console.log(person);
+});</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+// callbacks &amp; foreach
+
+let people = &#91;'mario', 'luigi', 'ryu', 'shaun', 'chun-li'];
+
+people.forEach((person, index) =&gt; {
+  console.log(index, person);
+});</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+// callbacks &amp; foreach
+
+let people = &#91;'mario', 'luigi', 'ryu', 'shaun', 'chun-li'];
+
+const logPerson = (person, index) =&gt; {
+  console.log(`${index} - hello ${person}`);
+}
+
+people.forEach(logPerson);</code></pre>
+
+
+
+<h3>Callback Functions in Action</h3>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Modern JavaScript&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Functions!&lt;/h1&gt;
+
+    &lt;ul class="people"&gt;&lt;/ul&gt;
+
+    &lt;script src="sandbox.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+// get a reference to the 'ul'
+const ul = document.querySelector('.people');
+
+const people = &#91;'mario', 'luigi', 'ryu', 'shaun', 'chun-li'];</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+// get a reference to the 'ul'
+const ul = document.querySelector('.people');
+
+const people = &#91;'mario', 'luigi', 'ryu', 'shaun', 'chun-li'];
+
+let html = ``;
+
+people.forEach(function(person){
+  // create html template
+  html += `&lt;li style="color: purple"&gt;${person}&lt;/li&gt;`;
+});
+
+console.log(html);
+ul.innerHTML = html;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>sandbox.js
+// get a reference to the 'ul'
+const ul = document.querySelector('.people');
+
+const people = &#91;'mario', 'luigi', 'ryu', 'shaun', 'chun-li'];
+
+let html = ``;
+
+people.forEach(person =&gt; {
+  // create html template
+  html += `&lt;li style="color: purple"&gt;${person}&lt;/li&gt;`;
+});
+
+console.log(html);
+ul.innerHTML = html;</code></pre>
+
+
+
+<h2>Object Literals(物件實字)</h2>
+
+
+
+<h3>Objects at a Glance</h3>
+
+
+
+<h4>Objects(物件)</h4>
+
+
+
+<p>Objects in real life have properties &amp; things they can do…</p>
+
+
+
+<h5>a phone</h5>
+
+
+
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td>properties</td>
+<td>things it can do</td>
+</tr>
+<tr>
+<td>– colour</td>
+<td>– ring</td>
+</tr>
+<tr>
+<td>– size</td>
+<td>– take a picture</td>
+</tr>
+<tr>
+<td>– modal</td>
+<td>– play music</td>
+</tr>
+</tbody></table></figure>
+
+
+
+<p>Objects in JavaScript have properties &amp; things they can do (methods)…</p>
+
+
+
+<h5>user object</h5>
+
+
+
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td>properties</td>
+<td>methods</td>
+</tr>
+<tr>
+<td>– email</td>
+<td>– login</td>
+</tr>
+<tr>
+<td>– username</td>
+<td>– logout</td>
+</tr>
+<tr>
+<td>– gender</td>
+<td></td>
+</tr>
+</tbody></table></figure>
+
+
+
+<h5>blog object</h5>
+
+
+
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td>properties</td>
+<td>methods</td>
+</tr>
+<tr>
+<td>– title</td>
+<td>– publish</td>
+</tr>
+<tr>
+<td>– content</td>
+<td>– unpublish</td>
+</tr>
+<tr>
+<td>– author</td>
+<td>– delete</td>
+</tr>
+</tbody></table></figure>
+
+
+
+<h3>Creating an Object Literal</h3>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+// object literals
+
+let user = {
+  name: 'crystal',
+  age: 30,
+  email: 'crystal@thenetninja.co.uk',
+  location: 'berlin',
+  blogs: &#91;'why mac &amp; cheese rules', '10 things to make with marmite']
+};
+
+console.log(user);
+console.log(user.name);
+
+// user.age = 35;
+console.log(user.age);
+
+// const key = 'location';
+// console.log(user&#91;key]);
+
+console.log(user&#91;'location']);
+
+console.log(user&#91;'name']);
+console.log(user&#91;'email']);
+user&#91;'name'] = 'chun-li';
+console.log(user&#91;'name']);
+
+console.log(typeof user);
+</code></pre>
+
+
+
+<h3>Adding Methods</h3>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+// object literals
+
+let user = {
+  name: 'crystal',
+  age: 30,
+  email: 'crystal@thenetninja.co.uk',
+  location: 'berlin',
+  blogs: &#91;'why mac &amp; cheese rules', '10 things to make with marmite'],
+  login: function() {
+    console.log('the user logged in');
+  },
+  logout: function() {
+    console.log('the user logged out');
+  },
+  logBlogs: function() {
+    
+  }
+};
+
+user.login();
+user.logout();
+
+const name = 'mario';
+name.toUpperCase();
+</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">‘this’ Keyword</h3>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 1
+// object literals
+
+let user = {
+  name: 'crystal',
+  age: 30,
+  email: 'crystal@thenetninja.co.uk',
+  location: 'berlin',
+  blogs: &#91;'why mac &amp; cheese rules', '10 things to make with marmite'],
+  login: function(){
+    console.log('the user logged in');
+  },
+  logout: function(){
+    console.log('the user logged out');
+  },
+  logBlogs: function(){
+    console.log(blogs);
+  }
+};
+
+user.logBlogs();
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console -1
+  x Uncaught ReferenceError: blogs is not defined at Object.logBlogs (sandbox.js:16) at sandbox.js:20
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 2
+// object literals
+
+let user = {
+  name: 'crystal',
+  age: 30,
+  email: 'crystal@thenetninja.co.uk',
+  location: 'berlin',
+  blogs: &#91;'why mac &amp; cheese rules', '10 things to make with marmite'],
+  login: function(){
+    console.log('the user logged in');
+  },
+  logout: function(){
+    console.log('the user logged out');
+  },
+  logBlogs: function(){
+    this.blogs
+  }
+};
+
+// user.logBlogs();
+console.log(this);
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console -2
+  Window&nbsp;{window: Window, self: Window, document: document, name: '', location: Location,&nbsp;…}
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js -3
+// object literals
+
+let user = {
+  name: 'crystal',
+  age: 30,
+  email: 'crystal@thenetninja.co.uk',
+  location: 'berlin',
+  blogs: &#91;'why mac &amp; cheese rules', '10 things to make with marmite'],
+  login: function(){
+    console.log('the user logged in');
+  },
+  logout: function(){
+    console.log('the user logged out');
+  },
+  logBlogs: function(){
+    console.log(this);
+  }
+};
+
+user.logBlogs();
+console.log(this);
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console -3
+  {name: 'crystal', age: 30, email: 'crystal@thenetninja.co.uk', location: 'berlin', blogs: Array(2),&nbsp;…}
+  Window&nbsp;{window: Window, self: Window, document: document, name: '', location: Location,&nbsp;…}
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 4
+// object literals
+
+let user = {
+  name: 'crystal',
+  age: 30,
+  email: 'crystal@thenetninja.co.uk',
+  location: 'berlin',
+  blogs: &#91;'why mac &amp; cheese rules', '10 things to make with marmite'],
+  login: function(){
+    console.log('the user logged in');
+  },
+  logout: function(){
+    console.log('the user logged out');
+  },
+  logBlogs: function(){
+    console.log(this.blogs);
+  }
+};
+
+user.logBlogs();
+console.log(this);
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 4
+  (2)&nbsp;&#91;'why mac &amp; cheese rules', '10 things to make with marmite']
+  Window&nbsp;{window: Window, self: Window, document: document, name: '', location: Location,&nbsp;…}
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 5
+// object literals
+
+let user = {
+  name: 'crystal',
+  age: 30,
+  email: 'crystal@thenetninja.co.uk',
+  location: 'berlin',
+  blogs: &#91;'why mac &amp; cheese rules', '10 things to make with marmite'],
+  login: function(){
+    console.log('the user logged in');
+  },
+  logout: function(){
+    console.log('the user logged out');
+  },
+  logBlogs: function(){
+    // console.log(this.blogs);
+    console.log('this user has written the following blogs:');
+    this.blogs.forEach(blog =&gt; {
+      console.log(blog);
+    })
+  }
+};
+
+user.logBlogs();
+console.log(this);
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>Google Console - 5
+  this user has written the following blogs:
+  thy mac &amp; cheese rules
+  10 things to make with marmite
+  Window&nbsp;{window: Window, self: Window, document: document, name: '', location: Location,&nbsp;…}
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 6
+// object literals
+
+let user = {
+  name: 'crystal',
+  age: 30,
+  email: 'crystal@thenetninja.co.uk',
+  location: 'berlin',
+  blogs: &#91;'why mac &amp; cheese rules', '10 things to make with marmite'],
+  login: function(){
+    console.log('the user logged in');
+  },
+  logout: function(){
+    console.log('the user logged out');
+  },
+  logBlogs: () =&gt; {
+    // console.log(this.blogs);
+    // console.log('this user has written the following blogs:');
+    // this.blogs.forEach(blog =&gt; {
+    //   console.log(blog);
+    // })
+    console.log(this);
+  }
+};
+
+user.logBlogs();
+console.log(this);
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 6
+  Window&nbsp;{window: Window, self: Window, document: document, name: '', location: Location,&nbsp;…}
+  Window&nbsp;{window: Window, self: Window, document: document, name: '', location: Location,&nbsp;…}
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 7
+// object literals
+
+let user = {
+  name: 'crystal',
+  age: 30,
+  email: 'crystal@thenetninja.co.uk',
+  location: 'berlin',
+  blogs: &#91;'why mac &amp; cheese rules', '10 things to make with marmite'],
+  login: function(){
+    console.log('the user logged in');
+  },
+  logout: function(){
+    console.log('the user logged out');
+  },
+  logBlogs: function() {
+    // console.log(this.blogs);
+    console.log('this user has written the following blogs:');
+    this.blogs.forEach(blog =&gt; {
+      console.log(blog);
+    });
+  }
+};
+
+user.logBlogs();
+console.log(this);
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 7
+  this user has written the following blogs:
+  why mac &amp; cheese rules
+  10 things to make with marmite
+  Window&nbsp;{window: Window, self: Window, document: document, name: '', location: Location,&nbsp;…}
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 8
+// object literals
+
+let user = {
+  name: 'crystal',
+  age: 30,
+  email: 'crystal@thenetninja.co.uk',
+  location: 'berlin',
+  blogs: &#91;'why mac &amp; cheese rules', '10 things to make with marmite'],
+  login(){
+    console.log('the user logged in');
+  },
+  logout(){
+    console.log('the user logged out');
+  },
+  logBlogs(){
+    // console.log(this.blogs);
+    console.log('this user has written the following blogs:');
+    this.blogs.forEach(blog =&gt; {
+      console.log(blog);
+    });
+  }
+};
+
+user.logBlogs();
+console.log(this);
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 8
+  this user has written the following blogs:
+  why mac &amp; cheese rules
+  10 things to make with marmite
+  Window&nbsp;{window: Window, self: Window, document: document, name: '', location: Location,&nbsp;…}
+&gt;</code></pre>
+
+
+
+<h3>Objects in Arrays</h3>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 1 
+// object literals
+
+const blogs = &#91;
+  { title: 'why mac &amp; cheese rules', likes: 30 },
+  { title: '10 things to make with marmite', likes: 50 }
+];
+
+console.log(blogs);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 1
+  (2) &#91;{...}, {...}]
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 2
+// object literals
+
+// const blogs = &#91;
+//   { title: 'why mac &amp; cheese rules', likes: 30 },
+//   { title: '10 things to make with marmite', likes: 50 }
+// ];
+
+// console.log(blogs);
+
+let user = {
+  name: 'crystal',
+  age: 30,
+  email: 'crystal@thenetninja.co.uk',
+  location: 'berlin',
+  blogs: &#91;
+    { title: 'why mac &amp; cheese rules', likes: 30 },
+    { title: '10 things to make with marmite', likes: 50 }
+  ],
+  login(){
+    console.log('the user logged in');
+  },
+  logout(){
+    console.log('the user logged out');
+  },
+  logBlogs(){
+    // console.log(this.blogs);
+    console.log('this user has written the following blogs:');
+    this.blogs.forEach(blog =&gt; {
+      console.log(blog.title, blog.likes);
+    });
+  }
+};
+
+user.logBlogs();
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 2
+  this user has written the following blogs:
+  why mac &amp; cheese rules 30
+  10 things to make with marmite 50
+&gt;</code></pre>
+
+
+
+<h3>Math Object</h3>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+// Math object
+
+console.log(Math);
+console.log(Math.PI);
+console.log(Math.E);
+
+const area = 7.7;
+
+console.log(Math.round(area));
+console.log(Math.floor(area));
+console.log(Math.ceil(area));
+console.log(Math.trunc(area));
+
+// random numbers
+
+const random = Math.random();
+
+console.log(random);
+console.log(Math.round(random));
+console.log(Math.round(random * 100));</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+  Math&nbsp;{abs: ƒ, acos: ƒ, acosh: ƒ, asin: ƒ, asinh: ƒ,&nbsp;…}
+  3.141592653589793
+  2.718281828459045
+  8
+  7
+  8
+  7
+  0.15006583288702902
+  0
+  15
+&gt;</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Primitive vs Reference Types</h3>
+
+
+
+<h4>Primitive &amp; Reference Types</h4>
+
+
+
+<p>Primitive Types</p>
+
+
+
+<ul>
+<li>numbers</li>
+<li>strings</li>
+<li>Booleans</li>
+<li>null</li>
+<li>undefined</li>
+<li>symbols</li>
+</ul>
+
+
+
+<p>Reference Types</p>
+
+
+
+<ul>
+<li>all types of objects</li>
+<li>object literals</li>
+<li>arrays</li>
+<li>functions</li>
+<li>dates</li>
+<li>all other objects</li>
+</ul>
+
+
+
+<h4>Stack &amp; Heap</h4>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" width="1536" height="783" src="/wordpress_blog/wp-content/uploads/2022/04/stackheap.jpg" alt="" class="wp-image-736"><figcaption>Stack &amp; Heap</figcaption></figure>
+
+
+
+<ul>
+<li>primitive types 儲存在 stack</li>
+<li>reference types 儲存在 heap</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+// primitive values
+
+let scoreOne = 50;
+let scoreTwo = scoreOne;
+
+console.log(`scoreOne: ${scoreOne}`, `scoreTwo: ${scoreTwo}`);
+
+scoreOne = 100;
+console.log(`scoreOne: ${scoreOne}`, `scoreTwo: ${scoreTwo}`);
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   scoreOne: 50 scoreTwo: 50
+   scoreOne: 100 scoreTwo: 50
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+// reference values
+
+const userOne = { name: 'ryu', age: 30 };
+const userTwo = userOne;
+
+console.log(userOne, userTwo);
+
+userOne.age = 40;
+userOne.name = 'chun-li';
+console.log(userOne, userTwo);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   {name: 'ryu', age: 30} {name: 'ryu', age: 30}
+   {name: 'chun-li', age: 40} {name: 'chun-li', age: 40}
+&gt;</code></pre>
+
+
+
+<h2>The Document Object Model</h2>
+
+
+
+<h3>Interacting with the Browser</h3>
+
+
+
+<h4>Interacting with a Browser</h4>
+
+
+
+<ul>
+<li>add content to the browser</li>
+<li>change CSS styles</li>
+<li>react to user events (e.g clicking)</li>
+<li>cool effects like popups</li>
+</ul>
+
+
+
+<h4>Interacting with a Browser</h4>
+
+
+
+<ul>
+<li>Document Object Model (DOM)</li>
+<li>Add, change &amp; delete content</li>
+<li>Make a cool pop-up effect in the web page</li>
+</ul>
+
+
+
+<p>VSCode Extensions：Live Server</p>
+
+
+
+<h3>The DOM Explained</h3>
+
+
+
+<h4>Document Object Model – 文件物件模型 (DOM)</h4>
+
+
+
+<ul>
+<li>Created by the browser</li>
+<li>‘document’ object</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+&gt;  document
+&lt;  #document
+&gt;  document.location
+&lt;  Location&nbsp;{ancestorOrigins: DOMStringList, href: 'http://127.0.0.1:5500/index.html', origin: 'http://127.0.0.1:5500', protocol: 'http:', host: '127.0.0.1:5500',&nbsp;…}
+&gt;  document.URL
+&lt;  'http://127.0.0.1:5500/index.html'
+&gt;</code></pre>
+
+
+
+<h4>Document Object Model – 文件物件模型 (DOM)</h4>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" width="1196" height="707" src="/wordpress_blog/wp-content/uploads/2022/04/DOM.jpg" alt="" class="wp-image-738"><figcaption>DOM</figcaption></figure>
+
+
+
+<h3>The Query Selector</h3>
+
+
+
+<pre class="wp-block-code"><code>// index.html - 1
+
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Modern JavaScript&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;The DOM&lt;/h1&gt;
+
+    &lt;div&gt;
+        &lt;p&gt;hello, world&lt;/p&gt;
+        &lt;p&gt;lorem ipsum&lt;/p&gt;
+        &lt;p class="error"&gt;this is an error message&lt;/p&gt;
+    &lt;/div&gt;
+
+
+    &lt;script src="sandbox.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 1
+const para = document.querySelector('p');
+
+console.log(para);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 1
+   &lt;p&gt;hello, world&lt;/p&gt;
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 2
+
+const para = document.querySelector('.error');
+
+console.log(para);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 2
+   &lt;p class="error"&gt;this is an error message&lt;/p&gt;
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.html - 3
+
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Modern JavaScript&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;The DOM&lt;/h1&gt;
+
+    &lt;div&gt;
+        &lt;p&gt;hello, world&lt;/p&gt;
+        &lt;p&gt;lorem ipsum&lt;/p&gt;
+        &lt;p class="error"&gt;this is an error message&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div class="error"&gt;this is another error&lt;/div&gt;
+
+    &lt;script src="sandbox.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 3
+
+const para = document.querySelector('div.error');
+
+console.log(para);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 3
+   &lt;div class="error"&gt;this is another error&lt;/div&gt;
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 4
+
+const para = document.querySelector('body &gt; h1');
+
+console.log(para);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 4
+   &lt;h1&gt;The DOM&lt;/h1&gt;
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 5
+
+// const para = document.querySelector('body &gt; h1');
+
+// console.log(para);
+
+const paras = document.querySelectorAll('p');
+
+console.log(paras);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 5
+   NodeList(3) &#91;p, p, p.error]
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 6
+
+// const para = document.querySelector('body &gt; h1');
+
+// console.log(para);
+
+const paras = document.querySelectorAll('p');
+
+console.log(paras);
+console.log(paras&#91;0]);
+console.log(paras&#91;2]);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 6
+   NodeList(3) &#91;p, p, p.error]
+   &lt;p&gt;hello, world&lt;/p&gt;
+   &lt;p class="error"&gt;this is an error messate&lt;/p&gt;
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 7
+
+// const para = document.querySelector('body &gt; h1');
+
+// console.log(para);
+
+const paras = document.querySelectorAll('p');
+
+paras.forEach(para =&gt; {
+  console.log(para);
+})
+
+// console.log(paras&#91;2]);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 7
+   &lt;p&gt;hello, world&lt;/p&gt;
+   &lt;p&gt;lorem ipsum&lt;/p&gt;
+   &lt;p class="error&gt;this is an error message&lt;/p&gt;
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 8
+
+// const para = document.querySelector('body &gt; h1');
+
+// console.log(para);
+
+const paras = document.querySelectorAll('p');
+const errors = document.querySelectorAll('.error');
+
+console.log(errors);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 8
+   NodeList(2) &#91;p.error, div.error]
+&gt;</code></pre>
+
+
+
+<h3>Other Ways to Query the DOM</h3>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Modern JavaScript&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1 id="page-title"&gt;The DOM&lt;/h1&gt;
+
+    &lt;div&gt;
+        &lt;p&gt;hello, world&lt;/p&gt;
+        &lt;p&gt;lorem ipsum&lt;/p&gt;
+        &lt;p class="error"&gt;this is an error message&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div class="error"&gt;this is another error&lt;/div&gt;
+
+    &lt;script src="sandbox.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 1
+
+// get an element by ID
+const title = document.getElementById('page-title');
+console.log(title);
+
+// get elements by their class name
+const errors = document.getElementsByClassName('error');
+console.log(errors);
+console.log(errors&#91;0]);
+errors.forEach(error =&gt; {
+  console.log(error);
+});
+
+// get elements by their tag name</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 1
+   h1#page-title
+   HTMLCollection(2) &#91;p.error, div.error]
+   p.error
+x  Uncaught TypeError: errors.forEach is not a function at sandbox.js:9
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 2
+
+// get elements by their tag name
+const paras = document.getElementsByTagName('p');
+console.log(paras);
+console.log(paras&#91;1]);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 2
+   HTMLCollection(3) &#91;p, p, p.error]
+   &lt;p&gt;lorem ipsum&lt;/p&gt;
+&gt;</code></pre>
+
+
+
+<h3>Adding &amp; Changing Page Content</h3>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Modern JavaScript&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1 id="page-title"&gt;The DOM&lt;/h1&gt;
+
+    &lt;div&gt;
+        &lt;p&gt;hello, world&lt;/p&gt;
+        &lt;p&gt;lorem ipsum&lt;/p&gt;
+        &lt;p class="error"&gt;this is an error message&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div class="content"&gt;
+        &lt;p&gt;this is the content&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;script src="sandbox.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 1
+
+const para = document.querySelector('p');
+console.log(para.innerText);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 1
+   hello, world
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 2
+
+const para = document.querySelector('p');
+
+// console.log(para.innerText);
+para.innerText = 'ninjas are awesome';</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 瀏覽器畫面 - 2
+The DOM
+
+ninjas are awesome
+lorem ipsum
+this is an error message
+this is the content</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 3
+
+const para = document.querySelector('p');
+
+// console.log(para.innerText);
+para.innerText += 'ninjas are awesome';</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 瀏覽器畫面 - 3
+The DOM
+
+hello, worldninjas are awesome
+lorem ipsum
+this is an error message
+this is the content</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 4
+
+const para = document.querySelector('p');
+
+// console.log(para.innerText);
+// para.innerText += 'ninjas are awesome';
+
+const paras = document.querySelectorAll('p');
+
+paras.forEach(para =&gt; {
+  console.log(para.innerText);
+})</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 4
+   hello, world
+   lorem ipsum
+   this is an error message
+   this is the content
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 5
+
+const para = document.querySelector('p');
+
+// console.log(para.innerText);
+// para.innerText += 'ninjas are awesome';
+
+const paras = document.querySelectorAll('p');
+
+paras.forEach(para =&gt; {
+  console.log(para.innerText);
+  para.innerText += ' new text';
+})</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 瀏覽器畫面 - 5
+The DOM
+
+hello, world new text
+lorem ipsum new text
+this is an error message new text
+this is the content new text</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 6
+
+const para = document.querySelector('p');
+
+// console.log(para.innerText);
+// para.innerText += 'ninjas are awesome';
+
+const paras = document.querySelectorAll('p');
+
+// paras.forEach(para =&gt; {
+//   console.log(para.innerText);
+//   para.innerText += ' new text';
+// })
+
+const content = document.querySelector('.content');
+
+// console.log(content.innerHTML);
+content.innerHTML = '&lt;h2&gt;THIS IS A NEW H2&lt;/h2&gt;';</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 瀏覽器畫面 - 6
+The DOM
+
+hello, world
+lorem ipsum
+this is an error message
+THIS IS A NEW H2</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 7
+
+const para = document.querySelector('p');
+
+// console.log(para.innerText);
+// para.innerText += 'ninjas are awesome';
+
+const paras = document.querySelectorAll('p');
+
+// paras.forEach(para =&gt; {
+//   console.log(para.innerText);
+//   para.innerText += ' new text';
+// })
+
+const content = document.querySelector('.content');
+
+// console.log(content.innerHTML);
+content.innerHTML += '&lt;h2&gt;THIS IS A NEW H2&lt;/h2&gt;';</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 瀏覽器畫面 - 7
+The DOM
+
+hello, world
+lorem ipsum
+this is an error message
+this is the content
+THIS IS A NEW H2</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 8
+
+const para = document.querySelector('p');
+
+// console.log(para.innerText);
+// para.innerText += 'ninjas are awesome';
+
+const paras = document.querySelectorAll('p');
+
+// paras.forEach(para =&gt; {
+//   console.log(para.innerText);
+//   para.innerText += ' new text';
+// })
+
+const content = document.querySelector('.content');
+
+// console.log(content.innerHTML);
+// content.innerHTML += '&lt;h2&gt;THIS IS A NEW H2&lt;/h2&gt;';
+
+const people = &#91;'mario', 'luigi', 'yoshi'];
+
+people.forEach(person =&gt; {
+  content.innerHTML += `&lt;p&gt;${person}&lt;/p&gt;`;
+});</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 瀏覽器畫面 - 8
+The DOM
+
+hello, world
+lorem ipsum
+this is an error message
+this is the content
+mario
+luigi
+yoshi</code></pre>
+
+
+
+<h3>Getting &amp; Setting Attributes</h3>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+
+const link = document.querySelector('a');
+
+console.log(link.getAttribute('href'));
+link.setAttribute('href','https://www.thenetninja.co.uk');
+link.innerText = 'The Net Ninja Website';
+
+const mssg = document.querySelector('p');
+
+console.log(mssg.getAttribute('class'));
+mssg.setAttribute('class','success');
+mssg.setAttribute('style', 'color: green;');</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   https:&#47;&#47;www.google.com
+   error
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Elements
+
+&lt;html lang="en"&gt;
+  &lt;head&gt;...&lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;The DOM&lt;/h1&gt;
+    &lt;a href="https://www.thenetninja.co.uk"&gt;The Net Ninja Website&lt;/a&gt;
+    &lt;p class="success" style="color: green;"&gt;lorem ipsum&lt;/p&gt;
+    &lt;script src="sandbox.js"&gt;&lt;/script&gt;
+    &lt;!-- Code injected by live-server --&gt;
+    &lt;script type="text/javascript&gt;...&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<h3>Changing CSS Styles</h3>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Modern JavaScript&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1 style="color: orange"&gt;The DOM&lt;/h1&gt;
+
+    &lt;script src="sandbox.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+
+const title = document.querySelector('h1');
+
+// title.setAttribute('style', 'marin: 50px;');
+
+console.log(title.style);
+console.log(title.style.color);
+
+title.style.margin = '50px';
+title.style.color = 'crimson';
+// font-size 使用小駝峰命名，要寫成 fontSize
+title.style.fontSize = '60px';
+// 移除樣式
+title.style.margin = '';</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   CSSStyleDeclaration&nbsp;{0: 'color', accentColor: '', additiveSymbols: '', alignContent: '', alignItems: '', alignSelf: '',&nbsp;…}
+   orange
+&gt;</code></pre>
+
+
+
+<h3>Adding &amp; Removing Classes</h3>
+
+
+
+<pre class="wp-block-code"><code>// index.html - 1
+
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+    &lt;title&gt;Modern JavaScript&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;The DOM&lt;/h1&gt;
+
+    &lt;p&gt;
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae minus iusto et.
+    &lt;/p&gt;
+
+    &lt;script src="sandbox.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// style.css - 1
+
+.error {
+  padding: 10px;
+  color: crimson;
+  border: 1px dotted crimson;
+}
+
+.success {
+  padding: 10px;
+  color: limegreen;
+  border: 1px dotted limegreen;
+}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 1
+
+const content = document.querySelector('p');
+
+console.log(content.classList);
+content.classList.add('error');
+content.classList.remove('error');
+content.classList.add('success');</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 1
+   DOMTokenList&nbsp;&#91;value: '']
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.html - 2
+
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+    &lt;title&gt;Modern JavaScript&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1 class="title"&gt;The DOM&lt;/h1&gt;
+
+    &lt;p&gt;lorem error ipsum&lt;/p&gt;
+    &lt;p&gt;lorem success ipsum&lt;/p&gt;
+    &lt;p&gt;lorem ipsum lorem&lt;/p&gt;
+    &lt;p&gt;lorem ipsum success&lt;/p&gt;
+    &lt;p&gt;error lorem ipsum&lt;/p&gt;
+    &lt;p&gt;lorem ipsum lorem&lt;/p&gt;
+    &lt;p&gt;lorem ipsum error&lt;/p&gt;
+    &lt;p&gt;success lorem ipsum&lt;/p&gt;
+
+    &lt;script src="sandbox.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// style.css - 2
+
+.error {
+  padding: 10px;
+  color: crimson;
+  border: 1px dotted crimson;
+}
+
+.success {
+  padding: 10px;
+  color: limegreen;
+  border: 1px dotted limegreen;
+}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 2
+
+const paras = document.querySelectorAll('p');
+
+paras.forEach(p =&gt; {
+  // console.log(p.textContent);
+  if(p.textContent.includes('error')){
+    p.classList.add('error');
+  }
+  if(p.innerText.includes('success')){
+    p.classList.add('success');
+  }
+});
+
+const title = document.querySelector('.title');
+
+title.classList.toggle('test');
+title.classList.toggle('test');</code></pre>
+
+
+
+<h3>Parents, Children &amp; Siblings</h3>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" width="1480" height="825" src="/wordpress_blog/wp-content/uploads/2022/04/siblings.jpg" alt="" class="wp-image-739"><figcaption>Siblings</figcaption></figure>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" width="1439" height="870" src="/wordpress_blog/wp-content/uploads/2022/04/parents-children.jpg" alt="" class="wp-image-740"><figcaption>Parents &amp; Children</figcaption></figure>
+
+
+
+<pre class="wp-block-code"><code>// index.html - 1
+
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Modern JavaScript&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;The DOM&lt;/h1&gt;
+
+    &lt;article&gt;
+        &lt;h2&gt;article title&lt;/h2&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit.&lt;/p&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit.&lt;/p&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit.&lt;/p&gt;
+        &lt;div&gt;written by the net ninja&lt;/div&gt;
+    &lt;/article&gt;
+
+    &lt;script src="sandbox.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 1
+
+const article = document.querySelector('article');
+
+console.log(article.children);
+console.log(Array.from(article.children));
+console.log(article.children);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 1
+   HTMLCollection(5) &#91;h2, p, p, p, div]
+   (5) &#91;h2, p, p, p, div]
+   HTMLCollection(5) &#91;h2, p, p, p, div]
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 2
+
+const article = document.querySelector('article');
+
+// console.log(article.children);
+// console.log(Array.from(article.children));
+// console.log(article.children);
+
+Array.from(article.children).forEach(child =&gt; {
+  child.classList.add('article-element');
+}); </code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Elements - 2
+
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Modern JavaScript&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;The DOM&lt;/h1&gt;
+
+    &lt;article&gt;
+        &lt;h2 class="article-element"&gt;article title&lt;/h2&gt;
+        &lt;p class="article-element"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit.&lt;/p&gt;
+        &lt;p class="article-element"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit.&lt;/p&gt;
+        &lt;p class="article-element"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit.&lt;/p&gt;
+        &lt;div class="article-element"&gt;written by the net ninja&lt;/div&gt;
+    &lt;/article&gt;
+
+    &lt;script src="sandbox.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.html - 3
+
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Modern JavaScript&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;The DOM&lt;/h1&gt;
+
+    &lt;article&gt;
+        &lt;p&gt;new sibling&lt;/p&gt;
+        &lt;h2&gt;article title&lt;/h2&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit.&lt;/p&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit.&lt;/p&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit.&lt;/p&gt;
+        &lt;div&gt;written by the net ninja&lt;/div&gt;
+    &lt;/article&gt;
+
+    &lt;script src="sandbox.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 3
+
+const article = document.querySelector('article');
+
+// console.log(article.children);
+// console.log(Array.from(article.children));
+// console.log(article.children);
+
+// Array.from(article.children).forEach(child =&gt; {
+//   child.classList.add('article-element');
+// });
+
+const title = document.querySelector('h2');
+
+console.log(title.parentElement);
+console.log(title.parentElement.parentElement);
+console.log(title.nextElementSibling);
+console.log(title.previousElementSibling);
+
+// chaining
+console.log(title.nextElementSibling.parentElement.children);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 3
+   &lt;article&gt;...&lt;/article&gt;
+   &lt;body&gt;...&lt;/body&gt;
+   &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit.&lt;/p&gt;
+   &lt;p&gt;new sibling&lt;/p&gt;
+   HTMLCollection(6) &#91;p, h2, p, p, p, div]
+&gt;</code></pre>
+
+
+
+<h3>Event Basics (click events)</h3>
+
+
+
+<pre class="wp-block-code"><code>// index.html - 1
+
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Modern JavaScript&lt;/title&gt;
+    &lt;style&gt;
+        li {
+            list-style-type: none;
+            max-width: 200px;
+            padding: 8px;
+            margin: 8px auto;
+            background: #eee;
+            border: 1px dotted #ddd;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Todos&lt;/h1&gt;
+
+    &lt;ul&gt;
+        &lt;li&gt;buy milk&lt;/li&gt;
+        &lt;li&gt;read a book&lt;/li&gt;
+        &lt;li&gt;play the guitar&lt;/li&gt;
+        &lt;li&gt;pay the bills :(&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;button&gt;click me&lt;/button&gt;
+
+    &lt;script src="sandbox.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 1
+
+const button = document.querySelector('button');
+
+button.addEventListener('click', () =&gt; {
+  console.log('you clicked me');
+});</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 1
+   you clicked me
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 2
+
+// const button = document.querySelector('button');
+
+// button.addEventListener('click', () =&gt; {
+//   console.log('you clicked me');
+// });
+
+const items = document.querySelectorAll('li');
+
+items.forEach(item =&gt; {
+  item.addEventListener('click', e =&gt; {
+    // console.log('item clicked');
+    // console.log(e);
+    // console.log(e.target);
+    // console.log(item);
+    e.target.style.textDecoration = 'line-through';
+  });
+});</code></pre>
+
+
+
+<h3>Creating &amp; Removing Elements</h3>
+
+
+
+<pre class="wp-block-code"><code>// index.html - 1
+
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Modern JavaScript&lt;/title&gt;
+    &lt;style&gt;
+        li {
+            list-style-type: none;
+            max-width: 200px;
+            padding: 8px;
+            margin: 8px auto;
+            background: #eee;
+            border: 1px dotted #ddd;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Todos&lt;/h1&gt;
+
+    &lt;ul&gt;
+        &lt;li&gt;buy milk&lt;/li&gt;
+        &lt;li&gt;read a book&lt;/li&gt;
+        &lt;li&gt;play the guitar&lt;/li&gt;
+        &lt;li&gt;pay the bills :(&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;button&gt;click me&lt;/button&gt;
+
+    &lt;script src="sandbox.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 1
+
+// const ul = document.querySelector('ul');
+// ul.remove();
+
+const items = document.querySelectorAll('li');
+
+items.forEach(item =&gt; {
+  item.addEventListener('click', e =&gt; {
+
+    // e.target.style.textDecoration = 'line-through';
+    e.target.remove();
+    
+  });
+});</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.html - 2
+
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Modern JavaScript&lt;/title&gt;
+    &lt;style&gt;
+        li {
+            list-style-type: none;
+            max-width: 200px;
+            padding: 8px;
+            margin: 8px auto;
+            background: #eee;
+            border: 1px dotted #ddd;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Todos&lt;/h1&gt;
+
+    &lt;ul&gt;
+        &lt;li&gt;buy milk&lt;/li&gt;
+        &lt;li&gt;read a book&lt;/li&gt;
+        &lt;li&gt;play the guitar&lt;/li&gt;
+        &lt;li&gt;pay the bills :(&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;button&gt;add new todo&lt;/button&gt;
+
+    &lt;script src="sandbox.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 2
+
+const ul = document.querySelector('ul');
+// ul.remove();
+
+const button = document.querySelector('button');
+
+button.addEventListener('click', () =&gt; {
+  ul.innerHTML += '&lt;li&gt;something new&lt;/li&gt;';
+});
+
+const items = document.querySelectorAll('li');
+
+items.forEach(item =&gt; {
+  item.addEventListener('click', e =&gt; {
+
+    // e.target.style.textDecoration = 'line-through';
+    e.target.remove();
+
+  });
+});</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 3
+
+const ul = document.querySelector('ul');
+// ul.remove();
+
+const button = document.querySelector('button');
+
+button.addEventListener('click', () =&gt; {
+  const li = document.createElement('li');
+  li.textContent = 'something new to do';
+  // ul.append(li);
+  ul.prepend(li);
+});
+
+const items = document.querySelectorAll('li');
+
+items.forEach(item =&gt; {
+  item.addEventListener('click', e =&gt; {
+
+    // e.target.style.textDecoration = 'line-through';
+    e.target.remove();
+
+  });
+});</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Event Bubbling (and delegation)</h3>
+
+
+
+<pre class="wp-block-code"><code>// index.html - 1
+
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Modern JavaScript&lt;/title&gt;
+    &lt;style&gt;
+        li {
+            list-style-type: none;
+            max-width: 200px;
+            padding: 8px;
+            margin: 8px auto;
+            background: #eee;
+            border: 1px dotted #ddd;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Todos&lt;/h1&gt;
+
+    &lt;ul&gt;
+        &lt;li&gt;buy milk&lt;/li&gt;
+        &lt;li&gt;read a book&lt;/li&gt;
+        &lt;li&gt;play the guitar&lt;/li&gt;
+        &lt;li&gt;pay the bills :(&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;button&gt;add new todo&lt;/button&gt;
+
+    &lt;script src="sandbox.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 1
+
+const ul = document.querySelector('ul');
+const button = document.querySelector('button');
+
+button.addEventListener('click', () =&gt; {
+  const li = document.createElement('li');
+  li.textContent = 'something new to do';
+  ul.prepend(li);
+});
+
+const items = document.querySelectorAll('li');
+
+items.forEach(item =&gt; {
+  item.addEventListener('click', e =&gt; {
+    console.log('event in LI');
+    e.stopPropagation();
+    e.target.remove();
+  });
+});
+
+ul.addEventListener('click', e =&gt; {
+  console.log('event in UL');
+});</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js - 2
+
+const ul = document.querySelector('ul');
+const button = document.querySelector('button');
+
+button.addEventListener('click', () =&gt; {
+  const li = document.createElement('li');
+  li.textContent = 'something new to do';
+  ul.prepend(li);
+});
+
+// const items = document.querySelectorAll('li');
+
+// items.forEach(item =&gt; {
+//   item.addEventListener('click', e =&gt; {
+//     console.log('event in LI');
+//     e.stopPropagation();
+//     e.target.remove();
+//   });
+// });
+
+ul.addEventListener('click', e =&gt; {
+  // console.log('event in UL');
+  // console.log(e.target);
+  // console.log(e);
+
+  // tagName not found 
+  if(e.target.nodeName === 'LI') {
+    e.target.remove();
+  }
+});</code></pre>
+
+
+
+<h3>More DOM Events</h3>
+
+
+
+<ul><li><a href="https://developer.mozilla.org/en-US/docs/Web/Events#Mouse_events" target="_blank" rel="noreferrer noopener">MDN Mouse Event List</a></li></ul>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Modern JavaScript&lt;/title&gt;
+    &lt;style&gt;
+        .box {
+            width: 200px;
+            height: 200px;
+            margin: 10px 0;
+            background: #eee;
+            text-align: center;
+            padding: 20px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p class="copy-me"&gt;Lorem ipsum dolor sit, amet consectetur&lt;/p&gt;
+    &lt;div class="box"&gt;move the mouse around this box&lt;/div&gt;
+
+    &lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit.&lt;/p&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit.&lt;/p&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit.&lt;/p&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit.&lt;/p&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit.&lt;/p&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit.&lt;/p&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit.&lt;/p&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit.&lt;/p&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit.&lt;/p&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit.&lt;/p&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit.&lt;/p&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit.&lt;/p&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit.&lt;/p&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit.&lt;/p&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit.&lt;/p&gt;
+
+    &lt;script src="sandbox.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// sandbox.js
+
+const copy = document.querySelector('.copy-me');
+
+copy.addEventListener('copy', () =&gt; {
+  console.log('OI! my content is copyright');
+});
+
+const box = document.querySelector('.box');
+
+box.addEventListener('mousemove', e =&gt; {
+  // console.log(e);
+  // console.log(e.offsetX, e.offsetY);
+  box.textContent = `x pos - ${e.offsetX} y pos - ${e.offsetY}`;
+});
+
+document.addEventListener('wheel', e =&gt; {
+  // console.log(e);
+  console.log(e.pageX, e.pageY);
+});</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">Building a Popup</h3>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+    &lt;title&gt;Modern JavaScript&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+    &lt;button&gt;click me&lt;/button&gt;
+
+    &lt;div class="popup-wrapper"&gt;
+
+        &lt;div class="popup"&gt;
+            &lt;div class="popup-close"&gt;x&lt;/div&gt;
+            &lt;div class="popup-content"&gt;
+                &lt;h2&gt;NINJA SALE!!&lt;/h2&gt;
+                &lt;p&gt;50% off all ninja clothing, don't miss out!!&lt;/p&gt;
+                &lt;a href="#"&gt;view clothing&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+    &lt;script src="popup.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// style.css
+
+button {
+  display: block;
+  margin: 20px auto;
+  background: crimson;
+  color: white;
+  border: 0;
+  padding: 6px 10px;
+}
+
+.popup-wrapper {
+  background: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.popup {
+  font-family: arial;
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+  margin: 10% auto;
+  padding: 20px;
+  background: white;
+  position: relative;
+}
+
+.popup a {
+  background: crimson;
+  color: white;
+  text-decoration: none;
+  padding: 6px 10px;
+}
+
+.popup-close {
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  cursor: pointer;
+}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// popup.js
+
+const button = document.querySelector('button');
+const popup = document.querySelector('.popup-wrapper');
+const close = document.querySelector('.popup-close');
+
+button.addEventListener('click', () =&gt; {
+  popup.style.display = 'block';
+});
+
+close.addEventListener('click', () =&gt; {
+  popup.style.display = 'none';
+});
+
+popup.addEventListener('click', () =&gt; {
+  popup.style.display = 'none';
+});</code></pre>
+	</div>
+<!-- .entry-content -->
+
+	<footer class="entry-footer">
+			</footer><!-- .entry-footer -->
+</article><!-- #post-726 -->
+
+	<nav class="navigation post-navigation" aria-label="文章">
+		<h2 class="screen-reader-text">文章導覽</h2>
+		<div class="nav-links">
+<div class="nav-previous"><a href="/wordpress_blog/javascript-compulsory-1/" rel="prev"><span class="nav-subtitle">Previous:</span> <span class="nav-title">JavaScript 必修篇 &#8211; 前端修練全攻略 (1)</span></a></div>
+<div class="nav-next"><a href="/wordpress_blog/bs5-crash-course-tutorial/" rel="next"><span class="nav-subtitle">Next:</span> <span class="nav-title">Bootstrap 5 Crash Course Tutorial</span></a></div>
+</div>
+	</nav>
+	</main><!-- #main -->
+
+
+	</div></div>
+			
+			<footer id="colophon" class="site-footer">
+
+				
+				<div class="container-fluid">
+					<div class="site-info">
+						<div class="row">
+
+															
+								<div class="col-12 footer-copyright-elements footer-copyright-alignment-center">
+
+									<div class="botiga-credits">&copy; 2022 wordpress_blog. 
+Created by Gee Hsu. 
+<br>Proudly powered by <a rel="nofollow" href="https://athemes.com/theme/botiga/">Botiga</a>
+</div>
+<div class="social-profile">
+<a target="_blank" href="https://www.facebook.com/watergrass0402/"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></i></a><a target="_blank" href="https://github.com/GeeHsu"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></i></a>
+</div>
+								</div>
+														
+						</div>
+					</div>
+				</div>
+<!-- .site-info -->
+
+				
+			</footer><!-- #colophon -->
+
+			
+			<div class="back-to-top visibility-all position-right"><i class="ws-svg-icon"><svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 15l7-7 7 7" stroke-width="3" stroke-linejoin="round"></path></svg></i></div>
+</div>
+<!-- #page -->
+
+
+<script id="botiga-custom-js-extra">
+var botiga = {"ajaxurl":"\/wp-admin\/admin-ajax.php","i18n":{"botiga_sharebox_copy_link":"Copy link","botiga_sharebox_copy_link_copied":"Copied!"}};
+</script>
+<script src="/wordpress_blog/wp-content/themes/botiga/assets/js/custom.min.js?ver=1.1.2" id="botiga-custom-js"></script>
+
+</body>
+</html>

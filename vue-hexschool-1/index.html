@@ -1,0 +1,3575 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<title>Vue 出一個電傷網站 (1) &#8211; wordpress_blog</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="訂閱《wordpress_blog》&raquo; 資訊提供" href="/wordpress_blog/feed/">
+<link rel="alternate" type="application/rss+xml" title="訂閱《wordpress_blog》&raquo; 留言的資訊提供" href="/wordpress_blog/comments/feed/">
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.9.3"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style>img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="/wordpress_blog/wp-includes/css/dist/block-library/style.min.css?ver=5.9.3" media="all">
+<style id="global-styles-inline-css">body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--palette-1-color-0: #212121;--wp--preset--color--palette-1-color-1: #757575;--wp--preset--color--palette-1-color-2: #212121;--wp--preset--color--palette-1-color-3: #212121;--wp--preset--color--palette-1-color-4: #212121;--wp--preset--color--palette-1-color-5: #f5f5f5;--wp--preset--color--palette-1-color-6: #ffffff;--wp--preset--color--palette-1-color-7: #ffffff;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 14px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 18px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--normal: 16px;--wp--preset--font-size--larger: 24px;--wp--preset--font-size--extra-large: 32px;--wp--preset--font-size--huge: 48px;--wp--preset--font-size--gigantic: 64px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}</style>
+<link rel="stylesheet" id="botiga-style-css" href="/wordpress_blog/wp-content/themes/botiga/style.css?ver=1.1.2" media="all">
+<link rel="stylesheet" id="botiga-style-min-css" href="/wordpress_blog/wp-content/themes/botiga/assets/css/styles.min.css?ver=1.1.2" media="all">
+<link rel="stylesheet" id="botiga-custom-styles-css" href="/wordpress_blog/wp-content/uploads/botiga/custom-styles.css?ver=1648804469" media="all">
+<link rel="https://api.w.org/" href="/wordpress_blog/wp-json/">
+<link rel="alternate" type="application/json" href="/wordpress_blog/wp-json/wp/v2/posts/657">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/wordpress_blog/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wordpress_blog/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 5.9.3">
+<link rel="canonical" href="/wordpress_blog/vue-hexschool-1/">
+<link rel="shortlink" href="/wordpress_blog/?p=657">
+<link rel="alternate" type="application/json+oembed" href="/wordpress_blog/wp-json/oembed/1.0/embed?url=%2Fvue-hexschool-1%2F">
+<link rel="alternate" type="text/xml+oembed" href="/wordpress_blog/wp-json/oembed/1.0/embed?url=%2Fvue-hexschool-1%2F&#038;format=xml">
+<link rel="icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png" sizes="32x32">
+<link rel="icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png" sizes="192x192">
+<link rel="apple-touch-icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png">
+<meta name="msapplication-TileImage" content="/wp-content/uploads/2022/03/logo.png">
+	
+</head>
+
+<body class="post-template-default single single-post postid-657 single-format-standard wp-custom-logo wp-embed-responsive header-header_layout_1 blog-single-layout1">
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0.49803921568627"></fefuncr><fefuncg type="table" tablevalues="0 0.49803921568627"></fefuncg><fefuncb type="table" tablevalues="0 0.49803921568627"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.54901960784314 0.98823529411765"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.71764705882353 0.25490196078431"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 0.27843137254902"></fefuncg><fefuncb type="table" tablevalues="0.5921568627451 0.27843137254902"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0"></fefuncr><fefuncg type="table" tablevalues="0 0.64705882352941"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.78039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.94901960784314"></fefuncg><fefuncb type="table" tablevalues="0.35294117647059 0.47058823529412"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.65098039215686 0.40392156862745"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.44705882352941 0.4"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.098039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.66274509803922"></fefuncg><fefuncb type="table" tablevalues="0.84705882352941 0.41960784313725"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg>
+
+<div id="page" class="site">
+
+	<a class="skip-link screen-reader-text" href="#primary">Skip to content</a>
+
+	
+			<div class="top-bar visibility-desktop-only">
+				<div class="container-fluid">
+					<div class="top-bar-inner">
+						<div class="row valign">
+
+															<div class="col header-elements delimiter-none">
+									<div class="header-item top-bar-social"><div class="social-profile">
+<a target="_blank" href="https://www.facebook.com/watergrass0402/"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></i></a><a target="_blank" href="https://github.com/GeeHsu"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></i></a>
+</div></div>								</div>
+																						<div class="col header-elements delimiter-none">
+													
+			<nav class="header-item top-bar-secondary-navigation secondary-navigation">
+				<div class="menu-topbar-container"><ul id="secondary" class="menu">
+<li id="menu-item-143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143"><a href="/wordpress_blog/setup/">網站架設</a></li>
+<li id="menu-item-144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a href="/wordpress_blog/source/">資料來源</a></li>
+<li id="menu-item-262" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-262"><a href="/wordpress_blog/resource/">學習資源</a></li>
+</ul></div>			</nav>
+											</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			
+							
+				<header id="masthead" class="site-header header_layout_1">
+					<div class="container-fluid">
+						<div class="site-header-inner">
+							<div class="row valign">
+								<div class="col-md-5">
+										
+			<nav id="site-navigation" class="main-navigation">
+				<div class="menu-navbar-container"><ul id="primary-menu" class="menu">
+<li id="menu-item-109" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="/wordpress_blog/about/">關於</a></li>
+<li id="menu-item-110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-110">
+<a href="/wordpress_blog/learn/">學習</a><span tabindex="0" class="dropdown-symbol"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512.011 512.011"><path d="M505.755 123.592c-8.341-8.341-21.824-8.341-30.165 0L256.005 343.176 36.421 123.592c-8.341-8.341-21.824-8.341-30.165 0s-8.341 21.824 0 30.165l234.667 234.667a21.275 21.275 0 0015.083 6.251 21.275 21.275 0 0015.083-6.251l234.667-234.667c8.34-8.341 8.34-21.824-.001-30.165z"></path></svg></i></span>
+<ul class="sub-menu">
+	<li id="menu-item-140" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-140"><a href="/wordpress_blog/category/hexschool/">六角學院</a></li>
+	<li id="menu-item-141" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-141"><a href="/wordpress_blog/category/ninja/">The Net Ninja</a></li>
+	<li id="menu-item-483" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-483"><a href="/wordpress_blog/category/youtube/">Youtube</a></li>
+</ul>
+</li>
+<li id="menu-item-111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="/wordpress_blog/linestore/">LINE STORE</a></li>
+</ul></div>			</nav><!-- #site-navigation -->
+											</div>
+								<div class="col-md-2">
+												<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+											</div>
+								<div class="col-md-5 header-elements">
+																	</div>							
+							</div>
+						</div>
+					</div>
+								<div class="header-search-form">
+			<form role="search" method="get" class="search-form" action="/">
+	<label class="screen-reader-text" for="search-form-1">Search&hellip;</label>
+	<input type="search" id="search-form-1" class="search-field" value="" name="s" placeholder="Search &hellip;">
+	<button type="submit" class="search-submit" value="Search"><i class="ws-svg-icon"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 100 14.25 7.125 7.125 0 000-14.25zM2.25 10.875a8.625 8.625 0 1117.25 0 8.625 8.625 0 01-17.25 0z"></path><path fill-rule="evenodd" d="M15.913 15.914a.75.75 0 011.06 0l4.557 4.556a.75.75 0 01-1.06 1.06l-4.557-4.556a.75.75 0 010-1.06z"></path></svg></i></button>
+</form>
+			</div>
+			
+									</header>
+
+										<div class="search-overlay"></div>
+			
+			<div class="botiga-offcanvas-menu">
+				<div class="mobile-header-item">
+					<div class="row">
+						<div class="col">
+										<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+									</div>
+						<div class="col align-right">
+							<a class="mobile-menu-close" href="#"><i class="ws-svg-icon icon-cancel"><svg width="16" height="16" fill="none" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.219.781L.78 2.22 9.562 11l-8.78 8.781 1.437 1.438L11 12.437l8.781 8.782 1.438-1.438L12.437 11l8.782-8.781L19.78.78 11 9.562 2.219.783z"></path></svg></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="mobile-header-item">
+						
+			<nav id="site-navigation" class="main-navigation">
+				<div class="menu-navbar-container"><ul id="primary-menu" class="menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="/wordpress_blog/about/">關於</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-110">
+<a href="/wordpress_blog/learn/">學習</a><span tabindex="0" class="dropdown-symbol"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512.011 512.011"><path d="M505.755 123.592c-8.341-8.341-21.824-8.341-30.165 0L256.005 343.176 36.421 123.592c-8.341-8.341-21.824-8.341-30.165 0s-8.341 21.824 0 30.165l234.667 234.667a21.275 21.275 0 0015.083 6.251 21.275 21.275 0 0015.083-6.251l234.667-234.667c8.34-8.341 8.34-21.824-.001-30.165z"></path></svg></i></span>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-140"><a href="/wordpress_blog/category/hexschool/">六角學院</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-141"><a href="/wordpress_blog/category/ninja/">The Net Ninja</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-483"><a href="/wordpress_blog/category/youtube/">Youtube</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="/wordpress_blog/linestore/">LINE STORE</a></li>
+</ul></div>			</nav><!-- #site-navigation -->
+							</div>
+				<div class="mobile-header-item">
+									<a target="&quot;_blank&quot;" class="button header-item" href="https://www.facebook.com/watergrass0402/">聯絡我</a>
+							</div>			
+			</div>
+			
+							<header id="masthead-mobile" class="site-header mobile-header">
+					<div class="container-fluid">
+						<div class="row valign flex-nowrap">
+							<div class="col-sm-6 col-md-4 col-grow-mobile">
+											<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+										</div>
+							<div class="col-auto col-sm-6 col-md-8 col-grow-mobile header-elements valign align-right">
+																	
+															<a href="#" class="menu-toggle">
+				<i class="ws-svg-icon"><svg width="16" height="11" viewbox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="16" height="1"></rect><rect y="5" width="16" height="1"></rect><rect y="10" width="16" height="1"></rect></svg></i>
+			</a>
+																		</div>						
+						</div>
+					</div>
+								<div class="header-search-form">
+			<form role="search" method="get" class="search-form" action="/">
+	<label class="screen-reader-text" for="search-form-2">Search&hellip;</label>
+	<input type="search" id="search-form-2" class="search-field" value="" name="s" placeholder="Search &hellip;">
+	<button type="submit" class="search-submit" value="Search"><i class="ws-svg-icon"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 100 14.25 7.125 7.125 0 000-14.25zM2.25 10.875a8.625 8.625 0 1117.25 0 8.625 8.625 0 01-17.25 0z"></path><path fill-rule="evenodd" d="M15.913 15.914a.75.75 0 011.06 0l4.557 4.556a.75.75 0 01-1.06 1.06l-4.557-4.556a.75.75 0 010-1.06z"></path></svg></i></button>
+</form>
+			</div>
+			
+									</header>
+						<div class="search-overlay"></div>
+			<div class="header-image"><img src="/wordpress_blog/wp-content/uploads/2022/03/seashore.jpg" width="1920" height="500" alt=""></div>
+<div class="container content-wrapper"><div class="row main-row">			
+	<main id="primary" class="site-main no-sidebar">
+
+		
+
+<article id="post-657" class="post-657 post type-post status-publish format-standard hentry category-hexschool">
+	
+		
+	<header class="entry-header">
+		
+		
+		<h1 class="entry-title">Vue 出一個電傷網站 (1)</h1>			<div class="entry-meta entry-meta-below delimiter-none">
+<span class="posted-on"><a href="/wordpress_blog/vue-hexschool-1/" rel="bookmark"><time class="entry-date published" datetime="2021-03-24T11:24:00+08:00">2021 年 3 月 24 日</time><time class="updated" datetime="2022-04-06T11:25:25+08:00">2022 年 4 月 6 日</time></a></span><span class="byline"> <span class="author vcard"><a class="url fn n" href="/wordpress_blog/author/gee-hsu/">gee.hsu</a></span></span>
+</div>			</header><!-- .entry-header -->
+
+	
+	<div class="entry-content">
+		
+<p>從基礎開始，完整學習 Vue.js 開發流程。</p>
+
+
+
+<h5>您會學到</h5>
+
+
+
+<ul>
+<li>完整了解 Vue 的運行概念</li>
+<li>學會使用 Vue 串接後端 API</li>
+<li>使用 Vue Cli (或不使用) 都可以完成一個互動網頁作品</li>
+<li>具有獨立完成一個 Vue 應用程式的能力</li>
+</ul>
+
+
+
+<h2>第１節：介紹</h2>
+
+
+
+<h3>課程最終任務說明</h3>
+
+
+
+<h3>本課程特色</h3>
+
+
+
+<ul>
+<li>從基礎開始學</li>
+<li>含 Cli, Router, Webpack 各工具</li>
+<li>ES6 常用技巧</li>
+<li>額外 API，開發電商大平台</li>
+</ul>
+
+
+
+<h3>課程說明</h3>
+
+
+
+<ul>
+<li>ES6</li>
+<li>使用 BABEL 編譯</li>
+<li>WEBPACK</li>
+<li>VUE CLI</li>
+<li>SPA (Single Page Application) – 單頁應用</li>
+</ul>
+
+
+
+<h5>課程內容進程</h5>
+
+
+
+<p>JS+Vue.js → ES6 → WEBPACK → Vue Cli (SPA)</p>
+
+
+
+<h3>六角學院線上社團</h3>
+
+
+
+<h2>第２節：基礎 Vue.js 概述</h2>
+
+
+
+<h3>課程資源連結</h3>
+
+
+
+<ul>
+<li><a rel="noreferrer noopener" href="https://github.com/hexschool/vue-exercise/tree/gh-pages" target="_blank">主要範例資源連結</a></li>
+<li><a rel="noreferrer noopener" href="https://cn.vuejs.org/" target="_blank">Vue 中文文件</a></li>
+<li><a rel="noreferrer noopener" href="https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd" target="_blank">Vue Devtools</a></li>
+<li>
+<a rel="noreferrer noopener" href="https://marketplace.visualstudio.com/items?itemName=hollowtree.vue-snippets" target="_blank">VSCode Vue 套件參考</a><br>(目前下述套件功能已很全面，且安裝人數最多)<br>延伸套件不影響課程說明，可自行選用習慣的即可</li>
+</ul>
+
+
+
+<h5>附註說明</h5>
+
+
+
+<p>1. 為什麼要使用 Web Server<br>因為課程範例非常多<br>為了確保連結正確以及範例能夠正常運行<br>所以本範例一定要用 Web Server 運行<br><br>2. 一定要用 VSCode 嗎？<br>並沒有強制，你可以選擇自己喜歡的文字編輯器<br>不過記得，用其它工具時也要記得運行 Web Server 喔<br><br>3. 為什麼 VSCode Web Server 打開的路徑是錯誤的(或者沒有載入 CSS)<br>這部分要請先確認是否以專案形式載入 “範例資料夾”<br>如還有問題，可以重啟 VSCode<br>再不行可截圖放到問答區發問</p>
+
+
+
+<figure class="wp-block-image size-full"><img width="322" height="352" src="/wordpress_blog/wp-content/uploads/2022/04/路徑截圖.png" alt="" class="wp-image-659"><figcaption>路徑截圖</figcaption></figure>
+
+
+
+<p>Q：為什麼會沒辦法顯示樣式呢？<br>這與相對路徑與絕對路徑有關係，範例中都是使用絕對路徑<br>所以一定要使用 Web Server 才能正確顯示喔<br><a href="https://www.youtube.com/watch?v=tbnpDisJ4bs" target="_blank" rel="noreferrer noopener">路徑觀念影片</a></p>
+
+
+
+<h3>Vue 開發環境介紹</h3>
+
+
+
+<h5>Vue的開發環境</h5>
+
+
+
+<ol><li>使用 Vue Dev Tools 查看本章節範例</li></ol>
+
+
+
+<p>文字編輯器：VSCode<br>套件：Web Server</p>
+
+
+
+<h5>VSCode 左方列表介紹：</h5>
+
+
+
+<ol>
+<li>檔案總管</li>
+<li>搜尋以及取代</li>
+<li>Git 的版本控管工具</li>
+<li>Node.js 的除錯功能</li>
+<li>套件的安裝</li>
+</ol>
+
+
+
+<h5>套件的安裝：</h5>
+
+
+
+<ul>
+<li>Preview on Web Server</li>
+<li>VUE – vscode-vue</li>
+<li>Vue 2 Snippets – Vue 2 Snippets for Visual Studio Code</li>
+</ul>
+
+
+
+<p>Preview on Web Server 熱鍵是 Ctrl+Shift+L</p>
+
+
+
+<p><a rel="noreferrer noopener" href="https://vuejs.org/v2/guide/" target="_blank">Vue.js 官網文件</a>、<a rel="noreferrer noopener" href="https://cn.vuejs.org/v2/guide/" target="_blank">Vue.js 中文版</a><br><br>兼容性 – Vue<strong>不支持</strong>IE8及以下版本。<br><a rel="noreferrer noopener" href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank">Vue Devtools</a><br><br>開發版本、生產版本，差別在能不能使用開發者工具、錯誤題示完不完整。<br><br>範例上，點擊右鍵檢視原始碼，在課程中這裡面有載入一個 JavaScript vendor 裡面就包含 Vue.js，是開發的版本。</p>
+
+
+
+<p>MAC 系統的 VSCode 按下 CMD + P<br>WINDOWS 系統的 VSCode 按下 Ctrl + P<br>輸入路徑：basic/dev.html</p>
+
+
+
+<p>主要練習一下 Vue Dev Tools 怎麼去使用<br><br>Vue有一個很大的特色，是用資料來驅動畫面<br><br>Google – Vue.js devtools 基本介面、功能介紹</p>
+
+
+
+<h3>VSCode Preview on Web Server 替代套件</h3>
+
+
+
+<p>如果使用 Preview on Web Server 尚有任何問題，可以試著使用另一個套件 –&nbsp;<a rel="noreferrer noopener" href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer" target="_blank">LiveServer</a>&nbsp;。</p>
+
+
+
+<h5>使用方式：</h5>
+
+
+
+<ol>
+<li>安裝後重新啟動 VSCode</li>
+<li>打開任何一個 .html 檔案</li>
+<li>在 VSCode 畫面的右下角可以找到 Go Live 的按鈕</li>
+<li>按下後就能打開該網頁</li>
+</ol>
+
+
+
+<h3>應用程式建立</h3>
+
+
+
+<ol>
+<li>Ctrl + P</li>
+<li>輸入路徑：basic/instant.html</li>
+<li>所有的範例裡面，往下會有一個 “練習開始”的一個註解</li>
+</ol>
+
+
+
+<h5>建立 Vue 的應用程式</h5>
+
+
+
+<ol>
+<li>建立一個應用程式使資料呈現於畫面上</li>
+<li>建立兩個應用程式</li>
+<li>試試看巢狀應用程式 (不能建立巢狀應用程式)</li>
+</ol>
+
+
+
+<p>basic/instant.html</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div id="app"&gt;
+  {{ text }}
+&lt;/div&gt;
+&lt;div id="app2"&gt;
+  {{ text }}
+&lt;/div&gt;
+
+&lt;script&gt;
+var app = new Vue({
+  el: '#app',
+  data: {
+    text: '這裡是一段話'
+  }
+});
+var app2 = new Vue({
+  el: '#app2',
+  data: {
+    text: '這裡是一段話 2'
+  }
+});
+&lt;/script&gt;</code></pre>
+
+
+
+<p>綁定 Vue 的應用程式的時候，不是只能用 ID，也可以用 Class，然後 ID 還是比較常使用到。<br><br>Vue 一次只能綁定一個元素。<br><br>一個網頁上是可以放入兩個 Vue 的應用程式。<br><br>Vue 的應用程式是不可以使用巢狀的方式去建立，裡面這個 Vue 的應用程式是等同於無效。</p>
+
+
+
+<p>我們在建立 Vue 的應用程式，其實我們通常只會建立一個，但是你要建立兩個在同一頁面上面是可行的。<br>特別注意的是，它是不能建立巢狀的應用程式。</p>
+
+
+
+<ul>
+<li>el：element，要綁定的 DOM element</li>
+<li>data：綁定的資料</li>
+</ul>
+
+
+
+<h3>雙向綁定的資料</h3>
+
+
+
+<p><a rel="noreferrer noopener" href="https://zh.wikipedia.org/wiki/MVVM" target="_blank">MVVM – 維基百科</a><br>MVVM (Model – View – ViewModel)&nbsp;是一種軟體架構模式。</p>
+
+
+
+<h5>MVVM&nbsp;模式的組成部分</h5>
+
+
+
+<ul>
+<li>模型：指代表內容的資料存取層 (以資料為中心)</li>
+<li>視圖：是使用者在螢幕上看到的結構、布局和外觀 (UI)。</li>
+<li>視圖模型：是暴露公共屬性和命令的視圖的抽象。有的是一個繫節氣。繫結器在視圖和資料繫節器之間進行通信。</li>
+</ul>
+
+
+
+<p>畫面上所看到的就是 View，所操控的內容是 Model，中間自動綁定的部分就是 ViewModel。</p>
+
+
+
+<h5>MVVM 是什麼樣的概念</h5>
+
+
+
+<ol>
+<li>使用雙花括號與資料串接</li>
+<li>試試看使用 HTML 屬性綁定</li>
+<li>試試看雙向綁定</li>
+</ol>
+
+
+
+<h5>使用雙花括號、Vue指令，將資料呈現於畫面。</h5>
+
+
+
+<ul>
+<li>{{ message }}</li>
+<li>v-model=”message”</li>
+<li>v-text=”message”</li>
+<li>v-html=”message”</li>
+</ul>
+
+
+
+<p>basic/mvvm.html</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div id="app"&gt;
+  // mustache語法、花括號或者是大括號
+  {{ message }}
+  // Vue指令 v-model="message"
+  &lt;input type="text" v-model="message"&gt;
+  // Vue指令 v-text="message"
+  &lt;div v-text="message"&gt;&lt;/div&gt;
+  // Vue指令 v-html="message"，可以插入新的 HTML 的標籤
+  &lt;div v-html="message"&gt;&lt;/div&gt;
+  
+&lt;/div&gt;
+
+&lt;script&gt;
+var app = new Vue({
+  el: '#app',
+  // 在此建立資料內容
+
+  data: {
+    message: '哈囉'
+  }
+})
+&lt;/script&gt;</code></pre>
+
+
+
+<h3>MVVM 的概念</h3>
+
+
+
+<p>MVC架構，是一個前後端的架構。<br>View，就是我們看到的畫面<br>Controller，就是指控制器<br>Model，就是指模型也是資料介接的地方</p>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" width="1265" height="780" src="/wordpress_blog/wp-content/uploads/2022/04/MVC-1.png" alt="" class="wp-image-661"><figcaption>MVC 示意圖</figcaption></figure>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" width="1777" height="852" src="/wordpress_blog/wp-content/uploads/2022/04/Vue-MVVM.png" alt="" class="wp-image-662"><figcaption>MVVM 示意圖</figcaption></figure>
+
+
+
+<p>重點說明：VUE JS 是以<strong>資料狀態</strong>操作<strong>畫面</strong>。</p>
+
+
+
+<p>傳統的 jQuery，我們是直接操作畫面上的 DOM 元素。<br>在 Vue.js 在操作 DOM 元素的時候，是透過資料的狀態去變動它。</p>
+
+
+
+<h3>v-bind 動態屬性指令</h3>
+
+
+
+<h5>指令</h5>
+
+
+
+<ol><li>透過指令(v-bind)的方式，將圖片加載於畫面之上</li></ol>
+
+
+
+<p>Vue.js 學習→API→<a rel="noreferrer noopener" href="https://cn.vuejs.org/v2/api/#%E6%8C%87%E4%BB%A4" target="_blank">指令</a></p>
+
+
+
+<p>v-bind：是用來更新 HTML 上面的屬性。</p>
+
+
+
+<p>basic/directive.html</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div id="app"&gt;
+  &lt;img v-bind:src="imgSrc" v-bind:class="className" alt=""&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+var app = new Vue({
+  el: '#app',
+  data: {
+    imgSrc: 'https://images.unsplash.com/photo-1479568933336-ea01829af8de?ixlib=rb-0.3.5&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;s=d9926ef56492b20aea8508ed32ec6030&amp;auto=format&amp;fit=crop&amp;w=2250&amp;q=80',
+    className: 'img-fluid'
+  }
+})
+&lt;/script&gt;</code></pre>
+
+
+
+<h3>v-for 動態產生多筆資料於畫面上</h3>
+
+
+
+<h5>模板語法的延伸 v-if 及 v-for</h5>
+
+
+
+<ol>
+<li>使用 v-for 來呈現資料列表</li>
+<li>使用 v-if 擷取部分資訊</li>
+</ol>
+
+
+
+<p>basic/if_for.html</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div id="app"&gt;
+  &lt;pre&gt;{{ list }}&lt;/pre&gt;
+  &lt;ul&gt;
+    &lt;li v-for="(item, index) in list" v-if="item.age &lt; 25"&gt;
+      {{ index + 1 }} - {{ item.name }} 年齡是 {{ item.age }} 歲
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+var app = new Vue({
+  el: '#app',
+  data: {
+    list: &#91;
+      {
+        name: '小明',
+        age: 16
+      },
+      {
+        name: '媽媽',
+        age: 38,
+      },
+      {
+        name: '漂亮阿姨',
+        age: 24
+      }
+    ]
+  }
+})
+&lt;/script&gt;</code></pre>
+
+
+
+<h5>補充：Vue.js 文件</h5>
+
+
+
+<p><a rel="noreferrer noopener" href="https://vuejs.org/v2/guide/list.html" target="_blank">List Rendering</a>、<a href="https://v1-cn.vuejs.org/guide/list.html" target="_blank" rel="noreferrer noopener">列表渲染</a></p>
+
+
+
+<h5>講解</h5>
+
+
+
+<p>使用 v-for 這個指令，這個 v-for&nbsp;就有點像是在 li&nbsp;上面使用 forEach 一樣，那麼我們會先使用一個自定義的變數，這個自訂的變數名稱是可以自己決定的，通常會使用 item，然後 in 一個陣列上，這個陣列就會一一的將值取出來然後將它存到 item&nbsp;這個變數上。<br><br>接下來我們就可以把這裡面的值，呈現在 li&nbsp;上。這裡我們就可以輸入 item，那這&nbsp;item&nbsp;指的就是裡面這一個一個的物件，所以如果我要把這個名稱給取出來的話，我就可以使用 item.name 。<br><br>接下來我們也可以將後面的字串繼續加上去，年齡是幾歲，這裡就可以加上 item.age&nbsp;。<br><br>這個就是 v-for&nbsp;的一個很標準的使用方法。<br><br>如果說我需要了解這個每一個 li&nbsp;它現在在陣列它的索引是第幾個，我們在這個自定義變數，我們就可以這樣寫&nbsp;item index，前面這個就是陣列地值，那後面這個就是陣列的索引，那我們也可以把這個索引加到畫面上面來，index。要記得索引是從 0 開始，如果你要把它從 1 開始，那就是 index + 1。<br><br>v-if&nbsp;就是在這個迴圈上面再加上一個判斷式，加上去的方式，就是可以直接 v-for&nbsp;後面再加上 v-if，這個 v-if 就是直接在這個標籤上面加上一個判斷式，然後依據它所回傳的值是 true&nbsp;或 false，來決定要不要去渲染這個標籤，所以當它如果是 false&nbsp;的時候，這個標籤那就不會渲染，那如果它是&nbsp;true&nbsp;的話，就會把這一段標籤渲染出來。<br><br>接下來我們就可以加入一個判斷式叫做假設它的年齡是小於&nbsp;25&nbsp;歲的話，那麼就把這一個 li&nbsp;給渲染出來。這個 item.age&nbsp;就是指這裡面每一個人的年齡，所以我們定義在小於&nbsp;25&nbsp;歲的話，就把這個 li 給渲染出來。<br><br>試著使用 v-for&nbsp;將這個陣列的值一一的渲染出來，那另外再使用 v-if&nbsp;拿來判斷部分的條件。</p>
+
+
+
+<h3>使用 v-on 來操作頁面行為</h3>
+
+
+
+<h5>處理互動式行為 v-on 指令</h5>
+
+
+
+<ol>
+<li>使用 v-on 指令來製作互動行為</li>
+<li>反轉字串</li>
+</ol>
+
+
+
+<p>basic/v_on.html</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div id="app"&gt;
+  &lt;input type="text" class="form-control" v-model="text"&gt;
+  &lt;button class="btn btn-primary mt-1" v-on:click="reverseText"&gt;反轉字串&lt;/button&gt;
+  &lt;div class="mt-3"&gt;
+    {{ newText }}
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+var app = new Vue({
+  el: '#app',
+  data: {
+    text: '',
+    newText: ''
+},
+// 請在此撰寫 JavaScript
+  methods: {
+    reverseText: function(){
+      console.log('點我', this.text);
+      this.newText = this.text.split('').reverse().join('');
+    }
+  }  
+});
+&lt;/script&gt;</code></pre>
+
+
+
+<h5>介紹 v-on 以及 methods 的操作方式。</h5>
+
+
+
+<ul><li>methods：方法</li></ul>
+
+
+
+<h3>預先定義資料狀態的重要性</h3>
+
+
+
+<h5>預先定義資料結構</h5>
+
+
+
+<ol><li>了解資料結構預先定義與未定義之差異</li></ol>
+
+
+
+<pre class="wp-block-code"><code>// 接續上一個章節
+// 當我們可以操作資料內容之後，預先定義資料結構變成一件很重要的事情。
+
+// {{ newText }}
+// data: {
+     newText: ''
+}
+// 兩個資料互相綁定，在這個時候，我們一定要預先定義資料結構的習慣。
+
+// 在我們 Vue 裡面，如果要操作資料內容，它一定要預先定義好它的資料結構。
+
+// 在後面的課程也會介紹到，如果沒有辦法預先定義的話該怎麼做。</code></pre>
+
+
+
+<p>defined_var.html</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div id="app"&gt;
+  &lt;input type="text" class="form-control" v-model="text"&gt;
+  &lt;button class="btn btn-primary mt-1" v-on:click="reverseText"&gt;反轉字串&lt;/button&gt;
+  &lt;div class="mt-3"&gt;
+    {{ newText }}
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+var app = new Vue({
+  el: '#app',
+  data: {
+    text: '',
+    newText: ''
+},
+// 請在此撰寫 JavaScript
+  methods: {
+    reverseText: function(){
+      console.log('點我', this.text);
+      this.newText = this.text.split('').reverse().join('');
+    }
+  }  
+});
+&lt;/script&gt;</code></pre>
+
+
+
+<h3>透過修飾符，讓 v-on 操作更簡單</h3>
+
+
+
+<h5>處理互動式行為 v-on 指令</h5>
+
+
+
+<ol>
+<li>請將 button 改成 a 標籤，並加上 preventDefault()</li>
+<li>使用修飾符取代</li>
+<li>將 input 加上 Enter 事件</li>
+<li>將範例改成使用縮寫表示</li>
+</ol>
+
+
+
+<p>jQuery preventDefault() 寫法 – 取消默認行為</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div id="app"&gt;
+  &lt;input type="text" class="form-control" v-model="text"&gt;
+  &lt;a href="#" class="btn btn-primary mt-1"&gt;反轉字串&lt;/a&gt;
+  &lt;div class="mt-3"&gt;
+    {{ newText }}
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+$(document).ready(function(){
+  $('a.btn').on('click', function(evt){
+    console.log(evt);
+    evt.preventDefault();
+  })
+});
+&lt;/script&gt;
+
+br*20</code></pre>
+
+
+
+<p>basic/modifiers.html</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div id="app"&gt;
+  &lt;input type="text" class="form-control" v-model="text"&gt;
+  &lt;a href="#" class="btn btn-primary mt-1" v-on:click.prevent="reverseText"&gt;反轉字串&lt;/a&gt;
+  &lt;div class="mt-3"&gt;
+    {{ newText }}
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+var app = new Vue({
+  el: '#app',
+  data: {
+    text: '',
+    newText: ''
+  },
+  // 請在此撰寫 JavaScript
+  methods: {
+    reverseText(event){
+    // console.log(event);
+    // event.preventDefault();
+    this.newText = this.text.split('').reverse().join('');
+    }
+  }
+});
+&lt;/script&gt;
+
+br*20</code></pre>
+
+
+
+<h5><a rel="noreferrer noopener" href="https://cn.vuejs.org/v2/guide/events.html" target="_blank">Vue.js 官網文件 – 事件處理</a></h5>
+
+
+
+<ul>
+<li>事件修飾符</li>
+<li>按鍵修飾符</li>
+</ul>
+
+
+
+<p>按鍵修飾符 – enter</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div id="app"&gt;
+  &lt;input type="text" class="form-control" v-on:keyup.enter="reverseText" v-model="text"&gt;
+  &lt;a class="btn btn-primary mt-1" v-on:click.prevent="reverseText"&gt;反轉字串&lt;/a&gt;
+  &lt;div class="mt-3"&gt;
+    {{ newText }}
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+var app = new Vue({
+  el: '#app',
+  data: {
+    text: '',
+    newText: ''
+  },
+  // 請在此撰寫 JavaScript
+  methods: {
+    reverseText(event) {
+      this.newText = this.text.split('').reverse().join('');
+      }
+    }
+});
+&lt;/script&gt;</code></pre>
+
+
+
+<p>v-on 寫法</p>
+
+
+
+<pre class="wp-block-code"><code>v-on:keyup.enter="reverseText"
+v-on:click.prevent="reverseText"</code></pre>
+
+
+
+<p>v-on 縮寫寫法</p>
+
+
+
+<pre class="wp-block-code"><code>@keyup.enter="reverseText"
+@click.prevent="reverseText"</code></pre>
+
+
+
+<p>指令 v-bind</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div id="app"&gt;
+  &lt;input type="text" class="form-control" @keyup.enter="reverseText" v-model="text"&gt;
+  &lt;a v-bind:href="link" class="btn btn-primary mt-1" @click="reverseText"&gt;反轉字串&lt;/a&gt;
+  &lt;div class="mt-3"&gt;
+    {{ newText }}
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+var app = new Vue({
+  el: '#app',
+  data: {
+    text: '',
+    newText: '',
+    link: 'https://www.google.com.tw/'
+},
+// 請在此撰寫 JavaScript
+  methods: {
+    reverseText(event){
+      this.newText = this.text.split('').reverse().join('');
+    }
+  }
+});  
+&lt;/script&gt;</code></pre>
+
+
+
+<p>v-bind 寫法</p>
+
+
+
+<pre class="wp-block-code"><code>v-bind:href="link"</code></pre>
+
+
+
+<p>v-bind 縮寫寫法</p>
+
+
+
+<pre class="wp-block-code"><code>:href="link"</code></pre>
+
+
+
+<p>縮寫</p>
+
+
+
+<pre class="wp-block-code"><code>v-on == @
+v-bind: == :</code></pre>
+
+
+
+<h3>v-class 動態切換 className</h3>
+
+
+
+<h5>切換 Class</h5>
+
+
+
+<ol><li>為 .box 動態加上 className “rotate”</li></ol>
+
+
+
+<p>怎麼透過 Vue 來動態的切換 class name。</p>
+
+
+
+<p>basic/v_class.html</p>
+
+
+
+<pre class="wp-block-code"><code>// :class="{ '要加入的 ClassName': 判斷式 }"</code></pre>
+
+
+
+<pre class="wp-block-code"><code>&lt;div id="app"&gt;
+  &lt;div class="box" :class="{ 'rotate':  isTransform }"&gt;&lt;/div&gt;
+  &lt;hr&gt;
+  &lt;button class="btn btn-outline-primary" @click="isTransform = !isTransform"&gt;選轉物件&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+var app = new Vue({
+  el: '#app',
+  data: {
+    isTransform: false
+  },
+});
+&lt;/script&gt;
+
+&lt;style&gt;
+.box {
+  transition: transform .5s;
+}
+.box.rotate {
+  transform: rotate(45deg)
+}
+&lt;/style&gt;</code></pre>
+
+
+
+<h3>computed 運算功能</h3>
+
+
+
+<h5>計算屬性</h5>
+
+
+
+<ol><li>使用 computed 取代原有的表達式</li></ol>
+
+
+
+<h5>介紹 computed 這個方法。</h5>
+
+
+
+<p>computed 直接會將結果存到這個變數裡面，然後這個變數，是可以直接使用。<br>在 computed 裡面，我們所宣告任何屬性它都是 function 並且它都會 return 一個值。<br>類似直接在 data 上面宣告一些值，不同的是 computed 會將結果回傳於這個變數之中，並且可以運用在我們的畫面上。</p>
+
+
+
+<p>basic/computed.html</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div id="app"&gt;
+  &lt;input type="text" class="form-control" v-model="text"&gt;
+  &lt;div class="mt-3"&gt;
+    {{ text.split('').reverse().join('') }}
+  &lt;/div&gt;
+  {{ reverseText }}
+&lt;/div&gt;
+
+&lt;script&gt;
+var app = new Vue({
+  el: '#app',
+  data: {
+    text: '',
+    newText: ''
+  },
+  // 請在此撰寫 JavaScript
+  computed: {
+    reverseText: function() {
+      // return 'aaa';
+      return this.text.split('').reverse().join('');
+    }
+  }
+});
+&lt;/script&gt;</code></pre>
+
+
+
+<p>注意的地方，computed 的觸發條件是透過這個 data 裡面的值，如果受到更動的時候，這個 computed 的結果，才會跟著做更動。如果說你的值並不是在這個 data 內，也就是說它不是在這個 this 下，它的更動無法被觸發的。</p>
+
+
+
+<h3>Methods 與 Computed 的使用情境</h3>
+
+
+
+<ul>
+<li>computed 是在監控資料更動後，重新運算結果呈現於畫面上。<br>一般來說<strong>不會修改資料</strong>，只會回傳用於<strong>畫面呈現的資料</strong>。</li>
+<li>methods 就是互動的函式，需要觸發才會運作。<br>會用來修改資料內容。</li>
+</ul>
+
+
+
+<p>效能<br>如果資料量大，computed 自然會比較慢<br>只要資料變動就會觸發，無形之中執行次數也會增加<br>因此在大量資料時，會建議透過 methods 減少不必要的運算</p>
+
+
+
+<ul><li>computed：需要計算後才能使用的屬性</li></ul>
+
+
+
+<h3>Vue 表單與資料的綁定</h3>
+
+
+
+<h5>表單雙向綁定</h5>
+
+
+
+<ol><li>請跟隨課程完成此章節。</li></ol>
+
+
+
+<p>介紹表單跟 Vue 的資料綁定。</p>
+
+
+
+<p>basic/form.html</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div id="app"&gt;
+  &lt;h4&gt;字串&lt;/h4&gt;
+  {{ text }}
+  &lt;input type="text" class="form-control" v-model="text"&gt;
+  &lt;hr&gt;
+  &lt;pre&gt;{{ textarea }}&lt;/pre&gt;
+  &lt;textarea cols="30" rows="3" class="form-control" v-model="textarea"&gt;&lt;/textarea&gt;
+  &lt;hr&gt;
+  &lt;h4&gt;Checkbox 與 Radio&lt;/h4&gt;
+  &lt;div class="form-check"&gt;
+    &lt;input type="checkbox" class="form-check-input" id="check1" v-model="checkbox1"&gt;
+    &lt;label class="form-check-label" for="check1"&gt; 你要不要看電影 &lt;/label&gt;
+  &lt;/div&gt;
+  &lt;hr&gt;
+  &lt;div class="form-check"&gt;
+    &lt;input type="checkbox" class="form-check-input" id="check2" v-model="checkboxArray" value="雞"&gt;
+    &lt;label class="form-check-label" for="check2"&gt;雞&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class="form-check"&gt;
+    &lt;input type="checkbox" class="form-check-input" id="check3" v-model="checkboxArray" value="豬"&gt;
+    &lt;label class="form-check-label" for="check3"&gt;豬&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class="form-check"&gt;
+    &lt;input type="checkbox" class="form-check-input" id="check4" v-model="checkboxArray" value="牛"&gt;
+    &lt;label class="form-check-label" for="check4"&gt;牛&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;p&gt;晚餐火鍋裡有 &lt;span v-for="item in checkboxArray"&gt;{{ item }} &lt;/span&gt;。&lt;/p&gt;
+  &lt;hr&gt;
+  &lt;div class="form-check"&gt;
+    &lt;input type="radio" class="form-check-input" id="radio2" v-model="singleRadio" value="雞"&gt;
+    &lt;label class="form-check-label" for="radio2"&gt;雞&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class="form-check"&gt;
+    &lt;input type="radio" class="form-check-input" id="radio3" v-model="singleRadio" value="豬"&gt;
+    &lt;label class="form-check-label" for="radio3"&gt;豬&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class="form-check"&gt;
+    &lt;input type="radio" class="form-check-input" id="radio4" v-model="singleRadio" value="牛"&gt;
+    &lt;label class="form-check-label" for="radio4"&gt;牛&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;p&gt;晚餐火鍋裡有 {{ singleRadio }}。&lt;/p&gt;
+  &lt;hr&gt;
+  &lt;h4&gt;Select&lt;/h4&gt;
+  &lt;select name="" id="" class="form-control" v-model="selected"&gt;
+    &lt;option value="" disabled&gt;-- 請選擇 --&lt;/option&gt;
+    &lt;option value="小明"&gt;小明&lt;/option&gt;
+    &lt;option value="小美"&gt;漂亮的小美&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+var app = new Vue({
+  el: '#app',
+  data: {
+    text: '',
+    textarea: '',
+    checkbox1: false,
+    checkboxArray: &#91;],
+    singleRadio: '',
+    selected: '',
+  },
+});
+&lt;/script&gt;</code></pre>
+
+
+
+<h3>元件基礎概念</h3>
+
+
+
+<h5>元件化</h5>
+
+
+
+<ol><li>將以下元素轉為元件</li></ol>
+
+
+
+<p>Vue 的每一個元件，它都可以獨立的儲存自己的狀態。<br><br>建立一個元件，我們可以在前方加入個 Vue 的 component，定義一個它的 component 的名稱，然後後面一樣插入一個物件。<br><br>這裡的 component 名稱是可以自己定義的，也是我們套用在畫面上所使用的標籤，這裡叫做 counter-component。<br><br>在寫 data 的時候會改使用 function，那 function 會 return 一個物件。規定一定要使用 function 來 return 這個資料內容。<br><br>如果我們是新增一個應用程式的話，則不需要使用這個 function，當我們在建立元件的時候就必須使用 function 來 return 這個資料。<br><br>接下來就是要定義，這個元件長什麼樣子，這裡是使用反引號，是 ES6 的新的語法，定義字串內容的。<br>(反引號多行時不需要加入其它符號，比較適合呈現本範例)，</p>
+
+
+
+<pre class="wp-block-code"><code>// Vue.component('component 名稱', {
+     data: function() {
+       return {
+         物件
+       }
+     },
+     template: `
+       加入 div，並且把元件的內容直接加進來
+     `
+});</code></pre>
+
+
+
+<p>basic/components.html</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div id="app"&gt;
+  &lt;div&gt;
+    你已經點擊 &lt;button class="btn btn-outline-secondary btn-sm" @click="counter += 1"&gt;{{ counter }}&lt;/button&gt; 下。
+    你已經點擊 &lt;button class="btn btn-outline-secondary btn-sm" @click="counter += 1"&gt;{{ counter }}&lt;/button&gt; 下。
+    &lt;counter-component&gt;&lt;/counter-component&gt;
+    &lt;counter-component&gt;&lt;/counter-component&gt;
+    &lt;counter-component&gt;&lt;/counter-component&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+// 請在此撰寫 JavaScript
+Vue.component('counter-component',{
+  data: function() {
+    return {
+      counter: 0
+    }
+  },
+  template: `
+    &lt;div&gt;
+      &lt;button class="btn btn-outline-secondary btn-sm" @click="counter += 1"&gt;{{ counter }}&lt;/button&gt;
+    &lt;/div&gt;
+  `
+});
+
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    counter: 0
+  },
+});
+&lt;/script&gt;</code></pre>
+
+
+
+<h2>第３節：製作一個 Todo List 來小試身手吧</h2>
+
+
+
+<h3>這個範例要練習什麼!?</h3>
+
+
+
+<h5>Todo 範例製作</h5>
+
+
+
+<ol><li>請跟隨課程完成此章節。</li></ol>
+
+
+
+<p>basic/todo.html – 初始程式碼</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div id="app"&gt;
+  &lt;div class="input-group mb-3"&gt;
+    &lt;div class="input-group-prepend"&gt;
+      &lt;span class="input-group-text" id="basic-addon1"&gt;待辦事項&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;input type="text" class="form-control" placeholder="準備要做的任務"&gt;
+    &lt;div class="input-group-append"&gt;
+      &lt;button class="btn btn-primary" type="button"&gt;新增&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="card text-center"&gt;
+    &lt;div class="card-header"&gt;
+      &lt;ul class="nav nav-tabs card-header-tabs"&gt;
+        &lt;li class="nav-item"&gt;
+          &lt;a class="nav-link active" href="#"&gt;全部&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="nav-item"&gt;
+          &lt;a class="nav-link " href="#"&gt;進行中&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="nav-item"&gt;
+          &lt;a class="nav-link" href="#"&gt;已完成&lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;ul class="list-group list-group-flush text-left"&gt;
+      &lt;li class="list-group-item"&gt;
+        &lt;div class="d-flex"&gt;
+          &lt;div class="form-check"&gt;
+            &lt;input type="checkbox" class="form-check-input" id="a1"&gt;
+            &lt;label class="form-check-label" for="a1"&gt;
+              Cras justo odio
+            &lt;/label&gt;
+          &lt;/div&gt;
+          &lt;button type="button" class="close ml-auto" aria-label="Close"&gt;
+            &lt;span aria-hidden="true"&gt;×&lt;/span&gt;
+          &lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li class="list-group-item"&gt;
+        &lt;div class="d-flex"&gt;
+          &lt;div class="form-check"&gt;
+            &lt;input type="checkbox" class="form-check-input" id="a1"&gt;
+            &lt;label class="form-check-label completed" for="a1"&gt;
+              Cras justo odio
+            &lt;/label&gt;
+          &lt;/div&gt;
+          &lt;button type="button" class="close ml-auto" aria-label="Close"&gt;
+            &lt;span aria-hidden="true"&gt;×&lt;/span&gt;
+          &lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li class="list-group-item"&gt;
+        &lt;input type="text" class="form-control"&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class="card-footer d-flex justify-content-between"&gt;
+      &lt;span&gt;還有 3 筆任務未完成&lt;/span&gt;
+      &lt;a href="#"&gt;清除所有任務&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+var app = new Vue({
+  el: '#app',
+  data: {},
+});
+&lt;/script&gt;
+
+&lt;style&gt;
+.completed {
+  text-decoration: line-through
+}
+&lt;/style&gt;</code></pre>
+
+
+
+<h3>套用版型及建立待辦事項列表的資料</h3>
+
+
+
+<p>&lt;input&gt; 的內容加到 todo 的列表裡面，todo 的列表基本上會使用 v-for 來製作，會有個陣列來儲存這些資料內容，我們可以先定義它叫 item in todos，這個 todos 會用來儲存所有待辦事項資料內容。<br><br>&lt;input&gt; 用來新增待辦事項內容， v-model=”newTodo”，這個資料內容輸入之後，會透過&lt;button&gt;新增一個辦事項到 todos 裡面，&lt;button&gt;會加入一個方法，叫做 @click=”addTodo”。<br><br>接下來，我們把這些項目加到下面 Vue 的原始碼裡面。<br><br>在 data 裡面，我們會用 newTodo 來新增一個待辦事項，它是一個純文字，另外我們還會用 todos，它是一個陣列，用來呈現目前的待辦事項有哪些內容。<br><br>剛剛也有新增一個方法 (methods)，用來新增一個新的待辦事項，叫做 addTodo，基本上整個比較基礎的架構都建立起來了。<br><br>現在因為 todos 裡面沒有內容，我們可以先試寫一份，等下要呈現的內容，等下再來新增的時候，我們心中會比較有一個概念。<br><br>我們先在 todos 新增一個假的資料，先新增一個物件，基本上它會有個 id，這個 id 的作用是，在這個地方有個 checkbox，當我們要透過這個名稱去選擇這個 checkbox 的時候，它兩邊的名稱是需要對應的，所以這個地方必須要有個 id 去選擇它，這邊會有個 id、title、completed，我們就先用這筆資料來呈現在畫面上試試看。<br><br>另外一份假的資料先註解起來，我們先留下這份要呈現的資料，在 &lt;label&gt; 文字內容方面，就會改成 {{ item.title }}，&lt;input&gt;裡面的 id 會改成 :id=”item.id”，並把 &lt;label&gt; 裡面的 for 改成 :for=”item.id”，這樣 :for 和 :id 就可以對應起來。<br><br>completed 我們會把有沒有完成把它畫掉，它是透過 classname 做切換，現在還不能選擇，因為我們 id 是空的，id 先給它一個隨意的數字，那現在我們點擊 你好 就可以選取到這個框框的內容，它所切換的是這個 completed，在 &lt;input&gt; 加入 v-model=”item.completed”。<br><br>接下來透過 Vue 開發工具，來看資料是否正確。在 Root 裡面有個 todos，todos 有個第０筆資料，這裡有 completed、id、title，那我們去按下 你好 這個字，它會去觸發這個 checkbox，然後它的 completed 會從 false 變成 true，所以這個資料結構就是我們所需要的。<br><br>從上方的 &lt;input&gt; 去新增一個資料到下面的地方，methods 裡面的 addTodo 可以新宣告一個變數，暫時儲存 newTodo 所存下的內容，var value = this.newTodo;，接下來我們需要一個隨機的 id，id 的方式我們可以使用 timestamp 的方式，就是使用時間然後轉為數字的一種格式，我們叫做 timestamp，var timestamp = Math.floor(Date.now());，timestamp 取得可以直接使用 Date.now(); 來取得，並且透過 Math.floor 把它轉為正整數，這樣子就是一個文字以及 id，value 就會包含它的標題以及它的 timestamp。<br>使用 console.log(value, timestamp) 查詢這些內容，會出現標題內容、以及一串數字，數字我們就是要做為 id 使用。<br><br>接下來我們要把這筆資料寫到 todos 裡面，this.todos.push，push 就會把一個新的資料推到這個 todos 陣列裡面，推的方式我們就會新增一個物件，新的物件就會加在 todos 陣列裡面已有資料的後方，現在我們就要推一個新的物件進去，這個物件包含 id: timestamp, title: value, completed: false，然後看程式碼是否有正確運作。<br><br>&lt;input&gt; 新增待辦事項文字後的清除，this.newTodo = ”;，每次輸入的內容點擊新增後會加到下面的地方，並清除 &lt;input&gt; 文字內容。<br><br>除了按下新增按鈕新增內容以外，還有另外一個方式，是透過按鍵的行為把資料內容給新增下來，&lt;input&gt; 加入 @keyup.enter=”addTodo”</p>
+
+
+
+<pre class="wp-block-code"><code>// 待辦事項的列表 &lt;li&gt; 用 v-for 製作
+&lt;li class="list-group-item" v-for="item in todos"&gt;
+// &lt;input&gt; 用來新增待辦內容，加入 v-model="newTodo"
+// &lt;button&gt; 透過按鈕新增待辦事項，加入 @click="addTodo"
+// 把 v-for、v-model、@click 加入 Vue 原始碼裡面
+data: {
+  newTodo: '',
+  todos: &#91;],
+},
+methods: {
+  addTodo: function() {
+
+}
+// 試寫一份資料內容，呈現在畫面看看
+todos: &#91;
+  {
+    id: '',
+    title: '你好',
+    completed: false
+  }
+]
+// 把另外一份假資料註解起來，留下要呈現的。
+&lt;label&gt; 文字內容改成 {{ item.title }}
+// &lt;input&gt; checkbox 的 id 的部分改成 :id="item.id"
+// &lt;label&gt; for 改成 :for="item.id"
+// id 是空的，先隨意給個數字。
+// &lt;input&gt; checkbox 加入 v-model="item.completed"
+// 使用 Vue 開發者工具查看資料是否正確
+// 資料結構是我們需要的
+// &lt;input&gt; 新增資料到下方列表
+methods: {
+  addTodo: function() {
+    var value = this.newTodo; // 儲存資料
+    var timestamp = Math.floor(Date.now()); // 抓取時間命名 id
+    console.log(value, timestamp);
+    this.todos.push({
+      id: timestamp,
+      title: value,
+      completed: false
+    }); // 將id, title, completed加入陣列
+    this.newTodo = '' // 清除輸入欄位
+  }
+}
+// 透過按鍵行為把資料內容新增
+// &lt;input&gt; 加入 @keyup.enter="addTodo"</code></pre>
+
+
+
+<p>basic/todo.html</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div id="app"&gt;
+  &lt;div class="input-group mb-3"&gt;
+    &lt;div class="input-group-prepend"&gt;
+      &lt;span class="input-group-text" id="basic-addon1"&gt;待辦事項&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;input type="text" class="form-control" placeholder="準備要做的任務" v-model="newTodo" @keyup.enter="addTodo"&gt;
+    &lt;div class="input-group-append"&gt;
+      &lt;button class="btn btn-primary" type="button" @click="addTodo"&gt;新增&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="card text-center"&gt;
+    &lt;div class="card-header"&gt;
+      &lt;ul class="nav nav-tabs card-header-tabs"&gt;
+        &lt;li class="nav-item"&gt;
+          &lt;a class="nav-link active" href="#"&gt;全部&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="nav-item"&gt;
+          &lt;a class="nav-link " href="#"&gt;進行中&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="nav-item"&gt;
+          &lt;a class="nav-link" href="#"&gt;已完成&lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;ul class="list-group list-group-flush text-left"&gt;
+      &lt;li class="list-group-item" v-for="item in todos"&gt;
+        &lt;div class="d-flex"&gt;
+          &lt;div class="form-check"&gt;
+            &lt;input type="checkbox" class="form-check-input" v-model="item.completed" :id="item.id"&gt;
+            &lt;label class="form-check-label" :for="item.id"&gt;
+              {{ item.title }}
+            &lt;/label&gt;
+          &lt;/div&gt;
+          &lt;button type="button" class="close ml-auto" aria-label="Close"&gt;
+            &lt;span aria-hidden="true"&gt;×&lt;/span&gt;
+          &lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;!-- &lt;li class="list-group-item"&gt;
+        &lt;div class="d-flex"&gt;
+          &lt;div class="form-check"&gt;
+            &lt;input type="checkbox" class="form-check-input" id="a1"&gt;
+            &lt;label class="form-check-label completed" for="a1"&gt;
+              Cras justo odio
+            &lt;/label&gt;
+          &lt;/div&gt;
+          &lt;button type="button" class="close ml-auto" aria-label="Close"&gt;
+            &lt;span aria-hidden="true"&gt;×&lt;/span&gt;
+          &lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/li&gt; --&gt;
+      &lt;li class="list-group-item"&gt;
+        &lt;input type="text" class="form-control"&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class="card-footer d-flex justify-content-between"&gt;
+      &lt;span&gt;還有 3 筆任務未完成&lt;/span&gt;
+      &lt;a href="#"&gt;清除所有任務&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+var app = new Vue({
+  el: '#app',
+  data: {
+    newTodo:'',
+    todos: &#91;
+      {
+        id: '345',
+        title: '你好',
+        completed: false
+      }
+    ],
+  },
+  methods: {
+    addTodo: function() {
+      var value = this.newTodo;
+      var timestamp = Math.floor(Date.now());
+      console.log(value, timestamp);
+      this.todos.push({
+        id: timestamp,
+        title: value,
+        computed: false
+      });
+      this.newTodo = '';
+    }
+  }
+});
+&lt;/script&gt;
+
+&lt;style&gt;
+.completed {
+  text-decoration: line-through
+}
+&lt;/style&gt;</code></pre>
+
+
+
+<h3>刪除陣列上的特定資料</h3>
+
+
+
+<pre class="wp-block-code"><code>// 解決新增空白的列表
+// 如果value是空值，return終止
+if (!value) {
+  return;
+}
+// 解決使用空白鍵還是可以新增內容的問題
+// 並且可以刪除內容前後端的空白
+// 加入 .trim()
+var value = this.newTodo.trim();
+// 製作刪除的功能
+&lt;button&gt; 加入 @click="removeTodo"
+// methods 下方加入 removeTodo
+// &lt;li&gt; v-for 改成 v-for="(item, key) in todos"
+// &lt;button&gt; @click="removeTodo" 改成 @click="removeTodo(key)"
+// 移除陣列的值可以使用 .splice()
+removeTodo: function(key) {
+  this.todos.splice(key, 1)
+}
+</code></pre>
+
+
+
+<p>basic/todo.html</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div id="app"&gt;
+  &lt;div class="input-group mb-3"&gt;
+    &lt;div class="input-group-prepend"&gt;
+      &lt;span class="input-group-text" id="basic-addon1"&gt;待辦事項&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;input type="text" class="form-control" placeholder="準備要做的任務" v-model="newTodo" @keyup.enter="addTodo"&gt;
+    &lt;div class="input-group-append"&gt;
+      &lt;button class="btn btn-primary" type="button" @click="addTodo"&gt;新增&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="card text-center"&gt;
+    &lt;div class="card-header"&gt;
+      &lt;ul class="nav nav-tabs card-header-tabs"&gt;
+        &lt;li class="nav-item"&gt;
+          &lt;a class="nav-link active" href="#"&gt;全部&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="nav-item"&gt;
+          &lt;a class="nav-link " href="#"&gt;進行中&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="nav-item"&gt;
+          &lt;a class="nav-link" href="#"&gt;已完成&lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;ul class="list-group list-group-flush text-left"&gt;
+      &lt;li class="list-group-item" v-for="(item, key) in todos"&gt;
+        &lt;div class="d-flex"&gt;
+          &lt;div class="form-check"&gt;
+            &lt;input type="checkbox" class="form-check-input" v-model="item.completed" :id="item.id"&gt;
+            &lt;label class="form-check-label" :for="item.id"&gt;
+              {{ item.title }}
+            &lt;/label&gt;
+          &lt;/div&gt;
+          &lt;button type="button" class="close ml-auto" @click="removeTodo(key)" aria-label="Close"&gt;
+            &lt;span aria-hidden="true"&gt;×&lt;/span&gt;
+          &lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;!-- &lt;li class="list-group-item"&gt;
+        &lt;div class="d-flex"&gt;
+          &lt;div class="form-check"&gt;
+            &lt;input type="checkbox" class="form-check-input" id="a1"&gt;
+            &lt;label class="form-check-label completed" for="a1"&gt;
+              Cras justo odio
+            &lt;/label&gt;
+          &lt;/div&gt;
+          &lt;button type="button" class="close ml-auto" aria-label="Close"&gt;
+            &lt;span aria-hidden="true"&gt;×&lt;/span&gt;
+          &lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/li&gt; --&gt;
+      &lt;li class="list-group-item"&gt;
+        &lt;input type="text" class="form-control"&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class="card-footer d-flex justify-content-between"&gt;
+      &lt;span&gt;還有 3 筆任務未完成&lt;/span&gt;
+      &lt;a href="#"&gt;清除所有任務&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+var app = new Vue({
+  el: '#app',
+  data: {
+    newTodo:'',
+    todos: &#91;
+      {
+        id: '345',
+        title: '你好',
+        completed: false
+      }
+    ],
+  },
+  methods: {
+    addTodo: function() {
+      var value = this.newTodo.trim();
+      var timestamp = Math.floor(Date.now());
+      // console.log(value, timestamp);
+      if (!value) {
+        return;
+      }
+      this.todos.push({
+        id: timestamp,
+        title: value,
+        computed: false
+      });
+      this.newTodo = '';
+    },
+    removeTodo: function(key) {
+      this.todos.splice(key, 1);
+    }
+  }
+});
+&lt;/script&gt;
+
+&lt;style&gt;
+.completed {
+  text-decoration: line-through
+}
+&lt;/style&gt;</code></pre>
+
+
+
+<h3>製作頁籤分類的功能</h3>
+
+
+
+<pre class="wp-block-code"><code>// 製作刪除的效果、上方頁籤過濾的功能
+// className 的切換
+&lt;label class="form-check-label"
+:class="{'completed': item.completed}"
+:for="item.id"&gt;
+  {{ item.title }}
+&lt;/label&gt;
+// 頁籤切換的效果
+//在 data 新增一個變數 visibility
+visibility: 'all'
+// 刪除 class的active
+// 加上 :class、@click
+&lt;ul class="nav nav-tabs card-header-tabs"&gt;
+    &lt;li class="nav-item"&gt;
+      &lt;a class="nav-link" :class="{'active': visibility == 'all'}" @click="visibility= 'all'" href="#"&gt;全部&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="nav-item"&gt;
+      &lt;a class="nav-link " :class="{'active': visibility == 'active'}" @click="visibility= 'active'" href="#"&gt;進行中&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="nav-item"&gt;
+      &lt;a class="nav-link" :class="{'active': visibility == 'completed'}" @click="visibility= 'completed'" href="#"&gt;已完成&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+// 過濾的功能會使用 computed
+computed: {
+  filteredTodos: function() {
+    return this.todos;
+  }
+}
+// &lt;li&gt; v-for中的 todos 換成 filteredTodos
+&lt;li class="list-group-item" v-for="(item, key) in filteredTodos"&gt;
+// 使用判斷式寫一些方法
+computed: {
+  filteredTodos: function() {
+    if (this.visibility == 'all') {
+      return this.todos;
+    }
+    return &#91;];
+  }
+}
+// 加上 else if 判斷進行中、已完成
+computed: {
+  filteredTodos: function() {
+    if (this.visibility == 'all') {
+      return this.todos;
+    } else if (this.visibility == 'active') {
+      var newTodos = &#91;];
+      this.todos.forEach(function (item){
+        if (!item.completed) {
+          newTodos.push(item);
+        }
+      })
+      return newTodos;
+    } else if (this.visibility == 'completed') {
+      var newTodos = &#91;];
+      this.todos.forEach(function (item){
+        if (item.completed) {
+          newTodos.push(item);
+        }
+      })
+      return newTodos;
+    }
+    return &#91;];
+  }
+}</code></pre>
+
+
+
+<p>basic/todo.html</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div id="app"&gt;
+  &lt;div class="input-group mb-3"&gt;
+    &lt;div class="input-group-prepend"&gt;
+      &lt;span class="input-group-text" id="basic-addon1"&gt;待辦事項&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;input type="text" class="form-control" placeholder="準備要做的任務" v-model="newTodo" @keyup.enter="addTodo"&gt;
+    &lt;div class="input-group-append"&gt;
+      &lt;button class="btn btn-primary" type="button" @click="addTodo"&gt;新增&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="card text-center"&gt;
+    &lt;div class="card-header"&gt;
+      &lt;ul class="nav nav-tabs card-header-tabs"&gt;
+        &lt;li class="nav-item"&gt;
+          &lt;a class="nav-link" :class="{'active': visibility == 'all'}" @click="visibility= 'all'" href="#"&gt;全部&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="nav-item"&gt;
+          &lt;a class="nav-link " :class="{'active': visibility == 'active'}" @click="visibility= 'active'" href="#"&gt;進行中&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="nav-item"&gt;
+          &lt;a class="nav-link" :class="{'active': visibility == 'completed'}" @click="visibility= 'completed'" href="#"&gt;已完成&lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;ul class="list-group list-group-flush text-left"&gt;
+      &lt;li class="list-group-item" v-for="(item, key) in filteredTodos"&gt;
+        &lt;div class="d-flex"&gt;
+          &lt;div class="form-check"&gt;
+            &lt;input type="checkbox" class="form-check-input" v-model="item.completed" :id="item.id"&gt;
+            &lt;label class="form-check-label" 
+            :class="{'completed': item.completed}" 
+            :for="item.id"&gt;
+              {{ item.title }}
+            &lt;/label&gt;
+          &lt;/div&gt;
+          &lt;button type="button" class="close ml-auto" @click="removeTodo(key)" aria-label="Close"&gt;
+            &lt;span aria-hidden="true"&gt;×&lt;/span&gt;
+          &lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;!-- &lt;li class="list-group-item"&gt;
+        &lt;div class="d-flex"&gt;
+          &lt;div class="form-check"&gt;
+            &lt;input type="checkbox" class="form-check-input" id="a1"&gt;
+            &lt;label class="form-check-label completed" for="a1"&gt;
+              Cras justo odio
+            &lt;/label&gt;
+          &lt;/div&gt;
+          &lt;button type="button" class="close ml-auto" aria-label="Close"&gt;
+            &lt;span aria-hidden="true"&gt;×&lt;/span&gt;
+          &lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/li&gt; --&gt;
+      &lt;li class="list-group-item"&gt;
+        &lt;input type="text" class="form-control"&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class="card-footer d-flex justify-content-between"&gt;
+      &lt;span&gt;還有 3 筆任務未完成&lt;/span&gt;
+      &lt;a href="#"&gt;清除所有任務&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+var app = new Vue({
+  el: '#app',
+  data: {
+    newTodo:'',
+    todos: &#91;
+      {
+        id: '345',
+        title: '你好',
+        completed: false
+      }
+    ],
+    visibility: 'all'
+  },
+  methods: {
+    addTodo: function() {
+      var value = this.newTodo.trim();
+      var timestamp = Math.floor(Date.now());
+      // console.log(value, timestamp);
+      if (!value) {
+        return;
+      }
+      this.todos.push({
+        id: timestamp,
+        title: value,
+        computed: false
+      });
+      this.newTodo = '';
+    },
+    removeTodo: function(key) {
+      this.todos.splice(key, 1);
+    }
+  },
+  computed: {
+    filteredTodos: function() {
+      if (this.visibility == 'all') {
+        return this.todos;
+      } else if (this.visibility == 'active') {
+        var newTodos = &#91;];
+        this.todos.forEach(function(item) {
+          if (!item.completed) {
+            newTodos.push(item);
+          }
+        })
+        return newTodos;
+      } else if (this.visibility == 'completed') {
+        var newTodos = &#91;];
+        this.todos.forEach(function(item) {
+          if (item.completed) {
+            newTodos.push(item);
+          }
+        })
+        return newTodos;
+      }
+      return &#91;];
+    }
+  }
+});
+&lt;/script&gt;
+
+&lt;style&gt;
+.completed {
+  text-decoration: line-through
+}
+&lt;/style&gt;</code></pre>
+
+
+
+<h3>雙擊修改資料內容</h3>
+
+
+
+<pre class="wp-block-code"><code>// 編輯待辦事項
+// &lt;li&gt; 加入 @dblclick="editTodo(item)"
+// methods的地方加上 editTodo
+editTodo: function(item) {
+  console.log(item);
+}
+// data 的地方新增 cacheTodo、cacheTitle
+cacheTodo: {},
+cacheTitle: '',
+// editTodo
+editTodo: function(item) {
+  console.log(item);
+  this.cacheTodo = item;
+  this.cacheTitle = item.title;
+// 註解程式碼 &lt;li&gt;
+// 把 &lt;input&gt; 取出放在 .d-flex 的下方
+// 製作判斷
+// .d-flex 加入 v-if="item.id !== cacheTodo.id"
+// &lt;input&gt; 加上 v-if="item.id === cacheTodo.id"
+// 打開 Vue 開發工具查看
+// 把事件加到 &lt;input&gt; 上面
+&lt;input type="text" class="form-control"
+ v-model="cacheTitle"
+ @keyup.esc="cancelEdit()"
+ v-if="item.id === cacheTodo.id"&gt;
+// methods 下方加上 cancelEdit
+cancelEdit: function() {
+  this.cacheTodo = {}
+}
+// 將編輯的內容存進去
+&lt;input type="text" class="form-control"
+ v-model="cacheTitle"
+ @keyup.esc="cancelEdit()"
+ @keyup.enter="doneEdit(item)"
+ v-if="item.id === cacheTodo.id"&gt;
+// methods 下方加上 doneEdit
+doneEdit: function(item) {
+  item.title = this.cacheTitle;
+  this.cacheTitle = '';
+  this.cacheTodo = {};
+}</code></pre>
+
+
+
+<p>basic/todo.html</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div id="app"&gt;
+  &lt;div class="input-group mb-3"&gt;
+    &lt;div class="input-group-prepend"&gt;
+      &lt;span class="input-group-text" id="basic-addon1"&gt;待辦事項&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;input type="text" class="form-control" placeholder="準備要做的任務" v-model="newTodo" @keyup.enter="addTodo"&gt;
+    &lt;div class="input-group-append"&gt;
+      &lt;button class="btn btn-primary" type="button" @click="addTodo"&gt;新增&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="card text-center"&gt;
+    &lt;div class="card-header"&gt;
+      &lt;ul class="nav nav-tabs card-header-tabs"&gt;
+        &lt;li class="nav-item"&gt;
+          &lt;a class="nav-link" :class="{'active': visibility == 'all'}" @click="visibility= 'all'" href="#"&gt;全部&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="nav-item"&gt;
+          &lt;a class="nav-link " :class="{'active': visibility == 'active'}" @click="visibility= 'active'" href="#"&gt;進行中&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="nav-item"&gt;
+          &lt;a class="nav-link" :class="{'active': visibility == 'completed'}" @click="visibility= 'completed'" href="#"&gt;已完成&lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;ul class="list-group list-group-flush text-left"&gt;
+      &lt;li class="list-group-item" v-for="(item, key) in filteredTodos" @dblclick="editTodo(item)"&gt;
+        &lt;div class="d-flex" v-if="item.id !== cacheTodo.id"&gt;
+          &lt;div class="form-check"&gt;
+            &lt;input type="checkbox" class="form-check-input" v-model="item.completed" :id="item.id"&gt;
+            &lt;label class="form-check-label" 
+            :class="{'completed': item.completed}" 
+            :for="item.id"&gt;
+              {{ item.title }}
+            &lt;/label&gt;
+          &lt;/div&gt;
+          &lt;button type="button" class="close ml-auto" @click="removeTodo(key)" aria-label="Close"&gt;
+            &lt;span aria-hidden="true"&gt;×&lt;/span&gt;
+          &lt;/button&gt;
+        &lt;/div&gt;
+        &lt;input type="text" class="form-control"
+         v-model="cacheTitle"
+         @keyup.esc="cancelEdit()"
+         @keyup.enter="doneEdit(item)"
+         v-if="item.id === cacheTodo.id"&gt;
+      &lt;/li&gt;
+      &lt;!-- &lt;li class="list-group-item"&gt;
+        &lt;input type="text" class="form-control"&gt;
+      &lt;/li&gt; --&gt;
+    &lt;/ul&gt;
+    &lt;div class="card-footer d-flex justify-content-between"&gt;
+      &lt;span&gt;還有 3 筆任務未完成&lt;/span&gt;
+      &lt;a href="#"&gt;清除所有任務&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+var app = new Vue({
+  el: '#app',
+  data: {
+    newTodo:'',
+    todos: &#91;
+      {
+        id: '345',
+        title: '你好',
+        completed: false
+      }
+    ],
+    visibility: 'all',
+    cacheTodo: {},
+    cacheTitle: '',
+  },
+  methods: {
+    addTodo: function() {
+      var value = this.newTodo.trim();
+      var timestamp = Math.floor(Date.now());
+      // console.log(value, timestamp);
+      if (!value) {
+        return;
+      }
+      this.todos.push({
+        id: timestamp,
+        title: value,
+        computed: false
+      });
+      this.newTodo = '';
+    },
+    removeTodo: function(key) {
+      this.todos.splice(key, 1);
+    },
+    editTodo: function(item) {
+      console.log(item);
+      this.cacheTodo = item;
+      this.cacheTitle = item.title;
+    },
+    cancelEdit: function() {
+      this.cacheTodo = {}
+    },
+    doneEdit: function(item) {
+      item.title = this.cacheTitle;
+      this.cacheTitle = '';
+      this.cacheTodo = {};
+    }
+  },
+  computed: {
+    filteredTodos: function() {
+      if (this.visibility == 'all') {
+        return this.todos;
+      } else if (this.visibility == 'active') {
+        var newTodos = &#91;];
+        this.todos.forEach(function(item) {
+          if (!item.completed) {
+            newTodos.push(item);
+          }
+        })
+        return newTodos;
+      } else if (this.visibility == 'completed') {
+        var newTodos = &#91;];
+        this.todos.forEach(function(item) {
+          if (item.completed) {
+            newTodos.push(item);
+          }
+        })
+        return newTodos;
+      }
+      return &#91;];
+    }
+  }
+});
+&lt;/script&gt;
+
+&lt;style&gt;
+.completed {
+  text-decoration: line-through
+}
+&lt;/style&gt;</code></pre>
+
+
+
+<h3>刪除項目補充說明</h3>
+
+
+
+<pre class="wp-block-code"><code>// 索引的位置會有變化。
+// 利用之前存好的id，先宣告 newIndex 等於一個空的值，並且透過 forEach 取得的是相同的值。
+// 原本傳入的是 key 改成 todo
+removeTodo: function (todo) {
+  var newIndex: '';
+
+  this.todos.splice(key, 1);
+},
+// 刪除的部分，原本是 key 改成 item
+// @click="removeTodo(item)
+/* 方法一
+removeTodo: function (todo) {
+  var newIndex = '';
+  var vm = this;
+  vm.todos.forEach(function(item, key) {
+    if (todo.id === item.id) {
+      newIndex = key
+    }
+  })
+  this.todos.splice(newIndex, 1);
+},
+*/
+// 方法二
+/*
+removeTodo: functioon (todo) {
+  var vm = this;
+  var newIndex = vm.todos.findIndex(function (item, key) {
+    return todo.id === item.id;
+  })
+  this.todos.splice(newIndex, 1);
+},
+*/</code></pre>
+
+
+
+<p>basic/todo.html</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div id="app"&gt;
+  &lt;div class="input-group mb-3"&gt;
+    &lt;div class="input-group-prepend"&gt;
+      &lt;span class="input-group-text" id="basic-addon1"&gt;待辦事項&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;input type="text" class="form-control" placeholder="準備要做的任務" v-model="newTodo" @keyup.enter="addTodo"&gt;
+    &lt;div class="input-group-append"&gt;
+      &lt;button class="btn btn-primary" type="button" @click="addTodo"&gt;新增&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="card text-center"&gt;
+    &lt;div class="card-header"&gt;
+      &lt;ul class="nav nav-tabs card-header-tabs"&gt;
+        &lt;li class="nav-item"&gt;
+          &lt;a class="nav-link" :class="{'active': visibility == 'all'}" @click="visibility= 'all'" href="#"&gt;全部&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="nav-item"&gt;
+          &lt;a class="nav-link " :class="{'active': visibility == 'active'}" @click="visibility= 'active'" href="#"&gt;進行中&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="nav-item"&gt;
+          &lt;a class="nav-link" :class="{'active': visibility == 'completed'}" @click="visibility= 'completed'" href="#"&gt;已完成&lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;ul class="list-group list-group-flush text-left"&gt;
+      &lt;li class="list-group-item" v-for="(item, key) in filteredTodos" @dblclick="editTodo(item)"&gt;
+        &lt;div class="d-flex" v-if="item.id !== cacheTodo.id"&gt;
+          &lt;div class="form-check"&gt;
+            &lt;input type="checkbox" class="form-check-input" v-model="item.completed" :id="item.id"&gt;
+            &lt;label class="form-check-label" 
+            :class="{'completed': item.completed}" 
+            :for="item.id"&gt;
+              {{ item.title }}
+            &lt;/label&gt;
+          &lt;/div&gt;
+          &lt;button type="button" class="close ml-auto" @click="removeTodo(item)" aria-label="Close"&gt;
+            &lt;span aria-hidden="true"&gt;×&lt;/span&gt;
+          &lt;/button&gt;
+        &lt;/div&gt;
+        &lt;input type="text" class="form-control"
+         v-model="cacheTitle"
+         @keyup.esc="cancelEdit()"
+         @keyup.enter="doneEdit(item)"
+         v-if="item.id === cacheTodo.id"&gt;
+      &lt;/li&gt;
+      &lt;!-- &lt;li class="list-group-item"&gt;
+        &lt;input type="text" class="form-control"&gt;
+      &lt;/li&gt; --&gt;
+    &lt;/ul&gt;
+    &lt;div class="card-footer d-flex justify-content-between"&gt;
+      &lt;span&gt;還有 3 筆任務未完成&lt;/span&gt;
+      &lt;a href="#"&gt;清除所有任務&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+var app = new Vue({
+  el: '#app',
+  data: {
+    newTodo:'',
+    todos: &#91;
+      // {
+      //   id: '345',
+      //   title: '你好',
+      //   completed: false
+      // }
+    ],
+    visibility: 'all',
+    cacheTodo: {},
+    cacheTitle: '',
+  },
+  methods: {
+    addTodo: function() {
+      var value = this.newTodo.trim();
+      var timestamp = Math.floor(Date.now());
+      // console.log(value, timestamp);
+      if (!value) {
+        return;
+      }
+      this.todos.push({
+        id: timestamp,
+        title: value,
+        computed: false
+      });
+      this.newTodo = '';
+    },
+    // 方法一
+    // removeTodo: function(todo) {
+    //   var newIndex = '';
+    //   var vm = this;
+    //   vm.todos.forEach(function(item, key) {
+    //     if (todo.id === item.id) {
+    //       newIndex = key
+    //     }
+    //   })
+    //   this.todos.splice(newIndex, 1);
+    // },
+    // 方法二
+    removeTodo: function (todo) {
+      var vm = this;
+      var newIndex = vm.todos.findIndex(function (item, key) {
+        return todo.id === item.id;
+      })
+      this.todos.splice(newIndex, 1);
+    },
+    editTodo: function(item) {
+      console.log(item);
+      this.cacheTodo = item;
+      this.cacheTitle = item.title;
+    },
+    cancelEdit: function() {
+      this.cacheTodo = {}
+    },
+    doneEdit: function(item) {
+      item.title = this.cacheTitle;
+      this.cacheTitle = '';
+      this.cacheTodo = {};
+    }
+  },
+  computed: {
+    filteredTodos: function() {
+      if (this.visibility == 'all') {
+        return this.todos;
+      } else if (this.visibility == 'active') {
+        var newTodos = &#91;];
+        this.todos.forEach(function(item) {
+          if (!item.completed) {
+            newTodos.push(item);
+          }
+        })
+        return newTodos;
+      } else if (this.visibility == 'completed') {
+        var newTodos = &#91;];
+        this.todos.forEach(function(item) {
+          if (item.completed) {
+            newTodos.push(item);
+          }
+        })
+        return newTodos;
+      }
+      return &#91;];
+    }
+  }
+});
+&lt;/script&gt;
+
+&lt;style&gt;
+.completed {
+  text-decoration: line-through
+}
+&lt;/style&gt;</code></pre>
+
+
+
+<h3>換你來試試看，完成這份作業吧</h3>
+
+
+
+<h5>顯示還剩下多少未完成項目</h5>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div class="card-footer d-flex justify-content-between"&gt;
+  &lt;span&gt;還有 {{ countActiveTodo }} 筆任務未完成&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>computed:{
+...
+  countActiveTodo: function(){
+    return this.todos.filter( item =&gt; item.completed === false).length;
+  }
+}</code></pre>
+
+
+
+<h5>刪除所有資料</h5>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div class="card-footer d-flex justify-content-between"&gt;
+  &lt;span&gt;還有 {{ countActiveTodo }} 筆任務未完成&lt;/span&gt;
+  &lt;a href="#' @click.prevent="deleteAllTodo"&gt;&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+
+
+
+<p>JavaScript</p>
+
+
+
+<pre class="wp-block-code"><code>methods:{
+...
+  deleteAllTodo: function(){
+    this.todos = &#91;];
+  }
+}</code></pre>
+
+
+
+<p>參考資源：<a rel="noreferrer noopener" href="https://codepen.io/alysachan/pen/bGevJBV" target="_blank">Alysa Chan</a>、<a rel="noreferrer noopener" href="https://hackmd.io/Alzb0FUMRD6G8_WtQjghuA?both" target="_blank">Alysa Chan筆記</a></p>
+
+
+
+<p>作業連結：<a href="https://codepen.io/GeeHsu/pen/eYdWOoZ" target="_blank" rel="noreferrer noopener">Todo Vue.js 作業</a></p>
+
+
+
+<h3>實戰體驗 – Todo List 的資源連結</h3>
+
+
+
+<p>作業模板：<br><br><a rel="noreferrer noopener" href="https://codepen.io/Wcc723/pen/VXRWyg" target="_blank">Todo Demo Template</a><br>“進入此連結後可 Fork 到自己的帳號下”<br>此模板與課程範例進行的類似<br>同學可以在此練習作業<br>並透過 Udemy 問答區繳交作業<br><br>透過此範例，同學可提早完整了解 Vue.js 的概觀<br>接下來在學習 Vue 的語法細節及生命週期<br>會更容易了解這些的相關性</p>
+
+
+
+<h2>第４節：進階模板語法介紹</h2>
+
+
+
+<p><a href="https://cn.vuejs.org/v2/guide/syntax.html" target="_blank" rel="noreferrer noopener">Vue.js 模板語法</a></p>
+
+
+
+<h3>模板資料細節說明</h3>
+
+
+
+<h5>基礎模板語法</h5>
+
+
+
+<ul>
+<li>字串</li>
+<li>原始 HTML</li>
+<li>單次綁定</li>
+<li>表達式</li>
+<li>HTML 屬性</li>
+</ul>
+
+
+
+<p>v-html –&nbsp;<a rel="noreferrer noopener" href="https://cn.vuejs.org/v2/api/#v-html" target="_blank">額外注意事項</a><br><br>在網站上動態渲染任意HTML是非常危險的，因為容易導致<a rel="noreferrer noopener" href="https://en.wikipedia.org/wiki/Cross-site_scripting" target="_blank">XSS攻擊</a>。只在可信內容上使用<code>v-html</code>，<strong>永不</strong>用在用戶提交的內容上。</p>
+
+
+
+<p>跨網站指令碼&nbsp;(Cross-site scripting，通常簡稱為：XSS)，是一種網站應用程式的安全漏洞攻擊，是代碼注入的一種。它允許惡意使用者將程式碼注入到網頁上，其他使用者在觀看網頁時就會受到影響。</p>
+
+
+
+<p>template/basic.html</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div id="app"&gt;
+  &lt;h4&gt;字串&lt;/h4&gt;
+  {{ text }}
+  &lt;input type="text" class="form-control" v-model="text"&gt;
+
+  &lt;h4 class="mt-3"&gt;原始 HTML&lt;/h4&gt;
+  {{ rawHtml }}
+  &lt;p v-html="rawHtml"&gt;請在此加入原始 HTML 結構&lt;/p&gt;
+  &lt;p&gt;&lt;a href="https://cn.vuejs.org/v2/api/#v-html"&gt;額外注意事項&lt;/a&gt;&lt;/p&gt;
+
+  &lt;h4 class="mt-3"&gt;單次綁定&lt;/h4&gt;
+  &lt;div v-text="text" v-once&gt;請將此欄位改為單次綁定&lt;/div&gt;
+
+  &lt;h4 class="mt-3"&gt;表達式&lt;/h4&gt;
+  &lt;p&gt;練習不同的表達式&lt;/p&gt;
+  {{ text + rawHtml }}
+  {{ text.split('').reverse().join('') }}
+  {{ number1 * number2 }}
+
+  &lt;hr&gt;
+  &lt;h4 class="mt-3"&gt;HTML 屬性&lt;/h4&gt;
+  &lt;p :id="htmlId"&gt;請綁定上 ID&lt;/p&gt;
+  
+  &lt;input type="text" :disabled="isDisabled" class="form-control" placeholder="請在此加上動態 disabled"&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+var app = new Vue({
+  el: '#app',
+  data: {
+    text: '這是一段文字',
+    rawHtml: `&lt;span class="text-danger"&gt;紅色文字&lt;/span&gt;`,
+    number1: 100,
+    number2: 300,
+    htmlId: 'HTMLID',
+    isDisabled: true
+  },
+});
+&lt;/script&gt;</code></pre>
+
+
+
+<h3>動態切換 ClassName 及 Style 多種方法</h3>
+
+
+
+<h5>切換樣式</h5>
+
+
+
+<ul>
+<li>物件寫法</li>
+<li>物件寫法 2</li>
+<li>陣列寫法</li>
+<li>綁定行內樣式</li>
+<li>自動加上 Prefix (每個版本結果不同)</li>
+</ul>
+
+
+
+<h5>介紹怎麼切換樣式。</h5>
+
+
+
+<p>實際在做的時候，資料狀態建議自己輸入一次，才能比較了解切換狀態的時候，資料邏輯是怎麼去建構的。</p>
+
+
+
+<p>不能使用 – 這個符號(Ex：bg-danger)，來做為物件選取的名稱，會在 Console 跳出錯誤，雖然可以操作，但不是正確的寫法，正確寫法是改成用中括號的方式來選取 (Ex：[‘bg-danger’])。</p>
+
+
+
+<p>CSS屬性 user-select 控制用戶是否可用文本。</p>
+
+
+
+<p>template/v_class.html</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div id="app"&gt;
+  &lt;h4&gt;物件寫法&lt;/h4&gt;
+  &lt;div class="box" :class="{'rotate': isTransform, 'bg-danger': boxColor}"&gt;&lt;/div&gt;
+  &lt;p&gt;請為此元素加上動態 className&lt;/p&gt;
+  &lt;hr&gt;
+  &lt;button class="btn btn-outline-primary" v-on:click="isTransform = !isTransform"&gt;選轉物件&lt;/button&gt;
+  &lt;div class="form-check"&gt;
+    &lt;input type="checkbox" class="form-check-input" id="classToggle1" v-model="boxColor"&gt;
+    &lt;label class="form-check-label" for="classToggle1"&gt;切換色彩&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;hr&gt;
+  &lt;h5&gt;物件寫法 2&lt;/h5&gt;
+  &lt;div class="box" :class="objectClass"&gt;&lt;/div&gt;
+  &lt;p&gt;請將此範例改為 "物件" 寫法&lt;/p&gt;
+  &lt;hr&gt;
+  &lt;button class="btn btn-outline-primary" @click="objectClass.rotate = !objectClass.rotate"&gt;選轉物件&lt;/button&gt;
+  &lt;div class="form-check"&gt;
+    &lt;input type="checkbox" class="form-check-input" id="classToggle2" v-model="objectClass&#91;'bg-danger']"&gt;
+    &lt;label class="form-check-label" for="classToggle2"&gt;切換色彩&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;hr&gt;
+  &lt;h4&gt;陣列寫法&lt;/h4&gt;
+  &lt;button class="btn" :class="&#91;'btn-outline-primary','active']"&gt;請操作本元件&lt;/button&gt;
+  &lt;button class="btn" :class="arrayClass"&gt;請操作本元件&lt;/button&gt;
+  &lt;p&gt;請用陣列呈現此元件 className&lt;/p&gt;
+  &lt;div class="form-check"&gt;
+    &lt;input type="checkbox" class="form-check-input" id="classToggle3" v-model="arrayClass" value="btn-outline-primary"&gt;
+    &lt;label class="form-check-label" for="classToggle3"&gt;切換樣式&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class="form-check"&gt;
+    &lt;input type="checkbox" class="form-check-input" id="classToggle4" v-model="arrayClass" value="active"&gt;
+    &lt;label class="form-check-label" for="classToggle4"&gt;啟用元素狀態&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;hr&gt;
+  &lt;h4&gt;綁定行內樣式&lt;/h4&gt;
+  &lt;p&gt;請用不同方式綁定以下行內樣式&lt;/p&gt;
+  &lt;div class="box" :style="{backgroundColor: 'red'}"&gt;&lt;/div&gt;
+  &lt;div class="box" :style="styleObject"&gt;&lt;/div&gt;
+  &lt;div class="box" :style="&#91;{backgroundColor: 'red', borderWidth: '5px'}]"&gt;&lt;/div&gt;
+  &lt;div class="box" :style="&#91;styleObject, styleObject2]"&gt;&lt;/div&gt;
+  &lt;hr&gt;
+  &lt;h5&gt;自動加上 Prefix (每個版本結果不同)&lt;/h5&gt;
+  &lt;div class="box" :style="styleObject3"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+var app = new Vue({
+  el: '#app',
+  data: {
+    isTransform: false,
+    boxColor: false,
+    objectClass: {
+      'rotate': false,
+      'bg-danger': false,
+    },
+
+    // Array 操作
+    arrayClass: &#91;],
+
+    // 行內樣式
+    // 使用駝峰式命名
+    styleObject: {
+      backgroundColor: 'red',
+      borderWidth: '5px'
+    },
+    styleObject2: {
+      boxShadow: '3px 3px 5px rgba(0, 0, 0, 0.16)'
+    },
+    styleObject3: {
+      userSelect: 'none'
+    }
+  },
+});
+&lt;/script&gt;
+
+&lt;style&gt;
+.box {
+  transition: all .5s;
+}
+.box.rotate {
+  transform: rotate(45deg)
+}
+&lt;/style&gt;</code></pre>
+
+
+
+<h3>v-for 與其使用細節</h3>
+
+
+
+<h5>v-for 迴圈</h5>
+
+
+
+<ul>
+<li>陣列與物件的迴圈</li>
+<li>Key</li>
+<li>Filter</li>
+<li>不能運作的狀況</li>
+<li>純數字的迴圈</li>
+<li>Template 的運用</li>
+<li>v-for 與 v-if</li>
+<li>v-for 與 元件</li>
+</ul>
+
+
+
+<p><a rel="noreferrer noopener" href="https://cn.vuejs.org/v2/api/?#Vue-set" target="_blank">Vue.js Vue.set</a><br><br>注意：現在建議元件使用 v-for 都加上 key。&nbsp;<a rel="noreferrer noopener" href="https://cn.vuejs.org/v2/guide/list.html#%E5%9C%A8%E7%BB%84%E4%BB%B6%E4%B8%8A%E4%BD%BF%E7%94%A8-v-for" target="_blank">參考</a></p>
+
+
+
+<p>template/v_for.html</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div id="app"&gt;
+  &lt;h4&gt;陣列與物件的迴圈&lt;/h4&gt;
+  &lt;p&gt;請使用 v-for 在陣列與物件上，並且加上索引&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li v-for="(item, key) in objectData"&gt;
+      {{ key }} - {{ item.name }} {{ item.age }} 歲
+    &lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;ul&gt;
+    &lt;li v-for="(item, key) in objectData"&gt;
+      {{ key }} - {{ item.name }} {{ item.age }} 歲
+    &lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;hr&gt;
+  &lt;h4&gt;Key&lt;/h4&gt;
+  &lt;p&gt;請在範例上補上 key，並觀察其差異&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li v-for="(item, key) in arrayData" :key="item.age"&gt;
+      {{ key }} - {{ item.name }} {{ item.age }} 歲 &lt;input type="text"&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;button class="btn btn-outline-primary" @click="reverseArray"&gt;反轉陣列&lt;/button&gt;
+
+  &lt;h4&gt;Filter&lt;/h4&gt;
+  &lt;p&gt;請製作過濾資料&lt;/p&gt;
+  &lt;input type="text" class="form-control" v-model="filterText" @keyup.enter="filterData"&gt;
+  &lt;ul&gt;
+    &lt;li v-for="(item, key) in filterArray" :key="item.age"&gt;
+      {{ key }} - {{ item.name }} {{ item.age }} 歲 &lt;input type="text"&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;h4&gt;不能運作的狀況&lt;/h4&gt;
+  &lt;p&gt;講師說明&lt;/p&gt;
+  &lt;button class="btn btn-outline-primary" @click="cantWork"&gt;無法運行&lt;/button&gt;
+  &lt;ul&gt;
+    &lt;li v-for="(item, key) in arrayData" :key="item.age"&gt;
+      {{ key }} - {{ item.name }} {{ item.age }} 歲 &lt;input type="text"&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;h4&gt;純數字的迴圈&lt;/h4&gt;
+  &lt;ul&gt;
+    &lt;li v-for="item in 10"&gt;
+      {{ item }}
+    &lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;h4&gt;Template 的運用&lt;/h4&gt;
+  &lt;p&gt;請將兩個 tr 一組使用 v-for&lt;/p&gt;
+  &lt;table class="table"&gt;
+    &lt;template v-for="item in arrayData"&gt;
+      &lt;tr&gt;
+        &lt;td&gt;{{item.age}}&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;{{item.name}}&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/template&gt;
+  &lt;/table&gt;
+
+  &lt;h4&gt;v-for 與 v-if&lt;/h4&gt;
+  &lt;p&gt;請加上 v-if 判斷式&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li v-for="(item, key) in arrayData" v-if="item.age &lt;= 19"&gt;
+      {{ key }} - {{ item.name }} {{ item.age }} 歲
+    &lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;h4&gt;v-for 與 元件&lt;/h4&gt;
+  &lt;p&gt;講師說明&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;list-item :item="item" v-for="(item, key) in arrayData" :key="item.age"&gt;&lt;/list-item&gt;
+  &lt;/ul&gt;
+  &lt;p&gt;注意：現在建議元件使用 v-for 都加上 key。&lt;a href="https://cn.vuejs.org/v2/guide/list.html#%E4%B8%80%E4%B8%AA%E7%BB%84%E4%BB%B6%E7%9A%84-v-for"&gt;參考&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+Vue.component('list-item', {
+  template: `
+    &lt;li&gt;
+      {{ item.name }} {{ item.age }} 歲
+    &lt;/li&gt;
+  `,
+  props: &#91;'item']
+});
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    arrayData: &#91;
+      {
+        name: '小明',
+        age: 16
+      },
+      {
+        name: '漂亮阿姨',
+        age: 24
+      },
+      {
+        name: '杰倫',
+        age: 20
+      }
+    ],
+    objectData: {
+      ming: {
+        name: '小明',
+        age: 16
+      },
+      auntie: {
+        name: '漂亮阿姨',
+        age: 24
+      },
+      jay: {
+        name: '杰倫',
+        age: 20
+      }
+    },
+    filterArray: &#91;],
+    filterText: ''
+  },
+  methods: {
+    // 請在此練習 JavaScript
+    reverseArray: function () {
+      this.arrayData.reverse()
+      console.log(this.arrayData)
+    },
+    filterData: function() {
+      var vm = this; // (this)
+      vm.filterArray = vm.arrayData.filter(function(item) {
+        console.log(vm.filterText, item.name, item.name.match(vm.filterText));
+        return item.name.match(vm.filterText);
+      });
+
+    },
+    cantWork: function() {
+      // 無法運行一
+      // this.arrayData.length = 0;
+      // console.log(this.arrayData);
+
+      // 無法運行二
+      // this.arrayData&#91;0] = {
+      //   name: '小強',
+      //   age: 99,
+      // }
+      // console.log(this.arrayData);
+
+      // 解法
+      Vue.set(this.arrayData, 0, {
+        name: '小強',
+        age: 99,
+      })
+    }
+  }
+});
+&lt;/script&gt;
+</code></pre>
+
+
+
+<p><a href="https://cn.vuejs.org/v2/api/index.html#Vue-set" target="_blank" rel="noreferrer noopener">Vue.set</a></p>
+
+
+
+<h3>v-if 與其使用細節</h3>
+
+
+
+<h5>v-if 模板判斷</h5>
+
+
+
+<ul>
+<li>v-if, v-else</li>
+<li>template 標籤</li>
+<li>v-else-if</li>
+<li>KEY</li>
+<li>v-if 與 v-show</li>
+</ul>
+
+
+
+<p><a href="https://vuejs.org/v2/guide/conditional.html" target="_blank" rel="noreferrer noopener">Conditional Rendering</a>、<a rel="noreferrer noopener" href="https://cn.vuejs.org/v2/guide/conditional.html" target="_blank">條件渲染 v-if</a></p>
+
+
+
+<p>v-if, v-else – 成功、失敗範例</p>
+
+
+
+<pre class="wp-block-code"><code>// 寫法一
+// 成功
+v-if="isSuccess == true"
+// 失敗
+v-if="isSuccess == false"
+// 寫法二
+// 成功
+v-if="isSuccess"
+// 失敗
+v-if="!isSuccess"
+// 寫法三
+// 成功
+v-if="isSuccess"
+// 失敗
+v-else</code></pre>
+
+
+
+<p>template/v_if.html</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div id="app"&gt;
+  &lt;h4&gt;v-if, v-else&lt;/h4&gt;
+  &lt;p&gt;使用 v-if, v-else 切換物件呈現&lt;/p&gt;
+  &lt;div class="alert alert-success" v-if="isSuccess"&gt;成功!&lt;/div&gt;
+  &lt;div class="alert alert-danger" v-else&gt;失敗!&lt;/div&gt;
+  &lt;div class="form-check"&gt;
+    &lt;input type="checkbox" class="form-check-input" id="isSuccess" v-model="isSuccess"&gt;
+    &lt;label class="form-check-label" for="isSuccess"&gt;啟用元素狀態&lt;/label&gt;
+  &lt;/div&gt;
+
+  &lt;h4&gt;template 標籤&lt;/h4&gt;
+  &lt;p&gt;使用 template 切換多數 DOM 呈現&lt;/p&gt;
+  &lt;table class="table"&gt;
+    &lt;thead&gt;
+      &lt;th&gt;編號&lt;/th&gt;
+      &lt;th&gt;姓名&lt;/th&gt;
+    &lt;/thead&gt;
+    &lt;template v-if="showTemplate"&gt;
+      &lt;tr&gt;
+        &lt;td&gt;1&lt;/td&gt;
+        &lt;td&gt;安妮&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;2&lt;/td&gt;
+        &lt;td&gt;小明&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/template&gt;
+  &lt;/table&gt;
+  &lt;div class="form-check"&gt;
+    &lt;input type="checkbox" class="form-check-input" id="showTemplate" v-model="showTemplate"&gt;
+    &lt;label class="form-check-label" for="showTemplate"&gt;啟用元素狀態&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;hr&gt;
+  &lt;h4&gt;v-else-if&lt;/h4&gt;
+  &lt;p&gt;使用 v-else-if 做出分頁頁籤&lt;/p&gt;
+  &lt;ul class="nav nav-tabs"&gt;
+    &lt;li class="nav-item"&gt;
+      &lt;a class="nav-link" href="#" :class="{'active': link == 'a'}" @click.prevent="link = 'a'"&gt;標題一&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="nav-item"&gt;
+      &lt;a class="nav-link" href="#" :class="{'active': link == 'b'}" @click.prevent="link = 'b'"&gt;標題二&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="nav-item"&gt;
+      &lt;a class="nav-link" href="#" :class="{'active': link == 'c'}" @click.prevent="link = 'c'"&gt;標題三&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;div class="content"&gt;
+    &lt;div v-if="link == 'a'"&gt;Ａ&lt;/div&gt;
+    &lt;div v-else-if="link == 'b'"&gt;Ｂ&lt;/div&gt;
+    &lt;div v-else-if="link == 'c'"&gt;Ｃ&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;hr&gt;
+  &lt;h4&gt;KEY&lt;/h4&gt;
+  &lt;p&gt;講師說明 Vue 切換狀態可能遇到的問題&lt;/p&gt;
+  &lt;template v-if="loginType === 'username'"&gt;
+    &lt;label&gt;Username&lt;/label&gt;
+    &lt;input class="form-control" placeholder="Enter your username":key="1"&gt;
+  &lt;/template&gt;
+  &lt;template v-else&gt;
+    &lt;label&gt;Email&lt;/label&gt;
+    &lt;input class="form-control" placeholder="Enter your email address" :key="2"&gt;
+  &lt;/template&gt;
+  &lt;button class="btn btn-outline-primary mt-3" @click="toggleLoginType"&gt;切換狀態&lt;/button&gt;
+  &lt;hr&gt;
+  &lt;h4&gt;v-if 與 v-show&lt;/h4&gt;
+  &lt;p&gt;講師說明 v-if 與 v-show 的差異&lt;/p&gt;
+  &lt;div class="alert alert-success" v-if="isSuccess"&gt;成功!&lt;/div&gt;
+  &lt;div class="alert alert-danger" v-if="!isSuccess"&gt;失敗!&lt;/div&gt;
+  &lt;div class="form-check"&gt;
+    &lt;input type="checkbox" class="form-check-input" id="isSuccess2" v-model="isSuccess"&gt;
+    &lt;label class="form-check-label" for="isSuccess2"&gt;啟用元素狀態&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+var app = new Vue({
+  el: '#app',
+  data: {
+    isSuccess: true,
+    showTemplate: true,
+
+    link: 'a',
+
+    loginType: 'username'
+  },
+  methods: {
+    toggleLoginType: function () {
+      return this.loginType = this.loginType === 'username' ? 'email' : 'username'
+    }
+  }
+});
+&lt;/script&gt;</code></pre>
+
+
+
+<p>特別記得的是 key 這個指令，可能是在使用 Vue 常踩到的地雷。</p>
+
+
+
+<h3>Computed 與 Watch</h3>
+
+
+
+<h5>計算及監聽</h5>
+
+
+
+<ul>
+<li>Computed</li>
+<li>Watch</li>
+</ul>
+
+
+
+<p><a href="https://vuejs.org/v2/guide/computed.html" target="_blank" rel="noreferrer noopener">Computed Properties and Watchers</a>、<a rel="noreferrer noopener" href="https://cn.vuejs.org/v2/guide/computed.html" target="_blank">計算屬性和偵聽器</a></p>
+
+
+
+<p>template/computed_watch.html</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div id="app"&gt;
+  &lt;h4&gt;Computed&lt;/h4&gt;
+  &lt;p&gt;使用 Computed 來過濾資料。&lt;/p&gt;
+  &lt;input type="text" class="form-control" v-model="filterText"&gt;
+  &lt;ul&gt;
+    &lt;li v-for="(item, key) in filterArray" :key="item.age"&gt;
+      {{ key }} - {{ item.name }} {{ item.age }} 歲 &lt;input type="text"&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt; 
+  &lt;p&gt;使用 Computed 來呈現時間格式。&lt;/p&gt;
+  &lt;p&gt;{{ formatTime }}&lt;/p&gt;
+  &lt;h4&gt;Watch&lt;/h4&gt;
+  &lt;p&gt;使用 trigger 來觸發旋轉 box、並在三秒後改變回來&lt;/p&gt;
+  &lt;div class="box" :class="{'rotate': trigger }"&gt;&lt;/div&gt;
+  &lt;hr&gt;
+  &lt;button class="btn btn-outline-primary" @click="trigger = true"&gt;Counter&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+var app = new Vue({
+  el: '#app',
+  data: {
+    arrayData: &#91;
+      {
+        name: '小明',
+        age: 16
+      },
+      {
+        name: '漂亮阿姨',
+        age: 24
+      },
+      {
+        name: '杰倫',
+        age: 20
+      }
+    ],
+    filterText: '',
+    trigger: false,
+    newDate: 0
+  },
+  computed: {
+    filterArray: function() {
+      var vm = this;
+      return vm.arrayData.filter(function(item) {
+        return item.name.match(vm.filterText);
+      })
+    },
+    formatTime: function () {
+      console.log(this.newDate);
+      var dates = new Date(this.newDate * 1000);
+      var year = dates.getFullYear();
+      var month = dates.getMonth() + 1;
+      var date = dates.getDate();
+      var hours = dates.getHours();
+      var minutes = dates.getMinutes();
+      var seconds = dates.getSeconds();
+      return `${year}/${month}/${date} ${hours}:${minutes}:${seconds}`
+    }
+  },
+  watch: {
+    trigger: function () {
+      var vm = this;
+      setTimeout(() =&gt; {
+        vm.trigger = false
+      }, 3000);
+    }
+  },
+  mounted:function () {
+    this.newDate = Math.floor(Date.now() / 1000);
+  }
+});
+&lt;/script&gt;
+
+&lt;style&gt;
+.box {
+  transition: all .5s;
+}
+.box.rotate {
+  transform: rotate(45deg)
+}
+&lt;/style&gt;</code></pre>
+
+
+
+<h3>表單細節操作</h3>
+
+
+
+<p>template/form.html</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div id="app"&gt;
+  &lt;h4&gt;Select&lt;/h4&gt;
+  &lt;select name="" id="" class="form-control" v-model="selected"&gt;
+    &lt;option disabled value=""&gt;請選擇&lt;/option&gt;
+    &lt;option value="小美"&gt;小美&lt;/option&gt;
+    &lt;option value="可愛小妞"&gt;可愛小妞&lt;/option&gt;
+    &lt;option value="漂亮阿姨"&gt;漂亮阿姨&lt;/option&gt;
+  &lt;/select&gt;
+  &lt;p&gt;小明喜歡的女生是 {{ selected }}。&lt;/p&gt;
+  &lt;hr&gt;
+  &lt;select name="" id="" class="form-control" v-model="selected2"&gt;
+    &lt;option disabled value=""&gt;請選擇&lt;/option&gt;
+    &lt;option :value="item" v-for="item in selectData"&gt;{{ item }}&lt;/option&gt;
+  &lt;/select&gt;
+  &lt;p&gt;小明喜歡的女生是 {{ selected2 }}。&lt;/p&gt;
+  &lt;hr&gt;
+  &lt;h4 class="mt-3"&gt;多選&lt;/h4&gt;
+  &lt;select name="" id="" class="form-control" multiple v-model="multiSelected"&gt;
+    &lt;option value="小美"&gt;小美&lt;/option&gt;
+    &lt;option value="可愛小妞"&gt;可愛小妞&lt;/option&gt;
+    &lt;option value="漂亮阿姨"&gt;漂亮阿姨&lt;/option&gt;
+  &lt;/select&gt;
+  &lt;p&gt;小明喜歡的女生是 &lt;span v-for="item in multiSelected"&gt;{{ item }} &lt;/span&gt;。&lt;/p&gt;
+  &lt;hr&gt;
+  &lt;h4 class="mt-3"&gt;複選框&lt;/h4&gt;
+  &lt;div class="form-check"&gt;
+    &lt;input type="checkbox" class="form-check-input" id="sex" v-model="sex" true-value="男生" false-value="女生"&gt;
+    &lt;label class="form-check-label" for="sex"&gt;{{ sex }}&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;h4 class="mt-3"&gt;修飾符&lt;/h4&gt;
+  {{ lazyMsg }}
+  &lt;input type="text" class="form-control" v-model.lazy="lazyMsg"&gt;
+  &lt;br&gt;
+  &lt;pre&gt;{{ typeof(age) }} {{ age }}&lt;/pre&gt;
+  &lt;input type="number" class="form-control" v-model.number="age"&gt;
+  &lt;br&gt;
+  {{ trimMsg }}緊黏的文字
+  &lt;input type="text" class="form-control" v-model.trim="trimMsg"&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+var app = new Vue({
+  el: '#app',
+  data: {
+    singleRadio: '',
+    selected: '',
+    selectData: &#91;'小美', '可愛小妞', '漂亮阿姨'],
+    selected2: '',
+    multiSelected: &#91;],
+    sex: '男生',
+
+    // 修飾符
+    lazyMsg: '',
+    age: '',
+    trimMsg: ''
+  },
+});
+&lt;/script&gt;</code></pre>
+
+
+
+<p>補充：可透過 shift 或 cmd&nbsp;來多選 Windows&nbsp;則是&nbsp;shift&nbsp;或 ctrl</p>
+
+
+
+<h3>v-on 的頁面操作細節</h3>
+
+
+
+<h5>事件修飾符</h5>
+
+
+
+<ul>
+<li>.stop – 調用 event.stopPropagation()，停止由內而外。</li>
+<li>.prevent – 調用 event.preventDefault()，停止事件的默認動作。</li>
+<li>.capture – 添加事件偵聽器時使用 capture 模式，由內而外改成由外而內。</li>
+<li>.self – 只當事件是從偵聽器綁定的元素本身觸發時才觸發回調，只會觸發自己這個元素。</li>
+<li>.once – 指觸發一次回調，事件只觸發一次。</li>
+</ul>
+
+
+
+<h5>按鍵修飾符</h5>
+
+
+
+<ul>
+<li>.{keyCode | keyAlias} – 只當事件是從特定鍵觸發時才觸發回調。</li>
+<li>別名修飾 – .enter, .tab, .delete, .esc, .space, .up, .down, .left, .right</li>
+<li>修飾符來實現僅在按下相應按鍵時才觸發鼠標或按鍵事件的監聽器 – .ctrl, .alt, .shift, .meta</li>
+</ul>
+
+
+
+<p>template/v_on.html</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div id="app"&gt;
+  &lt;p&gt;請切換下方 box 的 className&lt;/p&gt;
+  &lt;div class="box" :class="{'rotate': isRotate }"&gt;&lt;/div&gt;
+  &lt;hr&gt;
+  &lt;button class="btn btn-outline-primary" @click="changeRotate"&gt;切換 box 樣式&lt;/button&gt;
+  &lt;hr&gt;
+  &lt;h4&gt;帶入參數&lt;/h4&gt;
+  &lt;ul&gt;
+    &lt;li v-for="item in arrayData" class="my-2"&gt;
+      {{ item.name }} 有 {{ item.cash }} 元 
+      &lt;button class="btn btn-sm btn-outline-primary" @click="storeMoney(item)"&gt;儲值&lt;/button&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;h4&gt;修飾符&lt;/h4&gt;
+  &lt;h5&gt;事件修飾符&lt;/h5&gt;
+  &lt;ul&gt;
+    &lt;li&gt;.stop - 調用 event.stopPropagation()。&lt;/li&gt;
+    &lt;li&gt;.prevent - 調用 event.preventDefault()。&lt;/li&gt;
+    &lt;li&gt;.capture - 添加事件偵聽器時使用 capture 模式。&lt;/li&gt;
+    &lt;li&gt;.self - 只當事件是從偵聽器綁定的元素本身觸發時才觸發回調。&lt;/li&gt;
+    &lt;li&gt;.once - 只觸發一次回調。&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;h6&gt;將此範例加上 stopPropagation&lt;/h6&gt;
+  &lt;div class="p-3 bg-primary" @click.stop="trigger('div')"&gt;
+    &lt;span class="box" @click.stop="trigger('box')"&gt;&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;h6 class="mt-3"&gt;事件偵聽器時使用 capture 模式&lt;/h6&gt;
+  &lt;div class="p-3 bg-primary" @click.capture="trigger('div')"&gt;
+    &lt;span class="box d-flex align-items-center justify-content-center" @click.capture="trigger('box')"&gt;
+      &lt;button class="btn btn-outline-secondary" @click.capture="trigger('button')"&gt;按我&lt;/button&gt;
+    &lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;h6 class="mt-3"&gt;事件偵聽器時使用 self 模式&lt;/h6&gt;
+  &lt;div class="p-3 bg-primary" @click.self="trigger('div')"&gt;
+    &lt;span class="box d-flex align-items-center justify-content-center" @click.self="trigger('box')"&gt;
+      &lt;button class="btn btn-outline-secondary" @click.self="trigger('button')"&gt;按我&lt;/button&gt;
+    &lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;h6 class="mt-3"&gt;事件偵聽器只觸發一次&lt;/h6&gt;
+  &lt;div class="p-3 bg-primary" @click.once="trigger('div')"&gt;
+    &lt;span class="box d-flex align-items-center justify-content-center" @click.once="trigger('box')"&gt;
+      &lt;button class="btn btn-outline-secondary" @click.once="trigger('button')"&gt;按我&lt;/button&gt;
+    &lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;h5&gt;按鍵修飾符&lt;/h5&gt;
+  &lt;ul&gt;
+    &lt;li&gt;.{keyCode | keyAlias} - 只當事件是從特定鍵觸發時才觸發回調。&lt;/li&gt;
+    &lt;li&gt;別名修飾 - .enter, .tab, .delete, .esc, .space, .up, .down, .left, .right&lt;/li&gt;
+    &lt;li&gt;修飾符來實現僅在按下相應按鍵時才觸發鼠標或鍵盤事件的監聽器 - .ctrl, .alt, .shift, .meta&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;h6 class="mt-3"&gt;keyCode&lt;/h6&gt;
+  &lt;input type="text" class="form-control" v-model="text" @keyup.13="trigger(13)"&gt;
+
+  &lt;h6 class="mt-3"&gt;別名修飾&lt;/h6&gt;
+  &lt;input type="text" class="form-control" v-model="text" @keyup.space="trigger('space')"&gt;
+
+  &lt;h6 class="mt-3"&gt;相應按鍵時才觸發的監聽器&lt;/h6&gt;
+  &lt;input type="text" class="form-control" v-model="text" @keyup.shift.enter="trigger('shift + Enter')"&gt;
+  &lt;h5&gt;滑鼠修飾符&lt;/h5&gt;
+  &lt;ul&gt;
+    &lt;li&gt;.left - (2.2.0) 只當點擊鼠標左鍵時觸發。&lt;/li&gt;
+    &lt;li&gt;.right - (2.2.0) 只當點擊鼠標右鍵時觸發。&lt;/li&gt;
+    &lt;li&gt;.middle - (2.2.0) 只當點擊鼠標中鍵時觸發。&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;h6 class="mt-3"&gt;滑鼠修飾符&lt;/h6&gt;
+  &lt;div class="p-3 bg-primary"&gt;
+    &lt;span class="box" @click.right="trigger('Right button')"&gt;
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+var app = new Vue({
+  el: '#app',
+  data: {
+    arrayData: &#91;
+      {
+        name: '小明',
+        age: 16,
+        cash: 500
+      },
+      {
+        name: '漂亮阿姨',
+        age: 24,
+        cash: 1000
+      },
+      {
+        name: '杰倫',
+        age: 20,
+        cash: 5000
+      }
+    ],
+    isRotate: false,
+    text: ''
+  },
+  methods: {
+    changeRotate: function() {
+      this.isRotate = !this.isRotate;
+    },
+    storeMoney: function(item) {
+      item.cash = item.cash + 500;
+    },
+    trigger: function(name) {
+      console.log(name, '此事件被觸發了')
+    }
+  }
+  // 解答
+});
+&lt;/script&gt;
+
+&lt;style&gt;
+.box {
+  display: block;
+  transition: all .5s;
+}
+.box.rotate {
+  transform: rotate(45deg)
+}
+&lt;/style&gt;</code></pre>
+
+
+
+<h3>Template 章節作業說明</h3>
+
+
+
+<h5>作業練習：表格排序</h5>
+
+
+
+<p>模板練習作業：透過點擊 th 方式，反轉表格的排序<br><br>僅需要排序價格、到期日。</p>
+
+
+
+<h5>提示：</h5>
+
+
+
+<ol>
+<li>將資料排序改為使用 computed 輸出</li>
+<li>使用迴圈的方式，重新依據點擊排序內容，並透過 computed 輸出</li>
+<li>反轉時，th 指標需給與正確方向</li>
+<li>加分題：第二次點擊時再次反轉資料</li>
+</ol>
+
+
+
+<h3>章節作業模板</h3>
+
+
+
+<p>如果課程中沒有看到章節作業模板<br>煩請重新下載<a rel="noreferrer noopener" href="https://github.com/hexschool/vue-exercise/tree/gh-pages" target="_blank">課程範例</a></p>
+
+
+
+<p>template/homework_sortby.html</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div id="app" class="app"&gt;
+  &lt;table class="table"&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;品名&lt;/th&gt;
+        &lt;th class="click" :class="{'active': link == 'linkPrice'}"
+        @click="sortActive = 'price'; isReverse = !isReverse; link='linkPrice'"&gt;價格 
+          &lt;!-- isReverse 為反轉 className --&gt;
+          &lt;span class="icon isReverse" :class="{'inverse': isReverse}"
+            v-if="sortActive === 'price'"&gt;
+            &lt;i class="fas fa-angle-up text-success"&gt;&lt;/i&gt;
+          &lt;/span&gt;
+        &lt;/th&gt;
+        &lt;th class="click" :class="{'active': link == 'linkExpiryDate'}"
+        @click="sortActive = 'expiryDate'; isReverse = !isReverse; link='linkExpiryDate'"&gt;到期日 
+          &lt;span class="icon isReverse" :class="{'inverse': isReverse}"
+            v-if="sortActive === 'expiryDate'"&gt;
+            &lt;i class="fas fa-angle-up text-success"&gt;&lt;/i&gt;
+          &lt;/span&gt;
+        &lt;/th&gt;
+      &lt;/tr&gt;
+      &lt;tr v-for="(item, key) in sortArray" :key="item.name"  v-if="link == ''"&gt;
+        &lt;td&gt;{{ item.name }}&lt;/td&gt;
+        &lt;td&gt;{{ item.price }}&lt;/td&gt;
+        &lt;td&gt;{{ item.expiryDate }}&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr v-for="(item, key) in sortArray" :key="item.name"  v-if="link == 'linkPrice'"&gt;
+        &lt;td&gt;{{ item.name }}&lt;/td&gt;
+        &lt;td&gt;{{ item.price }}&lt;/td&gt;
+        &lt;td&gt;{{ item.expiryDate }}&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr v-for="(item, key) in sortArray" :key="item.name"  v-if="link == 'linkExpiryDate'"&gt;
+        &lt;td&gt;{{ item.name }}&lt;/td&gt;
+        &lt;td&gt;{{ item.price }}&lt;/td&gt;
+        &lt;td&gt;{{ item.expiryDate }}&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+// 參考語法
+// // 使用 Sort 排序資料
+// data = data.sort(function (a, b) {
+//   // 抓出排序資料的值
+//   a = a&#91;欄位]
+//   b = b&#91;欄位]
+
+//   // 回傳 1, 0, -1 來進行排列
+//   // 詳細規則可參考 https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+//   return (a === b ? 0 : a &gt; b ? 1 : -1) * 正反排序數值
+// })
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    productData: &#91;
+      {
+        name: '巧呼呼蘇打水',
+        price: 30,
+        expiryDate: 90
+      },
+      {
+        name: '心驚膽跳羊肉飯',
+        price: 65,
+        expiryDate: 2
+      },
+      {
+        name: '郭師傅武功麵包',
+        price: 32,
+        expiryDate: 1
+      },
+      {
+        name: '不太會過期的新鮮牛奶',
+        price: 75,
+        expiryDate: 600
+      },
+      {
+        name: '金殺 巧粒粒',
+        price: 120,
+        expiryDate: 200
+      }
+    ],
+    isReverse: true,
+    sortActive: '',
+    link: ''
+  },
+  // 請在此撰寫 JavaScript
+  computed: {
+    sortArray: function() {
+      var vm = this;
+      // var sortItem = vm.sortActive;
+      // 使用 sort 排序資料
+      vm.productData = this.productData.sort(function(a, b) {
+        // 抓出排序資料的值
+        a = a&#91;vm.sortActive];
+        b = b&#91;vm.sortActive];
+        // 條件(三元)運算式
+        // return a &lt; b ? -1 : a &gt; b ? 1 : 0;
+        // 相當於
+        if(a&lt;b) { return -1; }
+        else if (a&gt;b) { return 1; }
+        else { return 0; }
+      });
+      if(vm.isReverse) {
+        return vm.productData;
+      } else {
+        return vm.productData.reverse();
+      }
+    }
+  }
+});
+&lt;/script&gt;
+
+&lt;style&gt;
+.app {
+  max-width: 1140px;
+  margin: 10px auto;
+}
+
+.table th.click {
+  cursor: pointer;
+}
+
+.table th.click:hover {
+  color: #00ffa2;
+}
+
+.icon {
+  display: inline-block;
+}
+
+.icon.inverse {
+  transform: rotate(180deg)
+}
+
+.active {
+  color: #28a745;
+}
+&lt;/style&gt;</code></pre>
+
+
+
+<p><a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/sort" target="_blank" rel="noreferrer noopener">Array.prototype.sort()</a>、<a rel="noreferrer noopener" href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Operators/Conditional_Operator" target="_blank">條件運算子</a></p>
+
+
+
+<pre class="wp-block-code"><code>// 比較函式會是以下形式：
+function compare(a, b) {
+  if (在某排序標準下 a 小於 b) {
+    return -1;
+  }
+  if (在某排序標準下 a 大於 b) {
+    return 1;
+  }
+  // a 必須等於 b
+  return 0;
+}</code></pre>
+
+
+
+<h2>第５節：Vue 的生命週期</h2>
+
+
+
+<h3>實際運行範例 (實例生命週期鉤子)</h3>
+
+
+
+<p>了解生命週期，對於熟悉 Vue.js 有很大的幫助。</p>
+
+
+
+<h5>延伸介紹 – Vue 生命週期</h5>
+
+
+
+<ol>
+<li>觀察生命週期</li>
+<li>加上 keep-alive 讓元件資料狀態不被移除</li>
+</ol>
+
+
+
+<p>basic/v_lifecycle.html</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div id="app" class="text-center"&gt;
+  &lt;h3&gt;Let's check out the lifecycle of this hur' child.&lt;/h3&gt;
+  &lt;h4&gt;Check the console!&lt;/h4&gt;
+  &lt;button @click="toggleShow" class="btn btn-primary"&gt;
+    &lt;span v-if="isShowing"&gt;Hide child&lt;/span&gt;
+    &lt;span v-else&gt;Show child&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;hr&gt;
+  &lt;keep-alive&gt;
+    &lt;app-child v-if="isShowing"&gt;&lt;/app-child&gt;
+  &lt;/keep-alive&gt;
+&lt;/div&gt;
+
+&lt;script type="text/x-template" id="childarea"&gt;
+  &lt;div&gt;
+    &lt;h4&gt;Hello! {{ text }}&lt;/h4&gt;
+    &lt;input type="text" class="form-control" v-model="text"&gt;
+  &lt;/div&gt;
+&lt;/script&gt;
+
+&lt;script&gt;
+//*** 重要 ***///
+const Child = {
+  template: '#childarea',
+  data: function () {
+    return {
+      text: 'Vue data 資料狀態'
+    }
+  },
+  beforeCreate() {
+    console.log(`beforeCreate! ${this.text}`);
+  }, 
+  created() {
+    alert(`created! ${this.text}`);
+  }, 
+  beforeMount() {
+    alert(`beforeMount! ${this.text}`);
+  }, 
+  mounted() {
+    alert(`mounted! ${this.text}`);
+  },
+  updated () {
+    console.log(`updated! ${this.text}`);
+  },
+  activated () {
+    alert(`activated! ${this.text}`);
+  },
+  deactivated () {
+    alert(`deactivated! ${this.text}`);
+  },
+  beforeDestroy() {
+    console.log(`beforeDestroy! ${this.text}`);
+  }, 
+  destroyed() {
+    console.log(`destroyed! ${this.text}`);
+  }
+};
+
+new Vue({
+  el: '#app',
+  data() {
+    return {
+      isShowing: false 
+    }
+  },
+  methods: {
+    toggleShow() {
+      this.isShowing = !this.isShowing;
+    }
+  },
+  components: {
+    appChild: Child
+  }
+});
+&lt;/script&gt;</code></pre>
+
+
+
+<p><a rel="noreferrer noopener" href="https://vuejs.org/v2/guide/instance.html#Instance-Lifecycle-Hooks" target="_blank">Instance Lifecycle Hooks</a>、<a href="https://cn.vuejs.org/v2/guide/instance.html#%E5%AE%9E%E4%BE%8B%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E9%92%A9%E5%AD%90" target="_blank" rel="noreferrer noopener">實例生命週期鉤子</a></p>
+
+
+
+<h3>Vue 生命週期的簡報說明</h3>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" width="1782" height="952" src="/wordpress_blog/wp-content/uploads/2022/04/vuelifecycle.png" alt="" class="wp-image-664"><figcaption>Vue 生命週期的簡報說明</figcaption></figure>
+
+
+
+<h5>章節重點說明</h5>
+
+
+
+<ol>
+<li>如果要使用 AJAX 至少要到 CREATED 才能用</li>
+<li>想要維持資料狀態，可以使用 &lt;keep-alive&gt;</li>
+</ol>
+	</div>
+<!-- .entry-content -->
+
+	<footer class="entry-footer">
+			</footer><!-- .entry-footer -->
+</article><!-- #post-657 -->
+
+	<nav class="navigation post-navigation" aria-label="文章">
+		<h2 class="screen-reader-text">文章導覽</h2>
+		<div class="nav-links">
+<div class="nav-previous"><a href="/wordpress_blog/git-github-hexschool/" rel="prev"><span class="nav-subtitle">Previous:</span> <span class="nav-title">掌握 Git 與 GitHub 版本控制</span></a></div>
+<div class="nav-next"><a href="/wordpress_blog/vue-hexschool-2/" rel="next"><span class="nav-subtitle">Next:</span> <span class="nav-title">Vue 出一個電商網站 (2)</span></a></div>
+</div>
+	</nav>
+	</main><!-- #main -->
+
+
+	</div></div>
+			
+			<footer id="colophon" class="site-footer">
+
+				
+				<div class="container-fluid">
+					<div class="site-info">
+						<div class="row">
+
+															
+								<div class="col-12 footer-copyright-elements footer-copyright-alignment-center">
+
+									<div class="botiga-credits">&copy; 2022 wordpress_blog. 
+Created by Gee Hsu. 
+<br>Proudly powered by <a rel="nofollow" href="https://athemes.com/theme/botiga/">Botiga</a>
+</div>
+<div class="social-profile">
+<a target="_blank" href="https://www.facebook.com/watergrass0402/"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></i></a><a target="_blank" href="https://github.com/GeeHsu"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></i></a>
+</div>
+								</div>
+														
+						</div>
+					</div>
+				</div>
+<!-- .site-info -->
+
+				
+			</footer><!-- #colophon -->
+
+			
+			<div class="back-to-top visibility-all position-right"><i class="ws-svg-icon"><svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 15l7-7 7 7" stroke-width="3" stroke-linejoin="round"></path></svg></i></div>
+</div>
+<!-- #page -->
+
+
+<script id="botiga-custom-js-extra">
+var botiga = {"ajaxurl":"\/wp-admin\/admin-ajax.php","i18n":{"botiga_sharebox_copy_link":"Copy link","botiga_sharebox_copy_link_copied":"Copied!"}};
+</script>
+<script src="/wordpress_blog/wp-content/themes/botiga/assets/js/custom.min.js?ver=1.1.2" id="botiga-custom-js"></script>
+
+</body>
+</html>

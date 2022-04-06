@@ -1,0 +1,7711 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<title>JavaScript 必修篇 &#8211; 前端修練全攻略 (1) &#8211; wordpress_blog</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="訂閱《wordpress_blog》&raquo; 資訊提供" href="/wordpress_blog/feed/">
+<link rel="alternate" type="application/rss+xml" title="訂閱《wordpress_blog》&raquo; 留言的資訊提供" href="/wordpress_blog/comments/feed/">
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.9.3"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style>img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="/wordpress_blog/wp-includes/css/dist/block-library/style.min.css?ver=5.9.3" media="all">
+<style id="global-styles-inline-css">body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--palette-1-color-0: #212121;--wp--preset--color--palette-1-color-1: #757575;--wp--preset--color--palette-1-color-2: #212121;--wp--preset--color--palette-1-color-3: #212121;--wp--preset--color--palette-1-color-4: #212121;--wp--preset--color--palette-1-color-5: #f5f5f5;--wp--preset--color--palette-1-color-6: #ffffff;--wp--preset--color--palette-1-color-7: #ffffff;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 14px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 18px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--normal: 16px;--wp--preset--font-size--larger: 24px;--wp--preset--font-size--extra-large: 32px;--wp--preset--font-size--huge: 48px;--wp--preset--font-size--gigantic: 64px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}</style>
+<link rel="stylesheet" id="botiga-style-css" href="/wordpress_blog/wp-content/themes/botiga/style.css?ver=1.1.2" media="all">
+<link rel="stylesheet" id="botiga-style-min-css" href="/wordpress_blog/wp-content/themes/botiga/assets/css/styles.min.css?ver=1.1.2" media="all">
+<link rel="stylesheet" id="botiga-custom-styles-css" href="/wordpress_blog/wp-content/uploads/botiga/custom-styles.css?ver=1648804469" media="all">
+<link rel="https://api.w.org/" href="/wordpress_blog/wp-json/">
+<link rel="alternate" type="application/json" href="/wordpress_blog/wp-json/wp/v2/posts/715">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/wordpress_blog/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wordpress_blog/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 5.9.3">
+<link rel="canonical" href="/wordpress_blog/javascript-compulsory-1/">
+<link rel="shortlink" href="/wordpress_blog/?p=715">
+<link rel="alternate" type="application/json+oembed" href="/wordpress_blog/wp-json/oembed/1.0/embed?url=%2Fjavascript-compulsory-1%2F">
+<link rel="alternate" type="text/xml+oembed" href="/wordpress_blog/wp-json/oembed/1.0/embed?url=%2Fjavascript-compulsory-1%2F&#038;format=xml">
+<link rel="icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png" sizes="32x32">
+<link rel="icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png" sizes="192x192">
+<link rel="apple-touch-icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png">
+<meta name="msapplication-TileImage" content="/wp-content/uploads/2022/03/logo.png">
+	
+</head>
+
+<body class="post-template-default single single-post postid-715 single-format-standard wp-custom-logo wp-embed-responsive header-header_layout_1 blog-single-layout1">
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0.49803921568627"></fefuncr><fefuncg type="table" tablevalues="0 0.49803921568627"></fefuncg><fefuncb type="table" tablevalues="0 0.49803921568627"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.54901960784314 0.98823529411765"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.71764705882353 0.25490196078431"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 0.27843137254902"></fefuncg><fefuncb type="table" tablevalues="0.5921568627451 0.27843137254902"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0"></fefuncr><fefuncg type="table" tablevalues="0 0.64705882352941"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.78039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.94901960784314"></fefuncg><fefuncb type="table" tablevalues="0.35294117647059 0.47058823529412"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.65098039215686 0.40392156862745"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.44705882352941 0.4"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.098039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.66274509803922"></fefuncg><fefuncb type="table" tablevalues="0.84705882352941 0.41960784313725"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg>
+
+<div id="page" class="site">
+
+	<a class="skip-link screen-reader-text" href="#primary">Skip to content</a>
+
+	
+			<div class="top-bar visibility-desktop-only">
+				<div class="container-fluid">
+					<div class="top-bar-inner">
+						<div class="row valign">
+
+															<div class="col header-elements delimiter-none">
+									<div class="header-item top-bar-social"><div class="social-profile">
+<a target="_blank" href="https://www.facebook.com/watergrass0402/"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></i></a><a target="_blank" href="https://github.com/GeeHsu"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></i></a>
+</div></div>								</div>
+																						<div class="col header-elements delimiter-none">
+													
+			<nav class="header-item top-bar-secondary-navigation secondary-navigation">
+				<div class="menu-topbar-container"><ul id="secondary" class="menu">
+<li id="menu-item-143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143"><a href="/wordpress_blog/setup/">網站架設</a></li>
+<li id="menu-item-144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a href="/wordpress_blog/source/">資料來源</a></li>
+<li id="menu-item-262" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-262"><a href="/wordpress_blog/resource/">學習資源</a></li>
+</ul></div>			</nav>
+											</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			
+							
+				<header id="masthead" class="site-header header_layout_1">
+					<div class="container-fluid">
+						<div class="site-header-inner">
+							<div class="row valign">
+								<div class="col-md-5">
+										
+			<nav id="site-navigation" class="main-navigation">
+				<div class="menu-navbar-container"><ul id="primary-menu" class="menu">
+<li id="menu-item-109" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="/wordpress_blog/about/">關於</a></li>
+<li id="menu-item-110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-110">
+<a href="/wordpress_blog/learn/">學習</a><span tabindex="0" class="dropdown-symbol"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512.011 512.011"><path d="M505.755 123.592c-8.341-8.341-21.824-8.341-30.165 0L256.005 343.176 36.421 123.592c-8.341-8.341-21.824-8.341-30.165 0s-8.341 21.824 0 30.165l234.667 234.667a21.275 21.275 0 0015.083 6.251 21.275 21.275 0 0015.083-6.251l234.667-234.667c8.34-8.341 8.34-21.824-.001-30.165z"></path></svg></i></span>
+<ul class="sub-menu">
+	<li id="menu-item-140" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-140"><a href="/wordpress_blog/category/hexschool/">六角學院</a></li>
+	<li id="menu-item-141" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-141"><a href="/wordpress_blog/category/ninja/">The Net Ninja</a></li>
+	<li id="menu-item-483" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-483"><a href="/wordpress_blog/category/youtube/">Youtube</a></li>
+</ul>
+</li>
+<li id="menu-item-111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="/wordpress_blog/linestore/">LINE STORE</a></li>
+</ul></div>			</nav><!-- #site-navigation -->
+											</div>
+								<div class="col-md-2">
+												<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+											</div>
+								<div class="col-md-5 header-elements">
+																	</div>							
+							</div>
+						</div>
+					</div>
+								<div class="header-search-form">
+			<form role="search" method="get" class="search-form" action="/">
+	<label class="screen-reader-text" for="search-form-1">Search&hellip;</label>
+	<input type="search" id="search-form-1" class="search-field" value="" name="s" placeholder="Search &hellip;">
+	<button type="submit" class="search-submit" value="Search"><i class="ws-svg-icon"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 100 14.25 7.125 7.125 0 000-14.25zM2.25 10.875a8.625 8.625 0 1117.25 0 8.625 8.625 0 01-17.25 0z"></path><path fill-rule="evenodd" d="M15.913 15.914a.75.75 0 011.06 0l4.557 4.556a.75.75 0 01-1.06 1.06l-4.557-4.556a.75.75 0 010-1.06z"></path></svg></i></button>
+</form>
+			</div>
+			
+									</header>
+
+										<div class="search-overlay"></div>
+			
+			<div class="botiga-offcanvas-menu">
+				<div class="mobile-header-item">
+					<div class="row">
+						<div class="col">
+										<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+									</div>
+						<div class="col align-right">
+							<a class="mobile-menu-close" href="#"><i class="ws-svg-icon icon-cancel"><svg width="16" height="16" fill="none" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.219.781L.78 2.22 9.562 11l-8.78 8.781 1.437 1.438L11 12.437l8.781 8.782 1.438-1.438L12.437 11l8.782-8.781L19.78.78 11 9.562 2.219.783z"></path></svg></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="mobile-header-item">
+						
+			<nav id="site-navigation" class="main-navigation">
+				<div class="menu-navbar-container"><ul id="primary-menu" class="menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="/wordpress_blog/about/">關於</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-110">
+<a href="/wordpress_blog/learn/">學習</a><span tabindex="0" class="dropdown-symbol"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512.011 512.011"><path d="M505.755 123.592c-8.341-8.341-21.824-8.341-30.165 0L256.005 343.176 36.421 123.592c-8.341-8.341-21.824-8.341-30.165 0s-8.341 21.824 0 30.165l234.667 234.667a21.275 21.275 0 0015.083 6.251 21.275 21.275 0 0015.083-6.251l234.667-234.667c8.34-8.341 8.34-21.824-.001-30.165z"></path></svg></i></span>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-140"><a href="/wordpress_blog/category/hexschool/">六角學院</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-141"><a href="/wordpress_blog/category/ninja/">The Net Ninja</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-483"><a href="/wordpress_blog/category/youtube/">Youtube</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="/wordpress_blog/linestore/">LINE STORE</a></li>
+</ul></div>			</nav><!-- #site-navigation -->
+							</div>
+				<div class="mobile-header-item">
+									<a target="&quot;_blank&quot;" class="button header-item" href="https://www.facebook.com/watergrass0402/">聯絡我</a>
+							</div>			
+			</div>
+			
+							<header id="masthead-mobile" class="site-header mobile-header">
+					<div class="container-fluid">
+						<div class="row valign flex-nowrap">
+							<div class="col-sm-6 col-md-4 col-grow-mobile">
+											<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+										</div>
+							<div class="col-auto col-sm-6 col-md-8 col-grow-mobile header-elements valign align-right">
+																	
+															<a href="#" class="menu-toggle">
+				<i class="ws-svg-icon"><svg width="16" height="11" viewbox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="16" height="1"></rect><rect y="5" width="16" height="1"></rect><rect y="10" width="16" height="1"></rect></svg></i>
+			</a>
+																		</div>						
+						</div>
+					</div>
+								<div class="header-search-form">
+			<form role="search" method="get" class="search-form" action="/">
+	<label class="screen-reader-text" for="search-form-2">Search&hellip;</label>
+	<input type="search" id="search-form-2" class="search-field" value="" name="s" placeholder="Search &hellip;">
+	<button type="submit" class="search-submit" value="Search"><i class="ws-svg-icon"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 100 14.25 7.125 7.125 0 000-14.25zM2.25 10.875a8.625 8.625 0 1117.25 0 8.625 8.625 0 01-17.25 0z"></path><path fill-rule="evenodd" d="M15.913 15.914a.75.75 0 011.06 0l4.557 4.556a.75.75 0 01-1.06 1.06l-4.557-4.556a.75.75 0 010-1.06z"></path></svg></i></button>
+</form>
+			</div>
+			
+									</header>
+						<div class="search-overlay"></div>
+			<div class="header-image"><img src="/wordpress_blog/wp-content/uploads/2022/03/seashore.jpg" width="1920" height="500" alt=""></div>
+<div class="container content-wrapper"><div class="row main-row">			
+	<main id="primary" class="site-main no-sidebar">
+
+		
+
+<article id="post-715" class="post-715 post type-post status-publish format-standard hentry category-hexschool">
+	
+		
+	<header class="entry-header">
+		
+		
+		<h1 class="entry-title">JavaScript 必修篇 &#8211; 前端修練全攻略 (1)</h1>			<div class="entry-meta entry-meta-below delimiter-none">
+<span class="posted-on"><a href="/wordpress_blog/javascript-compulsory-1/" rel="bookmark"><time class="entry-date published" datetime="2021-12-13T14:53:00+08:00">2021 年 12 月 13 日</time><time class="updated" datetime="2022-04-06T14:55:25+08:00">2022 年 4 月 6 日</time></a></span><span class="byline"> <span class="author vcard"><a class="url fn n" href="/wordpress_blog/author/gee-hsu/">gee.hsu</a></span></span>
+</div>			</header><!-- .entry-header -->
+
+	
+	<div class="entry-content">
+		
+<h2>介紹</h2>
+
+
+
+<h3>目前課程更新進度</h3>
+
+
+
+<p>本課程於 2021 年 7/21 正式對外上線，並會在 2021/9/30 補充下列章節：</p>
+
+
+
+<ol>
+<li>JS – 箭頭函式 (8/15(日) 錄製完成)</li>
+<li>JS – 陣列中進階 (filter、map)運用 (8/15(日) 錄製完成)</li>
+<li>JS – 彩蛋課程 – NPM 管理 (9/11(日) 錄製完成)</li>
+<li>JS – 彩蛋課程 – webpack 壓縮打包工具管理 (9/11(日) 錄製完成)</li>
+<li>JS – 最終作業 – OPEN API 蔬菜比價網 (9/18(日) 提供任務繳交)</li>
+</ol>
+
+
+
+<h4>JS 章節題目更新說明</h4>
+
+
+
+<p>JS 各小節將會提供選擇題幫助觀念吸收，將會在 8/4(三) 陸續更新於課程內，並於 9/26(日) 前更新完畢。</p>
+
+
+
+<h4>課程更新保障說明</h4>
+
+
+
+<p>將在未來三年，因應時代趨勢，每年新增 120 分鐘教材，總計增加 6 小時直播錄影或影音課程，</p>
+
+
+
+<p>並於 2024/12/31 前完成全數更新。</p>
+
+
+
+<h2>JavaScript 課前知識與環境介紹</h2>
+
+
+
+<h3>安裝 Chrome 網頁瀏覽器</h3>
+
+
+
+<h3>安裝 VSCode 程式編輯器</h3>
+
+
+
+<h3>每日任務資源</h3>
+
+
+
+<h2>變數與資料型別</h2>
+
+
+
+<h3>變數大綱簡介</h3>
+
+
+
+<p><a href="https://hackmd.io/@hexschool/r1r6p5qCw" target="_blank" rel="noreferrer noopener">共筆文件</a></p>
+
+
+
+<h4>變數(Variable)與值(Value)</h4>
+
+
+
+<p>透過程式幫我們去記錄資訊。</p>
+
+
+
+<p>以人類來講，是透過大腦吸收資訊。</p>
+
+
+
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td>變數</td>
+<td>值</td>
+</tr>
+<tr>
+<td>香蕉價格</td>
+<td>79</td>
+</tr>
+<tr>
+<td>店長姓名</td>
+<td>“Tom”</td>
+</tr>
+<tr>
+<td>店面開啟</td>
+<td>是</td>
+</tr>
+</tbody></table></figure>
+
+
+
+<p>變數記錄資訊</p>
+
+
+
+<h5>課程目標</h5>
+
+
+
+<ul>
+<li>宣告變數的方法：let、const、var</li>
+<li>基本型別(primitives types) 介紹<ol>
+<li>字串 (String) – “Tom”</li>
+<li>數字 (Number) – 79</li>
+<li>布林 (Boolean) – true, false</li>
+<li>undefined</li>
+<li>null</li>
+<li>Symbol</li>
+</ol>
+</li>
+<li>型別操作方法</li>
+</ul>
+
+
+
+<blockquote class="wp-block-quote"><p>除了基本型別外，後面還會講解物件型別，例如陣列(array)與物件(object)</p></blockquote>
+
+
+
+<h3>透過 Chrome 開發人員工具來寫 JavaScript</h3>
+
+
+
+<p>debug 除錯。</p>
+
+
+
+<ul>
+<li>右上角選單→更多工具→開發人員工具</li>
+<li>滑鼠右鍵→檢查</li>
+<li>快捷鍵：Ctrl+Shift+I 或者 F12</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+&gt;  alert('hello');
+&lt;  undefined
+&gt;</code></pre>
+
+
+
+<p>Console 面板選單→Dock side 調整面板位置。</p>
+
+
+
+<h3>如何宣告變數</h3>
+
+
+
+<p>let 變數名稱 = value;</p>
+
+
+
+<p>let a = 1;<br>宣告一個變數，變數名稱為 a，並賦予值為 1 。</p>
+
+
+
+<ul>
+<li>宣告一個變數 – let</li>
+<li>變數名稱 – a</li>
+<li>賦予值 – =</li>
+<li>值 – 1</li>
+</ul>
+
+
+
+<p>變數、賦予值通常是沒辦法做修改。<br>; 是中斷程式碼、然後進行下一個程式碼的意思。</p>
+
+
+
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td>變數</td>
+<td>值</td>
+</tr>
+<tr>
+<td>a</td>
+<td>1</td>
+</tr>
+<tr>
+<td>b</td>
+<td>3</td>
+</tr>
+</tbody></table></figure>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+&gt;  let a = 1;
+&lt;  undefined
+&gt;  a
+&lt;  1
+&gt;  let b = 3;
+&lt;  undefined
+&gt;  b
+&lt;  3
+&gt;</code></pre>
+
+
+
+<h3>設定變數，如同在 excel 設定欄位般容易！</h3>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 分頁1
+&gt;  let a = 1;
+&lt;  undefined
+&gt;  let b = 3;
+&lt;  undefined
+&gt;  a
+&lt;  1
+&gt;  b
+&lt;  3</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 分頁2
+&gt;  a
+x  Uncaught ReferenceError: a is not defined at &lt;anonymous&gt;:1:1
+&gt;  b
+x  Uncaught ReferenceError: b is not defined at &lt;anonymous&gt;:1:1</code></pre>
+
+
+
+<p>跨頁面、同頁面的記憶體存放的機制<br>觀念：新的分頁是獨立的頁面，JavaScript 程式碼不會共享到其他頁面，自己本身有自己的記憶體空間去做存放。<br><br>情況：頁面重新整理的話，記憶體空間會被清除。<br><br>自訂及管理 Google Chrome → 更多工具 → 工作管理員，<br>右鍵可以勾選 JavaScript 記憶體使用量。<br>變數是存放在瀏覽器記憶體上面。</p>
+
+
+
+<h3>number 型別 – 讓您擁有簡易計算機功能</h3>
+
+
+
+<ul><li>20%2 – 取餘數</li></ul>
+
+
+
+<pre class="wp-block-code"><code>// Google Console -1
+&gt;  30*8
+&lt;  240
+&gt;  1+5
+&lt;  6
+&gt;  5-4
+&lt;  1
+&gt;  4/2
+&lt;  2
+&gt;  20%2
+&lt;  0
+&gt;  5**2
+&lt;  25
+&gt;  5**3
+&lt;  125
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console -2
+&gt;  3+2*2
+&lt;  7
+&gt;  let a = 1;
+&lt;  undefined
+&gt;  let b = 2+2+2
+&lt;  undefined
+&gt;  b
+&lt;  6
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console -3
+&gt;  a*b
+&lt;  6
+&gt;  let c = 3;
+&lt;  undefined
+&gt;  b*c
+&lt;  18
+&gt;  let d = 2*3
+&lt;  undefined
+&gt;</code></pre>
+
+
+
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td>變數</td>
+<td>值</td>
+</tr>
+<tr>
+<td>a</td>
+<td>1</td>
+</tr>
+<tr>
+<td>b</td>
+<td>6</td>
+</tr>
+<tr>
+<td>c</td>
+<td>3</td>
+</tr>
+<tr>
+<td>d</td>
+<td>6</td>
+</tr>
+</tbody></table></figure>
+
+
+
+<h3>number 型別 – 各種數字的支援程度大解密</h3>
+
+
+
+<pre class="wp-block-code"><code>// Google Console -1
+&gt;  let a = 1;
+&lt;  undefined
+&gt;  let b = -3;
+&lt;  undefined
+&gt;  b
+&lt;  -3
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+&gt;  let c = 1.1314;
+&lt;  undefined
+&gt;  c
+&lt;  1.1314
+&gt;  typeof c
+&lt;  "number"</code></pre>
+
+
+
+<h3>number 型別 – 變數如何帶變數</h3>
+
+
+
+<ul>
+<li>學程式，任務拆解</li>
+<li>變數命名 – milkPrice，小駝峰命名</li>
+</ul>
+
+
+
+<h4>模擬情境：幫小明算數學</h4>
+
+
+
+<p>小明去了超商，想到母親要他幫忙買牛奶<br><br>1.小明來到冰櫃，看到牛奶一瓶30元<br>2.於是他買了 6 罐<br>3.小明開始心算總共多少錢</p>
+
+
+
+<pre class="wp-block-code"><code>// Google Consoel
+&gt;  let milkPrice = 30;
+&lt;  undefined
+&gt;  let milkNum = 6;
+&lt;  undefined
+&gt;  milkPrice*milkNum
+&lt;  180
+&gt;  let total = milkPrice*milkNum;
+&lt;  undefined
+&gt;  total
+&lt;  180
+&gt;</code></pre>
+
+
+
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td>變數</td>
+<td>值</td>
+</tr>
+<tr>
+<td>milkPrice</td>
+<td>30</td>
+</tr>
+<tr>
+<td>milkNum</td>
+<td>6</td>
+</tr>
+<tr>
+<td>total</td>
+<td>milkPrice*milkNum</td>
+</tr>
+</tbody></table></figure>
+
+
+
+<h3>變數與資料型別-小節作業</h3>
+
+
+
+<h5>變數與資料型別</h5>
+
+
+
+<p>練習一：小美買冰塊<br>1. 練習變數取名 (使用小駝峰)<br>2. 根據影片題目練習 『賦予變數值』以及『計算出結果』<br>3. 提供 Chrome 執行結果的截圖</p>
+
+
+
+<p>練習二：小華去速食店<br>1. 練習變數取名 (使用小駝峰)<br>2. 根據影片題目『賦予變數值』以及『計算出結果』<br>3. 提供 Chrome 執行結果的截圖</p>
+
+
+
+<h4>模擬情境一：小美買冰塊</h4>
+
+
+
+<p>小美他去超商買冰塊，<br>1.小美錢包有 200 元<br>2.他看到冰塊一包 25 元<br>3.他買了 7 包冰塊<br>4.請問他付費完，錢包還剩下多少錢</p>
+
+
+
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td>變數</td>
+<td>值</td>
+</tr>
+<tr>
+<td>walletMoney</td>
+<td>200</td>
+</tr>
+<tr>
+<td>icePrice</td>
+<td>25</td>
+</tr>
+<tr>
+<td>iceNum</td>
+<td>7</td>
+</tr>
+<tr>
+<td>leftMoney</td>
+<td>25</td>
+</tr>
+</tbody></table></figure>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+&gt;  let walletMoney = 200;
+&lt;  undefined
+&gt;  let icePrice = 25;
+&lt;  undefined
+&gt;  let iceNum = 7;
+&lt;  undefined
+&gt;  let leftMoney = walletMoney - (icePrice*iceNum);
+&lt;  undefined
+&gt;  leftMoney
+&lt;  25
+&gt;</code></pre>
+
+
+
+<h4>模擬情境二：小華去速食店，幫他計算差額</h4>
+
+
+
+<p>小華他去速食店吃中餐，他很擔心錢帶不夠，他看了下菜單，漢堡一顆50元，可樂一瓶30元，小華很口渴，所以他想要買一顆漢堡跟兩瓶可樂，於是他看了口袋的錢，總共有180元，請問小華如果買完的話，還剩多少錢？</p>
+
+
+
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td>變數</td>
+<td>值</td>
+</tr>
+<tr>
+<td>burgerPrice</td>
+<td>50</td>
+</tr>
+<tr>
+<td>cokePrice</td>
+<td>30</td>
+</tr>
+<tr>
+<td>pocketMoney</td>
+<td>180</td>
+</tr>
+<tr>
+<td>leftMoney</td>
+<td>70</td>
+</tr>
+</tbody></table></figure>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+&gt;  let burgerPrice = 50;
+&lt;  undefined
+&gt;  let cokePrice = 30;
+&lt;  undefined
+&gt;  let pocketMoney = 180;
+&lt;  undefined
+&gt;  let leftMoney = pocketMoney-(burgerPrice+cokePrice*2);
+&lt;  undefined
+&gt;  leftMoney
+&lt;  70
+&gt;</code></pre>
+
+
+
+<h3>變數與資料型別小節測驗</h3>
+
+
+
+<h2>let、const、var 介紹</h2>
+
+
+
+<h3>let 變數詳細介紹</h3>
+
+
+
+<p>let 用於宣告一個 「只作用在當前區塊的變數」，初始值可選擇性的設定。</p>
+
+
+
+<ul><li>可以重新複寫既有的值。</li></ul>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+&gt;  let cokePrice = 20;
+&lt;  undefined
+&gt;  cokePrice
+&lt;  20
+&gt;  cokePrice = 40;
+&lt;  40
+&gt;  cokePrice
+&lt;  40
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+&gt;  let a = 1;
+&lt;  undefined
+&gt;  a = 3;
+&lt;  3
+&gt;  a
+&lt;  3
+&gt;</code></pre>
+
+
+
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td>變數</td>
+<td>值</td>
+</tr>
+<tr>
+<td>cokePrice</td>
+<td>40</td>
+</tr>
+<tr>
+<td>a</td>
+<td>3</td>
+</tr>
+</tbody></table></figure>
+
+
+
+<h3>const 詳細介紹</h3>
+
+
+
+<ul>
+<li>let 賦予的值可以複寫</li>
+<li>const 賦予的值比較難複寫</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// Google Console -1
+&gt;  let a = 1;
+&lt;  undefined
+&gt;  const b = 1;
+&lt;  undefined
+&gt;  a
+&lt;  1
+&gt;  b
+&lt;  1
+&gt;  a = 2;
+&lt;  2
+&gt;  a
+&lt;  2
+&gt;  b = 3;
+x  Uncaught TypeError: Assignment to constant variable. at &lt;anonymous&gt;:1:3
+&gt;  b
+&lt;  1
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console -2
+&gt;  let cloud = 3;
+&lt;  undefined
+&gt;  cloud = 8
+&lt;  8
+&gt;  cloud
+&lt;  8
+&gt;  const sunNum = 1;
+&lt;  undefined
+&gt;  sunNum = 2;
+x  Uncaught TypeError: Assignment to constant variable. at &lt;anonymous&gt;:1:8</code></pre>
+
+
+
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td>變數</td>
+<td>值</td>
+</tr>
+<tr>
+<td>sale</td>
+<td>0.7</td>
+</tr>
+<tr>
+<td>hatPrice</td>
+<td>100</td>
+</tr>
+<tr>
+<td>hatNum</td>
+<td>3</td>
+</tr>
+<tr>
+<td>total</td>
+<td>210</td>
+</tr>
+</tbody></table></figure>
+
+
+
+<pre class="wp-block-code"><code>// Google Console -3
+&gt;  const sale = 0.7;
+&lt;  undefined
+&gt;  const hatPrice = 100;
+&lt;  undefined
+&gt;  let hatNum = 3;
+&lt;  undefined
+&gt;  let total = sale*hatPrice*hatNum;
+&lt;  undefined
+&gt;  total
+&lt;  210
+&gt;</code></pre>
+
+
+
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td>變數</td>
+<td>值</td>
+</tr>
+<tr>
+<td>sale</td>
+<td>0.7</td>
+</tr>
+<tr>
+<td>hatPrice</td>
+<td>100</td>
+</tr>
+<tr>
+<td>hatNum</td>
+<td>10</td>
+</tr>
+<tr>
+<td>total</td>
+<td>700</td>
+</tr>
+</tbody></table></figure>
+
+
+
+<pre class="wp-block-code"><code>// Google Console -4
+&gt;  hatNum = 10;
+&lt;  10
+&gt;  total = sale*hatPrice*hatNum;
+&lt;  700
+&gt;</code></pre>
+
+
+
+<ul>
+<li>變數的值比較常更動用 let，變數的值不再更動用 const</li>
+<li>const 變數的值無法去做修改，let 變數的值可以被修改</li>
+</ul>
+
+
+
+<h3>var 歷史的眼淚詳細介紹</h3>
+
+
+
+<p>var 在使用上比較容易造成一些奇怪的問題，所以現在比較少用了。</p>
+
+
+
+<p>目前主流來講，學 let、const 就好。</p>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+&gt;  var a = 1;
+&lt;  undefined
+&gt;  a = 3;
+&lt;  3
+&gt;  a
+&lt;  3
+&gt;</code></pre>
+
+
+
+<ul>
+<li><a rel="noreferrer noopener" href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types" target="_blank">語法與型別</a></li>
+<li>
+<a rel="noreferrer noopener" href="https://caniuse.com/" target="_blank">Can I use</a>&nbsp;–<ul>
+<li><a rel="noreferrer noopener" href="https://caniuse.com/?search=javascript%20var" target="_blank">javascript var</a></li>
+<li><a rel="noreferrer noopener" href="https://caniuse.com/?search=javascript%20let" target="_blank">javascript let</a></li>
+<li><a rel="noreferrer noopener" href="https://caniuse.com/?search=javascript%20const" target="_blank">javascript const</a></li>
+</ul>
+</li>
+</ul>
+
+
+
+<h3>宣告變數一次讓你知！</h3>
+
+
+
+<h4>變數宣告特性 – 變數名稱</h4>
+
+
+
+<ul>
+<li>不能使用特定名稱，開頭不能使用數字</li>
+<li>名稱大小寫是不同的變數名稱</li>
+<li>可以接受中文</li>
+<li>不能使用關鍵字、保留字 –&nbsp;<a rel="noreferrer noopener" href="https://www.w3schools.com/js/js_reserved.asp" target="_blank">javascript keywords</a>
+</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// Google Console -1
+&gt;  let a = 1;
+&lt;  undefined
+&gt;  a
+&lt;  1
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console -2
+&gt;  let const = 1;
+x  Uncaught SyntaxError: Unexpected token 'const'
+&gt;  </code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console -3
+&gt;  let b333 = 3;
+&lt;  undefined
+&gt;  let 1qqq = 4;
+x  Uncaught SyntaxError: Invalid or unexpected token
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console -4
+&gt;  let catNum = 1;
+&lt;  undefined
+&gt;  let catnum = 2;
+&lt;  undefined
+&gt;  catNum
+&lt;  1
+&gt;  catnum
+&lt;  2
+&gt; </code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console -5
+&gt;  let 貓咪數量 = 3;
+&lt;  undefined
+&gt;  貓咪數量
+&lt;  3
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console -6
+&gt;  let _a = 3;
+&lt;  undefined
+&gt;  _a
+&lt;  3
+&gt;  let $qq = 1;
+&lt;  undefined
+&gt;  $qq
+&lt;  1
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console -7
+&gt;  let if = 3;
+x  Uncaught SyntaxError: Unexpected token 'if'
+&gt;  let true = 3;
+x  Uncaught SyntaxError: Unexpected token 'true'
+&gt;  let var = 1;
+x  Uncaught SyntaxError: Unexpected token 'var'
+&gt;</code></pre>
+
+
+
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td>變數</td>
+<td>值</td>
+</tr>
+<tr>
+<td>a</td>
+<td>1</td>
+</tr>
+<tr>
+<td>b333</td>
+<td>3</td>
+</tr>
+<tr>
+<td>catNum</td>
+<td>1</td>
+</tr>
+<tr>
+<td>catnum</td>
+<td>2</td>
+</tr>
+<tr>
+<td>_a</td>
+<td>3</td>
+</tr>
+<tr>
+<td>$qq</td>
+<td>1</td>
+</tr>
+</tbody></table></figure>
+
+
+
+<h3>let、const、var 介紹小節測驗</h3>
+
+
+
+<h2>網頁與 Code 環境建立流程教學</h2>
+
+
+
+<h3>VSCode 撰寫 JS 環境建立</h3>
+
+
+
+<h4>建立網頁環境</h4>
+
+
+
+<p>建立一支 index.html、建立一支 all.js，在 index.html 載入 js。</p>
+
+
+
+<h4>操作流程</h4>
+
+
+
+<ul>
+<li>建立一個新的資料夾 project</li>
+<li>新增檔案 index.html<ul>
+<li>File → New File</li>
+<li>在空白處點擊兩下</li>
+<li>快捷鍵 ctrl + n</li>
+</ul>
+</li>
+<li>建立一個網頁環境，使用 ! + tab or ! + enter 快速建立</li>
+<li>新增檔案 all.js</li>
+<li>在網頁右鍵檢查 → Google Console<ul><li>輸入a、輸入b 查看有無資料</li></ul>
+</li>
+<li>在 index.html 載入 all.js</li>
+<li>網頁重新整理後再到 Google Console 測試有無資料</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;js-compulsory&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;js-compulsory&lt;/h1&gt;
+
+  &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+let a = 1;
+let b = 2;</code></pre>
+
+
+
+<h3>console.log 印出你想顯示的資訊！</h3>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+let a = 1;
+let b = 2;
+
+// alert(a);
+
+console.log(a);
+console.log(b);
+console.log(a,b);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+  1
+  2
+  1 2
+&gt;</code></pre>
+
+
+
+<h3>如何撰寫優雅的註解</h3>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+// a玩家的得分
+let a = 1;
+
+console.log(a);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+// 想知道自己還剩下幾根薯條
+// 紀錄薯條的根數
+let num = 0;
+// 紀錄數薯條的過程
+num+=1;
+num+=1;
+num += 2;
+num += 2;
+// 顯示最後薯條的數量
+console.log(num);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+// 想知道自己還剩下幾根薯條
+let friesNum = 0;
+// 紀錄數薯條的過程
+friesNum+=1;
+friesNum+=1;
+friesNum += 2;
+friesNum += 2;
+
+console.log(friesNum);</code></pre>
+
+
+
+<h3>Codepen – 透過它來提交您的程式碼</h3>
+
+
+
+<p><a href="https://codepen.io/" target="_blank" rel="noreferrer noopener">Codepen</a></p>
+
+
+
+<h4>操作流程</h4>
+
+
+
+<ul>
+<li>Google 搜尋 Codepen</li>
+<li>註冊 Codepen 並登入</li>
+<li>Create Pen</li>
+<li>HTML、CSS、JS 程式碼去撰寫</li>
+<li>Save 程式碼存檔</li>
+<li>產生網址，可以用來作業來提交</li>
+<li>沒辦法直接去修改別人程式碼，使用 Fork 複製到自己的 Codepen</li>
+</ul>
+
+
+
+<h4>練習</h4>
+
+
+
+<ul>
+<li>新增一個 codepen</li>
+<li>新增第二個 codepen，要確保兩個 codepen 網址不同</li>
+</ul>
+
+
+
+<h3>網頁與 Code 環境建立流程教學小節測驗</h3>
+
+
+
+<h2>數字型別與賦值運算子</h2>
+
+
+
+<h3>賦值運算子+=、-=</h3>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+let a = 50;
+a = a+100;
+
+console.log(a);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+  150
+&gt;</code></pre>
+
+
+
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td>變數</td>
+<td>值</td>
+</tr>
+<tr>
+<td>a</td>
+<td>150</td>
+</tr>
+</tbody></table></figure>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+let a = 50;
+a = a+200;
+a = a+150;
+
+console.log(a);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+  400
+&gt;</code></pre>
+
+
+
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td>變數</td>
+<td>值</td>
+</tr>
+<tr>
+<td>a</td>
+<td>400</td>
+</tr>
+</tbody></table></figure>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+let a = 50;
+a = a-10;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+  40
+&gt;</code></pre>
+
+
+
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td>變數</td>
+<td>值</td>
+</tr>
+<tr>
+<td>a</td>
+<td>40</td>
+</tr>
+</tbody></table></figure>
+
+
+
+<h4>縮寫寫法</h4>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+let a = 50;
+a = a+10;
+a+=10;
+
+console.log(a);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+  70
+&gt;</code></pre>
+
+
+
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td>變數</td>
+<td>值</td>
+</tr>
+<tr>
+<td>a</td>
+<td>70</td>
+</tr>
+</tbody></table></figure>
+
+
+
+<ul>
+<li>a = a+10; 等於 a+=10;</li>
+<li>a = a-10; 等於 a-=10;</li>
+</ul>
+
+
+
+<h3>a++、a– 一次搞懂！</h3>
+
+
+
+<p>數字的處理方式 – 桌球</p>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+let a = 0;
+let b = 0;
+
+a++;
+a++;
+a++;
+b++;
+
+console.log(a,b);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+  3 1
+&gt;</code></pre>
+
+
+
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td>變數</td>
+<td>值</td>
+</tr>
+<tr>
+<td>a</td>
+<td>3</td>
+</tr>
+<tr>
+<td>b</td>
+<td>1</td>
+</tr>
+</tbody></table></figure>
+
+
+
+<ul>
+<li>a+=1; 等於 a++;</li>
+<li>a-=1; 等於 a–;</li>
+</ul>
+
+
+
+<h3>數字型別與賦值運算子小節測驗</h3>
+
+
+
+<h2>字串型別</h2>
+
+
+
+<h3>宣告字串流程</h3>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+let a = 'hello';
+let b = "你好嗎？";
+let c = "let's go";
+
+console.log(a,b,c);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+  hello 你好嗎？ let's go</code></pre>
+
+
+
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td>變數</td>
+<td>值</td>
+</tr>
+<tr>
+<td>a</td>
+<td>‘hello’</td>
+</tr>
+<tr>
+<td>b</td>
+<td>“你好嗎？”</td>
+</tr>
+<tr>
+<td>c</td>
+<td>“let’s go”</td>
+</tr>
+</tbody></table></figure>
+
+
+
+<p>單引號、雙引號使用起來是相同的。</p>
+
+
+
+<h3>一次搞懂字串相加</h3>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 1
+let a = 'hello 你好嗎？'
+
+console.log(a);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 1
+  hello 你好嗎？
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 2
+let a = 'hello ' + '你好嗎？';
+
+console.log(a);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 2
+  hello 你好嗎？
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 3
+let friendName = 'Tom ';
+let content = '你好嗎？'
+console.log(friendName+content);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 3
+  Tom 你好嗎？
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 4
+let friendName = 'Tom';
+let content = '你好嗎？'
+console.log(friendName+' '+content);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 4
+  Tom 你好嗎？
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 5
+let friendName = 'Tom';
+let content = '你好嗎？'
+let total = friendName + ' ' + content;
+console.log(total);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 5
+  Tom 你好嗎？
+&gt;</code></pre>
+
+
+
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td>變數</td>
+<td>值</td>
+</tr>
+<tr>
+<td>friendName</td>
+<td>Tom</td>
+</tr>
+<tr>
+<td>content</td>
+<td>你好嗎？</td>
+</tr>
+<tr>
+<td>total</td>
+<td>Tom 你好嗎？</td>
+</tr>
+</tbody></table></figure>
+
+
+
+<h3>透過 typeof 瞭解當前變數型別</h3>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+let friendName = 'Tom';
+let content = '你好嗎？'
+let total = friendName + ' ' + content;
+let age = 18;
+let ageString = "18";
+
+console.log(typeof friendName);
+console.log(typeof age);
+console.log(typeof ageString);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+  string
+  number
+  string
+&gt;</code></pre>
+
+
+
+<h3>數字與字串相加</h3>
+
+
+
+<h4>自動轉型</h4>
+
+
+
+<p>JavaScript 有些情況下會貼心的幫你轉型。</p>
+
+
+
+<ul><li>數字自動轉型成字串</li></ul>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+let myName = 'Tom';
+let age = 18;
+let total = myName + age;
+
+console.log(total);
+console.log(typeof total);
+console.log("hi 我是"+myName+"，我今年18歲");</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+  Tom18
+  string
+  h1 我是Tom，我今年18歲
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+let myName = 'Tom';
+let age = 20;
+let total = myName + age;
+
+console.log(total);
+console.log(typeof total);
+console.log("hi 我是"+myName+"，我今年"+age+"歲");</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+  Tom20
+  string
+  h1 我是Tom，我今年20歲
+&gt;</code></pre>
+
+
+
+<h5>作業練習</h5>
+
+
+
+<p>我體重55公斤，我是小美。</p>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+// 我體重55公斤，我是小美
+let myName = '小美';
+let weight = 55;
+
+// 數字自動轉型成字串
+let total = myName + weight;
+console.log(typeof total);
+
+console.log('我體重'+weight+'公斤，我是'+myName+'。');</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+  string
+  我體重55公斤，我是小美。
+&gt;</code></pre>
+
+
+
+<h3>NaN 產生時機</h3>
+
+
+
+<ul>
+<li>NaN – 非數字</li>
+<li>字串轉數字 – 使用 parseInt</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 1
+let myName = 'Tom';
+let age = 20;
+
+let total = myName * age;
+console.log(total);
+console.log(typeof total);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 1
+  NaN
+  number
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 2
+let myName = 'Tom';
+let age = 20;
+
+let yourAge = "30";
+console.log(typeof yourAge);
+// 字串轉數字 - 使用 parseInt
+yourAge = parseInt("30");
+console.log(typeof yourAge);
+
+let words = parseInt("hello");
+console.log(words);
+console.log(typeof words);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 2
+  string
+  number
+  NaN
+  number
+&gt;</code></pre>
+
+
+
+<h3>字串處理實用方法</h3>
+
+
+
+<ul>
+<li>字串的處理方式、方法。</li>
+<li>JS 本身有很多語法</li>
+<li>length 屬性表示一個字符串的長度。</li>
+<li>trim() 方法會移除字串起始及結尾處的空白字元。<ul><li>example：信箱帳號的處理</li></ul>
+</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 1
+&gt;  let a = "Mark";
+&lt;  undefined
+&gt;  typeof a
+&lt;  "string"
+&gt;  a.length
+&lt;  4
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 2
+&gt;  let a = '1234567890';
+&lt;  undefined
+&gt;  a
+&lt;  '1234567890'
+&gt;  a.length
+&lt;  10
+&gt;  a = '你好嗎'
+&lt;  '你好嗎'
+&gt;  a.length
+&lt;  3
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 3
+&gt;  let yourName = " Mark ";
+&lt;  undefined
+&gt;  yourName.length
+&lt;  6
+&gt;  yourName
+&lt;  " Mark "
+&gt;  yourName.trim();
+&lt;  "Mark"
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 4
+&gt;  let myEmail = "   hexschool@gmail.com"
+&lt;  undefined
+&gt;  myEmail
+&lt;  "   hexschool@gmail.com"
+&gt;  myEmail.trim();
+&lt;  "hexschool@gmail.com"
+&gt;</code></pre>
+
+
+
+<h3>變數記憶體指向講解</h3>
+
+
+
+<p>value 資料指向。</p>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 1
+let myEmail = 'Tom';
+myEmail.length;
+
+console.log(myEmail);
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 1
+  Tom
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 2
+let myEmail = 'Tom';
+let nameLength = myEmail.length;
+
+console.log(myEmail);
+console.log(nameLength);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 2
+  Tom
+  3
+&gt;</code></pre>
+
+
+
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td>變數</td>
+<td>值</td>
+</tr>
+<tr>
+<td>myEmail</td>
+<td>Tom</td>
+</tr>
+<tr>
+<td>nameLenght</td>
+<td>3</td>
+</tr>
+</tbody></table></figure>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 3
+let myEmail = '  Tom  ';
+let nameLength = myEmail.length;
+let updateEmail = myEmail.trim();
+
+console.log(myEmail);
+console.log(updateEmail);
+console.log(nameLength);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 3
+    Tom  
+  Tom
+  7
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 4
+let myEmail = '  Tom  ';
+
+console.log(myEmail.trim());</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 4
+   Tom
+&gt;  myEmail
+&lt;  "  Tom  "
+&gt; </code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 5
+let myEmail = '  Tom  ';
+myEmail = myEmail.trim();
+console.log(myEmail);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 5
+   Tom
+&gt;  myEmail.length
+&lt;  3
+&gt;</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">樣板字面值教學</h3>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+let myName = "Tom";
+let myAge = 18;
+let content = "您好我是"+myName+"我今年"+myAge+"歲";
+
+console.log(content);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+  您好我是Tom我今年18歲
+&gt;</code></pre>
+
+
+
+<p>樣板字面值 (Template literals)</p>
+
+
+
+<ul><li>ES6 語法<ul>
+<li>反引號 ` `</li>
+<li>變數 ${變數名稱}</li>
+</ul>
+</li></ul>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+// 樣板字面值 (Template literals)
+
+let myName = "Tom";
+let myAge = 18;
+// let content = "您好我是"+myName+"我今年"+myAge+"歲";
+let content = `您好我是${myName}，我今年${myAge}歲`;
+console.log(content);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+  您好我是Tom，我今年18歲
+&gt;</code></pre>
+
+
+
+<h5>作業練習</h5>
+
+
+
+<p>我現在189公分，我是Mary。</p>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+// 題目：我現在189公分，我是Mary。
+
+let myName = "Mary";
+let myHeight = 189;
+
+// 樣板字面值 (Template literals)
+let content = `我現在${myHeight}公分，我是${myName}。`;
+
+console.log(content);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+  我現在189公分，我是Mary。
+&gt;</code></pre>
+
+
+
+<h3>字串型別小節測驗</h3>
+
+
+
+<h2>變數：布林、undefined、null</h2>
+
+
+
+<h3>布林介紹</h3>
+
+
+
+<p>變數型別 – 布林</p>
+
+
+
+<ul>
+<li>true 正確</li>
+<li>false 錯誤</li>
+</ul>
+
+
+
+<p>電腦不知道，你要告訴電腦。</p>
+
+
+
+<h4>情境題</h4>
+
+
+
+<ul>
+<li>小名吃過飯了嗎？</li>
+<li>是否為 VIP 資格</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+let a = 1;
+console.log(a);
+console.log(typeof a);
+
+let str = 'hello';
+console.log(str);
+console.log(typeof str);
+
+let isWakeUp = true;
+console.log(isWakeUp);
+console.log(typeof isWakeUp);
+
+console.log(2 &gt; 1);
+console.log(2 &gt; 3);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   1
+   number
+   hello
+   string
+   true
+   boolean
+   true
+   false
+&gt;</code></pre>
+
+
+
+<h3>undefined 介紹</h3>
+
+
+
+<p>尚未被賦予值。</p>
+
+
+
+<h4>原始型別</h4>
+
+
+
+<ul>
+<li>字串</li>
+<li>數字</li>
+<li>布林</li>
+<li>undefined</li>
+<li>null</li>
+</ul>
+
+
+
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td>變數</td>
+<td>值</td>
+</tr>
+<tr>
+<td>a</td>
+<td>1</td>
+</tr>
+<tr>
+<td>b</td>
+<td>undefined</td>
+</tr>
+</tbody></table></figure>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+let a = 1;
+console.log(a);
+
+let b;
+console.log(b);
+console.log(typeof b);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   1
+   undefined
+   undefined
+&gt;</code></pre>
+
+
+
+<h3>null 介紹</h3>
+
+
+
+<p>有被賦予值，是告知為空值。</p>
+
+
+
+<ul><li>常考面試題目</li></ul>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+let b = 1;
+let c = null;
+console.log(c);
+console.log(typeof c);
+
+let d = 1234;
+console.log(d);
+d = null;
+console.log(d);
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   null
+   object
+   1234
+   null
+&gt;</code></pre>
+
+
+
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td>變數</td>
+<td>值</td>
+</tr>
+<tr>
+<td>b</td>
+<td>1</td>
+</tr>
+<tr>
+<td>c</td>
+<td>null</td>
+</tr>
+<tr>
+<td>d</td>
+<td>null</td>
+</tr>
+</tbody></table></figure>
+
+
+
+<p>後面會講到陣列物件，是組合資料的方式，放大量的資料在變數上面。</p>
+
+
+
+<h3>字串轉數字方法</h3>
+
+
+
+<p>parseInt() 函式能將輸入的字串轉成整數。</p>
+
+
+
+<ul><li>input 文字欄位取出的數字都是字串，從表單文字取出來的數字都會是字串</li></ul>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+let a = "1";
+console.log(a+1);
+a = parseInt(a);
+console.log(a+1);
+
+a = parseInt("456777");
+console.log(a+1);
+
+a = parseInt("小明");
+console.log(a);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   11
+   2
+   456778
+   NaN
+&gt;</code></pre>
+
+
+
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td>變數</td>
+<td>值</td>
+</tr>
+<tr>
+<td>a</td>
+<td>1</td>
+</tr>
+</tbody></table></figure>
+
+
+
+<h3>數字轉字串方法</h3>
+
+
+
+<p>toString() 方法返回一個表示該對象的字符串。</p>
+
+
+
+<ul>
+<li>大樂透號碼</li>
+<li>“07”+”1234567″</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+let b = 1;
+console.log(b+1);
+b = b.toString();
+console.log(typeof b);
+console.log(b+1);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   2
+   string
+   11
+&gt;</code></pre>
+
+
+
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td>變數</td>
+<td>值</td>
+</tr>
+<tr>
+<td>b</td>
+<td>“1”</td>
+</tr>
+</tbody></table></figure>
+
+
+
+<h3>變數：布林、undefined、null 小節測驗</h3>
+
+
+
+<h3>第一週總複習</h3>
+
+
+
+<h2>比較與邏輯運算子</h2>
+
+
+
+<h3>比較與邏輯運算子簡介</h3>
+
+
+
+<ul>
+<li>之前所學 – 變數</li>
+<li>這個章節 –&nbsp;<strong>流程判斷</strong>
+</li>
+</ul>
+
+
+
+<h4>流程判斷 – 畫流程圖</h4>
+
+
+
+<ul>
+<li>步驟一：任務拆解</li>
+<li>步驟二：流程設計</li>
+</ul>
+
+
+
+<p>產生程式邏輯思維、運算思維。</p>
+
+
+
+<h3>比較運算子：&gt;、=、&lt;=</h3>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+// &gt; &lt; &gt;= &lt;= == !=
+
+console.log(3&gt;2);
+console.log(4&lt;1);
+console.log(36.3&gt;=37.5);
+console.log(37.5&gt;=37.5);
+console.log(1==1);
+console.log("hi"=="hi");
+console.log(true==true);
+console.log("hello"=="hi");
+console.log(1 != 1);
+console.log(1 != 2);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   true
+   false
+   false
+   true
+   true
+   true
+   true
+   false
+   false
+   true
+&gt;</code></pre>
+
+
+
+<p>後面講到 if else 流程判斷。</p>
+
+
+
+<p>這章節講到比較運算子、之後章節講到邏輯運算子。</p>
+
+
+
+<h3>比較運算子搭配變數方法</h3>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+// &gt; &lt; &gt;= &lt;= == !=
+// 比較運算子，利用變數來比較
+
+let a = 2;
+let b = 3;
+console.log(a&gt;b);
+console.log((a+b)&gt;1);
+
+let c = 4;
+let d = 3;
+console.log(c==d);
+
+let e = 8;
+let f = 5;
+console.log(f&gt;=e);
+console.log(f!=e);
+
+let k = 2&gt;1;
+console.log(k);
+
+let isWakeUp = false;
+console.log(isWakeUp);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   false
+   true
+   false
+   false
+   true
+   true
+   false</code></pre>
+
+
+
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td>變數</td>
+<td>值</td>
+</tr>
+<tr>
+<td>k</td>
+<td>true</td>
+</tr>
+</tbody></table></figure>
+
+
+
+<h3>=、== 差異講解</h3>
+
+
+
+<pre class="wp-block-code"><code>// = ==
+
+// 一個 = 賦予值的意思
+let a = 1;
+
+// 兩個 == 比較運算子
+
+let b = 2;
+console.log(a==b);
+console.log(a!=b);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   false
+   true
+&gt;</code></pre>
+
+
+
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td>變數</td>
+<td>值</td>
+</tr>
+<tr>
+<td>a</td>
+<td>1</td>
+</tr>
+</tbody></table></figure>
+
+
+
+<h3>==、=== 差異講解</h3>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+// === 嚴謹模式
+
+let a = 1;
+let b = "1";
+// 兩個等於，協助轉型
+console.log(a==b);
+console.log(a!=b);
+
+
+// 三個等於，會比較也會看型別
+console.log(a===b);
+console.log(a!==b);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   true
+   false
+   false
+   true
+&gt;</code></pre>
+
+
+
+<ul><li>常考面試題目</li></ul>
+
+
+
+<h3>邏輯運算子介紹</h3>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+// 邏輯運算子 &amp;&amp; ||
+// &amp;&amp; 同時滿足條件
+// 擁有VIP、消費500元，這兩個都要滿足才送贈品。
+// || 滿足其中一個條件
+// 擁有VIP、消費500元，這兩個只要一個滿足就送贈品。
+
+let a = 1;
+let b = 2;
+console.log(a==1);
+console.log(b==2);
+console.log(a == 1 &amp;&amp; b == 2);
+console.log(a == 2 &amp;&amp; b == 2);
+
+let c = 3;
+let d = 4;
+console.log(c == 4 || d == 4);
+console.log(c == 5 || d == 8);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   true
+   true
+   true
+   false
+   true
+   false
+&gt;</code></pre>
+
+
+
+<h3>邏輯運算子範例情境</h3>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+// &amp;&amp; 練習
+// 符合贈禮條件
+// 必須同時符合以下兩個條件才贈禮
+// 消費滿 500 (涵蓋)
+// 是 VIP 條件
+
+let a = 600;
+let isVip = true;
+console.log( a &gt;= 500 &amp;&amp; isVip == true);
+
+// || 練習
+// 小孩吃東西
+// 只要冰箱有米飯或蘋果任一個，小朋友就願意進食
+
+let haveRice = true;
+let haveApple = false;
+
+console.log(haveRice == true || haveApple == true);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   true
+   true
+&gt;</code></pre>
+
+
+
+<h3>邏輯運算子增加多條件作法</h3>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+// &amp;&amp; 練習 and
+// 符合贈禮條件
+// 必須同時符合以下三個條件才贈禮
+// 消費滿 500 (涵蓋)
+// 是 VIP 條件
+// 買到蛋糕，指定商品
+
+let a = 600;
+let isVip = true;
+let buyCake = false;
+
+console.log( a &gt;= 500 &amp;&amp; isVip == true &amp;&amp; buyCake == true);
+
+
+// || 練習 or
+// 小孩吃東西
+// 只要冰箱有米飯、蘋果或牛奶任一個，小朋友就願意進食
+
+let haveRice = false;
+let haveApple = false;
+let haveMilk = false;
+
+console.log(haveRice == true || haveApple == true || haveMilk == true);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   false
+   false
+&gt;</code></pre>
+
+
+
+<h3>比較與邏輯運算子小節測驗</h3>
+
+
+
+<h2>流程判斷 – if、else if、else</h2>
+
+
+
+<h3>為什麼要理解流程判斷？</h3>
+
+
+
+<p>if 在寫 JavaScript 流程判斷很常使用的一個語法。</p>
+
+
+
+<h4>情境題</h4>
+
+
+
+<p>小美在氣溫 15 度以下時一定會穿上她心愛的棉外套，<br>今天氣溫是 14 度，請試著用 if 來寫小美會如何行動？</p>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+// 小美在氣溫 15 度以下時一定會穿上她心愛的棉外套
+// 今天氣溫是 14 度，請試著用 if 來寫小美會如何行動？
+
+// console.log("小美穿著外套出門了");
+
+let todayDegrees = 14;
+
+let isWearJacket = 15 &gt;= todayDegrees;
+
+// 條件式 true 就會執行
+if(15 &gt;= todayDegrees){
+  console.log("小美穿著外套");
+  console.log("她準備出門了");
+}
+
+if(true){
+  console.log("小美穿著外套");
+  console.log("她準備出門了");
+}
+
+// 使用變數名稱，語意化可讀性比較高
+if(isWearJacket){
+  console.log("小美穿著外套");
+  console.log("她準備出門了");
+}
+
+if(15&gt;14){
+  console.log("小美穿著外套");
+  console.log("她準備出門了");
+}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   小美穿著外套
+   她準備出門了
+   小美穿著外套
+   她準備出門了
+   小美穿著外套
+   她準備出門了
+   小美穿著外套
+   她準備出門了
+&gt;</code></pre>
+
+
+
+<h3>if、else、else if 講解</h3>
+
+
+
+<h4>if…else</h4>
+
+
+
+<p>當條件成立的時候會執行 if 陳述式裡的程式，而不成立時則執行另外一個陳述式。</p>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+// 小美在氣溫 15 度以下時一定會穿上她心愛的棉外套
+// 今天氣溫是 14 度，請試著用 if 來寫小美會如何行動？
+
+// console.log("小美穿著外套出門了");
+
+let todayDegrees = 20;
+let isWearJacket = 15 &gt;= todayDegrees;
+
+// 條件式 true 就會執行
+// 使用變數名稱，語意化可讀性比較高
+if(isWearJacket){
+  console.log("小美穿著外套");
+  console.log("她準備出門了");
+} else {
+  console.log("小美因為太熱，所以不穿外套了");
+}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   小美因為太熱，所以不穿外套了
+&gt;</code></pre>
+
+
+
+<h4>情境題</h4>
+
+
+
+<p>小明想要去外面吃飯，他很想吃牛肉麵，價格為110元，<br>但他不確定錢包剩下多少錢，<br>於是他打開錢包前決定，錢不夠就回家吃飯</p>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+// 但他不確定錢包剩下多少錢
+// true 小明想要去外面吃飯，他很想吃牛肉麵，價格為110元
+// false 於是他打開錢包前決定，錢不夠就回家吃飯
+
+// let wallet = 130;
+let wallet = 90;
+// 使用console.log 測試
+// console.log(wallet &gt;= 110);
+
+if(wallet &gt;= 110){
+  console.log("小明跑去吃牛肉麵了");
+} else {
+  console.log("小明錢不夠，跑回家吃飯了！");
+}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   小明錢不夠，跑回家吃飯了！
+&gt;</code></pre>
+
+
+
+<h3>if 詳細講解 (一)</h3>
+
+
+
+<ul>
+<li>if、else 只能有一組</li>
+<li>else if 可以多組</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+// 但他不確定錢包剩下多少錢
+// true 小明想要去外面吃飯，他很想吃牛肉麵，價格為110元
+// 有 80 元，他就吃夜市牛排
+// 有 35 元，他就會跑去吃薯條
+// false 於是他打開錢包前決定，錢不夠就回家吃飯
+
+let wallet = 79;
+// console.log(wallet &gt;= 110);
+if(wallet &gt;= 110){
+  console.log("小明跑去吃牛肉麵了");
+} 
+else if(wallet &gt;= 80){
+  console.log("小明跑去吃夜市牛排了");
+}
+else if(wallet &gt;= 35){
+  console.log("小明跑去吃薯條了！");
+}
+else {
+  console.log("小明錢不夠，跑回家吃飯了！");
+}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   小明跑去吃薯條了！
+&gt;</code></pre>
+
+
+
+<h3>if 詳細講解 (二)</h3>
+
+
+
+<ul>
+<li>if</li>
+<li>else if</li>
+<li>else</li>
+<li>下雨程度</li>
+<li>字串</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+// 小華他的習慣是
+// 1. 如果沒有下雨，就不會帶雨具
+// 2. 但如果下毛毛雨，他會帶輕便雨衣
+// 3. 假使下普通的雨，他會帶折傘
+// 4. 如果颱風天豪雨，他會帶長傘
+
+// 今天的天氣是毛毛雨，那小華會帶什麼雨具？
+
+let todayWeather = "天災";
+// 使用 console.log 測試
+// console.log(todayWeather == "沒有下雨");
+console.log(todayWeather == "毛毛雨");
+
+if(todayWeather == "沒有下雨"){
+  console.log("小華不帶雨具");
+}
+else if(todayWeather == "毛毛雨"){
+  console.log("帶了輕便雨衣");
+}
+else if(todayWeather == "普通的雨"){
+  console.log("帶了折傘");
+}
+else if(todayWeather == "颱風豪雨"){
+  console.log("帶長傘");
+}
+else {
+  console.log("小華遇到異常狀態");
+}
+
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   false
+   小華遇到異常狀態
+&gt;</code></pre>
+
+
+
+<ul>
+<li>if else 只能有一個</li>
+<li>else if 可以多個</li>
+<li>if 也可以不寫 else</li>
+</ul>
+
+
+
+<h3>流程判斷 – if、else if、else 小節測驗</h3>
+
+
+
+<h2>if 流程圖規劃流程</h2>
+
+
+
+<h3>if 圖表介紹</h3>
+
+
+
+<p>學了很多語法，自己做作業、作品、比較大的時候，<br>腦袋一片空白、不知從何開始下手。</p>
+
+
+
+<p>情境、解決的事情</p>
+
+
+
+<h4>流程判斷</h4>
+
+
+
+<ul>
+<li>步驟一：任務拆解</li>
+<li>步驟二：流程設計</li>
+</ul>
+
+
+
+<h4>工具</h4>
+
+
+
+<ul>
+<li>
+<a rel="noreferrer noopener" href="https://whimsical.com/" target="_blank">Whimsical</a>&nbsp;– 線上流程圖工具</li>
+<li>Powerpoint</li>
+</ul>
+
+
+
+<p>重要：運算思維、程式邏輯培養。</p>
+
+
+
+<h3>圖表服務註冊流程</h3>
+
+
+
+<ul><li>繪製流程圖官網 –&nbsp;<a href="https://whimsical.com/" target="_blank" rel="noreferrer noopener">Whimsical</a>
+</li></ul>
+
+
+
+<h4>操作流程</h4>
+
+
+
+<ul>
+<li>滑鼠移到 PRIVATE 區塊後點擊 +</li>
+<li>選擇 Flowchart 建立新的檔案</li>
+<li>命名檔案名稱：流程圖</li>
+</ul>
+
+
+
+<h3>流程圖符號簡介</h3>
+
+
+
+<h4><a rel="noreferrer noopener" href="https://zh.wikipedia.org/zh-tw/%E6%B5%81%E7%A8%8B%E5%9B%BE" target="_blank">流程圖</a></h4>
+
+
+
+<h5>常用符號</h5>
+
+
+
+<ul>
+<li>流程符號：用來表達過程的次序，用一條線由一個符號連接去到另一個符號。如果不是標準的上至下，左至右圖就會加上箭頭。</li>
+<li>起止符號：用來表示程式或子程式的開始與完結。常一個圓角長方形表示。通常裡面會標上「開始」或「結束」或其他相關字眼，如「提交查詢」或「接受產品」。</li>
+<li>程式：以長方形來代表一系列程式去改變數值、形式、數據的位置。</li>
+<li>決策判斷：以一個菱形去顯示一個條件進程，用來按情況去決定下一步走向。通常以「是/否」或「真/假」值去決定。</li>
+</ul>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">流程圖 let code 講解</h3>
+
+
+
+<h4>情境題</h4>
+
+
+
+<p>想查詢自己的錢包有多少錢</p>
+
+
+
+<p>小華他想出門，但他不確定自己的錢包有沒有錢<br>於是他想打開錢包看看還有多少錢<br>打開後，他發現有 150元，於是他就記錄在腦袋裡，他擁有 150元</p>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+// 想查詢自己的錢包有多少錢
+
+// 小華他想出門，但他不確定自己的錢包有沒有錢
+// 於是他想打開錢包看看還有多少錢
+// 打開後，他發現有 150 元，於是他就記錄在腦袋裡，他擁有 150 元
+
+let wallet = 0;
+
+wallet += 150;
+console.log(`小華錢包有${wallet}元`);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   小華錢包有150元
+&gt;</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">流程圖 if code 講解</h3>
+
+
+
+<h4>情境題</h4>
+
+
+
+<p>想查詢自己的錢包剩下多少錢</p>
+
+
+
+<p>小華他想出門，但他不確定自己的錢包有沒有錢<br>於是他打開錢包看看還有多少錢<br>如果小華發現自己有 100 元，他就吃 80 元牛肉麵<br>如果沒有 100 元，就不吃任何東西，也不出門<br>最後小華還想計算自己最後剩下多少元</p>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+// 想查詢自己的錢包剩下多少錢
+
+// 小華他想出門，但他不確定自己的錢包有沒有錢
+
+// 於是他想打開錢包看看還有多少錢
+
+// 如果小華發現自己有 100 元，他就吃 80 元牛肉麵
+// 如果沒有 100 元，就不吃任何東西，也不出門
+
+// 最後小華還想計算自己最後剩下多少元
+
+let wallet = 0;
+wallet += 150;
+if(wallet &gt;= 100){
+  wallet -= 80;
+}
+else {
+  wallet -= 0;
+}
+
+console.log(`小華錢包還剩下${wallet}元`);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   小華錢包還剩下70元
+&gt;</code></pre>
+
+
+
+<h5>問與答</h5>
+
+
+
+<p>Q：wallet -= 0; 可以不寫嗎？</p>
+
+
+
+<p>A：要培養程式邏輯，初期在練習的時候會建議、鼓勵要寫，因為這樣你才會知道每一個動作做了什麼事。</p>
+
+
+
+<ul><li><a href="https://whimsical.com/R2BzDA8RSKYQPSwTiWaaM6" target="_blank" rel="noreferrer noopener">流程圖 – let、if code</a></li></ul>
+
+
+
+<h3>if 流程圖規劃流程小節測驗</h3>
+
+
+
+<h2 class="has-background" style="background-color:#ff6663">if 中階運用</h2>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">if 包 if 腰圍判斷流程圖設計</h3>
+
+
+
+<p>if 包 if 的練習。</p>
+
+
+
+<h4>情境題 – 腰圍指數測量</h4>
+
+
+
+<p>男生腰圍大於 90 為過胖<br>女生腰圍大於 80 為過胖</p>
+
+
+
+<ol>
+<li>判斷是男生還是女生</li>
+<li>如果是男生，還得判斷他的腰圍，90 為過胖</li>
+<li>如果是女生，還得判斷她的腰圍，80 為過胖</li>
+</ol>
+
+
+
+<ul><li><a href="https://whimsical.com/if-8b1a4D72ZFiuyE3xQ99k6v" target="_blank" rel="noreferrer noopener">流程圖 – if 包 if 腰圍指數</a></li></ul>
+
+
+
+<h3>if 包 if 腰圍判斷 Code 設計</h3>
+
+
+
+<p>注意：影片中的『超過』為不包含本數者，因此應是 &gt; 而非 &gt;=</p>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+// 測試資料、條件
+let sex = "woman";
+let cm = 88;
+
+if(sex == "male"){
+  // console.log("男生");
+  if(cm &gt; 90) {
+    console.log("男生體型過胖");
+  }
+  else {
+    console.log("男生體型正常");
+  }
+}
+else if(sex == "woman") {
+  // console.log("女生");
+  if(cm &gt; 80) {
+    console.log("女生體型過胖");
+  }
+  else {
+    console.log("女生體型正常");
+  }
+}
+else {
+  console.log("您的資料錯誤");
+}
+
+console.log("計算結束");</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   女生體型過胖
+   計算結束
+&gt;</code></pre>
+
+
+
+<h3>看圖說故事 – if 練習一</h3>
+
+
+
+<ul><li><a rel="noreferrer noopener" href="https://whimsical.com/4oYtsHWjADWsieeNrjY1Xa" target="_blank">圖表連結</a></li></ul>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 1
+
+// if 練習
+// 觀察客戶體溫
+
+let myDegree = 38;
+if(myDegree &gt;= 37.5) {
+  console.log("您不得進入");
+}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 1
+   您不得進入
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 2
+// if 練習
+// 觀察客戶體溫
+
+let myDegree = 38;
+console.log(myDegree &gt;= 37.5);
+
+if(myDegree &gt;= 37.5) {
+  console.log("您不得進入");
+}
+else {
+  console.log("您可以進入");
+}
+
+console.log("結束");</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 2
+   true
+   您不得進入
+   結束
+&gt;</code></pre>
+
+
+
+<h3>看圖說故事 – if、else if 練習二</h3>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+// if else 練習
+// 計算成績是否及格
+
+let myScore = 90;
+
+if(myScore &gt;= 60) {
+  console.log("您的成績及格");
+}
+else {
+  console.log("您的成績不及格");
+}
+
+console.log("結束");</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   您的成績及格
+   結束
+&gt;</code></pre>
+
+
+
+<h3>看圖說故事 – if、else if 練習三</h3>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+// if else if 練習
+// 計算成績評等
+// 80分以上優秀、60~79分普通、59分以下不及格
+
+let myScore = 60;
+// console.log(myScore &gt;=60 &amp;&amp; 79 &gt;= myScore);
+// 假使、如果，我的成績大於等於80
+if(myScore &gt;= 80) {
+  console.log("優秀");
+}
+else if (myScore &gt;= 60 &amp;&amp; 79 &gt;= myScore) {
+  console.log("普通");
+}
+else if (myScore &lt;= 59) {
+  console.log("不及格");
+}
+
+// myScore &gt;= 60
+// 79 &gt;= myScore</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   普通
+&gt;</code></pre>
+
+
+
+<h4>if else if、else 練習</h4>
+
+
+
+<p>計算成績評等<br>80分以上優秀、60~79分普通、59分以下不及格</p>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+// if else if、else 練習
+// 計算成績評等
+// 80分以上優秀、60~79分普通、59分以下不及格
+
+let myScore = "59";
+
+if(myScore &gt;= 80) {
+  console.log("顯示優秀");
+}
+else if(myScore &gt;= 60 &amp;&amp; myScore &lt;= 79) {
+  console.log("顯示普通");
+}
+else if(myScore &lt;= 59) {
+  console.log("顯示不及格");
+}
+else {
+  console.log("無法判定");
+}
+
+console.log("結束");</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   顯示不及格
+   結束
+&gt;</code></pre>
+
+
+
+<h3>if 中階運用小節測驗</h3>
+
+
+
+<h2>陣列教學</h2>
+
+
+
+<h3>為什麼要學陣列物件？</h3>
+
+
+
+<p>陣列、物件是資料集合。</p>
+
+
+
+<ul>
+<li>人名、身高</li>
+<li>水果區域、數量</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+// 陣列
+let colors = &#91;'red','yellow','black'];
+
+// 物件
+let home = {
+  "fatherName":"Tom",
+  "motherName":"Mary",
+  "sons":&#91;"bob","John","Tim"],
+  "isWakeUp":false,
+  "dogs":3,
+}</code></pre>
+
+
+
+<h3>筆刷工具介紹</h3>
+
+
+
+<p>Screen Brush – Mac 才有。</p>
+
+
+
+<h3>陣列寫法教學</h3>
+
+
+
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td>變數</td>
+<td>值</td>
+</tr>
+<tr>
+<td>color1</td>
+<td>‘blue’</td>
+</tr>
+<tr>
+<td>color2</td>
+<td>‘red’</td>
+</tr>
+<tr>
+<td>colors</td>
+<td>[‘blue’,’red’,’black’]</td>
+</tr>
+</tbody></table></figure>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+let color1 = 'blue';
+let color2 = 'red';
+
+// 陣列
+
+let colors = &#91;'blue', 'red','black'];</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+
+&gt; colors
+&lt; (3) &#91;"blue", "red", "black"]
+&gt;</code></pre>
+
+
+
+<h3>陣列不只能放字串，也能放數字與混合資料</h3>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+// 陣列 array
+
+let colors = &#91;'blue', 'red','black'];
+
+let ary = &#91;'blue',5,false];
+console.log(ary);
+
+let books = &#91;5,30,400,100];
+console.log(books);
+
+let data = &#91;];
+console.log(data);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+ (3) &#91;"blue", 5, false]
+ (4) &#91;5, 30, 400, 100]
+ &#91;]</code></pre>
+
+
+
+<h3>陣列讀取教學</h3>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+// 陣列 array
+
+let colors = &#91;'blue', 'red', 'black'];
+
+// 讀取陣列資料、瞭解陣列長度
+console.log(colors&#91;0]); // 第一筆
+console.log(colors&#91;1]); // 第二筆
+console.log(colors&#91;2]); // 第三筆
+</code></pre>
+
+
+
+<p>陣列第一筆資料是從 0 開始。</p>
+
+
+
+<h3>讀取陣列資料，並賦予新變數流程</h3>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+// 陣列 array
+
+let colors = &#91;'blue', 'red', 'black'];
+
+let liaoLikeColor = colors&#91;2];
+
+console.log(liaoLikeColor);</code></pre>
+
+
+
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td>變數</td>
+<td>值</td>
+</tr>
+<tr>
+<td>colors</td>
+<td>[‘blue’, ‘red’, ‘black’]</td>
+</tr>
+<tr>
+<td>liaLikeColor</td>
+<td>black</td>
+</tr>
+</tbody></table></figure>
+
+
+
+<h3>length 讀取陣列長度流程</h3>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+// 陣列 array
+
+let colors = &#91;'blue', 'red', 'black', 'pink'];
+
+let colorsNum = colors.length;
+
+console.log(colors.length);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+4
+&gt; colorsNum
+&lt; 4
+&gt;</code></pre>
+
+
+
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td>變數</td>
+<td>值</td>
+</tr>
+<tr>
+<td>colors</td>
+<td>[‘blue’,’red’,’black’,’pink’]</td>
+</tr>
+<tr>
+<td>colorsNum</td>
+<td>4</td>
+</tr>
+</tbody></table></figure>
+
+
+
+<h3>陣列預設寫入資料</h3>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+// 陣列 array
+
+let colors = &#91;];
+
+// 寫入
+colors&#91;0] = "blue";
+colors&#91;1] = "red";
+colors&#91;2] = "black";
+
+colors&#91;4] = "pink";
+console.log(colors&#91;3]);
+console.log(colors&#91;4]);
+console.log(colors.length);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+  undefined
+  pink
+  5
+&gt;</code></pre>
+
+
+
+<h3>push 寫入資料流程</h3>
+
+
+
+<p>push() 方法會添加一個或多個元素至陣列的末端，並且回傳陣列的新長度。</p>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+// 陣列 array
+
+let colors = &#91;'blue', 'red', 'black'];
+
+colors.push(3);
+colors.push("pink");
+colors.push("yellow");
+
+
+console.log(colors);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+  (6) &#91;'blue', 'red', 'black', 3, 'pink', 'yellow']
+&gt;</code></pre>
+
+
+
+<h3>unshift 寫入資料流程</h3>
+
+
+
+<p>unshift() 方法會添加一個或多個元素至陣列的開頭，並且回傳陣列的新長度。</p>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+// 陣列 array
+
+let colors = &#91;'blue', 'red', 'black'];
+
+colors.unshift('pink');
+
+console.log(colors);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+  (4) &#91;'pink', 'blue', 'red', 'black']
+&gt;</code></pre>
+
+
+
+<ul>
+<li>unshift – 例如：留言板</li>
+<li>push – 例如：列表</li>
+</ul>
+
+
+
+<h3>pop 與 shift 刪除資料</h3>
+
+
+
+<p>pop() 方法會移除並回傳陣列的最後一個元素。此方法會改變陣列的長度。</p>
+
+
+
+<p>shift() 方法會移除並回傳陣列的第一個元素。此方法會改變陣列的長度。</p>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+// 陣列 array
+
+let colors = &#91;'blue', 'red', 'black'];
+
+// 新增 push、unshift
+// 刪除 pop、shift
+
+colors.pop();
+console.log(colors);
+
+colors.shift();
+console.log(colors);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+  (2) &#91;'blue', 'red']
+  &#91;'red']
+&gt;</code></pre>
+
+
+
+<h3>splice 刪除指定資料</h3>
+
+
+
+<p>splice() 方法可以藉由刪除既有元素並/或加入新元素來改變一個陣列的內容。</p>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+// 陣列 array
+
+let colors = &#91;'blue', 'red', 'black'];
+
+// 第一個數字，起始位置
+// 第二個數字，要往後刪除幾筆資料
+
+colors.splice(1,1);
+
+console.log(colors);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+  (2) &#91;'blue', 'black']
+&gt;</code></pre>
+
+
+
+<ul><li>splice – 常用在介面互動上面。</li></ul>
+
+
+
+<h3>其他陣列總結</h3>
+
+
+
+<ul>
+<li>function 函式</li>
+<li><a href="https://www.hexschool.com/2017/09/01/2017-09-01-javascript-for/" target="_blank" rel="noreferrer noopener">其他陣列處理方法</a></li>
+</ul>
+
+
+
+<h3>陣列教學小節測驗</h3>
+
+
+
+<h2>物件教學</h2>
+
+
+
+<h3>為什麼要有物件</h3>
+
+
+
+<p>寫程式常用物件去撰寫。</p>
+
+
+
+<ul><li>舉例 – 房子，游泳池、兩樓、頂樓設施、煙囪、陽台</li></ul>
+
+
+
+<p>陣列有幾筆資料在裡面，物件描述一個東西裡面有哪些資訊。</p>
+
+
+
+<h3>物件格式教學</h3>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+// 陣列
+let colors = &#91;"blue","red","black"];
+
+// 物件
+// 描述家庭
+let motherName = "Mary";
+let fatherName = "Tom";
+let dogs = 3;
+
+let home = {
+  // 屬性: 值
+  motherName: "Mary",
+  fatherName: "Tom",
+  dogs: 3,
+  isWakeUp: false
+};
+
+console.log(home);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+  {motherName: 'Mary', fatherName: 'Tom', dogs: 3, isWakeUp: false}
+&gt;</code></pre>
+
+
+
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td>變數</td>
+<td>值</td>
+</tr>
+<tr>
+<td>home</td>
+<td>{<br>&nbsp; motherName: “Mary”,<br>&nbsp; fatherName: “Tom”,<br>&nbsp; dogs: 3,<br>&nbsp; isWakeUp: false<br>}</td>
+</tr>
+</tbody></table></figure>
+
+
+
+<h3>如何讀取物件的值</h3>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+let home = {
+  motherName: "Mary",
+  fatherName: "Tom",
+  dogs: 3,
+  isWakeUp: false
+};
+
+console.log(home);
+
+console.log(home.motherName);
+console.log(home.dogs);
+
+let tomDogs = home.dogs;
+console.log(tomDogs);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+
+  {motherName: 'Mary', fatherName: 'Tom', dogs: 3, isWakeUp: false}
+  Mary
+  3
+  3
+&gt;</code></pre>
+
+
+
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td>變數</td>
+<td>值</td>
+</tr>
+<tr>
+<td>home</td>
+<td>{<br>&nbsp; motherName: “Mary”,<br>&nbsp; fatherName: “Tom”,<br>&nbsp; dogs: 3,<br>&nbsp; isWakeUp: false<br>}</td>
+</tr>
+<tr>
+<td>tomDogs</td>
+<td>3</td>
+</tr>
+</tbody></table></figure>
+
+
+
+<h3>新增物件屬性</h3>
+
+
+
+<p>Q：資料會一起直接組好、還是自己需要去組資料</p>
+
+
+
+<ul><li>兩者都有<ul>
+<li>從別人伺服器抓取完整資料</li>
+<li>網頁上做新增功能</li>
+</ul>
+</li></ul>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+let home = {};
+
+home.motherName =  'Mary';
+home.fatherName = 'Tom';
+home.dogs = 3;
+home.isWakeUp = false;
+
+console.log(home);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+  {motherName: 'Mary', fatherName: 'Tom', dogs: 3, isWakeUp: false}
+&gt;</code></pre>
+
+
+
+<h3>修改物件值</h3>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+let home = {
+  motherName: "Mary",
+  fatherName: "Tom",
+  dogs: 3,
+  isWakeUp: false
+};
+
+home.motherName = "Jane";
+home.dogs += 1;  
+home.dogs= home.dogs + 1;
+console.log(home);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+  {motherName: 'Jane', fatherName: 'Tom', dogs: 5, isWakeUp: false}
+&gt;</code></pre>
+
+
+
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td>變數</td>
+<td>值</td>
+</tr>
+<tr>
+<td>home</td>
+<td>{<br>&nbsp; motherName: “Jane”,<br>&nbsp; fatherName: “Tom”,<br>&nbsp; dogs: 5,<br>&nbsp; isWakeUp: false<br>}</td>
+</tr>
+</tbody></table></figure>
+
+
+
+<h3>刪除物件資料</h3>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+let home = {
+  motherName: "Mary",
+  fatherName: "Tom",
+  dogs: 3,
+  isWakeUp: false
+};
+
+delete home.dogs;
+delete home.motherName;
+console.log(home);
+console.log(home.motherName);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+  {fatherName: 'Tom', isWakeUp: false}
+  undefined
+&gt;</code></pre>
+
+
+
+<h3>另一種讀取物件屬性方法</h3>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+let home = {
+  motherName: "Mary",
+  fatherName: "Tom",
+  dogs: 3,
+  isWakeUp: false
+};
+
+console.log(home&#91;'motherName']);
+
+let herName = 'motherName';
+console.log(home&#91;herName]);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+  Mary
+  Mary
+&gt;</code></pre>
+
+
+
+<h3>物件讀取資料判斷時間</h3>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+let home = {
+  motherName: "Mary",
+  fatherName: "Tom",
+  dogs: 3,
+  isWakeUp: false,
+  "001": "hello"
+};
+
+// JSON 格式資料
+
+console.log(home&#91;'motherName']);
+
+// 使用.會產生錯誤
+// console.log(home.001);
+console.log(home&#91;'001']);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+  Mary
+  hello
+&gt;</code></pre>
+
+
+
+<h3>物件教學小節測驗</h3>
+
+
+
+<h3>第二週總複習</h3>
+
+
+
+<h2>陣列與物件整合運用</h2>
+
+
+
+<h3>陣列與物件混合運用</h3>
+
+
+
+<p>陣列跟物件的集合情境。</p>
+
+
+
+<h4>情境文字</h4>
+
+
+
+<p>有兩個水果攤<br>第一個水果攤，老闆叫Tom，香蕉有6個，蘋果有5個，還沒關店<br>第二個水果攤，老闆叫John，香蕉有9個，蘋果有8個，還沒關店</p>
+
+
+
+<p>陣列來說，他都是放幾筆幾筆(資料) [0] [1]</p>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+let market = &#91;
+  {
+    bossName: "Tom",
+    bananaNum: 6,
+    appleNum: 5,
+    isClose: false
+  },
+  {
+    bossName: "John",
+    bananaNum: 9,
+    appleNum: 8,
+    isClose: false
+  }
+]
+
+console.log(market);
+console.log(market.length);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+  (2) &#91;{},{}]
+  2
+&gt;</code></pre>
+
+
+
+<h3>一次搞懂陣列與物件混合讀取教學</h3>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+let market = &#91;
+  {
+    bossName: "Tom",
+    bananaNum: 6,
+    appleNum: 5,
+    isClose: false
+  },
+  {
+    bossName: "John",
+    bananaNum: 9,
+    appleNum: 8,
+    isClose: false
+  }
+]
+
+// 陣列
+console.log(market);
+// 物件
+console.log(market&#91;0]);
+
+// 物件裡面的屬性的值
+console.log(market&#91;0].bossName);
+console.log(market&#91;0]&#91;'bossName']);
+
+// 測驗1
+console.log(market&#91;1].appleNum);
+// 測驗2
+console.log(market&#91;0].isClose);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+  (2) &#91;{},{}]
+  {bossName: 'Tom', bananaNum: 6, appleNum: 5, isClose: false}
+  Tom
+  Tom
+  8
+  false
+&gt;</code></pre>
+
+
+
+<h3>JSON 格式介紹</h3>
+
+
+
+<p>JavaScript Object Notation (JSON) 為將結構化資料 (structured data) 呈現為 JavaScript 物件的標準格式，常用於網站上的資料呈現、傳輸 (例如將資料從伺服器送至用戶端，以利顯示網頁)。</p>
+
+
+
+<h3>安裝 JSON 檢視 Chrome 套件</h3>
+
+
+
+<ul>
+<li><a href="https://data.kcg.gov.tw/" target="_blank" rel="noreferrer noopener">高雄 OPEN DATA 開放資料官網網站</a></li>
+<li><a href="https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc?hl=zh-TW" target="_blank" rel="noreferrer noopener">JSONView 安裝網站</a></li>
+</ul>
+
+
+
+<p>資料集→格式 JSON</p>
+
+
+
+<h3>下載 JSON 格式資料</h3>
+
+
+
+<ul><li>Download –&nbsp;<a href="https://cdn.fs.teachablecdn.com/OPXa0mREqO3hpSLfVnQw" target="_blank" rel="noreferrer noopener">電動車資訊.json</a>
+</li></ul>
+
+
+
+<p>備註：原網站已無提供 JSON 格式，請直接下載上方附件的 JSON 檔案進行練習。</p>
+
+
+
+<p>檢視網頁原始碼，把資料複製起來。</p>
+
+
+
+<ul>
+<li>ctrl + a</li>
+<li>ctrl + c</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+let data = &#91;{},{},{},{},{}];
+
+console.log(data);
+console.log(data.length);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+  (136)&nbsp;&#91;{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…},&nbsp;…]
+  136
+&gt;</code></pre>
+
+
+
+<p>可以在 VSCode 操作，也可以在 Google Console 操作。</p>
+
+
+
+<h3>JSON 讀取方式教學 – 以充電站為例</h3>
+
+
+
+<ul><li>Download –&nbsp;<a href="https://cdn.fs.teachablecdn.com/1OkbKqQrGKBVTUq4tPvg" target="_blank" rel="noreferrer noopener">電動車資訊.json</a>
+</li></ul>
+
+
+
+<p>充電站線上網址：<a rel="noreferrer noopener" href="https://data.kcg.gov.tw/dataset/a98754a3-3446-4c9a-abfc-58dc49f2158c/resource/48d4dfc4-a4b2-44a5-bdec-70f9558cd25d/download/yopendata1070622opendatajson-1070622.json" target="_blank">JSON 線上網址</a>&nbsp;(因網站規範限制，請同學直接使用上方附件 json 下載練習)</p>
+
+
+
+<ul>
+<li>全部資料 – 陣列</li>
+<li>每筆資料 – 物件</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+let data = &#91;{},{},{},{},{}];
+
+console.log(data&#91;0].Charge);
+console.log(data&#91;0].Address);
+console.log(data&#91;2].Location);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+  免費
+  高雄市新興區中正三路34號1樓(室內停車場)
+  為鑫機車行
+&gt;</code></pre>
+
+
+
+<h3>物件裡面還能包物件</h3>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+let home = {
+  motherStatus: {
+    age: 30,
+    name: "Mary"
+  },
+  fatherStatus: {
+    age: 38,
+    name: "Mark"
+  },
+  dogs: 3
+}
+
+console.log(home.motherStatus.name);
+console.log(home.fatherStatus.name);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+  Mary
+  Mark
+&gt;</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">物件包物件讀取流程 – 以活動公告 open data 為例</h3>
+
+
+
+<ul>
+<li>Download –&nbsp;<a rel="noreferrer noopener" href="https://cdn.fs.teachablecdn.com/OCqdvvQ6CYXsJNFlPIgT" target="_blank">公告資料.json</a>
+</li>
+<li>公告 OPEN DATA 網址：<a href="https://www.ktec.gov.tw/ktec_api.php?type=json" target="_blank" rel="noreferrer noopener">JSON 網址</a>
+</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+let data = { paging:{}, entries: &#91;{},{},{},{},{}] };
+
+// 全部資料
+console.log(data);
+
+// 抓出total的值
+console.log(data.paging.total);
+
+// 抓出第二筆公告 title的值
+console.log(data.entries&#91;1].title);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+  {paging: {}, entries: Array(5)}
+  5
+  &#91;三民] 110年11月22日(一)扭轉薪時代，就業咖實在
+&gt;  </code></pre>
+
+
+
+<h3>如何篩選出自己想要的資料格式，並賦予到特定變數上</h3>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+let data = { paging:{}, entries: &#91;{},{},{},{},{}] };
+
+// 全部資料
+console.log(data);
+
+// 篩選想要的資料，並賦予到特定變數上
+let ary = data.entries;
+
+console.log(ary);
+console.log(ary.length);
+console.log(ary&#91;0].title);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+  {paging: {}, entries: Array(5)}
+  (5) &#91;{},{},{},{},{}]
+  5
+  &#91;左營] 110年11月26日(五)跨越展望、光明無限
+&gt;</code></pre>
+
+
+
+<h3>小魔王題目：複雜 JSON 格式，你/妳撈得到嗎？</h3>
+
+
+
+<ul>
+<li>Download –&nbsp;<a rel="noreferrer noopener" href="https://cdn.fs.teachablecdn.com/2oFNlRbaSb6M9oeiDM0z" target="_blank">高雄旅遊網.json</a>
+</li>
+<li>高雄旅遊網線上網址：<a href="https://api.kcg.gov.tw/api/service/get/9c8e1450-e833-499c-8320-29b36b7ace5c" target="_blank" rel="noreferrer noopener">線上 JSON 網址</a>
+</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+let data = {
+  "contentType": "application/json; charset=utf-8",
+  "isImage": false,
+  "data": {
+    "XML_Head": {
+      "Listname": "1",
+      "Language": "C",
+      "Orgname": "397000000A",
+      "Updatetime": "2021/01/20 08:40:00",
+      "Infos": {
+        "Info": &#91;
+          {
+            "Id": "C1_397000000A_000230",
+            "Status": "2",
+            "Name": "田寮月世界",
+            "Zone": "",
+            "Toldescribe": "田寮「月世界」特殊景觀在地理學上稱為「惡地」，是由於地殼的「回春作用」，經年累月的經由雨水與河水強烈侵蝕，將泥沙堆積在泥岩上，地層變動後，泥沙更與泥岩混合再經由風化、沉積作用，形成今日地貌，僅適於耐旱、耐鹽的淺根植物（如：箭竹）、濱海植物生長。從田寮到旗山台28線沿路除了月世界景觀，還有大小不等的二十多個泥火山，常呈現間歇性的噴發現象，噴發的規模則視地底天然氣與泥漿的累積壓力而定，噴發後的泥流堆積地區。",
+            "Description": "田寮「月世界」特殊景觀在地理學稱為「惡地」，經年累月由雨、河水侵蝕，將泥沙堆積在泥岩上，泥沙與泥岩混合經由風化形成。",
+            "Tel": "886-7-6367036",
+            "Add": "高雄市823田寮區崇德里月球路36號",
+            "Zipcode": "823",
+            "Travellinginfo": "無障礙交通：高鐵台南站 → 沙旗美月世界快線公車 → 月世界 → 旗山高鐵左營站 → 旗美快線公車 → 旗山 → 轉搭沙旗美月世界快線公車 → 月世界",
+            "Opentime": "遊客中心：09:00–17:00月世界：全天候開放",
+            "Gov": "397000000A",
+            "Px": "120.38898",
+            "Py": "22.88600"
+          },
+          {
+            "Id": "C1_397000000A_000234",
+            "Status": "2",
+            "Name": "西子灣風景區",
+            "Zone": "",
+            "Toldescribe": "西子灣以夕陽美景及天然礁石聞名，區內包括了西子灣海水浴場、海濱公園、打狗英國領事館....等景點；可觀海景、遠眺高雄港；海水浴場極富熱帶氣息、南國風情，每當夜幕低垂，晚霞的照耀，漁船燈火閃爍其間，呈現海天一色美景。",
+            "Description": "西子灣以夕陽美景及天然礁石聞名，區內包括了西子灣海水浴場、海濱公園、打狗英國領事館....等景點。",
+            "Tel": "886-7-5250005",
+            "Add": "高雄市804鼓山區蓮海路51號",
+            "Zipcode": "804",
+            "Travellinginfo": "搭高鐵至左營站下或搭臺鐵至高雄站下 → 轉搭高雄捷運至西子灣站下 → 轉搭高雄市公車(99路、橘1A路)至西子灣站下。",
+            "Opentime": "西子灣海水浴場：10:00–16:00",
+            "Gov": "397000000A",
+            "Px": "120.26391",
+            "Py": "22.62442"
+          }
+        ]
+      }
+    }
+  },
+  "id": "b69ffff9-23a5-44a6-a398-089b11a5f84c",
+  "success": true
+};
+
+// 全部資料
+console.log(data);
+
+// 抓取 isImage的值
+console.log(data.isImage);
+
+// 抓取第一筆Listname的值
+console.log(data.data.XML_Head.Listname);
+
+// 抓取裡面Info陣列資料
+console.log(data.data.XML_Head.Infos.Info);
+
+// 抓取裡面第一筆Name的值
+console.log(data.data.XML_Head.Infos.Info&#91;0].Name);
+
+// 篩選想要的資料，並賦予到特定變數上
+let ary = data.data.XML_Head.Infos.Info;
+console.log(ary);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+  {contentType: 'application/json; charset=utf-8', isImage: false, data: {…}, id: 'b69ffff9-23a5-44a6-a398-089b11a5f84c', success: true}
+  false
+  1
+  (2) &#91;{},{}]
+  田寮月世界
+  (2) &#91;{},{}]
+&gt;</code></pre>
+
+
+
+<h4>tag簡單重點</h4>
+
+
+
+<ul><li>看到物件就用 . 的方式前往屬性</li></ul>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">物件搭配 if 練習</h3>
+
+
+
+<ul><li><a href="https://whimsical.com/4oYtsHWjADWsieeNrjY1Xa" target="_blank" rel="noreferrer noopener">流程判斷圖線上版本</a></li></ul>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+let tomStatus = {
+  name: "Tom",
+  age: 30,
+  status: ""
+}
+
+tomStatus.degree = 36.5;
+
+if(tomStatus.degree&gt;=37.5) {
+  console.log("您不得進入");
+  tomStatus.status = "您不得進入"
+} else {
+  console.log("您可以進入")
+  tomStatus.status = "您可以進入"
+}
+
+console.log(tomStatus);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+  您可以進入
+  {name: 'Tom', age: 30, status: '您可以進入', degree: 36.5}
+&gt;</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">陣列物件搭配 if 流程判斷練習</h3>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+let peopleStatus = &#91;
+  {
+    name: "Tom",
+    age: "30",
+    status: ""
+  }
+];
+
+peopleStatus&#91;0].degree = 39.5;
+
+console.log(peopleStatus&#91;0]);
+
+if(peopleStatus&#91;0].degree &gt;=37.5){
+  peopleStatus&#91;0].status = "您不得進入";
+  console.log("您不得進入");
+}
+else {
+  peopleStatus&#91;0].status = "您可以進入";
+  console.log("您可以進入");
+}
+
+console.log(peopleStatus&#91;0]);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   {name: 'Tom', age: '30', status: '', degree: 39.5}
+   您不得進入
+   {name: 'Tom', age: '30', status: '您不得進入', degree: 39.5}
+&gt;</code></pre>
+
+
+
+<h3>陣列與物件整合運用小節測驗</h3>
+
+
+
+<h2>函式 function</h2>
+
+
+
+<h3>為什麼需要學函式？</h3>
+
+
+
+<h4>function 函式</h4>
+
+
+
+<p>設定指令驅動程式。</p>
+
+
+
+<ul>
+<li>掃地</li>
+<li>查詢資料</li>
+<li>計算機</li>
+<li>煮晚餐</li>
+<li>倒垃圾</li>
+</ul>
+
+
+
+<h3>函式寫法教學</h3>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+// 變數複習
+let a = 1;
+console.log(a);
+
+// 機器人-早起活動-起床刷牙洗臉出門
+
+// 宣告函式  函式名稱
+function morningAction() {
+  console.log('起床');
+  console.log('刷牙');
+  console.log('洗臉');
+  console.log('出門');
+}
+
+// 執行函式
+morningAction();
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   1
+   起床
+   刷牙
+   洗臉
+   出門
+&gt;</code></pre>
+
+
+
+<h3>註冊多組函式流程</h3>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+// 變數複習
+let a = 1;
+console.log(a);
+
+// 機器人-早起活動-起床刷牙洗臉出門
+// 宣告函式 函式名稱
+function morningAction() {
+  console.log('起床');
+  console.log('刷牙');
+  console.log('洗臉');
+  console.log('出門');
+}
+
+// 機器人-晚上活動
+function nightAction() {
+  console.log('回家');
+  console.log('刷牙');
+  console.log('洗臉');
+  console.log('睡覺');
+}
+
+// 執行函式
+morningAction();
+nightAction();</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   1
+   起床
+   刷牙
+   洗臉
+   出門
+   回家
+   刷牙
+   洗臉
+   睡覺
+&gt;</code></pre>
+
+
+
+<h3>函式裡面仍可以執行函式</h3>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+// 變數複習
+let a = 1;
+console.log(a);
+
+// 機器人-早起活動-起床刷牙洗臉出門
+// 宣告函式 函式名稱 (參數)
+function morningAction() {
+  console.log('起床');
+  cleanHead();
+  console.log('出門');
+}
+
+// 機器人-晚上活動
+function nightAction() {
+  console.log('回家');
+  cleanHead();
+  console.log('睡覺');
+}
+
+// 機器人-清理頭部
+function cleanHead() {
+  console.log('刷牙');
+  console.log('洗臉');
+}
+
+// 執行函式
+morningAction();
+nightAction();</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   1
+   起床
+   刷牙
+   洗臉
+   出門
+   回家
+   刷牙
+   洗臉
+   睡覺
+&gt;</code></pre>
+
+
+
+<h3>函式參數介紹</h3>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 1
+
+function a() {
+  console.log('hello');
+}
+
+a();</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 1
+   hello
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 2
+
+function a(num) {
+  console.log(num);
+}
+
+a(1);
+
+a(3);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 2
+   1
+   3
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 3
+
+function a(num1, num2) {
+  console.log(num1);
+  console.log(num2);
+}
+
+a(1,2);
+
+a(3,4);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 3
+   1
+   2
+   3
+   4
+&gt;</code></pre>
+
+
+
+<h3>參數寫法-參數只存活在大括號</h3>
+
+
+
+<p>參數跟變數不一樣。</p>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+function a(num1, num2) {
+  console.log(num1);
+  console.log(num2);
+}
+
+a(1,2);
+console.log(num1);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   1
+   2
+x  Uncaught ReferenceError: num1 is not defined at ...
+&gt;</code></pre>
+
+
+
+<h3>參數寫法-兩個數字相加工具</h3>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 1
+
+// 透過函式
+// 函式 兩個數字相加工具
+
+function add(num1, num2) {
+  console.log(`您加總的數字為${num1+num2}`);
+}
+
+add(2,3);
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 1
+   您加總的數字為5
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 2
+
+// 透過函式
+// 函式 兩個數字相加工具
+function add(num1,num2) {
+  console.log(`您加總的數字為${num1+num2}`);
+}
+
+add(2,3);
+
+// 函式 兩個數字相減工具
+function minus(num1,num2) {
+  console.log(`您錢包所剩下的金額為${num1-num2}元`);
+}
+
+minus(100,60);
+
+// 函式 兩個數字相乘工具
+function multiply(num1,num2) {
+  console.log(`您使用3C產品的總時間為${num1*num2}小時`);
+}
+
+multiply(30,8);
+
+// 函式 兩個數字除法工具
+function divided(num1,num2) {
+  console.log(`您每天飲食開銷為${num1/num2}元`);
+}
+
+divided(6000,30);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   您加總的數字為5
+   您錢包所剩下的金額為40元
+   您使用3C產品的總時間為240小時
+   您每天飲食開銷為200元
+&gt;</code></pre>
+
+
+
+<h3>輸入跟輸出的重要性</h3>
+
+
+
+<p>函式的觀念，懂輸入跟輸出比較好理解什麼時候該使用參數。</p>
+
+
+
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td></td>
+<td>input 輸入</td>
+<td></td>
+<td>處理</td>
+<td></td>
+<td>output 輸出</td>
+</tr>
+<tr>
+<td>電腦運作</td>
+<td>鍵盤輸入 a文字</td>
+<td>→</td>
+<td>電腦處理</td>
+<td>→</td>
+<td>螢幕顯示 a 文字</td>
+</tr>
+<tr>
+<td>冷氣</td>
+<td>遙控器輸入電源鍵</td>
+<td>→</td>
+<td>冷氣機獲得指令並開始處理此行為</td>
+<td>→</td>
+<td>開啟冷氣機</td>
+</tr>
+<tr>
+<td>學習</td>
+<td>輸入大量學習資源</td>
+<td>→</td>
+<td>吸收消化</td>
+<td>→</td>
+<td>輸出：寫作業、筆記</td>
+</tr>
+<tr>
+<td>相加產生器</td>
+<td>輸入兩個數字 1 與 3</td>
+<td>→</td>
+<td>你的程式碼</td>
+<td>→</td>
+<td>輸出 4</td>
+</tr>
+<tr>
+<td>偶數查詢</td>
+<td>輸入 4</td>
+<td>→</td>
+<td>你的程式碼</td>
+<td>→</td>
+<td>輸出 “是偶數”</td>
+</tr>
+<tr>
+<td>小數點留後兩位</td>
+<td>輸入 1.5678</td>
+<td>→</td>
+<td>你的程式碼</td>
+<td>→</td>
+<td>輸出 1.56</td>
+</tr>
+<tr>
+<td>BMI 計算</td>
+<td>輸入<br>身高 178<br>體重 70</td>
+<td>→</td>
+<td>你的程式碼</td>
+<td>→</td>
+<td>輸出 22</td>
+</tr>
+</tbody></table></figure>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">return 寫法教學</h3>
+
+
+
+<p>return：回傳，把值回傳回去的意思。</p>
+
+
+
+<p>把函式裡面的值，往外層、指定的地方回傳，並透過變數把值賦予上去。</p>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 1
+
+// 國文分數+數學分數的加總計算機
+
+function calcTotalScore(chineseScore,mathScore) {
+  console.log(chineseScore+mathScore);
+}
+
+
+let markTotalScore = calcTotalScore(40, 60);
+console.log(markTotalScore);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 1
+   100
+   undefined
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 2
+
+// 國文分數+數學分數的加總計算機
+
+function calcTotalScore(chineseScore,mathScore) {
+  // console.log(chineseScore+mathScore);
+
+  return chineseScore + mathScore;
+}
+
+
+let markTotalScore = calcTotalScore(40, 60);
+console.log(markTotalScore);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 2
+   100
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 3
+
+// 國文分數+數學分數的加總計算機
+
+function calcTotalScore(chineseScore,mathScore) {
+  // console.log(chineseScore+mathScore);
+
+  return chineseScore + mathScore;
+}
+
+
+let markTotalScore = calcTotalScore(40, 60);
+console.log(markTotalScore);
+let tomTotalScore = calcTotalScore(100, 100);
+console.log(tomTotalScore);
+
+console.log(`Tom 的總分為${tomTotalScore}`);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 3
+   100
+   200
+   Tom 的總分為200
+&gt;</code></pre>
+
+
+
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td>變數名稱</td>
+<td>值</td>
+</tr>
+<tr>
+<td>markTotalScore</td>
+<td>100</td>
+</tr>
+</tbody></table></figure>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">return 宣告 let</h3>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 1
+
+// 國文分數+數學分數的加總計算機
+
+function calcTotalScore(chineseScore,mathScore) {
+  // console.log(chineseScore+mathScore);
+  let totalScore = chineseScore + mathScore;
+  return totalScore;
+}
+
+let markTotalScore = calcTotalScore(40, 60);
+console.log(markTotalScore);
+let tomTotalScore = calcTotalScore(100, 100);
+console.log(tomTotalScore);
+
+console.log(`Tom 的總分為${tomTotalScore}`);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 1
+   100
+   200
+   Tom 的總分為200
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 2
+
+// 國文分數+數學分數的加總計算機
+
+function calcTotalScore(chineseScore,mathScore) {
+  // console.log(chineseScore+mathScore);
+  let totalScore = chineseScore + mathScore;
+  return totalScore;
+}
+
+console.log(totalScore);
+
+let markTotalScore = calcTotalScore(40, 60);
+console.log(markTotalScore);
+let tomTotalScore = calcTotalScore(100, 100);
+console.log(tomTotalScore);
+
+console.log(`Tom 的總分為${tomTotalScore}`);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 2
+x  Uncaught ReferenceError: totalScore is not defined at ...
+&gt;</code></pre>
+
+
+
+<h3>return 可以有多個</h3>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+// 國文分數+數學分數的加總計算機
+// return 可以中斷函式執行，後面的程式就不跑了
+
+function calcTotalScore(chineseScore,mathScore) {
+  // console.log(chineseScore+mathScore);
+  let totalScore = chineseScore + mathScore;
+  return totalScore;
+
+  console.log('hello');
+  return 3;
+}
+
+let markTotalScore = calcTotalScore(40, 60);
+console.log(markTotalScore);
+let tomTotalScore = calcTotalScore(100, 100);
+console.log(tomTotalScore);
+
+console.log(`Tom 的總分為${tomTotalScore}`);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   100
+   200
+   Tom 的總分為200
+&gt;</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">return 可以有多個-範例Code</h3>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+// return 檢查及格的 function
+// 檢查學生成績是否及格的函式
+
+function checkScore(score) {
+  if (score &gt;= 60) {
+    return '及格';
+  }
+  else {
+    return '不及格';
+  }
+}
+
+let tomScore = checkScore(60);
+console.log(tomScore);
+
+let markScore = checkScore(30);
+console.log(markScore);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   及格
+   不及格
+&gt;</code></pre>
+
+
+
+<h3>判斷是否為偶數 – 畫流程圖</h3>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+// 取餘數
+&gt;  4%2
+&lt;  0
+&gt;  4%3
+&lt;  1
+&gt;  10%2
+&lt;  0
+&gt;  10%7
+&lt;  3
+&gt;</code></pre>
+
+
+
+<figure class="wp-block-image size-full"><img width="791" height="312" src="/wordpress_blog/wp-content/uploads/2022/04/判斷是否為偶數想法.jpg" alt="" class="wp-image-717"><figcaption>判斷是否為偶數想法</figcaption></figure>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" width="627" height="1108" src="/wordpress_blog/wp-content/uploads/2022/04/判斷是否為偶數流程圖.jpg" alt="" class="wp-image-719"><figcaption>判斷是否為偶數流程圖</figcaption></figure>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">判斷是否為偶數-寫Code流程(上)</h3>
+
+
+
+<h4>觀念</h4>
+
+
+
+<ul>
+<li>寫程式沒有最佳解法，只有當下最適合</li>
+<li>小步測試，反覆驗證</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 1
+
+let myInput = 7;
+let checkNumber = myInput%2==0;
+
+console.log(checkNumber);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 1
+   false
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 2
+
+let myInput = 7;
+
+if(myInput %2 == 0) {
+  console.log('是偶數');
+}
+else {
+  console.log('不是偶數');
+}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 2
+   不是偶數
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 3
+
+function checkNumber() {
+  let myInput = 8;
+  if(myInput %2 == 0) {
+    console.log('是偶數');
+  }
+  else {
+    console.log('不是偶數');
+  }
+}
+
+checkNumber();</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 3
+   是偶數
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 4
+
+function checkNumber(myInput) {
+  // let myInput = 8;
+  if(myInput %2 == 0) {
+    console.log('是偶數');
+  }
+  else {
+    console.log('不是偶數');
+  }
+}
+
+checkNumber(4);
+checkNumber(7);
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 4
+   是偶數
+   不是偶數
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 5
+
+function checkNumber(myInput) {
+  // let myInput = 8;
+  if(myInput %2 == 0) {
+    // console.log('是偶數');
+    return '是偶數';
+  }
+  else {
+    // console.log('不是偶數');
+    return '不是偶數';
+  }
+}
+
+let checkSevenNumber = checkNumber(7);
+console.log(checkSevenNumber);
+
+let checkEightNumber = checkNumber(8);
+console.log(checkEightNumber);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 5
+   不是偶數
+   是偶數
+&gt;</code></pre>
+
+
+
+<h3>let 全域與區域變數邏輯</h3>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+// 紀錄總共計算了幾次
+
+let count = 0;
+
+function test() {
+  count += 1;
+  console.log('test1');
+}
+
+test();
+test();
+
+console.log(`目前您紀錄了${count}次`);
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   test1
+   test1
+   目前您紀錄了2次
+&gt;</code></pre>
+
+
+
+<h3>判斷是否為偶數-寫Code流程(下)</h3>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 1
+
+let count = 0;
+
+// 寫程式沒有最佳解法，只有當下最適合
+// 小步測試，反覆驗證
+function checkNumber(myInput) {
+  count+=1;
+  if (myInput %2 == 0) {
+    return '是偶數';
+  }
+  else {
+    return '不是偶數';
+  }
+}
+
+let checkSevenNumber = checkNumber(7);
+console.log(checkSevenNumber);
+
+console.log(`您一共計算了${count}次`);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 1
+   不是偶數
+   您一共計算了1次
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 2
+
+let count = 0;
+
+// 寫程式沒有最佳解法，只有當下最適合
+// 小步測試，反覆驗證
+function checkNumber(myInput) {
+
+  if (myInput %2 == 0) {
+    count+=1;
+    return '是偶數';
+  }
+  else {
+    count+=1;
+    return '不是偶數';
+  }
+}
+
+let checkSevenNumber = checkNumber(7);
+console.log(checkSevenNumber);
+
+console.log(`您一共計算了${count}次`);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 2
+   不是偶數
+   您一共計算了1次
+&gt;</code></pre>
+
+
+
+<h5>兩種方式都可以，第一種比較直觀。</h5>
+
+
+
+<h3>函式 function 小節測驗</h3>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">第三週總複習</h3>
+
+
+
+<h2>DOM – 選取網頁元素</h2>
+
+
+
+<h3>為什麼要瞭解 DOM？</h3>
+
+
+
+<ul><li><a href="https://zh.wikipedia.org/wiki/%E6%96%87%E6%A1%A3%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B" target="_blank" rel="noreferrer noopener">文件物件模型-維基百科</a></li></ul>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;MyTitle&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Header&lt;/h1&gt;
+  &lt;a href="#"&gt;MyLink&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<h4>dom tree – 節點樹狀圖</h4>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" width="777" height="652" src="/wordpress_blog/wp-content/uploads/2022/04/dom-tree.jpg" alt="" class="wp-image-721"><figcaption>dom-tree</figcaption></figure>
+
+
+
+<h3>瞭解 document 的重要性</h3>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+&gt;  document
+&lt;  #document
+&gt;</code></pre>
+
+
+
+<h3>DOM 環境配置</h3>
+
+
+
+<p>&lt;script&gt; 從 &lt;head&gt; 移到 &lt;body&gt; 的最下方</p>
+
+
+
+<ul><li>程式碼是由上到下執行</li></ul>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;js-compulsory&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  
+  &lt;h1&gt;js-compulsory&lt;/h1&gt;
+  &lt;a href="#"&gt;link&lt;/a&gt;
+
+  &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<h3>querySelector 選擇器</h3>
+
+
+
+<pre class="wp-block-code"><code>// index.html - 1
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;js-compulsory&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;h1&gt;js-compulsory&lt;/h1&gt;
+  &lt;a href="#"&gt;link&lt;/a&gt;
+
+  &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 1
+
+// 選取 h1          // 選取網頁上的元素   'CSS 選擇器'
+const el = document.querySelector('h1');</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 1
+&gt;  el
+&lt;  &lt;h1&gt;js-compulsory&lt;/h1&gt;
+&gt;</code></pre>
+
+
+
+<ul>
+<li>const：宣告變數</li>
+<li>el：element (元素)的縮寫</li>
+<li>=：賦予</li>
+<li>document：網頁文件</li>
+<li>querySelector：選取網頁上的元素</li>
+<li>(‘h1′)：’CSS 選擇器’</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// index.html - 2
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;js-compulsory&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;h1 class="header"&gt;js-compulsory&lt;/h1&gt;
+  &lt;a href="#"&gt;link&lt;/a&gt;
+
+  &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 2
+
+// 選取 .header          // 選取網頁上的元素   'CSS 選擇器'
+const el = document.querySelector('.header');</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 2
+&gt;  el
+&lt;  &lt;h1 class="header"&gt;js-compulsory&lt;/h1&gt;
+&gt;</code></pre>
+
+
+
+<h3>textContent 寫入文字資料</h3>
+
+
+
+<ul><li>textContent：修改文字節點、文字內容</li></ul>
+
+
+
+<pre class="wp-block-code"><code>// index.html - 1
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;js-compulsory&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;h1&gt;js-compulsory&lt;/h1&gt;
+  &lt;a href="#"&gt;link&lt;/a&gt;
+
+  &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+// 選取 h1          // 選取網頁上的元素   'CSS 選擇器'
+const el = document.querySelector('h1');
+el.textContent = "Hello World!!";
+
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+&gt;  el
+&lt;  &lt;h1&gt;Hello World!&lt;/h1&gt;
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 瀏覽器畫面
+
+Hello World
+link</code></pre>
+
+
+
+<h3>innerHTML 插入 HTML 標籤</h3>
+
+
+
+<ul>
+<li>innerHTML：修改、新增網頁標籤的內容</li>
+<li>`：反引號</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;js-compulsory&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;h1&gt;js-compulsory&lt;/h1&gt;
+  &lt;div class="main"&gt;
+    &lt;p&gt;hello!&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+// .main class div 新增一個 h1
+
+const main = document.querySelector(".main");
+// console.log(main);
+
+main.innerHTML = `&lt;h1 class="header"&gt;標題&lt;/h1&gt;`;</code></pre>
+
+
+
+<h4>程式碼拆解說明</h4>
+
+
+
+<ul>
+<li>main：選取網頁的元素</li>
+<li>innerHTML：增加網頁的結構</li>
+<li>=：賦予</li>
+<li>`&lt;h1 class=”header”&gt;標題&lt;/h1&gt;`：自己組出來的字串資料</li>
+</ul>
+
+
+
+<h4>&lt;p&gt;裡面的內容不見</h4>
+
+
+
+<p>innerHTML 會刪掉全部裡面的內容，再重新去做寫入。</p>
+
+
+
+<h4>回顧</h4>
+
+
+
+<ul>
+<li>要加入 HTML 標籤，請使用 innerHTML</li>
+<li>innerHTML 的特性是會把原本裡面的預設內容全部清掉，清掉以後它才會重新賦予新的值進去</li>
+</ul>
+
+
+
+<h3>innerHTML 加入變數</h3>
+
+
+
+<p>innerHTML 字串可以帶變數。</p>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;js-compulsory&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;h1&gt;js-compulsory&lt;/h1&gt;
+  &lt;ul class="list"&gt;
+    
+  &lt;/ul&gt;
+
+  &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+// ul .list
+// &lt;li&gt;&lt;a href="https://www.google.com.tw"&gt;Google連結&lt;/a&gt;&lt;/li&gt;
+
+const list = document.querySelector('.list');
+// console.log(list);
+
+let myLink = "https://www.yahoo.com.tw";
+let myName = "奇摩";
+let content = `&lt;li&gt;&lt;a href="${myLink}"&gt;${myName}連結&lt;/a&gt;&lt;/li&gt;`;
+list.innerHTML = content+content;</code></pre>
+
+
+
+<h3>textContent 與 innerHTML 運用差異</h3>
+
+
+
+<ul>
+<li>textContent：只針對文字做調整，文字</li>
+<li>innerHTML：元素、屬性、文字都可以做調整，HTML結構</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;js-compulsory&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;h1&gt;js-compulsory&lt;/h1&gt;
+  &lt;div class="main"&gt;&lt;/div&gt;
+
+  &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+const main = document.querySelector('.main');
+
+// console.log(main); // 測試有沒有正確執行
+
+// main.innerHTML = `&lt;h1&gt;標題&lt;/h1&gt;`;
+main.textContent = `&lt;h1&gt;標題&lt;/h1&gt;`;</code></pre>
+
+
+
+<h4>使用時機</h4>
+
+
+
+<ul>
+<li>HTML 標籤、顯示 DOM 結構時，使用 innerHTML</li>
+<li>只是文字內容的時候，使用 textContent</li>
+</ul>
+
+
+
+<h3>setAttribute 增加 HTML 標籤屬性</h3>
+
+
+
+<ul><li>setAttribute 後面設定兩個參數，第一個是屬性、第二個是內容</li></ul>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;js-compulsory&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;h1&gt;js-compulsory&lt;/h1&gt;
+  &lt;a href="#"&gt;連結&lt;/a&gt;
+
+  &lt;script src="js/all.js"&gt;&lt;/script&gt;
+  &lt;style&gt;
+    .red {
+      color: red;
+    }
+  &lt;/style&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+// # yahoo
+const myLink = document.querySelector('a');
+// console.log(myLink);
+
+myLink.setAttribute('href','https://www.yahoo.com.tw');
+myLink.setAttribute('class','red');
+</code></pre>
+
+
+
+<h3>querySelectorAll 可重複選取多個元素</h3>
+
+
+
+<ul>
+<li>querySelector：只會去抓網頁裡面最前面的第一個 DOM 而已，選取到是一個DOM</li>
+<li>NodeList：節點列表</li>
+<li>querySelectorAll：可重複選取多個元素，回傳是 NodeList 陣列節點</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;js-compulsory&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;h1&gt;js-compulsory&lt;/h1&gt;
+  &lt;a href="#"&gt;連結&lt;/a&gt;
+  &lt;a href="#"&gt;連結&lt;/a&gt;
+
+  &lt;script src="js/all.js"&gt;&lt;/script&gt;
+  &lt;style&gt;
+    .red {
+      color: red;
+    }
+  &lt;/style&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+// # yahoo
+// const myLink = document.querySelector('a');
+// // console.log(myLink);
+
+// myLink.setAttribute('href','https://www.yahoo.com.tw');
+// myLink.setAttribute('class','red');
+
+const myLinks = document.querySelectorAll('a');
+console.log(myLinks);
+
+myLinks&#91;0].setAttribute('href','https://www.yahoo.com.tw');
+myLinks&#91;0].setAttribute('class','red');
+
+myLinks&#91;1].setAttribute('href','https://www.google.com.tw');
+myLinks&#91;1].setAttribute('class','red');</code></pre>
+
+
+
+<h3>.innerHTML、.textContent、.getAttribute 取值方法</h3>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;js-compulsory&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;h1&gt;js-compulsory&lt;/h1&gt;
+  &lt;a href="https://yahoo.com.tw" class="red"&gt;&lt;span&gt;連結&lt;/span&gt;&lt;/a&gt;
+
+  &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+const myLink = document.querySelector('a');
+// console.log(myLink);
+
+console.log(myLink.getAttribute('href'));
+console.log(myLink.getAttribute('class'));
+console.log(myLink.innerHTML);
+let content = myLink.innerHTML;
+console.log(content);
+
+console.log(myLink.textContent);</code></pre>
+
+
+
+<h3>表單元素取值方式</h3>
+
+
+
+<ul><li>.value – 取值、重新賦予值方式</li></ul>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;js-compulsory&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;h1&gt;js-compulsory&lt;/h1&gt;
+  &lt;input type="text" class="txt" value="你好嗎"&gt;
+  &lt;select class="list"&gt;
+    &lt;option value="高雄市"&gt;高雄市&lt;/option&gt;
+    &lt;option value="台北市"&gt;台北市&lt;/option&gt;
+  &lt;/select&gt;
+
+  &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+const txt = document.querySelector('.txt');
+// console.log(txt.value);  // 取值
+
+const list = document.querySelector('.list');
+// console.log(list.value);
+
+txt.value = 'hello!!';  // 重新賦予值
+
+list.value = '台北市';</code></pre>
+
+
+
+<h3>DOM – 選取網頁元素小節測驗</h3>
+
+
+
+<h2>Event 事件 – 讓您的網頁具有互動效果</h2>
+
+
+
+<h3>什麼是 event？</h3>
+
+
+
+<ul>
+<li>event – 事件<ul>
+<li>點擊事件：選單下拉、關閉按鈕</li>
+<li>滾動事件：滑鼠滾動</li>
+</ul>
+</li>
+<li><a rel="noreferrer noopener" href="https://www.w3schools.com/jsref/dom_obj_event.asp" target="_blank">HTML DOM Event Object</a></li>
+<li>DOM 註冊事件</li>
+</ul>
+
+
+
+<h3>addeventListener 註冊事件監聽教學</h3>
+
+
+
+<h4>event – 點擊</h4>
+
+
+
+<ul><li>addEventListener 裡面要帶2個參數，第1個是行為事件、第2個是函式內容</li></ul>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;js-compulsory&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;h1&gt;js-compulsory&lt;/h1&gt;
+  &lt;input type="button" value="點擊" class="btn"&gt;
+
+  &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+const btn = document.querySelector('.btn');
+const title = document.querySelector('h1');
+// console.log(btn);
+// console.log(title);
+
+// 監聽 事件
+btn.addEventListener('click', function(e) {
+  // console.log('您被點擊了');
+  title.textContent = '按鈕已經被點擊';
+});</code></pre>
+
+
+
+<h3>如何觀看 DOM 有註冊事件監聽</h3>
+
+
+
+<h4>使用 Chrome Elements &gt; Event Listeners 查看</h4>
+
+
+
+<p>在點擊按鈕上按滑鼠右鍵檢查，找到 Elements 面板裡面的 Event Listeners(事件監聽者)，可以查看 DOM 有沒有註冊事件監聽。</p>
+
+
+
+<h3>來寫一個加法器吧！</h3>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;js-compulsory&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;h1&gt;js-compulsory&lt;/h1&gt;
+  &lt;input type="button" value="點擊" class="btn"&gt;
+  &lt;h2&gt;0&lt;/h2&gt;
+
+  &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+const btn = document.querySelector('.btn');
+const title = document.querySelector('h2');
+
+// console.log(btn);
+// console.log(title);
+
+let count = 0;
+
+btn.addEventListener('click',function(e) {
+  // console.log('你被點擊了');
+  count+=1;
+  // console.log(count);
+  title.textContent = count;
+});</code></pre>
+
+
+
+<h3>event 物件 – 告訴你當下元素資訊</h3>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;js-compulsory&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;h1&gt;js-compulsory&lt;/h1&gt;
+  &lt;input type="button" value="點擊" class="btn"&gt;
+
+  &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+const btn = document.querySelector('.btn');
+// console.log(btn);
+
+btn.addEventListener('click',function(e) {
+  console.log(e);
+  console.log(e.clientX);
+});</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   PointerEvent&nbsp;{isTrusted: true, pointerId: 1, width: 1, height: 1, pressure: 0,&nbsp;…}
+   42
+&gt;</code></pre>
+
+
+
+<h4>event 物件</h4>
+
+
+
+<ul>
+<li>會回傳一個物件，會把你事件的狀態捕捉、快照</li>
+<li>e 是 event 的縮寫</li>
+<li>function()裡面的參數可以自行命名各種名稱</li>
+</ul>
+
+
+
+<h3>DOM 複習 – 透過 nodeName 瞭解目前 DOM 的 HTML 位置</h3>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;js-compulsory&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;h1&gt;js-compulsory&lt;/h1&gt;
+  &lt;input type="button" value="點擊" class="btn"&gt;
+
+  &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+const btn = document.querySelector('.btn');
+
+console.log(btn.getAttribute("class"));
+console.log(btn.getAttribute("value"));
+// 節點名稱
+console.log(btn.nodeName);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   btn
+   點擊
+   INPUT
+&gt;</code></pre>
+
+
+
+<h3>e.target – 了解目前所在元素位置</h3>
+
+
+
+<ul>
+<li>target：目前點擊、選取到哪一個 DOM 物件</li>
+<li>監聽只要在這個範圍內點擊都會觸發</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;js-compulsory&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;h1&gt;js-compulsory&lt;/h1&gt;
+  &lt;input type="button" value="點擊" class="btn"&gt;
+  &lt;ul class="list"&gt;
+    &lt;li&gt;標題&lt;/li&gt;
+    &lt;li&gt;標題 &lt;input type="button" class="btn" value="按鈕"&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+const btn = document.querySelector('.btn');
+
+btn.addEventListener("click",function(e) {
+  console.log(e.target);
+});
+
+const list = document.querySelector('.list');
+// console.log(list);
+
+list.addEventListener('click',function(e) {
+  console.log(e.target);
+});</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   &lt;input type="button" value="點擊" class="btn"&gt;
+   &lt;ul class="list"&gt;...&lt;/ul&gt;
+   &lt;li&gt;...&lt;/li&gt;
+   &lt;input type="button" class="btn" value="按鈕"&gt;
+&gt;</code></pre>
+
+
+
+<h3>e.target 搭配 nodeName 節點，抓到你預期要做的事情</h3>
+
+
+
+<h4>if(我現在點擊到的是按鈕){}</h4>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;js-compulsory&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;h1&gt;js-compulsory&lt;/h1&gt;
+  &lt;input type="button" value="點擊" class="btn"&gt;
+  &lt;ul class="list"&gt;
+    &lt;li&gt;標題&lt;/li&gt;
+    &lt;li&gt;標題 &lt;input type="button" class="btn" value="按鈕"&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+const btn = document.querySelector('.btn');
+
+btn.addEventListener("click",function(e) {
+  console.log(e.target);
+});
+
+const list = document.querySelector('.list');
+// console.log(list);
+
+list.addEventListener('click',function(e) {
+  console.log(e.target.nodeName);
+  if(e.target.nodeName == "INPUT"){
+    console.log('你目前點到按鈕了!');
+  }
+});</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   INPUT
+   你目前點到按鈕了!
+&gt;</code></pre>
+
+
+
+<h3>preventDefault – 取消預設觸發行為</h3>
+
+
+
+<ul>
+<li>&lt;a&gt; – href=”url”</li>
+<li>&lt;button&gt; – type=”submit”</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;js-compulsory&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;h1&gt;js-compulsory&lt;/h1&gt;
+  &lt;!-- 取消 HTML 標籤默認行為 --&gt;
+  &lt;a href="https://www.yahoo.com.tw"&gt;連結&lt;/a&gt;
+  
+  &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+const myLink = document.querySelector('a');
+
+myLink.addEventListener('click',function(e) {
+  e.preventDefault();
+  console.log('有被點擊到');
+  document.querySelector('h1').textContent = 'hello world!!';
+});</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   有被點擊到
+&gt;</code></pre>
+
+
+
+<h3>Event 事件 – 讓您的網頁具有互動效果小節測驗</h3>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">第四週總複習</h3>
+
+
+
+<h2>陣列 forEach 資料處理方法</h2>
+
+
+
+<h3>為什麼要學陣列資料處理？</h3>
+
+
+
+<h4>陣列 – 資料處理</h4>
+
+
+
+<ul>
+<li>陣列資料數量多、無法判斷資料量有多少</li>
+<li>
+<a rel="noreferrer noopener" href="https://www.hexschool.com/2017/09/01/2017-09-01-javascript-for/" target="_blank">JavaScript 陣列處理方法</a><ul><li>針對 forEach 方法介紹</li></ul>
+</li>
+<li>充電站的陣列資料</li>
+</ul>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">forEach 寫法介紹</h3>
+
+
+
+<p>forEach – 陣列資料處理的方法</p>
+
+
+
+<ul>
+<li>forEach 只有陣列才可以使用</li>
+<li>function 預設裡面會帶三個參數(item,index,array)<ul>
+<li>item – 物件</li>
+<li>index – 索引</li>
+<li>array – 全部陣列</li>
+</ul>
+</li>
+<li>function 裡面的參數可以自定義名稱</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+let data = &#91;30,40];
+
+// function(物件(值), 索引(第幾筆資料), 全部陣列)
+data.forEach(function(item,index,array){
+  console.log(item,index,array);
+});
+
+console.log('hello');</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   30 0 (2) &#91;30, 40]
+   40 1 (2) &#91;30, 40]
+   hello world!!
+&gt;</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">陣列數字累加與變數作用域講解</h3>
+
+
+
+<h4>forEach 常見用法</h4>
+
+
+
+<ul>
+<li>第三個參數不用可以省略不寫</li>
+<li>let total = 0;<ul>
+<li>要放在外層，全域變數</li>
+<li>不可以放在函式內層，區域變數</li>
+</ul>
+</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 1，let total = 0; 放在外層
+
+let data = &#91;30,40,100];
+
+let total = 0;
+
+data.forEach(function(item,index) {
+  // console.log(item);
+  total+=item;
+  console.log(total);
+});
+
+console.log(total);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 1
+   30
+   70
+   170
+   170</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 2，let total = 0; 放在內層
+
+let data = &#91;30,40,100];
+
+// let total = 0;
+
+data.forEach(function(item,index) {
+  // console.log(item);
+  let total = 0;
+
+  total+=item;
+  console.log(total);
+});
+
+console.log(total);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 2
+   30
+   40
+   100
+x  Uncaught ReferenceError: total is not defined
+&gt;</code></pre>
+
+
+
+<h3>搭配 if ，篩選出陣列裡面有幾個偶數</h3>
+
+
+
+<h4>判斷陣列裡面有幾個偶數</h4>
+
+
+
+<ul><li>30%2 → 整除</li></ul>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 1 篩選有幾個偶數
+
+let data = &#91;30,40,100,33,96];
+
+let total = 0;
+
+data.forEach(function(item,index) {
+  // console.log(item);
+  if(item%2 == 0) {
+    total+=1;
+  }
+});
+
+console.log(total);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 1
+   4
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 2 設計一個新陣列
+
+let data = &#91;30,40,100,33,96];
+
+let total = 0;
+let newData = &#91;];
+
+data.forEach(function(item,index) {
+  // console.log(item);
+  if(item%2 == 0) {
+    total+=1;
+    newData.push(item);
+  }
+});
+
+console.log(newData);
+
+console.log(total);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 2
+   (4) &#91;30, 40, 100, 96]
+   4
+&gt;</code></pre>
+
+
+
+<h3>forEach 讀取資料</h3>
+
+
+
+<p>讀取陣列資料，除了數字也可以讀取到字串、物件、陣列、布林值。</p>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 1
+
+let data = &#91;30,'hello world!',true];
+
+data.forEach(function(item,index) {
+  console.log(item);
+});</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 1
+   30
+   hello world!
+   true
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 2
+
+let data = &#91;
+  {
+    name: 'Tom',
+    sex: 'male'
+  },
+  {
+    name: 'Mary',
+    sex: 'woman'
+  }
+];
+
+data.forEach(function(item,index){
+  console.log(item);
+  console.log(item.name, item.sex);
+});</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 2
+   {name: 'Tom', sex: 'male'}
+   Tom male
+   {name: 'Mary', sex: 'woman'}
+   Mary woman
+&gt;</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">男女人數計算機 – 透過物件整合資料</h3>
+
+
+
+<h4>計算男女生的總數</h4>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 1 方法一
+
+let data = &#91;
+  {
+    name: 'Tom',
+    sex: 'male'
+  },
+  {
+    name: 'Mary',
+    sex: 'woman'
+  },
+  {
+    name: 'Jane',
+    sex: 'woman'
+  },
+  {
+    name: 'Jenny',
+    sex: 'woman'
+  },
+  {
+    name: 'Joan',
+    sex: 'woman'
+  }
+];
+
+let maleTotal = 0;
+let womanTotal = 0;
+
+data.forEach(function(item,index){
+  // console.log(item.sex);
+
+  if(item.sex == 'woman') {
+    // console.log('是女生');
+    womanTotal+=1;
+  }
+  else {
+    // console.log('是男生');
+    maleTotal+=1;
+  }
+});
+
+console.log(womanTotal, maleTotal);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 1
+   4 1
+&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 2 方法二
+
+let data = &#91;
+  {
+    name: 'Tom',
+    sex: 'male'
+  },
+  {
+    name: 'Mary',
+    sex: 'woman'
+  },
+  {
+    name: 'Jane',
+    sex: 'woman'
+  },
+  {
+    name: 'Jenny',
+    sex: 'woman'
+  },
+  {
+    name: 'Joan',
+    sex: 'woman'
+  }
+];
+
+let people = {
+  male: 0,
+  woman: 0
+}
+
+data.forEach(function(item,index){
+  if(item.sex == 'woman') {
+    people.woman+=1;
+  }
+  else {
+    people.male+=1;
+  }
+});
+
+console.log(people);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 2
+   {male: 1, woman: 4}
+&gt;</code></pre>
+
+
+
+<h3>高雄 OPEN DATA – 觀看免費與投幣式充電站有幾處</h3>
+
+
+
+<ul><li>
+<a rel="noreferrer noopener" href="https://cdn.fs.teachablecdn.com/EajqXPa3RxOH1P12cdei" target="_blank">電動車資訊.json</a><ul>
+<li>JSON 格式</li>
+<li>高雄公共充電站</li>
+</ul>
+</li></ul>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+let data = &#91;{},{},{},...{},{},{}];
+
+// console.log(data);
+// console.log(data.length);
+
+let total = {
+  free: 0,
+  paid: 0
+};
+
+data.forEach(function(item,index) {
+  // console.log(item);
+  // console.log(item.Charge);
+  // console.log(item.Charge == "免費")
+  if(item.Charge == "免費") {
+    total.free+=1;
+  }
+  else if(item.Charge == "投幣式") {
+    total.paid+=1;
+  }
+});
+
+// console.log(total);
+console.log(`高雄充電站免費的站有${total.free}處`);
+console.log(`高雄充電站投幣式站有${total.paid}處`);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console
+   高雄充電站免費的站有69處
+   高雄充電站投幣式站有67處
+&gt;</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">高雄 OPEN DATA – 陣列物件處理</h3>
+
+
+
+<p>串接很多的第三方服務、套件。</p>
+
+
+
+<pre class="wp-block-code"><code>all.js - 1
+
+let data = &#91;
+  {
+    Charge: '免費',
+    name: '六角充電站'
+  },
+  {
+    Charge: '投幣式',
+    name: '小花充電站'
+  },
+  {
+    Charge: '投幣式',
+    name: '小明充電站'
+  },
+  {
+    Charge: '投幣式',
+    name: '小天充電站'
+  }
+];
+
+let total = {
+  free: &#91;],
+  paid: &#91;]
+};
+
+data.forEach(function(item,index) {
+  // console.log(item.Charge);
+  // console.log(item.Charge == '免費');
+  if(item.Charge == '免費') {
+    // console.log("是免費的");
+    total.free.push(item);
+  }
+  else if(item.Charge == '投幣式') {
+    // console.log("是投幣式的");
+    total.paid.push(item);
+  }
+});
+
+// console.log(total);
+console.log(`目前免費充電站有${total.free.length}處`);
+console.log(`目前投幣式充電站有${total.paid.length}處`);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Google Console - 1
+   目前免費充電站有1處
+   目前投幣式充電站有3處
+&gt;</code></pre>
+
+
+
+<p>目的：懂得整合資料、處理資料。</p>
+
+
+
+<h4>練習：高雄 OPEN DATA 電動車資料</h4>
+
+
+
+<h3>陣列 forEach 資料處理方法小節測驗</h3>
+
+
+
+<h2 class="has-background" style="background-color:#ff6663">forEach 題型練習</h2>
+
+
+
+<h3>範例功能講解</h3>
+
+
+
+<p>本章節 Codepen 範例程式碼網址：<a href="https://codepen.io/hexschool/pen/oNYPPPx?editors=1010" target="_blank" rel="noreferrer noopener">網址</a></p>
+
+
+
+<ul>
+<li>DOM</li>
+<li>Event</li>
+<li>forEach</li>
+<li>陣列操作</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;js-compulsory&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;h1&gt;js-compulsory&lt;/h1&gt;
+  &lt;h2&gt;新增資料&lt;/h2&gt;
+  &lt;input type="text" placeholder="充電站名稱" class="stationName"&gt;
+  &lt;select class="stationCharge"&gt;
+    &lt;option value="免費"&gt;免費&lt;/option&gt;
+    &lt;option value="投幣式"&gt;投幣式&lt;/option&gt;
+  &lt;/select&gt;
+  &lt;input type="button" class="btn" value="儲存"&gt;
+  &lt;h2&gt;資料顯示&lt;/h2&gt;
+  &lt;div class="filter"&gt;
+    &lt;input type="button" value="全部"&gt;
+    &lt;input type="button" value="免費"&gt;
+    &lt;input type="button" value="投幣式"&gt;
+  &lt;/div&gt;
+  &lt;ul class="list"&gt;
+    
+  &lt;/ul&gt;
+
+  &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+let data = &#91;
+  {
+    Charge: '免費',
+    name: '六角充電站'
+  },
+  {
+    Charge: '投幣式',
+    name: '小花充電站'
+  },
+  {
+    Charge: '投幣式',
+    name: '小明充電站'
+  },
+  {
+    Charge: '投幣式',
+    name: '小天充電站'
+  }
+];
+
+const list = document.querySelector('.list');
+// 預設載入函式
+function init() {
+  let str = '';
+  data.forEach(function(item,index) {
+    let content = `&lt;li&gt;${item.name}，${item.Charge}&lt;/li&gt;`;
+    str += content;
+  });
+  list.innerHTML = str;
+}
+init();
+// 篩選器邏輯
+const stationFilter = document.querySelector('.filter');
+stationFilter.addEventListener('click',function(e) {
+  if(e.target.value == undefined){
+    retrun;
+  }
+  let str = '';
+  data.forEach(function(item,index){
+    if(e.target.value == "全部") {
+      str += `&lt;li&gt;${item.name}，${item.Charge}&lt;/li&gt;`;
+    }
+    else if(e.target.value == item.Charge) {
+      str+= `&lt;li&gt;${item.name}，${item.Charge}&lt;/li&gt;`
+    }
+  })
+  list.innerHTML = str;
+});
+
+// 新增邏輯
+const stationName = document.querySelector('.stationName');
+const stationCharge = document.querySelector('.stationCharge');
+const btn = document.querySelector('.btn');
+
+btn.addEventListener('click',function(e) {
+  console.log(stationName.value);
+  console.log(stationCharge.value);
+  let obj = {};
+  obj.Charge = stationCharge.value;
+  obj.name = stationName.value;
+  data.push(obj);
+  init();
+  stationCharge.value = '免費';
+  stationName.value = '';
+});</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">如何整合 innerHTML 資料</h3>
+
+
+
+<p>forEach 搭配 DOM 來去做整合，把資料顯示在網頁上。</p>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;js-compulsory&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;h1&gt;js-compulsory&lt;/h1&gt;
+  &lt;ul class="list"&gt;
+    &lt;li&gt;xx充電站，免費&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+let data = &#91;
+  {
+    Charge: '免費',
+    name: '六角充電站'
+  },
+  {
+    Charge: '投幣式',
+    name: '小花充電站'
+  },
+  {
+    Charge: '投幣式',
+    name: '小明充電站'
+  },
+  {
+    Charge: '投幣式',
+    name: '小天充電站'
+  }
+];
+
+const list = document.querySelector('.list');
+
+// 初始化一個空字串
+let str = '';
+
+data.forEach(function(item,index){
+  // console.log(item);
+  
+  // &lt;li&gt;xx充電站，免費&lt;/li&gt;
+  // console.log(`&lt;li&gt;${item.name}，${item.Charge}&lt;/li&gt;`);
+  let content = `&lt;li&gt;${item.name}，${item.Charge}&lt;/li&gt;`;
+  str+=content;
+
+  console.log(str);
+});
+// console.log(str);
+
+// list.innerHTML = `&lt;li&gt;hello world&lt;/li&gt;`;
+list.innerHTML = str;</code></pre>
+
+
+
+<h3>搭配網頁初始化狀態</h3>
+
+
+
+<p>用函式 init() 把程式碼整理起來後再執行。</p>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;js-compulsory&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;h1&gt;js-compulsory&lt;/h1&gt;
+  &lt;ul class="list"&gt;
+    &lt;li&gt;xx充電站，免費&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+let data = &#91;
+  {
+    Charge: '免費',
+    name: '六角充電站'
+  },
+  {
+    Charge: '投幣式',
+    name: '小花充電站'
+  },
+  {
+    Charge: '投幣式',
+    name: '小明充電站'
+  },
+  {
+    Charge: '投幣式',
+    name: '小天充電站'
+  }
+];
+
+// 初始化狀態
+function init() {
+  const list = document.querySelector('.list');
+
+  // 初始化一個空字串
+  let str = '';
+  
+  data.forEach(function(item,index){
+    // console.log(item);
+    
+    // &lt;li&gt;xx充電站，免費&lt;/li&gt;
+    // console.log(`&lt;li&gt;${item.name}，${item.Charge}&lt;/li&gt;`);
+    let content = `&lt;li&gt;${item.name}，${item.Charge}&lt;/li&gt;`;
+    str+=content;
+  
+    console.log(str);
+  });
+  // console.log(str);
+  
+  // list.innerHTML = `&lt;li&gt;hello world&lt;/li&gt;`;
+  list.innerHTML = str;
+}
+
+init();</code></pre>
+
+
+
+<h3>免費與投幣式事件監聽設計</h3>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;js-compulsory&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;h1&gt;js-compulsory&lt;/h1&gt;
+  &lt;div class="filter"&gt;
+    &lt;input type="button" value="免費"&gt;
+    &lt;input type="button" value="投幣式"&gt;
+  &lt;/div&gt;
+  &lt;ul class="list"&gt;
+    &lt;!-- &lt;li&gt;xx充電站，免費&lt;/li&gt; --&gt;
+  &lt;/ul&gt;
+
+  &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+let data = &#91;
+  {
+    Charge: '免費',
+    name: '六角充電站'
+  },
+  {
+    Charge: '投幣式',
+    name: '小花充電站'
+  },
+  {
+    Charge: '投幣式',
+    name: '小明充電站'
+  },
+  {
+    Charge: '投幣式',
+    name: '小天充電站'
+  }
+];
+
+// 初始化狀態
+function init() {
+  const list = document.querySelector('.list');
+
+  // 初始化一個空字串
+  let str = '';
+  
+  data.forEach(function(item,index){
+    // console.log(item);
+    
+    // &lt;li&gt;xx充電站，免費&lt;/li&gt;
+    // console.log(`&lt;li&gt;${item.name}，${item.Charge}&lt;/li&gt;`);
+    let content = `&lt;li&gt;${item.name}，${item.Charge}&lt;/li&gt;`;
+    str+=content;
+  
+    // console.log(str);
+  });
+  // console.log(str);
+  
+  // list.innerHTML = `&lt;li&gt;hello world&lt;/li&gt;`;
+  list.innerHTML = str;
+}
+
+init();
+
+// 免費與投幣式事件監聽設計
+const stationFilter = document.querySelector('.filter');
+// console.log(stationFilter);
+
+stationFilter.addEventListener('click',function(e) {
+  // console.log(e);
+  // console.log(e.target.value);
+  // console.log(e.target.value == undefined);
+  if (e.target.value == undefined) {
+    console.log('你點擊到空的地方');
+    return; // 回傳、強制中斷
+  }
+  console.log(e.target.value);
+});</code></pre>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">事件監聽搭配 if 流程判斷</h3>
+
+
+
+<p>點擊按鈕篩選哪些是免費、哪些是投幣式的判斷。</p>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;js-compulsory&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;h1&gt;js-compulsory&lt;/h1&gt;
+  &lt;div class="filter"&gt;
+    &lt;input type="button" value="免費"&gt;
+    &lt;input type="button" value="投幣式"&gt;
+  &lt;/div&gt;
+  &lt;ul class="list"&gt;
+    &lt;!-- &lt;li&gt;xx充電站，免費&lt;/li&gt; --&gt;
+  &lt;/ul&gt;
+
+  &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+let data = &#91;
+  {
+    Charge: '免費',
+    name: '六角充電站'
+  },
+  {
+    Charge: '投幣式',
+    name: '小花充電站'
+  },
+  {
+    Charge: '投幣式',
+    name: '小明充電站'
+  },
+  {
+    Charge: '投幣式',
+    name: '小天充電站'
+  }
+];
+
+// 初始化狀態
+function init() {
+  const list = document.querySelector('.list');
+
+  // 初始化一個空字串
+  let str = '';
+  
+  data.forEach(function(item,index){
+    // console.log(item);
+    
+    // &lt;li&gt;xx充電站，免費&lt;/li&gt;
+    // console.log(`&lt;li&gt;${item.name}，${item.Charge}&lt;/li&gt;`);
+    let content = `&lt;li&gt;${item.name}，${item.Charge}&lt;/li&gt;`;
+    str+=content;
+  
+    // console.log(str);
+  });
+  // console.log(str);
+  
+  // list.innerHTML = `&lt;li&gt;hello world&lt;/li&gt;`;
+  list.innerHTML = str;
+}
+
+init();
+
+// 免費與投幣式事件監聽設計
+const stationFilter = document.querySelector('.filter');
+// console.log(stationFilter);
+
+stationFilter.addEventListener('click',function(e) {
+  // console.log(e);
+  // console.log(e.target.value);
+  // console.log(e.target.value == undefined);
+  if (e.target.value == undefined) {
+    // console.log('你點擊到空的地方');
+    return; // 回傳、強制中斷
+  }
+  // console.log(e.target.value);
+
+  // 事件監聽搭配 if 流程判斷
+  // 初始化一個空字串
+  let str = "";
+  data.forEach(function(item,index) {
+    // console.log(item.Charge);
+    // console.log(e.target.value == item.Charge);
+    if(e.target.value == item.Charge) {
+      str+=`&lt;li&gt;${item.name}，${item.Charge}&lt;/li&gt;`
+    }
+  });
+  // console.log(str);
+  const list = document.querySelector('.list');
+  list.innerHTML = str;
+
+});</code></pre>
+
+
+
+<h3>DOM 拉出全域變數進行管理</h3>
+
+
+
+<p>裡面的函式找不到 DOM，會往外層找。</p>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;js-compulsory&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;h1&gt;js-compulsory&lt;/h1&gt;
+  &lt;div class="filter"&gt;
+    &lt;input type="button" value="免費"&gt;
+    &lt;input type="button" value="投幣式"&gt;
+  &lt;/div&gt;
+  &lt;ul class="list"&gt;
+    &lt;!-- &lt;li&gt;xx充電站，免費&lt;/li&gt; --&gt;
+  &lt;/ul&gt;
+
+  &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js
+
+let data = &#91;
+  {
+    Charge: '免費',
+    name: '六角充電站'
+  },
+  {
+    Charge: '投幣式',
+    name: '小花充電站'
+  },
+  {
+    Charge: '投幣式',
+    name: '小明充電站'
+  },
+  {
+    Charge: '投幣式',
+    name: '小天充電站'
+  }
+];
+
+// DOM 拉出全域變數進行管理
+const list = document.querySelector('.list');
+
+
+// 初始化狀態
+function init() {
+  // const list = document.querySelector('.list');
+
+  // 初始化一個空字串
+  let str = '';
+  
+  data.forEach(function(item,index){
+    // console.log(item);
+    
+    // &lt;li&gt;xx充電站，免費&lt;/li&gt;
+    // console.log(`&lt;li&gt;${item.name}，${item.Charge}&lt;/li&gt;`);
+    let content = `&lt;li&gt;${item.name}，${item.Charge}&lt;/li&gt;`;
+    str+=content;
+  
+    // console.log(str);
+  });
+  // console.log(str);
+  
+  // list.innerHTML = `&lt;li&gt;hello world&lt;/li&gt;`;
+  list.innerHTML = str;
+}
+
+init();
+
+// 免費與投幣式事件監聽設計
+const stationFilter = document.querySelector('.filter');
+// console.log(stationFilter);
+
+stationFilter.addEventListener('click',function(e) {
+  // console.log(e);
+  // console.log(e.target.value);
+  // console.log(e.target.value == undefined);
+  if (e.target.value == undefined) {
+    // console.log('你點擊到空的地方');
+    return; // 回傳、強制中斷
+  }
+  // console.log(e.target.value);
+
+  // 事件監聽搭配 if 流程判斷
+  // 初始化一個空字串
+  let str = "";
+  data.forEach(function(item,index) {
+    // console.log(item.Charge);
+    // console.log(e.target.value == item.Charge);
+    if(e.target.value == item.Charge) {
+      str+=`&lt;li&gt;${item.name}，${item.Charge}&lt;/li&gt;`
+    }
+  });
+  // console.log(str);
+  // const list = document.querySelector('.list');
+  list.innerHTML = str;
+
+});</code></pre>
+
+
+
+<h3>篩選條件增加流程</h3>
+
+
+
+<p>本章節 Codepen 範例程式碼網址：<a href="https://codepen.io/hexschool/pen/oNYPPPx?editors=1010" target="_blank" rel="noreferrer noopener">網址</a></p>
+
+
+
+<h3 class="has-background" style="background-color:#ff6663">新增充電站 UI 介面邏輯新增</h3>
+
+
+
+<pre class="wp-block-code"><code>// index.html - 1
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;js-compulsory&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;h1&gt;js-compulsory&lt;/h1&gt;
+  &lt;h2&gt;新增資料&lt;/h2&gt;
+  &lt;input type="text" placeholder="充電站名稱" class="stationName"&gt;
+  &lt;input type="text" placeholder="免費、付費" class="stationCharge"&gt;
+  &lt;input type="button" class="btn" value="儲存"&gt;
+  &lt;h2&gt;資料顯示&lt;/h2&gt;
+  &lt;div class="filter"&gt;
+    &lt;input type="button" value="全部"&gt;
+    &lt;input type="button" value="免費"&gt;
+    &lt;input type="button" value="投幣式"&gt;
+  &lt;/div&gt;
+  &lt;ul class="list"&gt;
+    &lt;!-- &lt;li&gt;xx充電站，免費&lt;/li&gt; --&gt;
+  &lt;/ul&gt;
+
+  &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 1
+
+let data = &#91;
+  {
+    Charge: '免費',
+    name: '六角充電站'
+  },
+  {
+    Charge: '投幣式',
+    name: '小花充電站'
+  },
+  {
+    Charge: '投幣式',
+    name: '小明充電站'
+  },
+  {
+    Charge: '投幣式',
+    name: '小天充電站'
+  }
+];
+
+// DOM 拉出全域變數進行管理
+const list = document.querySelector('.list');
+
+
+// 初始化狀態
+// 預設載入
+function init() {
+  // const list = document.querySelector('.list');
+
+  // 初始化一個空字串
+  let str = '';
+  
+  data.forEach(function(item,index){
+    // console.log(item);
+    
+    // &lt;li&gt;xx充電站，免費&lt;/li&gt;
+    // console.log(`&lt;li&gt;${item.name}，${item.Charge}&lt;/li&gt;`);
+    let content = `&lt;li&gt;${item.name}，${item.Charge}&lt;/li&gt;`;
+    str+=content;
+  
+    // console.log(str);
+  });
+  // console.log(str);
+  
+  // list.innerHTML = `&lt;li&gt;hello world&lt;/li&gt;`;
+  list.innerHTML = str;
+}
+
+init();
+
+// 免費與投幣式事件監聽設計
+// 篩選器邏輯
+const stationFilter = document.querySelector('.filter');
+// console.log(stationFilter);
+
+stationFilter.addEventListener('click',function(e) {
+  // console.log(e);
+  // console.log(e.target.value);
+  // console.log(e.target.value == undefined);
+  if (e.target.value == undefined) {
+    // console.log('你點擊到空的地方');
+    return; // 回傳、強制中斷
+  }
+  // console.log(e.target.value);
+
+  // 事件監聽搭配 if 流程判斷
+  // 初始化一個空字串
+  let str = "";
+  data.forEach(function(item,index) {
+    // console.log(item.Charge);
+    // console.log(e.target.value == item.Charge);
+    if(e.target.value == "全部") {
+      str+= `&lt;li&gt;${item.name}，${item.Charge}&lt;/li&gt;`;
+    }
+    else if(e.target.value == item.Charge) {
+      str+=`&lt;li&gt;${item.name}，${item.Charge}&lt;/li&gt;`;
+    }
+  });
+  // console.log(str);
+  // const list = document.querySelector('.list');
+  list.innerHTML = str;
+
+});
+
+// 新增邏輯
+
+const stationName = document.querySelector('.stationName');
+const stationCharge = document.querySelector('.stationCharge');
+const btn = document.querySelector('.btn');
+// console.log(stationName,stationCharge,btn);
+
+btn.addEventListener('click',function(e){
+  // console.log(e);
+  console.log(stationName.value);
+  console.log(stationCharge.value);
+
+  let obj = {};
+  obj.Charge = stationCharge.value;
+  obj.name = stationName.value;
+  console.log(obj);
+  data.push(obj);
+  init();
+  stationCharge.value = "";
+  stationName.value = "";
+
+});
+
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.html - 2
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;js-compulsory&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;h1&gt;js-compulsory&lt;/h1&gt;
+  &lt;h2&gt;新增資料&lt;/h2&gt;
+  &lt;input type="text" placeholder="充電站名稱" class="stationName"&gt;
+  &lt;!-- &lt;input type="text" placeholder="免費、付費" class="stationCharge"&gt; --&gt;
+  &lt;select class="stationCharge"&gt;
+    &lt;option value="免費"&gt;免費&lt;/option&gt;
+    &lt;option value="投幣式"&gt;投幣式&lt;/option&gt;
+  &lt;/select&gt;
+  &lt;input type="button" class="btn" value="儲存"&gt;
+  &lt;h2&gt;資料顯示&lt;/h2&gt;
+  &lt;div class="filter"&gt;
+    &lt;input type="button" value="全部"&gt;
+    &lt;input type="button" value="免費"&gt;
+    &lt;input type="button" value="投幣式"&gt;
+  &lt;/div&gt;
+  &lt;ul class="list"&gt;
+    &lt;!-- &lt;li&gt;xx充電站，免費&lt;/li&gt; --&gt;
+  &lt;/ul&gt;
+
+  &lt;script src="js/all.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// all.js - 2
+
+let data = &#91;
+  {
+    Charge: '免費',
+    name: '六角充電站'
+  },
+  {
+    Charge: '投幣式',
+    name: '小花充電站'
+  },
+  {
+    Charge: '投幣式',
+    name: '小明充電站'
+  },
+  {
+    Charge: '投幣式',
+    name: '小天充電站'
+  }
+];
+
+// DOM 拉出全域變數進行管理
+const list = document.querySelector('.list');
+
+
+// 初始化狀態
+// 預設載入
+function init() {
+  // const list = document.querySelector('.list');
+
+  // 初始化一個空字串
+  let str = '';
+  
+  data.forEach(function(item,index){
+    // console.log(item);
+    
+    // &lt;li&gt;xx充電站，免費&lt;/li&gt;
+    // console.log(`&lt;li&gt;${item.name}，${item.Charge}&lt;/li&gt;`);
+    let content = `&lt;li&gt;${item.name}，${item.Charge}&lt;/li&gt;`;
+    str+=content;
+  
+    // console.log(str);
+  });
+  // console.log(str);
+  
+  // list.innerHTML = `&lt;li&gt;hello world&lt;/li&gt;`;
+  list.innerHTML = str;
+}
+
+init();
+
+// 免費與投幣式事件監聽設計
+// 篩選器邏輯
+const stationFilter = document.querySelector('.filter');
+// console.log(stationFilter);
+
+stationFilter.addEventListener('click',function(e) {
+  // console.log(e);
+  // console.log(e.target.value);
+  // console.log(e.target.value == undefined);
+  if (e.target.value == undefined) {
+    // console.log('你點擊到空的地方');
+    return; // 回傳、強制中斷
+  }
+  // console.log(e.target.value);
+
+  // 事件監聽搭配 if 流程判斷
+  // 初始化一個空字串
+  let str = "";
+  data.forEach(function(item,index) {
+    // console.log(item.Charge);
+    // console.log(e.target.value == item.Charge);
+    if(e.target.value == "全部") {
+      str+= `&lt;li&gt;${item.name}，${item.Charge}&lt;/li&gt;`;
+    }
+    else if(e.target.value == item.Charge) {
+      str+=`&lt;li&gt;${item.name}，${item.Charge}&lt;/li&gt;`;
+    }
+  });
+  // console.log(str);
+  // const list = document.querySelector('.list');
+  list.innerHTML = str;
+
+});
+
+// 新增邏輯
+
+const stationName = document.querySelector('.stationName');
+const stationCharge = document.querySelector('.stationCharge');
+const btn = document.querySelector('.btn');
+// console.log(stationName,stationCharge,btn);
+
+btn.addEventListener('click',function(e){
+  // console.log(e);
+  console.log(stationName.value);
+  console.log(stationCharge.value);
+
+  let obj = {};
+  obj.Charge = stationCharge.value;
+  obj.name = stationName.value;
+  console.log(obj);
+  data.push(obj);
+  init();
+  stationCharge.value = "免費";
+  stationName.value = "";
+
+});</code></pre>
+
+
+
+<h3>forEach 題型練習小節測驗</h3>
+	</div>
+<!-- .entry-content -->
+
+	<footer class="entry-footer">
+			</footer><!-- .entry-footer -->
+</article><!-- #post-715 -->
+
+	<nav class="navigation post-navigation" aria-label="文章">
+		<h2 class="screen-reader-text">文章導覽</h2>
+		<div class="nav-links">
+<div class="nav-previous"><a href="/wordpress_blog/intro-to-rwd/" rel="prev"><span class="nav-subtitle">Previous:</span> <span class="nav-title">Introduction to Responsive Web Design &#8211; HTML &#038; CSS Tutorial</span></a></div>
+<div class="nav-next"><a href="/wordpress_blog/modern-javascript-1/" rel="next"><span class="nav-subtitle">Next:</span> <span class="nav-title">Modern JavaScript (1)</span></a></div>
+</div>
+	</nav>
+	</main><!-- #main -->
+
+
+	</div></div>
+			
+			<footer id="colophon" class="site-footer">
+
+				
+				<div class="container-fluid">
+					<div class="site-info">
+						<div class="row">
+
+															
+								<div class="col-12 footer-copyright-elements footer-copyright-alignment-center">
+
+									<div class="botiga-credits">&copy; 2022 wordpress_blog. 
+Created by Gee Hsu. 
+<br>Proudly powered by <a rel="nofollow" href="https://athemes.com/theme/botiga/">Botiga</a>
+</div>
+<div class="social-profile">
+<a target="_blank" href="https://www.facebook.com/watergrass0402/"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></i></a><a target="_blank" href="https://github.com/GeeHsu"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></i></a>
+</div>
+								</div>
+														
+						</div>
+					</div>
+				</div>
+<!-- .site-info -->
+
+				
+			</footer><!-- #colophon -->
+
+			
+			<div class="back-to-top visibility-all position-right"><i class="ws-svg-icon"><svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 15l7-7 7 7" stroke-width="3" stroke-linejoin="round"></path></svg></i></div>
+</div>
+<!-- #page -->
+
+
+<script id="botiga-custom-js-extra">
+var botiga = {"ajaxurl":"\/wp-admin\/admin-ajax.php","i18n":{"botiga_sharebox_copy_link":"Copy link","botiga_sharebox_copy_link_copied":"Copied!"}};
+</script>
+<script src="/wordpress_blog/wp-content/themes/botiga/assets/js/custom.min.js?ver=1.1.2" id="botiga-custom-js"></script>
+
+</body>
+</html>

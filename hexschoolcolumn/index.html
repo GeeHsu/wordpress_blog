@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<title>網頁前端養成專欄 &#8211; 來自六角學院 &#8211; wordpress_blog</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="訂閱《wordpress_blog》&raquo; 資訊提供" href="/wordpress_blog/feed/">
+<link rel="alternate" type="application/rss+xml" title="訂閱《wordpress_blog》&raquo; 留言的資訊提供" href="/wordpress_blog/comments/feed/">
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.9.3"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style>img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="/wordpress_blog/wp-includes/css/dist/block-library/style.min.css?ver=5.9.3" media="all">
+<style id="global-styles-inline-css">body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--palette-1-color-0: #212121;--wp--preset--color--palette-1-color-1: #757575;--wp--preset--color--palette-1-color-2: #212121;--wp--preset--color--palette-1-color-3: #212121;--wp--preset--color--palette-1-color-4: #212121;--wp--preset--color--palette-1-color-5: #f5f5f5;--wp--preset--color--palette-1-color-6: #ffffff;--wp--preset--color--palette-1-color-7: #ffffff;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 14px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 18px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--normal: 16px;--wp--preset--font-size--larger: 24px;--wp--preset--font-size--extra-large: 32px;--wp--preset--font-size--huge: 48px;--wp--preset--font-size--gigantic: 64px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}</style>
+<link rel="stylesheet" id="botiga-style-css" href="/wordpress_blog/wp-content/themes/botiga/style.css?ver=1.1.2" media="all">
+<link rel="stylesheet" id="botiga-style-min-css" href="/wordpress_blog/wp-content/themes/botiga/assets/css/styles.min.css?ver=1.1.2" media="all">
+<link rel="stylesheet" id="botiga-custom-styles-css" href="/wordpress_blog/wp-content/uploads/botiga/custom-styles.css?ver=1648804469" media="all">
+<link rel="https://api.w.org/" href="/wordpress_blog/wp-json/">
+<link rel="alternate" type="application/json" href="/wordpress_blog/wp-json/wp/v2/posts/640">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/wordpress_blog/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wordpress_blog/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 5.9.3">
+<link rel="canonical" href="/wordpress_blog/hexschoolcolumn/">
+<link rel="shortlink" href="/wordpress_blog/?p=640">
+<link rel="alternate" type="application/json+oembed" href="/wordpress_blog/wp-json/oembed/1.0/embed?url=%2Fhexschoolcolumn%2F">
+<link rel="alternate" type="text/xml+oembed" href="/wordpress_blog/wp-json/oembed/1.0/embed?url=%2Fhexschoolcolumn%2F&#038;format=xml">
+<link rel="icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png" sizes="32x32">
+<link rel="icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png" sizes="192x192">
+<link rel="apple-touch-icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png">
+<meta name="msapplication-TileImage" content="/wp-content/uploads/2022/03/logo.png">
+	
+</head>
+
+<body class="post-template-default single single-post postid-640 single-format-standard wp-custom-logo wp-embed-responsive header-header_layout_1 blog-single-layout1">
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0.49803921568627"></fefuncr><fefuncg type="table" tablevalues="0 0.49803921568627"></fefuncg><fefuncb type="table" tablevalues="0 0.49803921568627"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.54901960784314 0.98823529411765"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.71764705882353 0.25490196078431"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 0.27843137254902"></fefuncg><fefuncb type="table" tablevalues="0.5921568627451 0.27843137254902"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0"></fefuncr><fefuncg type="table" tablevalues="0 0.64705882352941"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.78039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.94901960784314"></fefuncg><fefuncb type="table" tablevalues="0.35294117647059 0.47058823529412"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.65098039215686 0.40392156862745"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.44705882352941 0.4"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.098039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.66274509803922"></fefuncg><fefuncb type="table" tablevalues="0.84705882352941 0.41960784313725"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg>
+
+<div id="page" class="site">
+
+	<a class="skip-link screen-reader-text" href="#primary">Skip to content</a>
+
+	
+			<div class="top-bar visibility-desktop-only">
+				<div class="container-fluid">
+					<div class="top-bar-inner">
+						<div class="row valign">
+
+															<div class="col header-elements delimiter-none">
+									<div class="header-item top-bar-social"><div class="social-profile">
+<a target="_blank" href="https://www.facebook.com/watergrass0402/"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></i></a><a target="_blank" href="https://github.com/GeeHsu"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></i></a>
+</div></div>								</div>
+																						<div class="col header-elements delimiter-none">
+													
+			<nav class="header-item top-bar-secondary-navigation secondary-navigation">
+				<div class="menu-topbar-container"><ul id="secondary" class="menu">
+<li id="menu-item-143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143"><a href="/wordpress_blog/setup/">網站架設</a></li>
+<li id="menu-item-144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a href="/wordpress_blog/source/">資料來源</a></li>
+<li id="menu-item-262" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-262"><a href="/wordpress_blog/resource/">學習資源</a></li>
+</ul></div>			</nav>
+											</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			
+							
+				<header id="masthead" class="site-header header_layout_1">
+					<div class="container-fluid">
+						<div class="site-header-inner">
+							<div class="row valign">
+								<div class="col-md-5">
+										
+			<nav id="site-navigation" class="main-navigation">
+				<div class="menu-navbar-container"><ul id="primary-menu" class="menu">
+<li id="menu-item-109" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="/wordpress_blog/about/">關於</a></li>
+<li id="menu-item-110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-110">
+<a href="/wordpress_blog/learn/">學習</a><span tabindex="0" class="dropdown-symbol"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512.011 512.011"><path d="M505.755 123.592c-8.341-8.341-21.824-8.341-30.165 0L256.005 343.176 36.421 123.592c-8.341-8.341-21.824-8.341-30.165 0s-8.341 21.824 0 30.165l234.667 234.667a21.275 21.275 0 0015.083 6.251 21.275 21.275 0 0015.083-6.251l234.667-234.667c8.34-8.341 8.34-21.824-.001-30.165z"></path></svg></i></span>
+<ul class="sub-menu">
+	<li id="menu-item-140" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-140"><a href="/wordpress_blog/category/hexschool/">六角學院</a></li>
+	<li id="menu-item-141" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-141"><a href="/wordpress_blog/category/ninja/">The Net Ninja</a></li>
+	<li id="menu-item-483" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-483"><a href="/wordpress_blog/category/youtube/">Youtube</a></li>
+</ul>
+</li>
+<li id="menu-item-111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="/wordpress_blog/linestore/">LINE STORE</a></li>
+</ul></div>			</nav><!-- #site-navigation -->
+											</div>
+								<div class="col-md-2">
+												<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+											</div>
+								<div class="col-md-5 header-elements">
+																	</div>							
+							</div>
+						</div>
+					</div>
+								<div class="header-search-form">
+			<form role="search" method="get" class="search-form" action="/">
+	<label class="screen-reader-text" for="search-form-1">Search&hellip;</label>
+	<input type="search" id="search-form-1" class="search-field" value="" name="s" placeholder="Search &hellip;">
+	<button type="submit" class="search-submit" value="Search"><i class="ws-svg-icon"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 100 14.25 7.125 7.125 0 000-14.25zM2.25 10.875a8.625 8.625 0 1117.25 0 8.625 8.625 0 01-17.25 0z"></path><path fill-rule="evenodd" d="M15.913 15.914a.75.75 0 011.06 0l4.557 4.556a.75.75 0 01-1.06 1.06l-4.557-4.556a.75.75 0 010-1.06z"></path></svg></i></button>
+</form>
+			</div>
+			
+									</header>
+
+										<div class="search-overlay"></div>
+			
+			<div class="botiga-offcanvas-menu">
+				<div class="mobile-header-item">
+					<div class="row">
+						<div class="col">
+										<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+									</div>
+						<div class="col align-right">
+							<a class="mobile-menu-close" href="#"><i class="ws-svg-icon icon-cancel"><svg width="16" height="16" fill="none" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.219.781L.78 2.22 9.562 11l-8.78 8.781 1.437 1.438L11 12.437l8.781 8.782 1.438-1.438L12.437 11l8.782-8.781L19.78.78 11 9.562 2.219.783z"></path></svg></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="mobile-header-item">
+						
+			<nav id="site-navigation" class="main-navigation">
+				<div class="menu-navbar-container"><ul id="primary-menu" class="menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="/wordpress_blog/about/">關於</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-110">
+<a href="/wordpress_blog/learn/">學習</a><span tabindex="0" class="dropdown-symbol"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512.011 512.011"><path d="M505.755 123.592c-8.341-8.341-21.824-8.341-30.165 0L256.005 343.176 36.421 123.592c-8.341-8.341-21.824-8.341-30.165 0s-8.341 21.824 0 30.165l234.667 234.667a21.275 21.275 0 0015.083 6.251 21.275 21.275 0 0015.083-6.251l234.667-234.667c8.34-8.341 8.34-21.824-.001-30.165z"></path></svg></i></span>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-140"><a href="/wordpress_blog/category/hexschool/">六角學院</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-141"><a href="/wordpress_blog/category/ninja/">The Net Ninja</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-483"><a href="/wordpress_blog/category/youtube/">Youtube</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="/wordpress_blog/linestore/">LINE STORE</a></li>
+</ul></div>			</nav><!-- #site-navigation -->
+							</div>
+				<div class="mobile-header-item">
+									<a target="&quot;_blank&quot;" class="button header-item" href="https://www.facebook.com/watergrass0402/">聯絡我</a>
+							</div>			
+			</div>
+			
+							<header id="masthead-mobile" class="site-header mobile-header">
+					<div class="container-fluid">
+						<div class="row valign flex-nowrap">
+							<div class="col-sm-6 col-md-4 col-grow-mobile">
+											<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+										</div>
+							<div class="col-auto col-sm-6 col-md-8 col-grow-mobile header-elements valign align-right">
+																	
+															<a href="#" class="menu-toggle">
+				<i class="ws-svg-icon"><svg width="16" height="11" viewbox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="16" height="1"></rect><rect y="5" width="16" height="1"></rect><rect y="10" width="16" height="1"></rect></svg></i>
+			</a>
+																		</div>						
+						</div>
+					</div>
+								<div class="header-search-form">
+			<form role="search" method="get" class="search-form" action="/">
+	<label class="screen-reader-text" for="search-form-2">Search&hellip;</label>
+	<input type="search" id="search-form-2" class="search-field" value="" name="s" placeholder="Search &hellip;">
+	<button type="submit" class="search-submit" value="Search"><i class="ws-svg-icon"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 100 14.25 7.125 7.125 0 000-14.25zM2.25 10.875a8.625 8.625 0 1117.25 0 8.625 8.625 0 01-17.25 0z"></path><path fill-rule="evenodd" d="M15.913 15.914a.75.75 0 011.06 0l4.557 4.556a.75.75 0 01-1.06 1.06l-4.557-4.556a.75.75 0 010-1.06z"></path></svg></i></button>
+</form>
+			</div>
+			
+									</header>
+						<div class="search-overlay"></div>
+			<div class="header-image"><img src="/wordpress_blog/wp-content/uploads/2022/03/seashore.jpg" width="1920" height="500" alt=""></div>
+<div class="container content-wrapper"><div class="row main-row">			
+	<main id="primary" class="site-main no-sidebar">
+
+		
+
+<article id="post-640" class="post-640 post type-post status-publish format-standard hentry category-hexschool">
+	
+		
+	<header class="entry-header">
+		
+		
+		<h1 class="entry-title">網頁前端養成專欄 &#8211; 來自六角學院</h1>			<div class="entry-meta entry-meta-below delimiter-none">
+<span class="posted-on"><a href="/wordpress_blog/hexschoolcolumn/" rel="bookmark"><time class="entry-date published" datetime="2020-07-04T11:06:00+08:00">2020 年 7 月 4 日</time><time class="updated" datetime="2022-04-06T11:06:46+08:00">2022 年 4 月 6 日</time></a></span><span class="byline"> <span class="author vcard"><a class="url fn n" href="/wordpress_blog/author/gee-hsu/">gee.hsu</a></span></span>
+</div>			</header><!-- .entry-header -->
+
+	
+	<div class="entry-content">
+		
+<h2>課程介紹</h2>
+
+
+
+<p>歡迎你加入此專欄，<br>我們希望透過此專案聊到一些非技術的心法分享，<br>讓各位不論在各種新、中、老手時，都能保持正確的心態持續投入開發。</p>
+
+
+
+<h2>求職就業篇</h2>
+
+
+
+<h3>六角學院如何協助你成為網頁設計師、前端工程師</h3>
+
+
+
+<h4>六角學院 – 邁向前端工程師之路！</h4>
+
+
+
+<p><a rel="noreferrer noopener" href="https://mrliao.gitbooks.io/f2ebook/content/" target="_blank">前端工程師養成手冊</a></p>
+
+
+
+<p><a href="https://quip.com/D59vAxcgG8Qc" target="_blank" rel="noreferrer noopener">共筆文件</a></p>
+
+
+
+<h5>第一關：HTML + CSS 網頁排版</h5>
+
+
+
+<ul>
+<li>書籍推薦：HTML&amp;CSS：網站設計建智優化之道</li>
+<li>線上課程：使用 HTML、CSS開發一個網站</li>
+</ul>
+
+
+
+<h5>第二關：jQuery 設計網頁互動效果</h5>
+
+
+
+<ul>
+<li>書籍推薦：深入淺出 jQuery</li>
+<li>線上課程：使用 jQuery 打造互動性網頁效果</li>
+</ul>
+
+
+
+<h5>第三關：複習 HTML、CSS、jQuery</h5>
+
+
+
+<ul>
+<li>
+<strong>觀念補充</strong>：完成 codecademy 的題目<ul>
+<li><a rel="noreferrer noopener" href="https://www.codecademy.com/learn/learn-html" target="_blank">HTML &amp; CSS</a></li>
+<li><a rel="noreferrer noopener" href="https://www.codecademy.com/catalog/all" target="_blank">jQuery</a></li>
+</ul>
+</li>
+<li>
+<strong>網站架設</strong>：將網頁上傳到&nbsp;<a rel="noreferrer noopener" href="https://www.youtube.com/watch?v=bU0f1IvUcZA" target="_blank">Github Pages</a>，讓你的網站能夠透過網址讓其他人看到</li>
+<li>繼續練習：下載 速記表，自己找五個 jQuery Plugin 套用在網頁上</li>
+</ul>
+
+
+
+<h5>第四關：Responsive 介面練習</h5>
+
+
+
+<ul>
+<li>課程推薦：一變應萬變的響應式網頁設計</li>
+<li>書籍推薦：Responsive Web Design 響應式網頁設計學習手冊</li>
+<li>作業練習：挑一個網頁版型切成響應式設計，切完後請傳給老師、助教進行程式碼檢視<ul>
+<li><a href="https://www.facebook.com/groups/173311386703334/permalink/247893602578445/" target="_blank" rel="noreferrer noopener">甜點電商</a></li>
+<li>篩選器</li>
+</ul>
+</li>
+</ul>
+
+
+
+<h5>第五關：JavaScript 基礎</h5>
+
+
+
+<ul>
+<li>買這本<a rel="noreferrer noopener" href="https://www.tenlong.com.tw/products/9789863478164" target="_blank">書</a>，看到第六章</li>
+<li>完成 codecademy 上面的&nbsp;<a rel="noreferrer noopener" href="https://www.codecademy.com/catalog/all" target="_blank">Introduction to JavaScript</a>&nbsp;、<a href="https://www.codecademy.com/learn/introduction-to-javascript" target="_blank" rel="noreferrer noopener">JavaScript</a>&nbsp;即算過關</li>
+</ul>
+
+
+
+<h5>第六關：AJAX/JSON + Bootstrap</h5>
+
+
+
+<ol>
+<li>請從下面挑一個 JSON API 設計一個作品，作品靈感可瀏覽下方六角學院學生作品，部分學生有整合 Google Map API，也可搭配<a rel="noreferrer noopener" href="https://developers.google.com/maps/documentation/javascript/tutorial?hl=zh-tw" target="_blank">&nbsp;官方文件</a>&nbsp;再看程式碼來加深觀念</li>
+<li>版型部分請試著用 Bootstrap 進行設定<ul>
+<li><a rel="noreferrer noopener" href="https://github.com/public-apis/public-apis" target="_blank">國外 DATA API</a></li>
+<li><a rel="noreferrer noopener" href="https://data.kcg.gov.tw/dataset?res_format=JSON" target="_blank">高雄 OPEN DATA</a></li>
+<li><a rel="noreferrer noopener" href="https://opendata.epa.gov.tw/" target="_blank">opendata.epa</a></li>
+<li>
+<a rel="noreferrer noopener" href="https://data.gov.tw/" target="_blank">OPEN DATA</a>&nbsp;(無支援 cors，需自己將 json 儲存下來，get自己本機)</li>
+<li><a href="http://ptx.transportdata.tw/PTX/" target="_blank" rel="noreferrer noopener">交通 API</a></li>
+</ul>
+</li>
+</ol>
+
+
+
+<h6>六角學院學生作品：</h6>
+
+
+
+<ul>
+<li>
+<a rel="noreferrer noopener" href="https://lynnchen1020.github.io/taipei-emergency-info/" target="_blank">台北災情資訊查詢</a>、<a rel="noreferrer noopener" href="https://github.com/lynnchen1020/taipei-emergency-info/tree/gh-pages" target="_blank">程式碼</a>
+</li>
+<li>
+<a rel="noreferrer noopener" href="https://edenpan1207.github.io/Pet-Adoption-Project/" target="_blank">毛小孩認養平台</a>、<a rel="noreferrer noopener" href="https://github.com/wangchihchien/webproject" target="_blank">程式碼</a>
+</li>
+<li>
+<a rel="noreferrer noopener" href="https://iandays.com/work/fire" target="_blank">高雄違規照相查詢</a>、<a rel="noreferrer noopener" href="https://github.com/Ianpig/work/tree/gh-pages" target="_blank">程式碼</a>
+</li>
+<li>
+<a rel="noreferrer noopener" href="https://dsweih.github.io/taipei_real_estate_search/" target="_blank">台北實價登陸</a>、<a href="https://github.com/Dsweih/taipei_real_estate_search" target="_blank" rel="noreferrer noopener">程式碼</a>
+</li>
+</ul>
+
+
+
+<h6>高雄大學學生作品：</h6>
+
+
+
+<ul><li>
+<a rel="noreferrer noopener" href="http://jingtingzeng.github.io/publicToilet/" target="_blank">高雄市公廁查詢平台</a>、<a href="https://github.com/JingTingZeng/publicToilet/" target="_blank" rel="noreferrer noopener">程式碼</a>
+</li></ul>
+
+
+
+<h5>第七關：Git / Github</h5>
+
+
+
+<p>Git 是一個版本控制語言，多人團隊維護程式碼時，便會使用它來進行程式碼管控。<br>如果你看得懂下面的話，也會實際操作那就暫時 ok 了</p>
+
+
+
+<p>「除了單線進行管控外，也會開 branch 將開發中的功能獨立出來，設計完後再 merge 回去」</p>
+
+
+
+<ul>
+<li>線上課程：掌握 Git、Github 程式時光機</li>
+<li>
+<a rel="noreferrer noopener" href="https://backlog.com/git-tutorial/tw/" target="_blank">教學資源</a>：請把入門與進階都跑過一次流程</li>
+<li>
+<a href="https://github.com/doggy8088/Learn-Git-in-30-days" target="_blank" rel="noreferrer noopener">補充教學</a>：保哥 30 天 Git 教學</li>
+</ul>
+
+
+
+<h5>第八關：設計面試用的作品集，共兩項</h5>
+
+
+
+<ul>
+<li>個人介紹網站 (RWD)<ul>
+<li>儒敬</li>
+<li><a href="https://miaohou.github.io/miao/" target="_blank" rel="noreferrer noopener">miao</a></li>
+<li>Joan</li>
+</ul>
+</li>
+<li>JavaScript 介接第三方服務，下面擇一<ul>
+<li>結合 Google Map API，範例可看這些專題有做 google map 的</li>
+<li><a rel="noreferrer noopener" href="https://quip.com/x5PJAYEgwPXE" target="_blank">Google Map API 範例</a></li>
+<li>配合時事設計查詢介面：<a rel="noreferrer noopener" href="https://beta.hackfoldr.org/TPEDisasterSummary" target="_blank">颱風防災網</a>
+</li>
+</ul>
+</li>
+</ul>
+
+
+
+<h5>第九關：寫一頁式履歷</h5>
+
+
+
+<p>寫履歷前，請先觀看這篇<a rel="noreferrer noopener" href="https://ithelp.ithome.com.tw/articles/10191600" target="_blank">文章</a>，尤其是英文術語大小寫，與中英空白部分務必留意。<br>請在在 cakeresume 服務寫履歷，可以在此觀看<a rel="noreferrer noopener" href="https://www.cakeresume.com/resumes?q=%E5%89%8D%E7%AB%AF" target="_blank">範本</a>，寫完後再讓六角學院的講師為你調整格式</p>
+
+
+
+<h5>第十關：尋找職缺</h5>
+
+
+
+<p>可到下述列表尋找，判斷職缺內容可看<a rel="noreferrer noopener" href="https://www.facebook.com/groups/f2e.tw/permalink/990614534309245/" target="_blank">這篇文章</a>，<br>確認好要找的職缺後可再跟老師進行諮詢：</p>
+
+
+
+<ul>
+<li><a rel="noreferrer noopener" href="https://github.com/f2etw/jobs/issues" target="_blank">F2E TW</a></li>
+<li><a rel="noreferrer noopener" href="https://www.inside.com.tw/job" target="_blank">inside</a></li>
+<li><a rel="noreferrer noopener" href="https://www.yourator.co/" target="_blank">yourator</a></li>
+<li><a href="https://www.104.com.tw/jobs/main/" target="_blank" rel="noreferrer noopener">104</a></li>
+</ul>
+
+
+
+<h5>第十一關：前端常見面試考題</h5>
+
+
+
+<ul>
+<li><a rel="noreferrer noopener" href="https://www.facebook.com/notes/raven-chen/%E9%9D%A2%E8%A9%A6-interview/777918558923906" target="_blank">面試 interview</a></li>
+<li>前端工程師面試問題集</li>
+<li><a href="https://thank78.pixnet.net/blog" target="_blank" rel="noreferrer noopener">面試細節 BLOG</a></li>
+</ul>
+
+
+
+<h5>第十二關：模擬面試</h5>
+
+
+
+<p>可以請六角學院的老師預約模擬面試時間，<br>讓學生了解預期會遇到哪些問題，可看此<a rel="noreferrer noopener" href="https://www.youtube.com/watch?v=7tJBUgKZM8A&amp;lc=z233tpxxzlfyu3snpacdp433ngnb0gxdecy4bakiqzhw03c010c.1521648185842150" target="_blank">範例影片</a>、<a rel="noreferrer noopener" href="https://www.youtube.com/watch?v=5NT1I3581AA" target="_blank">範例影片二</a>、<a href="https://www.youtube.com/watch?v=5dei3RLaG2Q&amp;feature=youtu.be" target="_blank" rel="noreferrer noopener">範例影片三</a></p>
+
+
+
+<h5>第十三關：順利取得 offer !</h5>
+
+
+
+<p>恭喜你走到最後一關，<br>若同時拿到複數 offer 難以抉擇時，此<a rel="noreferrer noopener" href="https://www.facebook.com/sfismy/posts/1579444888741817?notif_t=like&amp;notif_id=1498723791112160" target="_blank">文章</a>提供參考。<br>有時間也可以順道幫忙六角學院的學弟妹們唷！</p>
+
+
+
+<p>講解</p>
+
+
+
+<ul>
+<li>平面設計 &gt; 初級前端設計師、初級網頁設計師</li>
+<li>初期前端工程師 – 邏輯性(資工、資管以外也是可以勝任這份工作)</li>
+<li>後端工程師 node.js、php、.net</li>
+</ul>
+
+
+
+<ol><li>設計一個網頁出來<ol>
+<li>HTML、CSS 設計網頁佈局</li>
+<li>jQuery、JavaScript 動畫效果</li>
+</ol>
+</li></ol>
+
+
+
+<h4>究竟要學到什麼程度，才可達到就業水準？</h4>
+
+
+
+<p>常見的通病，對自己的自信心不足</p>
+
+
+
+<p>有無跟業界去做接軌</p>
+
+
+
+<ol>
+<li>持續地設計作品，彰顯自己的前端能力<ul>
+<li>網頁版型來設計 HTML、CSS 作品</li>
+<li>todolist javascript 練習，設計，設計小應用</li>
+<li>接 API、firebase(儲存資料)</li>
+<li>電子商務等級的 Sass+RWD 版型 (free template)</li>
+</ul>
+</li>
+<li>你在找到第一份工作後，你的對自己的不信任才會慢慢消除</li>
+<li>你對自己產生自信心了，進而昇華到工作自由</li>
+</ol>
+
+
+
+<p>以 todolist 為例，可以從 Github 搜尋 Sample 去找一個參考、學習。</p>
+
+
+
+<h4>你想成為前端工程師，還是前端設計師？兩者的差異是？</h4>
+
+
+
+<p>找職缺前，先問問自己是前端工程師還是前端設計師？</p>
+
+
+
+<ol>
+<li>需不需要設計網頁、使用繪圖軟體?前端設計師、網頁設計師</li>
+<li>初期 JavaScript<ul>
+<li>視覺設計 – 網頁設計師 – 動畫效果 jQuery plugin</li>
+<li>前端工程師 – 資料傳遞、邏輯運算、後端配合，設計出對應的頁面</li>
+</ul>
+</li>
+</ol>
+
+
+
+<p>Front end design &amp; Front end developer</p>
+
+
+
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td>Front end designer</td>
+<td>共同部分</td>
+<td>Front end developer</td>
+</tr>
+<tr>
+<td>UX Design</td>
+<td>HTML Prototypes</td>
+<td>IndexDB</td>
+</tr>
+<tr>
+<td>CSS</td>
+<td>jQuery</td>
+<td>Git</td>
+</tr>
+<tr>
+<td>Image editing</td>
+<td>github</td>
+<td>templating languages</td>
+</tr>
+<tr>
+<td>Sketching</td>
+<td>grunt.js</td>
+<td>AJAX</td>
+</tr>
+<tr>
+<td></td>
+<td>CSS Preprocessor</td>
+<td>node.js</td>
+</tr>
+<tr>
+<td></td>
+<td>JavaScript</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>HTML</td>
+<td></td>
+</tr>
+</tbody></table></figure>
+
+
+
+<h4>與面試官對談時的對話細節</h4>
+
+
+
+<ol>
+<li>遇到不會的問題，可以說：「如果公司有需要可以再研究」，不能說「我不會」就帶過了</li>
+<li>請不要當下刻意簽任何合約，如果當下沒辦法決定請說：「這我可能要考慮一下，等我回去想清楚後再回覆您」</li>
+<li>如果已經有在前端公司就職，並找下份工作時，當有被問到薪資時，請心裡一定要有個數字，測試期多少，正式改多少，保幾個月，這是你對自己所訂的價值</li>
+<li>當面試官提出問題時，請不要讓對方單方向問，也可以盡量找些問題回問，確保雙向溝通</li>
+<li>可以在討論細節中，把話題帶到你有把握的領域去</li>
+<li>一定要找幾個問題問面試官，讓面試官覺得你是有備而來，常見的問法也可以聊到你未來會負責的工作項目、公司部門組成來進行詢問</li>
+<li>請盡量保持你好學向上的心態，讓面試官覺得你能很快進入公司腳步</li>
+<li>要自己提說未來1~2年你期望自己發展是什麼，讓面試官了解你對未來是有期望的</li>
+</ol>
+
+
+
+<h6>被邀請二次面試需要注意的細節</h6>
+
+
+
+<p>如果被邀請到是第二次面試的話，<br>大概的情況會有下面：</p>
+
+
+
+<ol>
+<li>技術門檻夠，讓更高層確認你的適合度 (CEO、經理職位)</li>
+<li>有許多人選，再進行二面進行最終確認，也有可能會有三面</li>
+<li>已經確認想要邀請你進公司，討論福利細節</li>
+</ol>
+
+
+
+<p>但不論是哪一種，都要記住：</p>
+
+
+
+<ul>
+<li>在尚未了解狀況前，不要亂簽合約<br>有些公司會在確認你錄取前最後一腳希望你簽合約(競業、薪水)，<br>如果當下你不能做決定，<br>請說：「這我得再考慮一下，確認好再回復你」</li>
+<li>心底一定要有個薪水區間跟 hr 談判<br>有時候二面時當 CEO 確認你錄取了，<br>可能就會直接請人力資源部的和你談薪水與福利，<br>所以你一定要有個理想 offer 跟對方談判，<br>簡單討論方法就是 你理想月薪3w5，<br>但 hr 只打算給你 3w2，<br>那也可以折衷說試用期 3w2，但過了就 3w5</li>
+</ul>
+
+
+
+<h4>如何撰寫程式履歷？</h4>
+
+
+
+<ol><li>一頁式(A4) 格式履歷<ul><li>乾淨、易於閱讀</li></ul>
+</li></ol>
+
+
+
+<h6>先後順序</h6>
+
+
+
+<ul>
+<li>個人背景、記得留下聯絡方式</li>
+<li>工作經驗<ul><li>不要寫用了什麼技能，而是你替公司增加多少產能與效率，前端開發、管理三人以下團隊、設計出什麼產品、導入什麼技術方式</li></ul>
+</li>
+<li>前端技能 – 可以透過會什麼語言來達到什麼樣的目的<ul><li>會使用 Sass 來規劃 RWD web layout</li></ul>
+</li>
+<li>作品<ul><li>使用 Vue 串接第三方 API – 網址</li></ul>
+</li>
+<li>自我介紹<ul><li>是如何投入前端，以及之前是做什麼，這段期間的投入過程是如何，希望未來可以朝什麼方向去發展，或者是寫人格特質、嘗試新的技術…等。</li></ul>
+</li>
+</ul>
+
+
+
+<p>Mail 發送，請不要寄送 word 檔，建議是 pdf 檔</p>
+
+
+
+<h4>試用期三個月的迷思，該如何從企業文化中提升自身技術能力</h4>
+
+
+
+<p>3w → 4w<br>企業在觀察應爭者的工作狀態<br>你也是在評估你在該企業「能獲得什麼？」</p>
+
+
+
+<ol>
+<li>工作內容不如預期</li>
+<li>工作項目無挑戰</li>
+</ol>
+
+
+
+<p>你在半年內、一年內，你可以在該企業獲得什麼？</p>
+
+
+
+<p>js/jQuery<br>SPA、vue.js、react</p>
+
+
+
+<p>三個月的時間，3~7天，一整個月<br>進入到公司後，你要去評估，「你在這半年~一年的期間」，你想從企業中獲得什麼？</p>
+
+
+
+<p>提供給你更具有挑戰性的題目或產品？</p>
+
+
+
+<ol><li>你又有精進技術的機會<br>沒有的話，每年過一樣的技術活(長久下來是種傷害)</li></ol>
+
+
+
+<p>舉例：<br>2010年底，RWD 響應式設計<br>2011第一季：由自己去推動技術，技術是可以讓公司賺錢的</p>
+
+
+
+<h4>如何規劃自己的工作職涯，讓第二份工作、第三份工作達到百萬年薪</h4>
+
+
+
+<p>如何規劃職涯技術發展，並有效提高薪資與生活品質</p>
+
+
+
+<p>年薪<br>– –<br>第一分初級工作<br>30~45 萬 年薪<br><br>創新公司、大公司<br>創新公司 – 結構夠彈性、新項目<br>大公司 – 福利好、單純維護，沒辦法碰到新項目<br>– 「在工作上可以有哪些工作項目？」<br><br>開發流程 –<br>– –<br>第二間 初級 – 資深工程師<br>50~70 萬 / 年薪<br>藉由人力銀行參考出該年薪需要哪些技能和能力<br>ex:&nbsp;<a rel="noreferrer noopener" href="https://www.104.com.tw/jobs/main/" target="_blank">104</a>、<a rel="noreferrer noopener" href="https://github.com/f2etw/jobs/issues" target="_blank">f2etw / jobs</a><br><br>– 公司實務的需要為主<br>– 多益門檻(自我目標820分)、外國人溝通或書信<br><br>—<br>第三間 資深工程師<br>80~150 萬 / 年薪<br><br>– remote 遠端作業、git<br>– 博弈、電商(金流)<br>– 外商公司、成熟軟體開發公司</p>
+
+
+
+<p><a rel="noreferrer noopener" href="https://www.toptal.com/" target="_blank">toptal</a>&nbsp;– 是一家全球性的遠程公司，它提供自由工作平台，將企業與軟件工程師，設計師和業務顧問聯繫起來。</p>
+
+
+
+<p>更好的薪資、工作和生活品質</p>
+
+
+
+<ul><li>用的哪些語言幫這間公司做了哪些的事情。</li></ul>
+
+
+
+<h4>選擇大公司還是小公司</h4>
+
+
+
+<p>小公司</p>
+
+
+
+<ul>
+<li>公司類型：產品類型、接案類型</li>
+<li>人員組成：設計師、工程師、企劃、行政人員 (會計、行政)</li>
+<li>工作流程</li>
+<li>工作氣氛</li>
+</ul>
+
+
+
+<p>大公司</p>
+
+
+
+<ul>
+<li>公司類型</li>
+<li>人員組成：開發部門、營運部門</li>
+<li>工作流程：以部門主管做決定，有時候會大幅度更改目標、方向</li>
+<li>工作氣氛：看公司文化</li>
+</ul>
+
+
+
+<p>比較</p>
+
+
+
+<ul>
+<li>分工：大公司相對精深、小公司分工沒那麼細</li>
+<li>學習：大公司學得較深、小公司學的廣</li>
+<li>薪水：<ul>
+<li>專案類型 – 40k上下、年終1~2個月</li>
+<li>新創、產品 – 自由、肯接觸新東西、一開始給的薪水比較高一點，風險比較高</li>
+<li>大公司 – 績效不好的部門還是會裁員，相對較好的福利政策、加班不一定會給薪、薪資起薪大幅超過一般的小型公司，基本14個月以上、紅利2個月</li>
+</ul>
+</li>
+</ul>
+
+
+
+<p>現在的環境變化快速，需要不斷的去學習新的東西。</p>
+
+
+
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td></td>
+<td>小公司</td>
+<td>大公司</td>
+</tr>
+<tr>
+<td>分工</td>
+<td>每個人負責事項較多</td>
+<td>工作較單一</td>
+</tr>
+<tr>
+<td>學習</td>
+<td>面相較廣</td>
+<td>可以學得比較深</td>
+</tr>
+<tr>
+<td>薪資</td>
+<td>新創：高月薪，風險也高。<br>接案類型：月薪普通，工作穩定</td>
+<td>薪水較高、福利好</td>
+</tr>
+<tr>
+<td>發展</td>
+<td>穩定發展入股</td>
+<td>升遷內部創業</td>
+</tr>
+<tr>
+<td>其他</td>
+<td>換工作<br>轉職<br>創業</td>
+<td>換工作<br>轉職<br>創業</td>
+</tr>
+</tbody></table></figure>
+
+
+
+<h4>如何解讀廠商徵才職缺內容？</h4>
+
+
+
+<p><a href="https://www.facebook.com/groups/f2e.tw/permalink/990614534309245/?match=5buWIOa0pyDmnbAs5buW" target="_blank" rel="noreferrer noopener">原文來源</a></p>
+
+
+
+<p><strong>【熟悉 JS Framework，jQuery、Vue、Angular、React尤佳】</strong></p>
+
+
+
+<p>有些廠商可能剛接觸前端職業，<br>不了解目前 JavaScript 趨勢，<br>所以就熱門的全寫上，<br>這樣很容易造成求職者的惶恐，<br>就連我自己也只能說對 JQ、NG 算稍微精通，<br>其他也頂多算是玩到建立個 todolist、寫些玩具的程度，<br>根本還沒成熟到敢用在專案上。</p>
+
+
+
+<p>web 廠商要前端會 JavaScript Framework，<br>主要也是希望會下面兩項技能：<br>1.設計網頁互動性動畫效果<br>2.串接 Ajax、Restful API，具系統性地規劃前端架構</p>
+
+
+
+<p>那就建議廠商寫明工作任務，<br>再從履歷、面試來去評斷他是否勝任就好，<br>現在前端框架多到爆炸，<br>我也認識不少純用 Native、冷門框架但強到爆炸，<br>要記住框架只是工具，你就算有關刀，但不會耍也是白搭</p>
+
+
+
+<p><strong>【工程師、設計師職稱傻傻分不清楚】</strong><br>我在輔導學生就業前端的時候，<br>常常遇到職稱寫「前端工程師」，<br>但去面試時卻要求需設計畫面(Mockup)，<br>這真的是比 HR 要找 JAVA 但卻找 JavaScript 工程師還要更雷！<br>所以每次高雄前端社群聚會要結束時，<br>我都會不厭其煩播這個<a rel="noreferrer noopener" href="https://www.lynda.com/Web-Foundations-tutorials/Front-end-design/158666/158685-4.html" target="_blank">影片</a>，<br>主要希望讓會眾了解前端設計師、前端工程師的差異。</p>
+
+
+
+<p>所以這裡建議廠商，<br>如果工作項目需要設計畫面，<br>我自己是建議職稱加上「設計」，<br>例如「網頁設計師」、「前端設計師」。</p>
+
+
+
+<p>如果完全不用設計畫面，那就加個「工程」，<br>例如「網頁工程師」、「前端工程師」。<br>至少能讓求職者有個基本判斷，點閱轉換率也比較高。</p>
+
+
+
+<p>至於有些朋友提說如果只單純切版，<br>不會接 Ajax、SPA 的職稱要叫什麼，<br>我個人覺得叫「前端工程師」也沒什麼不妥，<br>也有在104看過「網頁切版工程師」、「切版工程師」也OK的。</p>
+
+
+
+<p><strong>【懂後端 Framework 尤佳】</strong><br>有幾次幫前端朋友討論職缺的時候，<br>常發現對方濾掉些我認為他們可以勝任且薪水也給到位的公司，<br>細問後才得知他們會對工作項目裡面有寫到「懂某某後端語言尤佳」的條件而卻步，<br>儘管那是加分條件而不是必備條件。<br>我問了幾次徵才廠商，實際狀況只是：<br>(1)擔心與公司後端工程師合作不順 (佔80%)<br>(2)只是現階段大案需要，未來「有可能」需要負責後端(佔20%)</p>
+
+
+
+<p>老實講如果你是一個：<br>1.已經會 Template Language(jade、slim、ejs)，了解 partial、Layout的觀念<br>2.曾經有跟後端工程師合作經驗</p>
+
+
+
+<p>那其實就已經可以跟全部的後端工程師合作了，<br>很多都是大同小異的，<br>每次我跟不同後端工程師合作，<br>只要了解 View 放在哪裡，<br>CSS、JS 的路徑在哪就直接上工改 Code了。</p>
+
+
+
+<p>不過會建議徵才廠商要和面試者主動表達要找的對象是哪種，<br>有些廠商會希望先騙進來，等前端需求沒那麼高再誘導轉後端，<br>不過為了建立長久關係，建議還是事先說清楚會比較好。</p>
+
+
+
+<p><strong>【懂 UI/UX 尤佳】</strong><br>老實說除非是 UI Designer轉前端，<br>或者本身對這塊領域有興趣，<br>否則真的是有點強人所難。</p>
+
+
+
+<p>但經由我和許多徵才廠商詢問過後，<br>他們要的大多是「能夠與美術、後端合作，提出可操作性的前端介面建議」，<br>其實這才是徵才廠商為什麼要找前端工程師的最主要原因。</p>
+
+
+
+<p>每當 UI Designer設計 Mockup 出來後，<br>我都會提出四、五種可行性操作流程，<br>同時瀏覽器兼容性也相當成熟的建議，<br>彼此再激盪出更佳的使用者介面，<br>所以 UI/UX 並非是 UI Designer的工作，<br>我個人認為是全部團隊都該參與的事項，包含PM與後端，</p>
+
+
+
+<p>如果你看到徵才內容條件有「懂 UI/UX 尤佳」，<br>我建議就自己腦補成「能夠與美術、後端合作，提出可操作性的前端介面建議」就好了哈哈。</p>
+
+
+
+<h4>六角學院提供前端就業管道查詢</h4>
+
+
+
+<h2>工作心法篇</h2>
+
+
+
+<h4>瞭解自己的一天的生產力曲線，替自己增加最大產能</h4>
+
+
+
+<p><a rel="noreferrer noopener" href="https://www.inside.com.tw/article/20049-tmnewa-survey01" target="_blank">資源</a></p>
+
+
+
+<p>舉例：<br>11~12 一小時<br>下午1~3點 溝通事情(客戶、行政作業)<br>下午4~6點 寫程式<br>—<br>我很瞭解我在公司寫不出<br>– 邏輯重，晚上沒人會打擾你</p>
+
+
+
+<h4>技術變遷快速，該如何調整心態？</h4>
+
+
+
+<p>技術上的抉擇<br>react、angular、vue.js<br>—&nbsp;<strong>投入的過程才是重要的，是幫助你學習上更加的快速</strong><br><br>肯定的答案<br>– –<br><strong>你希望學那個語言達成什麼目的？</strong><br><br>– –<br>HTML、CSS、JS – 網頁排版<br>D3.js – 透過網頁設計圖形化報表<br>react、angular、vue.js – 想要設計 Single Page Application (SPA)<br><br>Sass、Less 都學會不會有比較有競爭力？<br>– 管理你的 CSS 結構<br>– 學深入，學到他的精隨<br>– 是否要學新的？我學新的是否可以達到更進階的工作項目、提升開發效率，如果有顯著提升，就可以去投入</p>
+
+
+
+<h4>寫程式沒有「標準答案」</h4>
+
+
+
+<p>軟體開發沒有 「標準答案」，只有 「目前你想到最好的方案」<br><br>—<br><br>一定要用某某方式去做？<br><br>「標準答案」，<br>寫程式 「沒有所謂的標準答案」 ，<br>就算那是很爛的解法，但你卻還是把功能寫出來了<br>– –<br>時程壓力 – 寫出來才有辦法優化</p>
+
+
+
+<h4>接外包時需要注意的事項</h4>
+
+
+
+<p>參考老師的個人經驗：</p>
+
+
+
+<h5>該如何估時程與報價？</h5>
+
+
+
+<p>這裡提供兩個方向：</p>
+
+
+
+<blockquote class="wp-block-quote"><p>思考你肯付多少心力在品項上</p></blockquote>
+
+
+
+<p>今天的報價不是看業界行情，<br>也不適看削價競爭，擔心自己報高，業主會找其他廠商，<br>而是你能為項目灌入多少期待與價值？<br>舉裡一個&nbsp;<strong>RWD Parallax Scrolling</strong>&nbsp;的網站來說好了，<br>需要注意的細節多如鴻毛，報價上所提的規格也是，例如說：</p>
+
+
+
+<ol>
+<li>瀏覽器兼容性到哪？多個 IE 版本，細節處理也會加倍</li>
+<li>螢幕解析度是否只能客製熱門解析度？還是大至 4K，小至 320px iPhone SE 都能近乎完美？</li>
+<li>事件處理是否完善？使用者在 mousewheel、touchmove、KeyDown 時是否皆會觸發？</li>
+<li>效能與載入速度 ok 嗎？在行動裝置上替換小圖或使用 lazy loading 減輕負擔</li>
+<li>窗口靠不靠普？設計師是否給你一個 PC 版，就要你變出其他解析度，漸變效率你必須自己通靈？</li>
+</ol>
+
+
+
+<p>以上的種種細節，都在考驗一個前端工程師的專業與耐心，<br><br>所以在報價上的依據，都是 「能夠淋漓盡致地發揮出品牌價值，對自己所設出來的要求與期待」。<br><br>會提這案例是因為有朋友公司外包一個類似專案，請他們找的兼職前端報價，最後報了一個天文數字讓他非常咋舌，但我看了下朋友提供的範例網站後，和她說我覺得還蠻合理的，若是我承接也會是這個價目上下，原因自然如同上面所說。<br><br>說真的不要去參考所謂的 業界行情、怎樣報才是合理，<br><br>你今天碰到的業主他心裡已經有數字了，<br><br>所以你就爆自己覺得這樣的專案內容，你要報多少覺得有賺就好，<br><br>你問一百個業界人，就會得到一百個行情價，這樣真的太累人了<br><br>業界行情根本是個假議題，重點是業主覺得ok，你也賺得爽最重要，<br><br>不要為了練功降低自己格調，事情多又沒賺到錢只會更哭。</p>
+
+
+
+<blockquote class="wp-block-quote"><p>以照工作天來報價</p></blockquote>
+
+
+
+<p>這個真的是下下之策，除非你對報價或市場行情完全沒有概念，<br><br>才建議你選擇這個。<br><br>首先你先自估你 1小時 的鐘點是多少，假設是 200 好了，<br><br>一個工作天是 8小時 = 1600，你預估幾個工作天完成？然後何時可以交件？<br><br>舉個例子，<br><br>一個案子你估 7 工作天完成，每天你也很忙，最多只挪 4小時 做他的專案，<br><br>那麼你就是 向他報價：<br><br>7 工作天 * 1600 = 11,200 (總金額)<br><br>總時數是 7工作天 * 8小時 = 56小時<br>56 / 4 = 14 天 (實際交件天數)<br><br>所以你回應對方的話，報價就是 11,200，工作天 14天，不含假日。<br><br>但有個細節要注意一下，<br><br>有兩個東西的鐘點是比較高的，<br><br>第一個是如果你在職，只有晚上到凌晨幫對方弄，鐘點請算高些，因為干擾到你學習與休息時間。<br><br>第二個如果工作天要含六日的休息日，表示是急件，你理應也要加倍你的鐘點，原因承第一點。</p>
+
+
+
+<h5>該如何訂立合約？</h5>
+
+
+
+<ul>
+<li><a rel="noreferrer noopener" href="https://www.youtube.com/watch?v=W7-WhA0ESrk" target="_blank">訂立合約的影片</a></li>
+<li><a href="https://www.youtube.com/watch?v=drLqqWhkUqg" target="_blank" rel="noreferrer noopener">網頁排版的複雜度時程規劃細節</a></li>
+</ul>
+
+
+
+<p>報價與合約設計細節</p>
+
+
+
+<p><a href="https://www.tasker.com.tw/help-contract_download.html" target="_blank" rel="noreferrer noopener">合約範本</a></p>
+
+
+
+<ol>
+<li>如何找外包(?)</li>
+<li>需求訪談</li>
+<li>報價單</li>
+<li>簽約細節</li>
+</ol>
+
+
+
+<p>沒有任何工作經驗&gt;&gt;不建議找外包<br>廠商需要外包 &gt;&gt; 很趕</p>
+
+
+
+<h5>如何找外包?</h5>
+
+
+
+<p>可以到各大平台去 Po 你的個人能力<br><br>寫部落格、官網的技術文章以及 Facebook 粉絲團<br>– 整理你的學習過程<br>– 今天客戶有問題<br>– 關鍵字搜尋</p>
+
+
+
+<p>B2C<br>– 使用 Facebook 粉絲團、Google搜尋</p>
+
+
+
+<p>花若盛開，蝴蝶自來，人若精彩，天自安排。</p>
+
+
+
+<h5>需求訪談</h5>
+
+
+
+<p>– 網站</p>
+
+
+
+<h5>報價單</h5>
+
+
+
+<ol>
+<li>聯絡方式</li>
+<li>提供服務品項<ul>
+<li>網址、空間</li>
+<li>網站設計開發</li>
+<li>民宿、旅館，延伸出拍攝費用 (40張 10,000)</li>
+</ul>
+</li>
+<li>遊戲規則<ol>
+<li>本報價單有效期間至 109/07/03 止，結案後提供一年平台保固。</li>
+<li>需求若有變更，依實際製作內容重新規劃報價。</li>
+</ol>
+</li>
+<li>簽約</li>
+</ol>
+
+
+
+<p>說明一 –<br><br>保固不等於維護<br><br>保固 = 現有東西有 bug<br><br>維護 = 修改功能，(以不超過總預算 20% 為底線，五個工作天)</p>
+
+
+
+<ul>
+<li>需要保固內容<ul><li>現有開發上的 bug 才需要保固</li></ul>
+</li>
+<li>不需要保固內容<ul>
+<li>新的變數</li>
+<li>不符合當初開發的時空背景</li>
+</ul>
+</li>
+</ul>
+
+
+
+<p>說明二 – 合約內容<br><br>– 將在 3/20 完成第一階段，甲方需支付25%，共多少元<br><br>– 0%，驗收結束後全部付清也有<br><br>– 第一階段簽約後交付 20% 定金<br><br>合約內容雙方討論達成共識即可。<br><br>– – –<br>個人單位<br>– 要請你開發票 (8%)<br>– 開薪資<br><br>驗收完的後兩個禮拜，或者是公司下一次的行政付款時交付款項。<br><br>乙方則有完成專案之公開展示權及複製權–複製權行使前須事先知會甲方。<br>報價：1.5~10 倍</p>
+
+
+
+<p>不偏向甲方不偏向乙方，和平合約。</p>
+
+
+
+<h5>網頁切版報價細節</h5>
+
+
+
+<p>參考網站：<a href="https://www.psd2html.com/order-now.html" target="_blank" rel="noreferrer noopener">psd2html</a></p>
+
+
+
+<h5>web layout 網頁切版</h5>
+
+
+
+<ol>
+<li>網頁版型頁面數量</li>
+<li>動畫效果數量</li>
+<li>特定需求(瀏覽器、特定 framework)</li>
+</ol>
+
+
+
+<h4>如何提升網頁設計師、前端工程師的價值</h4>
+
+
+
+<p><a rel="noreferrer noopener" href="https://goo.gl/vuo5Jd" target="_blank">文章的延伸</a><br><br>當你自學有成、找到第一份初級網頁設計師、前端工程師的工作後，再來該如何逐步漸進提升自身價值？</p>
+
+
+
+<blockquote class="wp-block-quote"><p>認清自己目前的實力</p></blockquote>
+
+
+
+<p>得到複數 offer 的學生常會遇到難以抉擇的選擇題，大部分不外乎有兩種狀況，一種是福利不錯，穩定的大公司，但並非研發而是維護固有產品。另一種是新創公司，技術更新快，較容易經手研發產品核心。<br>在雙方薪水差不多的情況下，諮詢老師該選哪間公司？<br>通常替學生分析完後，老師就會接著說：「你不覺得這兩個職缺點剛好是互補？跑過一輪面試你也清楚目前就只值這個 offer 區間，與其如此不如思考哪間公司能夠給你未來有更好的發展」<br>老師都會建議學生在面試時，要好好詢問會投入的「產品項目」有哪些，然後再去評估是否有興趣，這樣做起來才能享受工作的過程。</p>
+
+
+
+<blockquote class="wp-block-quote"><p>不要滿足、仇視現狀，以為自己掌握全世界</p></blockquote>
+
+
+
+<p>每間公司都有其生存之道，裡如曾經有朋友和老師反應他學了前端覺得很無聊，每次都是 PM 去跟客戶確認好 BS 付費版型，ART 設計好底圖後傳給他，改改文字與圖片就收工，所以不清楚自己的價值到底在哪，做了兩年也沒加薪，想要轉行。<br>老師的回答是：待在一個業務比工程師多十倍的公司，你覺得老闆會重視哪個部門？你應該去找能提升你前端功力與瞭解價值的公司才對。<br>要知道你去一個在資源權重上輕如鴻毛的公司，自然沒辦法對你職涯有更好的發展。</p>
+
+
+
+<blockquote class="wp-block-quote"><p>發掘自己想投入的方向，花比其他人十倍甚至一百倍的時間成為該領域的專家</p></blockquote>
+
+
+
+<p>當你找到第一份網頁設計/前端工程的工作後，接下來你必須放寬視野，從中找到你想精進的技術，不要以為前端價值就只有在網頁上呈現內容而已。<br>前端技術發展飛速，工作內容也變得非常多樣化，這裡老師也拋磚引玉列舉出一些前端工作經驗：</p>
+
+
+
+<ol>
+<li>品牌設計公司：為標示品牌獨特性，在介面設計上也極致追求，技術追求於 SVG、Canvas、Parallax Scrolling 各種技巧</li>
+<li>博弈與遊戲研發：橋牌、骰寶、拉霸各種你想像到能賭得東西，都可用 web 介面來開發，最近常被廠商要會懂 HTML5 API、WebGL、Canvas 來研發相關產品，可見需求量極大</li>
+<li>資料視覺化：利用網頁技術設計圖表內容，例如地圖視覺化，讓 user 一目了然用地圖與色塊得知目前的房價比重，或是開發全球地圖，顯示各經銷點上面的訂單與銷售量，技術會使用到類似 D3.JS、Google Map API</li>
+<li>3D與VR技術：透過 WebGL、three.js 設計業界領域的模型設計(賽車、建模用)，現在 Mozilla 更是推出 WebVR 技術，讓你設計的場景可用 VR 來呈現</li>
+<li>前後端通吃：現在 JavaScript 已有辦法使用 isomorphic 進行前後端整合開發，當前端摸熟，也可考慮用所學的 JavaScript 投入後端</li>
+<li>電商優化：與行銷、後端部門合作，精通各種分析、廣告服務的 event 投放，優化使用者體驗與 request 數量，大幅提升訂單轉化率與降低伺服器成本</li>
+</ol>
+
+
+
+<p>以上所列舉工作內容老實說只是冰山一角，但每個領域都足夠你投入個一年半載了，所以好好挑條道路，盡情揮灑你的才華吧！</p>
+
+
+
+<blockquote class="wp-block-quote"><p>不畫地自限，跨領域成為 T、卍型人才</p></blockquote>
+
+
+
+<p>當你專精一個技術時，有天想要推動技術複雜性更高的項目便自然會覺得有瓶頸。<br>身為面對技術變化快速也能坦然以對，並立即掌握的 F2E 來說，研究一個新的領域也是駕輕就熟。<br>所跨領域也不用一定要技術層面，也可以是管理、商業等等，<br>例如你看到一個可以與傳產合作並創造出新價值的機會，身為技術底的你自然有辦法設計出你要的平台出來。<br>或者跟其他夥伴一塊組隊，共同入股成立公司，瞭解經營一間公司需要注意哪些細節。<br>或是成為一個 Growth Hacker，掌握各種廣告投放技術與 marketing 技巧，以後想推動各種產品與活動都能找到對的受眾進行銷售。<br>方向真的非常非常的多，老師會自稱自己是「前端工程師」，但在工作歷練下，如果專案需要老師成為純 PM 時，老師也能將專案控得很好，想要策展時，老師也了解如何規劃出各種提案，已達成各種 KPI。<br>每個工作內容在技能比重上都會有所不同，但也能讓你能夠挑戰各種關卡，享受破關的過程！</p>
+
+
+
+<blockquote class="wp-block-quote"><p>總結</p></blockquote>
+
+
+
+<p>每位老師培育出來的前端，老師都會和他們說「未來的你們擁有無限可能」，原因自然是上面老師所列的幾點，<br>這篇文章敬 憧憬想要成為前端、目前已經在坑裡、正準備想成為 T、卍型人才的所有 F2E</p>
+
+
+
+<h4>網頁設計師如何精進設計</h4>
+
+
+
+<h5>合作困境</h5>
+
+
+
+<ul><li>案例：<ul>
+<li>工程師不能接受使用…</li>
+<li>不符合規範 (網頁框架規範、iOS、Material Design)</li>
+<li>認知差異<ul>
+<li>可行性</li>
+<li>誤解</li>
+</ul>
+</li>
+</ul>
+</li></ul>
+
+
+
+<p>工程師不能接受使用表格排版、執行流程(技術上的限制)</p>
+
+
+
+<h5>設計技術本身的問題</h5>
+
+
+
+<ul>
+<li>設計語言較為抽象 – 閱讀 UI 設計規範</li>
+<li>初期缺乏文件 – 使用現成的文件</li>
+<li>流程規劃問題 – User Story</li>
+</ul>
+
+
+
+<p>閱讀設計規範</p>
+
+
+
+<ul><li>UI Style Guide<ul>
+<li><a href="https://material.io/" target="_blank" rel="noreferrer noopener">Google Material Design</a></li>
+<li><a rel="noreferrer noopener" href="https://findguidelin.es/" target="_blank">Find Guidelines</a></li>
+</ul>
+</li></ul>
+
+
+
+<p>使用現成文件</p>
+
+
+
+<ul><li>Web Framework<ul><li>Bootstrap</li></ul>
+</li></ul>
+
+
+
+<p>User Story</p>
+
+
+
+<p>假設要做一個購物頁面</p>
+
+
+
+<ul>
+<li>買家<ul>
+<li>買家不需要註冊</li>
+<li>買家可以選購產品<ul>
+<li>可以選擇類別、數量</li>
+<li>需要加購</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>管理者<ul>
+<li>查看訂單</li>
+<li>…</li>
+</ul>
+</li>
+</ul>
+
+
+
+<h5>訓練自己成為專業的網頁設計師</h5>
+
+
+
+<ul>
+<li>了解設計規範</li>
+<li>學習框架</li>
+<li>參與規劃</li>
+</ul>
+
+
+
+<h2>工具篇</h2>
+
+
+
+<h4>繪圖軟體選擇 – Sketch</h4>
+
+
+
+<p>為什麼使用 Sketch</p>
+
+
+
+<ul>
+<li>輸出的格式接近網頁可執行的格式</li>
+<li>套件多方便 (一鍵輸出)</li>
+<li>整合工程師思維 (插入 JSON)</li>
+</ul>
+
+
+
+<h4>工作轉換的訣竅</h4>
+
+
+
+<ol>
+<li>先找教學看一次有什麼功能</li>
+<li>從目前的習慣做轉移</li>
+<li>尋求目前的困擾點的解決方案</li>
+</ol>
+
+
+
+<p>軟體 (繪圖、文字編輯器、作業系統)</p>
+
+
+
+<ul>
+<li>Adobe → Sketch</li>
+<li>Sublime Text → Atom → VSCode</li>
+<li>Windows → Mac<ul>
+<li>excel → google sheet</li>
+<li>word → markdown</li>
+<li>ppt → keynote</li>
+</ul>
+</li>
+</ul>
+	</div>
+<!-- .entry-content -->
+
+	<footer class="entry-footer">
+			</footer><!-- .entry-footer -->
+</article><!-- #post-640 -->
+
+	<nav class="navigation post-navigation" aria-label="文章">
+		<h2 class="screen-reader-text">文章導覽</h2>
+		<div class="nav-links">
+<div class="nav-previous"><a href="/wordpress_blog/rwd-hexschool/" rel="prev"><span class="nav-subtitle">Previous:</span> <span class="nav-title">一變應萬變的響應式網頁設計</span></a></div>
+<div class="nav-next"><a href="/wordpress_blog/javascript-beginner/" rel="next"><span class="nav-subtitle">Next:</span> <span class="nav-title">JavaScript 入門篇 &#8211; 學徒的試煉</span></a></div>
+</div>
+	</nav>
+	</main><!-- #main -->
+
+
+	</div></div>
+			
+			<footer id="colophon" class="site-footer">
+
+				
+				<div class="container-fluid">
+					<div class="site-info">
+						<div class="row">
+
+															
+								<div class="col-12 footer-copyright-elements footer-copyright-alignment-center">
+
+									<div class="botiga-credits">&copy; 2022 wordpress_blog. 
+Created by Gee Hsu. 
+<br>Proudly powered by <a rel="nofollow" href="https://athemes.com/theme/botiga/">Botiga</a>
+</div>
+<div class="social-profile">
+<a target="_blank" href="https://www.facebook.com/watergrass0402/"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></i></a><a target="_blank" href="https://github.com/GeeHsu"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></i></a>
+</div>
+								</div>
+														
+						</div>
+					</div>
+				</div>
+<!-- .site-info -->
+
+				
+			</footer><!-- #colophon -->
+
+			
+			<div class="back-to-top visibility-all position-right"><i class="ws-svg-icon"><svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 15l7-7 7 7" stroke-width="3" stroke-linejoin="round"></path></svg></i></div>
+</div>
+<!-- #page -->
+
+
+<script id="botiga-custom-js-extra">
+var botiga = {"ajaxurl":"\/wp-admin\/admin-ajax.php","i18n":{"botiga_sharebox_copy_link":"Copy link","botiga_sharebox_copy_link_copied":"Copied!"}};
+</script>
+<script src="/wordpress_blog/wp-content/themes/botiga/assets/js/custom.min.js?ver=1.1.2" id="botiga-custom-js"></script>
+
+</body>
+</html>

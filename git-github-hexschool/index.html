@@ -1,0 +1,1480 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<title>掌握 Git 與 GitHub 版本控制 &#8211; wordpress_blog</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="訂閱《wordpress_blog》&raquo; 資訊提供" href="/wordpress_blog/feed/">
+<link rel="alternate" type="application/rss+xml" title="訂閱《wordpress_blog》&raquo; 留言的資訊提供" href="/wordpress_blog/comments/feed/">
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.9.3"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style>img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="/wordpress_blog/wp-includes/css/dist/block-library/style.min.css?ver=5.9.3" media="all">
+<style id="global-styles-inline-css">body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--palette-1-color-0: #212121;--wp--preset--color--palette-1-color-1: #757575;--wp--preset--color--palette-1-color-2: #212121;--wp--preset--color--palette-1-color-3: #212121;--wp--preset--color--palette-1-color-4: #212121;--wp--preset--color--palette-1-color-5: #f5f5f5;--wp--preset--color--palette-1-color-6: #ffffff;--wp--preset--color--palette-1-color-7: #ffffff;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 14px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 18px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--normal: 16px;--wp--preset--font-size--larger: 24px;--wp--preset--font-size--extra-large: 32px;--wp--preset--font-size--huge: 48px;--wp--preset--font-size--gigantic: 64px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}</style>
+<link rel="stylesheet" id="botiga-style-css" href="/wordpress_blog/wp-content/themes/botiga/style.css?ver=1.1.2" media="all">
+<link rel="stylesheet" id="botiga-style-min-css" href="/wordpress_blog/wp-content/themes/botiga/assets/css/styles.min.css?ver=1.1.2" media="all">
+<link rel="stylesheet" id="botiga-custom-styles-css" href="/wordpress_blog/wp-content/uploads/botiga/custom-styles.css?ver=1648804469" media="all">
+<link rel="https://api.w.org/" href="/wordpress_blog/wp-json/">
+<link rel="alternate" type="application/json" href="/wordpress_blog/wp-json/wp/v2/posts/648">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/wordpress_blog/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wordpress_blog/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 5.9.3">
+<link rel="canonical" href="/wordpress_blog/git-github-hexschool/">
+<link rel="shortlink" href="/wordpress_blog/?p=648">
+<link rel="alternate" type="application/json+oembed" href="/wordpress_blog/wp-json/oembed/1.0/embed?url=%2Fgit-github-hexschool%2F">
+<link rel="alternate" type="text/xml+oembed" href="/wordpress_blog/wp-json/oembed/1.0/embed?url=%2Fgit-github-hexschool%2F&#038;format=xml">
+<link rel="icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png" sizes="32x32">
+<link rel="icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png" sizes="192x192">
+<link rel="apple-touch-icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png">
+<meta name="msapplication-TileImage" content="/wp-content/uploads/2022/03/logo.png">
+	
+</head>
+
+<body class="post-template-default single single-post postid-648 single-format-standard wp-custom-logo wp-embed-responsive header-header_layout_1 blog-single-layout1">
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0.49803921568627"></fefuncr><fefuncg type="table" tablevalues="0 0.49803921568627"></fefuncg><fefuncb type="table" tablevalues="0 0.49803921568627"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.54901960784314 0.98823529411765"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.71764705882353 0.25490196078431"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 0.27843137254902"></fefuncg><fefuncb type="table" tablevalues="0.5921568627451 0.27843137254902"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0"></fefuncr><fefuncg type="table" tablevalues="0 0.64705882352941"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.78039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.94901960784314"></fefuncg><fefuncb type="table" tablevalues="0.35294117647059 0.47058823529412"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.65098039215686 0.40392156862745"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.44705882352941 0.4"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.098039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.66274509803922"></fefuncg><fefuncb type="table" tablevalues="0.84705882352941 0.41960784313725"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg>
+
+<div id="page" class="site">
+
+	<a class="skip-link screen-reader-text" href="#primary">Skip to content</a>
+
+	
+			<div class="top-bar visibility-desktop-only">
+				<div class="container-fluid">
+					<div class="top-bar-inner">
+						<div class="row valign">
+
+															<div class="col header-elements delimiter-none">
+									<div class="header-item top-bar-social"><div class="social-profile">
+<a target="_blank" href="https://www.facebook.com/watergrass0402/"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></i></a><a target="_blank" href="https://github.com/GeeHsu"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></i></a>
+</div></div>								</div>
+																						<div class="col header-elements delimiter-none">
+													
+			<nav class="header-item top-bar-secondary-navigation secondary-navigation">
+				<div class="menu-topbar-container"><ul id="secondary" class="menu">
+<li id="menu-item-143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143"><a href="/wordpress_blog/setup/">網站架設</a></li>
+<li id="menu-item-144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a href="/wordpress_blog/source/">資料來源</a></li>
+<li id="menu-item-262" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-262"><a href="/wordpress_blog/resource/">學習資源</a></li>
+</ul></div>			</nav>
+											</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			
+							
+				<header id="masthead" class="site-header header_layout_1">
+					<div class="container-fluid">
+						<div class="site-header-inner">
+							<div class="row valign">
+								<div class="col-md-5">
+										
+			<nav id="site-navigation" class="main-navigation">
+				<div class="menu-navbar-container"><ul id="primary-menu" class="menu">
+<li id="menu-item-109" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="/wordpress_blog/about/">關於</a></li>
+<li id="menu-item-110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-110">
+<a href="/wordpress_blog/learn/">學習</a><span tabindex="0" class="dropdown-symbol"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512.011 512.011"><path d="M505.755 123.592c-8.341-8.341-21.824-8.341-30.165 0L256.005 343.176 36.421 123.592c-8.341-8.341-21.824-8.341-30.165 0s-8.341 21.824 0 30.165l234.667 234.667a21.275 21.275 0 0015.083 6.251 21.275 21.275 0 0015.083-6.251l234.667-234.667c8.34-8.341 8.34-21.824-.001-30.165z"></path></svg></i></span>
+<ul class="sub-menu">
+	<li id="menu-item-140" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-140"><a href="/wordpress_blog/category/hexschool/">六角學院</a></li>
+	<li id="menu-item-141" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-141"><a href="/wordpress_blog/category/ninja/">The Net Ninja</a></li>
+	<li id="menu-item-483" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-483"><a href="/wordpress_blog/category/youtube/">Youtube</a></li>
+</ul>
+</li>
+<li id="menu-item-111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="/wordpress_blog/linestore/">LINE STORE</a></li>
+</ul></div>			</nav><!-- #site-navigation -->
+											</div>
+								<div class="col-md-2">
+												<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+											</div>
+								<div class="col-md-5 header-elements">
+																	</div>							
+							</div>
+						</div>
+					</div>
+								<div class="header-search-form">
+			<form role="search" method="get" class="search-form" action="/">
+	<label class="screen-reader-text" for="search-form-1">Search&hellip;</label>
+	<input type="search" id="search-form-1" class="search-field" value="" name="s" placeholder="Search &hellip;">
+	<button type="submit" class="search-submit" value="Search"><i class="ws-svg-icon"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 100 14.25 7.125 7.125 0 000-14.25zM2.25 10.875a8.625 8.625 0 1117.25 0 8.625 8.625 0 01-17.25 0z"></path><path fill-rule="evenodd" d="M15.913 15.914a.75.75 0 011.06 0l4.557 4.556a.75.75 0 01-1.06 1.06l-4.557-4.556a.75.75 0 010-1.06z"></path></svg></i></button>
+</form>
+			</div>
+			
+									</header>
+
+										<div class="search-overlay"></div>
+			
+			<div class="botiga-offcanvas-menu">
+				<div class="mobile-header-item">
+					<div class="row">
+						<div class="col">
+										<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+									</div>
+						<div class="col align-right">
+							<a class="mobile-menu-close" href="#"><i class="ws-svg-icon icon-cancel"><svg width="16" height="16" fill="none" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.219.781L.78 2.22 9.562 11l-8.78 8.781 1.437 1.438L11 12.437l8.781 8.782 1.438-1.438L12.437 11l8.782-8.781L19.78.78 11 9.562 2.219.783z"></path></svg></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="mobile-header-item">
+						
+			<nav id="site-navigation" class="main-navigation">
+				<div class="menu-navbar-container"><ul id="primary-menu" class="menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="/wordpress_blog/about/">關於</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-110">
+<a href="/wordpress_blog/learn/">學習</a><span tabindex="0" class="dropdown-symbol"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512.011 512.011"><path d="M505.755 123.592c-8.341-8.341-21.824-8.341-30.165 0L256.005 343.176 36.421 123.592c-8.341-8.341-21.824-8.341-30.165 0s-8.341 21.824 0 30.165l234.667 234.667a21.275 21.275 0 0015.083 6.251 21.275 21.275 0 0015.083-6.251l234.667-234.667c8.34-8.341 8.34-21.824-.001-30.165z"></path></svg></i></span>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-140"><a href="/wordpress_blog/category/hexschool/">六角學院</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-141"><a href="/wordpress_blog/category/ninja/">The Net Ninja</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-483"><a href="/wordpress_blog/category/youtube/">Youtube</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="/wordpress_blog/linestore/">LINE STORE</a></li>
+</ul></div>			</nav><!-- #site-navigation -->
+							</div>
+				<div class="mobile-header-item">
+									<a target="&quot;_blank&quot;" class="button header-item" href="https://www.facebook.com/watergrass0402/">聯絡我</a>
+							</div>			
+			</div>
+			
+							<header id="masthead-mobile" class="site-header mobile-header">
+					<div class="container-fluid">
+						<div class="row valign flex-nowrap">
+							<div class="col-sm-6 col-md-4 col-grow-mobile">
+											<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+										</div>
+							<div class="col-auto col-sm-6 col-md-8 col-grow-mobile header-elements valign align-right">
+																	
+															<a href="#" class="menu-toggle">
+				<i class="ws-svg-icon"><svg width="16" height="11" viewbox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="16" height="1"></rect><rect y="5" width="16" height="1"></rect><rect y="10" width="16" height="1"></rect></svg></i>
+			</a>
+																		</div>						
+						</div>
+					</div>
+								<div class="header-search-form">
+			<form role="search" method="get" class="search-form" action="/">
+	<label class="screen-reader-text" for="search-form-2">Search&hellip;</label>
+	<input type="search" id="search-form-2" class="search-field" value="" name="s" placeholder="Search &hellip;">
+	<button type="submit" class="search-submit" value="Search"><i class="ws-svg-icon"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 100 14.25 7.125 7.125 0 000-14.25zM2.25 10.875a8.625 8.625 0 1117.25 0 8.625 8.625 0 01-17.25 0z"></path><path fill-rule="evenodd" d="M15.913 15.914a.75.75 0 011.06 0l4.557 4.556a.75.75 0 01-1.06 1.06l-4.557-4.556a.75.75 0 010-1.06z"></path></svg></i></button>
+</form>
+			</div>
+			
+									</header>
+						<div class="search-overlay"></div>
+			<div class="header-image"><img src="/wordpress_blog/wp-content/uploads/2022/03/seashore.jpg" width="1920" height="500" alt=""></div>
+<div class="container content-wrapper"><div class="row main-row">			
+	<main id="primary" class="site-main no-sidebar">
+
+		
+
+<article id="post-648" class="post-648 post type-post status-publish format-standard hentry category-hexschool">
+	
+		
+	<header class="entry-header">
+		
+		
+		<h1 class="entry-title">掌握 Git 與 GitHub 版本控制</h1>			<div class="entry-meta entry-meta-below delimiter-none">
+<span class="posted-on"><a href="/wordpress_blog/git-github-hexschool/" rel="bookmark"><time class="entry-date published" datetime="2021-01-13T11:18:00+08:00">2021 年 1 月 13 日</time><time class="updated" datetime="2022-04-06T11:18:23+08:00">2022 年 4 月 6 日</time></a></span><span class="byline"> <span class="author vcard"><a class="url fn n" href="/wordpress_blog/author/gee-hsu/">gee.hsu</a></span></span>
+</div>			</header><!-- .entry-header -->
+
+	
+	<div class="entry-content">
+		
+<h4>學到</h4>
+
+
+
+<ul>
+<li>掌握 Git 版本控制工作流程</li>
+<li>瞭解使用 Git / Github 管理程式碼</li>
+<li>瞭解如何創建分支，並與多位工程師團隊協作</li>
+</ul>
+
+
+
+<h2>第１節：環境安裝篇</h2>
+
+
+
+<h3>01.Git 環境安裝</h3>
+
+
+
+<p>資源</p>
+
+
+
+<ul>
+<li><a rel="noreferrer noopener" href="https://git-scm.com/" target="_blank">Git 官網</a></li>
+<li><a href="https://iterm2.com/" target="_blank" rel="noreferrer noopener">Mac 推薦終端機 iTerm2</a></li>
+</ul>
+
+
+
+<h4>安裝 Git、找尋適合的命令提示字元</h4>
+
+
+
+<p>Windows 使用 Git Bash 去練習。<br>Mac 使用終端機去練習。</p>
+
+
+
+<h4>查詢是否安裝成功</h4>
+
+
+
+<pre class="wp-block-code"><code>// Git Bash
+// 指令 - git version
+$ git version
+git version 2.28.0.windows.1</code></pre>
+
+
+
+<h3>02.Windows – 命令提示字元教學(上)</h3>
+
+
+
+<h4>使用 Git Bash 練習。</h4>
+
+
+
+<p>常用語法</p>
+
+
+
+<ol>
+<li>移動路徑：cd 路徑</li>
+<li>回上一層：cd ..</li>
+<li>展開列表：ls</li>
+<li>開新資料夾：mkdir 資料夾名稱</li>
+<li>開新檔案：touch 檔案名稱</li>
+</ol>
+
+
+
+<p>使用滑鼠拖曳檔案，移動到檔案位置。</p>
+
+
+
+<pre class="wp-block-code"><code>$ cd 滑鼠拖曳檔案</code></pre>
+
+
+
+<h3>03.Windows – 命令提示字元教學(下)</h3>
+
+
+
+<p>承上，常用語法 4、5</p>
+
+
+
+<pre class="wp-block-code"><code>// 新增資料夾
+$ mkdir css
+// 移動到 css 資料夾
+$ cd css
+// 新增檔案
+$ touch style.css</code></pre>
+
+
+
+<h3>04.基本 command 指令</h3>
+
+
+
+<p>備註：開新檔案與展開列表在 git bash 上都可以執行，但是在 windows 預設的命令提示字元沒辦法使用，所以還是都是使用 git bash 來進行操作。</p>
+
+
+
+<p>全部課程只會學五個小指令，內容如下：</p>
+
+
+
+<ol>
+<li>移動路徑：cd 路徑</li>
+<li>回上一層：cd ..</li>
+<li>展開列表：ls</li>
+<li>開新資料夾：mkdir 資料夾名稱</li>
+<li>開新檔案：touch 檔案名稱</li>
+</ol>
+
+
+
+<p>PS：cd ..，是兩個..，不是一個.。</p>
+
+
+
+<h3>05.MAC 終端機高亮</h3>
+
+
+
+<p><a rel="noreferrer noopener" href="https://ohmyz.sh/" target="_blank">Oh My Zsh</a>&nbsp;–&nbsp;<a href="https://gist.github.com/kevin-smets/8568070" target="_blank" rel="noreferrer noopener">相關操作教學連結</a></p>
+
+
+
+<h3>06.MAC – 命令提示字元教學 (上)</h3>
+
+
+
+<ul>
+<li>移動路徑：cd 路徑</li>
+<li>回上一層：cd ..</li>
+<li>展開列表：ls</li>
+</ul>
+
+
+
+<h3>07.MAC – 命令提示字元教學 (下)</h3>
+
+
+
+<ul>
+<li>開新資料夾：mkdir 資料夾名稱</li>
+<li>開新檔案：touch 檔案名稱</li>
+</ul>
+
+
+
+<h3>08.Git 環境設定</h3>
+
+
+
+<pre class="wp-block-code"><code>git config --list
+
+git config --global user.email "你的email"
+git config --global user.name "你的名字"</code></pre>
+
+
+
+<h2>第２節：Git 基礎操作篇</h2>
+
+
+
+<h3>09.前言提要</h3>
+
+
+
+<p>git 教學大綱圖</p>
+
+
+
+<figure class="wp-block-image size-full"><img width="956" height="594" src="/wordpress_blog/wp-content/uploads/2022/04/git教學大綱圖.png" alt="" class="wp-image-650"><figcaption>Git 教學大綱圖</figcaption></figure>
+
+
+
+<h3>10.git init – 安裝數據庫</h3>
+
+
+
+<h4>在本地端開啟數據庫</h4>
+
+
+
+<ol>
+<li>新增一個資料夾 project</li>
+<li>移動到資料夾位置 cd project</li>
+<li>輸入指令：git init</li>
+<li>如何判斷已經開啟數據庫<ul>
+<li>Git Bash 命令提示字元檔案位置出現 master</li>
+<li>資料夾內隱藏的項目出現 .git 檔案資料夾</li>
+</ul>
+</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// 1.新增一個資料夾 project
+// 2.cd project
+// 3.輸入指令：git init
+// 4.出現master、隱藏的 .git 檔案</code></pre>
+
+
+
+<h3>11.工作目錄、加入索引、提交版本流程介紹</h3>
+
+
+
+<p>工作目錄 add→ 索引 commit→ 本地數據庫<br>working directory add→ staging area commit→ Local Repository</p>
+
+
+
+<h4>Github 講解</h4>
+
+
+
+<p>17 commits 可以想像說更新了17次的資料上去。<br><br>commits 可以記錄更新的時間、註解更新內容的標題，變動的檔案有幾個，以及程式碼新增、刪減的地方。<br><br>commit – 提交<br>提交：git commit</p>
+
+
+
+<h3>12.基礎指令教學流程</h3>
+
+
+
+<ol>
+<li>建立新的資料夾 project</li>
+<li>新增新的數據庫 git init<ul><li>Git Bash 命令提示字元檔案位置出現 master</li></ul>
+</li>
+<li>新增檔案<ul>
+<li>touch index.html</li>
+<li>touch a.txt</li>
+</ul>
+</li>
+<li>新增一個資料夾 mkdir css</li>
+<li>移動到 css 資料夾位置 cd css</li>
+<li>新增一個檔案 touch all.css</li>
+<li>回到上一層 cd ..</li>
+<li>全部檔案加到索引 git add .</li>
+<li>檢查狀態 git status<ul><li>等待提交</li></ul>
+</li>
+<li>再新增檔案 b.txt</li>
+<li>檢查狀態 git status<ul>
+<li>等待提交</li>
+<li>未追蹤</li>
+</ul>
+</li>
+<li>單一檔案加到索引 git add b.txt</li>
+<li>檢查狀態 git status<ul><li>等待提交</li></ul>
+</li>
+<li>提交更新 git commit -m ‘update1’</li>
+<li>檢查狀態 git status<ul><li>無需提交，工作目錄是乾淨的</li></ul>
+</li>
+<li>修改 index.html 檔案內容</li>
+<li>檢查狀態 git status<ul><li>已更改</li></ul>
+</li>
+<li>新增檔案 touch index2.html</li>
+<li>檢查狀態 git status<ul>
+<li>已更改</li>
+<li>未追蹤</li>
+</ul>
+</li>
+<li>全部加到索引 git add .</li>
+<li>檢查狀態 git status<ul><li>等待提交</li></ul>
+</li>
+<li>提交更新 git commit -m ‘update index’</li>
+<li>檢查狀態 git status<ul><li>無需提交，工作目錄是乾淨的</li></ul>
+</li>
+<li>查詢紀錄 git log</li>
+</ol>
+
+
+
+<p>PS：Mac iterm2 案 q 回到原本畫面。</p>
+
+
+
+<h4>基礎指令</h4>
+
+
+
+<ol>
+<li>加到索引：git add .</li>
+<li>檢查狀態：git status</li>
+<li>提交更新：git commit -m ‘修改紀錄’</li>
+<li>查詢紀錄：git log</li>
+</ol>
+
+
+
+<h3>13.gitignore – 忽略檔案</h3>
+
+
+
+<h4>使用 .gitignore 來忽略檔案</h4>
+
+
+
+<ol>
+<li>index.html：忽略單一檔案</li>
+<li>*.html：忽略全部 HTML 檔案</li>
+<li>folder/：忽略 folder</li>
+</ol>
+
+
+
+<h5>檔案 .gitignore</h5>
+
+
+
+<pre class="wp-block-code"><code>index.html
+*.html
+css/</code></pre>
+
+
+
+<h4>操作流程</h4>
+
+
+
+<ol>
+<li>移動到檔案位置 cd 拖曳滑鼠檔案</li>
+<li>新增資料夾 mkdir project</li>
+<li>移動到資料夾位置 cd project</li>
+<li>新增新的數據庫 git init</li>
+<li>新增檔案 touch index.html</li>
+<li>新增檔案 touch .gitignore</li>
+<li>檢查狀態 git status</li>
+<li>忽略檔案，在.gitignore 輸入 index.html</li>
+<li>檢查檔案 git status</li>
+<li>新增檔案 touch index2.html</li>
+<li>檢查檔案 git status</li>
+<li>忽略全部檔案，在 .gitignore 輸入 *.html</li>
+<li>檢查檔案 git status</li>
+<li>新增 css 資料夾</li>
+<li>移動到資料夾位置 cd css</li>
+<li>新增檔案 touch all.css</li>
+<li>回上一層 cd ..</li>
+<li>忽略資料夾，在 .gitignore 輸入 css/</li>
+<li>檢查狀態 git status</li>
+</ol>
+
+
+
+<p>資源：<a href="https://github.com/github/gitignore" target="_blank" rel="noreferrer noopener">gitignore 大全</a></p>
+
+
+
+<h3>14.工作狀態還原技巧分享</h3>
+
+
+
+<h4>#取消索引</h4>
+
+
+
+<p>全部檔案取消索引<br>git reset HEAD<br><br>單一檔案取消索引<br>git reset HEAD 檔案名稱</p>
+
+
+
+<h4>#還原檔案</h4>
+
+
+
+<p>恢復單一檔案到最新 commit 狀態<br>git checkout 檔案名稱<br><br>還原工作目錄與索引，會跟最後一次 commit 保持一樣<br>git reset –hard</p>
+
+
+
+<h4>操作流程 – 取消索引</h4>
+
+
+
+<ol>
+<li>新增資料夾 mkdir project</li>
+<li>移動到資料夾位置 cd project</li>
+<li>新增新的數據庫 git init</li>
+<li>新增檔案 touch index.html</li>
+<li>加到索引 git add .</li>
+<li>提交更新 git commit -m ‘update’</li>
+<li>查詢紀錄 git log</li>
+<li>新增檔案 touch all.css</li>
+<li>新增檔案 touch all.js</li>
+<li>檢查狀態 git status</li>
+<li>加到索引 git add .</li>
+<li>檢查狀態 git status</li>
+<li>全部檔案取消索引 git reset HEAD</li>
+<li>檢查狀態 git status</li>
+<li>加到索引 git add .</li>
+<li>單一檔案取消索引 git reset HEAD all.css</li>
+<li>檢查狀態 git status</li>
+</ol>
+
+
+
+<h4>操作流程 – 還原檔案</h4>
+
+
+
+<ol>
+<li>檔案程式碼修改，寫壞了</li>
+<li>檢查狀態 git status</li>
+<li>恢復單一檔案到最新 commit 狀態 git checkout index.html</li>
+<li>加到索引 git add .</li>
+<li>還原工作目錄與索引，會跟最後一次 commit 保持一樣 git reset –hard</li>
+<li>檢查狀態 git status</li>
+<li>查詢紀錄 git log</li>
+</ol>
+
+
+
+<h3>15.指令大全</h3>
+
+
+
+<p>這裡條列出本課程裡有教到的指令，都是實務上比較常用的部分。<br>更多指令：<a rel="noreferrer noopener" href="http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html" target="_blank">一峰</a>、<a rel="noreferrer noopener" href="https://backlog.com/git-tutorial/tw/reference/" target="_blank">猴子git</a>的指令庫。</p>
+
+
+
+<h4>基礎設定</h4>
+
+
+
+<p>查詢版本<br>git version<br><br>查詢設定列表<br>git config –list<br><br>輸入姓名<br>git config –global user.name “你的名字”<br><br>輸入email<br>git config –global user.email “你的email”</p>
+
+
+
+<h4>新增本地/複製遠端數據庫</h4>
+
+
+
+<p>在本地資料夾新增數據庫<br>git init<br><br>複製遠端數據庫<br>git clone 遠端數據庫網址</p>
+
+
+
+<h4>增加/刪除檔案</h4>
+
+
+
+<p>增加檔案進入索引<br>git add 檔案名稱<br><br>增加全部檔案進入索引<br>git add .<br><br>查詢狀態<br>git status<br><br>顯示歷史紀錄<br>git log<br><br>將索引提交到數據庫<br>git commit -m ‘更新訊息’</p>
+
+
+
+<h4>還原指令</h4>
+
+
+
+<p>還原工作目錄與索引，會跟最後一次 commit 保持一樣<br>git reset –hard<br><br>全部檔案取消索引<br>git reset HEAD<br><br>單一檔案取消索引<br>git reset HEAD 檔案名稱<br><br>恢復單一檔案到最新 commit 狀態<br>git checkout 檔案名稱<br><br>刪除最近一次 commit<br>git reset –hard HEAD^<br><br>上面語法如果刪除錯了可以再用此語法還原<br>git reset –hard ORIG_HEAD<br><br>刪除最近一次 commit，但保留異動內容<br>git reset –soft HEAD^<br><br>commit 後發現有幾個檔案忘了加入進去<br>git commit –amend</p>
+
+
+
+<h4>分支</h4>
+
+
+
+<p>顯示所有本地分支<br>git branch<br><br>新增分支<br>git branch 分支名稱<br><br>切換分支<br>git checkout 分支名稱<br><br>合併指定分支到目前的分支<br>git merge 分支名稱<br><br>刪除分支<br>git branch -d 分支名稱</p>
+
+
+
+<h4>遠端數據庫操作</h4>
+
+
+
+<p>複製遠端數據庫<br>git clone 遠端數據庫網址<br><br>查詢遠端數據庫<br>git remote<br><br>將本地分支推送到遠端分支<br>git push 遠端數據庫名稱 遠端分支名稱<br><br>將遠端分支拉下來與本地分支進行合併<br>git pull</p>
+
+
+
+<h4>標籤</h4>
+
+
+
+<p>查詢標籤<br>git tag<br><br>查詢詳細標籤<br>git tag -n<br><br>刪除標籤<br>git tag -d 標籤名稱<br><br>新增輕量標籤<br>git tag 標籤名稱<br><br>新增標示標籤<br>git tag -am ‘備註內容’ 標籤名稱</p>
+
+
+
+<h4>暫存</h4>
+
+
+
+<p>暫時儲存當前目錄<br>git stash<br><br>瀏覽 stash 列表<br>git stash list<br><br>還原暫存<br>git stash pop<br><br>清除最新暫存<br>git stash drop<br><br>清除全部暫存<br>git stash clear</p>
+
+
+
+<p><a href="https://geehsu.github.io/git-github/" target="_blank" rel="noreferrer noopener">Git &amp; Github 指令</a></p>
+
+
+
+<h2>第３節：Github</h2>
+
+
+
+<h3>16.Github 註冊流程</h3>
+
+
+
+<p><a rel="noreferrer noopener" href="https://github.com/" target="_blank">GitHub 官網</a></p>
+
+
+
+<p>Github – 遠端數據庫</p>
+
+
+
+<h3>17.git push – 推送數據庫到 Github</h3>
+
+
+
+<h4>講解流程</h4>
+
+
+
+<ol>
+<li>在 Github 新增一個遠端數據庫</li>
+<li>複製遠端數據庫到自己的電腦上面</li>
+<li>修改完之後</li>
+<li>推送更新遠端數據庫</li>
+</ol>
+
+
+
+<p>遠端數據庫 複製→ 本地數據庫，<br>本地數據庫 更新→ 遠端數據庫。<br><br>Remote Repository clone/fetch→ Local Repository,<br>Local Repository push→ Remote Repository.</p>
+
+
+
+<h4>操作流程</h4>
+
+
+
+<ol>
+<li>在 Github 新增一個遠端數據庫</li>
+<li>複製 HTTPS URL</li>
+<li>新增資料夾 mkdir github</li>
+<li>移動到資料夾位置 cd github</li>
+<li>複製檔案下來 git clone URL</li>
+<li>移動到資料夾位置 cd gittest2</li>
+<li>新增檔案 touch index.html</li>
+<li>全部加到索引 git add .</li>
+<li>提交更新 git commit -m ‘update index’</li>
+<li>推送更新 git push</li>
+<li>新增檔案 touch index2.html</li>
+<li>全部加到索引 git add .</li>
+<li>提交更新 git commit -m ‘update index2’</li>
+<li>推送更新 git push</li>
+</ol>
+
+
+
+<h3>18.從 Github 找出實用插件流程</h3>
+
+
+
+<p>Github 首頁搜尋關鍵字，舉例：slider。<br>如何辨別插件的實用，依分類選項：最相關、最多星數、更新時間（約半年左右），來決定是否使用。<br>通常來說，插件會有說明如何使用。</p>
+
+
+
+<p>Github 會記錄各種 Git 狀態，有多少個分支、幾個提交、多少個問題，來評估插件的更新頻率、使用的熱門度高不高。</p>
+
+
+
+<h4>其他的遠端數據庫</h4>
+
+
+
+<p><a rel="noreferrer noopener" href="https://bitbucket.org/product/" target="_blank">Bitbucket</a></p>
+
+
+
+<p>PS：Bitbucket 有提供小團隊 (5人以下) 服務是免費的。<br>PS：Github 私人數據庫服務現在改成免費的。</p>
+
+
+
+<h2>第４節：Git 分支 (branch)</h2>
+
+
+
+<h3>19.分支簡介</h3>
+
+
+
+<p>參考文章：<a rel="noreferrer noopener" href="https://nvie.com/posts/a-successful-git-branching-model/" target="_blank">範例分支圖</a>、<a href="https://git-tutorial.readthedocs.io/zh/latest/branchingmodel.html" target="_blank" rel="noreferrer noopener">Gitflow 分支策略</a></p>
+
+
+
+<h4>分支大致上分為兩種：</h4>
+
+
+
+<ol>
+<li>主要的分支：master(主要)、develop(開發)</li>
+<li>支援的分支：feature(功能)、release(發佈)、hotfix(熱修復)</li>
+</ol>
+
+
+
+<h3>20.HEAD – 瞭解目前所在位置</h3>
+
+
+
+<p>HEAD：目前所在位置的指標。</p>
+
+
+
+<ul>
+<li>查看目前有哪些分支 git branch</li>
+<li>回到以前指定版本狀態，查看過去的內容 git checkout 前4碼</li>
+<li>還原到最新版本 git checkout master</li>
+</ul>
+
+
+
+<h4>操作流程</h4>
+
+
+
+<ol>
+<li>新增資料夾 mkdir project</li>
+<li>移動到資料夾位置 cd project</li>
+<li>新增新的數據庫 git init</li>
+<li>新增檔案 touch index.html</li>
+<li>全部加到索引 git add .</li>
+<li>提交更新 git commit -m ‘update’</li>
+<li>瀏覽目前分支 git branch</li>
+<li>修改檔案內容 index.html</li>
+<li>檢查狀態 git status</li>
+<li>全部加到索引 git add .</li>
+<li>提交更新 git commit -m ‘update index content’</li>
+<li>查詢紀錄 git log</li>
+<li>回到以前指定版本狀態 git checkout 38b0</li>
+<li>還原到最新版本 git checkout master</li>
+</ol>
+
+
+
+<h3>21.git branch – 分支創立</h3>
+
+
+
+<h4>新增分支操作流程</h4>
+
+
+
+<ol>
+<li>新增分支 git branch feature1</li>
+<li>查詢分支 git branch<ul><li>* 代表 HEAD 目前所在位置</li></ul>
+</li>
+<li>切換分支 git checkout feature1</li>
+<li>查詢分支 git branch<ul><li>* 在 feature1 的位置</li></ul>
+</li>
+<li>修改檔案 index.html</li>
+<li>查詢狀態 git status</li>
+<li>全部加到索引 git add .</li>
+<li>提交更新 git commit -m ‘edit index content’</li>
+<li>切換分支 git checkout master</li>
+<li>查詢分支 git branch<ul><li>* 在 master 的位置</li></ul>
+</li>
+<li>切換分支 git checkout feature1</li>
+<li>查詢分支 git branch<ul><li>* 在 feature1 的位置</li></ul>
+</li>
+</ol>
+
+
+
+<p>練習：使用切換分支切換到 master 和 feature1，看他們的差異。</p>
+
+
+
+<h3>22.git merge – fast-forward</h3>
+
+
+
+<h4>合併分支操作流程</h4>
+
+
+
+<ol>
+<li>新增資料夾 mkdir project</li>
+<li>移動到資料夾位置 cd project</li>
+<li>新增新的數據庫 git init</li>
+<li>新增檔案 touch index.html</li>
+<li>全部加到索引 git add .</li>
+<li>提交更新 git commit -m ‘add index’</li>
+<li>修改檔案 index.html</li>
+<li>檢查狀態 git status</li>
+<li>全部加到索引 git add .</li>
+<li>提交更新 git commit -m ‘update index’</li>
+<li>新增分支 git branch feature1</li>
+<li>查詢分支 git branch</li>
+<li>切換分支 git checkout feature1</li>
+<li>修改檔案 index.html 匯入 CSS</li>
+<li>新增資料夾 mkdir css</li>
+<li>移動到資料夾位置 cd css</li>
+<li>新增檔案 touch all.css</li>
+<li>回上一層 cd ..</li>
+<li>檢查狀態 git status</li>
+<li>全部加到索引 git add .</li>
+<li>提交更新 git commit -m ‘add css’</li>
+<li>切換分支 git checkout master</li>
+<li>
+<strong>合併分支</strong>&nbsp;<strong>git merge feature1</strong>
+</li>
+</ol>
+
+
+
+<h3>23.Mac 自動合併細節提醒</h3>
+
+
+
+<p>在下一篇會需要使用到編輯器來寫 merge 的更新訊息，<br>在未指定編輯器的情況下，會出現 vim 的編輯器，此時已會預設<br>帶好 commit 的內容，只要依序輸入以下文字：<br>:wq!<br>就可離開</p>
+
+
+
+<h3>24.git merge – 自動合併篇</h3>
+
+
+
+<h4>同時更新 – 無衝突版本</h4>
+
+
+
+<h5>操作流程</h5>
+
+
+
+<ol>
+<li>新增資料夾 mkdir project</li>
+<li>移動到資料夾位置 cd project</li>
+<li>新增新的數據庫 git init</li>
+<li>新增檔案 touch index.html</li>
+<li>新增 index.html 環境、內容</li>
+<li>查詢狀態 git status</li>
+<li>全部加到索引 git add .</li>
+<li>提交更新 git commit -m ‘add index’</li>
+<li>新增分支 git branch feature1</li>
+<li>切換分支 git checkout feature1</li>
+<li>修改檔案 index.html 匯入 CSS</li>
+<li>檢查狀態 git status</li>
+<li>全部加到索引 git add .</li>
+<li>提交更新 git commit -m ‘update index’</li>
+<li>切換分支 git checkout master</li>
+<li>修改檔案 index.html</li>
+<li>檢查狀態 git status</li>
+<li>全部加到索引 git add .</li>
+<li>提交更新 git commit -m ‘edit h1’</li>
+<li>合併分支 git merge feature1</li>
+<li>跳出合併訊息 MERGE_MSG</li>
+<li>確認合併訊息沒問題後，關掉就合併完成</li>
+</ol>
+
+
+
+<h3>25.git merge – 解決衝突篇</h3>
+
+
+
+<h4>同時更新 – 有衝突版本</h4>
+
+
+
+<h5>操作流程</h5>
+
+
+
+<ol>
+<li>新增資料夾 mkdir project</li>
+<li>移動到資料夾位置 cd project</li>
+<li>新增新的數據庫 git init</li>
+<li>新增檔案 touch index.html</li>
+<li>建立 index.html 環境</li>
+<li>全部加到索引 git add .</li>
+<li>提交更新 git commit -m ‘add index’</li>
+<li>新增分支 git branch feature1</li>
+<li>查詢分支 git branch</li>
+<li>切換分支 git checkout feature1</li>
+<li>修改 index.html 匯入 CSS、新增h1標籤feature1</li>
+<li>檢查狀態 git status</li>
+<li>全部加到索引 git add .</li>
+<li>提交更新 git commit -m ‘add css and feature1’</li>
+<li>切換分支 git checkout master</li>
+<li>修改 index.html 新增h1標籤master</li>
+<li>全部加到索引 git add .</li>
+<li>提交更新 git commit -m ‘add h1 master’</li>
+<li>合併分支 git merge feature1</li>
+<li>衝突、自動合併失敗</li>
+<li>評估與其他成員程式碼有衝突該如何解決<ul>
+<li>部分保留、部分刪除</li>
+<li>全部保留</li>
+<li>全部刪除</li>
+</ul>
+</li>
+<li>這裡是選擇全部保留</li>
+<li>全部加到索引 git add .</li>
+<li>提交更新 git commit -m ‘merge feature1 css and h1’</li>
+</ol>
+
+
+
+<p>發現不能自動合併時，就需要做手動合併的動作。</p>
+
+
+
+<h3>26.git tag – 標籤</h3>
+
+
+
+<ol>
+<li>查詢標籤：git tag</li>
+<li>查詢詳細標籤：git tag -n</li>
+<li>刪除標籤：git tag -d 標籤名稱</li>
+<li>新增輕量標籤：git tag 標籤名稱</li>
+<li>新增標示標籤：git tag -am “備註內容” 標籤名稱</li>
+<li>切換到標籤的 commit：git checkout 標籤名稱</li>
+</ol>
+
+
+
+<h4>操作流程</h4>
+
+
+
+<ol>
+<li>新增資料夾 mkdir project</li>
+<li>移動到資料夾位置 cd project</li>
+<li>新增新的數據庫 git init</li>
+<li>新增檔案 touch index.html</li>
+<li>全部加到索引 git add .</li>
+<li>提交更新 git commit -m ‘update index’</li>
+<li>查詢紀錄 git log</li>
+<li>建立 index.html 環境、新增h1標籤內容</li>
+<li>全部加到索引 git add .</li>
+<li>提交更新 git commit -m ‘edit index’</li>
+<li>查詢標籤 git tag (無，因為還沒新增標籤)</li>
+<li>新增輕量標籤 git tag v1</li>
+<li>查詢標籤 git tag</li>
+<li>修改檔案 index.html 新增p段落內容</li>
+<li>全部加到索引 git add .</li>
+<li>提交更新 git commit -m ‘update p’</li>
+<li>查詢紀錄 git log</li>
+<li>查詢標籤 git tag</li>
+<li>切換到標籤的提交 git checkout v1</li>
+<li>切換分支 git checkout master</li>
+<li>新增檔案 touch contact.html</li>
+<li>全部加到索引 git add .</li>
+<li>提交更新 git commit -m ‘update contact’</li>
+<li>新增標示標籤 git tag -am ‘v2 add contact’ v2</li>
+<li>查詢標籤 git tag</li>
+<li>查詢詳細標籤 git tag -n</li>
+</ol>
+
+
+
+<h3>27.git stash – 暫存檔案</h3>
+
+
+
+<ol>
+<li>git stash – 暫時儲存當前目錄</li>
+<li>git stash list – 瀏覽 git stash 列表</li>
+<li>git stash pop – 還原暫存</li>
+<li>git stash drop – 清除最新暫存</li>
+<li>git stash clear – 清除全部暫存</li>
+</ol>
+
+
+
+<h4>操作流程</h4>
+
+
+
+<ol>
+<li>新增資料夾 mkdir project</li>
+<li>移動到資料夾位置 cd project</li>
+<li>新增新的數據庫 git init</li>
+<li>新增檔案 touch index.html</li>
+<li>建立 index.html 環境、新增h1標籤內容</li>
+<li>全部加到索引 git add .</li>
+<li>提交更新 git commit -m ‘add index’</li>
+<li>新增分支 git branch issue</li>
+<li>修改檔案 index.html 新增p標籤段落內容</li>
+<li>檢查狀態 git status</li>
+<li>突發指派工作內容，暫時儲存當前目錄 git stash</li>
+<li>檢查狀態 git status</li>
+<li>查詢暫存檔案列表 git stash list</li>
+<li>切換分支 git checkout issue</li>
+<li>修改 issue 問題完成後</li>
+<li>還原暫存 git stash pop</li>
+<li>查詢暫存檔案列表 git stash list</li>
+<li>暫時儲存當前目錄 git stash</li>
+<li>切換分支 git checkout master</li>
+<li>還原暫存 git stash pop</li>
+</ol>
+
+
+
+<h2>第５節：Git、Github 團隊協作篇</h2>
+
+
+
+<h3>28.git remote – 遠端數據庫</h3>
+
+
+
+<h4>如何推送分支到遠端數據庫</h4>
+
+
+
+<ol>
+<li>git remote – 查詢遠端數據庫主機名稱</li>
+<li>git remote rename 原名稱 修改名稱 – 修改遠端數據庫主機名稱</li>
+<li>git push origin master – 推送分支更新到指定遠端數據庫主機<ul>
+<li>origin：預設遠端主機名稱</li>
+<li>master：分支名稱</li>
+</ul>
+</li>
+</ol>
+
+
+
+<h5>操作流程</h5>
+
+
+
+<ol>
+<li>在 Github 新增一個 New repository (新的遠端數據庫)</li>
+<li>Repository name (數據庫名稱) gitremote</li>
+<li>Create repository (建立數據庫)</li>
+<li>複製 HTTPS URL</li>
+<li>新增資料夾 mkdir github</li>
+<li>移動到資料夾位置 cd github</li>
+<li>複製遠端數據庫 git clone URL</li>
+<li>移動到資料夾位置 cd gitremote</li>
+<li>新增檔案 touch index.html</li>
+<li>全部加到索引 git add .</li>
+<li>提交更新 git commit -m ‘add index’</li>
+<li>推送更新 git push</li>
+<li>新增分支 git branch issue</li>
+<li>切換分支 git checkout issue</li>
+<li>新增檔案 touch issue.html</li>
+<li>全部加到索引 git add .</li>
+<li>提交更新 git commit -m ‘add issue’</li>
+<li>推送更新失敗 git push</li>
+<li>查詢遠端數據庫 git remote</li>
+<li>推送分支更新到指定遠端數據庫主機 git push origin issue</li>
+<li>查詢遠端數據庫 git remote</li>
+<li>修改遠端數據庫名稱 git remote rename origin github</li>
+<li>查詢遠端數據庫 git remote</li>
+<li>新增檔案 touch contact.html</li>
+<li>全部加到索引 git add .</li>
+<li>提交更新 git commit -m ‘add contact’</li>
+<li>推送更新失敗 git push origin issue</li>
+<li>推送分支更新到指定遠端數據庫主機 git push github issue</li>
+</ol>
+
+
+
+<h3>29.git pull – 下載遠端數據庫</h3>
+
+
+
+<p>從遠端數據庫下載更新 (pull) 到自己的工作目錄。</p>
+
+
+
+<h4>模擬操作流程</h4>
+
+
+
+<p>自己、Github、同事A，<br>在與其他成員團隊合作時會有哪些狀況？</p>
+
+
+
+<ol>
+<li>在 Github 新增一個 New Repository (新的遠端數據庫)</li>
+<li>Repository name (數據庫名稱) gitpull</li>
+<li>Create Repository (建立數據庫)</li>
+<li>複製 HTTPS URL</li>
+<li>新增兩個資料夾，分別是 my、a</li>
+<li>我：移動到資料夾位置 cd my</li>
+<li>我：複製遠端數據庫 git clone URL</li>
+<li>我：移動到資料夾位置 cd gitpull</li>
+<li>同事A：移動到資料夾位置 cd a</li>
+<li>同事A：複製遠端數據庫 git clone URL</li>
+<li>我：我先建立環境 touch index.html</li>
+<li>我：全部加到索引 git add .</li>
+<li>我：提交更新 git commit -m ‘add index’</li>
+<li>我：推送分支更新到指定遠端數據庫主機 git push origin master</li>
+<li>同事A：移動到資料夾位置 cd gitpull</li>
+<li>同事A：查詢紀錄 git log</li>
+<li>同事A：從遠端數據庫下載更新 (pull) 到工作目錄 git pull</li>
+<li>同事A：查詢紀錄 git log</li>
+<li>同事A：新增檔案 touch contact.html</li>
+<li>同事A：全部加到索引 git add .</li>
+<li>同事A：提交更新 git commit -m ‘add contact’</li>
+<li>同事A：推送分支更新到指定遠端數據庫主機 git push origin master</li>
+<li>我：查詢紀錄 git log</li>
+<li>我：從遠端數據庫下載更新 (pull) 到工作目錄 git pull</li>
+<li>我：查詢紀錄 git log</li>
+</ol>
+
+
+
+<h3>30.git pull – 衝突篇</h3>
+
+
+
+<h4>pull – 無法 push 案例</h4>
+
+
+
+<p>自己、Github、同事A<br>在與其他成員團隊合作時，別人更新後，產生無法 push 的狀況。<br>需要先 pull，才可以 push。</p>
+
+
+
+<h5>模擬操作流程</h5>
+
+
+
+<ol>
+<li>在 Github 新增一個 New Repository (新的遠端數據庫)</li>
+<li>Repository name (數據庫名稱) gitconflicts</li>
+<li>Create Repository (建立數據庫)</li>
+<li>複製 HTTPS URL</li>
+<li>新增兩個資料夾，分別為 my、a</li>
+<li>我：移動到資料夾位置 cd my</li>
+<li>我：複製遠端數據庫 git clone URL</li>
+<li>我：移動到資料夾位置 cd gitconflicts</li>
+<li>同事A：移動到資料夾位置 cd a</li>
+<li>同事A：複製遠端數據庫 git clone URL</li>
+<li>同事A：移動到資料夾位置 cd gitconflicts</li>
+<li>我：我先建立環境 touch index.html</li>
+<li>我：全部加到索引 git add .</li>
+<li>我：提交更新 git commit -m ‘add index’</li>
+<li>我：推送分支更新到指定遠端數據庫主機 git push origin master</li>
+<li>同事A：從遠端數據庫下載更新 (pull) 到工作目錄 git pull</li>
+<li>我：在下班後，寫了一些東西。</li>
+<li>我：新增檔案 touch contact.html</li>
+<li>我：全部加到索引 git add .</li>
+<li>我：提交更新 git commit -m ‘add contact’</li>
+<li>我：推送分支更新到指定遠端數據庫主機 git push origin master</li>
+<li>同事A：新增檔案 touch about.html</li>
+<li>同事A：全部加到索引 git add .</li>
+<li>同事A：提交更新 git commit -m ‘add about’</li>
+<li>同事A：出現錯誤－推送分支更新到指定遠端數據庫主機 git push origin master</li>
+<li>同事A：從遠端數據庫下載更新 (pull) 到工作目錄 git pull</li>
+<li>同事A：跳出合併訊息 MERGE_MSG</li>
+<li>同事A：推送分支更新到指定遠端數據庫主機 git push origin master</li>
+<li>我：經由同事告知有更新後</li>
+<li>我：從遠端數據庫下載更新 (pull) 到工作目錄 git pull</li>
+</ol>
+
+
+
+<p>PS：MERGE_MSG 輸入 :wq! 就可離開。</p>
+
+
+
+<h3>31.Github Pages – 存放網頁空間流程</h3>
+
+
+
+<p>利用 github pages 更新網頁。</p>
+
+
+
+<h4>操作流程</h4>
+
+
+
+<ol>
+<li>在 Github 新增一個 New Repository (新的遠端數據庫)</li>
+<li>Repository name (數據庫名稱) demonsite</li>
+<li>Create Repository (建立數據庫)</li>
+<li>複製 HTTPS URL</li>
+<li>新增資料夾 mkdir github</li>
+<li>移動到資料夾位置 cd github</li>
+<li>複製遠端數據庫 git clone URL</li>
+<li>移動到資料夾位置 cd demonsite</li>
+<li>新增檔案 touch index.html</li>
+<li>建立 index.html 環境、新增h1標籤內容</li>
+<li>全部加到索引 git add .</li>
+<li>提交更新 git commit -m ‘add index and h1’</li>
+<li>推送分支更新到指定遠端數據庫主機 git push origin master</li>
+<li>重新整理 Github 網頁</li>
+<li>在 Github 網頁上有個 Settings 裡面有個 GitHub Pages，把 Source 改成 master branch 然後 Save (儲存)</li>
+<li>GitHub Pages 區塊出現 Your site is ready to be published at URL</li>
+<li>修改檔案 新增清單內容</li>
+<li>全部加到索引 git add .</li>
+<li>提交更新 git commit -m ‘edit list’</li>
+<li>推送分支更新到指定遠端數據庫主機 git push origin master</li>
+<li>重新整理 Github 網頁後，看 commits 改了哪些東西</li>
+<li>重新整理 GitHub Pages 網頁後，更新了網頁內容。</li>
+</ol>
+
+
+
+<h3>32.小型團隊分支協作篇</h3>
+
+
+
+<p>參考文章：<a rel="noreferrer noopener" href="https://nvie.com/posts/a-successful-git-branching-model/" target="_blank">範例分支圖</a></p>
+
+
+
+<h4>團隊協作範例圖</h4>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" width="828" height="706" src="/wordpress_blog/wp-content/uploads/2022/04/團隊協作範例圖.png" alt="" class="wp-image-652"><figcaption>團隊協作範例圖</figcaption></figure>
+
+
+
+<h5>操作流程</h5>
+
+
+
+<ol>
+<li>新增資料夾 mkdir github</li>
+<li>移動到資料夾 cd github</li>
+<li>新增資料夾 mkdir project</li>
+<li>移動到資料夾 cd project</li>
+<li>新增新的數據庫 git init</li>
+<li>新增檔案 touch index.html</li>
+<li>建立 index.html 環境</li>
+<li>全部加到索引 git add .</li>
+<li>提交更新 git commit -m ‘add index’</li>
+<li>新增分支 git branch develop</li>
+<li>查詢分支 git branch</li>
+<li>切換分支 git checkout develop</li>
+<li>新增分支 git branch feature/view</li>
+<li>切換分支 git checkout feature/view</li>
+<li>新增檔案 touch all.css</li>
+<li>全部加到索引 git add .</li>
+<li>提交更新 git commit -m ‘add css’</li>
+<li>切換分支 git checkout develop</li>
+<li>合併分支 git merge feature/view</li>
+<li>新增分支 git branch feature/js</li>
+<li>切換分支 git checkout feature/js</li>
+<li>新增檔案 touch all.js</li>
+<li>全部加到索引 git add .</li>
+<li>提交更新 git commit -m ‘add js’</li>
+<li>切換分支 git checkout develop</li>
+<li>合併分支 git merge feature/js</li>
+<li>切換分支 git checkout master</li>
+<li>合併分支 git merge develop</li>
+</ol>
+
+
+
+<h5>Learn Git Branching</h5>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" width="1153" height="787" src="/wordpress_blog/wp-content/uploads/2022/04/learn-git-branch-1.png" alt="" class="wp-image-654"><figcaption>Learn Git Branching</figcaption></figure>
+
+
+
+<pre class="wp-block-code"><code>$ git branch develop
+$ git checkout develop
+$ git branch f/view
+$ git checkout f/view
+$ git commit
+$ git checkout develop
+$ git merge f/view --no-ff
+$ git branch f/js
+$ git checkout f/js
+$ git commit
+$ git checkout develop
+$ git merge f/js --no-ff
+$ git checkout main
+$ git merge develop --no-ff</code></pre>
+
+
+
+<h5>合併指定分支到目前的分支 – 取消快轉</h5>
+
+
+
+<pre class="wp-block-code"><code>git merge 分支名稱 --no-ff</code></pre>
+
+
+
+<h3>33.git pull = git fetch + git merge</h3>
+
+
+
+<p>相信各位同學練習完 pull 時，可以知道他就是將遠端的分支將<br>你的本地分支進行合併 merge 的動作，<br>但有時候你不希望 pull 下來導致自己的數據庫太亂又擔心有衝突時，可以先使用下面這個指令。</p>
+
+
+
+<pre class="wp-block-code"><code>git fetch origin(遠端數據庫主機名稱) branch1(遠端分支)</code></pre>
+
+
+
+<p>此時你的分支會多一個 FETCH_HEAD 的分支，這個就是遠端數據庫的分支，可以等到你看過沒問題後，<br>再合併 FETCH_HEAD 也 ok。</p>
+
+
+
+<h3>34.延伸教學資源</h3>
+
+
+
+<ul>
+<li><a rel="noreferrer noopener" href="https://backlog.com/git-tutorial/tw/" target="_blank">連猴子都能懂得 Git 入門指南</a></li>
+<li><a rel="noreferrer noopener" href="https://github.com/doggy8088/Learn-Git-in-30-days/blob/master/zh-tw/README.md" target="_blank">保哥 30 天 Git 教學</a></li>
+<li><a rel="noreferrer noopener" href="https://git-scm.com/book/zh-tw/v2" target="_blank">Git 官方繁體教學</a></li>
+<li><a rel="noreferrer noopener" href="https://w3c.hexschool.com/git/cfdbd310" target="_blank">Git &amp; GitHub 教學手冊</a></li>
+<li><a href="https://learngitbranching.js.org/" target="_blank" rel="noreferrer noopener">Learn Git Branching</a></li>
+</ul>
+	</div>
+<!-- .entry-content -->
+
+	<footer class="entry-footer">
+			</footer><!-- .entry-footer -->
+</article><!-- #post-648 -->
+
+	<nav class="navigation post-navigation" aria-label="文章">
+		<h2 class="screen-reader-text">文章導覽</h2>
+		<div class="nav-links">
+<div class="nav-previous"><a href="/wordpress_blog/javascript-beginner/" rel="prev"><span class="nav-subtitle">Previous:</span> <span class="nav-title">JavaScript 入門篇 &#8211; 學徒的試煉</span></a></div>
+<div class="nav-next"><a href="/wordpress_blog/vue-hexschool-1/" rel="next"><span class="nav-subtitle">Next:</span> <span class="nav-title">Vue 出一個電傷網站 (1)</span></a></div>
+</div>
+	</nav>
+	</main><!-- #main -->
+
+
+	</div></div>
+			
+			<footer id="colophon" class="site-footer">
+
+				
+				<div class="container-fluid">
+					<div class="site-info">
+						<div class="row">
+
+															
+								<div class="col-12 footer-copyright-elements footer-copyright-alignment-center">
+
+									<div class="botiga-credits">&copy; 2022 wordpress_blog. 
+Created by Gee Hsu. 
+<br>Proudly powered by <a rel="nofollow" href="https://athemes.com/theme/botiga/">Botiga</a>
+</div>
+<div class="social-profile">
+<a target="_blank" href="https://www.facebook.com/watergrass0402/"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></i></a><a target="_blank" href="https://github.com/GeeHsu"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></i></a>
+</div>
+								</div>
+														
+						</div>
+					</div>
+				</div>
+<!-- .site-info -->
+
+				
+			</footer><!-- #colophon -->
+
+			
+			<div class="back-to-top visibility-all position-right"><i class="ws-svg-icon"><svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 15l7-7 7 7" stroke-width="3" stroke-linejoin="round"></path></svg></i></div>
+</div>
+<!-- #page -->
+
+
+<script id="botiga-custom-js-extra">
+var botiga = {"ajaxurl":"\/wp-admin\/admin-ajax.php","i18n":{"botiga_sharebox_copy_link":"Copy link","botiga_sharebox_copy_link_copied":"Copied!"}};
+</script>
+<script src="/wordpress_blog/wp-content/themes/botiga/assets/js/custom.min.js?ver=1.1.2" id="botiga-custom-js"></script>
+
+</body>
+</html>

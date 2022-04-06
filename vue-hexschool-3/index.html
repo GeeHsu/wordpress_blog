@@ -1,0 +1,3731 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<title>Vue 出一個電商網站 (3) &#8211; wordpress_blog</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="訂閱《wordpress_blog》&raquo; 資訊提供" href="/wordpress_blog/feed/">
+<link rel="alternate" type="application/rss+xml" title="訂閱《wordpress_blog》&raquo; 留言的資訊提供" href="/wordpress_blog/comments/feed/">
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.9.3"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style>img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="/wordpress_blog/wp-includes/css/dist/block-library/style.min.css?ver=5.9.3" media="all">
+<style id="global-styles-inline-css">body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--palette-1-color-0: #212121;--wp--preset--color--palette-1-color-1: #757575;--wp--preset--color--palette-1-color-2: #212121;--wp--preset--color--palette-1-color-3: #212121;--wp--preset--color--palette-1-color-4: #212121;--wp--preset--color--palette-1-color-5: #f5f5f5;--wp--preset--color--palette-1-color-6: #ffffff;--wp--preset--color--palette-1-color-7: #ffffff;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 14px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 18px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--normal: 16px;--wp--preset--font-size--larger: 24px;--wp--preset--font-size--extra-large: 32px;--wp--preset--font-size--huge: 48px;--wp--preset--font-size--gigantic: 64px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}</style>
+<link rel="stylesheet" id="botiga-style-css" href="/wordpress_blog/wp-content/themes/botiga/style.css?ver=1.1.2" media="all">
+<link rel="stylesheet" id="botiga-style-min-css" href="/wordpress_blog/wp-content/themes/botiga/assets/css/styles.min.css?ver=1.1.2" media="all">
+<link rel="stylesheet" id="botiga-custom-styles-css" href="/wordpress_blog/wp-content/uploads/botiga/custom-styles.css?ver=1648804469" media="all">
+<link rel="https://api.w.org/" href="/wordpress_blog/wp-json/">
+<link rel="alternate" type="application/json" href="/wordpress_blog/wp-json/wp/v2/posts/676">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/wordpress_blog/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wordpress_blog/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 5.9.3">
+<link rel="canonical" href="/wordpress_blog/vue-hexschool-3/">
+<link rel="shortlink" href="/wordpress_blog/?p=676">
+<link rel="alternate" type="application/json+oembed" href="/wordpress_blog/wp-json/oembed/1.0/embed?url=%2Fvue-hexschool-3%2F">
+<link rel="alternate" type="text/xml+oembed" href="/wordpress_blog/wp-json/oembed/1.0/embed?url=%2Fvue-hexschool-3%2F&#038;format=xml">
+<link rel="icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png" sizes="32x32">
+<link rel="icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png" sizes="192x192">
+<link rel="apple-touch-icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png">
+<meta name="msapplication-TileImage" content="/wp-content/uploads/2022/03/logo.png">
+	
+</head>
+
+<body class="post-template-default single single-post postid-676 single-format-standard wp-custom-logo wp-embed-responsive header-header_layout_1 blog-single-layout1">
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0.49803921568627"></fefuncr><fefuncg type="table" tablevalues="0 0.49803921568627"></fefuncg><fefuncb type="table" tablevalues="0 0.49803921568627"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.54901960784314 0.98823529411765"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.71764705882353 0.25490196078431"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 0.27843137254902"></fefuncg><fefuncb type="table" tablevalues="0.5921568627451 0.27843137254902"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0"></fefuncr><fefuncg type="table" tablevalues="0 0.64705882352941"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.78039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.94901960784314"></fefuncg><fefuncb type="table" tablevalues="0.35294117647059 0.47058823529412"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.65098039215686 0.40392156862745"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.44705882352941 0.4"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.098039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.66274509803922"></fefuncg><fefuncb type="table" tablevalues="0.84705882352941 0.41960784313725"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg>
+
+<div id="page" class="site">
+
+	<a class="skip-link screen-reader-text" href="#primary">Skip to content</a>
+
+	
+			<div class="top-bar visibility-desktop-only">
+				<div class="container-fluid">
+					<div class="top-bar-inner">
+						<div class="row valign">
+
+															<div class="col header-elements delimiter-none">
+									<div class="header-item top-bar-social"><div class="social-profile">
+<a target="_blank" href="https://www.facebook.com/watergrass0402/"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></i></a><a target="_blank" href="https://github.com/GeeHsu"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></i></a>
+</div></div>								</div>
+																						<div class="col header-elements delimiter-none">
+													
+			<nav class="header-item top-bar-secondary-navigation secondary-navigation">
+				<div class="menu-topbar-container"><ul id="secondary" class="menu">
+<li id="menu-item-143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143"><a href="/wordpress_blog/setup/">網站架設</a></li>
+<li id="menu-item-144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a href="/wordpress_blog/source/">資料來源</a></li>
+<li id="menu-item-262" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-262"><a href="/wordpress_blog/resource/">學習資源</a></li>
+</ul></div>			</nav>
+											</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			
+							
+				<header id="masthead" class="site-header header_layout_1">
+					<div class="container-fluid">
+						<div class="site-header-inner">
+							<div class="row valign">
+								<div class="col-md-5">
+										
+			<nav id="site-navigation" class="main-navigation">
+				<div class="menu-navbar-container"><ul id="primary-menu" class="menu">
+<li id="menu-item-109" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="/wordpress_blog/about/">關於</a></li>
+<li id="menu-item-110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-110">
+<a href="/wordpress_blog/learn/">學習</a><span tabindex="0" class="dropdown-symbol"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512.011 512.011"><path d="M505.755 123.592c-8.341-8.341-21.824-8.341-30.165 0L256.005 343.176 36.421 123.592c-8.341-8.341-21.824-8.341-30.165 0s-8.341 21.824 0 30.165l234.667 234.667a21.275 21.275 0 0015.083 6.251 21.275 21.275 0 0015.083-6.251l234.667-234.667c8.34-8.341 8.34-21.824-.001-30.165z"></path></svg></i></span>
+<ul class="sub-menu">
+	<li id="menu-item-140" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-140"><a href="/wordpress_blog/category/hexschool/">六角學院</a></li>
+	<li id="menu-item-141" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-141"><a href="/wordpress_blog/category/ninja/">The Net Ninja</a></li>
+	<li id="menu-item-483" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-483"><a href="/wordpress_blog/category/youtube/">Youtube</a></li>
+</ul>
+</li>
+<li id="menu-item-111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="/wordpress_blog/linestore/">LINE STORE</a></li>
+</ul></div>			</nav><!-- #site-navigation -->
+											</div>
+								<div class="col-md-2">
+												<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+											</div>
+								<div class="col-md-5 header-elements">
+																	</div>							
+							</div>
+						</div>
+					</div>
+								<div class="header-search-form">
+			<form role="search" method="get" class="search-form" action="/">
+	<label class="screen-reader-text" for="search-form-1">Search&hellip;</label>
+	<input type="search" id="search-form-1" class="search-field" value="" name="s" placeholder="Search &hellip;">
+	<button type="submit" class="search-submit" value="Search"><i class="ws-svg-icon"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 100 14.25 7.125 7.125 0 000-14.25zM2.25 10.875a8.625 8.625 0 1117.25 0 8.625 8.625 0 01-17.25 0z"></path><path fill-rule="evenodd" d="M15.913 15.914a.75.75 0 011.06 0l4.557 4.556a.75.75 0 01-1.06 1.06l-4.557-4.556a.75.75 0 010-1.06z"></path></svg></i></button>
+</form>
+			</div>
+			
+									</header>
+
+										<div class="search-overlay"></div>
+			
+			<div class="botiga-offcanvas-menu">
+				<div class="mobile-header-item">
+					<div class="row">
+						<div class="col">
+										<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+									</div>
+						<div class="col align-right">
+							<a class="mobile-menu-close" href="#"><i class="ws-svg-icon icon-cancel"><svg width="16" height="16" fill="none" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.219.781L.78 2.22 9.562 11l-8.78 8.781 1.437 1.438L11 12.437l8.781 8.782 1.438-1.438L12.437 11l8.782-8.781L19.78.78 11 9.562 2.219.783z"></path></svg></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="mobile-header-item">
+						
+			<nav id="site-navigation" class="main-navigation">
+				<div class="menu-navbar-container"><ul id="primary-menu" class="menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="/wordpress_blog/about/">關於</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-110">
+<a href="/wordpress_blog/learn/">學習</a><span tabindex="0" class="dropdown-symbol"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512.011 512.011"><path d="M505.755 123.592c-8.341-8.341-21.824-8.341-30.165 0L256.005 343.176 36.421 123.592c-8.341-8.341-21.824-8.341-30.165 0s-8.341 21.824 0 30.165l234.667 234.667a21.275 21.275 0 0015.083 6.251 21.275 21.275 0 0015.083-6.251l234.667-234.667c8.34-8.341 8.34-21.824-.001-30.165z"></path></svg></i></span>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-140"><a href="/wordpress_blog/category/hexschool/">六角學院</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-141"><a href="/wordpress_blog/category/ninja/">The Net Ninja</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-483"><a href="/wordpress_blog/category/youtube/">Youtube</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="/wordpress_blog/linestore/">LINE STORE</a></li>
+</ul></div>			</nav><!-- #site-navigation -->
+							</div>
+				<div class="mobile-header-item">
+									<a target="&quot;_blank&quot;" class="button header-item" href="https://www.facebook.com/watergrass0402/">聯絡我</a>
+							</div>			
+			</div>
+			
+							<header id="masthead-mobile" class="site-header mobile-header">
+					<div class="container-fluid">
+						<div class="row valign flex-nowrap">
+							<div class="col-sm-6 col-md-4 col-grow-mobile">
+											<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+										</div>
+							<div class="col-auto col-sm-6 col-md-8 col-grow-mobile header-elements valign align-right">
+																	
+															<a href="#" class="menu-toggle">
+				<i class="ws-svg-icon"><svg width="16" height="11" viewbox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="16" height="1"></rect><rect y="5" width="16" height="1"></rect><rect y="10" width="16" height="1"></rect></svg></i>
+			</a>
+																		</div>						
+						</div>
+					</div>
+								<div class="header-search-form">
+			<form role="search" method="get" class="search-form" action="/">
+	<label class="screen-reader-text" for="search-form-2">Search&hellip;</label>
+	<input type="search" id="search-form-2" class="search-field" value="" name="s" placeholder="Search &hellip;">
+	<button type="submit" class="search-submit" value="Search"><i class="ws-svg-icon"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 100 14.25 7.125 7.125 0 000-14.25zM2.25 10.875a8.625 8.625 0 1117.25 0 8.625 8.625 0 01-17.25 0z"></path><path fill-rule="evenodd" d="M15.913 15.914a.75.75 0 011.06 0l4.557 4.556a.75.75 0 01-1.06 1.06l-4.557-4.556a.75.75 0 010-1.06z"></path></svg></i></button>
+</form>
+			</div>
+			
+									</header>
+						<div class="search-overlay"></div>
+			<div class="header-image"><img src="/wordpress_blog/wp-content/uploads/2022/03/seashore.jpg" width="1920" height="500" alt=""></div>
+<div class="container content-wrapper"><div class="row main-row">			
+	<main id="primary" class="site-main no-sidebar">
+
+		
+
+<article id="post-676" class="post-676 post type-post status-publish format-standard hentry category-hexschool">
+	
+		
+	<header class="entry-header">
+		
+		
+		<h1 class="entry-title">Vue 出一個電商網站 (3)</h1>			<div class="entry-meta entry-meta-below delimiter-none">
+<span class="posted-on"><a href="/wordpress_blog/vue-hexschool-3/" rel="bookmark"><time class="entry-date published" datetime="2021-04-28T11:39:00+08:00">2021 年 4 月 28 日</time><time class="updated" datetime="2022-04-06T11:40:33+08:00">2022 年 4 月 6 日</time></a></span><span class="byline"> <span class="author vcard"><a class="url fn n" href="/wordpress_blog/author/gee-hsu/">gee.hsu</a></span></span>
+</div>			</header><!-- .entry-header -->
+
+	
+	<div class="entry-content">
+		
+<h2>第１１節：Vue&nbsp;出一個電商網站 (上)</h2>
+
+
+
+<h3>課程架構及流程說明</h3>
+
+
+
+<h5>VUE 一個電商網頁前置介紹</h5>
+
+
+
+<p>練習到完整的 API、每個 API 都是獨立的。</p>
+
+
+
+<h5>電商網站操作流程</h5>
+
+
+
+<figure class="wp-block-image size-full"><img width="1668" height="876" src="/wordpress_blog/wp-content/uploads/2022/04/電商網站操作流程.png" alt="" class="wp-image-678"><figcaption>電商網站操作流程</figcaption></figure>
+
+
+
+<h5>開發的架構說明</h5>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" width="1672" height="874" src="/wordpress_blog/wp-content/uploads/2022/04/開發的架構說明.png" alt="" class="wp-image-680"><figcaption>開發的架構說明</figcaption></figure>
+
+
+
+<h5>課程練習的 API</h5>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" width="1625" height="868" src="/wordpress_blog/wp-content/uploads/2022/04/課程練習的-API.png" alt="" class="wp-image-682"><figcaption>課程練習的 API</figcaption></figure>
+
+
+
+<h5>課程練習的流程</h5>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" width="1610" height="865" src="/wordpress_blog/wp-content/uploads/2022/04/課程練習的流程.png" alt="" class="wp-image-684"><figcaption>課程練習的流程</figcaption></figure>
+
+
+
+<h3>課程 API&nbsp;文件及路徑</h3>
+
+
+
+<h5>說明</h5>
+
+
+
+<ol>
+<li>課程需要先註冊屬於個人的 API 路徑，註冊方法在下一小節會介紹，而註冊網址與 API 網址都是以下連結：<br><a rel="noreferrer noopener" href="https://vue-course-api.hexschool.io/" target="_blank">vue-course-api</a>
+</li>
+<li><a rel="noreferrer noopener" href="https://github.com/hexschool/vue-course-api-wiki/wiki" target="_blank">API 文件</a></li>
+<li>課程中後期，不會所有步驟都一一說明，所以課程中有提供每個階段的 commit，讓大家可以看到每個章節老師修改了哪些部分：<br><a rel="noreferrer noopener" href="https://github.com/hexschool/vue-course-api-wiki/wiki/%E9%80%B2%E5%BA%A6-Commit" target="_blank">所有課程進度 Commit (對應課程章節)</a>
+</li>
+<li>課程中也會提供許多 HTML 片段模板，減少重複繁瑣的行為，如提到會提供模板的部分，可在以下連結查找：<br><a rel="noreferrer noopener" href="https://github.com/hexschool/vue-course-api-wiki/wiki/%E8%AA%B2%E7%A8%8B%E9%83%A8%E5%88%86%E6%A8%A1%E6%9D%BF" target="_blank">模板連結</a>
+</li>
+<li>雖然課程中 ESLint 選擇為 Yes，但在此推薦選擇 No。對 ES6 及錯誤排除有一定掌握者可選擇 Yes，新手不建議安裝，挫折感會非常重。<br>ESLint 安裝可參考：<a href="https://www.youtube.com/watch?v=WiommcFaYvY" target="_blank" rel="noreferrer noopener">超整齊程式碼！透過 ESlint 學習 ES6</a>
+</li>
+</ol>
+
+
+
+<h3>Vue&nbsp;API&nbsp;課程補充說明</h3>
+
+
+
+<p>由於 Google Chrome 在後續 80 版本後會預設封鎖第三方 Cookie，所以在登入 Vue 課程 API 就會出現無法登入的問題，補充相關解決方式。</p>
+
+
+
+<p><a href="https://paper.dropbox.com/doc/Vue-API-28OrjdvBouPMjspZUM7h7" target="_blank" rel="noreferrer noopener">文章參考連結</a></p>
+
+
+
+<h3>註冊課程專屬練習 API</h3>
+
+
+
+<p><a href="https://github.com/hexschool/vue-course-api-wiki/wiki/%E7%AE%A1%E7%90%86%E6%8E%A7%E5%88%B6%E5%8F%B0-%5B%E9%9C%80%E9%A9%97%E8%AD%89%5D" target="_blank" rel="noreferrer noopener">管理控制台 [需驗證] 文件</a></p>
+
+
+
+<p>屆時會提供完整的 API，裡面有段 API 是要自己申請，在商品建立的時候，有一段 api_path，申請屬於自己的路徑，完整 API 路徑可能是 /api/:api_path/admin/product，這樣的話 API 才能正常的運作，所以要先申請屬於自己的 API 路徑，避免與別人的資料內容產生衝突。</p>
+
+
+
+<h5>vue-course-api-wiki 主要分為兩區</h5>
+
+
+
+<ul>
+<li>Dashboard – 管理控制台 [需驗證]</li>
+<li>Shopping – 客戶購物 [免驗證]</li>
+</ul>
+
+
+
+<p><a rel="noreferrer noopener" href="https://vue-course-api.hexschool.io/" target="_blank">Vue 課程練習 API 連結</a></p>
+
+
+
+<h5>六角學院 Vue 課程練習 API 申請</h5>
+
+
+
+<p>流程說明</p>
+
+
+
+<ol>
+<li>申請一個專屬的課程練習帳號</li>
+<li>登入帳號，並申請一個 API 路徑</li>
+<li>測試 API 是否可以運作，並且開始實作</li>
+</ol>
+
+
+
+<p>每筆資料會加入到個人的 API 帳號下避免與其他人衝突。<br><br>新增資料、申請 API 是相同的帳密。</p>
+
+
+
+<h3>API&nbsp;常見問題解決方式</h3>
+
+
+
+<p>方法、自我檢查</p>
+
+
+
+<h5>路徑與方法是一對的</h5>
+
+
+
+<p>API 是由路徑 + 方法組成的，文件中皆會標示所有 API 可用的方法如 GET、POST、DELETE 等等，必須使用完全對應的方法才能運作。<br><br>範例：以下 API 僅能使用 POST 行為，如果使用 GET 就會出現「您所查看的API不存在」的回應。</p>
+
+
+
+<pre class="wp-block-code"><code>https:&#47;&#47;vue-course-api.hexschool.io/signin</code></pre>
+
+
+
+<h5>從錯誤訊息中尋找問題</h5>
+
+
+
+<p>API 發送的過程中錯一個字就會無法運行，盡可能從錯誤的回饋中尋找問題、檢查：</p>
+
+
+
+<ul>
+<li>路徑是否拼對</li>
+<li>GET、POST 等方法是否正確</li>
+<li>程式碼運作是否如預期</li>
+</ul>
+
+
+
+<p>範例：下圖的 API 路徑傳成了物件，並非產品 id 所以無法運行。</p>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" width="1077" height="112" src="/wordpress_blog/wp-content/uploads/2022/04/路徑傳成物件非產品id.png" alt="" class="wp-image-686"><figcaption>路徑傳成物件非產品id</figcaption></figure>
+
+
+
+<h5>管理控制台的 API 都需要登入才能運作</h5>
+
+
+
+<p>API 依據使用者不同分為兩大類 (需驗證及免驗證)，其中「管理控制台」一定要登入後才可以運作，所以請依據課程順序執行才能確保正確性。</p>
+
+
+
+<h5>遇到錯誤無法解決</h5>
+
+
+
+<p>依然可以到 Udemy 問答區發問<br>請遵循以下的流程：</p>
+
+
+
+<ol>
+<li>盡可能提供完整訊息<br>由於許多問題並非片段就能判斷<br>所以盡可能提供越完整越好<ul>
+<li>錯誤的問題描述 (哪一個 API、做了什麼事、預期有怎樣的發展、錯誤的問題點)</li>
+<li>錯誤的 API 連結為何</li>
+<li>完整錯誤的訊息圖片 ( Chrome Console )</li>
+<li>出現錯誤的程式碼</li>
+</ul>
+</li>
+<li>可以提供完整程式碼讓老師測試<br><br>如果還是無法解決，請提供原始碼讓老師測試<br>可以使用 Github 或者寄送到 service@hexschool.com<br>寄送時特別注意：不需要夾帶「 node_modules、dist」資料夾<br>這會導致信件無法開啟，且下載後依然要刪除重新安裝。</li>
+</ol>
+
+
+
+<h3>啟用一個 Vue Cli&nbsp;並且引用帶入專屬 API</h3>
+
+
+
+<p>用先前所申請好的 API 來取得資料。</p>
+
+
+
+<p>操作步驟與講解</p>
+
+
+
+<ol>
+<li>用 Vue Cli 把 Webpack 環境建立起來，並且開始運行<br>安裝參數設定，ESLint 可以選擇不安裝，在寫程式碼會比較嚴謹，但不熟悉的話會產生些錯誤。</li>
+<li>測試申請的 API 是否能在我們 Webpack 環境正確運行</li>
+<li>安裝 AJAX 套件，是用來取得遠端資料，會使用 vue-axios 套件，按照 vue-axios 上面 NPM 的指令複製下來，把目前在運行的環境先暫停，然後貼上 NPM 指令。會安裝兩個套件，一個是 axios、一個是 vue-axios，安裝完成後，vue-axios 有要求說把相關的指令貼到 entry file，entry file 指的是 main.js 這個檔案，現在 import Vue from ‘vue’ 已經寫在 entry file 上面，就不需要再重新寫入，接下來把後面這兩行貼在 Vue 的下方，習慣把第三方的套件往上面放，像 Vue、axios、VueAxios 這是屬於第三方的套件，App、router 是我們自己撰寫的，就往下放。往下放之後這裡會出現紅字，原因是我們還沒使用它，在 vue-axios 把 Vue.use(VueAxios, axios) 貼進來，就可以正確運行</li>
+<li>把 Vue Cli 環境再給運行起來，打開 App.vue 這個檔案，試著在這裡取得遠端資料，在 App.vue 新增 created 的 hook，它是個 function 存檔之後，我們要取得遠端資料，可以參考 vue-axios 的文件，這邊有個 this.$http.get 的方式，把它複製貼進來，裡面還有個 api 的變數，api 就是遠端的路徑，上方還需要遠端的路徑，使用 const api = ‘ 遠端的路徑’;，這個路徑要怎麼看，回到&nbsp;<a rel="noreferrer noopener" href="https://github.com/hexschool/vue-course-api-wiki/wiki/%E5%AE%A2%E6%88%B6%E8%B3%BC%E7%89%A9-%5B%E5%85%8D%E9%A9%97%E8%AD%89%5D" target="_blank">vue-course-api-wiki</a>，文件分為 dashboard、shopping，shopping 的部分是不需要驗證，所以我們在取得遠端的時候，先使用 shopping 這段是不需要登入驗證，可以直接使用這個 shopping，從取得商品列表，這裡有個 [api]，把這段的&nbsp;<code>/api/:api_path/products</code>複製起來，貼到 const api，這裡有個 :api_path 是先前在 Vue 課程練習 API 所申請的路徑，把它貼過來，在前方需加上前端遠端 API 伺服器的路徑，現在就來看資料能不能正確的取得，重新整理頁面，打開開發者工具的 Console，就可以看到資料有取得。不過我們 API 伺服器路徑、所申請的 APIPath 都是寫在程式碼內，這樣其實不是很好，因為這兩個路徑可能會做修改，盡可能把路徑取出來</li>
+<li>打開 config 裡面有個 dev.env.js 這個檔案，跟它相對應的是 prod.env.js，兩者差異是 dev.env.js 這個是我們開發中的環境、prod.env.js 是正式的環境，我們現在把這個路徑加上來，可以先加在 dev.env.js 上面，要正式釋出的時候記得 prod.env.js 也是要加上相對應的變數。加上去的方式可以如下，前面是 APIPATH，另外一個是自定義的路徑 CUSTOMPATH，記得裡面的值不是直接將字串貼進來，裡面還要再加上另外一個雙引號，所以在這裡有一個單引號在外面，裡面還有一個雙引號，<strong>需特別注意</strong>。接下來把伺服器的路徑貼進來，另外一個一樣要補上一個單引號、一個雙引號以及自定義的路徑。存檔後，重啟 Vue Cli (npm run dev)</li>
+<li>接下來回到 App.vue，就可以使用這兩個變數，先輸入 console.log，先把他們印出來看看，印出來的路徑是如下，試試看這兩個路徑能不能正確的印出來，重新整理，可以看到遠端伺服器的路徑、自定義的路徑，所以這個路徑是可以正確取出來</li>
+<li>把 const api 改成使用環境變數來取得，取得的方式就可以改成反引號，把 api/自定義路徑/products 先貼進來，前面的這個部分就可以先使用 ${process.env.APIPATH}，在後面這邊的自定義路徑可以換成我們剛剛所定義的環境變數。所以在前面我們是使用 APIPATH 的環境變數、後面是使用 CUSTOMPATH 的環境變數，對應的就是 dev.env.js 這個檔案，存檔之後我們來看一下能不能正確取得資料。</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// 3. NPM 指令
+npm install --save axios vue-axios</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 3. vue-axios
+// entry file - main.js
+import axios from 'axios';
+import VueAxios from 'vue-axios';
+
+// usage in Vue 2
+Vue.use(VueAxios, axios);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 4. App.vue
+created() {
+  const api = '/api/:api_path/products';
+  // API 伺服器路徑
+  // 所申請的 APIPath
+  this.$http.get(api).then((response) =&gt; {
+    console.log(response.data);
+  })
+},</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 5. dev.env.js
+// 加在 module.exports = merge(prodEnv, {}) 裡面
+APIPATH: '"伺服器的路徑"',
+CUSTOMPATH: '自定義的路徑',</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 6. console.log
+console.log(process.env.APIPATH, process.env.CUSTOMPATH);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 7. const api 改成使用環境變數來取得
+const api = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/products`;</code></pre>
+
+
+
+<h3>插件補充說明</h3>
+
+
+
+<ul>
+<li>vue 3.0 推出以後，如何安裝相對應的版本套件</li>
+<li>veeValidate 3.x 版本驗證介紹</li>
+</ul>
+
+
+
+<h5><a rel="noreferrer noopener" href="https://www.npmjs.com/package/vue-axios" target="_blank">vue-axios</a></h5>
+
+
+
+<p>在 vue-axios 文件下有支援度的說明(Support matrix)。</p>
+
+
+
+<p>操作與講解</p>
+
+
+
+<ol>
+<li>移除 vue-axios 套件</li>
+<li>安裝 vue-axios 舊版本，複製 vue-axios 指令，針對 vue-axios 來安裝。在套件的後方加上@版本號，版本號不需要去查是 .x 版本，只要輸入一個數字就可以，它就會安裝這個版本號下最新的版本</li>
+<li>運行環境 npm run dev</li>
+<li>打開後按模擬訂單就會取得遠端資料</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// 1. 移除 vue-axios 套件
+npm uninstall vue-axios</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 2. 安裝 vue-axios 舊版本
+npm install --save vue-axios@2</code></pre>
+
+
+
+<h3>引用 Bootstrap&nbsp;套件，並客製化樣式</h3>
+
+
+
+<p>介紹怎麼把樣式匯入，會使用到的是 Bootstrap 4。</p>
+
+
+
+<p><a href="https://getbootstrap.com/docs/4.6/getting-started/download/" target="_blank" rel="noreferrer noopener">Bootstrap 4</a></p>
+
+
+
+<p>操作與說明</p>
+
+
+
+<ol>
+<li>安裝 Bootstrap 4，先把終端機停掉 (Ctrl+c)，輸入 npm 指令，安裝完成後，可以從終端機看到 Bootstrap 4 已經安裝完，但還缺少 jquery 以及 popper.js，這段的意思是說如果要使用 Bootstrap 的 JavaScript 的話，必須額外安裝這兩個，在這個地方我們先把 Bootstrap 引入就可以。</li>
+<li>接下來再把環境運行 (npm run dev)，確定已經運行完成後，打開資料夾列表、點選 node_modules、找到 bootstrap，我們會使用到的 Bootstrap 是 scss 的版本，另外這邊有個 dist 的版本是它所匯出的包含 css、js，這個是已經編譯好的，那我們會使用到的是沒有編譯版本的 Bootstrap。</li>
+<li>到 App.vue 下，這個預設的 CSS 先把它拿掉，接下來把&lt;style&gt; 標籤加上 lang=”scss”，當把 lang=”scss’ 加上後畫面可能會跳錯，依據不同的版本有些不會跳錯、有些會跳錯，跳錯的時候就必須把 sass-loader 給加進來。加上去的方式一樣把終端機停止，使用以下指令來安裝 sass-loader，安裝完成後，重新執行 npm run dev，這個時候就不會跳錯了</li>
+<li>還是出現錯誤，討論區的解決方式，node-sass 和 sass-loader 版本問題，這兩個套件建議都安裝舊版本，確保支援 Vue Cli 不會出現錯誤，可先移除接著重新安裝 node-sass 和 sass-loader，指令如下</li>
+<li>接下來我們使用 @import，把這個路徑下的 scss 的 bootstrap.scss 把它載入，這段的意思是說，我們要載入 bootstrap 這個 node_modules，接下來再載入 scss 下方的 bootstrap.scss，後面記得補上 ;，存檔後如果沒有跳錯，代表說 sass 應該已經正確的載入。</li>
+<li>現在我們回到畫面上，使用開發者工具看一下是否有正確的載入 bootstrap，像 &lt;h1&gt; 標籤的 Styles 有出現_type.scss 這個基本上就是有載入，我們繼續往下，下方會出現特別的變數，就是 :root 後面出現很多顏色的變數，這些顏色的變數就是 Bootstrap 4 所定義的，所以現在 Bootstrap 4 有正確的載入。</li>
+<li>我們在使用 Bootstrap 4 的時候，除了這種載入的方式，還有另外一種，現在這個方式是我們直接把 Bootstrap 直接載進來。但有些時候我們會希望它可以獨立的客製化，我們再新增一個檔案，然後我們另外存儲在 assets 裡面，叫做 all.scss，把這段 bootstrap 移到 all.scss 裡面，然後存檔，並且把 App.vue 的路徑做稍為的調整，把路徑指向 assets 裡面的 all.scss，後面的 scss 是可以省略的，存檔後兩個結果會是一樣的，樣式不會有任何的變化。</li>
+<li>現在我們要客製化一些樣式，回到 node_modules 裡面的 bootstrap 下方有一個檔案是 _variables.scss，並把它打開，然後另存新檔，一樣在 assets 裡面，然後我們新增一個資料夾叫做 helpers (新增此路徑可避免原始套件路徑衝突)，叫做 _variables.scss 然後存儲，我們在 all.scss 做稍微的調整，第一行會載入 functions、第二行會載入我們所自定義的變數，第一行是載入 bootstrap 套用變數的方法，有這些方法這些變數才能正確的啟用，所以第二行是我們自定義的變數，存儲之後它一樣沒有什麼變化。</li>
+<li>我們將 Bootstrap 一些樣式加進來試一下，把按鈕加進來，把<a rel="noreferrer noopener" href="https://getbootstrap.com/docs/4.6/components/buttons/" target="_blank">按鈕</a>的程式碼複製起來，然後到 App.vue 直接貼在 &lt;router-veiw/&gt; 標籤的下方，回到畫面上就會有這些按鈕，現在我們要客製化屬於自己的樣式的時候，就可以到 helpers/_variables.scss ，這個 variables 是屬於我們的 variable，所以在這個地方我們就可以做些調整，像它現在預設的顏色是這個藍色，如果說我們要把主色這個 primary 這個主色換成其他顏色的話，我們就可以先複製一個變數 $purple，在這裡可以選擇喜歡的顏色就好，接下來把它貼到下方有個 $theme-colors 的地方，把原本 $primary, 註解掉，替換成我們剛所複製的顏色變數。存檔之後會看到這個顏色已經被替換掉，這個就是我們自定義色彩的一個方式。</li>
+<li>回到 App.vue 裡面來，再把 components 裡面有個 HelloWorld.vue 把它打開，這個 HelloWorld.vue 下方 &lt;style&gt; 有個 scoped，這裡要講解一下 scoped 是什麼意思，這個 scoped 的意思就是這些樣式只會在這裡運行，HelloWorld.vue 裡面的 a 連結都被套用成綠色， 如果說我在外層 ，再加入屬於自己的 a 連結的話，把 a 連結加在 App.vue &lt;button&gt; 標籤的下方，它的顏色會用我們 primary 這個主色，它並不會用內層這個綠色。這裡要說的是，樣式想要封裝在特定的元件內的話，就可以加入這個 scoped。</li>
+<li>這個章節先使用 sass 的型式將 Bootstrap 載到專案內，這樣的話，我們等下就可以省去許多寫 CSS 的時間。</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// 1. 安裝 Bootstrap 4
+npm install bootstrap --save</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 3. 在 App.vue 的 &lt;style&gt; 標籤加上
+&lt;style lang="scss"&gt;
+
+&lt;/style&gt;</code></pre>
+
+
+
+<p>有些 template 已經包含 sass-loader 這樣就不需要重新安裝。<br>安裝後不需要調整 Webpack，重新啟動即可。</p>
+
+
+
+<pre class="wp-block-code"><code>// 3. 安裝 sass-loader 指令
+npm install node-sass sass-loader --save</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 4. node-sass 和 sass-loader 舊版本指令
+npm install node-sass@4.14.1
+npm install --save-d sass loader@7.1.0</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 5. App.vue 使用 @import
+&lt;style lang="scss"&gt;
+  @import "~bootstrap/scss/bootstrap"
+&lt;/style&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 7. all.scss
+@import "~bootstrap/scss/bootstrap";</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 7. App.vue
+&lt;style lang="scss"&gt;
+@import "./assets/all";
+&lt;/style&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 8. all.scss
+// 載入 functions
+@import "~bootstrap/scss/functions";
+// 載入自定義的變數
+@import "./helpers/_variables";
+@import "~bootstrap/scss/bootstrap";</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 9.、10 App.vue
+&lt;button type="button" class="btn btn-primary"&gt;Primary&lt;/button&gt;
+&lt;button type="button" class="btn btn-secondary"&gt;Secondary&lt;/button&gt;
+&lt;button type="button" class="btn btn-success"&gt;Success&lt;/button&gt;
+&lt;button type="button" class="btn btn-danger"&gt;Danger&lt;/button&gt;
+&lt;button type="button" class="btn btn-warning"&gt;Warning&lt;/button&gt;
+&lt;button type="button" class="btn btn-info"&gt;Info&lt;/button&gt;
+&lt;button type="button" class="btn btn-light"&gt;Light&lt;/button&gt;
+&lt;button type="button" class="btn btn-dark"&gt;Dark&lt;/button&gt;
+&lt;a href="#"&gt;連結&lt;/a&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 9. helpers/_variables.scss
+// 複製一個喜歡的顏色變數
+$blue:    #007bff !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #dc3545 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #28a745 !default;
+$teal:    #20c997 !default;
+$cyan:    #17a2b8 !default;
+
+// 把 $primary 替換成喜歡的顏色變數
+$theme-colors: map-merge(
+  (
+    "primary":    $purple, //$primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "dark":       $dark
+  ),
+  $theme-colors
+);</code></pre>
+
+
+
+<h3>製作登入介面</h3>
+
+
+
+<p>這個章節要製作登入以及登出。</p>
+
+
+
+<p>操作與說明</p>
+
+
+
+<ol>
+<li>回到 App.vue ，把多餘的內容先把它刪掉，留下一個 &lt;router-view/&gt; 標籤就好了</li>
+<li>在 components 下面再新增一個資料夾叫做 pages，我們等下把所有的頁面的內容都往裡面放，在 pages 裡面新增一個檔案叫做 Login.vue，我們可以先把 HelloWorld.vue 的檔案結構複製貼過來，但是我們不需要裡面的內容，把內容都把它刪掉。</li>
+<li>現在有個 Login.vue 以及 App.vue，接下來我們把 router 裡面的 index.js 打開，我們把 Login 的頁面把它載進來，這邊的 Login 會出現紅字，因為我們還沒使用它，我們在 routes 裡面再新增一個路徑，要記得在路徑上盡可能都打小寫。繼續往下，那 component 就指向我們剛新增的元件，現在應該可以正常的運行。我們現在可以到 login 的畫面來 (…/#/login)，login 的畫面目前是空的，所以沒有任何東西。</li>
+<li>我們要做登入的話，就要有基本的版型，這個時候可以打開 Bootstrap 4，點選 Examples 後，下方有個<a rel="noreferrer noopener" href="https://getbootstrap.com/docs/4.6/examples/sign-in/" target="_blank">登入的頁面</a>，把它打開來，直接查看它的原始碼，我們可以直接把 &lt;form&gt; 標籤整個複製下來，貼到 Login.vue &lt;div&gt; 標籤內注意的是，這個圖片是我們不需要的，就可以把它移掉，其他就把它修改到可以運行的狀態。回到畫面上就會有個基本的登入畫面，我們還可以複製它的 CSS 樣式過來，這裡有個 signin.css，我們把它複製下來，在 Login.vue 下方可以加上 &lt;style&gt;，並加上剛所介紹的 scope 方法，然後把 CSS 貼進來，存檔之後、重新整理看一下，我們等下就會在這個畫面上製作登入。</li>
+<li>我們可以看一下&nbsp;<a rel="noreferrer noopener" href="https://github.com/hexschool/vue-course-api-wiki/wiki/%E7%99%BB%E5%85%A5%E5%8F%8A%E9%A9%97%E8%AD%89" target="_blank">API 文件</a>是怎麼寫的，到登入這個 API 這個地方有寫到我們會使用的 API 是 /signin，然後使用的參數是 username 以及 password，雖然它是叫 username 但是這裡傳入的還是 email，那這邊我們就來試試看。</li>
+<li>到 Login.vue 下面的地方先來定義資料結構，這裡是 user，然後它是一個物件，會使用到的是 username 以及 password，接下來我們把這個定義好的資料結構再把它放上來，在 &lt;input&gt; 標籤上加上 v-model=”user.username”，下面的密碼也是一樣，在 &lt;input&gt; 標籤上加上 v-model=”user.password”</li>
+<li>接下來我們要做的是登入的事件，登入的事件除了綁定這個按鈕上，我們可以直接寫在這個 &lt;form&gt; 標籤上，寫的方式就是 @submit.prevent=”signin”。接下來把這個事件移到下方，我們在 data 後面再加上一個 methods，然後加入一個 signin 的事件，signin 的事件要怎麼寫，我們剛剛已經有在 App.vue 練習過一次了，所以我們可以把 const api 這段先把它複製過來，直接把它複製到 signin 這段，但是在這個部分，不需要傳入 CUSTOMPATH，我們可以看&nbsp;<a rel="noreferrer noopener" href="https://github.com/hexschool/vue-course-api-wiki/wiki/%E7%99%BB%E5%85%A5%E5%8F%8A%E9%A9%97%E8%AD%89" target="_blank">API 文件</a>這個部分，它只要直接把這個路徑貼進來，就是 signin 這個路徑貼進來，它不需要後面 CUSTOMPATH，那我們把這段改成這個樣子，只需要signin 就可以了。前面是我們伺服器的路徑，後面是補上一個 signin，然後在這個部份我們會使用 post，會把用戶的資料傳進來，用戶的資料就是上面這個 user，那麼我們就可以 const vm = this，在 post 的參數補上 vm.user，所以在這裡 vm.user 就是帳號以及密碼，那我們來試試看它能不能正確的登入。重新整理來看 Console 的狀態，我們來輸入帳號密碼，先打一次錯誤的，這裡會出現 success、false，訊息是登入失敗，那再輸入一次成功的試試看，這裡就會出現 success、true，訊息是登入成功，然後它還會回傳一個 uid，但 uid 這個地方我們不會用到。所以，如果成功的話，這個 success 會是 true，在後面我們就可以補上，如果我們的 response.data.success 是 true，那麼我們就把路由的路徑回到首頁，剛剛的 index 這個地方，在這個地方就是我們如果登入成功的話，就會把路徑改到首頁這個地方，那我們來試一次看看。重新整理，我再重新登入一次，登入成功之後，它就會轉到首頁這個地方。</li>
+<li>那麼現在我們還要做個登出，我們回到 HelloWorld.vue 這個頁面，我們假設這個頁面是要登入才能進來的，我們先在這個地方補上一個登出的行為，我們直接使用一個 a 連結上面寫登出，然後使用 @click.prevent=”signout”，在後面再補上一個方法 methods 裡面是 signout，我們把基本的方法寫好之後，我們把登出的事件加上來，我們再看一下&nbsp;<a rel="noreferrer noopener" href="https://github.com/hexschool/vue-course-api-wiki/wiki/%E7%99%BB%E5%85%A5%E5%8F%8A%E9%A9%97%E8%AD%89" target="_blank">API文件</a>，登出的 API 跟 signin 非常像，但不需要傳入任何參數，它只要觸發這個 logout 的 API 之後，就會直接登出。現在就可以直接把 Login.vue 的 signin 裡面的程式碼複製把它直接貼到 HelloWorld.vue 的 signout 裡面，把 signin 改成 logout，post 原本要傳入 vm.user 的部分，我們就把它拿掉，只要直接傳入 api 就可以了。傳入 api 之後，這裡如果回傳 true 的話，我們就回到剛剛登入的頁面，把 push(‘/’) 改成 push(‘/login’)。</li>
+<li>重新整理，這裡有個小小的登出，登出之後就會回到登入的頁面，我們再登入一次，這樣就會登入進來這一頁，再按一次登出就會回到登入頁，目前這段會發現一個很嚴重的 bug，我登入的時候，它會回到登出頁，我不登入的時候一樣可以到達登出頁。下一個章節就會來介紹我們怎麼確認用戶有沒有登入，先練習試著把登入以及登出的行為都把它完成。</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// 1. App.vue
+&lt;template&gt;
+  &lt;div id="app"&gt;
+    &lt;router-view/&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  name: 'App',
+  created() {
+    const api = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/products`; // 'https://vue-course-api.hexschool.io/api/geehsu/products';
+    // API 伺服器路徑
+    // 所申請的 API Path
+    console.log(process.env.APIPATH, process.env.CUSTOMPATH);
+    this.$http.get(api).then((response) =&gt; {
+      console.log(response.data)
+    });
+  },
+}
+&lt;/script&gt;
+
+&lt;style lang="scss"&gt;
+@import "./assets/all";
+&lt;/style&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 2. Login.vue
+&lt;template&gt;
+    &lt;div&gt;&lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  name: 'HelloWorld',
+  data () {
+    return {
+      msg: 'Welcome to Your Vue.js App'
+    }
+  }
+}
+&lt;/script&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 3. index.js
+// 把Login給載進來
+import Login from '@/components/pages/Login';
+
+// routes裡面再新增一個路徑
+{
+  path: '/login',
+  name: 'Login',
+  component: Login
+}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 4. Login.vue
+&lt;template&gt;
+    &lt;div&gt;
+        &lt;form class="form-signin"&gt;
+        &lt;h1 class="h3 mb-3 font-weight-normal"&gt;請先登入&lt;/h1&gt;
+        &lt;label for="inputEmail" class="sr-only"&gt;Email address&lt;/label&gt;
+        &lt;input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus&gt;
+        &lt;label for="inputPassword" class="sr-only"&gt;Password&lt;/label&gt;
+        &lt;input type="password" id="inputPassword" class="form-control" placeholder="Password" required&gt;
+        &lt;div class="checkbox mb-3"&gt;
+            &lt;label&gt;
+            &lt;input type="checkbox" value="remember-me"&gt; Remember me
+            &lt;/label&gt;
+        &lt;/div&gt;
+        &lt;button class="btn btn-lg btn-primary btn-block" type="submit"&gt;Sign in&lt;/button&gt;
+        &lt;p class="mt-5 mb-3 text-muted"&gt;© 2017-2021&lt;/p&gt;
+&lt;/form&gt;
+    &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  name: 'HelloWorld',
+  data () {
+    return {
+      msg: 'Welcome to Your Vue.js App'
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;style scoped&gt;
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f5f5f5;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input&#91;type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input&#91;type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+&lt;/style&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 6. Login.vue
+&lt;template&gt;
+    &lt;div&gt;
+        &lt;form class="form-signin"&gt;
+        &lt;h1 class="h3 mb-3 font-weight-normal"&gt;請先登入&lt;/h1&gt;
+        &lt;label for="inputEmail" class="sr-only"&gt;Email address&lt;/label&gt;
+        &lt;input type="email" id="inputEmail" class="form-control" placeholder="Email address" v-model="user.username" required autofocus&gt;
+        &lt;label for="inputPassword" class="sr-only"&gt;Password&lt;/label&gt;
+        &lt;input type="password" id="inputPassword" class="form-control" v-model="user.password" placeholder="Password" required&gt;
+        &lt;div class="checkbox mb-3"&gt;
+            &lt;label&gt;
+            &lt;input type="checkbox" value="remember-me"&gt; Remember me
+            &lt;/label&gt;
+        &lt;/div&gt;
+        &lt;button class="btn btn-lg btn-primary btn-block" type="submit"&gt;Sign in&lt;/button&gt;
+        &lt;p class="mt-5 mb-3 text-muted"&gt;© 2017-2021&lt;/p&gt;
+&lt;/form&gt;
+    &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  name: 'HelloWorld',
+  data () {
+    return {
+        user: {
+            username: '',
+            password: '',
+        },
+    };
+  },
+};
+&lt;/script&gt;
+
+&lt;style scoped&gt;
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f5f5f5;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input&#91;type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input&#91;type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+&lt;/style&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 7. Login.vue
+
+&lt;template&gt;
+    &lt;div&gt;
+      &lt;form class="form-signin" @submit.prevent="signin"&gt;
+      &lt;h1 class="h3 mb-3 font-weight-normal"&gt;請先登入&lt;/h1&gt;
+      &lt;label for="inputEmail" class="sr-only"&gt;Email address&lt;/label&gt;
+      &lt;input type="email" id="inputEmail" class="form-control" placeholder="Email address" v-model="user.username" required autofocus&gt;
+      &lt;label for="inputPassword" class="sr-only"&gt;Password&lt;/label&gt;
+      &lt;input type="password" id="inputPassword" class="form-control" v-model="user.password" placeholder="Password" required&gt;
+      &lt;div class="checkbox mb-3"&gt;
+          &lt;label&gt;
+          &lt;input type="checkbox" value="remember-me"&gt; Remember me
+          &lt;/label&gt;
+      &lt;/div&gt;
+      &lt;button class="btn btn-lg btn-primary btn-block" type="submit"&gt;Sign in&lt;/button&gt;
+      &lt;p class="mt-5 mb-3 text-muted"&gt;© 2017-2021&lt;/p&gt;
+&lt;/form&gt;
+    &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  name: 'HelloWorld',
+  data () {
+    return {
+      user: {
+          username: '',
+          password: '',
+      },
+    };
+  },
+  methods: {
+    signin() {
+    const api = `${process.env.APIPATH}/signin`;
+    const vm = this;
+    this.$http.post(api, vm.user).then((response) =&gt; {
+      console.log(response.data);
+      if (response.data.success) {
+        vm.$router.push('/');
+      }
+    });
+    },
+  },
+};
+&lt;/script&gt;
+
+&lt;style scoped&gt;
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f5f5f5;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input&#91;type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input&#91;type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+&lt;/style&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 8. HelloWorld.vue
+&lt;template&gt;
+  &lt;div class="hello"&gt;
+    &lt;a href="#" @click.prevent="signout"&gt;登出&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  name: 'HelloWorld',
+  data () {
+    return {
+      msg: 'Welcome to Your Vue.js App'
+    }
+  },
+  methods: {
+    signout() {
+    const api = `${process.env.APIPATH}/logout`;
+    const vm = this;
+    this.$http.post(api).then((response) =&gt; {
+      console.log(response.data);
+      if (response.data.success) {
+        vm.$router.push('/login');
+      }
+    });
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;!-- Add "scoped" attribute to limit CSS to this component only --&gt;
+&lt;style scoped&gt;
+h1, h2 {
+  font-weight: normal;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+a {
+  color: #42b983;
+}
+&lt;/style&gt;</code></pre>
+
+
+
+<h5>補充：<a href="https://vue-loader.vuejs.org/guide/scoped-css.html" target="_blank" rel="noreferrer noopener">Scoped CSS</a>
+</h5>
+
+
+
+<h3>登入 API&nbsp;補充說明</h3>
+
+
+
+<h5>注意!!</h5>
+
+
+
+<p>原課程的 signin API 暫時移除功能<br>請同學參考 admin/signin 的做法 (下一講座有完整說明)</p>
+
+
+
+<pre class="wp-block-code"><code>&#91;API]: /signin</code></pre>
+
+
+
+<hr class="wp-block-separator">
+
+
+
+<p>這段是針對跨域登入的說明<br>如果有 JWT 登入設計亦可使用<br><br>後端登入 API 改用 (&nbsp;<a rel="noreferrer noopener" href="https://github.com/hexschool/vue-course-api-wiki/wiki/%E7%99%BB%E5%85%A5%E5%8F%8A%E9%A9%97%E8%AD%89#%E8%B7%A8%E5%9F%9F%E7%99%BB%E5%85%A5%E9%A9%97%E8%AD%89" target="_blank">文件參考</a>&nbsp;)</p>
+
+
+
+<pre class="wp-block-code"><code>&#91;API]: /admin/signin</code></pre>
+
+
+
+<p>並加上以下程式碼於 main.js 內</p>
+
+
+
+<pre class="wp-block-code"><code>axios.defaults.withCredentials = true;</code></pre>
+
+
+
+<p>更多訊息可參考下小節影片說明</p>
+
+
+
+<hr class="wp-block-separator">
+
+
+
+<p>本章節登入驗證相關問題，已於「課程補充範例程式碼」章節補充。</p>
+
+
+
+<h3>登入 API&nbsp;補充說明&nbsp;(跨域)</h3>
+
+
+
+<p>操作與說明</p>
+
+
+
+<ol>
+<li>更新 API 的內容，主要是針對於 API 伺服器與 Vue 的站點如果有跨域的話，就必須加上這段的內容。如果說你的後端是自行設計的話，也可以參考&nbsp;<a rel="noreferrer noopener" href="https://github.com/hexschool/vue-course-api-wiki/wiki/%E7%99%BB%E5%85%A5%E5%8F%8A%E9%A9%97%E8%AD%89" target="_blank">API 文件</a>&nbsp;的後端跨域設定的內容，這段是給後端伺服器給使用的，必需開啟跨域才能做跨域的存取。在登入 API 做法的部分，跟先前有一點點的不一樣，但是差距並不大。主要的部份是 signin 前面再加上 admin，原有的 API 也是可以運作的，如果在先前登入有些問題的話，就可以換上這個 /admin/signin 的部分。那這段是在做什麼事？主要是我們在先前登入的時候，並沒有把 Cookie 正確的存起來，補上這一段就是把 Cookie 正確的存在 Vue 的伺服器裡面，我們就稍微做一下，會比較了解這一段是做什麼事情。</li>
+<li>不過在做之前我們再看一下&nbsp;<a rel="noreferrer noopener" href="https://github.com/axios/axios" target="_blank">axios 的文件</a>，在 axios 跨域的那個 Cookie 存起來的話，必需帶上 withCredentials 這個參數，必需把它寫入到 Vue 應用程式裡面，這樣它才能正確的運作，這部分只會改兩行程式碼，所以不用太擔心，它的量很少。接下來我們回到 Login.vue，我們在 signin 前面加上 admin，把登入的路徑稍微改一下。然後在 main.js 的部分，再加入另外一行，就是 axios.defaults.withCredentials = true;，存檔後回到登入頁面，按右鍵檢查、打開 Console，現在先登入一次試看看，看來是沒問題的正確登入，我們要注意的是 Application 這個地方，在老師的講解的 Terminal 是我們正在運行的伺服器，往上看這裡面就是有一個後端傳來的 session，這個 session 就會把這段存在前端，每次 Vue 在發送 API 的時候，就會把這個 session 自動的帶進去，你只要加入這個 withCredentials 之後，這段 session 就會自動存在你的 Cookie 裡面，那麼你在每次發送 API 的時候，它也會自動的帶往後端的地方送，所以現在我們先把這段隨便複製一小段起來，我們就可以用 filter 來搜尋，就可以看到這裡有個 Value，這邊跟我們後端的 session 這整行是一模一樣的，它也就是存在 Application 裡面的 Cookie 裡面，所以有這樣的存起來之後，你就可以正確的切換頁面。當然要特別注意只有使用 admin/signin 這個 API 它才會正確的觸發這個事件。</li>
+<li>我們再試著把 withCredentials 關掉，我們來看一下如果沒有加入這段的話，這個 API 會有什麼不同。我們關掉的同時，也把這個 session 也把它刪掉，並且登出。剛這個動作就是把原本存在前端的 Cookie 把它刪除之後，我們再重新登入一次，它就不會把 Cookie 存起來，現在它會沒辦法正確的呈現畫面，原因就是因為它沒有辦法把 Cookie 存到前端來，老師的 Terminal 雖然有一個 sessionCookie，但是這段 Cookie 是沒有被存起來的。我們到 Application 裡面來，然後試著來搜尋一下，是沒有 Terminal 這一段的。試著把原本登入的 API 把它從 signin 換成 admin/signin，並且加上 axios.defaults.withCredentials = true; 這一段，試著使用 Cookie 的方式來登入我們 Vue 的伺服器。</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// 2. main.js
+axios.defaults.withCredentials = true;</code></pre>
+
+
+
+<h3>課程補充範例程式碼 (上完93~95節在回來上)</h3>
+
+
+
+<p>介紹關於登入的一個問題。因為最近 Chrome 都有大幅度的改版，它就會影響到 Cookie 的運作，所以我們這個章節就來了解一下怎麼調整這個問題。</p>
+
+
+
+<p>操作與說明</p>
+
+
+
+<ol>
+<li>因應這個問題，在這邊後端有做些調整，所以我們先來講解目前所遭遇到的狀況。現在我們先打開登入頁面，在登入頁面右鍵檢查、點選 Network，切換到 Network 這個地方，重新整理，Network 下方請確保紅燈是有開啟的，這裡會有個 XHR 的選項，把這個 XHR 點起來。</li>
+<li>接下來我們輸入我們的帳號、密碼，登入進去試試看，按下登入之後，這個時候看起來是沒有問題，登入看起來是成功，可是登入之後一直呈現旋轉的狀態。其實它在登入的過程中，它被瀏覽器所阻擋，這是新的 Chrome 的政策，它會阻擋一個跨域的 Cookie。這個跨域的 Cookie 是怎樣的狀況，我們來看一下。這邊有一個 signin 的 api，那我們點開 signin 的 api，signin 的 api 一進來應該是在 Headers 的地方，會顯示 200 OK。Preview 這個地方會顯示成功，看起來登入上應該是沒有問題才對。接下來我們直接切到最後一個 Cookies，在 Cookies 裡面會看到這個地方有一個會多一個選項，這邊出現驚嘆號，這邊這個驚嘆號它就寫說簡單來講是屬於跨域的資源，現在因為安全性的關係，所以跨域的資源沒有辦法直接寫入的。</li>
+<li>這是什麼樣的狀況，我們來畫圖了解一下為什麼會發生這樣的問題，我們先來畫一張圖，這張圖我們先畫分別代表前端以及後端的區塊，一邊是前端、一邊是後端，把文字給補上，左邊這裡是前端、右邊這裡是後端 ( 也就是 server )，我們這邊直接打 server。在原本的狀態裡面前端會對後端發送請求，前端的行為我們都用綠色表示，我們在前端往後端發送請求，假設是一個登入的請求之後，後端會回應相對應的內容。然候把後端的行為 ( 後端的行為用藍色表示)，這個後端就會執行一個程式叫做 set-cookie，這個 set-cookie 的作用就是把後端這 cookie 寫到前端的瀏覽器裡面來。但是目前因為跨域政策的關係，所以 set-cookie 這個程式碼就沒有辦法執行。我們先講原本的狀態，原本的狀態 set-cookie 它在執行之後這個前端會多一個 cookie，這個 cookie 是後端所加入的就不是前端所加入，在這個地方就用藍色來顯示。現在因為跨域存取的關係，目前來說像這種不是 Samesite、不是同域的，它沒有辦法給你做 set-cookie，它會直接把它擋掉，擋掉的話這 cookie 就寫不進來了。</li>
+<li>現在我們打開網址查看網站資訊，這邊有個 cookie，點開 cookie 之後，這邊看起來就沒有找到這幾個對應的 cookie，這邊後來有找到一個 backend，但是另外幾個就找不到，像是 session、Hexuid，這裡有一些可能是先前沒有刪除到的 cookie，backend、session、Hexuid 這幾個 cookie 就沒有辦法正確的寫入。我們重新整理來看一下，這邊重新整理之後它就會發現這幾個 cookie 是真的不存在。所以我們在下次發送驗證的時候，我們在正式執行其他 api 的時候，像是我們要取得後端、後台的產品列表的時候，這個地方它就沒有辦法夾帶 cookie 去做存取，因為這裡找不到 cookie。原本應該夾帶進來，但是它找不到，所以它就沒有辦法往後端送。</li>
+<li>因為這樣的狀況，所以我們現在要調整一下程式碼，先說明預期調整的狀況，現在的做法會跟先前有點不一樣。過去是從 server 存 cookie 到前端來，現在因為 server 沒有辦法存 cookie 到前端，所以我們在這個地方後端在往前端送的時候，會有一點點的改變。它在往前端送的時候會多一個欄位，我們原本的 data 會新增一個內容叫做 token，這個 token 往前端送來之後，我們的前端要負責由前端把它存到 cookie 裡面來，所以後端就不會執行 set-cookie、不會由後端來存取，接下來會由前端來把這個 cookie 給存起來。我們要發出請求向後端取得產品列表的時候，它就會把這個 cookie 往伺服器帶，就是由前端帶就不是由後端帶，後端就會把這個傳過來的 cookie 進行做驗證，這個欄位也會跟先前有點不同，那麼我們現在就來試著做做看吧。</li>
+<li>現在我們先登出，在登出之後我們先把路徑改成本地端伺服器，到時候正式的伺服器也會使用相同的設定檔。先把這個伺服器給替換上來，現在把伺服器替換上來之後，重新運行一次，接下來重新整理、重新登入，按下登入之後跟先前有點不一樣，登入之後看一下 Preview 的地方，在先前只有訊息、是否成功、還有 uid 而已，現在這個版本會多一個 token 以及 expired (到期日)，它會多這兩個。接下來在 cookie 這個地方就要把這兩個資訊給存起來，包含這個 token 以及 expired。那麼要怎麼做存取，這邊已經有先幫大家先把文件準備起來，在 <a rel="noreferrer noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document/cookie" target="_blank">MDN 的文件</a>有提供存取的方式，包含讀出跟寫入。在示例2的 var myCookie 這一行程式碼代表把 cookie 讀出來的方式，在示例3的 document.cookie 那一行代表把 cookie 寫入的方式，所以它的寫入以及讀出都準備好了。</li>
+<li>在這個 Login.vue 頁面，我們先把轉址先把它註解掉，我們等下先不轉址，我們先把 cookie 做寫入，在寫入之前我們必須先把值給取出來，const token、const expired，都把它讀取出來之後，我們先用 console.log 來確定一下有沒有把這兩個值給帶出來，(停止終端機、重新運行)，登入之後，在這邊 console 就可以把這兩個值給帶出來。前面是 token、後面是 expired。</li>
+<li>接下來我們就要把這兩個值寫到我們的 cookie 裡面來，回到 MDN 的文件頁面，示例3的 document.cookie 這一行是我們寫入的方式，我們先把這一段複製起來，記得這一行必須貼在我們的轉址之前，我們要在轉址前先把 cookie 存好，然後我們使用兩個反引號用樣板字面值來做儲存，然後這裡面會分別帶入幾個值。最後這個 path=/ 可以把它清掉，這個不會用到，然後這邊有分別兩個片段，前面這個是我們的 cookie 名稱以及它的值，後面這個是到期日以及它的值。所以在這個地方，這個 cookie 名稱是可以自訂的，我們來這邊給它一個名字叫做 hexToken，然後後面的是它的值，它的值我們就使用樣板字面值的方式把值給帶進去。另外一個地方也是使用相同的方式，但是 expires 這個是固定的名稱，然後我們一樣使用樣板字面值的方式把它的值帶進去，不過在這個地方要稍微注意一下，因為後端所傳來的數值，這個數值是 Unix Timestamp，所以我們必需轉成一般的時間格式，轉換的方式會像這樣子，會使用 new Date 然後把這個值給帶進來，那這樣子就可以把 cookie 給寫進去。</li>
+<li>存檔之後，我們再試一次看看，重新整理之後，我們把帳號密碼給填入，按下登入之後， Console這邊看起來有跳出這一段，照理說就有存起來了。我們把查看網站資訊打開，可以看到我們有存了哪些 cookie。那麼在 cookie 部分這裡就可以看到我們剛剛存了一個 hexToken，hexToken 裡面這邊就可以看到我們剛剛所存入的值，然後移到最前面它的值與我們剛剛所取得的值是相同的。下面的地方還有一個到期日，建立的時間是現在，它的到期日大概是五天之後，那麼這樣就有存起來了。如何確定它有正確的存起來，我們可以重新整理畫面，重新整理畫面之後，我們再看一次 cookie，一樣在 hexToken 這個地方可以看到相同的值，這個就是我們的 Token，存起來之後，我們就可以正確的登入。</li>
+<li>我們就把轉址打開，我們接下來要主動把 cookie 給提出來並且往後端做發送。這邊該怎麼樣製作，<a rel="noreferrer noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document/cookie" target="_blank">MDN 的文件</a>有把 cookie 帶出來的方式，示例2的 var myCookie 這一行就是把 cookie 帶出來的方式，另外一個就是怎麼把它往後端進行發送，這裡也已經準備好一個文件，<a rel="noreferrer noopener" href="https://github.com/axios/axios#custom-instance-defaults" target="_blank">axios 的文件</a> 裡面有說明該怎麼樣去加入一個驗證的 Token 把它往後端發送，在 Custom instance defaults 這裡有一行的意思是說我之後所發出的請求預設就會加入這個欄位，Authoriazation 這個欄位。所以我們接下來就可以把這一行加入到我們的程式碼裡面來。我們的後端基本上所有的後端的行為都會加入進入 Dashboard.vue 這個元件，因為它是外層的元件，現在我們就加入一個 created()，在這邊我們先把 Token 給取出來，Token 取出來的方式在示例2的 var myCookie 這一行，我們先把 var 改成 const，然後這裡稍做一下調整 (“$1” → ‘$1’)、有一個地方多了一個反斜線可以刪掉 (= 之前的 \ 可以刪掉)，然後這邊有個 test2 這個是我們自定義 Token 的名稱，所以我們剛存的 Token 名稱必需把它帶過來，必需用一模一樣，這個名稱可以自訂。接下來我們定義一個 my Cookie 之後，我們就可以把這個 cookie 看看能不能看到它的值。使用 console.log(myCookie);，這邊我們再補上一個 ‘myCookie’ 確保我們看到的是 myCookie 的內容 ( console.log(‘myCookie’, myCookie); )。重新整理之後，這裡就會帶入 myCookie，這個就是我們剛剛所存入 cookie 的內容，就是我們存入的 Token。現在我們要把它往後端送，把這一行程式碼複製起來，這段直接複製起來，前面的 instance 不需要複製，回到 Dashboard.vue 頁面把它貼進來。我們在套用 axios 的時候都是使用 this.$http.，在這個地方只要使用 this.$http.，接下來後面這一段直接把 axios 文件裡面的程式碼貼上來就可以了，貼上來之後我們把 myCookie 帶到這個地方來(AUTH_TOKEN → myCookie)。再稍作調整 ( [‘Authorization’] →.Authorization )，調整之後我們再來看一下它能不能正確運作，把 console.log 移調。存檔之後我們重新整理，重新整理之後就可以發現畫面現在就可以正確使用了。headers 在加上去之後，它是所有的 API 都會自動套用，所以我們就不需要一一的套用。套用的值會在 Network 的 products，這邊有個 Headers 裡面有 Response Headers、在往下去有個 Request Headers，這個 Request Headers 就是我們發出去，綠色這條線就是我們的 Request Headers，它就會帶入 Authoriztion 這一段把我們驗證往後端帶。</li>
+<li>這一章節就是更新後的驗證方式，不管是使用新的或者舊的，目前這兩個版本都會共存，我們建議換成新的方式，新的方式就不會受到跨域的影響。</li>
+</ol>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" width="681" height="241" src="/wordpress_blog/wp-content/uploads/2022/04/前端、後端與cookie關係.png" alt="" class="wp-image-688"><figcaption>前端、後端與 cookie 關係</figcaption></figure>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" width="681" height="241" src="/wordpress_blog/wp-content/uploads/2022/04/data-token.png" alt="" class="wp-image-689"><figcaption>data-token</figcaption></figure>
+
+
+
+<pre class="wp-block-code"><code>// 7.~10. Login.vue
+  methods: {
+    signin() {
+    const api = `${process.env.APIPATH}/admin/signin`;
+    const vm = this;
+    this.$http.post(api, vm.user).then((response) =&gt; {
+      console.log(response.data);
+      if (response.data.success) {
+        const token = response.data.token;
+        const expired = response.data.expired;
+        console.log(token, expired);
+        document.cookie = `hexToken=${token}; expires=${new Date(expired)};`;
+        vm.$router.push('/admin/products');
+      }
+    });
+    },
+  },</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 7.~10. Dashboard.vue
+  created() {
+    const myCookie = document.cookie.replace(/(?:(?:^|.*;\s*)hexToken\s*=\s*(&#91;^;]*).*$)|^.*$/, '$1');
+    // console.log('myCookie', myCookie);
+    this.$http.defaults.headers.common.Authorization = myCookie;
+  }</code></pre>
+
+
+
+<h3>課程補充範例程式碼說明</h3>
+
+
+
+<h5>課程補充範例程式瑪</h5>
+
+
+
+<p>因應 Chrome 的跨域限制，課程中新增 Token 的存取方式，讓前端可自行將 Token 存入 Cookie 及發送的方法，詳情可參考影音課程說明。</p>
+
+
+
+<p>MDN 文件，將 Cookie 存入、取出：</p>
+
+
+
+<p><a rel="noreferrer noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document/cookie" target="_blank">MDN 文件</a></p>
+
+
+
+<p>附上範例程式碼：</p>
+
+
+
+<pre class="wp-block-code"><code>const token = response.data.token;
+const expired = response.data.expired;
+console.log(token, expired);
+document.cookie = `hexToken=${token};expires=${new Date(expired)};`;</code></pre>
+
+
+
+<p>Axios 文件，設定預設 Headers：</p>
+
+
+
+<p>範例程式碼：</p>
+
+
+
+<pre class="wp-block-code"><code>const token = document.cookie.replace(/(?:(?:^|.*;\s*)hexToken\s*=\s*(&#91;^;]*).*$)|^.*$/, '$1');
+this.$http.defaults.headers.common.Authorization = `${token}`;</code></pre>
+
+
+
+<h3>驗證登入及 Vue Router&nbsp;的配置</h3>
+
+
+
+<p>資源</p>
+
+
+
+<ul>
+<li><a href="https://router.vuejs.org/zh/guide/advanced/navigation-guards.html#%E5%85%A8%E5%B1%80%E5%AE%88%E5%8D%AB" target="_blank" rel="noreferrer noopener">Vue Router 導覽守衛</a></li>
+<li><a href="https://router.vuejs.org/zh/guide/advanced/meta.html" target="_blank" rel="noreferrer noopener">Vue Router Meta</a></li>
+</ul>
+
+
+
+<p>操作與說明</p>
+
+
+
+<ol>
+<li>介紹怎麼阻止用戶在沒有登入的情況下，直接輸入網址的方式來進入指定頁面。像現在是在沒有登入的情況，但是我直接把後面的 login 拿掉就可以進入首頁。當然我們的 Router 目前也不知道說我們到底哪些頁面是需要登入，那些頁面是不需要。</li>
+<li>我們先來看&nbsp;<a rel="noreferrer noopener" href="https://router.vuejs.org/zh/guide/advanced/navigation-guards.html#%E5%85%A8%E5%B1%80%E5%89%8D%E7%BD%AE%E5%AE%88%E5%8D%AB" target="_blank">Vue Router 的文件</a>，在裡面有一個導航守衛的一個方法，導航守衛的概念是我們可以執行一個 router.beforeEach，這個會在切換頁面的時候觸發，然後這裡面會有三個參數，to 就是我們即將要到的頁面、from 就是我們從哪個頁面過來、next 就是到達下一個頁面，所以我們在往特定的頁面的時候，如果指定的頁面是需要登入的話，我們就可以做一些驗證，當它沒有問題的時候，我們就放行它，所以我們可以透過這個方法，去了解用戶接下來要到哪個路徑，接下來的路徑它需不需要登入，如果需要的話就先驗證，如果不需要的話就直接放行。</li>
+<li>接下來我們就要去了解到底哪些頁面是需要驗證，在路由元信息這邊我們可以看到 meta 下方所提供的範例是 requireAuth，就是這個頁面它是需要經過驗證的。那麼需要經過驗證的話，如果導航守衛發現它是需要驗證的話，就需要先執行一些驗證的手續，沒有問題的話才能放行它。所以我們需要了解目前的用戶到底有沒有登入，在&nbsp;<a rel="noreferrer noopener" href="https://github.com/hexschool/vue-course-api-wiki/wiki/%E7%99%BB%E5%85%A5%E5%8F%8A%E9%A9%97%E8%AD%89" target="_blank">API 文件</a>就有一個檢查用戶是否仍持續登入的說明。假設他回傳為 true 的話，就是目前它還是登入的狀態，所以它就不需要再重複登入。</li>
+<li>我們開始撰寫這段的程式碼，接下來我們打開 main.js，然後我們在導航守衛這邊，把 router.beforeEach 直接把它複製過來，複製過來之後我們來看一下 to、from、next 分別代表的是什麼東西，使用 console.log 來看一下，我們到登入頁面重新整理，會發現導航守衛好像沒有觸發，在這個地方其實導航守衛還沒有辦法阻擋的很完整。它必需在用戶切換頁面的時候才會觸發，像是現在在登入頁面重新整理是不會觸發，因為它沒有來自於哪個頁面、以及到達哪個頁面，所以它是沒有辦法觸發的。我們必需重新修改這個路由，它才能觸發這個事件，但是我現在修改這個路由，它也沒有辦法到達指定的頁面。</li>
+<li>因為它被導航守衛給擋下來了，為了避免被導航守衛擋下來，我們可以在後面先加上 next 的方法。存檔之後我們重新整理，接下來我們在切換頁面的時候，就不會直接被導航守衛擋下來，像這樣切換頁面是沒有問題的。</li>
+<li>我們再看一下 Console 的內容，Console 的內容這裡就可以看到說我們現在 to 是往 HelloWorld 頁面去，然後我們是從 Login 頁面過來，裡面就有一個 meta，現在這個 meta 裡面是空的，這個 meta 也就是路由訊息，我們可以把路由訊息加在 Login 上面，Vue Router 文件的路由元信息範例程式碼有個 meta: { requiresAuth: true }，先把它複製下來，我們就可以把這個路由訊息，加在 router 的 index.js 裡面的 routes 上面，然後我們存檔。所以我們現在如果說，我們切換頁面的時候，切換到 Login 頁面的時候，這個 HelloWorld 這一頁，它的 meta requiresAuth 就會是 true，所以這個 requiresAuth 是我們目前判斷的一個基準。</li>
+<li>所以在 main.js 的 router.beforeEach 這個地方就可以使用 if 判斷式，我們假設要到的頁面具有 requiresAuth 的話，那麼我們就不會直接放行，反之如果說它沒有 requireAuth 的話，我們就會直接放行。在這個裡面我們再加上一個 console.log(‘這裡需要驗證’); ，存檔。我們現在在 Login 的頁面，我們直接往首頁去做切換，這個時候它會跳出這裡需要驗證，而且沒有辦法直接過去。</li>
+<li>接下來我們在這裡補上驗證，補上驗證的話，就去觸發這支 API，觸發的方式剛才有寫過好幾次了，我們就可以先複製先前的程式碼 (Login.vue)，把它直接貼過來 (main.js)，貼到這裡需要驗證的部分，後面的 API 路徑我們要把它替換成驗證用的 API 路徑，所以當我們需要驗證的時候，就會走這支 API，下面的 post 裡面的 user 參數是不需要的，const vm 也要拿掉，vm.$router.push(‘/’); 先把它註解起來。假設它需要登入的狀況，它就會去觸發這支 API，如果沒有問題就會執行 if 裡面的事件，那我們先存檔一次試試看。</li>
+<li>接下來我們回到登入頁面，我們直接切到首頁，目前這個首頁是需要被驗證的，它怎麼會跳錯？這個原因在於說我們現在的執行環境是在這個 router 下，並不是在 Vue 的元件內，所以它沒有辦法直接呼叫 this.$http，這個 this.$http 是 Vue 的元件內才能使用的，所以我們要直接使用 axios 這個套件，我們可以把 this.$http 拿掉，直接替換成 axios ，那我們再來一次，我們先回到前頁，然後重新整理，直接切換到首頁試試看，這個時候它會出現我們沒有登入，請重新登入的訊息，當然這樣我們就沒辦法直接切換到指定的頁面。</li>
+<li>所以在這個地方我們就可以加上，假設我們成功登入的話，我們就會放行 next，但是如果我們不是登入的狀態時，我們就必需回到登入的頁面，回來的方法是用 next 裡面包一個物件，物件再包上一個我們要到的路徑，路徑就是 login，然後存檔。接下來我們在 login 頁面直接對首頁去進行，這個時候會跳出 success 為 false 請重新登入，在這個地方我們就登入一次，登入後我們就可以進來。但是，我們再回到前一頁回到 login，這個時候如果我直接輸入首頁的網址，這個時候是可以轉進來，因為我目前還是持續登入的狀態。這個登入狀態是存在伺服器的，所以只要伺服器驗證我還是登入的狀態，我就不會被轉回首頁。</li>
+<li>最後再補充一個小地方，現在我們在這個路由下，如果我們隨意輸入一個路徑，它會跳出空白的頁面，但是跳出空白的頁面並不是很好，我們就可以在這個路由的地方 (index.js的 routes 地方)，再加入一個新的物件，這個新的物件它的 path 是不一樣的，它的 path 是一個 * 。假設它所進入的路徑不是我們所定義的 path 的話，它就會被重新導向，redirect 那我們就把它導到 login 的頁面，這個方法是避免用戶直接進入不存在的頁面，這樣的話就會被直接阻擋，然後重新導向到 login 的頁面。</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// 4. main.js
+// 導航守衛
+router.beforeEach((to, from, next) =&gt; {
+  // ...
+})</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 5. main.js
+// 導航守衛
+router.beforeEach((to, from, next) =&gt; {
+  console.log('to', to, 'from', from, 'next', next);
+  // ...
+  next();
+})</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 6. index.js
+  routes: &#91;
+    {
+      path: '/',
+      name: 'HelloWorld',
+      component: HelloWorld,
+      meta: { requiresAuth: true }
+    },</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 7. main.js
+// 導航守衛
+router.beforeEach((to, from, next) =&gt; {
+  console.log('to', to, 'from', from, 'next', next);
+  // ...
+  if (to.meta.requiresAuth) {
+    console.log('這裡需要驗證');
+  } else {
+    next();
+  }
+})</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 8. main.js
+// 導航守衛
+router.beforeEach((to, from, next) =&gt; {
+  console.log('to', to, 'from', from, 'next', next);
+  // ...
+  if (to.meta.requiresAuth) {
+    const api = `${process.env.APIPATH}/api/user/check`;
+    this.$http.post(api).then((response) =&gt; {
+      console.log(response.data);
+      if (response.data.success) {
+        // vm.$router.push('/');
+      }
+    });
+  } else {
+    next();
+  }
+})</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 9. main.js
+// 導航守衛
+router.beforeEach((to, from, next) =&gt; {
+  console.log('to', to, 'from', from, 'next', next);
+  // ...
+  if (to.meta.requiresAuth) {
+    const api = `${process.env.APIPATH}/api/user/check`;
+    axios.post(api).then((response) =&gt; {
+      console.log(response.data);
+      if (response.data.success) {
+        // vm.$router.push('/');
+      }
+    });
+  } else {
+    next();
+  }
+})</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 10. main.js
+// 導航守衛
+router.beforeEach((to, from, next) =&gt; {
+  console.log('to', to, 'from', from, 'next', next);
+  // ...
+  if (to.meta.requiresAuth) {
+    const api = `${process.env.APIPATH}/api/user/check`;
+    axios.post(api).then((response) =&gt; {
+      console.log(response.data);
+      if (response.data.success) {
+        next();
+      } else {
+        next({
+          path: '/login',
+        });
+      }
+    });
+  } else {
+    next();
+  }
+})</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 11. index.js
+  routes: &#91;
+    // 重新導向
+    {
+      path: '*',
+      redirect: 'login',
+    },</code></pre>
+
+
+
+<h3>套用 Bootstrap Dashboard&nbsp;版型</h3>
+
+
+
+<p>製作簡單的 Dashboard 版型。</p>
+
+
+
+<p>資源：<a href="https://getbootstrap.com/docs/4.6/examples/dashboard/" target="_blank" rel="noreferrer noopener">Bootstrap Dashboard 模板</a></p>
+
+
+
+<p>操作與講解</p>
+
+
+
+<ol>
+<li>在 Bootstrap 4 的 Examples 裡面找到一個 Dashboard 版型。用哪個 Dashboard 的版型都是可以的，只不過這個是比較好取得的。我們可以打開它的原始碼來看一下，它的原始碼難度並不高，這裡有附帶一個自定義的 CSS，它的結構是上方有個 &lt;navbar&gt;，左方有個 &lt;sidebar&gt; 是 &lt;nav&gt; 開頭到 &lt;/nav&gt; 結尾，這裡是 &lt;navbar&gt;，下方是個 &lt;main&gt; 的標籤，這個是它主要的內容，對應回來 Dashboard 頁面，上方的 Navbar、以及左邊的 Sidebar、還有 Main 主要的內容。</li>
+<li>那我們現在就把這個版型搬到我們 Vue 的專案裡面來。搬的方式我們先把這個自定義的 CSS 打開，把它全部複製起來，接下來我們開一個新檔案，然後把這些 CSS 全部貼進來，然後我們到 assets 裡面新增一個 dashboard 的檔案 ( _dashboard.scss )，前方要不要加 _ 都可以，加進來之後，我們在 all.scss 的檔案下，我們就可以新增 @import “./_dashboard”;，把剛剛的這個 dashboard 的檔案匯入進來，現在我們的專案內就包含這個 _dashboard 的 CSS。</li>
+<li>回到原始碼這個地方，我們就把這個 &lt;nav&gt; 一直到最下方全部都把它複製起來，下方的 &lt;script&gt; 不用，我們只要它標籤的部分就好 &lt;nav&gt;、&lt;div&gt; 的標籤就可以了。複製下來之後，我們再新增一個 component，這個 component 我們就叫他 Dashboard.vue，這是主要的版型：Dashboard.vue，打開之後，我們一樣會有一個 &lt;template&gt; 標籤，然後 &lt;div&gt; 在外層，接下來把所有的內容都直接貼進來。貼進來之後可能會有一些些小錯誤，那我們就稍微修正一下。</li>
+<li>現在我們並沒有把 Dashboard.vue 把它匯入進入，那我們就在 router 的 index.js 把它給載進來，這 HelloWorld 現在應該也適用不到，不過沒關係先把它留著，複製 HelloWorld 那一行程式碼，把它改成 import Dashboard from ‘@/components/Dashboard’;</li>
+<li>接下來把下面原本首頁的路徑把它複製過來，並且把 component 的值改成 Dashboard，還有它是必須被驗證的，然後存檔，這個路徑記得改一下，path 的值改成 ‘/admin’，我們登進來之後，Login 進來之後，我們就給它一個 admin 的路徑，存檔。我們現在來看一下這個路徑有沒有正確的顯示，看起來是蠻正常的，都有正確的顯示。</li>
+<li>做一些版型的拆解，我們現在回到 Dashboard.vue 這裡面來，Dashboard 上方有個 &lt;nav&gt; 標籤，我們就新增一個元件，叫做 Navbar.vue。那麼旁邊這個 Sidebar 也把它移過來， 現在左邊有個 Sidebar 那我們把它移過來，一樣新增一個元件，叫做 Sidebar.vue。現在中間 Main 的部分是不需要的，我們會插入自己的內容，所以 Main 的部分我們把它拿掉。現在 Dashboard 又變空的，因為內容都被我們拆出去，我們把 Navbar、Sidebar 都把它拆出去了。</li>
+<li>拆出去之後我們現在要把它載進來，這下方就可以加上 &lt;script&gt; ，然後我們這裡先 export default {}，那麼這段其實也可以從其他的元件複製過來。但是這裡就直接寫，我們主要是把元件給匯進來，所以這裡可以有個 components，會發現這些觀念跟我們在 CDN 所介紹都是一樣，我們就會把其他的元件給插進來。我們在這邊把 &lt;script&gt; 寫好之後，我們看到畫面還是空白的。當然我們要記得把這些元件加回來這個地方，&lt;Sidebar&gt;&lt;/Sidebar&gt; 在這個地方，&lt;Navbar/&gt; 也可以這樣子寫，這邊提供兩種寫法來參考。一個是標籤有頭有尾、另外一個是把結尾直接結尾在一開始這個頭的標籤，我們就不需要另外一個結尾標籤，兩個結果是一樣的。這邊可以看到上方的 Navbar 以及左方的 Sidebar 都已經回來了。</li>
+<li>現在我們要怎麼把內容塞到中間這個地方，我們再新增一個頁面 ( 在 Pages 裡面)，這個頁面是我們等下要來做的內容的。我們先給它一個正式一點的名字，叫做 Products.vue，內容的話，我們先維持一個 123 的數字就好了，我們先讓這個版型可以運作就可以了。接下來我們 Dashboard.vue 中間的 &lt;main&gt; 標籤地方，再加上一個 &lt;router-view&gt;&lt;/router-view&gt;，然後存檔。所以現在 &lt;router-view&gt; 是巢狀的，在外一層是在 App.vue 這個地方，有一個 &lt;router-view/&gt;，在內層還有一個 &lt;router-view&gt;&lt;/router-view&gt; 是在 Dashboard.vue 上的。所以現在 &lt;router-view&gt; 有兩層，一個是在 App.vue、另外一個是在 Dashboard.vue 上。</li>
+<li>現在我們再打開 router 的 index.js，我們現在要做的是巢狀的 router，我們在進入 admin 的時候，我們會切到另外一個 router 的路徑。巢狀的 router 在前幾章有介紹到，我們在這裡會加上一個 children，然後使用陣列的方式，陣列的內容跟我們先前這些內容是一模一樣的。我們給它一個路徑是 ‘products’，下方的名稱也叫 ‘Products’。那元件是後來新增的，叫做 Product 的一個元件，import Products from ‘@/components/pages/Products’;，我們把這個元件移過來 ( component: Products )。最後再將 children 上方這個 meta: { requiresAuth: true }, 這一段剪下來，然後貼到 Products 這個地方來，這樣才能確保在進入這個頁面之前它是需要被驗證的，那我們存檔。我們在網址輸入 admin/products 我們現在想要直接進入這個頁面的時候，它會直接被擋回來，所以記得要把 meta requresAuth 加到這一段。那我們現在輸入帳號密碼來登進來看看，登進來之後它會跳到只有登出的這個頁面，那這個頁面目前是顯示登出，但是沒有關係，我們現在在確定登入的情況下，我們就可以進入到這個 Dashboard 的這個頁面，並且畫面上呈現 123。</li>
+<li>那麼這一段試著把 Bootstrap 4 的 Dashboard 版型套用到這個頁面，然後並且把一些相關的檔案都把它建立起來。</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// 2. all.scss
+
+// 載入 _dashboard
+@import "./_dashboard";</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 4. index.js
+// 把 Dashboard給載進來
+import Dashboard from '@/components/Dashboard'</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 5. index.js
+// Dashboard的路徑
+{
+  path: '/admin',
+  name: 'Dashboard',
+  component: Dashboard,
+  meta: { requiresAuth: true },
+},</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 7. Dashboard.vue
+&lt;template&gt;
+  &lt;div&gt;
+    &lt;Navbar/&gt;
+    &lt;div class="container-fluid"&gt;
+      &lt;div class="row"&gt;
+        &lt;Sidebar&gt;&lt;/Sidebar&gt;
+        &lt;main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4"&gt;
+
+        &lt;/main&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import Sidebar from './Sidebar';
+import Navbar from './Navbar';
+
+export default {
+  components: {
+    Sidebar,
+    Navbar
+  },
+};
+&lt;/script&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 8. Pages/Products.vue
+&lt;template&gt;
+  &lt;div&gt;
+    123
+  &lt;/div&gt;
+&lt;/template&gt;
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 9. index.js
+// 把 Product給載進來
+import Products from '@/components/pages/Products'
+
+// Dashboard的路徑
+{
+  path: '/admin',
+  name: 'Dashboard',
+  component: Dashboard,
+  children: &#91;
+    {
+      path: 'products',
+      name: 'Products',
+      component: Products,
+      meta: { requiresAuth: true },
+    },
+  ],
+},</code></pre>
+
+
+
+<h3>製作產品列表</h3>
+
+
+
+<p>製作 Dashboard 的內容。</p>
+
+
+
+<h5>問題修正</h5>
+
+
+
+<p>不過在做產品列表之前要稍微講一下，我們現在登入的路徑有點不正確。我們現在如果輸入帳號密碼之後，登進來它會到首頁的地方，那這個是不正確的路徑。所以在這個地方要稍作調整，我們現在 HelloWorld 這個路徑之後都不會用到，所以直接可以把它移除，移除的話上方的 import HelloWorld 也要把它移除。都移除掉之後，我們先前所做的 Login.vue 也要稍微做一下調整，我們等一下會把它導到 ‘/admin/products’ 這個頁面。那這個 Products.vue 先前有建好一個簡單的 123 內容的頁面，所以我們現在登入看看是不是會直接到達那個頁面。現在直接到 /admin/products 這個路徑下，然後現在的內容只有 123。</p>
+
+
+
+<pre class="wp-block-code"><code>// index.js
+// 之後都不會用到，可以直接移除
+// import HelloWorld from '@/components/HelloWorld'
+
+// 之後都不會用到，可以直接移除
+// // 首頁的路徑
+// {
+//   path: '/',
+//   name: 'HelloWorld',
+//   component: HelloWorld,
+//   meta: { requiresAuth: true }
+// },</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Login.vue
+methods: {
+  signin() {
+  const api = `${process.env.APIPATH}/admin/signin`;
+  const vm = this;
+  this.$http.post(api, vm.user).then((response) =&gt; {
+    console.log(response.data);
+    if (response.data.success) {
+      vm.$router.push('/admin/products');
+    }
+  });
+  },
+},</code></pre>
+
+
+
+<p>操作與講解</p>
+
+
+
+<ol>
+<li>接下來我們要取得遠端的資料，我們先前在開這個<a rel="noreferrer noopener" href="https://vue-course-api.hexschool.io/" target="_blank">&nbsp;Vue 課程練習 API</a>&nbsp;的時候，有先建立一份假的資料，我們現在先把這個資料取得回來，像範例頁面一樣，先把資料取回來。接下來在來做新增、修改、編輯還有刪除的部分。</li>
+<li>回到 Products.vue 的頁面，我們會在這裡新增一個 &lt;script&gt;，用 export default 讓它可以匯出給其他元件使用，我們先把資料結構先給定起來，data 會使用 function 的形式，然後 return 一個物件，這個物件我們會新增一個 products，它會是個陣列，我們等下所新增的資料都會存到這個 products 裡面。</li>
+<li>接下來，我們新增一個 methods 然後它是個物件，用途是 getProducts，會發現我們在寫 Vue 的時候很多的行為都是不斷的重複，所以在這裡我們就是要去取得遠端的資料，我們取得遠端的資料先前也有寫過一個類似。在 App.vue 裡面這裡就有取得遠端資料的一個方法，我們就可以直接先把這一段先把它複製過來，把它複製到 Products.vue 的 getProducts 裡面，然後整理一下，確定一下它是取得 products，前面的註解我們就可以把它移除掉。在這個地方因為我們要把 products 的內容存到我們所宣告的一個變數裡面，所以在這外層我們還必須用 const 宣告 vm 等於 this，確保在這個 http 結束之後，我們可以把取回來的資料，再存回 vm 裡面。</li>
+<li>這裡就先來看一下這個 response 是什麼樣子的內容，(先把 const vm = this 註解起來)，在寫到這個地方的時候要記得補上一個 created 才會觸發 getProducts 的事件。那我們在這裡加上 created 的 hook，然後把 getProducts 貼過來，this.getProducts();。那我們重新整理看一下有沒有正確取得資料，打開 Console 之後，這裡怎麼有兩份資料內容，我們可以看到 App.vue 它有執行一次、Products.vue 也有執行一次。</li>
+<li>現在這 App.vue 它已經不需要執行這一段，在 App.vue 這個部分我們就可以把它移掉。現在 getProducts 也只會執行一次，那麼我們把它打開看一下有什麼樣子的內容，這個部分會看到說有成功的取得資料，並且它會回傳分頁內容( pagination) 還有 products，這個 products 就是我們要呈現在畫面上的資料。所以在這個時候我們就回到 Products.vue 這個頁面 const vm = this; 把註解打開，然後 vm.products = response.data.prodcuts;，(下面有注意的修正與解決方式)。</li>
+<li>這裡要特別注意在存這個變數的時候要去看到底有沒有儲存正確。如果不確定存的對不對，請用 Vue 的開發者工具看一下所存的變數到底正不正確，在 &lt;Products&gt; 這個元件下就可以看到 products 這個變數，裡面就是產品的資料，要特別確定所存的變數跟要的是否一致。</li>
+<li>接下來就可以把相關的內容呈現在畫面上，這個部分跟先前練習都大同小異，所以這裡就先加快流程。前面上面這個地方會先準備一個按鈕，下面這個地方就是放置表格的地方，這表格部分上面有標題、下面是內容的部分，通常在做的時候會先把 thead 打開，但不會把所有的內容填進去，因為還不確定可以用的資料內容有哪些，會把下面完成之後在將上面的 thead，就是標題的部分一一的補上，所以在這個地方就先留下一個 &lt;thead&gt; 的標籤，下方先打上 &lt;tbody&gt; 標籤、然後 &lt;tr&gt;，&lt;tr&gt; 就是我們要做 for 迴圈的部分，v-for=”(item, key) in products”&gt;&lt;/tr&gt;。</li>
+<li>如果你有使用 ESLint 的情況下，這裡會跳出錯誤，原因是因為當你有使用 v-for 的時候要加上 :key 才會正確，這裡的 :key 你可以使用參數裡面的 key 也可以使用 item.id 都是可以的，因為 item.id 是唯一的，那這個時候它也就不會跳錯，還有當你有使用 ESLint 的時候，這個 item 後面的 key 如果沒有用到的時候，它也會跳出提示，如果還沒有用到的情況下可以先把它移掉。</li>
+<li>接下來我們就把欄位一一的補上，這裡我們就先加速流程一下 (此段為剪接，後方有欄位新增的過程說明)，你要確定有哪些欄位可以使用的話，可以先從&nbsp;<a rel="noreferrer noopener" href="https://github.com/hexschool/vue-course-api-wiki/wiki/%E7%AE%A1%E7%90%86%E6%8E%A7%E5%88%B6%E5%8F%B0-%5B%E9%9C%80%E9%A9%97%E8%AD%89%5D" target="_blank">API 文件</a>裡去參考，像是 “is_enabled” 這是已經啟用的狀態，但我們一開始沒有寫入這個欄位，它就沒有回傳，所以你要確認有哪些欄位可以使用，可以先來這邊觀看，(欄位新增中…)，記得有金額的部分都靠右，( 產品如果為啟用：is_enabled == 1 )，我們把這些基本的資訊都補上去之後，我們就可以看一下畫面到底正不正確。項目這個地方有分類、產品名稱、價格以及它實際的售價還有它有沒有啟用、後面先補上一個編輯，在稍後的課程會介紹到。</li>
+<li>接下來我們就可以把 &lt;thead&gt; 給補上，&lt;thead&gt; 的內容就會跟著 &lt;tbody&gt; 來走，那麼 &lt;thead&gt; 的部分是使用 &lt;th&gt;，我們就可以把相關的字眼補一補，像這裡是分類、產品名稱、原價、售價、是否啟用、編輯，在這個部分如果覺得寬度並不合適的時候，如果需要調整可以只調整要限制寬度的部分，剩下的部分讓它自由調整，像是在這裡原價、售價、是否啟用、編輯以及分類這幾個欄位就不需要太大的空間，那麼我們可以把多餘的空間都保留給產品名稱，所以在這個部分我們可以這樣寫，分類的地方給它 120 的寬度，先都補上去試試看，是否啟用可以小一點點，編輯的部分也可以小一點點，存檔來試一次看看。現在就可以看到說，我們把所有的空間幾乎都分給產品名稱使用，所以我們在把畫面拉寬或拉小的時候，其他幾個欄位寬度是固定的，多餘的空間都會給產品名稱，看起來是否啟用偏小，就可以給它大一點的空間(width=”100″)。要特別注意有錢的部分都是靠右，那之後我們在補上千分號。上面還有建立新的產品的按鈕，我們可以把它的樣式補一補，class=”btn btn-primary，當我們要與上方的空間有些間隔的話，我們一樣可以用 mt-4 把空間隔開來。</li>
+<li>這個部分就是產品列表，先做到這個地方，我們稍後在介紹新增、修改、刪除的部分。</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// 2~5. Products.vue
+&lt;template&gt;
+  &lt;div&gt;123&lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+// 匯出給其他元件使用
+export default {
+  data() {
+    return {
+      products: &#91;],
+    };
+  },
+  methods: {
+    getProducts() {
+      const api = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/products`; // 'https://vue-course-api.hexschool.io/api/geehsu/products';
+      const vm = this;
+      console.log(process.env.APIPATH, process.env.CUSTOMPATH);
+      this.$http.get(api).then((response) =&gt; {
+        console.log(response.data);
+        vm.products = response.data.products;
+      });
+    },
+  },
+  created() {
+    this.getProducts();
+  }
+};
+&lt;/script&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 5. App.vue
+&lt;template&gt;
+  &lt;div id="app"&gt;
+    &lt;router-view/&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  name: 'App',
+  // 現在 App.vue 已經不需要執行這一段
+  // created() {
+  //   const api = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/products`; // 'https://vue-course-api.hexschool.io/api/geehsu/products';
+  //   // API 伺服器路徑
+  //   // 所申請的 API Path
+  //   console.log(process.env.APIPATH, process.env.CUSTOMPATH);
+  //   this.$http.get(api).then((response) =&gt; {
+  //     console.log(response.data)
+  //   });
+  // },
+}
+&lt;/script&gt;
+
+&lt;style lang="scss"&gt;
+@import "./assets/all";
+&lt;/style&gt;
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 7.~10. Products.vue
+&lt;template&gt;
+  &lt;div&gt;
+    &lt;div class="text-right"&gt;
+      &lt;button class="btn btn-primary mt-4"&gt;建立新的產品&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;table class="table mt-4"&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th width="120"&gt;分類&lt;/th&gt;
+          &lt;th&gt;產品名稱&lt;/th&gt;
+          &lt;th width="120"&gt;原價&lt;/th&gt;
+          &lt;th width="120"&gt;售價&lt;/th&gt;
+          &lt;th width="100"&gt;是否啟用&lt;/th&gt;
+          &lt;th width="80"&gt;編輯&lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr v-for="(item) in products" :key="item.id"&gt;
+          &lt;td&gt;{{ item.category }}&lt;/td&gt;
+          &lt;td&gt;{{ item.title }}&lt;/td&gt;
+          &lt;td class="text-right"&gt;
+            {{ item.origin_price }}
+          &lt;/td&gt;
+          &lt;td class="text-right"&gt;
+            {{ item.price }}
+          &lt;/td&gt;
+          &lt;td&gt;
+            &lt;span v-if="item.is_enabled" class="text-success"&gt;啟用&lt;/span&gt;
+            &lt;span v-else&gt;未啟用&lt;/span&gt;
+          &lt;/td&gt;
+          &lt;td&gt;
+            &lt;button class="btn btn-outline-primary btn-sm"&gt;編輯&lt;/button&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+// 匯出給其他元件使用
+export default {
+  data() {
+    return {
+      products: &#91;],
+    };
+  },
+  methods: {
+    getProducts() {
+      const api = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/admin/products`;
+      const vm = this;
+      console.log(process.env.APIPATH, process.env.CUSTOMPATH);
+      this.$http.get(api).then((response) =&gt; {
+        console.log(response.data);
+        vm.products = response.data.products;
+      });
+    },
+  },
+  created() {
+    this.getProducts();
+  }
+};
+&lt;/script&gt;</code></pre>
+
+
+
+<p><strong>注意：管理者取得產品列表應為<br>/api/:api_path/admin/products<br><br>如缺少 admin 這段為用戶使用的</strong><br><br>指的是因為目前網頁為後台的產品列表網頁，與前台是不一樣的所以要加上 admin，修改後如下</p>
+
+
+
+<pre class="wp-block-code"><code>// 5. Products.vue
+${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/admin/products</code></pre>
+
+
+
+<p>加上 admin 之後產生的錯誤，需要在 main.js 加上以下語法</p>
+
+
+
+<pre class="wp-block-code"><code>// main.js
+// 前端跨域設定
+axios.defaults.withCredentials = true;</code></pre>
+
+
+
+<p><a href="https://paper.dropbox.com/doc/Vue-API-28OrjdvBouPMjspZUM7h7" target="_blank" rel="noreferrer noopener">Vue API 課程補充說明</a></p>
+
+
+
+<h3>Vue 中運用 Bootstrap&nbsp;及 jQuery</h3>
+
+
+
+<p>操作與講解</p>
+
+
+
+<ol>
+<li>這個範例我們打開之後，按下新增或者編輯都會跳出一個 Modal，這個 Modal 是 Bootstrap 所提供的，所以現在我們必須載入 Bootstrap 的套件，我們先回到我們的專案裡面來，要載入 Bootstrap 套件的方式，我們可以在 main.js 就是我們進入點的地方 import Bootstrap。那這裡也可以跟大家介紹一下，一般來說我們在載入套件的時候，上面這裡會載入 npm 套件內容，下面的話就是自定義的內容，這個時候我們來存檔。存檔之後畫面跳出錯誤，因為他沒有 jQuery，終端機的地方跳出你可以安裝 jquery、popper.js，這個原因是因為 Bootstrap 它必需仰賴 jquery 以及 popper 才能正確的運行。現在我們可以把這兩個套件給裝進來，安裝需要一點時間，這裡就先加速跳過，安裝完成之後，我們在 npm run dev 的方式將它啟用，啟用之後，我們回到這個畫面上 (這裡可能會需要重新登入取得資料)，重新整理它就不會再跳錯了。</li>
+<li>接下來我們就可以加入 Bootstrap JavaScript 元件，我們先切換到 Bootstrap 官網的頁面，我們在 Bootstrap 的文件 Documentation 下方我們可以找到 Modal 的頁面，Modal 在這個部分，打開之後它這裡就有提供範例，如果我們要使用 Modal 的話，一般來說我們會使用一個按鈕，按鈕的部分加上 data-toggle=”modal”，後面再加上 data-target 然後指定一個 id，id 指向的是 Modal 所開啟的那個模板，所以這裡有個 exampleModal 對應的就是上面 data-target 的 id，這個樣子就可以把 Modal 打開，所以我們現在就可以試著把這個 Modal 把它加到我們頁面上試試看。把 data-toggle=”modal” 跟後面的 id 先把它複製起來，然後回到我們 Products.vue 的頁面，我們在建立新產品的部分，把這段貼上來，然後修改成 #productModal。接下來我們可以把下面的模板內容把它複製下來，下面的 Modal 把它複製下來，一樣回到我們的 Products.vue 頁面上，貼在 &lt;table&gt; 的後方，那這個是我們的模板，id 我們把它換成 productModal ，然後儲存。儲存之後來試試看能不能正確的打開，這樣是可以打開沒有錯誤，其他操作也是一模一樣。</li>
+<li>但是這裡要跟大家介紹的是另外一種開啟的模式，現在我們再回到 Bootstrap 官網文件的頁面，我們在開啟 Modal 的時候，我們按下去它是立即的打開，但有些時候我們會稍做處理，比如說我們可以從遠端取到資料，確定有取到之後，才將這個 Modal 打開，那這個時候我們所有的開啟 Modal 的行為是由我們 Vue.js 的 Methods 去做決定的。所以在這個地方我們就可以試著把它改成用 Vue.js 的方式去開啟 Bootstrap 的 Modal。我們接下來在 Bootstrap 的文件下方 Usage 裡面有一個 Methods，然後有一個 .modal(‘show’)，用這個方式我們就可以將 Bootstrap 的 Modal 打開。現在我們試著在 methods 的下方加上一個 openModal 的一個行為，這個行為我們會將剛剛所定義的 #productModal 把它打開，然後這個時候它會出現另外一個錯誤，我們存檔試試看，它會說這裡有一個未定義的變數，當你有使用 ESLint 的時候會跳出這樣的錯誤，這裡它會跳出一個錯誤、一個紅字，就是說這個 $ 是未定義的，因為現在在這個元件裡面它並不認得這個 $ 字號，比較偷懶的方式，如果你有使用 ESLint 的話，可以在 &lt;script&gt; 的 export default 上方加上一個註解，然後寫上 global $ ( /* global $ */ )，回到這裡這個 $ 就不會出現錯誤。</li>
+<li>現在就算它沒有跳錯，它可能還是無法進行，那我們在把 openModal 加到上面這裡，就是我們原本是使用 data-toggle、data-target 的方式，把它替換成 Vue 的方式 @click=”openModal”，我們來試試看這一段能不能正確的運行，重新整理一下，然後按下建立新的產品這個按鈕，它沒有打開。我們按一下檢查，看一下 Console ，它一樣跳出 jquery 就是這個 $ is not defined，原因是這個元件內它並認得 jquery 這個元件，我們只有把它載入到這個進入點，但是這個進入點所載入的是 Bootstrap，jquery 只是它的相依套件而已。</li>
+<li>如果實際上我們要運行 jquery 的話，我們必需在這個元件裡面注入，把剛剛的 global $ 註解拿掉，使用 import $ from ‘jquery’;，然後存檔，這個時候重新整理，按下建立新的產品，它就可以正確的打開，這種透過 Methods 的方式來開啟，我們就可以決定這個 Modal 是在何種情況下才打開，它可以在按下按鈕之後，等 AJAX 完成然後再跳出這個 Modal，或者是在任何的情形下決定它開啟的時間。</li>
+<li>試著把 jquery 以及 Bootstrap 的 Modal 加進來。</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// 1. main.js
+import 'bootstrap'</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 1. terminal
+To install them, you can run: npm install --save jquery popper.js</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 5. Products.vue
+&lt;template&gt;
+  &lt;div&gt;
+    &lt;div class="text-right mt-4"&gt;
+      &lt;button class="btn btn-primary" @click="openModal"&gt;建立新的產品&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;table class="table mt-4"&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th width="120"&gt;分類&lt;/th&gt;
+          &lt;th&gt;產品名稱&lt;/th&gt;
+          &lt;th width="120"&gt;原價&lt;/th&gt;
+          &lt;th width="120"&gt;售價&lt;/th&gt;
+          &lt;th width="100"&gt;是否啟用&lt;/th&gt;
+          &lt;th width="80"&gt;編輯&lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr v-for="(item) in products" :key="item.id"&gt;
+          &lt;td&gt;{{ item.category }}&lt;/td&gt;
+          &lt;td&gt;{{ item.title }}&lt;/td&gt;
+          &lt;td class="text-right"&gt;
+            {{ item.origin_price }}
+          &lt;/td&gt;
+          &lt;td class="text-right"&gt;
+            {{ item.price }}
+          &lt;/td&gt;
+          &lt;td&gt;
+            &lt;span v-if="item.is_enabled" class="text-success"&gt;啟用&lt;/span&gt;
+            &lt;span v-else&gt;未啟用&lt;/span&gt;
+          &lt;/td&gt;
+          &lt;td&gt;
+            &lt;button class="btn btn-outline-primary btn-sm"&gt;編輯&lt;/button&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+    &lt;!-- Modal --&gt;
+    &lt;div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"&gt;
+      &lt;div class="modal-dialog"&gt;
+        &lt;div class="modal-content"&gt;
+          &lt;div class="modal-header"&gt;
+            &lt;h5 class="modal-title" id="exampleModalLabel"&gt;Modal title&lt;/h5&gt;
+            &lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;
+              &lt;span aria-hidden="true"&gt;&amp;times;&lt;/span&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
+          &lt;div class="modal-body"&gt;
+            ...
+          &lt;/div&gt;
+          &lt;div class="modal-footer"&gt;
+            &lt;button type="button" class="btn btn-secondary" data-dismiss="modal"&gt;Close&lt;/button&gt;
+            &lt;button type="button" class="btn btn-primary"&gt;Save changes&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import $ from 'jquery'
+
+// 匯出給其他元件使用
+export default {
+  data() {
+    return {
+      products: &#91;],
+    };
+  },
+  methods: {
+    getProducts() {
+      const api = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/admin/products`;
+      const vm = this;
+      // console.log(process.env.APIPATH, process.env.CUSTOMPATH);
+      this.$http.get(api).then((response) =&gt; {
+        // console.log(response.data);
+        vm.products = response.data.products;
+      });
+    },
+    openModal() {
+      $('#productModal').modal('show');
+    },
+  },
+  created() {
+    this.getProducts();
+  }
+};
+&lt;/script&gt;</code></pre>
+
+
+
+<h3>產品的新增修改</h3>
+
+
+
+<p>操作與講解</p>
+
+
+
+<ol>
+<li>接下來我們要新增產品，我們先看一下範例頁面，這裡我們按下建立新的產品，建立新的產品的時候我們會發現這個欄位還蠻多的，所以等下會提供現成的模板給大家，這邊就不需要重新製作，不過這邊欄位很多，你就會想說那這些欄位該怎麼樣去做對應，我們一般來說在製作時，這欄位其實都已經決定好，像這裡有標題、分類、原價、售價、單位名稱、圖片名稱、描述、內容、是否啟用還有圖片的網址，那這個圖片的網址可以使用現成的網址或者稍後介紹怎麼上傳圖片，上傳圖片後就會取得新的網址，一樣可以把它取代進來，現在我們就開始來製作。</li>
+<li>我們回到我們的頁面裡面來，現在畫面上打開這個建立新的產品的時候，這裡就會跳出一個 Modal，那這個 Modal 是 Bootstrap 預設的，那我們把它換成產品的 Modal，現在這裡有一個產品的 Modal，到時候一樣會提供給大家，所以不需要自己去打，然後把這個預設的 Modal 把它替換掉，稍微做一下排版，存檔之後來試一下，接下來我們要新增產品，我們先看一下範例頁面，這裡我們按下建立新的產品，建立新的產品的時候我們會發現這個欄位還蠻多的，所以等下會提供現成的模板給大家，這邊就不需要重新製作，不過這邊欄位很多，你就會想說那這些欄位該怎麼樣去做對應，我們一般來說在製作時，這欄位其實都已經決定好，像這裡有標題、分類、原價、售價、單位名稱、圖片名稱、描述、內容、是否啟用還有圖片的網址，那這個圖片的網址可以使用現成的網址或者稍後介紹怎麼上傳圖片，上傳圖片後就會取得新的網址，一樣可以把它取代進來，現在我們就開始來製作。</li>
+<li>我們回到我們的頁面裡面來，現在畫面上打開這個建立新的產品的時候，這裡就會跳出一個 Modal，那這個 Modal 是 Bootstrap 預設的，那我們把它換成產品的 Modal，現在這裡有一個產品的 Modal，到時候一樣會提供給大家，所以不需要自己去打，然後把這個預設的 Modal 把它替換掉，稍微做一下排版，存檔之後來試一下，按下建立新的產品的時候，這個 Modal 其實就是對應這個，是一模一樣的。然後接下來，我們在下方 data 的部分再新增一個 tempProduct，那麼這個 tempProduct 其實就是我們等下要送出的欄位內容，欄位的名稱其實就是對應我們剛剛 API 的內容，有標題、分類……等等的，在這裡就試著一一的將 tempProduct 先把它加到這個 Modal 上面來，那麼這裡就加速跳過，是否啟用這個地方要特別注意一下，我們的 tempProduct 它一樣是使用 is_enabled，這欄位是這樣子，我們的 v-model 一樣是對應 is_enabled，這個 is_enabled，但是它的值是0 跟 1，如果 0 的話是暫停使用、1 的話是啟用，所以我們要修改它的 true value 和 false value，true value 就是當它是啟用狀態的時候，我們要給它 1，但它如果是 false value 的時候，我們則要給它 0，這裡要特別注意一下。然後最後將確認這個地方，我們再加上 @click=”updateProduct”，然後存檔。所以在下方我們必需在 methods 的地方再新增一個 method 叫做 updateProduct()。</li>
+<li>因此這個部分再稍微講解一下我們的流程。我們剛剛直接將現成的 template 直接貼進來，那我們打開畫面之後，這個就是我們剛剛建立的模板，這個模板已經綁定我們的 tempProduct ，它所有的欄位都已經綁定上來，接下來我們會透過 post 方式將這個 tempProduct 新增到資料庫裡面去，接下來我們會在 updateProduct 的地方再做類似的事情，我們會發現這個 API 基本上都是差不多的，我們會同樣的行為這樣一直做。然後 API 的路徑的商品建立是 admin/product，然後它的行為、這個方法是 post，要特別注意，現在是 post。那我們把它改成 admin/product，接下來我們把這路徑貼進來之後，再把方法 (get) 改成 post， 然後我們的資料結構要特別注意一下，這是我們第一個 post 行為，所以 post 的參數必需把 vm.tempProduct 加進來，但是加進來的時候，你要注意它所送出的參數，它是一個物件，然後包著 data，然後裡面才包著我們欄位的內容，所以我們不能直接將這個 vm.tempProdcut 這樣送出，這樣會出錯。所以我們必需將它用物件包起來，{ data: vm.tempProduct }，然後存檔。存檔之後我們再來看一下回傳的結果是怎麼樣，後面這行記得先拿掉 ( 先把 vm.products = response.data.products; 註解起來 )，不然你會把 response 的資料直接再寫進 vm.products 裡面，先來存檔。</li>
+<li>這個時候我們來新增產品，新增產品之後，我們先打開 Console 來看一下，不過按下確認前，要特別注意按一下就好不要一直按，因為我們現在沒有做很多驗證，現在按下去，按下去之後它會跳出一個訊息叫做已建立商品，現在我們再重新整理一次，這個時候會出現一個新增產品，這是我們剛剛所新增的內容，我們就可以透過剛剛的訊息來做些事情</li>
+<li>如果 response.data.success 新增成功的話，我們就把這個 Modal 給關起來，那麼關閉的方式，我們會使用 Bootstrap 文件的 .modal(‘hide’)，那我們就把它新增進來，並且再重新取得一次遠端的資料，這裡有個 getProducts()，那麼我們再重新取得一次遠端的資料 vm.getProducts()，重新再取得一次。接下來如果是失敗的話，else 那麼我們在這個部分就可以再補一個 console.log 說 ‘新增失敗’。如果現在成功的話，它就會將 Modal 關掉並且重新取得一次遠端的產品內容，那麼如果是失敗的話，它做的事情差不多，但是它會有個錯誤訊息。存檔之後，我們再進行一次相同的流程，新增產品 2、按下確認，按下確認之後過一會就會關掉並且重新整理之後把新增產品 2 給加進來。</li>
+<li>現在我們已經可以新增產品，那我們再看另外一個範例，這是先前做的，先前做的範例我們可以看到新增產品的模板長這樣，那麼編輯的時候模板長這樣，但其實你會發現這兩個模板幾乎一模一樣，所以它其實可以用同一個模板做兩件事情。那我們先回到程式碼這個地方，在這個地方我們就要稍做一點點的調整，調整的地方是說我們的 openModal() 的時候，我們在決定這份資料它是新的還是舊的，所以它可以傳入參數，先傳入 isNew 或者傳入它的 item，那在這裡我們就可以新增 isNew 跟 item，那 item 也可以透過編輯的方式，按下這個編輯的時候就順便傳進來，上面的 data() 我們再新增一個 isNew 的欄位，目前我們先給它一個 false 的值，下面我們再回到 openModal 這個地方，我們就可以使用判斷式 if 如果它是新增的話、時候，this.tempProduct 就是一個空的物件，並且 this.isNew 還會等於 true，它會是新的，如果 isNew 是 false 的情況下，那麼則是相反，它就不是新的，this.isNew 等於 false，然後 tempProduct 會等於 item。不過在這裡有跟大家講一件小事情，如果你直接用 tempProduct 等於 item 的時候，它因為物件傳參考的特性，這兩個值會一模一樣，所以在這裡會使用 Object.assign 的方式，那麼用 Object.assign 是 ES6 的方法，用這種寫法可以將這個 item 的值寫到一個空的物件裡面來，然後並且可以避免這個 tempProduct 與 item 有參考的特性。接下來我們將這個 $(‘#productModal’).modal(‘show’); 往後放。</li>
+<li>Modal 打開之後，我們 updateProduct() 這裡的行為也會做些調整，我們可以再看一下 API 文件的部分，API 的部分我們如果是商品建立會使用 post，然後 API 路徑是這個，但如果我們的修改產品的時候，它在 API 路徑的 admin/product/ 後面會再加上一個 id，並且它所使用的方法是 put，所以在這裡也要稍微做一下下調整。加的方式我們可以在這裡加入一個判斷式 if (vm.isNew)，我們剛有把 isNew 存到 Vue 的 data 裡面，所以這個 vm.isNew 就是從上面所傳來的，它到底是不是新的。假設它不是新的時候，我們就來改它的 api，把 const api 改成 let api，然後 api 會等於另外一個路徑，我們先把這一段複製過來，然後並且把 admin/product 把它傳過來，然後後面必需帶上 id，那這個 id 是 tempProduct 的 id，是 vm.tempProduct.id。那麼除了 api 不同之外，這個 $http 的行為也不一樣，剛有講到我們如果是新增的話，我們的行為是 post，但是如果是修改的話，我們會改用 put，所以在這裡我們會再新宣告一個變數，就是 httpMethod，我們預設是給它 post，httpMethod 我們可以把它放在這裡，我們用中括號的方式來選取它，並且如果它不是新的時候，把它修改為 put。</li>
+<li>現在行為已經寫好了，我們在把這個行為綁定回去我們的畫面上，openModal 的地方我們把它移上來，建立新的產品的時候它必需傳入它是 true 的值。那如果是舊的話，這裡有一個編輯，我們再補上 @click=”openModal()”，但是它傳入的是 false (的值)，並且會把 item 也傳進去，我們再修整一下，然後存檔。</li>
+<li>接下來我們來測試一下新增跟修改能不能正確的執行，現在這裡有新增產品 2，然後我們按一下編輯，把新增產品的 2 改成 3 、按下確認，現在新增產品可以變成 3，所以編輯是可以。那我們再新增一個新的產品，叫做如何使用 Vue Cli，然後一樣按下確認，這個時候它會跳出如何使用 Vue Cli，那麼在這個部分新增以及編輯都已經完成了。</li>
+<li>那麼還缺少刪除商品的行為，有提供刪除的模板，在這個部分就自己練習。</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// Products.vue
+&lt;template&gt;
+  &lt;div&gt;
+    &lt;div class="text-right mt-4"&gt;
+      &lt;button class="btn btn-primary" @click="openModal(true)"&gt;建立新的產品&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;table class="table mt-4"&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th width="120"&gt;分類&lt;/th&gt;
+          &lt;th&gt;產品名稱&lt;/th&gt;
+          &lt;th width="120"&gt;原價&lt;/th&gt;
+          &lt;th width="120"&gt;售價&lt;/th&gt;
+          &lt;th width="100"&gt;是否啟用&lt;/th&gt;
+          &lt;th width="80"&gt;編輯&lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr v-for="(item) in products" :key="item.id"&gt;
+          &lt;td&gt;{{ item.category }}&lt;/td&gt;
+          &lt;td&gt;{{ item.title }}&lt;/td&gt;
+          &lt;td class="text-right"&gt;
+            {{ item.origin_price }}
+          &lt;/td&gt;
+          &lt;td class="text-right"&gt;
+            {{ item.price }}
+          &lt;/td&gt;
+          &lt;td&gt;
+            &lt;span v-if="item.is_enabled" class="text-success"&gt;啟用&lt;/span&gt;
+            &lt;span v-else&gt;未啟用&lt;/span&gt;
+          &lt;/td&gt;
+          &lt;td&gt;
+            &lt;button class="btn btn-outline-primary btn-sm" @click="openModal(false, item)"&gt;編輯&lt;/button&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+    &lt;!-- Modal --&gt;
+    &lt;div class="modal fade" id="productModal" tabindex="-1" role="dialog"
+      aria-labelledby="exampleModalLabel" aria-hidden="true"&gt;
+      &lt;div class="modal-dialog modal-lg" role="document"&gt;
+        &lt;div class="modal-content border-0"&gt;
+          &lt;div class="modal-header bg-dark text-white"&gt;
+            &lt;h5 class="modal-title" id="exampleModalLabel"&gt;
+              &lt;span&gt;新增產品&lt;/span&gt;
+            &lt;/h5&gt;
+            &lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;
+              &lt;span aria-hidden="true"&gt;&amp;times;&lt;/span&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
+          &lt;div class="modal-body"&gt;
+            &lt;div class="row"&gt;
+              &lt;div class="col-sm-4"&gt;
+                &lt;div class="form-group"&gt;
+                  &lt;label for="image"&gt;輸入圖片網址&lt;/label&gt;
+                  &lt;input type="text" class="form-control" id="image"
+                    v-model="tempProduct.imageUrl"
+                    placeholder="請輸入圖片連結"&gt;
+                &lt;/div&gt;
+                &lt;div class="form-group"&gt;
+                  &lt;label for="customFile"&gt;或 上傳圖片
+                    &lt;i class="fas fa-spinner fa-spin"&gt;&lt;/i&gt;
+                  &lt;/label&gt;
+                  &lt;input type="file" id="customFile" class="form-control"
+                    ref="files"&gt;
+                &lt;/div&gt;
+                &lt;img img="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-0.3.5&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;s=828346ed697837ce808cae68d3ddc3cf&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80"
+                  class="img-fluid" :src="tempProduct.imageUrl" alt=""&gt;
+              &lt;/div&gt;
+              &lt;div class="col-sm-8"&gt;
+                &lt;div class="form-group"&gt;
+                  &lt;label for="title"&gt;標題&lt;/label&gt;
+                  &lt;input type="text" class="form-control" id="title"
+                    v-model="tempProduct.title"
+                    placeholder="請輸入標題"&gt;
+                &lt;/div&gt;
+
+                &lt;div class="form-row"&gt;
+                  &lt;div class="form-group col-md-6"&gt;
+                    &lt;label for="category"&gt;分類&lt;/label&gt;
+                    &lt;input type="text" class="form-control" id="category"
+                      v-model="tempProduct.category"
+                      placeholder="請輸入分類"&gt;
+                  &lt;/div&gt;
+                  &lt;div class="form-group col-md-6"&gt;
+                    &lt;label for="price"&gt;單位&lt;/label&gt;
+                    &lt;input type="unit" class="form-control" id="unit"
+                      v-model="tempProduct.unit"
+                      placeholder="請輸入單位"&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class="form-row"&gt;
+                  &lt;div class="form-group col-md-6"&gt;
+                  &lt;label for="origin_price"&gt;原價&lt;/label&gt;
+                    &lt;input type="number" class="form-control" id="origin_price"
+                      v-model="tempProduct.origin_price"
+                      placeholder="請輸入原價"&gt;
+                  &lt;/div&gt;
+                  &lt;div class="form-group col-md-6"&gt;
+                    &lt;label for="price"&gt;售價&lt;/label&gt;
+                    &lt;input type="number" class="form-control" id="price"
+                      v-model="tempProduct.price"
+                      placeholder="請輸入售價"&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;hr&gt;
+
+                &lt;div class="form-group"&gt;
+                  &lt;label for="description"&gt;產品描述&lt;/label&gt;
+                  &lt;textarea type="text" class="form-control" id="description"
+                    v-model="tempProduct.description"
+                    placeholder="請輸入產品描述"&gt;&lt;/textarea&gt;
+                &lt;/div&gt;
+                &lt;div class="form-group"&gt;
+                  &lt;label for="content"&gt;說明內容&lt;/label&gt;
+                  &lt;textarea type="text" class="form-control" id="content"
+                    v-model="tempProduct.content"
+                    placeholder="請輸入產品說明內容"&gt;&lt;/textarea&gt;
+                &lt;/div&gt;
+                &lt;div class="form-group"&gt;
+                  &lt;div class="form-check"&gt;
+                    &lt;input class="form-check-input" type="checkbox"
+                      v-model="tempProduct.is_enabled"
+                      :true-value="1"
+                      :false-value="0"
+                      id="is_enabled"&gt;
+                    &lt;label class="form-check-label" for="is_enabled"&gt;
+                      是否啟用
+                    &lt;/label&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="modal-footer"&gt;
+            &lt;button type="button" class="btn btn-outline-secondary" data-dismiss="modal"&gt;取消&lt;/button&gt;
+            &lt;button type="button" class="btn btn-primary" @click="updateProduct"&gt;確認&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import $ from 'jquery'
+
+// 匯出給其他元件使用
+export default {
+  data() {
+    return {
+      products: &#91;],
+      tempProduct: {},
+      isNew: false,
+    };
+  },
+  methods: {
+    getProducts() {
+      const api = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/admin/products`;
+      const vm = this;
+      // console.log(process.env.APIPATH, process.env.CUSTOMPATH);
+      this.$http.get(api).then((response) =&gt; {
+        // console.log(response.data);
+        vm.products = response.data.products;
+      });
+    },
+    openModal(isNew, item) {
+      if (isNew) {
+        this.tempProduct = {};
+        this.isNew = true;
+      } else {
+        this.tempProduct = Object.assign({}, item);
+        this.isNew = false;
+      }
+      $('#productModal').modal('show');
+    },
+    updateProduct() {
+      let api = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/admin/product`;
+      let httpMethod = 'post';
+      const vm = this;
+      if (!vm.isNew) {
+        api = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/admin/product/${vm.tempProduct.id}`;
+        httpMethod = 'put';
+      }
+      console.log(process.env.APIPATH, process.env.CUSTOMPATH);
+      this.$http&#91;httpMethod](api, { data: vm.tempProduct }).then((response) =&gt; {
+        console.log(response.data);
+        // vm.products = response.data.products;
+        if (response.data.success) {
+          $('#productModal').modal('hide');
+          vm.getProducts();
+          console.log('新增失敗');
+        }
+      });
+    },
+  },
+  created() {
+    this.getProducts();
+  }
+};
+&lt;/script&gt;</code></pre>
+
+
+
+<h5>刪除產品的部分</h5>
+
+
+
+<pre class="wp-block-code"><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;div class="text-right mt-4"&gt;
+      &lt;button class="btn btn-primary" @click="openModal(true)"&gt;建立新的產品&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;table class="table mt-4"&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th width="120"&gt;分類&lt;/th&gt;
+          &lt;th&gt;產品名稱&lt;/th&gt;
+          &lt;th width="120"&gt;原價&lt;/th&gt;
+          &lt;th width="120"&gt;售價&lt;/th&gt;
+          &lt;th width="100"&gt;是否啟用&lt;/th&gt;
+          &lt;th width="120"&gt;編輯&lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr v-for="(item) in products" :key="item.id"&gt;
+          &lt;td&gt;{{ item.category }}&lt;/td&gt;
+          &lt;td&gt;{{ item.title }}&lt;/td&gt;
+          &lt;td class="text-right"&gt;
+            {{ item.origin_price }}
+          &lt;/td&gt;
+          &lt;td class="text-right"&gt;
+            {{ item.price }}
+          &lt;/td&gt;
+          &lt;td&gt;
+            &lt;span v-if="item.is_enabled" class="text-success"&gt;啟用&lt;/span&gt;
+            &lt;span v-else&gt;未啟用&lt;/span&gt;
+          &lt;/td&gt;
+          &lt;td&gt;
+              &lt;button class="btn btn-outline-primary btn-sm" @click="openModal(false, item)"&gt;編輯&lt;/button&gt;
+              &lt;button class="btn btn-outline-danger btn-sm" @click="openDelProductModal(item)"&gt;刪除&lt;/button&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+    &lt;!-- Modal --&gt;
+    &lt;div class="modal fade" id="productModal" tabindex="-1" role="dialog"
+      aria-labelledby="exampleModalLabel" aria-hidden="true"&gt;
+      &lt;div class="modal-dialog modal-lg" role="document"&gt;
+        &lt;div class="modal-content border-0"&gt;
+          &lt;div class="modal-header bg-dark text-white"&gt;
+            &lt;h5 class="modal-title" id="exampleModalLabel"&gt;
+              &lt;span&gt;新增產品&lt;/span&gt;
+            &lt;/h5&gt;
+            &lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;
+              &lt;span aria-hidden="true"&gt;&amp;times;&lt;/span&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
+          &lt;div class="modal-body"&gt;
+            &lt;div class="row"&gt;
+              &lt;div class="col-sm-4"&gt;
+                &lt;div class="form-group"&gt;
+                  &lt;label for="image"&gt;輸入圖片網址&lt;/label&gt;
+                  &lt;input type="text" class="form-control" id="image"
+                    v-model="tempProduct.imageUrl"
+                    placeholder="請輸入圖片連結"&gt;
+                &lt;/div&gt;
+                &lt;div class="form-group"&gt;
+                  &lt;label for="customFile"&gt;或 上傳圖片
+                    &lt;i class="fas fa-spinner fa-spin"&gt;&lt;/i&gt;
+                  &lt;/label&gt;
+                  &lt;input type="file" id="customFile" class="form-control"
+                    ref="files"&gt;
+                &lt;/div&gt;
+                &lt;img img="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-0.3.5&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;s=828346ed697837ce808cae68d3ddc3cf&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80"
+                  class="img-fluid" :src="tempProduct.imageUrl" alt=""&gt;
+              &lt;/div&gt;
+              &lt;div class="col-sm-8"&gt;
+                &lt;div class="form-group"&gt;
+                  &lt;label for="title"&gt;標題&lt;/label&gt;
+                  &lt;input type="text" class="form-control" id="title"
+                    v-model="tempProduct.title"
+                    placeholder="請輸入標題"&gt;
+                &lt;/div&gt;
+
+                &lt;div class="form-row"&gt;
+                  &lt;div class="form-group col-md-6"&gt;
+                    &lt;label for="category"&gt;分類&lt;/label&gt;
+                    &lt;input type="text" class="form-control" id="category"
+                      v-model="tempProduct.category"
+                      placeholder="請輸入分類"&gt;
+                  &lt;/div&gt;
+                  &lt;div class="form-group col-md-6"&gt;
+                    &lt;label for="price"&gt;單位&lt;/label&gt;
+                    &lt;input type="unit" class="form-control" id="unit"
+                      v-model="tempProduct.unit"
+                      placeholder="請輸入單位"&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class="form-row"&gt;
+                  &lt;div class="form-group col-md-6"&gt;
+                  &lt;label for="origin_price"&gt;原價&lt;/label&gt;
+                    &lt;input type="number" class="form-control" id="origin_price"
+                      v-model="tempProduct.origin_price"
+                      placeholder="請輸入原價"&gt;
+                  &lt;/div&gt;
+                  &lt;div class="form-group col-md-6"&gt;
+                    &lt;label for="price"&gt;售價&lt;/label&gt;
+                    &lt;input type="number" class="form-control" id="price"
+                      v-model="tempProduct.price"
+                      placeholder="請輸入售價"&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;hr&gt;
+
+                &lt;div class="form-group"&gt;
+                  &lt;label for="description"&gt;產品描述&lt;/label&gt;
+                  &lt;textarea type="text" class="form-control" id="description"
+                    v-model="tempProduct.description"
+                    placeholder="請輸入產品描述"&gt;&lt;/textarea&gt;
+                &lt;/div&gt;
+                &lt;div class="form-group"&gt;
+                  &lt;label for="content"&gt;說明內容&lt;/label&gt;
+                  &lt;textarea type="text" class="form-control" id="content"
+                    v-model="tempProduct.content"
+                    placeholder="請輸入產品說明內容"&gt;&lt;/textarea&gt;
+                &lt;/div&gt;
+                &lt;div class="form-group"&gt;
+                  &lt;div class="form-check"&gt;
+                    &lt;input class="form-check-input" type="checkbox"
+                      v-model="tempProduct.is_enabled"
+                      :true-value="1"
+                      :false-value="0"
+                      id="is_enabled"&gt;
+                    &lt;label class="form-check-label" for="is_enabled"&gt;
+                      是否啟用
+                    &lt;/label&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="modal-footer"&gt;
+            &lt;button type="button" class="btn btn-outline-secondary" data-dismiss="modal"&gt;取消&lt;/button&gt;
+            &lt;button type="button" class="btn btn-primary" @click="updateProduct"&gt;確認&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="modal fade" id="delProductModal" tabindex="-1" role="dialog"
+  aria-labelledby="exampleModalLabel" aria-hidden="true"&gt;
+      &lt;div class="modal-dialog" role="document"&gt;
+        &lt;div class="modal-content border-0"&gt;
+          &lt;div class="modal-header bg-danger text-white"&gt;
+            &lt;h5 class="modal-title" id="exampleModalLabel"&gt;
+              &lt;span&gt;刪除產品&lt;/span&gt;
+            &lt;/h5&gt;
+            &lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;
+              &lt;span aria-hidden="true"&gt;&amp;times;&lt;/span&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
+          &lt;div class="modal-body"&gt;
+            是否刪除 &lt;strong class="text-danger"&gt;{{ tempProduct.title }}&lt;/strong&gt; 商品(刪除後將無法恢復)。
+          &lt;/div&gt;
+          &lt;div class="modal-footer"&gt;
+            &lt;button type="button" class="btn btn-outline-secondary" data-dismiss="modal"&gt;取消&lt;/button&gt;
+            &lt;button type="button" class="btn btn-danger" @click="delProduct"&gt;確認刪除&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import $ from 'jquery'
+
+// 匯出給其他元件使用
+export default {
+  data() {
+    return {
+      products: &#91;],
+      tempProduct: {},
+      isNew: false,
+    };
+  },
+  methods: {
+    getProducts() {
+      const api = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/admin/products`;
+      const vm = this;
+      // console.log(process.env.APIPATH, process.env.CUSTOMPATH);
+      this.$http.get(api).then((response) =&gt; {
+        // console.log(response.data);
+        vm.products = response.data.products;
+      });
+    },
+    openModal(isNew, item) {
+      if (isNew) {
+        this.tempProduct = {};
+        this.isNew = true;
+      } else {
+        this.tempProduct = Object.assign({}, item);
+        this.isNew = false;
+      }
+      $('#productModal').modal('show');
+    },
+    updateProduct() {
+      let api = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/admin/product`;
+      let httpMethod = 'post';
+      const vm = this;
+      if (!vm.isNew) {
+        api = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/admin/product/${vm.tempProduct.id}`;
+        httpMethod = 'put';
+      }
+      console.log(process.env.APIPATH, process.env.CUSTOMPATH);
+      this.$http&#91;httpMethod](api, { data: vm.tempProduct }).then((response) =&gt; {
+        console.log(response.data);
+        // vm.products = response.data.products;
+        if (response.data.success) {
+          $('#productModal').modal('hide');
+          vm.getProducts();
+          console.log('新增失敗');
+        }
+      });
+    },
+    openDelProductModal(item) {
+      const vm = this;
+      $('#delProductModal').modal('show');
+      vm.tempProduct = Object.assign({}, item);
+    },
+    delProduct() {
+      const vm = this;
+      const url = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/admin/product/${vm.tempProduct.id}`;
+      this.$http.delete(url).then((response) =&gt; {
+        console.log(response, vm.tempProduct);
+        $('#delProductModal').modal('hide');
+        this.getProducts();
+      });
+    },
+  },
+  created() {
+    this.getProducts();
+  }
+};
+&lt;/script&gt;</code></pre>
+
+
+
+<h3>串接上傳檔案&nbsp;API</h3>
+
+
+
+<p>資源：<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/FormData/FormData" target="_blank" rel="noreferrer noopener">Form Data 說明</a></p>
+
+
+
+<p>操作與講解</p>
+
+
+
+<ol>
+<li>這裡要來介紹上傳圖片，不過上傳圖片跟先前幾個章節有點不一樣。這個 api 裡面還多了一個上傳表單的一個範例，原因是因為上傳這個行為跟其他的 api 不太一樣，上傳這個行為是必需使用 FormData() 來做傳送的。所以在這裡面它有特別標示我們是需要使用 FormData() 的，然後如果上傳成功的話，它就會回傳圖片的連結，它並沒有要求送出的格式，因為送出的格式就是 FormData()，那當然回傳的格式錯誤，這裡會描述說你是檔案格式錯誤還是檔案太大。</li>
+<li>我們現在按下新增新產品的時候，這裡有一個欄位就是上傳圖片，在上傳圖片的這個欄位這個地方，我們對應的是這裡，有個 &lt;input&gt; ，現在我們要增加一個上傳圖片的一個行為。所以我們這裡就可以使用 @change 當這個欄位有變更的時候就上傳圖片，這裡我們就新增 uploadFile 的行為，然後存檔。</li>
+<li>我們到下面的 methods，那 methods 的地方我們就新增一個上傳的(方法)，我們把它加在後面，那麼檔案在哪裡，我們可以先使用 console.log 來看一下，我們直接使用 console.log(this);，然後存檔、重新整理。現在上傳圖片沒有任何東西，我們這個時候可以直接拖曳一張圖片到選擇檔案這個地方，選擇之後我們再把 Console 打開，Console 打開之後下面有個 VueComponent，這個是我們剛剛透過 uploadFile 所找到的，那這個 uploadFile 下面我們就可以找到有一個叫做 $refs，那這個所指向的就是目前所看到的這個元素，裡面就可以找到我們所夾帶的檔案，在 $refs 然後 files 下面還可以再找到一個 files，在這裡有一個 files，那基本上它是一個陣列，所以要特別注意，我們現在要上傳的是它的第 0 個物件，所以我們現在就可以把這個檔案試著上傳看看。</li>
+<li>接下來我們就定義要上傳的檔案，const uploadFile 我們加個 ed (uploadedFile) 已經上傳的檔案在 this.$refs.files.files，記得這個 files 有兩層，第一層是外面的這個 files、第二層才是裡面的這個 files 這個陣列，那我們要取的基本上是第 0 個這一個。接下來我們在 const vm = this;，這已經是很常見的行為了，然後在這一個部分，我們會再宣告一個叫做 formData 的一個新的物件，這個是 Web Api，new FormData();。這個 formData 要做什麼，我們先把 Web Api 打開一下，我們可以先宣告一個 FormData() 的一個物件，那這個物件跟我們傳統用 AJAX 不太一樣，因為我們目前這個任務必需使用 FormData() 的方式去送，所以在這裡我們就可以使用 FormData() 來模擬傳統表單送出的形式，那麼我們在這裡宣告一個新的 FormData 之後，我們可以使用 append 的方式，將欄位新增進去，所以在這裡我們就可以把欄位新增進去。formData.append() 將欄位新增進來，那我們目前要用的欄位是 “file-to-upload” 這個欄位，然後我們要把這個檔案給上傳上去，接下來我們要定義路徑 const url ，路徑都對應好之後，我們在上傳前所做的行為也跟先前不一樣，這裡我們直接寫 this.$http.post()，那 post 之後，前面是路徑 url，後面是要傳送的內容，那麼就是 formData 的本身，最後我們這裡會再帶上一個物件，這個物件是因為我們要將格式改成 formData 的格式，所以在這裡我們要做一些調整，我們會調整 headers，然後 ‘Content-type’，我們要將表單的形式改成 formData，那後面這段就照樣複製過來 (‘multipart/form-data’)，所以<strong>這段流程跟先前都不太一樣，所以要特別記得</strong>。我們會先把檔案取出來，然後並且建立一個 formData 的物件，將這個 formData 加進去之後再把它送出，所以跟先前不太一樣，</li>
+<li>接下來我們看一下有沒有成功的上傳。存檔之後，我們來試一次看看、重新整理，按下編輯，我們一樣把一個檔案丟上來試試看，丟一會之後，這裡回傳 success，所以我們現在有成功上傳了，那麼 success 之後它有回傳一個路徑，這張就是我們剛上傳的圖片路徑，我們現在把這張圖片打開看一下，這個路徑非常的長，這個路徑是有包含授權的，所以它的路徑比較長，要有完整的路徑才能把這張圖打開，那現在我們圖片上傳已經完成了。</li>
+<li>接下來我們必需把這張圖片的路徑存下來，這張圖片路徑我們會對應到 tempProduct 的 imageUrl 裡面，那現在我們來做一下對應，如果 response.data.success 等於 true 的話，我們就把這張圖存起來。接下來我們來上傳測試一下，我們把一張圖片丟進來，丟進來之後這裡的圖片跟連結好像沒有帶上去，我們用 Vue 的開發者工具來看一下，看一下之後發現這個連結都有顯示，為什麼好像沒有出現。那麼我們一樣可以用 console.log 來看一下它到底有沒有正確的寫入，我把它貼進來 ( console.log(vm.tempProduct); )、(把 const vm = this; 註解移除)、存檔、重新整理。重新整理之後，目前看起來是很正常，我們再把這個圖片丟進來，那麼這個物件你會看到它的 id、num 還有 title 都是正常的，但是這個 imageUrl 它其實並不正常，它並沒有包含 getter 以及 setter，所以它現在的 imageUrl 並沒有雙向綁定，這個時候我們可以使用 Vue 的 vm.$set 的方式將這個欄位強制寫進去，那這個欄位在 vm.tempProduct 裡面，然後它的欄位是 ‘imageUrl’，並且將這個路徑強制寫入 ( response.data.imageUrl )，前面這兩行就不需要了 (註解起來)。那強制寫入之後，就可以確保它具有雙向綁定的功能，現在我們再把這張圖片新增一次試試看，新增上來之後，上面的網址就會自動帶上，那下面也會自動帶上我們剛剛所上傳的圖片，接下來我們按下確認，按下確認之後這張圖片的路徑就會被存下來。我們下次打開的時候，這張圖片就還會在。重新整理再來檢查一次，這張圖片並沒有被替換。這裡就介紹上傳圖片的方法。</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// 2. Products.vue
+// 上傳圖片欄位的 &lt;input&gt;
+&lt;input type="file" id="customFile" class="form-control" rel="files" @change="uploadFile"&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 4. Products.vue
+    uploadFile() {
+      console.log(this);
+      const uploadedFile = this.$refs.files.files&#91;0];
+      // const vm = this;
+      const formData = new formData();
+      formData.append('file-to-upload', uploadedFile);
+      const url = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/admin/upload`;
+      this.$http.post(url, formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        },
+      }).then((response) =&gt; {
+        console.log(response.data);
+      });
+    },</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 6. Products.vue
+    uploadFile() {
+      console.log(this);
+      const uploadedFile = this.$refs.files.files&#91;0];
+      const vm = this;
+      const formData = new FormData();
+      formData.append('file-to-upload', uploadedFile);
+      const url = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/admin/upload`;
+      this.$http.post(url, formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      }).then((response) =&gt; {
+        console.log(response.data);
+        if (response.data.success) {
+          // vm.tempProduct.imageUrl = response.data.imageUrl;
+          // console.log(vm.tempProduct);
+          vm.$set(vm.tempProduct, 'imageUrl', response.data.imageUrl);
+        }
+      });
+    },</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Products.vue
+&lt;template&gt;
+  &lt;div&gt;
+    &lt;div class="text-right mt-4"&gt;
+      &lt;button class="btn btn-primary" @click="openModal(true)"&gt;建立新的產品&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;table class="table mt-4"&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th width="120"&gt;分類&lt;/th&gt;
+          &lt;th&gt;產品名稱&lt;/th&gt;
+          &lt;th width="120"&gt;原價&lt;/th&gt;
+          &lt;th width="120"&gt;售價&lt;/th&gt;
+          &lt;th width="100"&gt;是否啟用&lt;/th&gt;
+          &lt;th width="120"&gt;編輯&lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr v-for="(item) in products" :key="item.id"&gt;
+          &lt;td&gt;{{ item.category }}&lt;/td&gt;
+          &lt;td&gt;{{ item.title }}&lt;/td&gt;
+          &lt;td class="text-right"&gt;
+            {{ item.origin_price }}
+          &lt;/td&gt;
+          &lt;td class="text-right"&gt;
+            {{ item.price }}
+          &lt;/td&gt;
+          &lt;td&gt;
+            &lt;span v-if="item.is_enabled" class="text-success"&gt;啟用&lt;/span&gt;
+            &lt;span v-else&gt;未啟用&lt;/span&gt;
+          &lt;/td&gt;
+          &lt;td&gt;
+              &lt;button class="btn btn-outline-primary btn-sm" @click="openModal(false, item)"&gt;編輯&lt;/button&gt;
+              &lt;button class="btn btn-outline-danger btn-sm" @click="openDelProductModal(item)"&gt;刪除&lt;/button&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+    &lt;!-- Modal --&gt;
+    &lt;div class="modal fade" id="productModal" tabindex="-1" role="dialog"
+      aria-labelledby="exampleModalLabel" aria-hidden="true"&gt;
+      &lt;div class="modal-dialog modal-lg" role="document"&gt;
+        &lt;div class="modal-content border-0"&gt;
+          &lt;div class="modal-header bg-dark text-white"&gt;
+            &lt;h5 class="modal-title" id="exampleModalLabel"&gt;
+              &lt;span&gt;新增產品&lt;/span&gt;
+            &lt;/h5&gt;
+            &lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;
+              &lt;span aria-hidden="true"&gt;&amp;times;&lt;/span&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
+          &lt;div class="modal-body"&gt;
+            &lt;div class="row"&gt;
+              &lt;div class="col-sm-4"&gt;
+                &lt;div class="form-group"&gt;
+                  &lt;label for="image"&gt;輸入圖片網址&lt;/label&gt;
+                  &lt;input type="text" class="form-control" id="image"
+                    v-model="tempProduct.imageUrl"
+                    placeholder="請輸入圖片連結"&gt;
+                &lt;/div&gt;
+                &lt;div class="form-group"&gt;
+                  &lt;label for="customFile"&gt;或 上傳圖片
+                    &lt;i class="fas fa-spinner fa-spin"&gt;&lt;/i&gt;
+                  &lt;/label&gt;
+                  &lt;input type="file" id="customFile" class="form-control"
+                    ref="files" @change="uploadFile"&gt;
+                &lt;/div&gt;
+                &lt;img img="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-0.3.5&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;s=828346ed697837ce808cae68d3ddc3cf&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80"
+                  class="img-fluid" :src="tempProduct.imageUrl" alt=""&gt;
+              &lt;/div&gt;
+              &lt;div class="col-sm-8"&gt;
+                &lt;div class="form-group"&gt;
+                  &lt;label for="title"&gt;標題&lt;/label&gt;
+                  &lt;input type="text" class="form-control" id="title"
+                    v-model="tempProduct.title"
+                    placeholder="請輸入標題"&gt;
+                &lt;/div&gt;
+
+                &lt;div class="form-row"&gt;
+                  &lt;div class="form-group col-md-6"&gt;
+                    &lt;label for="category"&gt;分類&lt;/label&gt;
+                    &lt;input type="text" class="form-control" id="category"
+                      v-model="tempProduct.category"
+                      placeholder="請輸入分類"&gt;
+                  &lt;/div&gt;
+                  &lt;div class="form-group col-md-6"&gt;
+                    &lt;label for="price"&gt;單位&lt;/label&gt;
+                    &lt;input type="unit" class="form-control" id="unit"
+                      v-model="tempProduct.unit"
+                      placeholder="請輸入單位"&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class="form-row"&gt;
+                  &lt;div class="form-group col-md-6"&gt;
+                  &lt;label for="origin_price"&gt;原價&lt;/label&gt;
+                    &lt;input type="number" class="form-control" id="origin_price"
+                      v-model="tempProduct.origin_price"
+                      placeholder="請輸入原價"&gt;
+                  &lt;/div&gt;
+                  &lt;div class="form-group col-md-6"&gt;
+                    &lt;label for="price"&gt;售價&lt;/label&gt;
+                    &lt;input type="number" class="form-control" id="price"
+                      v-model="tempProduct.price"
+                      placeholder="請輸入售價"&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;hr&gt;
+
+                &lt;div class="form-group"&gt;
+                  &lt;label for="description"&gt;產品描述&lt;/label&gt;
+                  &lt;textarea type="text" class="form-control" id="description"
+                    v-model="tempProduct.description"
+                    placeholder="請輸入產品描述"&gt;&lt;/textarea&gt;
+                &lt;/div&gt;
+                &lt;div class="form-group"&gt;
+                  &lt;label for="content"&gt;說明內容&lt;/label&gt;
+                  &lt;textarea type="text" class="form-control" id="content"
+                    v-model="tempProduct.content"
+                    placeholder="請輸入產品說明內容"&gt;&lt;/textarea&gt;
+                &lt;/div&gt;
+                &lt;div class="form-group"&gt;
+                  &lt;div class="form-check"&gt;
+                    &lt;input class="form-check-input" type="checkbox"
+                      v-model="tempProduct.is_enabled"
+                      :true-value="1"
+                      :false-value="0"
+                      id="is_enabled"&gt;
+                    &lt;label class="form-check-label" for="is_enabled"&gt;
+                      是否啟用
+                    &lt;/label&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="modal-footer"&gt;
+            &lt;button type="button" class="btn btn-outline-secondary" data-dismiss="modal"&gt;取消&lt;/button&gt;
+            &lt;button type="button" class="btn btn-primary" @click="updateProduct"&gt;確認&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="modal fade" id="delProductModal" tabindex="-1" role="dialog"
+  aria-labelledby="exampleModalLabel" aria-hidden="true"&gt;
+      &lt;div class="modal-dialog" role="document"&gt;
+        &lt;div class="modal-content border-0"&gt;
+          &lt;div class="modal-header bg-danger text-white"&gt;
+            &lt;h5 class="modal-title" id="exampleModalLabel"&gt;
+              &lt;span&gt;刪除產品&lt;/span&gt;
+            &lt;/h5&gt;
+            &lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;
+              &lt;span aria-hidden="true"&gt;&amp;times;&lt;/span&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
+          &lt;div class="modal-body"&gt;
+            是否刪除 &lt;strong class="text-danger"&gt;{{ tempProduct.title }}&lt;/strong&gt; 商品(刪除後將無法恢復)。
+          &lt;/div&gt;
+          &lt;div class="modal-footer"&gt;
+            &lt;button type="button" class="btn btn-outline-secondary" data-dismiss="modal"&gt;取消&lt;/button&gt;
+            &lt;button type="button" class="btn btn-danger" @click="delProduct"&gt;確認刪除&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import $ from 'jquery'
+
+// 匯出給其他元件使用
+export default {
+  data() {
+    return {
+      products: &#91;],
+      tempProduct: {},
+      isNew: false,
+    };
+  },
+  methods: {
+    getProducts() {
+      const api = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/admin/products`;
+      const vm = this;
+      // console.log(process.env.APIPATH, process.env.CUSTOMPATH);
+      this.$http.get(api).then((response) =&gt; {
+        // console.log(response.data);
+        vm.products = response.data.products;
+      });
+    },
+    openModal(isNew, item) {
+      if (isNew) {
+        this.tempProduct = {};
+        this.isNew = true;
+      } else {
+        this.tempProduct = Object.assign({}, item);
+        this.isNew = false;
+      }
+      $('#productModal').modal('show');
+    },
+    updateProduct() {
+      let api = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/admin/product`;
+      let httpMethod = 'post';
+      const vm = this;
+      if (!vm.isNew) {
+        api = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/admin/product/${vm.tempProduct.id}`;
+        httpMethod = 'put';
+      }
+      console.log(process.env.APIPATH, process.env.CUSTOMPATH);
+      this.$http&#91;httpMethod](api, { data: vm.tempProduct }).then((response) =&gt; {
+        console.log(response.data);
+        // vm.products = response.data.products;
+        if (response.data.success) {
+          $('#productModal').modal('hide');
+          vm.getProducts();
+          console.log('新增失敗');
+        }
+      });
+    },
+    openDelProductModal(item) {
+      const vm = this;
+      $('#delProductModal').modal('show');
+      vm.tempProduct = Object.assign({}, item);
+    },
+    delProduct() {
+      const vm = this;
+      const url = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/admin/product/${vm.tempProduct.id}`;
+      this.$http.delete(url).then((response) =&gt; {
+        console.log(response, vm.tempProduct);
+        $('#delProductModal').modal('hide');
+        this.getProducts();
+      });
+    },
+    uploadFile() {
+      console.log(this);
+      const uploadedFile = this.$refs.files.files&#91;0];
+      const vm = this;
+      const formData = new FormData();
+      formData.append('file-to-upload', uploadedFile);
+      const url = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/admin/upload`;
+      this.$http.post(url, formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      }).then((response) =&gt; {
+        console.log(response.data);
+        if (response.data.success) {
+          // vm.tempProduct.imageUrl = response.data.imageUrl;
+          // console.log(vm.tempProduct);
+          vm.$set(vm.tempProduct, 'imageUrl', response.data.imageUrl);
+        }
+      });
+    },
+  },
+  created() {
+    this.getProducts();
+  }
+};
+&lt;/script&gt;</code></pre>
+
+
+
+<h3>增加使用者體驗&nbsp;–&nbsp;讀取中效果製作</h3>
+
+
+
+<p>資源：<a rel="noreferrer noopener" href="https://github.com/ankurk91/vue-loading-overlay" target="_blank">Vue loading Overlay</a></p>
+
+
+
+<p>操作與講解</p>
+
+
+
+<ol>
+<li>到目前為止我們製作蠻多 AJAX 行為，但是都沒有做讀取中的效果，我們先來看範例的網頁，像這個範例中的網頁，我們如果重新整理這個頁面的時候，它會有個讀取中的效果，並且如果我們編輯檔案、然後上傳圖片的時候。我們來上傳一張圖片，我們把它放到選擇檔案的地方，上方會有一個讀取的 loading 效果，並且按下確認的時候，它背景也會再重新出現讀取的效果，所以這個章節就要跟大家講，我們怎麼製作讀取的效果，有局部或者是全部的讀取效果，該怎麼分開的執行。</li>
+<li>回到我們的頁面上，在這個地方我們要做讀取效果會使用到兩個方式，一個是全畫面，全畫面的話我們會用這個套件 vue-loading-overlay 的一個套件，那這個套件非常的簡單，我們先來看一下它的範例 (&nbsp;<a rel="noreferrer noopener" href="https://jsfiddle.net/ankurk91/w8y8k5wo/" target="_blank">JSFiddle</a>&nbsp;)，如果按下這一個按鈕，它就會出現一個全螢幕的讀取效果。</li>
+<li>現在我們就把這個讀取效果裝到我們的專案上面來，一樣把 Vue Cli 先把它停掉，然後我們來安裝，並且把相關的內容載入到 main.js 裡面來，這裡有安裝套件的方式，我們可以使用 import 然後 loading 然後 vue-loading-overlay 的方式，我們把它放在 VueAxios 的下面，另外它還有一支檔案要載入，是它的 CSS，那我們一樣把它給載進來，那這邊它有出現一個下底線，原因是因為它是一個元件，它是元件的話，它必需被啟用。那我們用全域的方式來啟用它，我們把它寫在這裡，Vue.component 如果我們這種方式的話，啟用元件它是全域的 方式，我們在每個個別元件就不需要重新的一個一個載進來，’Loading’，然後它就叫做 Loading 的元件，然後存檔。</li>
+<li>回到 Products.vue 的頁面來，它的文件有寫到如果要啟用它的話，可以直接複製這一段，然後把它貼到我們的文件上方，記得我們不要貼在最外層，我們要貼在 &lt;div&gt; 的裡面一層，它裡面有很多設定，在這些設定可以不用，我們只要留下 :active-sync 這一段就可以了，然後這裡面會有一個 isLoading 的變數，那這個變數當它是 false 的時候，它就會停用，那如果是 true 的時候，它就會啟用，所以這個時候我們把 isLoading 這個變數先把它複製下來，到我們宣告變數的方式把它加進來，isLoading 然後給它 false 的值，所以它預設會是停下來的狀態，我們回到我們畫面，它是不會有任何變化的。接下來我們在 AJAX 行為上面來增加，加到 getProducts() 上面，然後我們把它加進來，vm.isLoading 等於 true，我們當啟用這個 getProducts() 都會先執行一次 isLoading，然後並且在 getProducts() 完成之後再把它改為 false，vm.isLoading 等於 false。那我們來重新啟動看看，像剛剛它就有一個讀取的效果。接下來我們按下編輯的頁面，按下確認的時候，它一樣會出現讀取的效果，那這是第一種加入讀取方式。</li>
+<li>接下來我們來製作第二種讀取的效果，我們打開 FontAwesome 的頁面，然後我們到 How to Use 裡面來，這裡可以直接取用它的 CSS，當然它也有提供 npm 的安裝方式，不過使用 npm 的方式來安裝的話，它的字體檔也要安裝進來，手續會稍微複雜一些，所以在這裡示範的話就直接使用 cdn，先把這個網址複製起來之後，到 index.html 直接貼在我們的標題下方就可以了，然後儲存，那我們可以稍微把它排整齊一下、然後存檔。現在我們的專案裡面就可以使用 FontAwesome，接下來回到 Products.vue，我們在 Products.vue 裡面這個資料狀態再新增一個 status，然後它是一個物件，接下來我們就可以宣告一些變數是決定要使用 loading 的，像上傳的話就可以使用局部 loading 的方式來製作，fileUploading 它現在的讀取效果是 false，是不存在的。我們現在先把這個資料定義好之後，我們再到 FontAwesome 的頁面上面來，它的右下方有一個 Animating Icons，這邊有個選項我們把它按下去，按下去這邊就有讀取效果的一些 icon，像是我們用的話可以選擇第一個，那我們就把它複製下來，像是我們可以把它加在這個上傳圖片的旁邊，那提供的 template 裡面已經加上去，所以這個旁邊會有一個讀取的效果。</li>
+<li>接下來我們把這個狀態，這個 fileUploading 的效果把它綁定到這個樣式上面來，現在它是會顯示的，那我們把它改成動態的方式 ( v-if=”status.fileUploading” )，fileUploading 它是 true 的話，它才會顯示，那相反如果它是 false 的話，它就不會顯示，所以我們加上這段之後它就不會顯示。那我們再到下面上傳的地方，這邊 uploadedFile 這個地方，我們再把剛剛這個變數加上去 ( vm.status.fileUploading = true )，按下去的時候它會是 true，當它 AJAX 結束之後，它會把它改成 false，把它改回來。那我們再回到畫面上，回到畫面上之後，我們按下這個編輯，它預設不會出現這個讀取的效果，但如果說我們上傳一張圖片的時候，它這個讀取的效果就會出現，一直到它讀取完之後，它才會停止。我們換一張圖試試看，像我們換一張圖它就會出現讀取效果，它上傳完之後，它才會把 loading 的效果給停掉。那這邊的話就介紹兩種 loading 的方式，兩種方式都可以試試看。</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// 3. vue-loading-overlay
+npm install vue-loading-overlay --save</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 3. main.js
+import Loading from 'vue-loading-overlay';
+import 'vue-loading-overlay/dist/vue-loading.min.css';
+
+Vue.component('Loading', Loading)</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 4. Products.vue
+&lt;loading :active.sync="isLoading"&gt;&lt;/loading&gt;</code></pre>
+
+
+
+<h5>出現載入 vue-loading-overlay 載入 CSS 錯誤</h5>
+
+
+
+<pre class="wp-block-code"><code>// main.js
+// 修正 import stylesheet
+import 'vue-loading-overlay/dist/vue-loading.css'</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 新增一個 postcss.config.js
+module.exports = {
+  plugins: {
+    'autoprefixer': { browers: 'last 5 version' }
+}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 5. index.html
+    &lt;link rel="stylesheet" 
+      href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" 
+      integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" 
+      crossorigin="anonymous"&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Products.vue
+&lt;template&gt;
+  &lt;div&gt;
+    &lt;loading :active.sync="isLoading"&gt;&lt;/loading&gt;
+    &lt;div class="text-right mt-4"&gt;
+      &lt;button class="btn btn-primary" @click="openModal(true)"&gt;建立新的產品&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;table class="table mt-4"&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th width="120"&gt;分類&lt;/th&gt;
+          &lt;th&gt;產品名稱&lt;/th&gt;
+          &lt;th width="120"&gt;原價&lt;/th&gt;
+          &lt;th width="120"&gt;售價&lt;/th&gt;
+          &lt;th width="100"&gt;是否啟用&lt;/th&gt;
+          &lt;th width="120"&gt;編輯&lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr v-for="(item) in products" :key="item.id"&gt;
+          &lt;td&gt;{{ item.category }}&lt;/td&gt;
+          &lt;td&gt;{{ item.title }}&lt;/td&gt;
+          &lt;td class="text-right"&gt;
+            {{ item.origin_price }}
+          &lt;/td&gt;
+          &lt;td class="text-right"&gt;
+            {{ item.price }}
+          &lt;/td&gt;
+          &lt;td&gt;
+            &lt;span v-if="item.is_enabled" class="text-success"&gt;啟用&lt;/span&gt;
+            &lt;span v-else&gt;未啟用&lt;/span&gt;
+          &lt;/td&gt;
+          &lt;td&gt;
+              &lt;button class="btn btn-outline-primary btn-sm" @click="openModal(false, item)"&gt;編輯&lt;/button&gt;
+              &lt;button class="btn btn-outline-danger btn-sm" @click="openDelProductModal(item)"&gt;刪除&lt;/button&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+    &lt;!-- Modal --&gt;
+    &lt;div class="modal fade" id="productModal" tabindex="-1" role="dialog"
+      aria-labelledby="exampleModalLabel" aria-hidden="true"&gt;
+      &lt;div class="modal-dialog modal-lg" role="document"&gt;
+        &lt;div class="modal-content border-0"&gt;
+          &lt;div class="modal-header bg-dark text-white"&gt;
+            &lt;h5 class="modal-title" id="exampleModalLabel"&gt;
+              &lt;span&gt;新增產品&lt;/span&gt;
+            &lt;/h5&gt;
+            &lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;
+              &lt;span aria-hidden="true"&gt;&amp;times;&lt;/span&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
+          &lt;div class="modal-body"&gt;
+            &lt;div class="row"&gt;
+              &lt;div class="col-sm-4"&gt;
+                &lt;div class="form-group"&gt;
+                  &lt;label for="image"&gt;輸入圖片網址&lt;/label&gt;
+                  &lt;input type="text" class="form-control" id="image"
+                    v-model="tempProduct.imageUrl"
+                    placeholder="請輸入圖片連結"&gt;
+                &lt;/div&gt;
+                &lt;div class="form-group"&gt;
+                  &lt;label for="customFile"&gt;或 上傳圖片
+                    &lt;i class="fas fa-spinner fa-spin" v-if="status.fileUploading"&gt;&lt;/i&gt;
+                  &lt;/label&gt;
+                  &lt;input type="file" id="customFile" class="form-control"
+                    ref="files" @change="uploadFile"&gt;
+                &lt;/div&gt;
+                &lt;img img="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-0.3.5&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;s=828346ed697837ce808cae68d3ddc3cf&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80"
+                  class="img-fluid" :src="tempProduct.imageUrl" alt=""&gt;
+              &lt;/div&gt;
+              &lt;div class="col-sm-8"&gt;
+                &lt;div class="form-group"&gt;
+                  &lt;label for="title"&gt;標題&lt;/label&gt;
+                  &lt;input type="text" class="form-control" id="title"
+                    v-model="tempProduct.title"
+                    placeholder="請輸入標題"&gt;
+                &lt;/div&gt;
+
+                &lt;div class="form-row"&gt;
+                  &lt;div class="form-group col-md-6"&gt;
+                    &lt;label for="category"&gt;分類&lt;/label&gt;
+                    &lt;input type="text" class="form-control" id="category"
+                      v-model="tempProduct.category"
+                      placeholder="請輸入分類"&gt;
+                  &lt;/div&gt;
+                  &lt;div class="form-group col-md-6"&gt;
+                    &lt;label for="price"&gt;單位&lt;/label&gt;
+                    &lt;input type="unit" class="form-control" id="unit"
+                      v-model="tempProduct.unit"
+                      placeholder="請輸入單位"&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class="form-row"&gt;
+                  &lt;div class="form-group col-md-6"&gt;
+                  &lt;label for="origin_price"&gt;原價&lt;/label&gt;
+                    &lt;input type="number" class="form-control" id="origin_price"
+                      v-model="tempProduct.origin_price"
+                      placeholder="請輸入原價"&gt;
+                  &lt;/div&gt;
+                  &lt;div class="form-group col-md-6"&gt;
+                    &lt;label for="price"&gt;售價&lt;/label&gt;
+                    &lt;input type="number" class="form-control" id="price"
+                      v-model="tempProduct.price"
+                      placeholder="請輸入售價"&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;hr&gt;
+
+                &lt;div class="form-group"&gt;
+                  &lt;label for="description"&gt;產品描述&lt;/label&gt;
+                  &lt;textarea type="text" class="form-control" id="description"
+                    v-model="tempProduct.description"
+                    placeholder="請輸入產品描述"&gt;&lt;/textarea&gt;
+                &lt;/div&gt;
+                &lt;div class="form-group"&gt;
+                  &lt;label for="content"&gt;說明內容&lt;/label&gt;
+                  &lt;textarea type="text" class="form-control" id="content"
+                    v-model="tempProduct.content"
+                    placeholder="請輸入產品說明內容"&gt;&lt;/textarea&gt;
+                &lt;/div&gt;
+                &lt;div class="form-group"&gt;
+                  &lt;div class="form-check"&gt;
+                    &lt;input class="form-check-input" type="checkbox"
+                      v-model="tempProduct.is_enabled"
+                      :true-value="1"
+                      :false-value="0"
+                      id="is_enabled"&gt;
+                    &lt;label class="form-check-label" for="is_enabled"&gt;
+                      是否啟用
+                    &lt;/label&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="modal-footer"&gt;
+            &lt;button type="button" class="btn btn-outline-secondary" data-dismiss="modal"&gt;取消&lt;/button&gt;
+            &lt;button type="button" class="btn btn-primary" @click="updateProduct"&gt;確認&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="modal fade" id="delProductModal" tabindex="-1" role="dialog"
+  aria-labelledby="exampleModalLabel" aria-hidden="true"&gt;
+      &lt;div class="modal-dialog" role="document"&gt;
+        &lt;div class="modal-content border-0"&gt;
+          &lt;div class="modal-header bg-danger text-white"&gt;
+            &lt;h5 class="modal-title" id="exampleModalLabel"&gt;
+              &lt;span&gt;刪除產品&lt;/span&gt;
+            &lt;/h5&gt;
+            &lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;
+              &lt;span aria-hidden="true"&gt;&amp;times;&lt;/span&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
+          &lt;div class="modal-body"&gt;
+            是否刪除 &lt;strong class="text-danger"&gt;{{ tempProduct.title }}&lt;/strong&gt; 商品(刪除後將無法恢復)。
+          &lt;/div&gt;
+          &lt;div class="modal-footer"&gt;
+            &lt;button type="button" class="btn btn-outline-secondary" data-dismiss="modal"&gt;取消&lt;/button&gt;
+            &lt;button type="button" class="btn btn-danger" @click="delProduct"&gt;確認刪除&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import $ from 'jquery'
+
+// 匯出給其他元件使用
+export default {
+  data() {
+    return {
+      products: &#91;],
+      tempProduct: {},
+      isNew: false,
+      isLoading: false,
+      status: {
+        fileUploading: false,
+      },
+    };
+  },
+  methods: {
+    getProducts() {
+      const api = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/admin/products`;
+      const vm = this;
+      // console.log(process.env.APIPATH, process.env.CUSTOMPATH);
+      vm.isLoading = true;
+      this.$http.get(api).then((response) =&gt; {
+        // console.log(response.data);
+        vm.isLoading = false;
+        vm.products = response.data.products;
+      });
+    },
+    openModal(isNew, item) {
+      if (isNew) {
+        this.tempProduct = {};
+        this.isNew = true;
+      } else {
+        this.tempProduct = Object.assign({}, item);
+        this.isNew = false;
+      }
+      $('#productModal').modal('show');
+    },
+    updateProduct() {
+      let api = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/admin/product`;
+      let httpMethod = 'post';
+      const vm = this;
+      if (!vm.isNew) {
+        api = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/admin/product/${vm.tempProduct.id}`;
+        httpMethod = 'put';
+      }
+      console.log(process.env.APIPATH, process.env.CUSTOMPATH);
+      this.$http&#91;httpMethod](api, { data: vm.tempProduct }).then((response) =&gt; {
+        console.log(response.data);
+        // vm.products = response.data.products;
+        if (response.data.success) {
+          $('#productModal').modal('hide');
+          vm.getProducts();
+          console.log('新增失敗');
+        }
+      });
+    },
+    openDelProductModal(item) {
+      const vm = this;
+      $('#delProductModal').modal('show');
+      vm.tempProduct = Object.assign({}, item);
+    },
+    delProduct() {
+      const vm = this;
+      const url = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/admin/product/${vm.tempProduct.id}`;
+      this.$http.delete(url).then((response) =&gt; {
+        console.log(response, vm.tempProduct);
+        $('#delProductModal').modal('hide');
+        this.getProducts();
+      });
+    },
+    uploadFile() {
+      console.log(this);
+      const uploadedFile = this.$refs.files.files&#91;0];
+      const vm = this;
+      const formData = new FormData();
+      formData.append('file-to-upload', uploadedFile);
+      const url = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/admin/upload`;
+      vm.status.fileUploading = true;
+      this.$http.post(url, formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      }).then((response) =&gt; {
+        console.log(response.data);
+        vm.status.fileUploading = false;
+        if (response.data.success) {
+          // vm.tempProduct.imageUrl = response.data.imageUrl;
+          // console.log(vm.tempProduct);
+          vm.$set(vm.tempProduct, 'imageUrl', response.data.imageUrl);
+        }
+      });
+    },
+  },
+  created() {
+    this.getProducts();
+  }
+};
+&lt;/script&gt;</code></pre>
+
+
+
+<h3>Font-awesome&nbsp;連結說明</h3>
+
+
+
+<p>由於新版 Fontawesome 需要註冊或使用 npm 方式才能安裝<br>如果想跳過註冊流程可以直接使用以下連結：</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;link rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+      crossorigin="anonymous"&gt;</code></pre>
+
+
+
+<h3>增加使用者體驗&nbsp;–&nbsp;錯誤的訊息回饋</h3>
+
+
+
+<p>操作與講解</p>
+
+
+
+<ol>
+<li>除了讀取效果之外，還有一個很常用的就是錯誤訊息的回饋，那麼錯誤訊息的回饋我們來看一下這邊有一個範例，像是我們上傳圖片的時候，它是有一些限制的，像是說你的圖片如果格式不對、或是圖片太大，都是沒有辦法上傳的。像我們在這裡如果說我們上傳一張比較大的圖片，它這個時候就會跳錯，然後它會給一些錯誤的回饋，或者是說我們傳入錯誤的格式，這裡也會出現檔案格式錯誤的訊息。接下來我們就來介紹怎麼樣做出這樣的錯誤訊息的回饋。</li>
+<li>錯誤訊息的回饋在這個地方要介紹一個非常不同的技巧，在介紹元件的時候，元件都是一層一層向下的，像是 Root 下面就可以有 Header、side，那 side 往下就可以有 component，那麼假設說我們要談出一個向上最頂層的一個訊息的話，那麼我們基本上就是要一層一層的往上呼叫，在底層的 component 就不容易呼叫這個 Alert 的訊息。那我們可以怎麼做，我們可以使用一個 Event Bus 的一個概念，我們直接把這個 Alert 掛載 Vue 的原型下，然後直接去操作 Vue 的原型來控制這個 Alert。</li>
+<li>那接下來我們來看一下實際上會怎麼樣去運作它，那在這個章節會直接提供一個現成的原始碼，然後讓同學不需要去撰寫 Alert 的部分，因為 Alert 的概念與我們先前所練習的 Todo 非常的像。那我們新增一個檔案，然後並且另存新檔，把這個檔案放到 src/components 下，名稱叫做 AlertMessage.vue。</li>
+<li>接下來我們在把這個 AlertMessage.vue 先掛載進來，我們把它掛載在 Dashboard.vue 下，然後使用 import AlertMessage from ‘./AlertMessage’;，我們把它簡稱叫 Alert 就好了 (import Alert from ‘./AlertMessage’;。那這個元件也把它放在 components 下，並且把它放到 &lt;Navbar /> 下面 ( &lt;Alert>&lt;/Alert>，然後存檔。存檔之後不會有任何的變化，預設是不會顯示的。</li>
+<li>接下來我們回到 AlertMessage.vue 裡面來，這裡面會做的事情，就是將這個 messages 一個一個陳列出來，那它是一個陣列會塞入物件，到時候會傳入物件。那它會傳入的參數有這三個，分別有 message, status, timestamp，那 message 就是文字的內容、status 是它的樣式、timestamp 是它的 id，message 我們就可以打 ‘訊息內容’，status 就是它的樣式，樣式的話是追隨 Bootstrap 的樣式，如果我們使用 danger 的話就是紅色，那 timestamp 我們就先給它 123，然後存檔。存檔之後這邊就會跳出一個訊息內容，然後可以關掉。它的運行方式跟我們先前所介紹的 Todo 非常像的，只不過這個與先前比較不一樣的地方，我們來看一下。當我們每當送一個訊息到 messages 裡面的時候，它有會觸發把自己移除的函式，那它把自己移除的函式就寫在它的下方，每當 5 秒一到的時候，它就把自己這個訊息給移除。那這裡還有一個 removeMessage 的一個方法，那就是我們剛剛按 X 的地方，所以我們再重新整理一次，它關掉的方式就有兩種，一種是按這邊的 X 、那另外一種就是 5 秒一到它也會把自己的訊息移除，但是這個只有從外面傳進來訊息它才會被自動移除，像我們這個手動寫入的訊息它就不會被移除。</li>
+<li>現在我們已經把這個頂層的 Alert 的行為已經建立起來，現在我們把 Event Bus 加進去，加入 Event Bus 的方式，我們再新增一個檔案，另存新檔在 src 的資料夾下，叫做 bus.js 的檔案。那麼它只需要 import Vue from ‘vue’;，並且在 Vue.prototype 它直接掛載在它的原型下，叫做一個 $bus 的一個變數，然後等於 new Vue，那這邊就完成了。完成之後我們把這個 Event Bus 注入到 main.js 裡面來，import 然後直接輸入路徑 ‘./bus’;、存檔。那現在我們剛剛做的這件事情就是將 Event Bus 直接掛在 Vue 的下面，我們直接掛在它的原型下，所以可以直接對這個 Event Bus 做呼叫。</li>
+<li>那現在 bus 沒有任何的事情，那我們可以在 AlertMessage.vue 裡面做一些事情，已經先把方法寫出來了，那我們直接把這一段註解打解 (const vm、vm.$bus.$on)，再來講解一下，這段的意思是我們直接去呼叫 Vue 的實體下面的 $bus，那這個 $bus 就是我們剛剛掛在 Vue 的原型下的一個變數，並且在上面用 on 的方式註冊了一個 message:push 的一個方法，那這裡是它的參數以及它的狀態值，message 是一個字串，就是對應我們這裡的 message，然後 status 是對應剛剛講的 Bootstrap 的樣式，我們給它定義一個預設樣式是 ‘warning’，最後再觸發 vm.updateMessage，就是上面這個 updateMessage 的方法，到目前為止其實 Event Bus 已經完成了。那麼外層是使用 on 去註冊，那麼內層要使用的話則用 $emit 去觸發它，好、那我們先存檔一次。</li>
+<li>接下來我們到 Products.vue 的頁面來，我們直接在 created() 這個地方試著送出一個 Event Bus 來試試看，直接使用 this.$bus.$emit(”)，接下來我們直接把 AlertMessage.vue 裡面的 $on 下面的 ‘message:push’ 直接貼過來，現在我們才可以直接透過這個方法來觸發外層的 Alert，然後我們在給它訊息內容 ‘這裡是一段訊息’，後面在加上狀態，那這個狀態是跟隨 Bootstrap 的樣式，我們給它 ‘success’ 的樣式，存檔。存檔之後你會發現這裡就直接把這個訊息跳出來，如果我們不管它的話，5 秒鐘它就會自動移除。那這裡就是 Event Bus 的使用方法。</li>
+<li>最後我們在把這個行為寫到我們需要提示用戶的地方，像是我們在上傳檔案的時候，成功的話它就直接會把檔案網址寫到 tempProduct 裡面，那麼如果失敗的話我們就可以透過 Event Bus 來提醒用戶說它的錯誤在哪裡，Event Bus、emit、message:push，然後接下來我們在把 response.data 貼過來、加上.message，後面給它 ‘danger’。當然先前的這個訊息內容我們要記得把它刪掉，這是我們剛先填入的部分，接下來我們重新整理一下，然後我們再上傳一次圖片試試看，我們給它一個錯誤的格式，這裡就會跳出檔案格式錯的訊息，這樣子的話用戶也比較了解他犯錯是什麼樣的錯誤。</li>
+<li>在這裡再提醒一下由於 Event Bus 是可以跨元件通訊的，也就是說你可能會忘記你在哪一個元件設定哪些方法，那依照習慣會把 Event Bus 所可以使用的方法直接寫在 bus.js 檔案，包含使用的方法、傳遞的參數……等等，那就試著把錯誤的訊息也補上。(意思是將方法註解在 bus.js 方便自己記得設定過哪些傳遞方法)。</li>
+</ol>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" width="1536" height="762" src="/wordpress_blog/wp-content/uploads/2022/04/Vue-Event-Bus.png" alt="" class="wp-image-691"><figcaption>Vue Event Bus</figcaption></figure>
+
+
+
+<pre class="wp-block-code"><code>// 3. AlertMessage.vue
+&lt;template&gt;
+  &lt;div class="message-alert"&gt;
+    &lt;div class="alert alert-dismissible"
+      :class="'alert-' + item.status"
+      v-for="(item, i) in messages" :key="i"&gt;
+      {{ item.message }}
+      &lt;button type="button" class="close" @click="removeMessage(i)" aria-label="Close"&gt;
+        &lt;span aria-hidden="true"&gt;&amp;times;&lt;/span&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  name: 'Navbar',
+  data() {
+    return {
+      messages: &#91;],
+    };
+  },
+  methods: {
+    updateMessage(message, status) {
+      const timestamp = Math.floor(new Date() / 1000);
+      this.messages.push({
+        message,
+        status,
+        timestamp,
+      });
+      this.removeMessageWithTiming(timestamp);
+    },
+    removeMessage(num) {
+      this.messages.splice(num, 1);
+    },
+    removeMessageWithTiming(timestamp) {
+      const vm = this;
+      setTimeout(() =&gt; {
+        vm.messages.forEach((item, i) =&gt; {
+          if (item.timestamp === timestamp) {
+            vm.messages.splice(i, 1);
+          }
+        });
+      }, 5000);
+    },
+  },
+  created() {
+    // const vm = this;
+
+    // 自定義名稱 'messsage:push'
+    // message: 傳入參數
+    // status: 樣式，預設值為 warning
+    // vm.$bus.$on('message:push', (message, status = 'warning') =&gt; {
+    //   vm.updateMessage(message, status);
+    // });
+    // vm.$bus.$emit('message:push');
+  },
+};
+&lt;/script&gt;
+
+&lt;style scope&gt;
+.message-alert {
+  position: fixed;
+  max-width: 50%;
+  top: 56px;
+  right: 20px;
+  z-index: 1100;
+}
+&lt;/style&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 4. Dashboard.vue
+&lt;template&gt;
+  &lt;div&gt;
+    &lt;Navbar/&gt;
+    &lt;Alert&gt;&lt;/Alert&gt;
+    &lt;div class="container-fluid"&gt;
+      &lt;div class="row"&gt;
+        &lt;Sidebar&gt;&lt;/Sidebar&gt;
+        &lt;main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4"&gt;
+          &lt;router-view&gt;&lt;/router-view&gt;
+        &lt;/main&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import Sidebar from './Sidebar';
+import Navbar from './Navbar';
+import Alert from './AlertMessage';
+
+export default {
+  components: {
+    Sidebar,
+    Navbar,
+    Alert,
+  },
+  created() {
+    const myCookie = document.cookie.replace(/(?:(?:^|.*;\s*)hexToken\s*=\s*(&#91;^;]*).*$)|^.*$/, '$1');
+    // console.log('myCookie', myCookie);
+    this.$http.defaults.headers.common.Authorization = myCookie;
+  }
+};
+&lt;/script&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 5. AlertMessage.vue
+      messages: &#91;{
+        message: '訊息內容',
+        status: 'danger',
+        timestamp: 123,
+      }],
+    };</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 6. bus.js
+import Vue from 'vue';
+
+Vue.prototype.$bus = new Vue();</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 6. main.js
+// 自己撰寫
+import './bus';</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 7. AlertMessage.vue
+  created() {
+    const vm = this;
+
+    // 自定義名稱 'messsage:push'
+    // message: 傳入參數
+    // status: 樣式，預設值為 warning
+    vm.$bus.$on('message:push', (message, status = 'warning') =&gt; {
+      vm.updateMessage(message, status);
+    });
+    // vm.$bus.$emit('message:push');
+  },</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 8. Products.vue
+  created() {
+    this.getProducts();
+    this.$bus.$emit('message:push', '這裡是一段訊息', 'success');
+  }</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 9. Products.vue
+    uploadFile() {
+      console.log(this);
+      const uploadedFile = this.$refs.files.files&#91;0];
+      const vm = this;
+      const formData = new FormData();
+      formData.append('file-to-upload', uploadedFile);
+      const url = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/admin/upload`;
+      vm.status.fileUploading = true;
+      this.$http.post(url, formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      }).then((response) =&gt; {
+        console.log(response.data);
+        vm.status.fileUploading = false;
+        if (response.data.success) {
+          // vm.tempProduct.imageUrl = response.data.imageUrl;
+          // console.log(vm.tempProduct);
+          vm.$set(vm.tempProduct, 'imageUrl', response.data.imageUrl);
+        } else {
+              this.$bus.$emit('message:push', response.data.message, 'danger');
+        }
+      });
+    },
+  },
+  created() {
+    this.getProducts();
+    // this.$bus.$emit('message:push', '這裡是一段訊息', 'success');
+  }</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 10. bus.js
+import Vue from 'vue';
+
+Vue.prototype.$bus = new Vue();
+
+// Message
+// vm.$bus.$emit('message:push', message, status);
+// message(String): 訊息內容
+// status(String): Alert 的樣式</code></pre>
+
+
+
+<h3>產品列表的分頁邏輯</h3>
+
+
+
+<p>操作與講解</p>
+
+
+
+<ol>
+<li>這個章節要來介紹分頁，因為我們這邊取得資料的時候，這裡一次取得是 10 筆，但是我們的資料內容其實是超過 10 筆，我們把抓下來的 json 打開看一下，除了 products 之外，這裡還有一個 pagination，pagination 就是我們分頁的設定，這個分頁設計做得很好，後端直接傳來我們這裡不需要做很多的判斷，包含說有沒有下一頁、有沒有前一頁、目前頁面還有總共的頁數是多少，都已經先寫好了。</li>
+<li>現在我們來做分頁的效果。我們在 Products.vue 的頁面下面，我們再新增一個 pagination，它是一個物件。接下來我們在 getProducts() 之後，我們把這個 vm.pagination 把它存起來 response.data.pagination;，確定有沒有拼錯。存檔，我們現在就把 pagination 這個變數直接存進來，存進來之後我們該怎麼去使用它。</li>
+<li>我們到 Bootstrap 4 的網頁這裡搜尋 pagination，那麼它已經有提供一個完整的範例，我們使用下面這一組好了，我們直接把它完整的複製起來，然後回到我們的 Products.vue 的頁面，接下來我們到表格的下方，新增剛剛從 Bootstrap 複製過來的 pagination。這個 pagination 包含了往前一頁以及往下一頁，還有各個頁碼的設計，那麼現在各個頁碼有1、2、3頁，但是我們先留下第一頁就可以了。然後對應一下畫面，前一頁、下一頁以及當前的頁碼。</li>
+<li>那麼在這裡就會使用 v-for=”page in pagination.”，我們來看一下它有哪些參數可以使用，Console 然後 pagination 下面有一個 total_pages 它的總頁數 (v-for=”page in pagination.total_pages”)，然後整理一下頁面，然後使用 v-for 的時候後面一定要一個 :key=”page”，然後頁碼呈現直接使用 {{ page }}，儲存看一下。現在畫面上已經正確的呈現頁數有第1頁以及第2頁，但是我們還不知道當前的頁碼是多少，所以它裡面還有一個變數叫做 current_page，就是當前是在哪一頁，除此之外它還有有沒有上一頁以及下一頁，那我們在這裡也稍微處理一下。</li>
+<li>current_page 的部分我們就可以把它套用在 &lt;li&gt; 的部分，然後加上 :class 等於使用一個物件 ‘active’ 假設 pagination 的 current_page === page 的話，它就會顯示 active。現在它就會顯示我們正在第一頁，那麼前一頁以及下一頁也是差不多的概念，那麼我們會使用它變數裡面的 has_next 以及 has_pre 來做判斷，在這裡我們就補上 :class 等於，但是我們會使用 ‘disabled’ 這個 classname，假設 pagination 的 has_pre 是 false 的時候，它就會套上 disabled 這個 classname，那下一頁的部分會用相同的方式 has_next。接下來回到畫面上這個 has_pre 它現在就是呈現灰色，next 目前還是可以點的狀態，那我們現在點的時候都是沒有任何效果的。</li>
+<li>我們最後在補上切換頁的一個方法，切換頁我們先看一下這個&nbsp;<a rel="noreferrer noopener" href="https://github.com/hexschool/vue-course-api-wiki/wiki/%E7%AE%A1%E7%90%86%E6%8E%A7%E5%88%B6%E5%8F%B0-%5B%E9%9C%80%E9%A9%97%E8%AD%89%5D#%E5%8F%96%E5%BE%97%E8%A8%82%E5%96%AE%E5%88%97%E8%A1%A8" target="_blank">API 的文件</a>，文件的話在後面有寫到，假設如果你要切換頁的話在我們取得訂單列表後面在補上一個?page 等於你的頁碼，那這個是帶入參數的一個方法，那我們回到我們 Products.vue 的畫面上，接下來我們到 getProducts() 這個地方，我們現在把後面這段參數給補上 (?page=:page)，最後這個 page 我們用變數的方式叫做 page，那麼變數會從 getProducts() 的時候就把它傳進來 (getProducts(page)，不過我們先前已經在很多地方都已經寫 getProducts()，我們是不是要在其他地方也把數字都加上。這裡要介紹一個小方法，我們可以使用 ES6 的參數預設值來處理，現在這個 getProducts() 我們這裡的 page 我們可以給它一個預設值叫做 1，也就是說我們先前的部分我們可以不用做，它預設值就會帶第1頁進來。假設它沒有帶數值的話，它就會使用第1頁，那它如果有帶數值的話，它就會用後來傳入的數值來替代。接下來我們回到上方，剛剛 pagination 那個地方，我們試著把切換頁給加上來，在這裡補上 @click.prevent 等於 “getProducts()” 然後帶上頁數 page、然後存檔。我們來試試看能不能正確的換頁，這裡按第2頁、再按一次它就切換到第1頁。其他地方我們可以用相同的方式，把它貼過來、然後這裡就不是用 page，我們用 pagination.current_page 然後 -1 來切換頁面，那麼下一頁也是相同的概念，我們把這一行複製下來貼到下一頁(改成 +1 )、然後存檔，那我們來試一次看看。現在我們可以按這個數字切換頁，另外一種就是按左右的切換頁也可以來換頁，</li>
+<li>到這個地方分頁效果就已經完成了，這裡再出一個小作業，可以試著把 pagination 做成元件的方式來呈現，那這段就自己思考一下，我們怎麼把這個 pagination 修改成元件。</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// 2. Products.vue
+  data() {
+    return {
+      products: &#91;],
+      pagination: {},
+      tempProduct: {},
+      isNew: false,
+      isLoading: false,
+      status: {
+        fileUploading: false,
+      },
+    };
+  },</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 2. Products.vue
+    getProducts() {
+      const api = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/admin/products`;
+      const vm = this;
+      // console.log(process.env.APIPATH, process.env.CUSTOMPATH);
+      vm.isLoading = true;
+      this.$http.get(api).then((response) =&gt; {
+        // console.log(response.data);
+        vm.isLoading = false;
+        vm.products = response.data.products;
+        vm.pagination = response.data.pagination;
+      });
+    },</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 3~6. Products.vue
+&lt;template&gt;
+  &lt;div&gt;
+    &lt;loading :active.sync="isLoading"&gt;&lt;/loading&gt;
+    &lt;div class="text-right mt-4"&gt;
+      &lt;button class="btn btn-primary" @click="openModal(true)"&gt;建立新的產品&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;table class="table mt-4"&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th width="120"&gt;分類&lt;/th&gt;
+          &lt;th&gt;產品名稱&lt;/th&gt;
+          &lt;th width="120"&gt;原價&lt;/th&gt;
+          &lt;th width="120"&gt;售價&lt;/th&gt;
+          &lt;th width="100"&gt;是否啟用&lt;/th&gt;
+          &lt;th width="120"&gt;編輯&lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr v-for="(item) in products" :key="item.id"&gt;
+          &lt;td&gt;{{ item.category }}&lt;/td&gt;
+          &lt;td&gt;{{ item.title }}&lt;/td&gt;
+          &lt;td class="text-right"&gt;
+            {{ item.origin_price }}
+          &lt;/td&gt;
+          &lt;td class="text-right"&gt;
+            {{ item.price }}
+          &lt;/td&gt;
+          &lt;td&gt;
+            &lt;span v-if="item.is_enabled" class="text-success"&gt;啟用&lt;/span&gt;
+            &lt;span v-else&gt;未啟用&lt;/span&gt;
+          &lt;/td&gt;
+          &lt;td&gt;
+              &lt;button class="btn btn-outline-primary btn-sm" @click="openModal(false, item)"&gt;編輯&lt;/button&gt;
+              &lt;button class="btn btn-outline-danger btn-sm" @click="openDelProductModal(item)"&gt;刪除&lt;/button&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+    &lt;!-- Pagination --&gt;
+    &lt;nav aria-label="Page navigation example"&gt;
+      &lt;ul class="pagination"&gt;
+        &lt;li class="page-item" :class="{'disabled': !pagination.has_pre}"&gt;
+          &lt;a class="page-link" href="#" aria-label="Previous"
+            @click.prevent="getProducts(pagination.current_page - 1)"&gt;
+            &lt;span aria-hidden="true"&gt;&amp;laquo;&lt;/span&gt;
+          &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="page-item" v-for="page in pagination.total_pages" :key="page"
+          :class="{'active': pagination.current_page === page}"&gt;
+          &lt;a class="page-link" href="#" @click.prevent="getProducts(page)"&gt;{{ page }}&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="page-item" :class="{'disabled': !pagination.has_next}"&gt;
+          &lt;a class="page-link" href="#" aria-label="Next"
+            @click.prevent="getProducts(pagination.current_page + 1)"&gt;
+            &lt;span aria-hidden="true"&gt;&amp;raquo;&lt;/span&gt;
+          &lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+    &lt;!-- Modal --&gt;
+    &lt;div class="modal fade" id="productModal" tabindex="-1" role="dialog"
+      aria-labelledby="exampleModalLabel" aria-hidden="true"&gt;
+      &lt;div class="modal-dialog modal-lg" role="document"&gt;
+        &lt;div class="modal-content border-0"&gt;
+          &lt;div class="modal-header bg-dark text-white"&gt;
+            &lt;h5 class="modal-title" id="exampleModalLabel"&gt;
+              &lt;span&gt;新增產品&lt;/span&gt;
+            &lt;/h5&gt;
+            &lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;
+              &lt;span aria-hidden="true"&gt;&amp;times;&lt;/span&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
+          &lt;div class="modal-body"&gt;
+            &lt;div class="row"&gt;
+              &lt;div class="col-sm-4"&gt;
+                &lt;div class="form-group"&gt;
+                  &lt;label for="image"&gt;輸入圖片網址&lt;/label&gt;
+                  &lt;input type="text" class="form-control" id="image"
+                    v-model="tempProduct.imageUrl"
+                    placeholder="請輸入圖片連結"&gt;
+                &lt;/div&gt;
+                &lt;div class="form-group"&gt;
+                  &lt;label for="customFile"&gt;或 上傳圖片
+                    &lt;i class="fas fa-spinner fa-spin" v-if="status.fileUploading"&gt;&lt;/i&gt;
+                  &lt;/label&gt;
+                  &lt;input type="file" id="customFile" class="form-control"
+                    ref="files" @change="uploadFile"&gt;
+                &lt;/div&gt;
+                &lt;img img="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-0.3.5&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;s=828346ed697837ce808cae68d3ddc3cf&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80"
+                  class="img-fluid" :src="tempProduct.imageUrl" alt=""&gt;
+              &lt;/div&gt;
+              &lt;div class="col-sm-8"&gt;
+                &lt;div class="form-group"&gt;
+                  &lt;label for="title"&gt;標題&lt;/label&gt;
+                  &lt;input type="text" class="form-control" id="title"
+                    v-model="tempProduct.title"
+                    placeholder="請輸入標題"&gt;
+                &lt;/div&gt;
+
+                &lt;div class="form-row"&gt;
+                  &lt;div class="form-group col-md-6"&gt;
+                    &lt;label for="category"&gt;分類&lt;/label&gt;
+                    &lt;input type="text" class="form-control" id="category"
+                      v-model="tempProduct.category"
+                      placeholder="請輸入分類"&gt;
+                  &lt;/div&gt;
+                  &lt;div class="form-group col-md-6"&gt;
+                    &lt;label for="price"&gt;單位&lt;/label&gt;
+                    &lt;input type="unit" class="form-control" id="unit"
+                      v-model="tempProduct.unit"
+                      placeholder="請輸入單位"&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class="form-row"&gt;
+                  &lt;div class="form-group col-md-6"&gt;
+                  &lt;label for="origin_price"&gt;原價&lt;/label&gt;
+                    &lt;input type="number" class="form-control" id="origin_price"
+                      v-model="tempProduct.origin_price"
+                      placeholder="請輸入原價"&gt;
+                  &lt;/div&gt;
+                  &lt;div class="form-group col-md-6"&gt;
+                    &lt;label for="price"&gt;售價&lt;/label&gt;
+                    &lt;input type="number" class="form-control" id="price"
+                      v-model="tempProduct.price"
+                      placeholder="請輸入售價"&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;hr&gt;
+
+                &lt;div class="form-group"&gt;
+                  &lt;label for="description"&gt;產品描述&lt;/label&gt;
+                  &lt;textarea type="text" class="form-control" id="description"
+                    v-model="tempProduct.description"
+                    placeholder="請輸入產品描述"&gt;&lt;/textarea&gt;
+                &lt;/div&gt;
+                &lt;div class="form-group"&gt;
+                  &lt;label for="content"&gt;說明內容&lt;/label&gt;
+                  &lt;textarea type="text" class="form-control" id="content"
+                    v-model="tempProduct.content"
+                    placeholder="請輸入產品說明內容"&gt;&lt;/textarea&gt;
+                &lt;/div&gt;
+                &lt;div class="form-group"&gt;
+                  &lt;div class="form-check"&gt;
+                    &lt;input class="form-check-input" type="checkbox"
+                      v-model="tempProduct.is_enabled"
+                      :true-value="1"
+                      :false-value="0"
+                      id="is_enabled"&gt;
+                    &lt;label class="form-check-label" for="is_enabled"&gt;
+                      是否啟用
+                    &lt;/label&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="modal-footer"&gt;
+            &lt;button type="button" class="btn btn-outline-secondary" data-dismiss="modal"&gt;取消&lt;/button&gt;
+            &lt;button type="button" class="btn btn-primary" @click="updateProduct"&gt;確認&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="modal fade" id="delProductModal" tabindex="-1" role="dialog"
+  aria-labelledby="exampleModalLabel" aria-hidden="true"&gt;
+      &lt;div class="modal-dialog" role="document"&gt;
+        &lt;div class="modal-content border-0"&gt;
+          &lt;div class="modal-header bg-danger text-white"&gt;
+            &lt;h5 class="modal-title" id="exampleModalLabel"&gt;
+              &lt;span&gt;刪除產品&lt;/span&gt;
+            &lt;/h5&gt;
+            &lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;
+              &lt;span aria-hidden="true"&gt;&amp;times;&lt;/span&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
+          &lt;div class="modal-body"&gt;
+            是否刪除 &lt;strong class="text-danger"&gt;{{ tempProduct.title }}&lt;/strong&gt; 商品(刪除後將無法恢復)。
+          &lt;/div&gt;
+          &lt;div class="modal-footer"&gt;
+            &lt;button type="button" class="btn btn-outline-secondary" data-dismiss="modal"&gt;取消&lt;/button&gt;
+            &lt;button type="button" class="btn btn-danger" @click="delProduct"&gt;確認刪除&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import $ from 'jquery'
+
+// 匯出給其他元件使用
+export default {
+  data() {
+    return {
+      products: &#91;],
+      pagination: {},
+      tempProduct: {},
+      isNew: false,
+      isLoading: false,
+      status: {
+        fileUploading: false,
+      },
+    };
+  },
+  methods: {
+    getProducts(page = 1) {
+      const api = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/admin/products?page=${page}`;
+      const vm = this;
+      // console.log(process.env.APIPATH, process.env.CUSTOMPATH);
+      vm.isLoading = true;
+      this.$http.get(api).then((response) =&gt; {
+        // console.log(response.data);
+        vm.isLoading = false;
+        vm.products = response.data.products;
+        vm.pagination = response.data.pagination;
+      });
+    },
+    openModal(isNew, item) {
+      if (isNew) {
+        this.tempProduct = {};
+        this.isNew = true;
+      } else {
+        this.tempProduct = Object.assign({}, item);
+        this.isNew = false;
+      }
+      $('#productModal').modal('show');
+    },
+    updateProduct() {
+      let api = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/admin/product`;
+      let httpMethod = 'post';
+      const vm = this;
+      if (!vm.isNew) {
+        api = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/admin/product/${vm.tempProduct.id}`;
+        httpMethod = 'put';
+      }
+      console.log(process.env.APIPATH, process.env.CUSTOMPATH);
+      this.$http&#91;httpMethod](api, { data: vm.tempProduct }).then((response) =&gt; {
+        console.log(response.data);
+        // vm.products = response.data.products;
+        if (response.data.success) {
+          $('#productModal').modal('hide');
+          vm.getProducts();
+          console.log('新增失敗');
+        }
+      });
+    },
+    openDelProductModal(item) {
+      const vm = this;
+      $('#delProductModal').modal('show');
+      vm.tempProduct = Object.assign({}, item);
+    },
+    delProduct() {
+      const vm = this;
+      const url = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/admin/product/${vm.tempProduct.id}`;
+      this.$http.delete(url).then((response) =&gt; {
+        console.log(response, vm.tempProduct);
+        $('#delProductModal').modal('hide');
+        this.getProducts();
+      });
+    },
+    uploadFile() {
+      console.log(this);
+      const uploadedFile = this.$refs.files.files&#91;0];
+      const vm = this;
+      const formData = new FormData();
+      formData.append('file-to-upload', uploadedFile);
+      const url = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/admin/upload`;
+      vm.status.fileUploading = true;
+      this.$http.post(url, formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      }).then((response) =&gt; {
+        console.log(response.data);
+        vm.status.fileUploading = false;
+        if (response.data.success) {
+          // vm.tempProduct.imageUrl = response.data.imageUrl;
+          // console.log(vm.tempProduct);
+          vm.$set(vm.tempProduct, 'imageUrl', response.data.imageUrl);
+        } else {
+              this.$bus.$emit('message:push', response.data.message, 'danger');
+        }
+      });
+    },
+  },
+  created() {
+    this.getProducts();
+    // this.$bus.$emit('message:push', '這裡是一段訊息', 'success');
+  }
+};
+&lt;/script&gt;</code></pre>
+
+
+
+<h3>套用價格的 Filter&nbsp;技巧</h3>
+
+
+
+<p>操作與講解</p>
+
+
+
+<ol>
+<li>這個頁面其實製作的差不多了，剩這個價錢的部分我們還沒有補上千分號。那千分號的部分我們就使用 filter 來製作，那麼這一段會提供一個現成的 filter 讓我們可以直接使用，那我們這裡就新增一個新的檔案，接下來把提供的 filter 把它貼進去、然後存檔，我們把它存在 src 下、然後再新增一個資料夾叫做 filters 、然後檔案名稱叫做 currency.js，這個函式只是將傳進來的數值加上千分號以及前面的$而已。</li>
+<li>接下來我們要怎麼啟用這個千分號的 filter，如果我們要在全域的方式啟用它的話，一樣可以回到 main.js，把 filter 給注入進來，我們就可以把它寫在這裡 import currencyFilter from ‘./filters/currency’;，import 進來之後，我們就可以透過全域的 filter 方式來啟用它，Vue.filter()，前面可以輸入自訂的名稱 ‘currency’，後面輸入的是 import 的 filter 名稱，那把它貼進來，這樣應該就可以正常運作了。</li>
+<li>我們稍微排版一下，然後我們回到 Products.vue 的頁面，我們找到先前有使用金額的地方，這裡有個原價以及售價，那我們就可以把它加上 filter，currency、然後存檔。那畫面上就會將這些金額全部套上千分號，接下來我們做的畫面假設它需要使用千分號，都可以使用這個方式來套用，如果沒有問題就把千分號也把它補上。</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// 1. src/filters/currency.js
+export default function (num) {
+  const n = Number(num);
+  return `$${n.toFixed(0).replace(/./g, (c, i, a) =&gt; {
+    const currency = (i &amp;&amp; c !== '.' &amp;&amp; ((a.length - i) % 3 === 0) ? `, ${c}`.replace(/\s/g, '') : c);
+    return currency;
+  })}`;
+}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 2. main.js
+// 自行撰寫
+import currencyFilter from './filters/currency'
+
+Vue.filter('currency', currencyFilter)</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 3. Products.vue
+          &lt;td class="text-right"&gt;
+            {{ item.origin_price | currency }}
+          &lt;/td&gt;
+          &lt;td class="text-right"&gt;
+            {{ item.price | currency }}
+          &lt;/td&gt;</code></pre>
+
+
+
+<h3>中場休息說明，準備進入下半場囉</h3>
+
+
+
+<p>操作與講解</p>
+
+
+
+<ol>
+<li>到目前為止我們建立商品的頁面已經做得差不多了，但是如果我們看到建立 API 的頁面，建立商品只是其中的一小段，後面還有取得訂單以及優惠券，這些部分當然不會一個一個全部介紹完，因為許多行為跟建立商品其實差異都不大，我們來看一下範例的頁面，像是在訂單列表裡面，它同樣都是把資料列出來、並且做一些排序，優惠券也是差不多的概念，它可以編輯優惠券的內容，只不過它上面還增加了到期日，這兩個部分就交給大家自己來練習。</li>
+<li>那麼我們現在要做的是前台用戶使用的頁面，因為如果沒有用戶使用的頁面的話，我們就沒有辦法建立商品、新增商品到購物車以及付款等等，前台的購物頁面，那個內容也非常的多，到時候這個部分也是要給同學練習的，那麼也是做為最後的作業。</li>
+<li>我們來看一下前台購物頁面大概有哪些功能，在右上方這裡有一個購物車，這個是我們可以加入購物車的內容，接下來往下我們可以點選商品，點選商品之後它就會讀取然後進入商品的頁面，接下來還可以選購商品，現在我在好看的外套這個地方，我加入購物車，那麼上面這個地方好看的外套就會出現5件，我們剛剛在模擬的時候也是點了5件，那接下來在點下結帳去的話，就會到結帳的頁面，結帳的頁面也可以看到我們剛剛所選購的一些商品，接下來我們在下面這個地方也可以填寫一些欄位，然後並且做驗證然後按下確認付款，這個是完整的前台購物的頁面。</li>
+<li>但是我們在這個部分就不會直接拿這個做範例，在這裡會在管理後台的地方做個模擬訂單的一個功能，那麼模擬訂單它的功能其實差不多，如果點擊這個按鈕，它一樣會跳出商品的細節，然後可以選擇說我的商品要選擇多少份量，然後下面一樣有購物車的列表，然後也可以套入優惠碼、下方一樣可以填入一些欄位，然後送出訂單。所以這個地方我們就先把這個列表都列出來，那麼訂單列表以及優惠券就讓大家來練習，接下來我們要做的是模擬訂單的內容。</li>
+<li>接下來左邊選單的部分，我們可以打開 Sidebar.vue 這個檔案，那左邊這裡有一個小標題我們可以繼續拿來使用，叫做 SAVED REPORTS，那我們先搜尋一下那一段，我們只要保留 SAVED REPORTS 跟下面的一個&lt;ul&gt;跟&lt;li&gt;就可以了，我們可以先把其它的內容先把它刪除掉。現在上面這個地方留下一個標題以及一個選單的內容，所以我們就可以像這樣做，上面這個地方就是我們的管理員使用的，下面的就是模擬的功能。我們現在把這些選單內容給補上，接下來我們在複製這個&lt;h6&gt;以及&lt;ul&gt;產品列表，先把它複製一份到下面來，管理員的部分我們會叫做模擬功能、下面的產品列表就改成模擬訂單。我們回到頁面上面選單現在大概有這樣的調整，上方的這個管理員這個產品列表就必需要登入，下方的模擬訂單的功能就不需要登入，那我們就先做這樣的差異。</li>
+<li>接下來回到 Sidebar.vue 原始碼的地方，現在我們是使用 &lt;a&gt; 然後後面是使用 href 對應 # 這個連結，我們接下來這邊也要把它換成 &lt;router-link&gt;&lt;/router-link&gt; 然後 to 我們的 admin/products 的頁面，然後對應的是產品列表，這個部分在我們先前介紹 Vue Router 的時候都有介紹過了，那我們這裡就加入把它帶過，這個 &lt;router-link&gt;&lt;/router-link&gt; 缺少一些 classname，在把它補上。</li>
+<li>現在我們有加上管理員以及產品列表，那下方有模擬功能、模擬訂單。那產品列表在這個地方也可以增加一些圖示，我們在先前載入 font-awesome，在這個時候也可以把一些圖示給載進來，像我們在這裡可以使用一個 box-open 的一個圖示，那我們把 box-open 的圖示把它加到我們的頁面上面來，就一樣把它放在 &lt;router-link&gt;&lt;/router-link&gt; 裡面就可以，像這裡就有一個產品列表的圖示，那麼大家就先做到這個地方，訂單列表以及優惠券這個部分就讓大家自己處理。</li>
+<li>接下來會來介紹用戶端的訂單頁面該怎麼製作。</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// 5~7. Sidebar.vue
+&lt;template&gt;
+  &lt;nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse"&gt;
+    &lt;div class="sidebar-sticky pt-3"&gt;
+      &lt;h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted"&gt;
+        &lt;span&gt;管理員&lt;/span&gt;
+        &lt;a class="d-flex align-items-center text-muted" href="#" aria-label="Add a new report"&gt;
+          &lt;span data-feather="plus-circle"&gt;&lt;/span&gt;
+        &lt;/a&gt;
+      &lt;/h6&gt;
+      &lt;ul class="nav flex-column mb-2"&gt;
+        &lt;li class="nav-item"&gt;
+          &lt;router-link class="nav-link" to="/admin/products"&gt;
+            &lt;i class="fas fa-box-open"&gt;&lt;/i&gt;
+            產品列表
+          &lt;/router-link&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted"&gt;
+        &lt;span&gt;模擬功能&lt;/span&gt;
+        &lt;a class="d-flex align-items-center text-muted" href="#" aria-label="Add a new report"&gt;
+          &lt;span data-feather="plus-circle"&gt;&lt;/span&gt;
+        &lt;/a&gt;
+      &lt;/h6&gt;
+      &lt;ul class="nav flex-column mb-2"&gt;
+        &lt;li class="nav-item"&gt;
+          &lt;a class="nav-link" href="#"&gt;
+            &lt;span data-feather="file-text"&gt;&lt;/span&gt;
+            模擬訂單
+          &lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/nav&gt;
+&lt;/template&gt;</code></pre>
+	</div>
+<!-- .entry-content -->
+
+	<footer class="entry-footer">
+			</footer><!-- .entry-footer -->
+</article><!-- #post-676 -->
+
+	<nav class="navigation post-navigation" aria-label="文章">
+		<h2 class="screen-reader-text">文章導覽</h2>
+		<div class="nav-links">
+<div class="nav-previous"><a href="/wordpress_blog/vue-hexschool-2/" rel="prev"><span class="nav-subtitle">Previous:</span> <span class="nav-title">Vue 出一個電商網站 (2)</span></a></div>
+<div class="nav-next"><a href="/wordpress_blog/css-flexbox-tutorial/" rel="next"><span class="nav-subtitle">Next:</span> <span class="nav-title">CSS Flexbox Tutorial</span></a></div>
+</div>
+	</nav>
+	</main><!-- #main -->
+
+
+	</div></div>
+			
+			<footer id="colophon" class="site-footer">
+
+				
+				<div class="container-fluid">
+					<div class="site-info">
+						<div class="row">
+
+															
+								<div class="col-12 footer-copyright-elements footer-copyright-alignment-center">
+
+									<div class="botiga-credits">&copy; 2022 wordpress_blog. 
+Created by Gee Hsu. 
+<br>Proudly powered by <a rel="nofollow" href="https://athemes.com/theme/botiga/">Botiga</a>
+</div>
+<div class="social-profile">
+<a target="_blank" href="https://www.facebook.com/watergrass0402/"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></i></a><a target="_blank" href="https://github.com/GeeHsu"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></i></a>
+</div>
+								</div>
+														
+						</div>
+					</div>
+				</div>
+<!-- .site-info -->
+
+				
+			</footer><!-- #colophon -->
+
+			
+			<div class="back-to-top visibility-all position-right"><i class="ws-svg-icon"><svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 15l7-7 7 7" stroke-width="3" stroke-linejoin="round"></path></svg></i></div>
+</div>
+<!-- #page -->
+
+
+<script id="botiga-custom-js-extra">
+var botiga = {"ajaxurl":"\/wp-admin\/admin-ajax.php","i18n":{"botiga_sharebox_copy_link":"Copy link","botiga_sharebox_copy_link_copied":"Copied!"}};
+</script>
+<script src="/wordpress_blog/wp-content/themes/botiga/assets/js/custom.min.js?ver=1.1.2" id="botiga-custom-js"></script>
+
+</body>
+</html>

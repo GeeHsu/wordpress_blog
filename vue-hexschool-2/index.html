@@ -1,0 +1,3663 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<title>Vue 出一個電商網站 (2) &#8211; wordpress_blog</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="訂閱《wordpress_blog》&raquo; 資訊提供" href="/wordpress_blog/feed/">
+<link rel="alternate" type="application/rss+xml" title="訂閱《wordpress_blog》&raquo; 留言的資訊提供" href="/wordpress_blog/comments/feed/">
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.9.3"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style>img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="/wordpress_blog/wp-includes/css/dist/block-library/style.min.css?ver=5.9.3" media="all">
+<style id="global-styles-inline-css">body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--palette-1-color-0: #212121;--wp--preset--color--palette-1-color-1: #757575;--wp--preset--color--palette-1-color-2: #212121;--wp--preset--color--palette-1-color-3: #212121;--wp--preset--color--palette-1-color-4: #212121;--wp--preset--color--palette-1-color-5: #f5f5f5;--wp--preset--color--palette-1-color-6: #ffffff;--wp--preset--color--palette-1-color-7: #ffffff;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 14px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 18px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--normal: 16px;--wp--preset--font-size--larger: 24px;--wp--preset--font-size--extra-large: 32px;--wp--preset--font-size--huge: 48px;--wp--preset--font-size--gigantic: 64px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}</style>
+<link rel="stylesheet" id="botiga-style-css" href="/wordpress_blog/wp-content/themes/botiga/style.css?ver=1.1.2" media="all">
+<link rel="stylesheet" id="botiga-style-min-css" href="/wordpress_blog/wp-content/themes/botiga/assets/css/styles.min.css?ver=1.1.2" media="all">
+<link rel="stylesheet" id="botiga-custom-styles-css" href="/wordpress_blog/wp-content/uploads/botiga/custom-styles.css?ver=1648804469" media="all">
+<link rel="https://api.w.org/" href="/wordpress_blog/wp-json/">
+<link rel="alternate" type="application/json" href="/wordpress_blog/wp-json/wp/v2/posts/667">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/wordpress_blog/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wordpress_blog/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 5.9.3">
+<link rel="canonical" href="/wordpress_blog/vue-hexschool-2/">
+<link rel="shortlink" href="/wordpress_blog/?p=667">
+<link rel="alternate" type="application/json+oembed" href="/wordpress_blog/wp-json/oembed/1.0/embed?url=%2Fvue-hexschool-2%2F">
+<link rel="alternate" type="text/xml+oembed" href="/wordpress_blog/wp-json/oembed/1.0/embed?url=%2Fvue-hexschool-2%2F&#038;format=xml">
+<link rel="icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png" sizes="32x32">
+<link rel="icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png" sizes="192x192">
+<link rel="apple-touch-icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png">
+<meta name="msapplication-TileImage" content="/wp-content/uploads/2022/03/logo.png">
+	
+</head>
+
+<body class="post-template-default single single-post postid-667 single-format-standard wp-custom-logo wp-embed-responsive header-header_layout_1 blog-single-layout1">
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0.49803921568627"></fefuncr><fefuncg type="table" tablevalues="0 0.49803921568627"></fefuncg><fefuncb type="table" tablevalues="0 0.49803921568627"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.54901960784314 0.98823529411765"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.71764705882353 0.25490196078431"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 0.27843137254902"></fefuncg><fefuncb type="table" tablevalues="0.5921568627451 0.27843137254902"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0"></fefuncr><fefuncg type="table" tablevalues="0 0.64705882352941"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.78039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.94901960784314"></fefuncg><fefuncb type="table" tablevalues="0.35294117647059 0.47058823529412"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.65098039215686 0.40392156862745"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.44705882352941 0.4"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.098039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.66274509803922"></fefuncg><fefuncb type="table" tablevalues="0.84705882352941 0.41960784313725"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg>
+
+<div id="page" class="site">
+
+	<a class="skip-link screen-reader-text" href="#primary">Skip to content</a>
+
+	
+			<div class="top-bar visibility-desktop-only">
+				<div class="container-fluid">
+					<div class="top-bar-inner">
+						<div class="row valign">
+
+															<div class="col header-elements delimiter-none">
+									<div class="header-item top-bar-social"><div class="social-profile">
+<a target="_blank" href="https://www.facebook.com/watergrass0402/"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></i></a><a target="_blank" href="https://github.com/GeeHsu"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></i></a>
+</div></div>								</div>
+																						<div class="col header-elements delimiter-none">
+													
+			<nav class="header-item top-bar-secondary-navigation secondary-navigation">
+				<div class="menu-topbar-container"><ul id="secondary" class="menu">
+<li id="menu-item-143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143"><a href="/wordpress_blog/setup/">網站架設</a></li>
+<li id="menu-item-144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a href="/wordpress_blog/source/">資料來源</a></li>
+<li id="menu-item-262" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-262"><a href="/wordpress_blog/resource/">學習資源</a></li>
+</ul></div>			</nav>
+											</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			
+							
+				<header id="masthead" class="site-header header_layout_1">
+					<div class="container-fluid">
+						<div class="site-header-inner">
+							<div class="row valign">
+								<div class="col-md-5">
+										
+			<nav id="site-navigation" class="main-navigation">
+				<div class="menu-navbar-container"><ul id="primary-menu" class="menu">
+<li id="menu-item-109" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="/wordpress_blog/about/">關於</a></li>
+<li id="menu-item-110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-110">
+<a href="/wordpress_blog/learn/">學習</a><span tabindex="0" class="dropdown-symbol"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512.011 512.011"><path d="M505.755 123.592c-8.341-8.341-21.824-8.341-30.165 0L256.005 343.176 36.421 123.592c-8.341-8.341-21.824-8.341-30.165 0s-8.341 21.824 0 30.165l234.667 234.667a21.275 21.275 0 0015.083 6.251 21.275 21.275 0 0015.083-6.251l234.667-234.667c8.34-8.341 8.34-21.824-.001-30.165z"></path></svg></i></span>
+<ul class="sub-menu">
+	<li id="menu-item-140" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-140"><a href="/wordpress_blog/category/hexschool/">六角學院</a></li>
+	<li id="menu-item-141" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-141"><a href="/wordpress_blog/category/ninja/">The Net Ninja</a></li>
+	<li id="menu-item-483" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-483"><a href="/wordpress_blog/category/youtube/">Youtube</a></li>
+</ul>
+</li>
+<li id="menu-item-111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="/wordpress_blog/linestore/">LINE STORE</a></li>
+</ul></div>			</nav><!-- #site-navigation -->
+											</div>
+								<div class="col-md-2">
+												<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+											</div>
+								<div class="col-md-5 header-elements">
+																	</div>							
+							</div>
+						</div>
+					</div>
+								<div class="header-search-form">
+			<form role="search" method="get" class="search-form" action="/">
+	<label class="screen-reader-text" for="search-form-1">Search&hellip;</label>
+	<input type="search" id="search-form-1" class="search-field" value="" name="s" placeholder="Search &hellip;">
+	<button type="submit" class="search-submit" value="Search"><i class="ws-svg-icon"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 100 14.25 7.125 7.125 0 000-14.25zM2.25 10.875a8.625 8.625 0 1117.25 0 8.625 8.625 0 01-17.25 0z"></path><path fill-rule="evenodd" d="M15.913 15.914a.75.75 0 011.06 0l4.557 4.556a.75.75 0 01-1.06 1.06l-4.557-4.556a.75.75 0 010-1.06z"></path></svg></i></button>
+</form>
+			</div>
+			
+									</header>
+
+										<div class="search-overlay"></div>
+			
+			<div class="botiga-offcanvas-menu">
+				<div class="mobile-header-item">
+					<div class="row">
+						<div class="col">
+										<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+									</div>
+						<div class="col align-right">
+							<a class="mobile-menu-close" href="#"><i class="ws-svg-icon icon-cancel"><svg width="16" height="16" fill="none" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.219.781L.78 2.22 9.562 11l-8.78 8.781 1.437 1.438L11 12.437l8.781 8.782 1.438-1.438L12.437 11l8.782-8.781L19.78.78 11 9.562 2.219.783z"></path></svg></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="mobile-header-item">
+						
+			<nav id="site-navigation" class="main-navigation">
+				<div class="menu-navbar-container"><ul id="primary-menu" class="menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="/wordpress_blog/about/">關於</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-110">
+<a href="/wordpress_blog/learn/">學習</a><span tabindex="0" class="dropdown-symbol"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512.011 512.011"><path d="M505.755 123.592c-8.341-8.341-21.824-8.341-30.165 0L256.005 343.176 36.421 123.592c-8.341-8.341-21.824-8.341-30.165 0s-8.341 21.824 0 30.165l234.667 234.667a21.275 21.275 0 0015.083 6.251 21.275 21.275 0 0015.083-6.251l234.667-234.667c8.34-8.341 8.34-21.824-.001-30.165z"></path></svg></i></span>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-140"><a href="/wordpress_blog/category/hexschool/">六角學院</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-141"><a href="/wordpress_blog/category/ninja/">The Net Ninja</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-483"><a href="/wordpress_blog/category/youtube/">Youtube</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="/wordpress_blog/linestore/">LINE STORE</a></li>
+</ul></div>			</nav><!-- #site-navigation -->
+							</div>
+				<div class="mobile-header-item">
+									<a target="&quot;_blank&quot;" class="button header-item" href="https://www.facebook.com/watergrass0402/">聯絡我</a>
+							</div>			
+			</div>
+			
+							<header id="masthead-mobile" class="site-header mobile-header">
+					<div class="container-fluid">
+						<div class="row valign flex-nowrap">
+							<div class="col-sm-6 col-md-4 col-grow-mobile">
+											<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+										</div>
+							<div class="col-auto col-sm-6 col-md-8 col-grow-mobile header-elements valign align-right">
+																	
+															<a href="#" class="menu-toggle">
+				<i class="ws-svg-icon"><svg width="16" height="11" viewbox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="16" height="1"></rect><rect y="5" width="16" height="1"></rect><rect y="10" width="16" height="1"></rect></svg></i>
+			</a>
+																		</div>						
+						</div>
+					</div>
+								<div class="header-search-form">
+			<form role="search" method="get" class="search-form" action="/">
+	<label class="screen-reader-text" for="search-form-2">Search&hellip;</label>
+	<input type="search" id="search-form-2" class="search-field" value="" name="s" placeholder="Search &hellip;">
+	<button type="submit" class="search-submit" value="Search"><i class="ws-svg-icon"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 100 14.25 7.125 7.125 0 000-14.25zM2.25 10.875a8.625 8.625 0 1117.25 0 8.625 8.625 0 01-17.25 0z"></path><path fill-rule="evenodd" d="M15.913 15.914a.75.75 0 011.06 0l4.557 4.556a.75.75 0 01-1.06 1.06l-4.557-4.556a.75.75 0 010-1.06z"></path></svg></i></button>
+</form>
+			</div>
+			
+									</header>
+						<div class="search-overlay"></div>
+			<div class="header-image"><img src="/wordpress_blog/wp-content/uploads/2022/03/seashore.jpg" width="1920" height="500" alt=""></div>
+<div class="container content-wrapper"><div class="row main-row">			
+	<main id="primary" class="site-main no-sidebar">
+
+		
+
+<article id="post-667" class="post-667 post type-post status-publish format-standard hentry category-hexschool">
+	
+		
+	<header class="entry-header">
+		
+		
+		<h1 class="entry-title">Vue 出一個電商網站 (2)</h1>			<div class="entry-meta entry-meta-below delimiter-none">
+<span class="posted-on"><a href="/wordpress_blog/vue-hexschool-2/" rel="bookmark"><time class="entry-date published" datetime="2021-03-24T11:29:00+08:00">2021 年 3 月 24 日</time><time class="updated" datetime="2022-04-06T11:31:00+08:00">2022 年 4 月 6 日</time></a></span><span class="byline"> <span class="author vcard"><a class="url fn n" href="/wordpress_blog/author/gee-hsu/">gee.hsu</a></span></span>
+</div>			</header><!-- .entry-header -->
+
+	
+	<div class="entry-content">
+		
+<h2>第６節：Vue.js 元件</h2>
+
+
+
+<h3>元件概念介紹</h3>
+
+
+
+<h5>VUE 元件概念</h5>
+
+
+
+<figure class="wp-block-image size-full"><img width="1024" height="515" src="/wordpress_blog/wp-content/uploads/2022/04/vue元件概念.png" alt="" class="wp-image-669"><figcaption>Vue 元件概念</figcaption></figure>
+
+
+
+<h5>元件資料獨立 與 傳遞</h5>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" width="1024" height="511" src="/wordpress_blog/wp-content/uploads/2022/04/元件資料獨立與傳遞.png" alt="" class="wp-image-670"><figcaption>元件資料獨立 與 傳遞</figcaption></figure>
+
+
+
+<h5>SPA 也是透過元件來製作的喔</h5>
+
+
+
+<p>由前端所模擬的路由。</p>
+
+
+
+<pre class="wp-block-code"><code>https:&#47;&#47;www.hexschool.com/#/user
+// index - User Page...</code></pre>
+
+
+
+<h3>使用 x-template 建立元件</h3>
+
+
+
+<h5>基礎元件練習</h5>
+
+
+
+<ol>
+<li>使用 x-template 建立表格元件</li>
+<li>使用 is 掛載 template</li>
+<li>使用 prop 傳遞資料</li>
+<li>說明局部註冊及全域註冊</li>
+</ol>
+
+
+
+<p>components/basic.html</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div id="app"&gt;
+  &lt;table class="table"&gt;
+    &lt;thead&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;!-- &lt;row-component v-for="(item, key) in data" :person="item" :key="key"&gt;&lt;/row-component&gt; --&gt;
+      &lt;tr is="row-component" v-for="(item, key) in data" :person="item" :key="key"&gt;&lt;/tr&gt;
+      &lt;!-- &lt;tr v-for="(item, key) in data" :item="item" :key="key"&gt;
+        &lt;td&gt;{{ item.name }}&lt;/td&gt;
+        &lt;td&gt;{{ item.cash }}&lt;/td&gt;
+        &lt;td&gt;{{ item.icash }}&lt;/td&gt;
+      &lt;/tr&gt; --&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+
+&lt;script type="text/x-template" id="rowComponentTemplate"&gt;
+  &lt;tr&gt;
+    &lt;td&gt;{{ person.name }}&lt;/td&gt;
+    &lt;td&gt;{{ person.cash }}&lt;/td&gt;
+    &lt;td&gt;{{ person.icash }}&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/script&gt;
+
+&lt;script&gt;
+// 全域註冊
+// Vue.component('row-component', {
+//   props: &#91;'person'],
+//   template: '#rowComponentTemplate'
+// })
+
+// 局部註冊
+var child = {
+  props: &#91;'person'],
+  template: '#rowComponentTemplate'
+}
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    data: &#91;
+      {
+        name: '小明',
+        cash: 100,
+        icash: 500,
+      },
+      {
+        name: '杰倫',
+        cash: 10000,
+        icash: 5000,
+      },
+      {
+        name: '漂亮阿姨',
+        cash: 500,
+        icash: 500,
+      },
+      {
+        name: '老媽',
+        cash: 10000,
+        icash: 100,
+      },
+    ]
+  },
+  components: {
+    "row-component": child
+  }
+});
+&lt;/script&gt;</code></pre>
+
+
+
+<h3>使用 function return 建構資料格式</h3>
+
+
+
+<h5>元件必須使用 function return</h5>
+
+
+
+<ol><li>修正計數器所產生的錯誤</li></ol>
+
+
+
+<p>components/function_return.html</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div id="app"&gt;
+  &lt;counter-component&gt;&lt;/counter-component&gt;
+  &lt;counter-component&gt;&lt;/counter-component&gt;
+  &lt;counter-component&gt;&lt;/counter-component&gt;
+&lt;/div&gt;
+
+&lt;script type="text/x-template" id="counter-component"&gt;
+&lt;div&gt;
+  你已經點擊 &lt;button class="btn btn-outline-secondary btn-sm" @click="counter += 1"&gt;{{ counter }}&lt;/button&gt; 下。
+&lt;/div&gt;
+&lt;/script&gt;
+
+&lt;script&gt;
+Vue.component('counter-component', {
+  data: function(){
+    return {
+    counter: 0
+    }
+  },
+  template: '#counter-component'
+})
+
+var app = new Vue({
+  el: '#app',
+});
+&lt;/script&gt;</code></pre>
+
+
+
+<h3>props 基本觀念</h3>
+
+
+
+<h5>由外到內的資料傳遞</h5>
+
+
+
+<p>components/prop_basic.html</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div id="app"&gt;
+  &lt;h2&gt;靜態傳遞&lt;/h2&gt;
+  &lt;photo img-url="https://images.unsplash.com/photo-1522204538344-922f76ecc041?ixlib=rb-0.3.5&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;s=50e38600a12d623a878983fc5524423f&amp;auto=format&amp;fit=crop&amp;w=1351&amp;q=80"&gt;&lt;/photo&gt;
+  &lt;h2&gt;動態傳遞&lt;/h2&gt;
+  &lt;photo :img-url="url"&gt;&lt;/photo&gt;
+&lt;/div&gt;
+
+&lt;script type="text/x-template" id="photo"&gt;
+&lt;div&gt;
+  &lt;img :src="imgUrl" class="img-fluid" alt="" /&gt;
+  &lt;p&gt;風景照&lt;/p&gt;
+&lt;/div&gt;
+&lt;/script&gt;
+
+&lt;script&gt;
+Vue.component('photo', {
+  // 同學請依據課程內容，自行填寫 Props 的寫法
+  props: &#91;'imgUrl'],
+  template: '#photo'
+})
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    url: 'https://images.unsplash.com/photo-1522204538344-922f76ecc041?ixlib=rb-0.3.5&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;s=50e38600a12d623a878983fc5524423f&amp;auto=format&amp;fit=crop&amp;w=1351&amp;q=80'
+  }
+});
+&lt;/script&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// props: &#91;'imgUrl'] 是用小駝峰的寫法，但是轉到HTML上的時候，這樣是不符合規範的，必須在遇到大寫的時候改成小寫，&lt;photo img-url="網址"&gt;&lt;/photo&gt;，這段資料就會透過props把它傳進來。</code></pre>
+
+
+
+<p><strong>props 屬性非常重要。</strong></p>
+
+
+
+<h3>props 使用上的注意事項</h3>
+
+
+
+<h5>Props 注意事項</h5>
+
+
+
+<ol>
+<li>單向數據流</li>
+<li>物件傳參考特性及尚未宣告的變數</li>
+<li>維持狀態與生命週期</li>
+</ol>
+
+
+
+<p>處理 props 的時候盡量維持單向數據流的觀念。</p>
+
+
+
+<p>如果資料匯入有時間差，就可以用 v-if 讓元件的產生時間往後移，讓他與資料完成一起同步繪製。</p>
+
+
+
+<p>JavaScript 的一個特性：物件在傳遞的時候是傳參考</p>
+
+
+
+<pre class="wp-block-code"><code>// 用 Google Console 解釋物件傳參考特性
+&gt; var a = { user: '小明' }
+&lt; undefined
+&gt; var b = a;
+&lt; undefined
+&gt; b.user = "小強";
+&lt; "小強"
+&gt; console.log(a.user);
+  小強
+&lt; undefined
+&gt;</code></pre>
+
+
+
+<p>components/prop_adv.html</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div id="app"&gt;
+  &lt;h2&gt;單向數據流&lt;/h2&gt;
+  &lt;photo :img-url="url"&gt;&lt;/photo&gt;
+  &lt;p&gt;修正單向數據流所造成的錯誤&lt;/p&gt;
+
+  &lt;h2 class="mt-3"&gt;物件傳參考特性 及 尚未宣告的變數&lt;/h2&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-sm-4"&gt;
+      &lt;card :user-data="user" v-if="user.phone"&gt;&lt;/card&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;h2 class="mt-3"&gt;維持狀態與生命週期&lt;/h2&gt;
+  &lt;div class="form-check"&gt;
+    &lt;input type="checkbox" class="form-check-input" id="isShow" v-model="isShow"&gt;
+    &lt;label class="form-check-label" for="isShow"&gt;Check me out&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-sm-4"&gt;
+      &lt;keep-alive&gt;
+        &lt;keep-card  v-if="isShow"&gt;
+        &lt;/keep-card&gt;
+      &lt;/keep-alive&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script type="text/x-template" id="photo"&gt;
+&lt;div&gt;
+  &lt;img :src="imgUrl" class="img-fluid" alt="" /&gt;
+  &lt;input type="text" class="form-control" v-model="newUrl"&gt;
+&lt;/div&gt;
+&lt;/script&gt;
+
+
+&lt;script type="text/x-template" id="card"&gt;
+&lt;div class="card"&gt;
+  &lt;img class="card-img-top" :src="user.picture.large" v-if="user.picture" alt="Card image cap"&gt;
+  &lt;div class="card-body"&gt;
+    &lt;h5 class="card-title" v-if="user.name"&gt;{{ user.name.first }} {{ user.name.last }}&lt;/h5&gt;
+    &lt;p class="card-text"&gt;{{ user.email }}&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="card-footer"&gt;
+    &lt;input type="email" class="form-control" v-model="user.email"&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/script&gt;
+
+&lt;script&gt;
+Vue.component('photo', {
+  props: &#91;'imgUrl'],
+  template: '#photo',
+  data: function() {
+    return {
+      newUrl: this.imgUrl
+    }
+  }
+})
+
+Vue.component('card', {
+  props: &#91;'userData'],
+  template: '#card',
+  data: function () {
+    return {
+      user: this.userData
+    }
+  }
+});
+
+Vue.component('keepCard', {
+  template: '#card',
+  data: function() {
+    return {
+      user: {}
+    }
+  },
+  created: function() {
+    var vm = this;
+    $.ajax({
+      url: 'https://randomuser.me/api/',
+      dataType: 'json',
+      success: function(data) {
+        vm.user = data.results&#91;0];
+      }
+    });
+  }
+});
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    user: {},
+    url: 'https://images.unsplash.com/photo-1522204538344-922f76ecc041?ixlib=rb-0.3.5&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;s=50e38600a12d623a878983fc5524423f&amp;auto=format&amp;fit=crop&amp;w=1351&amp;q=80',
+    isShow: true 
+  },
+  created: function() {
+    var vm = this;
+    $.ajax({
+      url: 'https://randomuser.me/api/',
+      dataType: 'json',
+      success: function(data) {
+        vm.user = data.results&#91;0];
+      }
+    });
+  }
+});
+&lt;/script&gt;</code></pre>
+
+
+
+<h3>props 型別及預設值</h3>
+
+
+
+<p>這個型別的定義有助於開發的時候就找到錯誤。</p>
+
+
+
+<h5>靜態與動態傳入數值差異</h5>
+
+
+
+<ul>
+<li>靜態：string</li>
+<li>動態：number</li>
+</ul>
+
+
+
+<p>components/prop_type.html</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div id="app"&gt;
+  &lt;h2&gt;Props 的型別&lt;/h2&gt;
+  &lt;prop-type&gt;&lt;/prop-type&gt;
+
+  &lt;h2 class="mt-3"&gt;靜態與動態傳入數值差異&lt;/h2&gt;
+  &lt;prop-type :cash="300"&gt;&lt;/prop-type&gt;
+&lt;/div&gt;
+
+&lt;script type="text/x-template" id="propType"&gt;
+&lt;div&gt;
+  &lt;input type="number" class="form-control" v-model="newCash"&gt;
+  {{ typeof(cash)}}
+&lt;/div&gt;
+&lt;/script&gt;
+
+&lt;script&gt;
+Vue.component('prop-type', {
+  // props: &#91;'cash'],
+  props: {
+    cash: {
+      type: Number,
+      default: 300
+    }
+  },
+
+  // 解答：
+  // props: {
+  //   cash: {
+  //     type: Number,
+  //     default: 100
+  //   }
+  // },
+  template: '#propType',
+  data: function() {
+    return {
+      newCash: this.cash
+    }
+  }
+});
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    cash: 300
+  }
+});
+&lt;/script&gt;</code></pre>
+
+
+
+<h3>emit 向外層傳遞事件</h3>
+
+
+
+<p>components/emit.html</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div id="app"&gt;
+  &lt;h2&gt;透過 emit 向外傳遞資訊&lt;/h2&gt;
+  我透過元件儲值了 {{ cash }} 元
+  &lt;button class="btn btn-primary" v-on:click="incrementTotal"&gt;按我&lt;/button&gt;
+  &lt;button-counter v-on:increment="incrementTotal"&gt;&lt;/button-counter&gt;
+  &lt;hr&gt;
+  &lt;button-counter&gt;&lt;/button-counter&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+Vue.component('buttonCounter', {
+  template: `&lt;div&gt;
+    &lt;button @click="incrementCounter" class="btn btn-outline-primary"&gt;增加 {{ counter }} 元&lt;/button&gt;
+    &lt;input type="number" class="form-control mt-2" v-model="counter"&gt;
+  &lt;/div&gt;`,
+  data: function() {
+    return {
+      counter: 1
+    }
+  },
+  methods: {
+    incrementCounter: function() {
+      this.$emit('increment', Number(this.counter))
+    }
+  }
+});
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    cash: 300
+  },
+  methods: {
+    incrementTotal: function(newNumber) {
+      this.cash = this.cash + newNumber;
+    }
+  }
+});
+&lt;/script&gt;</code></pre>
+
+
+
+<p>觸發事件名稱可以自訂。</p>
+
+
+
+<p>emit 可以用來觸發實體上的事件。</p>
+
+
+
+<p>此章節比較複雜，建議自行重頭寫一次，比較容易了解這段的邏輯。</p>
+
+
+
+<h3>元件插槽</h3>
+
+
+
+<h5>Slot 插槽替換</h5>
+
+
+
+<ul>
+<li>沒有插槽可替換的狀態</li>
+<li>單一個插槽的元件</li>
+<li>具名插槽的元件</li>
+</ul>
+
+
+
+<p>components/slot.html</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div id="app"&gt;
+  &lt;h2&gt;沒有插槽可替換的狀態&lt;/h2&gt;
+  &lt;no-slot-component&gt;
+    &lt;p&gt;這是一段另外插入的內容&lt;/p&gt;
+  &lt;/no-slot-component&gt;
+
+  &lt;h2&gt;Slot 基礎範例&lt;/h2&gt;
+  &lt;single-slot-component&gt;
+  &lt;/single-slot-component&gt;
+  &lt;single-slot-component&gt;
+    &lt;p&gt;使用這段取代原本的 Slot。&lt;/p&gt;
+  &lt;/single-slot-component&gt;
+
+  &lt;h2&gt;具名插槽&lt;/h2&gt;
+  &lt;named-slot-component&gt;
+  &lt;/named-slot-component&gt;
+
+  &lt;named-slot-component&gt;
+    &lt;header slot="header"&gt;替換的 Header&lt;/header&gt;
+    &lt;template&gt;替換的 Footer&lt;/template&gt;
+    &lt;template slot="btn"&gt;按鈕內容&lt;/template&gt;
+    &lt;p&gt;其餘的內容&lt;/p&gt;
+  &lt;/named-slot-component&gt;
+&lt;/div&gt;
+
+&lt;script type="text/x-template" id="noSlotComponent"&gt;
+&lt;div class="alert alert-warning"&gt;
+  &lt;h6&gt;我是一個元件&lt;/h6&gt;
+  &lt;p&gt;
+    這沒有插槽。
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;/script&gt;
+
+&lt;script type="text/x-template" id="singleSlotComponent"&gt;
+&lt;div class="alert alert-warning"&gt;
+  &lt;h6&gt;我是一個元件&lt;/h6&gt;
+  &lt;slot&gt;
+    如果沒有內容，則會顯示此段落。
+  &lt;/slot&gt;
+&lt;/div&gt;
+&lt;/script&gt;
+
+&lt;script type="text/x-template" id="namedSlotComponent"&gt;
+&lt;div class="card my-3"&gt;
+  &lt;div class="card-header"&gt;
+    &lt;slot name="header"&gt;這段是預設的文字&lt;/slot&gt;
+  &lt;/div&gt;
+  &lt;div class="card-body"&gt;
+    &lt;slot&gt;
+      &lt;h5 class="card-title"&gt;Special title treatment&lt;/h5&gt;
+      &lt;p class="card-text"&gt;With supporting text below as a natural lead-in to additional content.&lt;/p&gt;
+    &lt;/slot&gt;
+    &lt;a href="#" class="btn btn-primary"&gt;
+      &lt;slot name="btn"&gt;spanGo somewhere&lt;/slot&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class="card-footer"&gt;
+    &lt;div&gt;這是預設的 Footer&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/script&gt;
+
+&lt;script&gt;
+Vue.component('no-slot-component', {
+  template: '#noSlotComponent',
+});
+
+Vue.component('single-slot-component', {
+  template: '#singleSlotComponent',
+});
+
+Vue.component('named-slot-component', {
+  template: '#namedSlotComponent',
+});
+
+var app = new Vue({
+  el: '#app',
+  data: {}
+});
+&lt;/script&gt;</code></pre>
+
+
+
+<h3>使用 is 動態切換元件</h3>
+
+
+
+<p>components/is.html</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div id="app"&gt;
+  &lt;h2&gt;使用 is 顯示單一組件&lt;/h2&gt;
+  &lt;primary-component :data="item"&gt;&lt;/primary-component&gt;
+  &lt;div is="primary-component" :data="item"&gt;&lt;/div&gt;
+
+  &lt;h2 class="mt-3"&gt;使用 is 動態切換組件&lt;/h2&gt;
+  &lt;ul class="nav nav-pills"&gt;
+    &lt;li class="nav-item"&gt;
+      &lt;a class="nav-link" :class="{'active': current == 'primary-component'}" href="#" @click.prevent="current = 'primary-component'"&gt;藍綠色元件&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="nav-item"&gt;
+      &lt;a class="nav-link" :class="{'active': current == 'danger-component'}" href="#" @click.prevent="current = 'danger-component'"&gt;紅色元件&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;div class="mt-3"&gt;
+    &lt;!-- &lt;primary-component :data="item" v-if="current === 'primary-component'"&gt;&lt;/primary-component&gt;
+    &lt;danger-component :data="item" v-if="current === 'danger-component'"&gt;&lt;/danger-component&gt; --&gt;
+    &lt;div :is="current" :data="item"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script type="text/x-template" id="primaryComponent"&gt;
+&lt;div class="card text-white bg-primary mb-3" style="max-width: 18rem;"&gt;
+  &lt;div class="card-header"&gt;{{ data.header }}&lt;/div&gt;
+  &lt;div class="card-body"&gt;
+    &lt;h5 class="card-title"&gt;{{ data.title }}&lt;/h5&gt;
+    &lt;p class="card-text"&gt;{{ data.text }}&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/script&gt;
+&lt;script type="text/x-template" id="dangerComponent"&gt;
+&lt;div class="card text-white bg-danger mb-3" style="max-width: 18rem;"&gt;
+  &lt;div class="card-header"&gt;{{ data.header }}&lt;/div&gt;
+  &lt;div class="card-body"&gt;
+    &lt;h5 class="card-title"&gt;{{ data.title }}&lt;/h5&gt;
+    &lt;p class="card-text"&gt;{{ data.text }}&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/script&gt;
+
+&lt;script&gt;
+Vue.component('primary-component', {
+  props: &#91;'data'],
+  template: '#primaryComponent',
+});
+Vue.component('danger-component', {
+  props: &#91;'data'],
+  template: '#dangerComponent',
+});
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    item: {
+      header: '這裡是 header',
+      title: '這裡是 title',
+      text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim perferendis illo reprehenderit ex natus earum explicabo modi voluptas cupiditate aperiam, quasi quisquam mollitia velit ut odio vitae atque incidunt minus?'
+    },
+    current: 'primary-component'
+  }
+});
+&lt;/script&gt;</code></pre>
+
+
+
+<h3>元件 章節作業說明</h3>
+
+
+
+<h5>作業練習：元件變換</h5>
+
+
+
+<h5>模板練習作業：Ajax 資料內容呈現</h5>
+
+
+
+<p>本作業一定要用到元件。</p>
+
+
+
+<h5>提示：</h5>
+
+
+
+<ol>
+<li>將資料內容透過 “元件” 呈現</li>
+<li>製作城市過濾選項</li>
+<li>將內層資料透過 emit 傳遞到外層 (作為另一個關注城市的呈現)</li>
+<li>依據不同汙染呈現不同色彩</li>
+<li>加分題：透過 localStorage 儲存上次關注的城市</li>
+</ol>
+
+
+
+<p>元件作業程式碼參考：<a rel="noreferrer noopener" href="https://codepen.io/alysachan/pen/vYXVBVX?editors=0010" target="_blank">Codepen – Alysa Chan</a>、<a href="https://codepen.io/jasmjazz/pen/RwGxJbe" target="_blank" rel="noreferrer noopener">Codepen – jasmjazz</a><br>元件作業筆記參考：<a rel="noreferrer noopener" href="https://hackmd.io/@cRuVI2UfSzOb4NzLg9sJ7g/SkjKXjFCP" target="_blank">各地空氣質素監察</a></p>
+
+
+
+<p>components/homework_component.html</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div id="app" class="container-fluid"&gt;
+  &lt;select name="" id="" class="form-control mb-3" v-model="filter"&gt;
+    &lt;option value="" disabled&gt;--- 請選擇城市 ---&lt;/option&gt;
+    &lt;option v-for="item in countyList" :value="item"&gt;{{ item }}&lt;/option&gt;
+  &lt;/select&gt;
+  &lt;h4&gt;關注城市&lt;/h4&gt;
+  &lt;div class="row"&gt;
+    &lt;card-component
+    v-for="(item, key) in starCounty"
+    :star="starList"
+    :place="item"
+    :key="item.SiteId"
+    @change-icon="clickStar"&gt;
+    &lt;/card-component&gt;
+  &lt;/div&gt;
+  &lt;hr&gt;
+  &lt;h4&gt;所有測站&lt;/h4&gt;
+  &lt;div class="row"&gt;
+    &lt;card-component
+    v-for="(item, key) in filterCounty"
+    :star="starList"
+    :place="item"
+    :key="item.SiteId"
+    @change-icon="clickStar"&gt;
+    &lt;/card-component&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script type="text/x-template" id="cardComponentTemplate"&gt;
+  &lt;div class="col-md-4 mt-3"&gt;
+    &lt;div class="card"&gt;
+      &lt;div class="card-header"&gt;
+        {{ place.County }} - {{ place.SiteName }}
+        &lt;a href="#" class="float-right" @click.prevent="clickIcon"&gt;
+          &lt;i :class="iconStyle"&gt;&lt;/i&gt;
+        &lt;/a&gt;
+      &lt;/div&gt;
+      &lt;div class="card-body" :class="aqiColor"&gt;
+        &lt;ul class="list-unstyled"&gt;
+          &lt;li&gt;AQI 指數：{{ place.AQI }}&lt;/li&gt;
+          &lt;li&gt;PM2.5：{{ place&#91;'PM2.5'] }}&lt;/li&gt;
+          &lt;li&gt;說明：{{ place.Status }}&lt;/li&gt;
+        &lt;/ul&gt;
+        {{ place.PublishTime }}
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/script&gt;
+
+&lt;script&gt;
+Vue.component('card-component', {
+  props: &#91;'place', 'star'],
+  template: '#cardComponentTemplate',
+  methods: {
+    clickIcon: function() {
+      this.$emit('change-icon', this.place.SiteName);
+    }
+  },
+  computed: {
+    aqiColor() {
+      switch(this.place.Status){
+        case '良好':
+          return 'status-aqi1';
+          break;
+        case '普通':
+          return 'status-aqi2';
+          break;
+        case '對敏感族群不健康':
+          return 'status-aqi3';
+          break;
+        case '對所有族群不健康':
+          return 'status-aqi4';
+          break;
+        case '非常不健康':
+          return 'status-aqi5';
+          break;
+        case '危害':
+          return 'status-aqi6';
+          break;
+      }
+    },
+    iconStyle() {
+      return (this.star.indexOf(this.place.SiteName) === -1) ? 'far fa-star' : 'fas fa-star';
+    }
+  }
+});
+// API 來源
+// https://opendata.epa.gov.tw/Data/Contents/AQI/
+// http://opendata2.epa.gov.tw/AQI.json
+// https://opendata.epa.gov.tw/api/v1/AQI?%24skip=0&amp;%24top=1000&amp;%24format=json
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    aqiData: &#91;],
+    filter: '',
+    starList: JSON.parse(localStorage.getItem('starList')) || &#91;]
+  },
+  // 請在此撰寫 JavaScript
+  methods: {
+    clickStar: function(item) {
+      // 判斷是否有重複的site name，如沒有就加入，如有就刪除該筆城市資料
+      if(this.starList.indexOf(item) === -1) {
+        this.starList.push(item);
+      } else {
+        this.starList.splice(this.starList.indexOf(item, 1));
+      }
+      localStorage.setItem('starList', JSON.stringify(this.starList));
+    }
+  },
+  computed: {
+    countyList() {
+      let county = this.aqiData.map(item =&gt; item.County);
+      // Set 物件只會容許儲存單一值
+      // 用展開運算子，把Set物件轉為陣列
+      // return new Set(&#91;...county]);
+      return &#91;...new Set(county)]; // 過濾重複的county
+    },
+    filterCounty() {
+      let vm = this;
+      // 剛載入畫面後，預設顯示所有資料
+      if(this.filter === '') {
+        // 不顯示已被加進關注城市的城市
+        return this.aqiData.filter(item =&gt; vm.starList.indexOf(item.SiteName) === -1);
+        // 案filter的地區名稱去撈資料
+      } else {
+        let filterList = this.aqiData.filter(item =&gt; item.County === vm.filter);
+        // 不顯示已被加進關注城市的城市
+        return filterList.filter(item =&gt; vm.starList.indexOf(item.SiteName) === -1);
+      }
+    },
+    starCounty() {
+      let vm = this;
+      // 如果該筆資料的SiteName是存在starList裡，就回傳該筆資料
+      return vm.aqiData.filter(item =&gt; vm.starList.indexOf(item.SiteName) !== -1);
+    }
+  },
+  mounted: function() {
+      const vm = this;
+      const api = 'https://opendata.epa.gov.tw/api/v1/AQI?%24skip=0&amp;%24top=1000&amp;%24format=json';
+
+      // 使用 jQuery ajax
+      $.get(api).then(function(response) {
+        vm.aqiData = response;
+        console.log(response);
+      }).catch(function(error) {
+        // 請求失敗
+        alert("請求失敗");
+        console.log(error);
+      });
+  }
+});
+&lt;/script&gt;
+&lt;!-- 
+狀態對應表
+'status-aqi1' '良好',
+'status-aqi2' '普通',
+'status-aqi3' '對敏感族群不健康',
+'status-aqi4' '對所有族群不健康',
+'status-aqi5' '非常不健康',
+'status-aqi6' '危害'
+--&gt; 
+&lt;style&gt;
+.status-aqi1 {
+  background-color: #97d077;
+}
+.status-aqi2 {
+  background-color: #ffff00;
+}
+.status-aqi3 {
+  background-color: #ff7e00;
+}
+.status-aqi4 {
+  background-color: #ff0000;
+}
+.status-aqi5 {
+  background-color: #8f3f97;
+}
+.status-aqi6 {
+  background-color: #7e0023;
+}
+&lt;/style&gt;</code></pre>
+
+
+
+<h2>第７節：JavaScript ES6</h2>
+
+
+
+<h3>使用 let 與 const 宣告變數</h3>
+
+
+
+<h5>let, const ES6 基礎教學</h5>
+
+
+
+<p>es6/let_const.html</p>
+
+
+
+<pre class="wp-block-code"><code>// #1
+// 修改 var → let
+// console.log(mom);
+// var mom = '老媽';
+// (function () { // 立即函式
+//   console.log(mom);
+// })();
+
+// undefined 記憶體準備位置
+// not defined 沒有準備空間
+// var 有hoisting的特性
+
+// #2
+// 修改 var → let
+// var 作用域 是 function scope
+// let 作用域 是 block
+// function varMing () {
+//   let ming = '小明';
+//   if (true) {
+//     let ming = '杰哥';
+//     // 這裡的 ming 依然是外層的小明，所以小明即將被取代
+//   }
+//   console.log(ming); // '杰哥'
+//   }
+//   varMing();
+
+// #3
+// 修改 var → let
+// for (let i = 0; i &lt; 10; i++) { // var i = 全域
+//   console.log(i);
+//   setTimeout(function) () {
+//     console.log('這執行第' + i + '次');
+//   }, 10);
+// }
+
+// #4
+// const
+// const 是一個宣告常數，這個常數是不能被更換的
+// 使用 const 宣告一個變數後，是不能被更改的
+// const ming = '鐵錚錚男子漢';
+// ming = '不是男子漢';
+
+// #5
+// const 與 物件
+// const family = {
+//   mom: '老媽',
+//   me: '小明',
+//   sister: '小橙'
+// };
+// family.father = '爸爸';
+// console.log(family);
+// family = {};
+// 物件，本身是傳參考
+
+// #6
+// 額外問題，不使用 let、上述答案如何解答
+for (var i = 0; i &lt; 10; i++) {
+  console.log(i);
+  (function(i) {
+    setTimeout(function () {
+    console.log('這執行第' + i + '次');
+  }, 10);
+  })(i);
+}</code></pre>
+
+
+
+<h3>展開與其餘參數</h3>
+
+
+
+<p>es6/spread_operator.html</p>
+
+
+
+<pre class="wp-block-code"><code>// #1 使用展開語法，合併以下陣列
+// let groupA = &#91;'小明', '杰倫', '阿姨'];
+// let groupB = &#91;'老媽', '老爸'];
+// 方法一
+// let groupAll = groupA.concat(groupB);
+//方法二
+// let groupAll = &#91;...groupA, ...groupB];
+// console.log(groupAll);
+// console.log(...groupA);
+// console.log(...groupB);
+
+// #2 淺複製觀念說明 (shallow copy)
+// 陣列與物件都是傳參考，當兩個的參考是一樣的時候，裡面的值會同時變動
+// let groupA = &#91;'小明', '杰倫', '阿姨'];
+// let groupB = groupA;
+// groupB.push('阿明');
+// console.log(groupA); // 請問此時的 groupA 值為何
+
+// 為了A與B明顯不同，可以使用展開的方法
+// let groupA = &#91;'小明', '杰倫', '阿姨'];
+// let groupB = &#91;...groupA];
+// groupB.push('阿明');
+// console.log(groupA); // 請問此時的 groupA 值為何
+
+// #3 類陣列觀念說明一
+// 很像陣列，但其實不是
+// 類陣列 __proto__ 方法很少，陣列方法比較多
+// let doms = document.querySelectorAll('li');
+// let newDoms = &#91;...doms];
+// console.log(newDoms, doms);
+
+// #4 類陣列觀念說明二
+// 使用展開的方式來解決類陣列產生的錯誤
+// var originCash = 1000;
+// function updateEasyCard() {
+//   // let arg = arguments;
+//   let arg = &#91;...arguments];
+//   // console.log(arguments);
+//   console.log(arg);
+//   let sum = arg.reduce(function (accumulator, currentValue) {
+//     return accumulator + currentValue;
+//    }, 0);
+//    console.log('我有 ' + sum + ' 元');
+// }
+// updateEasyCard(0); // 我有 1000 元
+// updateEasyCard(10, 50, 100, 50, 5, 1, 1, 1, 500); // 我有 718 元
+
+// #5 其餘參數
+// function moreMoney(ming, ...money) {
+//   console.log(ming, money);
+// }
+// moreMoney('小明', 100, 200, 300, 400, 500);</code></pre>
+
+
+
+<h3>解構</h3>
+
+
+
+<h5>解構賦值</h5>
+
+
+
+<p>將右方的資料<strong>鏡射</strong>到另一方。<br>(不是完全的鏡射、左右顛倒，排列順序不會因此而改變)</p>
+
+
+
+<pre class="wp-block-code"><code>// #1 陣列解構
+// 1. 請將 family 的值，一一賦予到變數上
+// 2. 請將後面三個名字賦予到另一個陣列上
+// let family = &#91;'小明', '杰倫', '阿姨', '老媽', '老爸'];
+// let ming = family&#91;0];
+// let jay = family&#91;1];
+// let auntie = family&#91;2];
+
+// 01
+// let &#91;ming, jay, auntie, mom, father] = family;
+// console.log(ming, jay, auntie, mom, father);
+// 02
+// let &#91;ming, jay, auntie] = family;
+// console.log(ming, jay, auntie);
+// 03
+// let &#91;ming, jay, , mom, father] = family;
+// console.log(ming, jay, mom, father);
+
+// #2 請交換以下兩個變數
+// let Goku = '悟空';
+// let Ginyu = '基紐';
+// &#91;Goku, Ginyu] = &#91;Ginyu, Goku];
+// console.log(Goku, Ginyu);
+
+// #3 請拆解以下字元到單一變數上
+// let str = '基紐特攻隊';
+// let &#91;q, a, z, w, s] = str;
+// console.log(q, a, z, w, s);
+
+// #4 物件解構
+// 請取出物件內的兩個值到單一變數上
+// let family = {
+//   ming: '小明',
+//   jay: '杰倫',
+// };
+// let familyAll = {...family};
+// console.log(familyAll);
+
+// #5
+// 取出其中一個值，並附在新的變數名稱上
+// let GinyuTeam = {
+//   Ginyu: '基紐',
+//   Jeice: '吉斯',
+//   Burter: '巴特',
+//   //...
+// }
+// let { Ginyu: Goku } = GinyuTeam;
+// console.log(Goku);
+
+// #6 延伸問題
+// let { ming: Goku, family: &#91;, mom] } = { ming: '小明', family: &#91;'阿姨', '老媽', '老爸'] }
+// console.log(Goku, mom); // 請問答案是什麼？
+// 小明, 老媽
+
+// #7 預設值
+// let &#91;ming = '小明', jay = '杰倫'] = &#91;'阿明']
+// // 第一個會被賦值，第二個會用預設
+// // ming: '阿明'
+// // jay: '杰倫'
+// console.log(ming, jay);
+
+// let { family: ming = '小明' } = {}
+// // ming: '小明'
+// console.log(ming);</code></pre>
+
+
+
+<h3>縮寫</h3>
+
+
+
+<p>es6/shorthand.html</p>
+
+
+
+<pre class="wp-block-code"><code>// #1 物件縮寫
+// 請將以下兩個合併至一個物件上
+// const Frieza = '弗利沙'
+// const GinyuTeam = {
+//   Ginyu: '基紐',
+//   Jeice: '吉斯',
+//   burter: '巴特',
+//   // ...
+// }
+// 物件合併至一個物件上
+// const newTeam = {
+//   GinyuTeam: GinyuTeam,
+//   Frieza: Frieza
+// }
+// console.log(newTeam);
+// 縮寫
+// const newTeam = {
+//   GinyuTeam,
+//   Frieza
+// }
+// console.log(newTeam);
+
+// #2 案例
+// 在 Vue.js CLI 常見情境
+// import Vue from 'vue'
+// import App from './App'
+// import router from './router'
+// // 將套件由 './App' 路徑載入，並使用 App 這個變數名稱
+// new Vue({
+//   el: '#app',
+//   router,
+//   template: '&lt;App/&gt;',
+//   components: { App }
+// });
+// // 縮寫方式載入及使用
+
+// #3 物件函式縮寫
+// 縮寫以下 showPosture Function
+// const newTeam = {
+//   // ...
+//   showPosture: function () {
+//     console.log('我們是 基紐特戰隊')
+//   }
+// }
+// console.log(newTeam.showPosture());
+// 縮寫
+// 與箭頭函式結果是不一致
+// const newTeam = {
+//   // ...
+//   showPosture () {
+//     console.log('我們是 基紐特戰隊');
+//   }
+// }
+// console.log(newTeam.showPosture());
+
+// #4 搭配解構使用
+// 將以下物件指向賦予到另一個物件上，並且避免參考
+// const GinyuTeam = {
+//   Ginyu: {
+//     name: '基紐'
+//   },
+//   Jeice: {
+//     name: '吉斯'
+//   },
+//   burter: { 
+//     name: '巴特'
+//   },
+//   // ...
+// }
+// const newTeam = GinyuTeam;
+// newTeam.ming = '小明';
+// console.log(newTeam, GinyuTeam);
+// 縮寫
+// const newTeam = {
+//   ...GinyuTeam
+// };
+// newTeam.ming = '小明';
+// console.log(newTeam, GinyuTeam);</code></pre>
+
+
+
+<h3>箭頭函式與傳統函式</h3>
+
+
+
+<p>es6/arrow_function.html</p>
+
+
+
+<pre class="wp-block-code"><code>// #1 改寫傳統函式
+// 將以下改寫成 Arrow Function，並嘗試縮寫形式
+// var callSomeone = function (someone) {
+//   return someone + '吃飯了'
+// }
+// console.log(callSomeone('小明'))
+// 最常使用的箭頭函式
+// var callSomeone = (someone) =&gt; {
+//   return someone + '吃飯了'
+// }
+// console.log(callSomeone('小明'));
+// 只有一行的情況下，可以省略括號，並且也把return拿掉，括號也可以省略
+// var callSomeone = someone =&gt; someone + '吃飯了';
+// console.log(callSomeone('小明'));
+// 沒有傳入參數的情況下，需要括號
+// var callSomeone = () =&gt; '小明' + '吃飯了';
+// console.log(callSomeone());
+
+// #2 沒有 arguments 參數
+// 將以下改寫成 Arrow Function，並觀察差異
+// const updateEasyCard = function () {
+//   let cash = 0;
+//   console.log(arguments); // arguments is not defined
+// }
+// updateEasyCard(10, 50, 100, 50, 5, 1, 1, 1, 500);
+// 箭頭縮寫
+// 其餘參數
+// const updateEasyCard = (...arg) =&gt; {
+//   let cash = 0;
+//   console.log(arg); // arguments is not defined
+// }
+// updateEasyCard(10, 50, 100, 50, 5, 1, 1, 1, 500);
+
+// #3 this 綁定的差異
+// var name = '全域阿婆'
+// var auntie = {
+//   name: '漂亮阿姨',
+//   callName: function () { 
+//     console.log('1', this.name, this); // 1 漂亮阿姨
+//     setTimeout(function () {
+//       console.log('2', this.name); // 2 漂亮阿姨
+//       console.log('3', this); // 3 auntie 這個物件
+//     }, 10);
+//   },
+//   callName2: () =&gt; { 
+//     console.log('1 arrow', this.name, this); // 1 漂亮阿姨
+//     setTimeout(() =&gt; {
+//       console.log('2 arrow', this.name); // 2 漂亮阿姨
+//       console.log('3 arrow', this); // 3 auntie 這個物件
+//     }, 10);
+//   },
+// }
+// auntie.callName();
+// auntie.callName2();
+// setTimeout = window.setTimeout
+// 傳統this = 函式的呼叫方式
+// 物件內使用arrow function指向的可能是全域
+// 並不一定綁定在window上，可能會綁定在其他物件上
+// 原因就是因為他是綁定在他定義時的物件上
+// 特別注意的是，不是所有的情境都適合arrow function
+// 舉例
+// 建議在Vue的methods裡面，使用的是傳統函式，並且使用縮寫的方式呈現
+// var name = '全域阿婆'
+// var auntie = {
+//   name: '漂亮阿姨',
+//   callName () {
+//     console.log('1', this.name, this);
+//     window.setTimeout(function () {
+//       console.log('2', this.name);
+//       console.log('3', this);
+//     }, 10);
+//   },
+// }
+// auntie.callName();
+
+// #4 善用的方式
+// 請將內層的 console.log 能夠指向 auntie 這個物件
+// var auntie = {
+//   name: '漂亮阿姨',
+//   callName () { 
+//     var vm = this;
+//     setTimeout(() =&gt; {
+//       console.log(vm, vm.name);
+//     }, 10);
+//   }
+// }
+// auntie.callName();</code></pre>
+
+
+
+<h3>字串模板 Template String</h3>
+
+
+
+<p>es6/template_string.html</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div id="app"&gt;&lt;/div&gt;
+&lt;script&gt;
+// #1 樣板字串
+// 將以下改寫成 Template String 寫法
+const people = &#91;
+  {
+    name: '小明',
+    friends: 2
+  },
+  {
+    name: '阿姨',
+    friends: 999
+  },
+  {
+    name: '杰倫',
+    friends: 0
+  }
+]
+let originString = '我叫做 ' + people&#91;0].name;
+let originUl = '&lt;ul&gt;\
+  &lt;li&gt;我叫做 ' + people&#91;0].name + '&lt;/li&gt;\
+  &lt;li&gt;我叫做 ' + people&#91;1].name + '&lt;/li&gt;\
+  &lt;li&gt;我叫做 ' + people&#91;2].name + '&lt;/li&gt;\
+&lt;/ul&gt;';
+
+console.log(originString, originUl);
+
+let newString = `我叫做 ${people&#91;0].name}`
+let newUl = `
+  &lt;ul&gt;
+    &lt;li&gt;我叫做 ${people&#91;0].name}&lt;/li&gt;
+    &lt;li&gt;我叫做 ${people&#91;1].name}&lt;/li&gt;
+    &lt;li&gt;我叫做 ${people&#91;2].name}&lt;/li&gt;
+  &lt;/ul&gt;
+`
+newUl = `
+  &lt;ul&gt;
+    ${people.map(person =&gt; `&lt;li&gt;我叫做 ${person.name}&lt;/li&gt;`).join('')}
+  &lt;/ul&gt;
+`
+
+console.log(newString, newUl);
+$('#app').html(newUl);
+&lt;/script&gt;</code></pre>
+
+
+
+<h3>常用陣列方法 (上)</h3>
+
+
+
+<p>es6/array_function.html</p>
+
+
+
+<pre class="wp-block-code"><code>// #1 樣板字串
+// 將以下改寫成 Template String 寫法
+const people = &#91;
+  {
+    name: '小明',
+    money: 500
+  },
+  {
+    name: '漂亮阿姨',
+    money: 3000
+  },
+  {
+    name: '杰倫',
+    money: 60000
+  },
+  {
+    name: '老媽',
+    money: Infinity
+  }
+];
+
+// forEach 與 map
+// 將所有物件增加 icash 有多少金額的欄位
+// 使用for迴圈
+// for (let i = 0; i &lt; people.length; i++) {
+//   console.log(people&#91;i]);
+// }
+// 使用forEach
+// people.forEach(function(item, index, array) {
+//   console.log(item, index, array);
+// })
+// 增加金額500
+// people.forEach(function(item, index, array) {
+//   item.icash = item.money + 500;
+//   console.log(item);
+// })
+// map
+// const newpeople = people.map(function(item, index, array){
+//   // item.icash = item.money + 500;
+//   // console.log(item);
+//   return {
+//     ...item,
+//     icash: item.money + 500
+//   }
+// });
+// console.log(newpeople);
+// 不適合用map來過濾
+// const newpeople = people.map(function (item, index, array) {
+//   // item.icash = item.money + 500;
+//   // console.log(item);
+//   if (item.money &gt; 2000) {
+//     return {
+//       ...item,
+//       icash: item.money + 500
+//     }
+//   }
+// });
+// console.log(newpeople);
+
+// filter
+// 挑出金額少於 5000 的物件
+// true
+// const filterPeople = people.filter(function(item, index) {
+//   return true;
+// })
+// console.log(filterPeople);
+// false
+// const filterPeople = people.filter(function(item, index) {
+//   return false;
+// })
+// console.log(filterPeople);
+// filter過濾方法
+// const filterPeople = people.filter(function(item, index) {
+//   if (item.money &lt; 5000) {
+//     return true;
+//   }
+// })
+// console.log(filterPeople);
+
+// find
+// 1. 找到金額 = 500 的物件
+// 2. 找到 &gt; 5000 的物件
+// find只會把找到的資料只回傳一次，會回傳本身的值
+// filter是把所有的資料都回傳，本身回傳的結果是陣列
+// const findPeople = people.find(function(item, index) {
+//   if (item.money == 500) {
+//     return true;
+//   }
+// })
+// console.log(findPeople);</code></pre>
+
+
+
+<h3>常用陣列方法 (下)</h3>
+
+
+
+<p>es6/array_function.html</p>
+
+
+
+<pre class="wp-block-code"><code>// every
+// every、some是用來取得一個true、false的結果
+// every - 所有結果都為 true, return 才會是 true
+// 1. 所有物件是否都超過 10000 元
+// 2. 是否所有物件超過 300 元
+// const ans = people.every(function(item, i) {
+//   return item.money &gt; 300;
+// });
+// console.log(ans);
+
+// some
+// 1. 是否有物件超過 10000 元
+// 2. 是否有物件持有金額少於 300元
+// some - 部分為 true, return 是 true
+// const ans = people.some(function (item, i) {
+//   return item.money &gt; 10000;
+// });
+// console.log(ans);
+
+// reduce
+// 去除掉老媽，請問剩下的人有多少錢？
+// 01
+// const newNumber = people.reduce(function(prev, item, index){
+//   console.log(prev);
+//   return prev + 500
+// }, 100)
+// 02
+// const newNumber = people.reduce(function(prev, item, index){
+//   console.log(prev);
+//   return prev + item.money
+// }, 0)
+// console.log(newNumber);
+// 03 比大小
+// 物件順序做調整
+const newNumber = people.reduce(function(prev, item, index){
+  console.log(prev);
+  return Math.max(prev, item.money)
+}, 0)
+console.log('newNumber', newNumber);</code></pre>
+
+
+
+<h2>第８節：Vue 常用 API</h2>
+
+
+
+<p><a href="https://cn.vuejs.org/v2/api/index.html#%E5%85%A8%E5%B1%80-API" target="_blank" rel="noreferrer noopener">全局API</a></p>
+
+
+
+<h3>使用 Extend 避免重複造輪子</h3>
+
+
+
+<p>情境：假設有兩個元件、或是數個元件差異非常小，只有少部分不同的話，該怎麼去處理，我們該怎麼樣把重複的地方先抓取出來，在套用的時候更為快速。</p>
+
+
+
+<p>extends，雖然有加s，但我們只能用一個。</p>
+
+
+
+<p>api/extend.html</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div id="app"&gt;
+  &lt;table class="table"&gt;
+    &lt;tbody&gt;
+      &lt;tr is="row-component-one" v-for="(item, key) in data" 
+        v-if="key % 2"
+        :item="item" :key="key"&gt;&lt;/tr&gt;
+      &lt;tr is="row-component-two" v-for="(item, key) in data" 
+        v-if="(key - 1) % 2"
+        :item="item" :key="key"&gt;&lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+
+&lt;script type="text/x-template" id="row-component"&gt;
+  &lt;tr&gt;
+    &lt;td&gt;{{ item.name }}&lt;/td&gt;
+    &lt;td&gt;{{ item.cash | currency | dollarSign }}&lt;/td&gt;
+    &lt;td&gt;{{ item.icash | currency | dollarSign }}&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/script&gt;
+
+&lt;script type="text/x-template" id="row-component-two"&gt;
+  &lt;tr class="bg-primary text-white"&gt;
+    &lt;td&gt;{{ item.name }}&lt;/td&gt;
+    &lt;td&gt;{{ item.cash | currency | dollarSign }}&lt;/td&gt;
+    &lt;td&gt;{{ item.icash | currency | dollarSign }}&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/script&gt;
+
+&lt;script&gt;
+// extend 是基礎建構的概念
+var newExtend = Vue.extend({
+  data: function() {
+    return {
+      data: {},
+      extendData: '這段文字是 extend 得到'
+    }
+  },
+  template: '#row-component',
+  filters: {
+    dollarSign: function (n) {
+      return `$ ${n}`
+    },
+    currency: function(n) {
+      return n.toFixed(2).replace(/./g, function(c, i, a) {
+          return i &amp;&amp; c !== "." &amp;&amp; ((a.length - i) % 3 === 0) ? ',' + c : c;
+      });
+    }
+  },
+  mounted: function() {
+    console.log('Extend:', this)
+  }
+})
+
+var childOne = {
+  props: &#91;'item'],
+  extends: newExtend,
+  // data: function() {
+  //   return {
+  //     data: {},
+  //     extendData: '這段文字是 extend 得到'
+  //   }
+  // },
+  // template: '#row-component',
+  // filters: {
+  //   dollarSign: function (n) {
+  //     return `$ ${n}`
+  //   },
+  //   currency: function(n) {
+  //     return n.toFixed(2).replace(/./g, function(c, i, a) {
+  //         return i &amp;&amp; c !== "." &amp;&amp; ((a.length - i) % 3 === 0) ? ',' + c : c;
+  //     });
+  //   }
+  // },
+  // mounted: function() {
+  //   console.log('Extend:', this)
+  // }
+}
+
+var childTwo = {
+  props: &#91;'item'],
+  data: function() {
+    return {childTwo: '元件 2', extendData: '這段文字是 元件 得到'}
+  },
+  // 刪掉
+  // data: function() {
+  //   return {
+  //     data: {},
+  //     extendData: '這段文字是 extend 得到'
+  //   }
+  // },
+  template: '#row-component-two',
+  extends: newExtend,
+  mounted: function() {
+    console.log('childTwo');
+  }
+  // 刪掉
+  // filters: {
+  //   dollarSign: function (n) {
+  //     return `$ ${n}`
+  //   },
+  //   currency: function(n) {
+  //     return n.toFixed(2).replace(/./g, function(c, i, a) {
+  //         return i &amp;&amp; c !== "." &amp;&amp; ((a.length - i) % 3 === 0) ? ',' + c : c;
+  //     });
+  //   }
+  // },
+  // mounted: function() {
+  //   console.log('Extend:', this)
+  // }
+}
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    data: &#91;
+      {
+        name: '小明',
+        cash: 100,
+        icash: 500,
+      },
+      {
+        name: '杰倫',
+        cash: 10000,
+        icash: 5000,
+      },
+      {
+        name: '漂亮阿姨',
+        cash: 500,
+        icash: 500,
+      },
+      {
+        name: '老媽',
+        cash: 10000,
+        icash: 100,
+      },
+    ]
+  },
+  components: {
+    "row-component-one": childOne,
+    "row-component-two": childTwo,
+  },
+  mounted: function() {
+    console.log('Vue init:', this)
+  }
+});
+&lt;/script&gt;</code></pre>
+
+
+
+<h3>Filter 自訂畫面資料呈現格式</h3>
+
+
+
+<p>Google 搜尋 javascript currency format 查詢貨幣轉換的格式。</p>
+
+
+
+<p>api/filter.html</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div id="app"&gt;
+  &lt;table class="table"&gt;
+    &lt;tbody&gt;
+      &lt;tr is="row-component" v-for="(item, key) in data" :item="item" :key="key"&gt;&lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+  {{ data&#91;1].cash | currency | dollarSign }}
+&lt;/div&gt;
+
+&lt;script type="text/x-template" id="row-component"&gt;
+  &lt;tr&gt;
+    &lt;td&gt;{{ item.name }}&lt;/td&gt;
+    &lt;td&gt;{{ item.cash | currency | dollarSign }}&lt;/td&gt;
+    &lt;td&gt;{{ item.icash | currency | dollarSign }}&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/script&gt;
+
+&lt;script&gt;
+Vue.filter('dollarSign' , function(n) {
+  return `$ ${n}`
+})
+Vue.filter('currency' , function(n) {
+  return n.toFixed(2).replace(/./g, function(c, i, a) {
+    return i &gt; 0 &amp;&amp; c !== "." &amp;&amp; (a.length - i) % 3 === 0 ? "," + c : c;
+  });
+})
+
+
+var child = {
+  props: &#91;'item'],
+  template: '#row-component',
+  data: function() {
+    return {
+      data: {}
+    }
+  },
+  // filters: {
+  //   dollarSign: function(n) {
+  //     return `$ ${n}`
+  //   },
+  //   currency: function(n) {
+  //     return n.toFixed(2).replace(/./g, function(c, i, a) {
+  //       return i &gt; 0 &amp;&amp; c !== "." &amp;&amp; (a.length - i) % 3 === 0 ? "," + c : c;
+  //     });
+  //   }
+  // },
+  mounted: function() {
+    console.log('Component:', this)
+  }
+}
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    data: &#91;
+      {
+        name: '小明',
+        cash: 100,
+        icash: 500,
+      },
+      {
+        name: '杰倫',
+        cash: 10000,
+        icash: 5000,
+      },
+      {
+        name: '漂亮阿姨',
+        cash: 500,
+        icash: 500,
+      },
+      {
+        name: '老媽',
+        cash: 10000,
+        icash: 100,
+      },
+    ]
+  },
+  components: {
+    "row-component": child
+  },
+  mounted: function() {
+    console.log('Vue init:', this)
+  }
+});
+&lt;/script&gt;</code></pre>
+
+
+
+<h3>無法寫入的資料，用 set 搞定他</h3>
+
+
+
+<p>api/vue_set.html</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div id="app"&gt;
+  &lt;table class="table"&gt;
+    &lt;tbody&gt;
+      &lt;tr is="row-component" v-for="(item, key) in data" :item="item" :key="key"&gt;&lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+
+&lt;script type="text/x-template" id="row-component"&gt;
+  &lt;tr&gt;
+    &lt;td&gt;{{ item.name }}&lt;/td&gt;
+    &lt;td&gt;{{ item.cash }}&lt;/td&gt;
+    &lt;td&gt;{{ item.icash }}&lt;/td&gt;
+    &lt;td&gt;
+      &lt;span v-if="data.item"&gt;{{ data.item.name }}&lt;/span&gt;
+      &lt;button class="btn btn-sm btn-primary" @click="addData()"&gt;寫入資料&lt;/button&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/script&gt;
+
+&lt;script&gt;
+var child = {
+  props: &#91;'item'],
+  template: '#row-component',
+  data: function() {
+    return {
+      data: {}
+    }
+  },
+  methods: {
+    addData: function() {
+    //   this.data.item = {
+    //     name: this.item.name
+    //   }
+    //   console.log(this.data, this);
+
+    this.$set(this.data, 'item', {
+      name: this.item.name
+    })
+    console.log(this.data, this);
+
+      // this.$set(this.data, 'item', {
+      //   name: this.item.name
+      // });
+      // console.log(this.data, this);
+    }
+  },
+  mounted: function() {
+    console.log('Component:', this)
+  }
+}
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    data: &#91;
+      {
+        name: '小明',
+        cash: 100,
+        icash: 500,
+      },
+      {
+        name: '杰倫',
+        cash: 10000,
+        icash: 5000,
+      },
+      {
+        name: '漂亮阿姨',
+        cash: 500,
+        icash: 500,
+      },
+      {
+        name: '老媽',
+        cash: 10000,
+        icash: 100,
+      },
+    ]
+  },
+  components: {
+    "row-component": child
+  },
+  mounted: function() {
+    console.log('Vue init:', this)
+  }
+});
+&lt;/script&gt;</code></pre>
+
+
+
+<p><strong>Vue.set 蠻重要的。</strong></p>
+
+
+
+<h3>Mixin 混合其他的元件內容</h3>
+
+
+
+<p>Extend由單一元件來做延伸，但Mixin可以混合多個元件的行為。</p>
+
+
+
+<p>api/mixin.html</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div id="app"&gt;
+  &lt;table class="table"&gt;
+    &lt;tbody&gt;
+      &lt;tr is="row-component" v-for="(item, key) in data" 
+        :item="item" :key="key"&gt;&lt;/tr&gt;
+      &lt;tr is="row-component-two" v-for="(item, key) in data" 
+        :item="item"&gt;&lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+
+&lt;script type="text/x-template" id="row-component"&gt;
+  &lt;tr&gt;
+    &lt;td&gt;{{ item.name }}&lt;/td&gt;
+    &lt;td&gt;{{ item.cash | currency | dollarSign }}&lt;/td&gt;
+    &lt;td&gt;{{ item.icash | currency | dollarSign }}&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/script&gt;
+
+&lt;script&gt;
+// mixin 是多個混合的概念
+
+var mixinFilter = {
+  template: '#row-component',
+  filters: {
+    dollarSign: function (n) {
+      return `$ ${n}`
+    },
+    currency: function(n) {
+      return n.toFixed(2).replace(/./g, function(c, i, a) {
+          return i &amp;&amp; c !== "." &amp;&amp; ((a.length - i) % 3 === 0) ? ',' + c : c;
+      });
+    }
+  },
+}
+
+var mixinMounted = {
+  mounted () {
+    console.log('這段是 Mixin 產生')
+  }
+}
+
+Vue.component('row-component', {
+  props: &#91;'item'],
+  data: function() {
+    return {
+      data: {},
+    }
+  },
+  mixins: &#91;mixinFilter, mixinMounted],
+  // template: '#row-component',
+  // filters: {
+  //   dollarSign: function (n) {
+  //     return `$ ${n}`
+  //   },
+  //   currency: function(n) {
+  //     return n.toFixed(2).replace(/./g, function(c, i, a) {
+  //         return i &amp;&amp; c !== "." &amp;&amp; ((a.length - i) % 3 === 0) ? ',' + c : c;
+  //     });
+  //   }
+  // },
+  // mounted () {
+  //   console.log('這段是 Mixin 產生')
+  // }
+});
+
+Vue.component('row-component-two', {
+  props: &#91;'item'],
+  data: function() {
+    return {
+      data: {
+        data: 'Two'
+      },
+    }
+  },
+  mixins: &#91;mixinFilter, mixinMounted],
+
+})
+
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    data: &#91;
+      {
+        name: '小明',
+        cash: 100,
+        icash: 500,
+      },
+      {
+        name: '杰倫',
+        cash: 10000,
+        icash: 5000,
+      },
+      {
+        name: '漂亮阿姨',
+        cash: 500,
+        icash: 500,
+      },
+      {
+        name: '老媽',
+        cash: 10000,
+        icash: 100,
+      },
+    ]
+  },
+  mounted: function() {
+    console.log('Vue init:', this)
+  }
+});
+&lt;/script&gt;</code></pre>
+
+
+
+<h3>使用 Directive 開發自己的互動 UI</h3>
+
+
+
+<p><a rel="noreferrer noopener" href="https://cn.vuejs.org/v2/guide/custom-directive.html" target="_blank">自定義指令</a></p>
+
+
+
+<p>透過 directive 來做 email 的驗證。</p>
+
+
+
+<p>api/directive.html</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div id="app"&gt;
+  &lt;input type="email" v-model="email" v-focus v-validation&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+// 官方文件 https://cn.vuejs.org/v2/guide/custom-directive.html
+
+// 註冊一個全局自定義指令 `v-focus`
+Vue.directive('focus', {
+  // 當被綁定的元素插入到 DOM 中時...
+  inserted: function (el) {
+    // 聚焦元素
+    el.focus()
+  }
+});
+
+Vue.directive('validation', {
+  update: function(el, binding, vnode) {
+    console.log('update', el, binding, vnode);
+    var value = el.value;
+    console.log(value);
+    // 驗證email的方式，會使用正規式
+    // email結構的正規式
+    var re = /^((&#91;^&lt;&gt;()\&#91;\]\.,;:\s@\"]+(\.&#91;^&lt;&gt;()\&#91;\]\.,;:\s@\"]+)*)|(\".+\"))@((&#91;^&lt;&gt;()&#91;\]\.,;:\s@\"]+\.)+&#91;^&lt;&gt;()&#91;\]\.,;:\s@\"]{2,})$/i;
+    console.log(value, re.test(value));
+    if (!re.test(value)) {
+      el.className = 'form-control is-invalid'
+    } else {
+      el.className = 'form-control is-valid'
+    }
+
+  },
+  bind: function(el, binding, vnode) {
+    console.log('binding', el, binding, vnode);
+    el.className = 'form-control';
+  }
+});
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    email: '',
+  },
+  mounted: function() {
+    console.log('Vue init:', this)
+  }
+});
+&lt;/script&gt;</code></pre>
+
+
+
+<h3>Directive 細節說明</h3>
+
+
+
+<p>api/directive.html</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div id="app"&gt;
+  &lt;input type="email" v-model="email" v-focus v-validation="{ className: 'form-control'}"&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+// 官方文件 https://cn.vuejs.org/v2/guide/custom-directive.html
+
+// 註冊一個全局自定義指令 `v-focus`
+Vue.directive('focus', {
+  // 當被綁定的元素插入到 DOM 中時...
+  inserted: function (el) {
+    // 聚焦元素
+    el.focus()
+  }
+});
+
+Vue.directive('validation', {
+  update: function(el, binding, vnode) {
+    console.log('update', el, binding, vnode);
+    var value = el.value;
+    console.log(value);
+    // 驗證email的方式，會使用正規式
+    // email結構的正規式
+    var re = /^((&#91;^&lt;&gt;()\&#91;\]\.,;:\s@\"]+(\.&#91;^&lt;&gt;()\&#91;\]\.,;:\s@\"]+)*)|(\".+\"))@((&#91;^&lt;&gt;()&#91;\]\.,;:\s@\"]+\.)+&#91;^&lt;&gt;()&#91;\]\.,;:\s@\"]{2,})$/i;
+    console.log(value, re.test(value));
+    if (!re.test(value)) {
+      el.className = 'form-control is-invalid'
+    } else {
+      el.className = 'form-control is-valid'
+    }
+
+  },
+  bind: function(el, binding, vnode) {
+    console.log('binding', el, binding, vnode);
+    el.className = binding.value.className;
+
+    // v-model
+    // v-model 值
+
+    // 尋找當前的model名稱
+    var vModel = vnode.data.directives.find(function(item) {
+      return item.name === 'model'
+    }).expression;
+    // 從當前的model取值
+    var value = vnode.context&#91;vModel];
+    console.log('vModel', vModel, value);
+  }
+});
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    email: 'example@gmail.com',
+  },
+  mounted: function() {
+    console.log('Vue init:', this)
+  }
+});
+&lt;/script&gt;</code></pre>
+
+
+
+<p>Google關鍵字：<a href="https://bootstrap-vue.org/docs/directives" target="_blank" rel="noreferrer noopener">vue directive bootstrap</a></p>
+
+
+
+<h3>使用外部載入的套件</h3>
+
+
+
+<h5>Vue 使用外部套件</h5>
+
+
+
+<ul><li>請嘗試將 Vue Bootstrap 的 Modal 元件載入</li></ul>
+
+
+
+<p>資源：<a rel="noreferrer noopener" href="https://bootstrap-vue.org/" target="_blank">Vue Bootstrap</a></p>
+
+
+
+<p>使用額外套件的時候，一定要特別注意他的版本。</p>
+
+
+
+<p>api/use.html</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div id="app"&gt;
+  &lt;!-- Using value --&gt;
+  &lt;b-button v-b-modal="'my-modal'"&gt;Show Modal&lt;/b-button&gt;
+
+  &lt;!-- The modal --&gt;
+  &lt;b-modal id="my-modal"&gt;Hello From My Modal!&lt;/b-modal&gt;
+&lt;/div&gt;
+
+&lt;link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css" /&gt;
+&lt;!-- Load Vue followed by BootstrapVue --&gt;
+&lt;script src="//unpkg.com/vue@latest/dist/vue.min.js"&gt;&lt;/script&gt;
+&lt;script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+// 使用 CDN 與 CLI 載入套件的結果是一樣
+// CLI 版本請加入以下套用 BootstrapVue
+// import BootstrapVue from 'bootstrap-vue'
+// Vue.use(BootstrapVue);
+
+var app = new Vue({
+  el: '#app',
+  data: {},
+});
+&lt;/script&gt;</code></pre>
+
+
+
+<h2>第９節：Vue Cli 的建置與運作原理</h2>
+
+
+
+<h3>為什麼要學 Vue Cli</h3>
+
+
+
+<h5>VUE CLI 是什麼？</h5>
+
+
+
+<ol>
+<li>基於 Webpack 所建置的開發工具</li>
+<li>便於使用各種<strong>第三方套件</strong>&nbsp;(BS4, Vue Router…)</li>
+<li>可運行&nbsp;<strong>Sass, Babel</strong>&nbsp;等編譯工具</li>
+<li>便於開發&nbsp;<strong>SPA</strong>&nbsp;的網頁工具</li>
+<li>靠簡單設定，就能搭建開發時常用的環境</li>
+</ol>
+
+
+
+<h5>WEBPACK</h5>
+
+
+
+<ul><li>bundle your assets, scripts, images, styles</li></ul>
+
+
+
+<p>連結：<a rel="noreferrer noopener" href="https://webpack.js.org/" target="_blank">WEBPACK</a></p>
+
+
+
+<p>Vue Cli 是一個scaffolding (鷹架) 的工具，可以透過 Vue Cli 搭建 Webpack 環境，像是它的資料夾、相關檔案，透過簡單的指令就可以完整的生成。<br>雖然這麼多的資料夾，交付出去的時候只需要交付 dist 資料夾給後端就算完成。</p>
+
+
+
+<p>Webpack 是一個打包工具，所以可以載入非常多的內容，像是 Sass、Bootstrap、Vue 都可以輕鬆的載入。<br>使用 npm 做套件的管理。</p>
+
+
+
+<p>SPA 是由前端所模擬的路由。</p>
+
+
+
+<ul>
+<li>#/user</li>
+<li>#/product</li>
+</ul>
+
+
+
+<p>使用 SPA 的概念在製作網頁的時候，同時意謂著前端網頁與後端 Web Server 是分開的。<br>當如果需要取得資料的時候，後端 Web Server 會提供 API 的接口，前端網頁會使用 Ajax 的方法來做串接。<br>當畫面上頁面做切換的時候，前端網頁就會透過 API 再從後端 Web Server 取得所需要的資料內容。</p>
+
+
+
+<h5>VUE CLI 的限制</h5>
+
+
+
+<ol><li>不便於開發&nbsp;<strong>SPA</strong>&nbsp;的網頁<br>(此需求可用先前教的 CDN 模式)</li></ol>
+
+
+
+<h3>Vue Cli 2.x 與 Vue Cli 3.x 課程說明</h3>
+
+
+
+<p>注意！！<br>課程中已經加入 Vue Cli 3.0<br>但在主要課程規劃目前還是 Cli 2.0 為主<br>所以課程可先依據規畫學習 2.0，之後再補足 3.0 的觀念</p>
+
+
+
+<p>而兩者觀念差異並不大<br>所以在後面都可以銜接回來喔～<br>(目前補充在電商課程後方)</p>
+
+
+
+<h3>如何使用 Vue Cli</h3>
+
+
+
+<p>Node.js：<a rel="noreferrer noopener" href="https://nodejs.org/en/" target="_blank">英文版</a>、<a rel="noreferrer noopener" href="https://nodejs.org/zh-tw/" target="_blank">中文版</a></p>
+
+
+
+<p>請先安裝 NODE.JS<br>可參考本章節後方的附錄內容</p>
+
+
+
+<h5>vue-cli</h5>
+
+
+
+<p>A simple CLI for scaffolding Vue.js projects.</p>
+
+
+
+<h5>Installation</h5>
+
+
+
+<p>Prerequisites: Node.js (&gt;=6.x, 8.x preferred), npm version 3+ and Git.</p>
+
+
+
+<pre class="wp-block-code"><code>$ npm install -g vue-cli</code></pre>
+
+
+
+<h5>Usage</h5>
+
+
+
+<pre class="wp-block-code"><code>$ vue init &lt;template-name&gt; &lt;project-name&gt;</code></pre>
+
+
+
+<p>Example:</p>
+
+
+
+<pre class="wp-block-code"><code>$ vue init webpack my-project</code></pre>
+
+
+
+<p>操作步驟</p>
+
+
+
+<ol>
+<li>查詢 node 版本：node -v<br>v6.9.4</li>
+<li>安裝 vue-cli ：npm install -g vue-cli<br>-g，安裝在全域上面。</li>
+<li>輸入 vue 顯示有哪些指令可以用：vue</li>
+<li>列出官方樣本：vue list<br>我們主要會使用 webpack 這個樣本</li>
+<li>用法：vue init webpack vuewebpack<ol>
+<li>Project name vuewebpack</li>
+<li>Project description</li>
+<li>Author</li>
+<li>Vue build – 選擇 Runtime + Compiler: recommended for most users</li>
+<li>Install vue-router – n，這個地方先不要裝</li>
+<li>Use ESLint to lint your code? – n，這個地方先不要使用 ESLint<br>JavaScript 沒有符合規範是無法編譯的</li>
+<li>Set up unit tests – n</li>
+<li>Setup e2e tests with Nightwatch – n</li>
+<li>Should we run `npm install` for you after the project has been created? (recommended) – No, I will handle that myself，這個地方先不要，等下再自己手動使用。</li>
+</ol>
+</li>
+</ol>
+
+
+
+<p># Project initialization finished!<br>To get started:</p>
+
+
+
+<pre class="wp-block-code"><code>cd vuewebpack
+npm install (or if using yarn: yarn)
+npm run dev</code></pre>
+
+
+
+<p>操作步驟：</p>
+
+
+
+<ol>
+<li>移動到資料夾：cd vuewebpack</li>
+<li>打開資料夾：open .</li>
+<li>安裝：npm install</li>
+<li>Vue環境執行：npm run dev</li>
+</ol>
+
+
+
+<p>使用 VSCode 終端機來執行。</p>
+
+
+
+<p>課程後續的範例老師會使用 ESLint 做課程說明<br>屆時再慢慢熟悉 ESLint 的使用方式</p>
+
+
+
+<h3>Vue Cli 安裝相關資源</h3>
+
+
+
+<h5>安裝 Node.js</h5>
+
+
+
+<p><a rel="noreferrer noopener" href="https://www.udemy.com/course/gulp-learning/" target="_blank">參考 Gulp 課程</a><br>Gulp 環境 (Windows 安裝 Nodejs 篇)<br>Gulp 環境 (Mac 安裝 Nodejs 篇)</p>
+
+
+
+<p><a rel="noreferrer noopener" href="https://nodejs.org/en/" target="_blank">Nodejs 官方網站</a></p>
+
+
+
+<p>Vue Cli 其實是一個指令工具<br>用來讓我們安裝 Vue + Webpack 的環境 (另有其他幾種官方模板)<br>目前依然還有在更新，課程中使用的是 2.x 版本<br>測試中的版本為 3.0 beta<br>安裝時也請注意版本上的差異</p>
+
+
+
+<h5>其他相關連結<br>以下為課程中會用到的相關連結</h5>
+
+
+
+<ul>
+<li><a rel="noreferrer noopener" href="https://router.vuejs.org/zh/" target="_blank">Vue Router</a></li>
+<li><a rel="noreferrer noopener" href="https://github.com/axios/axios" target="_blank">Axios</a></li>
+<li><a href="https://www.npmjs.com/package/vue-axios" target="_blank" rel="noreferrer noopener">Vue Axios</a></li>
+</ul>
+
+
+
+<h5>課程中運用到的指令</h5>
+
+
+
+<ul>
+<li>檢視 Vue Cli 可用版型：vue list</li>
+<li>Vue 模板安裝：vue init {{模板名稱}} {{資料夾名稱}}</li>
+<li>安裝所需套件 (在目標資料夾下，每個專案只有第一次需要執行)：npm install</li>
+<li>運行 Vue + Webpack：npm run dev</li>
+<li>編譯 Production 版本：npm run build</li>
+</ul>
+
+
+
+<p>解決方法：<a href="http://limitedcode.blogspot.com/2016/03/powershell-ps1.html" target="_blank" rel="noreferrer noopener">系統上已停用指令碼執行</a></p>
+
+
+
+<h3>Vue Cli 所產生的資料夾結構說明</h3>
+
+
+
+<p>使用 VSCode ，打開終端機 (Ctrl + `)<br>輸入 npm run dev 開發中環境運行起來</p>
+
+
+
+<p>README.md</p>
+
+
+
+<pre class="wp-block-code"><code># vuewebpack
+
+&gt; A Vue.js project
+
+## Build Setup
+
+``` bash
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
+
+# build for production and view the bundle analyzer report
+npm run build -- report
+```
+For a detailed explanation on how things work, check out the &#91;guide](http://vuejs-templates.github.io/webpack/) and &#91;docs for vue-loader](http://vuejs.github.io/vue-loader).</code></pre>
+
+
+
+<ul>
+<li>npm install<br>安裝所有套件用到的指令</li>
+<li>npm run dev<br>將開發的環境運行起來</li>
+<li>npm run build<br>將正式版環境運行建立起來</li>
+</ul>
+
+
+
+<p>停止終端機指令：停止可同時按下 Ctrl + c<br>(Window 與 Mac OS 相同)</p>
+
+
+
+<p>npm run build<br>產生 dist 資料夾，裡面的網頁需要使用 web server 執行才能開啟內容。<br>Tip: built files are meant to be served over an HTTP server.<br>Opening index.html over file:// won’t work.</p>
+
+
+
+<p>static 資料夾是放入不會被編譯的檔案。<br>assets 資料夾是放入會被編譯的檔案。</p>
+
+
+
+<p>src 是整個 Cli 最重要的資料夾，所有的內容都在這裡。<br>裡面比較重要的檔案叫 main.js，指的是所有Vue.js的進入點。<br>Vue Cli 基本上都是用元件。<br>App.vue有以下內容，xtemplate、javascript、style。<br>node_modules 就是剛透過 npm install 所安裝的一些相依套件。<br>dist 是透過 npm run build 最後生成的檔案，一定要運行在 HTTP server 才能執行，無法直接用 file 執行。<br>config 寫 Vue 的應用程式會使用的設定檔。<br>build 是 webpack 的原始碼。</p>
+
+
+
+<h3>Webpack 腳本介紹 及自定義環境變數</h3>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" width="1706" height="809" src="/wordpress_blog/wp-content/uploads/2022/04/webpack.png" alt="" class="wp-image-672"><figcaption>Webpack</figcaption></figure>
+
+
+
+<p>build 資料夾下 webpack 腳本介紹</p>
+
+
+
+<ul>
+<li>webpack.base.conf.js<br>為最主要的webpack腳本</li>
+<li>webpack.dev.conf.js<br>開發中版本<br>預覽使用</li>
+<li>webpack.prod.conf.js<br>正式版版本<br>比較重視輸出結果</li>
+</ul>
+
+
+
+<p>dev、prod 比較不會去修改，整個核心在 webpack base 腳本下。</p>
+
+
+
+<p>resolve 是可以省略一些副檔名、路徑使用的。</p>
+
+
+
+<p>config 資料夾下</p>
+
+
+
+<ul>
+<li>index.js 針對整個運行環境所使用的。</li>
+<li>dev、prod 是我們在寫 Vue 可以用到環境變數，可輸出到 Vue 檔裡面。</li>
+</ul>
+
+
+
+<p>dev.env.js</p>
+
+
+
+<pre class="wp-block-code"><code>module.exports = merge(prodEnv, {
+  NODE_ENV: '"development"',
+  HTTP_PATH: '"http://localhost/"'
+})
+// Ajax</code></pre>
+
+
+
+<p>HelloWorld.vue</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;script&gt;
+export default {
+  name: 'HelloWorld',
+  data () {
+    return {
+      msg: process.env.NODE_ENV,
+      http: process.env.HTTP_PATH
+    }
+  }
+}
+&lt;/script&gt;</code></pre>
+
+
+
+<p>prod.env.js</p>
+
+
+
+<pre class="wp-block-code"><code>module.exports = {
+  NODE_ENV: '"production"',
+  HTTP_PATH: '"http://localhost/"'
+}</code></pre>
+
+
+
+<h3>安裝套件在 Vue Webpack 中</h3>
+
+
+
+<h5>透過 Vue Cli 的 webpack 來載入外部的套件</h5>
+
+
+
+<ul>
+<li>Bootstrap – 透過 Sass 的方式來載入</li>
+<li>vue-axios – 是一個 Ajax 的工具，透過它使用 Ajax 的行為，就很像我們在使用 jQuery 一樣，是使用非同步的 promise 去製作的</li>
+</ul>
+
+
+
+<p>操作步驟</p>
+
+
+
+<ol>
+<li>前往&nbsp;<a rel="noreferrer noopener" href="https://getbootstrap.com/docs/4.6/getting-started/download/" target="_blank">Bootstrap 4 download</a>
+</li>
+<li>找到 npm 並使用以下指令<br>Sass 在 Vue Cli 沒有安裝完整的 loader，會再加入 node-sass sass-loader 的套件<br>$ npm install bootstrap node-sass sass-loader –save</li>
+<li>因為以上指令會出錯，需要安裝指定版本<br>$ npm install bootstrap node-sass@4 sass-loader@7 –save</li>
+<li>安裝完後，整個 Vue Cli 是需要重新運行的<br>npm run dev</li>
+<li>重新啟動後，打開 App.vue，測試 Sass 是否可以運行<br>在 &lt;style&gt; 修改成 &lt;style lang=”scss”&gt;<br>把原本的內容註解掉，改成以下</li>
+<li>清除掉之後就可以使用 import 的方式把 Bootstrap 載進來</li>
+<li>可以載入Bootstrap 其中的元件，來了解是否有正確的載入<br>cards</li>
+<li>@import “~bootstrap/scss/bootstrap”; 路徑是哪裡來的<br>可以把 node_modules 打開裡面會有 bootstrap，再裡面會有 scss，在裡面找會有 bootstrap</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// 5.
+&lt;style lang="scss"&gt;
+$color: black;
+
+body {
+  background-color: $color;
+}
+&lt;/style&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 6.
+&lt;style lang="scss"&gt;
+@import "~bootstrap/scss/bootstrap";
+&lt;/style&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 7.
+&lt;template&gt;
+  &lt;div id="app"&gt;
+    &lt;img src="./assets/logo.png" /&gt;
+    &lt;HelloWorld /&gt;
+    &lt;div class="card" style="width: 18rem"&gt;
+      &lt;div class="card-body"&gt;
+        &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+        &lt;p class="card-text"&gt;
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        &lt;/p&gt;
+        &lt;a href="#" class="btn btn-primary"&gt;Go somewhere&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import HelloWorld from "./components/HelloWorld";
+
+export default {
+  name: "App",
+  components: {
+    HelloWorld,
+  },
+};
+&lt;/script&gt;
+
+&lt;style lang="scss"&gt;
+@import "~bootstrap/scss/bootstrap";
+&lt;/style&gt;</code></pre>
+
+
+
+<p>小技巧：元件components 裡面有個 HelloWorld.vue，<br>在 HelloWorld.vue 裡面有個 &lt;h1&gt;，<br>然後下方 &lt;style scoped&gt;，scoped 的意思是這邊的樣式是被限制在這個元件內才能運行。<br>在下方 &lt;style scoped&gt; &lt;h1&gt; 新增 color: red 樣式。<br>在 App.vue 新增一個 &lt;h1&gt; 這是 APP 的 H1，<br>就會維持是黑色，並不會受到 HelloWorld.vue 裡面的 style 影響。這是 Vue style 的一個特色。</p>
+
+
+
+<p>vue-axios 是 Ajax 的一個套件。</p>
+
+
+
+<p>操作步驟</p>
+
+
+
+<ol>
+<li>把終端機停下來</li>
+<li>輸入 npm install –save axios vue-axios</li>
+<li><a rel="noreferrer noopener" href="https://www.npmjs.com/package/vue-axios" target="_blank">vue-axios</a></li>
+<li>把以下程式碼加到 entry file ，也就是 main.js 這支檔案</li>
+<li>使用 random user api</li>
+<li>開啟 App.vue 檔案，這支檔案加入 created 的 hook，就是當這個元件創立的時候，同時執行裡面的函式<br>使用方法在 vue-axios 網站上有寫到，並把 random user api 的 URL 貼進來</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// 4. 把程式碼加到 main.js
+import axios from 'axios' // 主要 AJAX 套件
+import VueAxios from 'vue-axios' // 將它轉為 Vue 的套件
+// Usage in Vue 2:
+Vue.use(VueAxios, axios)</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 6.
+  created() {
+    this.$http.get('https://randomuser.me/api/')
+      .then((response) =&gt; {
+        console.log(response.data);
+      })
+  }</code></pre>
+
+
+
+<h2>第１０節：Vue Router</h2>
+
+
+
+<h3>本章節以後，提問的注意事項</h3>
+
+
+
+<p>由於本章節以後，問題相對會複雜很多<br>很難從單一片段了解問題點<br>如：部分程式碼無法運作<br>實際卻是 main.js @import 的大小寫錯誤<br><br>所以<strong>本章節以後<br>為了加速回復同學們問題的效率<br>請上傳完整程式碼至 Github 或個人雲端空間</strong>&nbsp;( 不需要包含<br>node_modules )<br>好讓我可以運行完整環境來仔細檢視喔<br><br>如果僅上傳部分程式碼或程式碼的截圖<br>還是會請你重新上傳完整程式碼喔</p>
+
+
+
+<h3>使用 Vue Router&nbsp;及配置路由文件</h3>
+
+
+
+<h5>SPA 也是透過元件來製作的喔</h5>
+
+
+
+<p>由前端所模擬的路由</p>
+
+
+
+<ul>
+<li>進入點：main.js</li>
+<li>Router 配置檔案 (前端路由)：router/index.js</li>
+<li>分頁內容：Vue Components (**.vue)</li>
+</ul>
+
+
+
+<p>操作步驟</p>
+
+
+
+<ol>
+<li>前往 Vue Router 查看安裝的方法</li>
+<li>終端機輸入 npm install vue-router –save<br>記得要加上 –save</li>
+<li>在 src 資料夾下建立新資料夾叫 router</li>
+<li>在 router 資料夾下建立 index.js 檔案</li>
+<li>在 index.js 配置檔案下加上</li>
+<li>在 main.js 加上</li>
+<li>執行 npm run dev，路徑會自動加上#，#以後就是虛擬的路由器</li>
+<li>到 router/index.js 下定義路徑</li>
+<li>到 App.vue 把&lt;HelloWorld/&gt;標籤註解掉，會使用 &lt;router-view&gt;&lt;router-view&gt;</li>
+<li>把 routes 陣列底下物件 path 修改成 path: ‘/index’,</li>
+<li>網址必須對應到 /index 網址，畫面才會出現</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// 5. index.js
+// 官方的元件
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+
+// 自訂的分頁元件
+import Home from '@/components/HelloWorld';
+
+// 啟用的方式
+Vue.use(VueRouter);
+
+// 匯出給 Entry 使用
+export default new VueRouter({
+
+});</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 6. main.js
+import router from './router';
+
+new Vue({
+  // 加上
+  router,
+});</code></pre>
+
+
+
+<p>有使用 ESLint 嚴謹度會提高不少，當有出現多於程式碼則會跳錯。</p>
+
+
+
+<pre class="wp-block-code"><code>// 8. index.js
+export default new VueRouter({
+  routes: &#91;
+    {
+      name: '首頁',  // 元件呈現的名稱
+      path: '/',  // 對應的虛擬路徑
+      component: Home,  // 對應的元件
+    },
+  ],
+});</code></pre>
+
+
+
+<h3>新增路由路徑及連結</h3>
+
+
+
+<p>操作步驟</p>
+
+
+
+<ol>
+<li>在 index.js 檔案下新增 routes 陣列底下的物件<br>因為還沒啟用，先註解起來</li>
+<li>在 index.html 先偷懶加入使用 Bootstrap Cdn<br>主要是會使用到 Bootstrap 一些元件來加速開發</li>
+<li>在 components 資料夾下方新增 pages 資料夾<br>這是管理分頁使用的</li>
+<li>將 HelloWorld.vue 另存新檔，在 pages 資料夾下叫做 page.vue</li>
+<li>把 page.vue 裡面的 div 的內容全部刪掉，也將 style 部分也都全部刪掉，&lt;script&gt; 裡面的 export default 裡面的 name 也可刪掉、data 留空也沒關係</li>
+<li>到 Bootstrap 4 官網搜尋 cards 複製一個卡片的模組，貼到 page.vue 裡面的 div 做練習就可以了，圖檔部分因為 src會出錯就先把 src 路徑刪除</li>
+<li>到配置的路徑 index.js，用相同的方式將新的頁面載進來</li>
+<li>到 Bootstrap 4 官網搜勳 navbar 複製一個導覽列的模組，並且貼到 App.vue，在圖檔的上方，先刪除多餘的部分，留下一個 &lt;li&gt; 就可以了，下面的表單也移除掉，下方的 CSS 也可以先直接移除</li>
+<li>製作分頁的切換，把 Home 這個的 &lt;li&gt; 複製一份，並把上方 class 的 active 移除掉，裡面多餘的程式碼也先移除，留下一個 Home，另外一個改成 Page</li>
+<li>把 Home 的 &lt;a&gt; 標籤替換成 &lt;router-link&gt; 標籤，Page 的 &lt;a&gt; 標籤替換成 &lt;router-link&gt; 標籤，並且把 href 換成 to，to 是針對 router-view 在切換分頁的一個方法，Home 是 to=”/index”，Page 是 to=”/page”</li>
+<li>分頁的切換的另一個方法，index.js 檔案的 routes 裡面的 name 屬性也可以用在 path 上面，使用的方式是把 to 改成動態連結、把原本的 path 換成一個物件<br>Home 的是 :to=”{ name: ‘首頁’ }”<br>Page 的是 :to=”{ name: ‘分頁’ }”</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// 1.
+  //  {
+  //    name: '首頁', // 元件呈現的名稱
+  //    path: '/新路徑', // 對應的虛擬路徑
+  //    component: 新元件, // 對應的元件
+  //  },</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 7.
+import Page from '@/components/pages/page';
+
+    {
+      name: '分頁', // 元件呈現的名稱
+      path: '/page', // 對應的虛擬路徑
+      component: Page, // 對應的元件
+    }</code></pre>
+
+
+
+<h5>切換頁面的方式有</h5>
+
+
+
+<ol>
+<li>直接透過 path</li>
+<li>透過 name</li>
+</ol>
+
+
+
+<p>兩種方式可以混合運用。</p>
+
+
+
+<p>index.html</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width,initial-scale=1.0"&gt;
+    &lt;title&gt;vuewebpack-router&lt;/title&gt;
+    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id="app"&gt;&lt;/div&gt;
+    &lt;!-- built files will be auto injected --&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+
+<p>index.js</p>
+
+
+
+<pre class="wp-block-code"><code>// 官方的文件
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+
+// 自訂的分頁元件
+import Home from '@/components/HelloWorld';
+import Page from '@/components/pages/page';
+
+// 啟用的方式
+Vue.use(VueRouter);
+
+// 匯出給 Entry 使用
+export default new VueRouter({
+    routes: &#91;
+        {
+          name: '首頁',  // 元件呈現的名稱
+          path: '/index',  // 對應的虛擬路徑
+          component: Home,  // 對應的原件
+        },
+        {
+          name: '分頁',  // 元件呈現的名稱
+          path: '/page',  // 對應的虛擬路徑
+          component: Page,  // 對應的原件
+        },
+    ],
+});</code></pre>
+
+
+
+<p>App.vue</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;template&gt;
+  &lt;div id="app"&gt;
+    &lt;nav class="navbar navbar-expand-lg navbar-light bg-light"&gt;
+      &lt;a class="navbar-brand" href="#"&gt;Navbar&lt;/a&gt;
+      &lt;div class="collapse navbar-collapse" id="navbarSupportedContent"&gt;
+        &lt;ul class="navbar-nav mr-auto"&gt;
+          &lt;li class="nav-item"&gt;
+            &lt;router-link class="nav-link" :to="{ name: '首頁' }"&gt;Home&lt;/router-link&gt;
+          &lt;/li&gt;
+          &lt;li class="nav-item"&gt;
+            &lt;router-link class="nav-link" to="/page"&gt;Page&lt;/router-link&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/nav&gt;
+    &lt;img src="./assets/logo.png" /&gt;
+    &lt;!-- &lt;HelloWorld/&gt; --&gt;
+    &lt;router-view&gt;&lt;/router-view&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import HelloWorld from "./components/HelloWorld";
+
+export default {
+  name: "App",
+  components: {
+    HelloWorld,
+  },
+};
+&lt;/script&gt;</code></pre>
+
+
+
+<p>page.vue</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;template&gt;
+  &lt;div class="hello"&gt;
+    &lt;div class="card" style="width: 18rem"&gt;
+      &lt;img src="" class="card-img-top" alt="Card img cap" /&gt;
+      &lt;div class="card-body"&gt;
+        &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+        &lt;p class="card-text"&gt;
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        &lt;/p&gt;
+        &lt;a href="#" class="btn btn-primary"&gt;Go somewhere&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  data() {
+    return {};
+  },
+};
+&lt;/script&gt;</code></pre>
+
+
+
+<h3>製作巢狀路由頁面</h3>
+
+
+
+<p>假設切換到 child 頁面下，希望外層維持原本的卡片，裡面的內容會依據 child1、child2、child3 來切換裡面的內容。</p>
+
+
+
+<p>操作步驟</p>
+
+
+
+<ol>
+<li>另存 child.vue 檔案<br>不需要 class card 的部分，謹記外層要留一層 div</li>
+<li>另存 child2.vue、child3.vue<br>總共會有三個子元件</li>
+<li>三個子元件的三個子元件的內容給予不同的名稱<br>child.vue 標題使用 Card 1<br>child2.vue 標題使用 Card 2<br>child3.vue 標題使用 Card 3</li>
+<li>page.vue card的內容先移除，會透過 router 的方式來切換 card 裡面的內容，card 裡面會加上 &lt;router-view&gt; 標籤，和外層一樣的 &lt;router-view&gt; 標籤， router-veiw 的部分就會切換 child、child2、child3</li>
+<li>router 配置檔 index.js 加上子元件的路徑</li>
+<li>在 page.vue 使用 &lt;router-link&gt; 來切換這三個子分頁</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// 5.
+// 自訂的分頁元件
+// 載入卡片元件
+import child from '@/components/pages/child';
+import child2 from '@/components/pages/child2;
+import child3 from '@/components/pages/child3;
+
+children: &#91;
+  {
+    name: '卡片 1', // 元件呈現的名稱
+    path: '' , //對應的虛擬路徑
+    component: Home, // 對應的元件
+  },
+  {
+    name: '卡片 1', // 元件呈現的名稱
+    path: 'child2', // 對應的虛擬路徑
+    component: child2, // 對應的元件
+  },
+  {
+    name: '卡片 1', // 元件呈現的名稱
+    path: 'child3', // 對應的虛擬路徑
+    component: child3, // 對應的元件
+  },
+],</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 6.
+&lt;router-link to="/page/"&gt;卡片 1&lt;/router-link&gt;
+&lt;router-link to="/page/child2"&gt;卡片 2&lt;/router-link&gt;
+&lt;router-link to="/page/child3"&gt;卡片 3&lt;/router-link&gt;</code></pre>
+
+
+
+<h3>使用動態路由切換頁面 Ajax 結果</h3>
+
+
+
+<p>透過蘋果日報的網頁來介紹。<br><br>動態路由的用處是使用相同的版型，透過 id 來決定這裡面要載入什麼樣的內容。</p>
+
+
+
+<p>操作步驟</p>
+
+
+
+<ol>
+<li>在 index.js 有三個子元件，這個子元件都是使用相同的版型、內容，調整其中一個版型試看看，使用的是 child3 來做調整，改成 path: ‘child/:id’，回到網頁把url 改成 …/#/page/child/ffff</li>
+<li>取到 id 的方式是在 child3.vue，使用一個 created，這個 created 就是在這個元件生成的時候，同時執行這個方法，這個就是可以存取動態路由的方式</li>
+<li>了解有什麼樣的用處，使用 vue-axios 載進來了解一下</li>
+<li>停止終端機，安裝 vue-axios 套件，把套件內容加到 entry (main.js) 裡面來，就可以去啟用它</li>
+<li>重新執行 npm run dev</li>
+<li>回到 child3.vue 元件，使用 axios 來取得遠端資料<br><a rel="noreferrer noopener" href="https://randomuser.me/" target="_blank">RANDOM USER GENERATOR</a>，試著把它資料讀進來</li>
+<li>動態路由的使用方式就是我們可以固定取到同一筆資料，<br>在 RANDOM USER 文件裡面有個 Seeds 的方法，可以取到同一個人的資料，接下來使用動態路由的方式去存取同一路由的方式去存取同一份資料</li>
+<li>這個就是動態路由的使用方式，我們可以用這個來決定 Ajax 所讀入的資料</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// 1. index.js
+path: 'child/:id'</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 2. child3.vue
+created() {
+  console.log(this.$route.params.id);
+},</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 4.
+npm install --save axios vue-axios
+
+// Import libraries in entry file
+import axios from 'axios';
+import VueAxios from 'vue-axios';
+
+// Usage in Vue 2
+Vue.use(VueAxios, axios);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 6.
+created() {
+  console.log(this.$route.params.id);
+  this.$http.get('https://randomuser.me/api/').then((response) =&gt; {
+    console.log(response);
+  });
+},</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 7.
+created() {
+  console.log(this.$route.params.id);
+  const id = this.$route.params.id;
+  this.$http.get(`https://randomuser.me/api/?seed=${id}`).then((response) =&gt; {
+    console.log(response);
+  });
+},</code></pre>
+
+
+
+<h3>命名路由，同一個路徑載入兩個頁面元件</h3>
+
+
+
+<h5>調整介紹</h5>
+
+
+
+<ol>
+<li>在 App.vue 的 &lt;router-view&gt; 標籤外層加上 .container，限制最大的寬度</li>
+<li>在 child3.vue 的部分，原本是採用 id 的方式直接載入路徑，現在是改載入隨機的圖片，child3.vue id已經被拿掉、router 的 index.js 也沒有呈現 id</li>
+<li>在每個卡片的部分使用一些假圖</li>
+</ol>
+
+
+
+<p>主要調整的部分，美化的設計、加上圖片、外層加上 .container，以及卡片3的 id 拿掉。</p>
+
+
+
+<h5>同一個畫面下，直接執行兩個 router-view</h5>
+
+
+
+<p>操作步驟</p>
+
+
+
+<ol>
+<li>在 App.vue 的地方，主要呈現的下方區塊就是在這個 &lt;router-view&gt; 上面，但有些時候在載入時會需要同時載入不同的區塊，在 container 的外層想要另外加入一個選單，就可以新增一個 &lt;router-view&gt; 上來，下面那個 &lt;router-view&gt; 就是預設的 &lt;router-view&gt;，上面這個就是另外設定的 &lt;router-view&gt;，給予名稱 name=”menu”，存檔後畫面並不會有太大的調整。因為當沒有使用 name 的部分，另外一個，另外一個則是使用預設的狀態，所以目前所設定都跑在預設的 &lt;router-view&gt; 上面，上面另外設定的 &lt;router-view&gt; 並沒有使用到</li>
+<li>新增一個 menu.vue，從現有的元件使用 page.vue 另存 menu.vue，把卡片拿掉，留下上面連結的地方</li>
+<li>在 page.vue 上方的連結拿掉，把它移動 menu.vue 裡面來，menu 裡面的連結稍做美化，使用 Bootstrap 4 裡面的 Navs 的元件，複製貼到 menu.vue，並把現有的 &lt;router-link&gt; 替換進去，同時記得 class 也要加回去，多餘的連結就清掉。現在的狀態就是把原本 page.vue 裡面的 nav-link 移動到 menu 上面，然後存檔。現在畫面上就沒有 nav-link，可以在 menu.vue 裡面 div 加上間距 .my-3</li>
+<li>在 Home 這頁就不要加入上方的選單，在 Page 頁面才要加入上方的選單</li>
+<li>到路由的配置文件 (router 裡面的 index.js)，把 menu.vue 載進來</li>
+<li>到 index.js 分頁的地方，原本是使用 component 在渲染下面這個區塊，把 component 改成 components，裡面使用是一個物件，物件裡面第一個是 default、第二個是自定義的 &lt;router-view&gt; 的名稱，使用 menu 名稱，default 的部分就採用、渲染原來的 Page，menu 就渲染剛所載入的 Menu 的元件</li>
+<li>回到畫面上，重新整理，按下 Page 分頁後， 上方就出現自定義的 menu，下方的部分一樣是 Page 的元件，點選的時候一樣可以做畫面的切換</li>
+<li>回到 App.vue 可以看到這兩個 &lt;router-view&gt; 可以渲染在不同的標籤上面</li>
+<li>小問題修正，回到畫面上右鍵打開檢查、點選 Console 有跳出一些錯誤</li>
+<li>到 index.js，這裡的 name 是不能用相同的 name，替換成卡片 1 、卡片 2、卡片 3</li>
+<li>另外一個問題則是在 children 的部分，這裡沒有設定路徑，當沒有設定路徑的時候，就是在上層的部分預設值項目，所以下面的 name 名稱會取代上面的 name 名稱，所以要把上面的 name 註解掉，讓他進入這個連結的時候，直接使用 children 裡面 name 的名稱</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// 1. 上面的 &lt;router-view&gt;
+&lt;router-view name="menu"&gt;&lt;/router-view&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 3.
+// page.vue
+&lt;template&gt;
+  &lt;div class="hello"&gt;
+    &lt;div class="card" style="width: 18rem"&gt;
+      &lt;router-view&gt;&lt;/router-view&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+// menu.vue
+&lt;template&gt;
+  &lt;div class="hello"&gt;
+    &lt;ul class="nav"&gt;
+      &lt;li class="nav-item"&gt;
+        &lt;router-link class="nav-link" to="/page/"&gt;卡片 1&lt;/router-link&gt;
+      &lt;/li&gt;
+      &lt;li class="nav-item"&gt;
+        &lt;router-link class="nav-link" to="/page/child2"&gt;卡片 2&lt;/router-link&gt;
+      &lt;/li&gt;
+      &lt;li class="nav-item"&gt;
+        &lt;router-link class="nav-link" to="/page/child3"&gt;卡片 3&lt;/router-link&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/template&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 5. 載入選單元件
+import Menu from '@/components/pages/menu';</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 6.
+components: {
+  default: Page,
+  menu: Menu,
+},
+
+// 講解
+// components 可以載入多個元件，依據定義的名稱依序把元件載入
+// default 載入預設沒有使用 name 的 &lt;router-view&gt;
+// 其他部分則會對應到有自定義名稱的 &lt;router-view&gt;</code></pre>
+
+
+
+<h3>Vue Router&nbsp;參數設定</h3>
+
+
+
+<p>介紹 Vue Router 的配置文件。</p>
+
+
+
+<p><a rel="noreferrer noopener" href="https://router.vuejs.org/zh/api/#router-link" target="_blank">Vue Router API 參考</a></p>
+
+
+
+<h5>API 文檔</h5>
+
+
+
+<ul>
+<li>Router 構造配置</li>
+<li>Router 實例</li>
+</ul>
+
+
+
+<p>主要這個小節會先介紹 Router 構造配置的部分，指的是 Vue router 配置文件，在 router 下的 index.js 這支檔案。</p>
+
+
+
+<p>Router 構造配置的文件，就是介紹除了我們介紹這些，還有哪些方法及屬性可以使用。</p>
+
+
+
+<p>以 routes 來說針對 routes 下的其中一個物件還有哪些方法可以去做設定，像 router 下的 index.js 有設定的 name、path，以及 component，也就是對應到 Router 構造配置的 routes 的方法可以做一些運用。其他的設置會在實戰課程有更詳盡的介紹，會搭配一些情境來做使用。</p>
+
+
+
+<p>mode 這個的地方則是路徑配置的方法，現在的路徑配置方法是#後面帶上連結 (#/連結)，當切換頁面的時候，這個#會不斷的保留，就算切換其他頁面，他都是存在的。</p>
+
+
+
+<p>這個 mode 的設定就可以將路徑替換成 HTML5 的模式，也就是說不需要#也可以正確的切換路徑。先把 mode 切換成 history 的模式，存檔之後回到畫面上把路徑都去掉，去掉之後在切換頁面的時候，他的#是不需要的，然後可以正確的切換頁面的內容。</p>
+
+
+
+<p>在此特別注意的是當沒有#的時候代表他所使用的是後端伺服器的路由，他不是指使用前端的路由，因此當我們使用 history 這個模式的時候，它必須前後端的搭配，也就是不是 index.js 做調整即可，因為現在是在 webpack 的環境下，webpack 有支援這個模式，當開啟 history 模式，也就是伺服器也要對應此模式，在此比較不推薦直接把它打開，可以用預設的模式即可，也就是有帶上#這個路徑。</p>
+
+
+
+<pre class="wp-block-code"><code>// mode 切換成 history 的模式
+mode: 'history',</code></pre>
+
+
+
+<p>base 則是說你的路徑並不是直接在根目錄下，而你是掛載在其他目錄下的時候，可以加入這個 base 的設定。</p>
+
+
+
+<p>linkActiveClass、linkExactActiveClass，這兩個是比較相近的，前者是模糊比對，後者是絕對比對，也就是說，當我們觸發特定路徑的時候，它會在你的標籤上加上 class 的名稱。</p>
+
+
+
+<p>回到畫面上，直接透過開發者工具，來看特定的標籤，像我們現在所啟用的是 Home 路徑，這個路徑下它就會加上 router-link-active 這個 class name 在這個標籤上。</p>
+
+
+
+<p>接下來點擊另外一個 Page，點擊另外一個 Page 之後，上方這個 Home 的 class name 就被移除了，它會移到下方的標籤上，這個名稱是可以做替換的，預設是 “router-link-active”，當我們要做替換的話，就可把這個屬性加上來，把它換成 ‘active’，存檔之後回到畫面上，接下來它在啟用的狀態下，它就會替換成 “active”，這個就是針對於標籤的 class name 的替換。</p>
+
+
+
+<pre class="wp-block-code"><code>// 把這個屬性加上來，把它換成 'active'
+linkActiveClass: 'active',</code></pre>
+
+
+
+<h3>自定義切換路由方法</h3>
+
+
+
+<p>介紹路由的一些方法，在切換頁面的時候常常不能只依靠 &lt;router-link&gt; 去做切換，有些時候必須透過方法去做切換，比如說有些行為必須在 Ajax 結束之後再去切換畫面，那麼這個 &lt;router-link&gt; 就不一定適用。所以在這個章節，我們要自定義一些事件來切換這些 router。</p>
+
+
+
+<p>到達 Vue Router 文件下方有個 Router 實例，在這個地方有個 Methods，Methods 的這個地方就有一些方法可以使用，像這裡有 push、replace、go、back、forward、replace、go、back、forward，這幾個都是切換路由的方法，在這個章節我們就來介紹這個部分。</p>
+
+
+
+<p>打開 menu.vue打開 menu.vue，這裡已經有一些連結，在這個部分我們新增一個路徑，但是這個路徑的觸發，我們要把它改成使用 a 連結，並且自定義一些事件。我們的事件把它改成先使用 class=”nav-link” 先把樣式加上去，接下來我們使用 @click，在這個地方建議先補上 prevent 避免他被預設的事件給取代掉，然後 .prevent=”updatePath”，我們透過這個自定義的事件來更新路徑，我們把 updatePath 加到下面來，補上 methods。</p>
+
+
+
+<pre class="wp-block-code"><code>// menu.vue 新增一個路徑，改成使用 a 連結，並且自定義一些事件
+&lt;li class="nav-item"&gt;
+  &lt;router-link class="nav-link" to="/page/child3"&gt;卡片 3&lt;/router-link&gt;
+  &lt;a href="#" class="nav-link" @click.prevent="updatePath"&gt;&lt;/a&gt;
+&lt;/li&gt;
+
+// 把 updatePath 加到下面來，補上 methods
+methods: {
+  updatePath() {
+
+  },
+},</code></pre>
+
+
+
+<p>回到文件這個地方，這個文件就有提供這些取代路徑的方式，我們先使用 push，把 router push 加上來，router push 如果你直接放在這個地方是沒有辦法直接使用，如果我們要取用它的話，我們必須要加上 this.$router.push，這個意思就是我們直接來操作這個文件所提到 router 的方法，他會直接透過 main.js 直接把這個掛載進來，所以在這個部分我們就可以使用 push 的方法。接下來我們再加上路徑，先直接切換成卡片 2 /page/child2，a 連結上方的那行先消掉，在 &lt;a&gt; 標籤裡面輸入切換到指定頁面，然後存檔，當我們把 updatePath、push 加上去之後，我們就可以透過這個切換到指定頁面的連結來切換頁面，當我們按下去之後就會切換到卡片 2按下去之後就會切換到卡片 2。</p>
+
+
+
+<pre class="wp-block-code"><code>// updatePath
+&lt;li class="nav-item"&gt;
+  &lt;a href="#" class="nav-link" @click.prevent="updatePath"&gt;切換到指定頁面&lt;/a&gt;
+&lt;/li&gt;
+
+// push
+methods: {
+  updatePath() {
+    this.$router.push('/page/child2');
+  },
+},</code></pre>
+
+
+
+<p>除了這個方法之外，還可以回到上一頁，在此先把切換到指定頁面的 &lt;li&gt; 複製起來，在加上 beforePath 的方法，&lt;a&gt; 標籤改成回到前頁，在下面這部分先複製 updatePath 這一段，把 beforePath 替換過來，回到前頁我們可以參考文件裡面它所使用的是 back 這個方法，就可以把 back 加上去，裡面是不需要加入其他參數的，重新整理後，我們先按下卡片 1、2、3，接下來就可以透過回到前頁連結往前切換。</p>
+
+
+
+<pre class="wp-block-code"><code>// beforePath
+&lt;li class="nav-item"&gt;
+  &lt;a href="#" class="nav-link" @click.prevent="beforePath"&gt;回到上頁&lt;/a&gt;
+&lt;/li&gt;
+
+// back
+beforePath() {
+  this.$router.back();
+},</code></pre>
+
+
+
+<p>另外一個 forward 就是指下一頁，還有一個與它比較相近的是 go，go 的話就是可以基於目前所在的位置往前或往後做切換，在此輸入 -1 的話，跟 back 的行為是一模一樣的。重新整理之後，按下卡片1、2、3，接下來按下回到前頁，它一樣會3、2、1的回去。</p>
+
+
+
+<pre class="wp-block-code"><code>// goPath
+&lt;li class="nav-item"&gt;
+  &lt;a href="#" class="nav-link" @click.prevent="goPath"&gt;使用go回到上頁&lt;/a&gt;
+&lt;/li&gt;
+
+// go
+goPath() {
+  this.$router.go(-1);
+},</code></pre>
+
+
+
+<p>除此之外還有一個是 replace，replace 是與 push 蠻接近的，像我們剛剛回到前一頁是因為它在瀏覽器有個紀錄，當我們使用 replace 的時候，它則不會把這個紀錄加進去，它是直接取代目前的頁面。</p>
+
+
+
+<pre class="wp-block-code"><code>// replacePath
+&lt;li class="nav-item"&gt;
+  &lt;a href="#" class="nav-link" @click.prevent="replacePath"&gt;使用replace切換到卡片 2&lt;/a&gt;
+&lt;/li&gt;
+
+// replace
+replacePath() {
+  this.$router.replace('/page/child2');
+},</code></pre>
+
+
+
+<p>重新整理之後，先在卡片 1、按下卡片 3、最後我們按下使用replace切換到卡片 2，現在我們的順序應該是1→3→2，但是我們在這個時候按下回到前頁，會直接跳到卡片 1，因為卡片 3跳到卡片 2的紀錄並不存在，所以它會直接跳到卡片 1，這些就是透過 methods 來操作 router 的方法，讓我們 router 的介紹基本上就到這邊，比較複雜的部份，我們則會到實戰演練的時候，來跟大家介紹其它的使用案例。</p>
+	</div>
+<!-- .entry-content -->
+
+	<footer class="entry-footer">
+			</footer><!-- .entry-footer -->
+</article><!-- #post-667 -->
+
+	<nav class="navigation post-navigation" aria-label="文章">
+		<h2 class="screen-reader-text">文章導覽</h2>
+		<div class="nav-links">
+<div class="nav-previous"><a href="/wordpress_blog/vue-hexschool-1/" rel="prev"><span class="nav-subtitle">Previous:</span> <span class="nav-title">Vue 出一個電傷網站 (1)</span></a></div>
+<div class="nav-next"><a href="/wordpress_blog/vue-hexschool-3/" rel="next"><span class="nav-subtitle">Next:</span> <span class="nav-title">Vue 出一個電商網站 (3)</span></a></div>
+</div>
+	</nav>
+	</main><!-- #main -->
+
+
+	</div></div>
+			
+			<footer id="colophon" class="site-footer">
+
+				
+				<div class="container-fluid">
+					<div class="site-info">
+						<div class="row">
+
+															
+								<div class="col-12 footer-copyright-elements footer-copyright-alignment-center">
+
+									<div class="botiga-credits">&copy; 2022 wordpress_blog. 
+Created by Gee Hsu. 
+<br>Proudly powered by <a rel="nofollow" href="https://athemes.com/theme/botiga/">Botiga</a>
+</div>
+<div class="social-profile">
+<a target="_blank" href="https://www.facebook.com/watergrass0402/"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></i></a><a target="_blank" href="https://github.com/GeeHsu"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></i></a>
+</div>
+								</div>
+														
+						</div>
+					</div>
+				</div>
+<!-- .site-info -->
+
+				
+			</footer><!-- #colophon -->
+
+			
+			<div class="back-to-top visibility-all position-right"><i class="ws-svg-icon"><svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 15l7-7 7 7" stroke-width="3" stroke-linejoin="round"></path></svg></i></div>
+</div>
+<!-- #page -->
+
+
+<script id="botiga-custom-js-extra">
+var botiga = {"ajaxurl":"\/wp-admin\/admin-ajax.php","i18n":{"botiga_sharebox_copy_link":"Copy link","botiga_sharebox_copy_link_copied":"Copied!"}};
+</script>
+<script src="/wordpress_blog/wp-content/themes/botiga/assets/js/custom.min.js?ver=1.1.2" id="botiga-custom-js"></script>
+
+</body>
+</html>

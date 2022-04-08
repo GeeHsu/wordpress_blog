@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>未分類 &#8211; wordpress_blog</title>
+	<atom:link href="/wordpress_blog/category/uncategorized/feed/" rel="self" type="application/rss+xml" />
+	<link>/wordpress_blog</link>
+	<description>This is a dynamic to static website.</description>
+	<lastBuildDate>Fri, 08 Apr 2022 00:09:16 +0000</lastBuildDate>
+	<language>zh-TW</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.9.3</generator>
+
+<image>
+	<url>/wordpress_blog/wp-content/uploads/2022/03/logo.png</url>
+	<title>未分類 &#8211; wordpress_blog</title>
+	<link>/wordpress_blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>ScrollTop &#8211; 滑動效果</title>
+		<link>/wordpress_blog/scrolltop/</link>
+		
+		<dc:creator><![CDATA[gee.hsu]]></dc:creator>
+		<pubDate>Tue, 07 Jul 2020 00:08:00 +0000</pubDate>
+				<category><![CDATA[未分類]]></category>
+		<guid isPermaLink="false">/wordpress_blog/?p=749</guid>
+
+					<description><![CDATA[資源：來自網路上，自學用。 程式碼範例 HTML CSS]]></description>
+										<content:encoded><![CDATA[
+<p>資源：來自網路上，自學用。</p>
+
+
+
+<h6>程式碼範例</h6>
+
+
+
+<p>HTML</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Scrolltop-滑動效果&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+&lt;/head&gt;
+
+&lt;body style="height: 2000px;"&gt;
+
+    &lt;div class="actGotop"&gt;&lt;a href="javascript:;" title="返回頂部"&gt;&lt;/a&gt;&lt;/div&gt;
+
+    &lt;script type="text/javascript" src="js/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript"&gt;
+        $(function () {
+            $(window).scroll(function () {
+                if ($(window).scrollTop() &gt;= 100) {
+                    $('.actGotop').fadeIn(300);
+                } else {
+                    $('.actGotop').fadeOut(300);
+                }
+            });
+            $('.actGotop').click(function () {
+                $('html,body').animate({ scrollTop: '0px' }, 800);
+            });
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+
+
+
+<p>CSS</p>
+
+
+
+<pre class="wp-block-code"><code>*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+a, img{
+    border: 0;
+}
+body{
+    background: url(../img/videobg.png);
+    font: 12px/180% Arial, Helvetica, sans-serif, "新宋體";
+}
+
+/* actGotop */
+.actGotop{
+    position: fixed;
+    /* _position:absolute; */
+    bottom: 100px;
+    right: 50px;
+    width: 150px;
+    height: 195px;
+    display: none;
+}
+.actGotop a,.actGotop a:link{
+    width: 150px;
+    height: 195px;
+    display: inline-block;
+    background: url(../img/gotop.png) no-repeat;
+    outline: none;
+}
+.actGotop a:hover{
+    background: url(../img/gotop.png) no-repeat;
+    outline: none;
+}</code></pre>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

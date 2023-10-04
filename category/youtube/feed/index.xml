@@ -12,7 +12,7 @@
 	<atom:link href="/wordpress_blog/category/youtube/feed/" rel="self" type="application/rss+xml" />
 	<link>/wordpress_blog</link>
 	<description>This is a dynamic to static website.</description>
-	<lastBuildDate>Wed, 04 Oct 2023 04:28:48 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 04 Oct 2023 05:39:49 +0000</lastBuildDate>
 	<language>zh-TW</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,485 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>15 Web Developer-Related Career Paths</title>
+		<link>/wordpress_blog/web-developer-career/</link>
+		
+		<dc:creator><![CDATA[gee.hsu]]></dc:creator>
+		<pubDate>Wed, 04 Oct 2023 05:39:47 +0000</pubDate>
+				<category><![CDATA[Youtube]]></category>
+		<guid isPermaLink="false">/wordpress_blog/?p=772</guid>
+
+					<description><![CDATA[Learning From Youtube Channel:&#038;n [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p>Learning From Youtube Channel:&nbsp;<a rel="noreferrer noopener" href="https://www.youtube.com/@TraversyMedia/videos" target="_blank">Traversy Media</a><br>Video:&nbsp;<a rel="noreferrer noopener" href="https://www.youtube.com/watch?v=1_gLbLPx2T8" target="_blank">15 Web Developer-Related Career Paths</a><br>Thank you.</p>
+
+
+
+<p>In this video, we will look a bit deeper than frontend, backend, and full stack. We will explore 15 different web dev-related roles including UI/UX Designers, SPA Developers, API/microservices developers, Blockchain, IoT and much more.</p>
+
+
+
+<h2 class="wp-block-heading">Web Development Career Guide</h2>
+
+
+
+<p>A comprehensive guide with 15 different paths to consider</p>
+
+
+
+<h2 class="wp-block-heading">1. UI/UX Designer</h2>
+
+
+
+<ul>
+<li>Design Principles: Color, contrast, whitespace, typography, etc</li>
+
+
+
+<li>Design Software: Figma, Sketch, Adobe products</li>
+
+
+
+<li>Wireframing &amp; Prototyping: Plan the layout of app screens</li>
+
+
+
+<li>User: Research: Identify and validate user needs</li>
+
+
+
+<li>User Testing: Test and validate designs</li>
+
+
+
+<li>Basic HTML &amp; CSS: Smooth collaboration</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">2. Single Page App (SPA) Developer</h2>
+
+
+
+<ul>
+<li>JavaScript Frameworks: React, Angular, Vue, Svelte</li>
+
+
+
+<li>Routing: Implement client-side routing, views and components</li>
+
+
+
+<li>State Management: Utilize libraries like Redux, Vuex</li>
+
+
+
+<li>API Integration: REST APIs, GraphQL</li>
+
+
+
+<li>Lazy Loading: Optimize performance for assets, components</li>
+
+
+
+<li>Security: Protect against XSS, CSRF,etc</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">3. Server-Side Developer</h2>
+
+
+
+<ul>
+<li>Server-Side Languages &amp; Technologies: Node, Python, PHP, C#</li>
+
+
+
+<li>Backend Frameworks: Express, Django, Laravel, Rails</li>
+
+
+
+<li>SSR Frameworks: Next.js, Nuxt.js, Remix</li>
+
+
+
+<li>Database &amp; ORM: MySQL, Postgres, MongoDB, Prisma</li>
+
+
+
+<li>Template Engines: Blade, Pug, EJS, Handlebars, Twig</li>
+
+
+
+<li>Authentication &amp; Authorization: JWT, Sessions, Cookies, OAuth</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">4. API &amp; Microservices Developer</h2>
+
+
+
+<ul>
+<li>Server-Side Languages &amp; Technologies: Node, Python, PHP, C#</li>
+
+
+
+<li>Microservices Architecture: Service discovery, load balancing, etc</li>
+
+
+
+<li>API Design: REST API, GraphQL</li>
+
+
+
+<li>Containerization: Packaging for microservices</li>
+
+
+
+<li>API Gateways: Implement gateways for routing</li>
+
+
+
+<li>Authentication &amp; Authorization: Secure APIs with auth mechanisms</li>
+
+
+
+<li>Scalability: Handle varying workloads</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">5. Dev Ops Engineer</h2>
+
+
+
+<ul>
+<li>Cloud Providers: AWS, Azure, Google Cloud</li>
+
+
+
+<li>Infrastructure As Code: Terraform, CloudFormation</li>
+
+
+
+<li>Containerization: Docker, Kubernetes</li>
+
+
+
+<li>Serverless: AWS Lambda, Azure Functions</li>
+
+
+
+<li>Continuous Integration: CircleCI, Github Actions</li>
+
+
+
+<li>Continuous Deployment: AWS CodeDeploy, Azure DevOps</li>
+
+
+
+<li>Monitoring, Logging &amp; Alerting: DataDog, Loggly, Opsgenie</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">6. Mobile Developer</h2>
+
+
+
+<ul>
+<li>iOS: Create apps with Swift and Objective-C</li>
+
+
+
+<li>Android: Create apps with Kotlin and Java</li>
+
+
+
+<li>Cross-Platform: Use web technologies like React Native and Flutter</li>
+
+
+
+<li>API Development: Create APIs for your mobile app to interact with</li>
+
+
+
+<li>Mobile Testing: Test with tools like Jest and Appium</li>
+
+
+
+<li>Native Build Tools: XCode and Android Studio</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">7. Freelance Web Developer</h2>
+
+
+
+<ul>
+<li>Content Management Systems: WordPress, Headless CMS like Strapi</li>
+
+
+
+<li>Static Site Generators: Build fast with Gatsby, Gridsome, 11ty</li>
+
+
+
+<li>Website Builders: Wix, Webflow. More business-oriented</li>
+
+
+
+<li>Communication: Work with clients and manage projects</li>
+
+
+
+<li>Marketing: Learn to sell yourself</li>
+
+
+
+<li>SEO: Optimize your client websites</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">8. E-commerce Developer</h2>
+
+
+
+<ul>
+<li>PAYMENT Gateways: Stripe, PayPal integration</li>
+
+
+
+<li>User Accounts &amp; Authorization</li>
+
+
+
+<li>E-Commerce Flow: Product display, shopping cart, checkout</li>
+
+
+
+<li>Product, Customer &amp; Order Management</li>
+
+
+
+<li>E-Commerce Platforms: Shopify, WooCommerce</li>
+
+
+
+<li>SEO: Search engine visibility is very important</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">9. Web Security Specialist</h2>
+
+
+
+<ul>
+<li>Web Vulnerabilities: Protect and identify SQL injection, XSS, CSRF</li>
+
+
+
+<li>Web Security Tools: OWASP ZAP, Nessus, Burp Suite</li>
+
+
+
+<li>Penetration Testing</li>
+
+
+
+<li>Security Audits</li>
+
+
+
+<li>Security Compliance: Understand compliance and regulations</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">10. Web/Mobile Game Developer</h2>
+
+
+
+<ul>
+<li>Game Logic &amp; Design: Master game physics and design principles</li>
+
+
+
+<li>Game Engines: Phaser, Unity</li>
+
+
+
+<li>WebGL: Render 3D graphics in the browser</li>
+
+
+
+<li>Cross-Browser Capability: Work smooth across browsers/devices</li>
+
+
+
+<li>Game Performance: Optimize with tools like Lighthouse</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">11. Blockchain Developer</h2>
+
+
+
+<ul>
+<li>Smart Contract Development: Solidity &amp; Rust</li>
+
+
+
+<li>Blockchain Platforms: Ethereum, Binance Smart Chain</li>
+
+
+
+<li>DApp Development: Create decentralized applications</li>
+
+
+
+<li>DeFi: Decentralized Finance</li>
+
+
+
+<li>Web3.js: Library to interact with blockchain networks and apps</li>
+
+
+
+<li>Blockchain Security : Learn bet practices</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">12. AR / VR Developer</h2>
+
+
+
+<ul>
+<li>AR / VR Frameworks: Unity 3D, A-Frame</li>
+
+
+
+<li>3D Modeling</li>
+
+
+
+<li>Spatial Computing</li>
+
+
+
+<li>Gesture Recognition: Hand tracking for user input</li>
+
+
+
+<li>Immersive Design: Create immersive &amp; friendly UX</li>
+
+
+
+<li>Cross-Platform Development: Run on various devices</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">13. PWA Web Developer</h2>
+
+
+
+<ul>
+<li>Service Workers: Offline functionality and background sync</li>
+
+
+
+<li>Web App Manifest: Define app behavior, home screen, etc</li>
+
+
+
+<li>Responsive Design: Design should respond across all devices</li>
+
+
+
+<li>Caching Strategies: Increase performance and reduce load times</li>
+
+
+
+<li>Push Notifications: Re-engage users</li>
+
+
+
+<li>App-Shell Architecture: Provide a fast initial experience</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">14. IoT (Internet Of Things) Developer</h2>
+
+
+
+<ul>
+<li>IoT Protocols: Communication protocols like MQTT, CoAP and HTTP</li>
+
+
+
+<li>Hardware Integration: Sensors, actuators, and microcontrollers</li>
+
+
+
+<li>Cloud IoT Services: AWS IoT, Google Cloud IoT</li>
+
+
+
+<li>Data Streaming: Setup data pipelines</li>
+
+
+
+<li>Mobile Control Apps: Use and test remotely</li>
+
+
+
+<li>Machine Learning: Apply machine learning models</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">15. ChatBot Developer</h2>
+
+
+
+<ul>
+<li>natural Language Processing: NLTK, SpaCy, Tensorflow</li>
+
+
+
+<li>ChatBot Frameworks: DialogFlow, Microsoft Bot Framework</li>
+
+
+
+<li>Integrations: Slack, Discord, WhatsApp</li>
+
+
+
+<li>Voice Assistants: Amazon Alexa, Google Assistant</li>
+
+
+
+<li>Contextual Understanding: Maintain engagement</li>
+
+
+
+<li>Testing &amp; Analytics</li>
+</ul>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Web Development In 2023 – A Practical Guide</title>
 		<link>/wordpress_blog/web-development-in-2023/</link>
 		

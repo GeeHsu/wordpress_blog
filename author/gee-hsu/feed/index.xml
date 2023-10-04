@@ -12,7 +12,7 @@
 	<atom:link href="/wordpress_blog/author/gee-hsu/feed/" rel="self" type="application/rss+xml" />
 	<link>/wordpress_blog</link>
 	<description>This is a dynamic to static website.</description>
-	<lastBuildDate>Wed, 04 Oct 2023 04:28:48 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 04 Oct 2023 05:39:49 +0000</lastBuildDate>
 	<language>zh-TW</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,485 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>15 Web Developer-Related Career Paths</title>
+		<link>/wordpress_blog/web-developer-career/</link>
+		
+		<dc:creator><![CDATA[gee.hsu]]></dc:creator>
+		<pubDate>Wed, 04 Oct 2023 05:39:47 +0000</pubDate>
+				<category><![CDATA[Youtube]]></category>
+		<guid isPermaLink="false">/wordpress_blog/?p=772</guid>
+
+					<description><![CDATA[Learning From Youtube Channel:&#038;n [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p>Learning From Youtube Channel:&nbsp;<a rel="noreferrer noopener" href="https://www.youtube.com/@TraversyMedia/videos" target="_blank">Traversy Media</a><br>Video:&nbsp;<a rel="noreferrer noopener" href="https://www.youtube.com/watch?v=1_gLbLPx2T8" target="_blank">15 Web Developer-Related Career Paths</a><br>Thank you.</p>
+
+
+
+<p>In this video, we will look a bit deeper than frontend, backend, and full stack. We will explore 15 different web dev-related roles including UI/UX Designers, SPA Developers, API/microservices developers, Blockchain, IoT and much more.</p>
+
+
+
+<h2 class="wp-block-heading">Web Development Career Guide</h2>
+
+
+
+<p>A comprehensive guide with 15 different paths to consider</p>
+
+
+
+<h2 class="wp-block-heading">1. UI/UX Designer</h2>
+
+
+
+<ul>
+<li>Design Principles: Color, contrast, whitespace, typography, etc</li>
+
+
+
+<li>Design Software: Figma, Sketch, Adobe products</li>
+
+
+
+<li>Wireframing &amp; Prototyping: Plan the layout of app screens</li>
+
+
+
+<li>User: Research: Identify and validate user needs</li>
+
+
+
+<li>User Testing: Test and validate designs</li>
+
+
+
+<li>Basic HTML &amp; CSS: Smooth collaboration</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">2. Single Page App (SPA) Developer</h2>
+
+
+
+<ul>
+<li>JavaScript Frameworks: React, Angular, Vue, Svelte</li>
+
+
+
+<li>Routing: Implement client-side routing, views and components</li>
+
+
+
+<li>State Management: Utilize libraries like Redux, Vuex</li>
+
+
+
+<li>API Integration: REST APIs, GraphQL</li>
+
+
+
+<li>Lazy Loading: Optimize performance for assets, components</li>
+
+
+
+<li>Security: Protect against XSS, CSRF,etc</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">3. Server-Side Developer</h2>
+
+
+
+<ul>
+<li>Server-Side Languages &amp; Technologies: Node, Python, PHP, C#</li>
+
+
+
+<li>Backend Frameworks: Express, Django, Laravel, Rails</li>
+
+
+
+<li>SSR Frameworks: Next.js, Nuxt.js, Remix</li>
+
+
+
+<li>Database &amp; ORM: MySQL, Postgres, MongoDB, Prisma</li>
+
+
+
+<li>Template Engines: Blade, Pug, EJS, Handlebars, Twig</li>
+
+
+
+<li>Authentication &amp; Authorization: JWT, Sessions, Cookies, OAuth</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">4. API &amp; Microservices Developer</h2>
+
+
+
+<ul>
+<li>Server-Side Languages &amp; Technologies: Node, Python, PHP, C#</li>
+
+
+
+<li>Microservices Architecture: Service discovery, load balancing, etc</li>
+
+
+
+<li>API Design: REST API, GraphQL</li>
+
+
+
+<li>Containerization: Packaging for microservices</li>
+
+
+
+<li>API Gateways: Implement gateways for routing</li>
+
+
+
+<li>Authentication &amp; Authorization: Secure APIs with auth mechanisms</li>
+
+
+
+<li>Scalability: Handle varying workloads</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">5. Dev Ops Engineer</h2>
+
+
+
+<ul>
+<li>Cloud Providers: AWS, Azure, Google Cloud</li>
+
+
+
+<li>Infrastructure As Code: Terraform, CloudFormation</li>
+
+
+
+<li>Containerization: Docker, Kubernetes</li>
+
+
+
+<li>Serverless: AWS Lambda, Azure Functions</li>
+
+
+
+<li>Continuous Integration: CircleCI, Github Actions</li>
+
+
+
+<li>Continuous Deployment: AWS CodeDeploy, Azure DevOps</li>
+
+
+
+<li>Monitoring, Logging &amp; Alerting: DataDog, Loggly, Opsgenie</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">6. Mobile Developer</h2>
+
+
+
+<ul>
+<li>iOS: Create apps with Swift and Objective-C</li>
+
+
+
+<li>Android: Create apps with Kotlin and Java</li>
+
+
+
+<li>Cross-Platform: Use web technologies like React Native and Flutter</li>
+
+
+
+<li>API Development: Create APIs for your mobile app to interact with</li>
+
+
+
+<li>Mobile Testing: Test with tools like Jest and Appium</li>
+
+
+
+<li>Native Build Tools: XCode and Android Studio</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">7. Freelance Web Developer</h2>
+
+
+
+<ul>
+<li>Content Management Systems: WordPress, Headless CMS like Strapi</li>
+
+
+
+<li>Static Site Generators: Build fast with Gatsby, Gridsome, 11ty</li>
+
+
+
+<li>Website Builders: Wix, Webflow. More business-oriented</li>
+
+
+
+<li>Communication: Work with clients and manage projects</li>
+
+
+
+<li>Marketing: Learn to sell yourself</li>
+
+
+
+<li>SEO: Optimize your client websites</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">8. E-commerce Developer</h2>
+
+
+
+<ul>
+<li>PAYMENT Gateways: Stripe, PayPal integration</li>
+
+
+
+<li>User Accounts &amp; Authorization</li>
+
+
+
+<li>E-Commerce Flow: Product display, shopping cart, checkout</li>
+
+
+
+<li>Product, Customer &amp; Order Management</li>
+
+
+
+<li>E-Commerce Platforms: Shopify, WooCommerce</li>
+
+
+
+<li>SEO: Search engine visibility is very important</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">9. Web Security Specialist</h2>
+
+
+
+<ul>
+<li>Web Vulnerabilities: Protect and identify SQL injection, XSS, CSRF</li>
+
+
+
+<li>Web Security Tools: OWASP ZAP, Nessus, Burp Suite</li>
+
+
+
+<li>Penetration Testing</li>
+
+
+
+<li>Security Audits</li>
+
+
+
+<li>Security Compliance: Understand compliance and regulations</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">10. Web/Mobile Game Developer</h2>
+
+
+
+<ul>
+<li>Game Logic &amp; Design: Master game physics and design principles</li>
+
+
+
+<li>Game Engines: Phaser, Unity</li>
+
+
+
+<li>WebGL: Render 3D graphics in the browser</li>
+
+
+
+<li>Cross-Browser Capability: Work smooth across browsers/devices</li>
+
+
+
+<li>Game Performance: Optimize with tools like Lighthouse</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">11. Blockchain Developer</h2>
+
+
+
+<ul>
+<li>Smart Contract Development: Solidity &amp; Rust</li>
+
+
+
+<li>Blockchain Platforms: Ethereum, Binance Smart Chain</li>
+
+
+
+<li>DApp Development: Create decentralized applications</li>
+
+
+
+<li>DeFi: Decentralized Finance</li>
+
+
+
+<li>Web3.js: Library to interact with blockchain networks and apps</li>
+
+
+
+<li>Blockchain Security : Learn bet practices</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">12. AR / VR Developer</h2>
+
+
+
+<ul>
+<li>AR / VR Frameworks: Unity 3D, A-Frame</li>
+
+
+
+<li>3D Modeling</li>
+
+
+
+<li>Spatial Computing</li>
+
+
+
+<li>Gesture Recognition: Hand tracking for user input</li>
+
+
+
+<li>Immersive Design: Create immersive &amp; friendly UX</li>
+
+
+
+<li>Cross-Platform Development: Run on various devices</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">13. PWA Web Developer</h2>
+
+
+
+<ul>
+<li>Service Workers: Offline functionality and background sync</li>
+
+
+
+<li>Web App Manifest: Define app behavior, home screen, etc</li>
+
+
+
+<li>Responsive Design: Design should respond across all devices</li>
+
+
+
+<li>Caching Strategies: Increase performance and reduce load times</li>
+
+
+
+<li>Push Notifications: Re-engage users</li>
+
+
+
+<li>App-Shell Architecture: Provide a fast initial experience</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">14. IoT (Internet Of Things) Developer</h2>
+
+
+
+<ul>
+<li>IoT Protocols: Communication protocols like MQTT, CoAP and HTTP</li>
+
+
+
+<li>Hardware Integration: Sensors, actuators, and microcontrollers</li>
+
+
+
+<li>Cloud IoT Services: AWS IoT, Google Cloud IoT</li>
+
+
+
+<li>Data Streaming: Setup data pipelines</li>
+
+
+
+<li>Mobile Control Apps: Use and test remotely</li>
+
+
+
+<li>Machine Learning: Apply machine learning models</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">15. ChatBot Developer</h2>
+
+
+
+<ul>
+<li>natural Language Processing: NLTK, SpaCy, Tensorflow</li>
+
+
+
+<li>ChatBot Frameworks: DialogFlow, Microsoft Bot Framework</li>
+
+
+
+<li>Integrations: Slack, Discord, WhatsApp</li>
+
+
+
+<li>Voice Assistants: Amazon Alexa, Google Assistant</li>
+
+
+
+<li>Contextual Understanding: Maintain engagement</li>
+
+
+
+<li>Testing &amp; Analytics</li>
+</ul>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Web Development In 2023 – A Practical Guide</title>
 		<link>/wordpress_blog/web-development-in-2023/</link>
 		
@@ -36126,3090 +36605,6 @@ ninja&#91;symbolOne] = 'ryu';
 ninja&#91;symbolTwo] = 'shaun';
 
 console.log(ninja);</code></pre>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Modern JavaScript (2)</title>
-		<link>/wordpress_blog/modern-javascript-2/</link>
-		
-		<dc:creator><![CDATA[gee.hsu]]></dc:creator>
-		<pubDate>Mon, 17 Jan 2022 03:46:00 +0000</pubDate>
-				<category><![CDATA[Net Ninja]]></category>
-		<guid isPermaLink="false">/wordpress_blog/?p=492</guid>
-
-					<description><![CDATA[(Complete guide, from Novice to  [&#8230;]]]></description>
-										<content:encoded><![CDATA[
-<p>(Complete guide, from Novice to Ninja)</p>
-
-
-
-<blockquote class="wp-block-quote"><p>Learning Udemy Course：<a href="https://www.udemy.com/course/modern-javascript-from-novice-to-ninja/" target="_blank" rel="noreferrer noopener">Modern JavaScript</a></p><cite>建立者：The Net Ninja (Shaun Pelling)</cite></blockquote>
-
-
-
-<p>Learn Modern JavaScript from the very start to ninja-level &amp; build awesome JavaScript applications.</p>
-
-
-
-<h4 class="wp-block-heading">您會學到</h4>
-
-
-
-<ul><li>Learn how to program with modern JavaScript, from the very beginning to more advanced topics</li><li>Learn all about OOP (object-oriented programming) with JavaScript, working with prototypes &amp; classes</li><li>Learn how to create real-world front-end applications with JavaScript (quizes, weather apps, chat rooms etc)</li><li>Learn how to make useful JavaScript driven UI components like popups, drop-downs, tabs, tool-tips &amp; more.</li><li>Learn how to use modern, cutting-edge JavaScript features today by using a modern workflow (Babel &amp; Webpack)</li><li>Learn how to use real-time databases to store, retrieve and update application data</li><li>Explore API’s to make the most of third-party data (such as weather information)</li></ul>
-
-
-
-<h2 class="wp-block-heading">Forms &amp; Form Events</h2>
-
-
-
-<h3 class="wp-block-heading">Events Inside Forms</h3>
-
-
-
-<h4 class="wp-block-heading">Form Events</h4>
-
-
-
-<ul><li>Capture data or information from a user</li><li>E.g. a username &amp; password</li></ul>
-
-
-
-<h4 class="wp-block-heading">Submit Events</h4>
-
-
-
-<ul><li>“submit” event, which submits the form</li><li>keyboard events</li></ul>
-
-
-
-<h3 class="wp-block-heading">Submit Events</h3>
-
-
-
-<pre class="wp-block-code"><code>// index.html
-
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;link rel="stylesheet" href="style.css"&gt;
-    &lt;title&gt;Modern JavaScript&lt;/title&gt;
-    &lt;style&gt;
-        body {
-            background: #eee;
-        }
-
-        form {
-            max-width: 200px;
-            margin: 40px auto;
-            background: white;
-            padding: 10px;
-        }
-
-        input {
-            display: block;
-            margin: 10px auto;
-            padding: 4px;
-        }
-    &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-    &lt;form class="signup-form"&gt;
-        &lt;input type="text" id="username" placeholder="username"&gt;
-        &lt;input type="submit" value="submit"&gt;
-    &lt;/form&gt;
-    
-    &lt;script src="sandbox.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// sandbox.js
-
-const form = document.querySelector('.signup-form');
-// const username = document.querySelector('#username');
-
-form.addEventListener('submit', e =&gt; {
-  e.preventDefault();
-  // console.log(username.value);
-  console.log(form.username.value);
-});</code></pre>
-
-
-
-<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Regular Expressions (正規表達式)</h3>
-
-
-
-<h4 class="wp-block-heading">資源</h4>
-
-
-
-<ul><li><a href="https://regex101.com/" target="_blank" rel="noreferrer noopener">Regex101 Website</a></li><li><a href="https://www.youtube.com/playlist?list=PL4cUxeGkcC9g6m_6Sld9Q4jzqdqHd2HiD" target="_blank" rel="noreferrer noopener">Regex Playlist on the Net Ninja Youtube Channel</a></li></ul>
-
-
-
-<h4 class="wp-block-heading">Regex101 介紹</h4>
-
-
-
-<ul><li>ninja</li><li>^ninja$</li><li>^[a-z]$</li><li>^[c-p]$</li><li>^[a-zA-Z]$</li><li>^[a-zA-Z]{6,10}$，大小寫a~z、字數6~10</li><li>^[a-zA-Z0-9]{6,10}$，大小寫a-z、數字0到9、字數6~10</li><li>^.{6,10}$，任何字符字元、字數6~10</li></ul>
-
-
-
-<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Testing RegEx Patterns</h3>
-
-
-
-<pre class="wp-block-code"><code>// index.html
-
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;link rel="stylesheet" href="style.css"&gt;
-    &lt;title&gt;Modern JavaScript&lt;/title&gt;
-    &lt;style&gt;
-        body {
-            background: #eee;
-        }
-
-        form {
-            max-width: 200px;
-            margin: 40px auto;
-            background: white;
-            padding: 10px;
-        }
-
-        input {
-            display: block;
-            margin: 10px auto;
-            padding: 4px;
-        }
-    &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-    &lt;form class="signup-form"&gt;
-        &lt;input type="text" id="username" placeholder="username"&gt;
-        &lt;input type="submit" value="submit"&gt;
-    &lt;/form&gt;
-    
-    &lt;script src="sandbox.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// sandbox.js - 1
-
-const form = document.querySelector('.signup-form');
-// const username = document.querySelector('#username');
-
-form.addEventListener('submit', e =&gt; {
-  e.preventDefault();
-  // console.log(username.value);
-  console.log(form.username.value);
-});
-
-// testing RegEx
-const username = 'shaunp123';
-const pattern = /^&#91;a-z]{6,}$/;
-
-let result = pattern.test(username);
-// console.log(result);
-
-if(result){
-  console.log('regex test passed :)');
-}
-else{
-  console.log('regex test failed :(');
-}</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// sandbox.js - 2
-
-const form = document.querySelector('.signup-form');
-// const username = document.querySelector('#username');
-
-form.addEventListener('submit', e =&gt; {
-  e.preventDefault();
-  // console.log(username.value);
-  console.log(form.username.value);
-});
-
-// testing RegEx
-const username = 'shaunp123';
-const pattern = /^&#91;a-z]{6,}$/;
-
-// let result = pattern.test(username);
-// // console.log(result);
-
-// if(result){
-//   console.log('regex test passed :)');
-// }
-// else{
-//   console.log('regex test failed :(');
-// }
-
-let result = username.search(pattern);
-console.log(result);</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// Google Console - 2
-   -1
-&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// sandbox.js - 3
-
-const form = document.querySelector('.signup-form');
-// const username = document.querySelector('#username');
-
-form.addEventListener('submit', e =&gt; {
-  e.preventDefault();
-  // console.log(username.value);
-  console.log(form.username.value);
-});
-
-// testing RegEx
-const username = 'shaunp';
-const pattern = /^&#91;a-z]{6,}$/;
-
-// let result = pattern.test(username);
-// // console.log(result);
-
-// if(result){
-//   console.log('regex test passed :)');
-// }
-// else{
-//   console.log('regex test failed :(');
-// }
-
-let result = username.search(pattern);
-console.log(result);</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// Google Console - 3
-   0
-&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// sandbox.js - 4
-
-const form = document.querySelector('.signup-form');
-// const username = document.querySelector('#username');
-
-form.addEventListener('submit', e =&gt; {
-  e.preventDefault();
-  // console.log(username.value);
-  console.log(form.username.value);
-});
-
-// testing RegEx
-const username = '3434shaunp3656';
-const pattern = /&#91;a-z]{6,}/;
-
-// let result = pattern.test(username);
-// // console.log(result);
-
-// if(result){
-//   console.log('regex test passed :)');
-// }
-// else{
-//   console.log('regex test failed :(');
-// }
-
-let result = username.search(pattern);
-console.log(result);</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// Google Console - 4
-   4
-&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// sandbox.js - 5
-
-const form = document.querySelector('.signup-form');
-// const username = document.querySelector('#username');
-
-form.addEventListener('submit', e =&gt; {
-  e.preventDefault();
-  // console.log(username.value);
-  console.log(form.username.value);
-});
-
-// testing RegEx
-const username = '3434shaunp3656';
-const pattern = /^&#91;a-z]{6,}$/;
-
-// let result = pattern.test(username);
-// // console.log(result);
-
-// if(result){
-//   console.log('regex test passed :)');
-// }
-// else{
-//   console.log('regex test failed :(');
-// }
-
-let result = username.search(pattern);
-console.log(result);</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// Google Console - 5
-   -1
-&gt;</code></pre>
-
-
-
-<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Basic Form Validation</h3>
-
-
-
-<pre class="wp-block-code"><code>// index.html
-
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;link rel="stylesheet" href="style.css"&gt;
-    &lt;title&gt;Modern JavaScript&lt;/title&gt;
-    &lt;style&gt;
-        body {
-            background: #eee;
-        }
-
-        form {
-            max-width: 200px;
-            margin: 40px auto;
-            background: white;
-            padding: 10px;
-        }
-
-        input {
-            display: block;
-            margin: 10px auto;
-            padding: 4px;
-        }
-    &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-    &lt;form class="signup-form"&gt;
-        &lt;input type="text" id="username" name="username" placeholder="username"&gt;
-        &lt;input type="submit" value="submit"&gt;
-        &lt;div class="feedback"&gt;&lt;/div&gt;
-    &lt;/form&gt;
-    
-    &lt;script src="sandbox.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// sandbox.js
-
-const form = document.querySelector('.signup-form');
-const feedback = document.querySelector('.feedback');
-
-form.addEventListener('submit', e =&gt; {
-  e.preventDefault();
-
-  // validation
-  const username = form.username.value;
-  const usernamePattern = /^&#91;a-zA-Z]{6,12}$/;
-
-  if(usernamePattern.test(username)){
-    // feedback good info
-    feedback.textContent = 'that username is valid!';
-  }
-  else{
-    // feedback help info
-    feedback.textContent = 'username must contain letters only &amp; be between 6 &amp; 12 characters long';
-  }
-
-});
-</code></pre>
-
-
-
-<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Keyboard Events</h3>
-
-
-
-<h4 class="wp-block-heading">MDN 文件</h4>
-
-
-
-<ul><li><a href="https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation#validating_forms_using_javascript" target="_blank" rel="noreferrer noopener">Validating forms using JavaScript</a></li></ul>
-
-
-
-<pre class="wp-block-code"><code>// index.html - 1
-
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;link rel="stylesheet" href="style.css"&gt;
-    &lt;title&gt;Modern JavaScript&lt;/title&gt;
-    &lt;style&gt;
-        body {
-            background: #eee;
-        }
-
-        form {
-            max-width: 200px;
-            margin: 40px auto;
-            background: white;
-            padding: 10px;
-        }
-
-        input {
-            display: block;
-            margin: 10px auto;
-            padding: 4px;
-        }
-    &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-    &lt;form class="signup-form"&gt;
-        &lt;input type="text" id="username" name="username" placeholder="username"&gt;
-        &lt;input type="submit" value="submit"&gt;
-        &lt;div class="feedback"&gt;&lt;/div&gt;
-    &lt;/form&gt;
-    
-    &lt;script src="sandbox.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// sandbox.js - 1
-
-const form = document.querySelector('.signup-form');
-const feedback = document.querySelector('.feedback');
-const usernamePattern = /^&#91;a-zA-Z]{6,12}$/;
-
-form.addEventListener('submit', e =&gt; {
-  e.preventDefault();
-
-  // validation
-  const username = form.username.value;
-
-  if(usernamePattern.test(username)){
-    // feedback good info
-    feedback.textContent = 'that username is valid!';
-  }
-  else{
-    // feedback help info
-    feedback.textContent = 'username must contain letters only &amp; be between 6 &amp; 12 characters long';
-  }
-
-});
-
-// live feedback
-form.username.addEventListener('keyup', e =&gt; {
-  // console.log(e.target.value, form.username.value);
-  if(usernamePattern.test(e.target.value)){
-    console.log('passed');
-  }
-  else{
-    console.log('failed');
-  }
-});
-</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// Google Console - 1
-5  failed
-   passed
-&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// index.html - 2
-
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;link rel="stylesheet" href="style.css"&gt;
-    &lt;title&gt;Modern JavaScript&lt;/title&gt;
-    &lt;style&gt;
-        body {
-            background: #eee;
-        }
-
-        form {
-            max-width: 200px;
-            margin: 40px auto;
-            background: white;
-            padding: 10px;
-        }
-
-        input {
-            display: block;
-            margin: 10px auto;
-            padding: 4px;
-        }
-
-        .success {
-            border: 2px solid limegreen;
-        }
-
-        .error {
-            border: 2px solid crimson;
-        }
-        
-    &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-    &lt;form class="signup-form"&gt;
-        &lt;input type="text" id="username" name="username" placeholder="username"&gt;
-        &lt;input type="submit" value="submit"&gt;
-        &lt;div class="feedback"&gt;&lt;/div&gt;
-    &lt;/form&gt;
-    
-    &lt;script src="sandbox.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// sandbox.js - 2
-
-const form = document.querySelector('.signup-form');
-const feedback = document.querySelector('.feedback');
-const usernamePattern = /^&#91;a-zA-Z]{6,12}$/;
-
-form.addEventListener('submit', e =&gt; {
-  e.preventDefault();
-
-  // validation
-  const username = form.username.value;
-
-  if(usernamePattern.test(username)){
-    // feedback good info
-    feedback.textContent = 'that username is valid!';
-  }
-  else{
-    // feedback help info
-    feedback.textContent = 'username must contain letters only &amp; be between 6 &amp; 12 characters long';
-  }
-
-});
-
-// live feedback
-form.username.addEventListener('keyup', e =&gt; {
-  // console.log(e.target.value, form.username.value);
-  if(usernamePattern.test(e.target.value)){
-    // console.log('passed');
-    form.username.setAttribute('class', 'success');
-  }
-  else{
-    // console.log('failed');
-    form.username.setAttribute('class', 'error');
-  }
-});
-</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// sandbox.js - 3 console.log(e);
-
-const form = document.querySelector('.signup-form');
-const feedback = document.querySelector('.feedback');
-const usernamePattern = /^&#91;a-zA-Z]{6,12}$/;
-
-form.addEventListener('submit', e =&gt; {
-  e.preventDefault();
-
-  // validation
-  const username = form.username.value;
-
-  if(usernamePattern.test(username)){
-    // feedback good info
-    feedback.textContent = 'that username is valid!';
-  }
-  else{
-    // feedback help info
-    feedback.textContent = 'username must contain letters only &amp; be between 6 &amp; 12 characters long';
-  }
-
-});
-
-// live feedback
-form.username.addEventListener('keyup', e =&gt; {
-  console.log(e);
-  // console.log(e.target.value, form.username.value);
-  if(usernamePattern.test(e.target.value)){
-    // console.log('passed');
-    form.username.setAttribute('class', 'success');
-  }
-  else{
-    // console.log('failed');
-    form.username.setAttribute('class', 'error');
-  }
-});
-</code></pre>
-
-
-
-<h2 class="wp-block-heading">Project – Interactive Ninja Quiz</h2>
-
-
-
-<h3 class="wp-block-heading">Project Preview &amp; Setup</h3>
-
-
-
-<h3 class="wp-block-heading">Bootstrap Basics</h3>
-
-
-
-<h4 class="wp-block-heading">資源</h4>
-
-
-
-<ul><li><a rel="noreferrer noopener" href="https://getbootstrap.com/" target="_blank">Bootstrap Website</a>&nbsp;– 使用 v4.3</li></ul>
-
-
-
-<h3 class="wp-block-heading">HTML Template</h3>
-
-
-
-<h4 class="wp-block-heading">資源</h4>
-
-
-
-<ul><li><a href="https://github.com/iamshaunjp/modern-javascript/tree/lesson-66" target="_blank" rel="noreferrer noopener">GitHub files for this lesson (HTML template)</a></li></ul>
-
-
-
-<pre class="wp-block-code"><code>// index.html
-
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"&gt;
-    &lt;title&gt;Ninja Quiz&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    
-    &lt;!-- top section --&gt;
-    &lt;div class="intro py-3 bg-white text-center"&gt;
-      &lt;div class="container"&gt;
-        &lt;h2 class="text-primary display-3 my-4"&gt;Ninja Quiz&lt;/h2&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;!-- quiz section --&gt;
-    &lt;div class="quiz py-4 bg-primary"&gt;
-      &lt;div class="container"&gt;
-        &lt;h2 class="my-5 text-white"&gt;On with the questions...&lt;/h2&gt;
-
-        &lt;form class="quiz-form text-light"&gt;
-          &lt;div class="my-5"&gt;
-            &lt;p class="lead font-weight-normal"&gt;1. How do you give a ninja directions?&lt;/p&gt;
-            &lt;div class="form-check my-2 text-white-50"&gt;
-              &lt;input type="radio" name="q1" value="A" checked&gt;
-              &lt;label class="form-check-label"&gt;Show them a map&lt;/label&gt;
-            &lt;/div&gt;
-            &lt;div class="form-check my-2 text-white-50"&gt;
-              &lt;input type="radio" name="q1" value="B"&gt;
-              &lt;label class="form-check-label"&gt;Don't worry, a ninja will find you&lt;/label&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class="my-5"&gt;
-            &lt;p class="lead font-weight-normal"&gt;2. If a ninja has 3 apples, then gives one to Mario &amp; one to Yoshi, how many apples does the ninja have left?&lt;/p&gt;
-            &lt;div class="form-check my-2 text-white-50"&gt;
-              &lt;input type="radio" name="q2" value="A" checked&gt;
-              &lt;label class="form-check-label"&gt;1 apple&lt;/label&gt;
-            &lt;/div&gt;
-            &lt;div class="form-check my-2 text-white-50"&gt;
-              &lt;input type="radio" name="q2" value="B"&gt;
-              &lt;label class="form-check-label"&gt;3 apples, and two corpses&lt;/label&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class="my-5"&gt;
-            &lt;p class="lead font-weight-normal"&gt;3. How do you know when you've met a ninja?&lt;/p&gt;
-            &lt;div class="form-check my-2 text-white-50"&gt;
-              &lt;input type="radio" name="q3" value="A" checked&gt;
-              &lt;label class="form-check-label"&gt;You'll recognize the outfit&lt;/label&gt;
-            &lt;/div&gt;
-            &lt;div class="form-check my-2 text-white-50"&gt;
-              &lt;input type="radio" name="q3" value="B"&gt;
-              &lt;label class="form-check-label"&gt;The grim reaper will tell you&lt;/label&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class="my-5"&gt;
-            &lt;p class="lead font-weight-normal"&gt;4. What is a ninja's favorite array method?&lt;/p&gt;
-            &lt;div class="form-check my-2 text-white-50"&gt;
-              &lt;input type="radio" name="q4" value="A" checked&gt;
-              &lt;label class="form-check-label"&gt;forEach()&lt;/label&gt;
-            &lt;/div&gt;
-            &lt;div class="form-check my-2 text-white-50"&gt;
-              &lt;input type="radio" name="q4" value="B"&gt;
-              &lt;label class="form-check-label"&gt;Slice()&lt;/label&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class="text-center"&gt;
-            &lt;input type="submit" class="btn btn-light"&gt;
-          &lt;/div&gt;
-        &lt;/form&gt;
-
-      &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;script src="app.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-
-
-
-<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Checking Answers</h3>
-
-
-
-<pre class="wp-block-code"><code>// index.html
-
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"&gt;
-    &lt;title&gt;Ninja Quiz&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    
-    &lt;!-- top section --&gt;
-    &lt;div class="intro py-3 bg-white text-center"&gt;
-      &lt;div class="container"&gt;
-        &lt;h2 class="text-primary display-3 my-4"&gt;Ninja Quiz&lt;/h2&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;!-- quiz section --&gt;
-    &lt;div class="quiz py-4 bg-primary"&gt;
-      &lt;div class="container"&gt;
-        &lt;h2 class="my-5 text-white"&gt;On with the questions...&lt;/h2&gt;
-
-        &lt;form class="quiz-form text-light"&gt;
-          &lt;div class="my-5"&gt;
-            &lt;p class="lead font-weight-normal"&gt;1. How do you give a ninja directions?&lt;/p&gt;
-            &lt;div class="form-check my-2 text-white-50"&gt;
-              &lt;input type="radio" name="q1" value="A" checked&gt;
-              &lt;label class="form-check-label"&gt;Show them a map&lt;/label&gt;
-            &lt;/div&gt;
-            &lt;div class="form-check my-2 text-white-50"&gt;
-              &lt;input type="radio" name="q1" value="B"&gt;
-              &lt;label class="form-check-label"&gt;Don't worry, a ninja will find you&lt;/label&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class="my-5"&gt;
-            &lt;p class="lead font-weight-normal"&gt;2. If a ninja has 3 apples, then gives one to Mario &amp; one to Yoshi, how many apples does the ninja have left?&lt;/p&gt;
-            &lt;div class="form-check my-2 text-white-50"&gt;
-              &lt;input type="radio" name="q2" value="A" checked&gt;
-              &lt;label class="form-check-label"&gt;1 apple&lt;/label&gt;
-            &lt;/div&gt;
-            &lt;div class="form-check my-2 text-white-50"&gt;
-              &lt;input type="radio" name="q2" value="B"&gt;
-              &lt;label class="form-check-label"&gt;3 apples, and two corpses&lt;/label&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class="my-5"&gt;
-            &lt;p class="lead font-weight-normal"&gt;3. How do you know when you've met a ninja?&lt;/p&gt;
-            &lt;div class="form-check my-2 text-white-50"&gt;
-              &lt;input type="radio" name="q3" value="A" checked&gt;
-              &lt;label class="form-check-label"&gt;You'll recognize the outfit&lt;/label&gt;
-            &lt;/div&gt;
-            &lt;div class="form-check my-2 text-white-50"&gt;
-              &lt;input type="radio" name="q3" value="B"&gt;
-              &lt;label class="form-check-label"&gt;The grim reaper will tell you&lt;/label&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class="my-5"&gt;
-            &lt;p class="lead font-weight-normal"&gt;4. What is a ninja's favorite array method?&lt;/p&gt;
-            &lt;div class="form-check my-2 text-white-50"&gt;
-              &lt;input type="radio" name="q4" value="A" checked&gt;
-              &lt;label class="form-check-label"&gt;forEach()&lt;/label&gt;
-            &lt;/div&gt;
-            &lt;div class="form-check my-2 text-white-50"&gt;
-              &lt;input type="radio" name="q4" value="B"&gt;
-              &lt;label class="form-check-label"&gt;Slice()&lt;/label&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class="text-center"&gt;
-            &lt;input type="submit" class="btn btn-light"&gt;
-          &lt;/div&gt;
-        &lt;/form&gt;
-
-      &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;script src="app.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// app.js
-
-const correctAnswers = &#91;'B','B','B','B'];
-const form = document.querySelector('.quiz-form');
-
-form.addEventListener('submit', e =&gt; {
-  e.preventDefault();
-
-  let score = 0;
-  const userAnswers = &#91;form.q1.value, form.q2.value, form.q3.value, form.q4.value];
-
-  // check answers
-  userAnswers.forEach((answer, index) =&gt; {
-    if(answer === correctAnswers&#91;index]){
-      score += 25;
-    }
-  });
-
-  console.log(score);
-
-});</code></pre>
-
-
-
-<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Showing the Score</h3>
-
-
-
-<pre class="wp-block-code"><code>// index.html
-
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"&gt;
-    &lt;title&gt;Ninja Quiz&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    
-    &lt;!-- top section --&gt;
-    &lt;div class="intro py-3 bg-white text-center"&gt;
-      &lt;div class="container"&gt;
-        &lt;h2 class="text-primary display-3 my-4"&gt;Ninja Quiz&lt;/h2&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;!-- result section --&gt;
-    &lt;div class="result py-4 d-none bg-light text-center"&gt;
-      &lt;div class="container lead"&gt;
-        &lt;p&gt;You are &lt;span class="text-primary display-4 p-3"&gt;0%&lt;/span&gt; ninja&lt;/p&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;!-- quiz section --&gt;
-    &lt;div class="quiz py-4 bg-primary"&gt;
-      &lt;div class="container"&gt;
-        &lt;h2 class="my-5 text-white"&gt;On with the questions...&lt;/h2&gt;
-
-        &lt;form class="quiz-form text-light"&gt;
-          &lt;div class="my-5"&gt;
-            &lt;p class="lead font-weight-normal"&gt;1. How do you give a ninja directions?&lt;/p&gt;
-            &lt;div class="form-check my-2 text-white-50"&gt;
-              &lt;input type="radio" name="q1" value="A" checked&gt;
-              &lt;label class="form-check-label"&gt;Show them a map&lt;/label&gt;
-            &lt;/div&gt;
-            &lt;div class="form-check my-2 text-white-50"&gt;
-              &lt;input type="radio" name="q1" value="B"&gt;
-              &lt;label class="form-check-label"&gt;Don't worry, a ninja will find you&lt;/label&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class="my-5"&gt;
-            &lt;p class="lead font-weight-normal"&gt;2. If a ninja has 3 apples, then gives one to Mario &amp; one to Yoshi, how many apples does the ninja have left?&lt;/p&gt;
-            &lt;div class="form-check my-2 text-white-50"&gt;
-              &lt;input type="radio" name="q2" value="A" checked&gt;
-              &lt;label class="form-check-label"&gt;1 apple&lt;/label&gt;
-            &lt;/div&gt;
-            &lt;div class="form-check my-2 text-white-50"&gt;
-              &lt;input type="radio" name="q2" value="B"&gt;
-              &lt;label class="form-check-label"&gt;3 apples, and two corpses&lt;/label&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class="my-5"&gt;
-            &lt;p class="lead font-weight-normal"&gt;3. How do you know when you've met a ninja?&lt;/p&gt;
-            &lt;div class="form-check my-2 text-white-50"&gt;
-              &lt;input type="radio" name="q3" value="A" checked&gt;
-              &lt;label class="form-check-label"&gt;You'll recognize the outfit&lt;/label&gt;
-            &lt;/div&gt;
-            &lt;div class="form-check my-2 text-white-50"&gt;
-              &lt;input type="radio" name="q3" value="B"&gt;
-              &lt;label class="form-check-label"&gt;The grim reaper will tell you&lt;/label&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class="my-5"&gt;
-            &lt;p class="lead font-weight-normal"&gt;4. What is a ninja's favorite array method?&lt;/p&gt;
-            &lt;div class="form-check my-2 text-white-50"&gt;
-              &lt;input type="radio" name="q4" value="A" checked&gt;
-              &lt;label class="form-check-label"&gt;forEach()&lt;/label&gt;
-            &lt;/div&gt;
-            &lt;div class="form-check my-2 text-white-50"&gt;
-              &lt;input type="radio" name="q4" value="B"&gt;
-              &lt;label class="form-check-label"&gt;Slice()&lt;/label&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class="text-center"&gt;
-            &lt;input type="submit" class="btn btn-light"&gt;
-          &lt;/div&gt;
-        &lt;/form&gt;
-
-      &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;script src="app.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// app.js
-
-const correctAnswers = &#91;'B','B','B','B'];
-const form = document.querySelector('.quiz-form');
-const result = document.querySelector('.result');
-
-form.addEventListener('submit', e =&gt; {
-  e.preventDefault();
-
-  let score = 0;
-  const userAnswers = &#91;form.q1.value, form.q2.value, form.q3.value, form.q4.value];
-
-  // check answers
-  userAnswers.forEach((answer, index) =&gt; {
-    if(answer === correctAnswers&#91;index]){
-      score += 25;
-    }
-  });
-
-  // show result on page
-  result.querySelector('span').textContent = `${score}%`;
-  result.classList.remove('d-none');
-  
-
-});</code></pre>
-
-
-
-<h3 class="has-background wp-block-heading" style="background-color:#ff6663">The Window Object (觀念、scrollTo)</h3>
-
-
-
-<pre class="wp-block-code"><code>// Google Console
-&gt;  window
-&lt;  Window&nbsp;{window: Window, self: Window, document: document, name: '', location: Location,&nbsp;…}
-&gt;  window.outerWidth
-&lt;  1280
-&gt;  outerWidth
-&lt;  1280
-&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// index.html
-
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"&gt;
-    &lt;title&gt;Ninja Quiz&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    
-    &lt;!-- top section --&gt;
-    &lt;div class="intro py-3 bg-white text-center"&gt;
-      &lt;div class="container"&gt;
-        &lt;h2 class="text-primary display-3 my-4"&gt;Ninja Quiz&lt;/h2&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;!-- result section --&gt;
-    &lt;div class="result py-4 d-none bg-light text-center"&gt;
-      &lt;div class="container lead"&gt;
-        &lt;p&gt;You are &lt;span class="text-primary display-4 p-3"&gt;0%&lt;/span&gt; ninja&lt;/p&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;!-- quiz section --&gt;
-    &lt;div class="quiz py-4 bg-primary"&gt;
-      &lt;div class="container"&gt;
-        &lt;h2 class="my-5 text-white"&gt;On with the questions...&lt;/h2&gt;
-
-        &lt;form class="quiz-form text-light"&gt;
-          &lt;div class="my-5"&gt;
-            &lt;p class="lead font-weight-normal"&gt;1. How do you give a ninja directions?&lt;/p&gt;
-            &lt;div class="form-check my-2 text-white-50"&gt;
-              &lt;input type="radio" name="q1" value="A" checked&gt;
-              &lt;label class="form-check-label"&gt;Show them a map&lt;/label&gt;
-            &lt;/div&gt;
-            &lt;div class="form-check my-2 text-white-50"&gt;
-              &lt;input type="radio" name="q1" value="B"&gt;
-              &lt;label class="form-check-label"&gt;Don't worry, a ninja will find you&lt;/label&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class="my-5"&gt;
-            &lt;p class="lead font-weight-normal"&gt;2. If a ninja has 3 apples, then gives one to Mario &amp; one to Yoshi, how many apples does the ninja have left?&lt;/p&gt;
-            &lt;div class="form-check my-2 text-white-50"&gt;
-              &lt;input type="radio" name="q2" value="A" checked&gt;
-              &lt;label class="form-check-label"&gt;1 apple&lt;/label&gt;
-            &lt;/div&gt;
-            &lt;div class="form-check my-2 text-white-50"&gt;
-              &lt;input type="radio" name="q2" value="B"&gt;
-              &lt;label class="form-check-label"&gt;3 apples, and two corpses&lt;/label&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class="my-5"&gt;
-            &lt;p class="lead font-weight-normal"&gt;3. How do you know when you've met a ninja?&lt;/p&gt;
-            &lt;div class="form-check my-2 text-white-50"&gt;
-              &lt;input type="radio" name="q3" value="A" checked&gt;
-              &lt;label class="form-check-label"&gt;You'll recognize the outfit&lt;/label&gt;
-            &lt;/div&gt;
-            &lt;div class="form-check my-2 text-white-50"&gt;
-              &lt;input type="radio" name="q3" value="B"&gt;
-              &lt;label class="form-check-label"&gt;The grim reaper will tell you&lt;/label&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class="my-5"&gt;
-            &lt;p class="lead font-weight-normal"&gt;4. What is a ninja's favorite array method?&lt;/p&gt;
-            &lt;div class="form-check my-2 text-white-50"&gt;
-              &lt;input type="radio" name="q4" value="A" checked&gt;
-              &lt;label class="form-check-label"&gt;forEach()&lt;/label&gt;
-            &lt;/div&gt;
-            &lt;div class="form-check my-2 text-white-50"&gt;
-              &lt;input type="radio" name="q4" value="B"&gt;
-              &lt;label class="form-check-label"&gt;Slice()&lt;/label&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class="text-center"&gt;
-            &lt;input type="submit" class="btn btn-light"&gt;
-          &lt;/div&gt;
-        &lt;/form&gt;
-
-      &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;script src="app.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// app.js
-
-const correctAnswers = &#91;'B','B','B','B'];
-const form = document.querySelector('.quiz-form');
-const result = document.querySelector('.result');
-
-form.addEventListener('submit', e =&gt; {
-  e.preventDefault();
-
-  let score = 0;
-  const userAnswers = &#91;form.q1.value, form.q2.value, form.q3.value, form.q4.value];
-
-  // check answers
-  userAnswers.forEach((answer, index) =&gt; {
-    if(answer === correctAnswers&#91;index]){
-      score += 25;
-    }
-  });
-
-  // show result on page
-  scrollTo(0,0);
-  result.querySelector('span').textContent = `${score}%`;
-  result.classList.remove('d-none');
-  
-
-});
-
-// window object (global object)
-
-// console.log('hello');
-// window.console.log('hello');
-
-// console.log(document.querySelector('form'));
-// console.log(window.document.querySelector('form'));
-
-// alert('hello');
-// window.alert('hello');
-
-// setTimeout(() =&gt; {
-//   alert('hello, ninjas');
-// }, 3000);</code></pre>
-
-
-
-<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Intervals &amp; Animating the Score</h3>
-
-
-
-<pre class="wp-block-code"><code>// index.html
-
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"&gt;
-    &lt;title&gt;Ninja Quiz&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    
-    &lt;!-- top section --&gt;
-    &lt;div class="intro py-3 bg-white text-center"&gt;
-      &lt;div class="container"&gt;
-        &lt;h2 class="text-primary display-3 my-4"&gt;Ninja Quiz&lt;/h2&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;!-- result section --&gt;
-    &lt;div class="result py-4 d-none bg-light text-center"&gt;
-      &lt;div class="container lead"&gt;
-        &lt;p&gt;You are &lt;span class="text-primary display-4 p-3"&gt;0%&lt;/span&gt; ninja&lt;/p&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;!-- quiz section --&gt;
-    &lt;div class="quiz py-4 bg-primary"&gt;
-      &lt;div class="container"&gt;
-        &lt;h2 class="my-5 text-white"&gt;On with the questions...&lt;/h2&gt;
-
-        &lt;form class="quiz-form text-light"&gt;
-          &lt;div class="my-5"&gt;
-            &lt;p class="lead font-weight-normal"&gt;1. How do you give a ninja directions?&lt;/p&gt;
-            &lt;div class="form-check my-2 text-white-50"&gt;
-              &lt;input type="radio" name="q1" value="A" checked&gt;
-              &lt;label class="form-check-label"&gt;Show them a map&lt;/label&gt;
-            &lt;/div&gt;
-            &lt;div class="form-check my-2 text-white-50"&gt;
-              &lt;input type="radio" name="q1" value="B"&gt;
-              &lt;label class="form-check-label"&gt;Don't worry, a ninja will find you&lt;/label&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class="my-5"&gt;
-            &lt;p class="lead font-weight-normal"&gt;2. If a ninja has 3 apples, then gives one to Mario &amp; one to Yoshi, how many apples does the ninja have left?&lt;/p&gt;
-            &lt;div class="form-check my-2 text-white-50"&gt;
-              &lt;input type="radio" name="q2" value="A" checked&gt;
-              &lt;label class="form-check-label"&gt;1 apple&lt;/label&gt;
-            &lt;/div&gt;
-            &lt;div class="form-check my-2 text-white-50"&gt;
-              &lt;input type="radio" name="q2" value="B"&gt;
-              &lt;label class="form-check-label"&gt;3 apples, and two corpses&lt;/label&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class="my-5"&gt;
-            &lt;p class="lead font-weight-normal"&gt;3. How do you know when you've met a ninja?&lt;/p&gt;
-            &lt;div class="form-check my-2 text-white-50"&gt;
-              &lt;input type="radio" name="q3" value="A" checked&gt;
-              &lt;label class="form-check-label"&gt;You'll recognize the outfit&lt;/label&gt;
-            &lt;/div&gt;
-            &lt;div class="form-check my-2 text-white-50"&gt;
-              &lt;input type="radio" name="q3" value="B"&gt;
-              &lt;label class="form-check-label"&gt;The grim reaper will tell you&lt;/label&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class="my-5"&gt;
-            &lt;p class="lead font-weight-normal"&gt;4. What is a ninja's favorite array method?&lt;/p&gt;
-            &lt;div class="form-check my-2 text-white-50"&gt;
-              &lt;input type="radio" name="q4" value="A" checked&gt;
-              &lt;label class="form-check-label"&gt;forEach()&lt;/label&gt;
-            &lt;/div&gt;
-            &lt;div class="form-check my-2 text-white-50"&gt;
-              &lt;input type="radio" name="q4" value="B"&gt;
-              &lt;label class="form-check-label"&gt;Slice()&lt;/label&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class="text-center"&gt;
-            &lt;input type="submit" class="btn btn-light"&gt;
-          &lt;/div&gt;
-        &lt;/form&gt;
-
-      &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;script src="app.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// app.js
-
-const correctAnswers = &#91;'B','B','B','B'];
-const form = document.querySelector('.quiz-form');
-const result = document.querySelector('.result');
-
-form.addEventListener('submit', e =&gt; {
-  e.preventDefault();
-
-  let score = 0;
-  const userAnswers = &#91;form.q1.value, form.q2.value, form.q3.value, form.q4.value];
-
-  // check answers
-  userAnswers.forEach((answer, index) =&gt; {
-    if(answer === correctAnswers&#91;index]){
-      score += 25;
-    }
-  });
-
-  // show result on page
-  scrollTo(0,0);
-
-  result.classList.remove('d-none');
-  
-  let output = 0;
-  const timer = setInterval(() =&gt; {
-    result.querySelector('span').textContent = `${output}%`;
-    if(output === score){
-      clearInterval(timer);
-    }
-    else{
-      output++;
-    }
-  }, 10);
-
-});
-
-// setTimeout(() =&gt; {
-//   // do something
-// }, 3000);
-
-// let i = 0;
-// const timer = setInterval(() =&gt; {
-//   console.log('hello');
-//   i++;
-//   if(i === 5){
-//     clearInterval(timer);
-//   }
-// }, 1000);</code></pre>
-
-
-
-<h2 class="wp-block-heading">Array Methods(陣列方法)</h2>
-
-
-
-<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Filter Method</h3>
-
-
-
-<pre class="wp-block-code"><code>// index.html
-
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;link rel="stylesheet" href="style.css"&gt;
-    &lt;title&gt;Modern JavaScript&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-    &lt;h1&gt;Array Methods&lt;/h1&gt;
-    
-    &lt;script src="sandbox.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// sandbox.js - 1
-
-const scores = &#91;10, 30, 15, 25, 50, 40, 5];
-
-// const filteredScores = scores.filter((score) =&gt; {
-//   return score &gt; 20;
-// });
-
-// console.log(filteredScores);
-
-const users = &#91;
-  {name: 'shaun', premium: true},
-  {name: 'yoshi', premium: false},
-  {name: 'mario', premium: false},
-  {name: 'chun-li', premium: true}
-];
-
-const premiumUsers = users.filter(user =&gt; {
-  return user.premium
-});
-
-console.log(premiumUsers);</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// sandbox.js - 2
-
-const scores = &#91;10, 30, 15, 25, 50, 40, 5];
-
-// const filteredScores = scores.filter((score) =&gt; {
-//   return score &gt; 20;
-// });
-
-// console.log(filteredScores);
-
-const users = &#91;
-  {name: 'shaun', premium: true},
-  {name: 'yoshi', premium: false},
-  {name: 'mario', premium: false},
-  {name: 'chun-li', premium: true}
-];
-
-const premiumUsers = users.filter(user =&gt; user.premium);
-
-console.log(premiumUsers);</code></pre>
-
-
-
-<h3 class="wp-block-heading">Map Method</h3>
-
-
-
-<pre class="wp-block-code"><code>// index.html
-
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;link rel="stylesheet" href="style.css"&gt;
-    &lt;title&gt;Modern JavaScript&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-    &lt;h1&gt;Array Methods&lt;/h1&gt;
-    
-    &lt;script src="sandbox.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// sandbox.js - 1
-
-// map method
-const prices = &#91;20, 10, 30, 25, 15, 40, 80, 5];
-
-const salePrices = prices.map((price) =&gt; {
-  return price / 2;
-});
-
-console.log(salePrices);</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// sandbox.js - 2 縮寫
-
-// map method
-const prices = &#91;20, 10, 30, 25, 15, 40, 80, 5];
-
-const salePrices = prices.map(price =&gt; price / 2);
-
-console.log(salePrices);</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// sandbox.js - 3 與 4 做比較
-
-// map method
-const prices = &#91;20, 10, 30, 25, 15, 40, 80, 5];
-
-// const salePrices = prices.map(price =&gt; price / 2);
-// console.log(salePrices);
-
-const products = &#91;
-  {name: 'gold star', price: 20},
-  {name: 'mushroom', price: 40},
-  {name: 'green shells', price: 30},
-  {name: 'banana skin', price: 10},
-  {name: 'red shells', price: 50}
-];
-
-const saleProducts = products.map((product) =&gt; {
-  if(product.price &gt; 30){
-    product.price = product.price / 2;
-    return product;
-  }
-  else {
-    return product;
-  }
-});
-
-console.log(saleProducts, products);</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// sandbox.js - 4 與 3 做比較
-
-// map method
-const prices = &#91;20, 10, 30, 25, 15, 40, 80, 5];
-
-// const salePrices = prices.map(price =&gt; price / 2);
-// console.log(salePrices);
-
-const products = &#91;
-  {name: 'gold star', price: 20},
-  {name: 'mushroom', price: 40},
-  {name: 'green shells', price: 30},
-  {name: 'banana skin', price: 10},
-  {name: 'red shells', price: 50}
-];
-
-const saleProducts = products.map((product) =&gt; {
-  if(product.price &gt; 30){
-    return {name: product.name, price: product.price / 2};
-  }
-  else {
-    return product;
-  }
-});
-
-console.log(saleProducts, products);</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// sandbox.js - 5 縮寫
-
-// map method
-const prices = &#91;20, 10, 30, 25, 15, 40, 80, 5];
-
-// const salePrices = prices.map(price =&gt; price / 2);
-// console.log(salePrices);
-
-const products = &#91;
-  {name: 'gold star', price: 20},
-  {name: 'mushroom', price: 40},
-  {name: 'green shells', price: 30},
-  {name: 'banana skin', price: 10},
-  {name: 'red shells', price: 50}
-];
-
-const saleProducts = products.map(product =&gt; {
-  if(product.price &gt; 30){
-    return {name: product.name, price: product.price / 2};
-  }
-  else {
-    return product;
-  }
-});
-
-console.log(saleProducts, products);</code></pre>
-
-
-
-<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Reduce Method</h3>
-
-
-
-<pre class="wp-block-code"><code>// index.html
-
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;link rel="stylesheet" href="style.css"&gt;
-    &lt;title&gt;Modern JavaScript&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-    &lt;h1&gt;Array Methods&lt;/h1&gt;
-    
-    &lt;script src="sandbox.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// sandbox.js - 1
-
-// reduce method
-const scores = &#91;10, 20, 60, 40, 70, 90, 30];
-
-const result = scores.reduce((acc, curr) =&gt; {
-  if(curr &gt; 50){
-    acc++;
-  }
-  return acc;
-}, 0);
-
-console.log(result);</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// Google Console - 1
-   3
-&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// sandbox.js - 2
-
-// reduce method
-// const scores = &#91;10, 20, 60, 40, 70, 90, 30];
-
-// const result = scores.reduce((acc, curr) =&gt; {
-//   if(curr &gt; 50){
-//     acc++;
-//   }
-//   return acc;
-// }, 0);
-
-// console.log(result);
-
-const scores = &#91;
-  {player: 'mario', score: 50},
-  {player: 'yoshi', score: 30},
-  {player: 'mario', score: 70},
-  {player: 'crystal', score: 60},
-  {player: 'mario', score: 50},
-  {player: 'yoshi', score: 30},
-  {player: 'mario', score: 70},
-  {player: 'crystal', score: 60},
-  {player: 'mario', score: 90},
-  {player: 'yoshi', score: 30},
-  {player: 'mario', score: 30},
-  {player: 'crystal', score: 60},
-  {player: 'mario', score: 50},
-  {player: 'yoshi', score: 30},
-  {player: 'mario', score: 80},
-  {player: 'crystal', score: 60}
-];
-
-const marioTotal = scores.reduce((acc, curr) =&gt; {
-  if(curr.player === 'mario'){
-    acc += curr.score;
-  }
-  return acc;
-}, 0);
-
-console.log(marioTotal);
-</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// Google Console - 2
-   490
-&gt;</code></pre>
-
-
-
-<h4 class="wp-block-heading">補充 MDN 文件</h4>
-
-
-
-<ul><li><a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce" target="_blank" rel="noreferrer noopener">Array.prototype.reduce()</a></li></ul>
-
-
-
-<h3 class="wp-block-heading">Find Method</h3>
-
-
-
-<pre class="wp-block-code"><code>// index.html
-
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;link rel="stylesheet" href="style.css"&gt;
-    &lt;title&gt;Modern JavaScript&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-    &lt;h1&gt;Array Methods&lt;/h1&gt;
-    
-    &lt;script src="sandbox.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// sandbox.js - 1
-
-// find method
-const scores = &#91;10, 5, 0, 40, 30, 10, 90, 70];
-
-const firstHighScore = scores.find((score) =&gt; {
-  return score &gt; 50;
-});
-
-console.log(firstHighScore);</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// sandbox.js - 2 縮寫
-
-// find method
-const scores = &#91;10, 5, 0, 40, 30, 10, 90, 70];
-
-const firstHighScore = scores.find(score =&gt; score &gt; 50);
-
-console.log(firstHighScore);</code></pre>
-
-
-
-<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Sort Method (排序方法)</h3>
-
-
-
-<pre class="wp-block-code"><code>// index.html
-
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;link rel="stylesheet" href="style.css"&gt;
-    &lt;title&gt;Modern JavaScript&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-    &lt;h1&gt;Array Methods&lt;/h1&gt;
-    
-    &lt;script src="sandbox.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// sandbox.js - 1
-
-// example 1 - sorting strings
-const names = &#91;'mario', 'shaun', 'chun-li', 'yoshi', 'luigi'];
-
-// names.sort();
-// names.reverse();
-// console.log(names);
-
-
-// example 2 - sorting numbers
-const scores = &#91;10, 50, 20, 5, 35, 70, 45];
-
-// scores.sort();
-// scores.reverse();
-// console.log(scores);
-
-
-
-// example 3 - sorting objects
-const players = &#91;
-  {name: 'mario', score: 20},
-  {name: 'luigi', score: 10},
-  {name: 'chun-li', score: 50},
-  {name: 'yoshi', score: 30},
-  {name: 'shaun', score: 70}
-];
-
-players.sort((a,b) =&gt; {
-  if(a.score &gt; b.score){
-    return -1;
-  } else if (b.score &gt; a.score){
-    return 1;
-  } else {
-    return 0;
-  }
-});
-
-players.sort((a,b) =&gt; {
-  return b.score - a.score;
-});
-
-console.log(players);</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// sandbox.js - 2 縮寫
-
-// example 1 - sorting strings
-const names = &#91;'mario', 'shaun', 'chun-li', 'yoshi', 'luigi'];
-
-// names.sort();
-// names.reverse();
-// console.log(names);
-
-
-// example 2 - sorting numbers
-const scores = &#91;10, 50, 20, 5, 35, 70, 45];
-
-// scores.sort();
-// scores.reverse();
-// console.log(scores);
-
-
-
-// example 3 - sorting objects
-const players = &#91;
-  {name: 'mario', score: 20},
-  {name: 'luigi', score: 10},
-  {name: 'chun-li', score: 50},
-  {name: 'yoshi', score: 30},
-  {name: 'shaun', score: 70}
-];
-
-players.sort((a,b) =&gt; {
-  if(a.score &gt; b.score){
-    return -1;
-  } else if (b.score &gt; a.score){
-    return 1;
-  } else {
-    return 0;
-  }
-});
-
-players.sort((a,b) =&gt; b.score - a.score);
-
-console.log(players);</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// sandbox.js - 3
-
-// example 1 - sorting strings
-const names = &#91;'mario', 'shaun', 'chun-li', 'yoshi', 'luigi'];
-
-// names.sort();
-// names.reverse();
-// console.log(names);
-
-
-// example 2 - sorting numbers
-const scores = &#91;10, 50, 20, 5, 35, 70, 45];
-
-// scores.sort();
-// scores.reverse();
-// console.log(scores);
-
-
-
-// example 3 - sorting objects
-const players = &#91;
-  {name: 'mario', score: 20},
-  {name: 'luigi', score: 10},
-  {name: 'chun-li', score: 50},
-  {name: 'yoshi', score: 30},
-  {name: 'shaun', score: 70}
-];
-
-// players.sort((a,b) =&gt; {
-//   if(a.score &gt; b.score){
-//     return -1;
-//   } else if (b.score &gt; a.score){
-//     return 1;
-//   } else {
-//     return 0;
-//   }
-// });
-
-players.sort((a,b) =&gt; b.score - a.score);
-
-console.log(players);</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// sandbox.js - 4
-
-// example 1 - sorting strings
-const names = &#91;'mario', 'shaun', 'chun-li', 'yoshi', 'luigi'];
-
-// names.sort();
-// names.reverse();
-// console.log(names);
-
-
-// example 2 - sorting numbers
-const scores = &#91;10, 50, 20, 5, 35, 70, 45];
-
-// scores.sort();
-// scores.reverse();
-// console.log(scores);
-
-scores.sort((a,b) =&gt; a - b);
-console.log(scores);
-
-// example 3 - sorting objects
-const players = &#91;
-  {name: 'mario', score: 20},
-  {name: 'luigi', score: 10},
-  {name: 'chun-li', score: 50},
-  {name: 'yoshi', score: 30},
-  {name: 'shaun', score: 70}
-];
-
-// players.sort((a,b) =&gt; {
-//   if(a.score &gt; b.score){
-//     return -1;
-//   } else if (b.score &gt; a.score){
-//     return 1;
-//   } else {
-//     return 0;
-//   }
-// });
-
-players.sort((a,b) =&gt; b.score - a.score);
-
-console.log(players);</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// Google Console - 4
-   (7) &#91;5, 10, 20, 35, 45, 50, 70]
-   (5) &#91;{...}, {...}, {...}, {...}, {...}
-     0: {name: 'shaun', score: 70}
-     1: {name: 'chun-li', score: 50}
-     2: {name: 'yoshi', score: 30}
-     3: {name: 'mario', score: 20}
-     4: {name: 'luigi', score: 10}
-     length: 5
-     &#91;&#91;Prototype]]: Array(0)
-&gt;</code></pre>
-
-
-
-<h4 class="has-background wp-block-heading" style="background-color:#ff6663">MDN 文件</h4>
-
-
-
-<ul><li><a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/sort" target="_blank" rel="noreferrer noopener">Array.prototype.sort()</a></li></ul>
-
-
-
-<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Chaining Array Methods</h3>
-
-
-
-<pre class="wp-block-code"><code>// index.html
-
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;link rel="stylesheet" href="style.css"&gt;
-    &lt;title&gt;Modern JavaScript&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-    &lt;h1&gt;Array Methods&lt;/h1&gt;
-    
-    &lt;script src="sandbox.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// sandbox.js - 1
-
-const products = &#91;
-  {name: 'gold star', price: 30},
-  {name: 'green shell', price: 10},
-  {name: 'red shell', price: 40},
-  {name: 'banana skin', price: 5},
-  {name: 'mushroom', price: 50}
-];
-
-const filtered = products.filter(product =&gt; product.price &gt; 20);
-
-const promos = filtered.map(product =&gt; {
-  return `the ${product.name} is ${product.price / 2} pounds`;
-});
-
-console.log(promos);</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// sandbox.js - 2
-
-const products = &#91;
-  {name: 'gold star', price: 30},
-  {name: 'green shell', price: 10},
-  {name: 'red shell', price: 40},
-  {name: 'banana skin', price: 5},
-  {name: 'mushroom', price: 50}
-];
-
-// const filtered = products.filter(product =&gt; product.price &gt; 20);
-
-// const promos = filtered.map(product =&gt; {
-//   return `the ${product.name} is ${product.price / 2} pounds`;
-// });
-
-const promos = products
-  .filter(product =&gt; product.price &gt; 20)
-  .map(product =&gt; `the ${product.name} is ${product.price / 2} pounds`);
-
-console.log(promos);</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// Google Console - 2
-   (3) &#91;'the gold star is 15 pounds', 'the red shell is 20 pounds', 'the mushroom is 25 pounds']
-&gt;</code></pre>
-
-
-
-<h2 class="has-background wp-block-heading" style="background-color:#ff6663">Project – Todo List (待辦清單)</h2>
-
-
-
-<h3 class="wp-block-heading">Project Preview and Setup</h3>
-
-
-
-<h4 class="wp-block-heading">操作步驟</h4>
-
-
-
-<ul><li>新增專案資料夾 todos</li><li>新增 style.css、app.js 檔案</li><li>新增 index.html 檔案、載入 CSS、JS、Bootstrap、Font Awesome</li></ul>
-
-
-
-<pre class="wp-block-code"><code>// index.html
-
-&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-  &lt;meta charset="UTF-8"&gt;
-  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
-  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-  &lt;link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"&gt;
-  &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous"&gt;
-  &lt;link rel="stylesheet" href="style.css"&gt;
-  &lt;title&gt;Todos&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  
-  &lt;script src="app.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-
-
-
-<h3 class="wp-block-heading">HTML &amp; CSS Template</h3>
-
-
-
-<h4 class="wp-block-heading">資源</h4>
-
-
-
-<ul><li><a rel="noreferrer noopener" href="https://github.com/iamshaunjp/modern-javascript/tree/lesson-78" target="_blank">GitHub files for this lesson (HTML template)</a></li></ul>
-
-
-
-<h4 class="wp-block-heading">操作步驟</h4>
-
-
-
-<ul><li>index.html 程式碼撰寫</li><li>style.css 程式碼撰寫</li></ul>
-
-
-
-<pre class="wp-block-code"><code>// index.html
-
-&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-  &lt;meta charset="UTF-8"&gt;
-  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
-  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-  &lt;link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"&gt;
-  &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"&gt;
-  &lt;link rel="stylesheet" href="style.css"&gt;
-  &lt;title&gt;Todos&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  
-  &lt;div class="container"&gt;
-
-    &lt;header class="text-center text-light my-4"&gt;
-      &lt;h1 class="mb-4"&gt;Todo List&lt;/h1&gt;
-      &lt;form class="search"&gt;
-        &lt;input class="form-control m-auto" type="text" name="search" placeholder="search todos"&gt;
-      &lt;/form&gt;
-    &lt;/header&gt;
-
-    &lt;ul class="list-group todos mx-auto text-light"&gt;
-      &lt;li class="list-group-item d-flex justify-content-between align-items-center"&gt;
-        &lt;span&gt;play mariokart&lt;/span&gt;
-        &lt;i class="far fa-trash-alt delete"&gt;&lt;/i&gt;
-      &lt;/li&gt;
-      &lt;li class="list-group-item d-flex justify-content-between align-items-center"&gt;
-        &lt;span&gt;defeat ganon in zelda&lt;/span&gt;
-        &lt;i class="far fa-trash-alt delete"&gt;&lt;/i&gt;
-      &lt;/li&gt;
-      &lt;li class="list-group-item d-flex justify-content-between align-items-center"&gt;
-        &lt;span&gt;make a veggie pie&lt;/span&gt;
-        &lt;i class="far fa-trash-alt delete"&gt;&lt;/i&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;form class="add text-center my-4"&gt;
-      &lt;label class="text-light"&gt;Add a new todo...&lt;/label&gt;
-      &lt;input class="form-control m-auto" type="text" name="add"&gt;
-    &lt;/form&gt;
-
-  &lt;/div&gt;
-
-  &lt;script src="app.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// style.css
-
-body{
-  background: #352f5b;
-}
-.container{
-  max-width: 400px;
-}
-input&#91;type=text],
-input&#91;type=text]:focus{
-  color: #fff;
-  border: none;
-  background: rgba(0,0,0,0.2);
-  max-width: 400px;
-}
-.todos li{
-  background: #423a6f;
-}
-.delete{
-  cursor: pointer;
-}</code></pre>
-
-
-
-<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Adding Todos</h3>
-
-
-
-<pre class="wp-block-code"><code>// app.js
-
-const addForm = document.querySelector('.add');
-const list = document.querySelector('.todos');
-
-const generateTemplate = todo =&gt; {
-
-  const html = `
-    &lt;li class="list-group-item d-flex justify-content-between align-items-center"&gt;
-      &lt;span&gt;${todo}&lt;/span&gt;
-      &lt;i class="far fa-trash-alt delete"&gt;&lt;/i&gt;
-    &lt;/li&gt;
-  `;
-
-  list.innerHTML += html;
-
-}
-
-addForm.addEventListener('submit', e =&gt; {
-
-  e.preventDefault();
-  const todo = addForm.add.value.trim();
-  // console.log(todo);
-
-  if(todo.length){
-    generateTemplate(todo);
-    addForm.reset();
-  }
-
-});</code></pre>
-
-
-
-<h4 class="wp-block-heading">Todo text overflowing outside the list</h4>
-
-
-
-<p>解決方式有兩種</p>
-
-
-
-<ul><li>word-wrap: break-word;</li><li>word-break: break-all;</li></ul>
-
-
-
-<pre class="wp-block-code"><code>// style.css - word-break: break-all;
-
-body{
-  background: #352f5b;
-}
-.container{
-  max-width: 400px;
-}
-input&#91;type=text],
-input&#91;type=text]:focus{
-  color: #fff;
-  border: none;
-  background: rgba(0,0,0,0.2);
-  max-width: 400px;
-}
-.todos li{
-  background: #423a6f;
-}
-.delete{
-  cursor: pointer;
-}
-
-/* todo text overflowing outside the list */
-.todos li span{
-  word-break: break-all;
-}</code></pre>
-
-
-
-<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Deleting Todos</h3>
-
-
-
-<pre class="wp-block-code"><code>// app.js
-
-const addForm = document.querySelector('.add');
-const list = document.querySelector('.todos');
-
-const generateTemplate = todo =&gt; {
-
-  const html = `
-    &lt;li class="list-group-item d-flex justify-content-between align-items-center"&gt;
-      &lt;span&gt;${todo}&lt;/span&gt;
-      &lt;i class="far fa-trash-alt delete"&gt;&lt;/i&gt;
-    &lt;/li&gt;
-  `;
-
-  list.innerHTML += html;
-
-}
-
-addForm.addEventListener('submit', e =&gt; {
-
-  e.preventDefault();
-  const todo = addForm.add.value.trim();
-  // console.log(todo);
-
-  if(todo.length){
-    generateTemplate(todo);
-    addForm.reset();
-  }
-
-});
-
-// delete todos
-list.addEventListener('click', e =&gt; {
-
-  if(e.target.classList.contains('delete')){
-    e.target.parentElement.remove();
-  }
-
-});</code></pre>
-
-
-
-<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Searching &amp; Filtering Todos</h3>
-
-
-
-<p>需重複觀看、練習。</p>
-
-
-
-<pre class="wp-block-code"><code>// app.js
-
-const addForm = document.querySelector('.add');
-const list = document.querySelector('.todos');
-const search = document.querySelector('.search input');
-
-const generateTemplate = todo =&gt; {
-  const html = `
-    &lt;li class="list-group-item d-flex justify-content-between align-items-center"&gt;
-      &lt;span&gt;${todo}&lt;/span&gt;
-      &lt;i class="far fa-trash-alt delete"&gt;&lt;/i&gt;
-    &lt;/li&gt;
-  `;
-  list.innerHTML += html;
-
-}
-
-// add todos
-addForm.addEventListener('submit', e =&gt; {
-  e.preventDefault();
-  const todo = addForm.add.value.trim();
-
-  if(todo.length){
-    generateTemplate(todo);
-    addForm.reset();
-  }
-});
-
-// delete todos
-list.addEventListener('click', e =&gt; {
-  if(e.target.classList.contains('delete')){
-    e.target.parentElement.remove();
-  }
-});
-
-const filterTodos = (term) =&gt; {
-  Array.from(list.children)
-    .filter((todo) =&gt; !todo.textContent.toLowerCase().includes(term))
-    .forEach((todo) =&gt; todo.classList.add('filtered'));
-
-  Array.from(list.children)
-    .filter((todo) =&gt; todo.textContent.toLowerCase().includes(term))
-    .forEach((todo) =&gt; todo.classList.remove('filtered'));
-};
-
-// keyup event
-search.addEventListener('keyup', () =&gt; {
-  const term = search.value.trim().toLowerCase();
-  filterTodos(term);
-});</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// style.css
-
-body{
-  background: #352f5b;
-}
-.container{
-  max-width: 400px;
-}
-input&#91;type=text],
-input&#91;type=text]:focus{
-  color: #fff;
-  border: none;
-  background: rgba(0,0,0,0.2);
-  max-width: 400px;
-}
-.todos li{
-  background: #423a6f;
-}
-.delete{
-  cursor: pointer;
-}
-.filtered{
-  display: none !important;
-}
-
-/* todo text overflowing outside the list */
-.todos li span{
-  word-break: break-all;
-}</code></pre>
-
-
-
-<h2 class="wp-block-heading">Dates &amp; Times</h2>
-
-
-
-<h3 class="wp-block-heading">Dates &amp; Times in JavaScript</h3>
-
-
-
-<h4 class="wp-block-heading">JavaScript Data Types</h4>
-
-
-
-<figure class="wp-block-table"><table><tbody><tr><td>Object</td><td>Arrays, Object Literals, Functions,&nbsp;<strong>Dates</strong>&nbsp;etc</td></tr></tbody></table></figure>
-
-
-
-<pre class="wp-block-code"><code>// index.html
-
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;link rel="stylesheet" href="style.css"&gt;
-    &lt;title&gt;Modern JavaScript&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-    &lt;h1&gt;Dates &amp; Times&lt;/h1&gt;
-    
-    &lt;script src="sandbox.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// sandbox.js
-
-// dates &amp; times
-const now = new Date();
-
-console.log(now);
-console.log(typeof now);
-
-// year, months, day, times
-console.log('getFullYear:', now.getFullYear());
-console.log('getMonth:', now.getMonth());
-console.log('getDate:', now.getDate());
-console.log('getDay:', now.getDay());
-console.log('getHours:', now.getHours());
-console.log('getMinutes:', now.getMinutes());
-console.log('getSeconds:', now.getSeconds());
-
-// timestamps
-console.log('timestamp:', now.getTime());
-
-// date strings
-console.log(now.toDateString());
-console.log(now.toTimeString());
-console.log(now.toLocaleString());</code></pre>
-
-
-
-<h3 class="wp-block-heading">Timestamps &amp; Comparisons (時間戳記 &amp; 比較)</h3>
-
-
-
-<pre class="wp-block-code"><code>// index.html
-
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;link rel="stylesheet" href="style.css"&gt;
-    &lt;title&gt;Modern JavaScript&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-    &lt;h1&gt;Dates &amp; Times&lt;/h1&gt;
-    
-    &lt;script src="sandbox.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// sandbox.js
-
-// timestamps
-
-const before = new Date('February 1 2019 7:30:59');
-const now = new Date();
-
-// console.log(now.getTime(), before.getTime());
-
-const diff = now.getTime() - before.getTime();
-console.log(diff);
-
-const mins = Math.round(diff / 1000 / 60);
-const hours = Math.round(mins / 60);
-const days = Math.round(hours / 24);
-
-console.log(mins, hours, days);
-
-console.log(`the blog was written ${days} days ago`);
-
-// converting timestamps into date objects
-const timestamp = 1675938474990;
-console.log(new Date(timestamp));</code></pre>
-
-
-
-<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Building a Digital Clock</h3>
-
-
-
-<pre class="wp-block-code"><code>// index.html
-
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;link rel="stylesheet" href="style.css"&gt;
-    &lt;title&gt;Modern JavaScript&lt;/title&gt;
-    &lt;style&gt;
-        body{
-            background: #333;
-        }
-        .clock{
-            font-size: 4em;
-            text-align: center;
-            margin: 200px auto;
-            color: yellow;
-            font-family: arial;
-        }
-        .clock span{
-            padding: 20px;
-            background: #444;
-        }
-    &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-    &lt;div class="clock"&gt;&lt;/div&gt;
-    
-    &lt;script src="sandbox.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// sandbox.js
-
-const clock = document.querySelector('.clock');
-
-const tick = () =&gt; {
-
-  const now = new Date();
-
-  const h = now.getHours();
-  const m = now.getMinutes();
-  const s = now.getSeconds();
-
-  // console.log(h, m, s);
-  const html = `
-    &lt;span&gt;${h}&lt;/span&gt; :
-    &lt;span&gt;${m}&lt;/span&gt; :
-    &lt;span&gt;${s}&lt;/span&gt;
-  `;
-
-  clock.innerHTML = html;
-
-};
-
-setInterval(tick, 1000);</code></pre>
-
-
-
-<h3 class="wp-block-heading">Date-fns Library</h3>
-
-
-
-<h4 class="wp-block-heading">資源</h4>
-
-
-
-<ul><li><a href="https://date-fns.org/" target="_blank" rel="noreferrer noopener">Date-fns Library Website</a></li></ul>
-
-
-
-<h4 class="wp-block-heading">Date-fns Library 文件使用</h4>
-
-
-
-<ul><li>isAfter</li><li>isToday</li><li>format</li></ul>
-
-
-
-<pre class="wp-block-code"><code>// index.html
-
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;link rel="stylesheet" href="style.css"&gt;
-    &lt;title&gt;Modern JavaScript&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-    &lt;div class="clock"&gt;&lt;/div&gt;
-    
-    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.9.0/date_fns.min.js"&gt;&lt;/script&gt;
-    &lt;script src="sandbox.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// sandbox.js
-
-const now = new Date();
-
-// console.log(dateFns.isToday(now));
-
-// formatting options
-console.log(dateFns.format(now, 'YYYY'));
-console.log(dateFns.format(now, 'MMMM'));
-console.log(dateFns.format(now, 'MMM'));
-console.log(dateFns.format(now, 'dddd'));
-console.log(dateFns.format(now, 'Do'));
-console.log(dateFns.format(now, 'dddd, Do, MMMM, YYYY'));
-console.log(dateFns.format(now, 'dddd Do MMMM YYYY'));
-
-// comparing dates
-const before = new Date('February 1 2019 12:00:00');
-
-console.log(dateFns.distanceInWords(now, before, {addSuffix: true}));</code></pre>
-
-
-
-<h2 class="has-background wp-block-heading" style="background-color:#ff6663">Async JavaScript (非同步)</h2>
-
-
-
-<p>這個章節重要、比較困難，需要重複觀看、練習。</p>
-
-
-
-<h3 class="wp-block-heading">What is Asynchronous JavaScript?</h3>
-
-
-
-<h4 class="wp-block-heading">Async JavaScript</h4>
-
-
-
-<ul><li>Governs how we perform tasks which take some time to complete<br>(e.g. Getting data from a database)</li></ul>
-
-
-
-<p>Start something now and finish it later</p>
-
-
-
-<h4 class="wp-block-heading">Synchronous JavaScript (同步)</h4>
-
-
-
-<ul><li>JavaScript can run ONE statement at a time</li></ul>
-
-
-
-<pre class="wp-block-code"><code>console.log('line one');
-console.log('line two');
-console.log('line three');</code></pre>
-
-
-
-<h4 class="wp-block-heading">Single Threaded</h4>
-
-
-
-<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="1183" height="757" src="/wordpress_blog/wp-content/uploads/2022/04/single-threaded.png" alt="" class="wp-image-493"/><figcaption>Single Threaded</figcaption></figure>
-
-
-
-<h4 class="wp-block-heading">Async to the Rescue…</h4>
-
-
-
-<p>Start something now &amp; finish it later</p>
-
-
-
-<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="1283" height="829" src="/wordpress_blog/wp-content/uploads/2022/04/async-to-the-rescue.png" alt="" class="wp-image-494"/><figcaption>Async to the rescue</figcaption></figure>
-
-
-
-<h3 class="wp-block-heading">Async Code in Action</h3>
-
-
-
-<pre class="wp-block-code"><code>// index.html
-
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;link rel="stylesheet" href="style.css"&gt;
-    &lt;title&gt;Modern JavaScript&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-    
-    
-    &lt;script src="sandbox.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// sandbox.js
-
-console.log(1);
-console.log(2);
-
-setTimeout(() =&gt; {
-  console.log('callback function fired');
-}, 2000);
-
-console.log(3);
-console.log(4);</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// Google Console
-   1
-   2
-   3
-   4
-   callback function fired
-&gt;</code></pre>
-
-
-
-<h3 class="wp-block-heading">What are HTTP Requests?</h3>
-
-
-
-<h4 class="wp-block-heading">HTTP Requests</h4>
-
-
-
-<ul><li>Make HTTP requests to get data from another server</li><li>We make these requests to API endpoints</li></ul>
-
-
-
-<h4 class="wp-block-heading">API Endpoints</h4>
-
-
-
-<ul><li>Example API endpoint:<br>http://www.musicapi.com/artist/moby</li></ul>
-
-
-
-<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="1536" height="465" src="/wordpress_blog/wp-content/uploads/2022/04/api-endpoints.png" alt="" class="wp-image-496"/><figcaption>API Endpoints</figcaption></figure>
-
-
-
-<h4 class="wp-block-heading">JSONPlaceholder</h4>
-
-
-
-<ul><li><a href="https://jsonplaceholder.typicode.com/" target="_blank" rel="noreferrer noopener">JSONPlaceholder 連結</a></li></ul>
-
-
-
-<h4 class="wp-block-heading">Google Network</h4>
-
-
-
-<ul><li>Name – 1</li><li>Headers</li><li>Response</li></ul>
-
-
-
-<h3 class="wp-block-heading">Making HTTP Requests (XHR)</h3>
-
-
-
-<pre class="wp-block-code"><code>// sandbox.js
-
-const request = new XMLHttpRequest();
-
-request.addEventListener('readystatechange', () =&gt; {
-  // console.log(request, request.readyState);
-  if(request.readyState === 4){
-    console.log(request.responseText);
-  }
-});
-
-request.open('GET', 'https://jsonplaceholder.typicode.com/todos/');
-request.send();</code></pre>
-
-
-
-<h4 class="wp-block-heading">MDN Web Docs</h4>
-
-
-
-<ul><li><a rel="noreferrer noopener" href="https://developer.mozilla.org/zh-TW/docs/Web/API/XMLHttpRequest/readyState" target="_blank">XMLHttpRequest.readyState MDN 文件</a></li><li><a href="https://developer.mozilla.org/zh-TW/docs/Web/HTTP/Status" target="_blank" rel="noreferrer noopener">HTTP 狀態碼</a></li></ul>
-
-
-
-<h3 class="wp-block-heading">Response Status</h3>
-
-
-
-<ul><li>404</li><li>200</li></ul>
-
-
-
-<pre class="wp-block-code"><code>// sandbox.js
-
-const request = new XMLHttpRequest();
-
-request.addEventListener('readystatechange', () =&gt; {
-  // console.log(request, request.readyState);
-  if(request.readyState === 4 &amp;&amp; request.status === 200){
-    console.log(request, request.responseText);
-  } else if(request.readyState === 4){
-    console.log('could not fetch the data');
-  }
-});
-
-request.open('GET', 'https://jsonplaceholder.typicode.com/todoss/');
-request.send();</code></pre>
-
-
-
-<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Callback Functions (回呼函式)</h3>
-
-
-
-<pre class="wp-block-code"><code>// sandbox.js
-
-const getTodos = (callback) =&gt; {
-  const request = new XMLHttpRequest();
-
-  request.addEventListener('readystatechange', () =&gt; {
-    // console.log(request, request.readyState);
-    if(request.readyState === 4 &amp;&amp; request.status === 200){
-      // console.log(request, request.responseText);
-      callback(undefined, request.responseText);
-    } else if(request.readyState === 4){
-      // console.log('could not fetch the data');
-      callback('could not fetch data', undefined);
-    }
-  });
-
-  request.open('GET', 'https://jsonplaceholder.typicode.com/todos/');
-  request.send();
-};
-
-console.log(1);
-console.log(2);
-
-getTodos((err, data) =&gt; {
-  console.log('callback fired');
-  // console.log(err, data);
-  if(err){
-    console.log(err);
-  } else {
-    console.log(data);
-  }
-});
-
-console.log(3);
-console.log(4);</code></pre>
-
-
-
-<h3 class="wp-block-heading">JSON Data</h3>
-
-
-
-<pre class="wp-block-code"><code>// sandbox.js
-
-const getTodos = (callback) =&gt; {
-  const request = new XMLHttpRequest();
-
-  request.addEventListener('readystatechange', () =&gt; {
-    if(request.readyState === 4 &amp;&amp; request.status === 200){
-      const data = JSON.parse(request.responseText);
-      callback(undefined, data);
-    } else if(request.readyState === 4){
-      callback('could not fetch data', undefined);
-    }
-  });
-
-  request.open('GET', 'todos.json');
-  request.send();
-};
-
-getTodos((err, data) =&gt; {
-  console.log('callback fired');
-  if(err){
-    console.log(err);
-  } else {
-    console.log(data);
-  }
-});
-</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// todos.json
-
-&#91;
-  { "text": "play mariokart", "author": "Shaun" },
-  { "text": "buy some bread", "author": "Mario" },
-  { "text": "do the plumming", "author": "Luigi" }
-]</code></pre>
-
-
-
-<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Callback Hell</h3>
-
-
-
-<pre class="wp-block-code"><code>// sandbox.js
-
-const getTodos = (resource, callback) =&gt; {
-  const request = new XMLHttpRequest();
-
-  request.addEventListener('readystatechange', () =&gt; {
-    if(request.readyState === 4 &amp;&amp; request.status === 200){
-      const data = JSON.parse(request.responseText);
-      callback(undefined, data);
-    } else if(request.readyState === 4){
-      callback('could not fetch data', undefined);
-    }
-  });
-
-  request.open('GET', resource);
-  request.send();
-};
-
-getTodos('todos/luigi.json', (err, data) =&gt; {
-  console.log(data);
-  getTodos('todos/mario.json', (err, data) =&gt; {
-    console.log(data);
-    getTodos('todos/shaun.json', (err, data) =&gt; {
-      console.log(data);
-    })
-  })
-});
-</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// todos/luigi.json
-
-&#91;
-  { "text": "do the plumming", "author": "Luigi" },
-  { "text": "avoid mario", "author": "Luigi" },
-  { "text": "go kart racing", "author": "Luigi" }
-]</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// todos/mario.json
-
-&#91;
-  { "text": "make fun of luigi", "author": "Mario" },
-  { "text": "rescue peach (again)", "author": "Mario" },
-  { "text": "go kart racing", "author": "Mario" }
-]</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// todos/shaun.json
-
-&#91;
-  { "text": "play mariokart", "author": "Shaun" },
-  { "text": "buy some bread", "author": "Shaun" },
-  { "text": "take a nap", "author": "Shaun" }
-]</code></pre>
-
-
-
-<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Promise Basics</h3>
-
-
-
-<pre class="wp-block-code"><code>// sandbox.js
-
-const getTodos = (resource) =&gt; {
-  
-  return new Promise((resolve, reject) =&gt; {
-    const request = new XMLHttpRequest();
-
-    request.addEventListener('readystatechange', () =&gt; {
-      if(request.readyState === 4 &amp;&amp; request.status === 200){
-        const data = JSON.parse(request.responseText);
-        resolve(data);
-      } else if(request.readyState === 4){
-        reject('error getting resource');
-      }
-    });
-
-    request.open('GET', resource);
-    request.send();
-  });
-
-};
-
-getTodos('todos/luigi.json').then(data =&gt; {
-  console.log('promise resolved:', data);
-}).catch(err =&gt; {
-  console.log('promise rejected:', err);
-});
-
-// promise example
-
-// const getSomething = () =&gt; {
-
-//   return new Promise((resolve, reject) =&gt; {
-//     // fetch something
-//     resolve('some data');
-//     // reject('some error');
-//   });
-
-// };
-
-// getSomething().then((data) =&gt; {
-//   console.log(data);
-// }, (err) =&gt; {
-//   console.log(err);
-// });
-
-// getSomething().then(data =&gt; {
-//   console.log(data);
-// }).catch(err =&gt; {
-//   console.log(err);
-// });</code></pre>
-
-
-
-<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Chaining Promises</h3>
-
-
-
-<pre class="wp-block-code"><code>// sandbox.js
-
-const getTodos = (resource) =&gt; {
-  
-  return new Promise((resolve, reject) =&gt; {
-    const request = new XMLHttpRequest();
-
-    request.addEventListener('readystatechange', () =&gt; {
-      if(request.readyState === 4 &amp;&amp; request.status === 200){
-        const data = JSON.parse(request.responseText);
-        resolve(data);
-      } else if(request.readyState === 4){
-        reject('error getting resource');
-      }
-    });
-
-    request.open('GET', resource);
-    request.send();
-  });
-
-};
-
-getTodos('todos/luigi.json').then(data =&gt; {
-  console.log('promise 1 resolved:', data);
-  return getTodos('todos/mario.json');
-}).then(data =&gt; {
-  console.log('promise 2 resolved:', data);
-  return getTodos('todos/shauns.json');
-}).then(data =&gt; {
-  console.log('promise 3 resolved:', data);
-}).catch(err =&gt; {
-  console.log('promise rejected:', err);
-});</code></pre>
-
-
-
-<h3 class="has-background wp-block-heading" style="background-color:#ff6663">The Fetch API</h3>
-
-
-
-<pre class="wp-block-code"><code>// sandbox.js
-
-// fetch api
-
-fetch('todos/luigi.json').then((response) =&gt; {
-  console.log('resolved', response);
-  return response.json();
-}).then(data =&gt; {
-  console.log(data);
-}).catch((err) =&gt; {
-  console.log('rejected', err);
-});</code></pre>
-
-
-
-<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Async &amp; Await</h3>
-
-
-
-<pre class="wp-block-code"><code>// sandbox.js
-
-// async &amp; await
-
-const getTodos = async () =&gt; {
-
-  const response = await fetch('todos/luigi.json');
-  const data = await response.json();
-  
-  return data;
-
-};
-
-console.log(1);
-console.log(2);
-
-getTodos()
-  .then(data =&gt; console.log('resolved:', data));
-
-console.log(3);
-console.log(4);
-
-// fetch('todos/luigi.json').then((response) =&gt; {
-//   console.log('resolved', response);
-//   return response.json();
-// }).then(data =&gt; {
-//   console.log(data);
-// }).catch((err) =&gt; {
-//   console.log('rejected', err);
-// });</code></pre>
-
-
-
-<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Throwing &amp; Catching Errors</h3>
-
-
-
-<pre class="wp-block-code"><code>// sandbox.js
-
-// async &amp; await
-
-const getTodos = async () =&gt; {
-
-  const response = await fetch('todos/luigis.json');
-
-  if(response.status !== 200){
-    throw new Error('cannot fetch the data');
-  }
-
-  const data = await response.json();
-  
-  return data;
-
-};
-
-getTodos()
-  .then(data =&gt; console.log('resolved:', data))
-  .catch(err =&gt; console.log('rejected:', err.message));</code></pre>
 ]]></content:encoded>
 					
 		

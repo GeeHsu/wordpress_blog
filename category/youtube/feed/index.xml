@@ -12,13 +12,13 @@
 	<atom:link href="/wordpress_blog/category/youtube/feed/" rel="self" type="application/rss+xml" />
 	<link>/wordpress_blog</link>
 	<description>This is a dynamic to static website.</description>
-	<lastBuildDate>Wed, 06 Apr 2022 06:24:34 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 04 Oct 2023 04:28:48 +0000</lastBuildDate>
 	<language>zh-TW</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=5.9.3</generator>
+	<generator>https://wordpress.org/?v=6.3.1</generator>
 
 <image>
 	<url>/wordpress_blog/wp-content/uploads/2022/03/logo.png</url>
@@ -28,6 +28,3345 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>Web Development In 2023 – A Practical Guide</title>
+		<link>/wordpress_blog/web-development-in-2023/</link>
+		
+		<dc:creator><![CDATA[gee.hsu]]></dc:creator>
+		<pubDate>Wed, 04 Oct 2023 04:05:55 +0000</pubDate>
+				<category><![CDATA[Youtube]]></category>
+		<guid isPermaLink="false">/wordpress_blog/?p=768</guid>
+
+					<description><![CDATA[This is an in-depth guide that g [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p>This is an in-depth guide that goes over every major technology that has to do with web development, from languages to frameworks to utilities.</p>
+
+
+
+<p>INTRODUCTION</p>
+
+
+
+<h2 class="wp-block-heading">ABOUT THIS GUIDE…</h2>
+
+
+
+<ul>
+<li>It’s a step-by-step guide that covers major tools used in web development. It is NOT a “latest trend” video</li>
+
+
+
+<li>Choose your own path based on what you want to do and learn. You don’t have to learn anywhere near everything in this video</li>
+
+
+
+<li>I try to be as objective as possible, but I wiil mention little suggestions and underline the things that I use personally</li>
+</ul>
+
+
+
+<p>GETTING STARTED / GOALS</p>
+
+
+
+<h2 class="wp-block-heading">YOUR OVERALL GOAL</h2>
+
+
+
+<ul>
+<li>CAREER ADVANCEMENT</li>
+
+
+
+<li>FREELANCING / AGENCY</li>
+
+
+
+<li>CREATE PRODUCTS</li>
+
+
+
+<li>HOBBY / FUTURE PROOFING</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">TYPES OF WEB DEVELOPERS</h2>
+
+
+
+<p>I will include specific colors for technologies that are relevant for different type of developers</p>
+
+
+
+<ul>
+<li>Blue: Front-End Developer</li>
+
+
+
+<li>Red: Back-End Developer</li>
+
+
+
+<li>Green: Full-Stack Developer</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading has-text-color" style="color:#0693e3">FRONT-END DEVELOPER</h3>
+
+
+
+<p>Focus on the user interface (UI) of a website/web app.</p>
+
+
+
+<ul>
+<li>HTML &amp; CSS</li>
+
+
+
+<li>JavaScript</li>
+
+
+
+<li>Front-End Framework</li>
+
+
+
+<li>CSS Frameworks</li>
+
+
+
+<li>Module Bundlers &amp; Build Tools</li>
+
+
+
+<li>HTTP &amp; Consuming APIs</li>
+
+
+
+<li>Unit Testing</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading has-text-color" style="color:#cf2e2e">BACK-END DEVELOPER</h3>
+
+
+
+<p>Focus on the server-side programming &amp; databases</p>
+
+
+
+<ul>
+<li>Programming Language (PHP, Python, C#, JS/Node.js, etc)</li>
+
+
+
+<li>Back-End Framework</li>
+
+
+
+<li>Databases</li>
+
+
+
+<li>HTTP &amp; Creating APIs (REST)</li>
+
+
+
+<li>ORM (Object Relational Mapper)</li>
+
+
+
+<li>Dploying To Servers</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading has-text-color" style="color:#00d084">FULL-STACK DEVELOPER</h3>
+
+
+
+<p>Focus on the front and back-end. Usually a little more emphasis on one end</p>
+
+
+
+<ul>
+<li>HTML, CSS, JS</li>
+
+
+
+<li>Front-End Fromework</li>
+
+
+
+<li>Back-End Language &amp; Framework</li>
+
+
+
+<li>Fully Understand HTTP &amp; APIs</li>
+
+
+
+<li>Databases &amp; ORM</li>
+
+
+
+<li>Testing</li>
+
+
+
+<li>Deployment</li>
+</ul>
+
+
+
+<p>GETTING STARTED / THE ESSENTIALS</p>
+
+
+
+<h2 class="wp-block-heading">BASIC TOOLS</h2>
+
+
+
+<ul>
+<li>Computer &amp; OS: At least 8GB of RAM</li>
+
+
+
+<li>Operating System: MacOS , Windows, Linux</li>
+
+
+
+<li>Text Editor / IDE: VS Code, Sublime Text, VM, Atom</li>
+
+
+
+<li>Web Browser: Chrome, Firefox, Edge, Safari, Brave</li>
+
+
+
+<li>Terminal: Default, iTerm, Git Bash, Powershell, WSL, Hyper</li>
+</ul>
+
+
+
+<p>FRONT-END BASICS / THE BUILDING BLOCKS</p>
+
+
+
+<h2 class="wp-block-heading">HTML &amp; CSS</h2>
+
+
+
+<ul>
+<li>HTML Layout, Tags &amp; Attributes<br>&lt;!DOCTYPE html /&gt;, &lt;head&gt;, &lt;body&gt;, &lt;p&gt;, &lt;img&gt;</li>
+
+
+
+<li>Semantic Elements<br>&lt;header&gt;, &lt;footer&gt;, &lt;section&gt;, &lt;aside&gt;, etc</li>
+
+
+
+<li>IDs vs Classes<br>IDs for unique elements, classes for styling</li>
+
+
+
+<li>CSS Fundamentals<br>fonts, colors, box model, positioning, etc</li>
+
+
+
+<li>CSS Specificity<br>The specific weight of selectors</li>
+
+
+
+<li>Flexbox &amp; CSS Grid<br>Create one and two-dimensional layouts</li>
+
+
+
+<li>Responsive Layouts<br>Mediea queries, fluid layouts, etc</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">JAVASCRIPT</h2>
+
+
+
+<ul>
+<li>Learn The Bascis<br>Functions, loops, conditionals, scope</li>
+
+
+
+<li>The Browser Environment<br>The window object, execution context</li>
+
+
+
+<li>Doucment Object Model<br>Manipulate DOM content, styling, events</li>
+
+
+
+<li>ES6+ Features<br>Arrow functions, destructuring, template literals</li>
+
+
+
+<li>Arraw Methods<br>forEach, filter, map, reduce, find</li>
+
+
+
+<li>Asynchronous JS &amp; HTTP<br>Callbacks, promises, fetch, JSON</li>
+</ul>
+
+
+
+<p>FRONT-END BASICS / LAYOUT &amp; STYLING TOOLS</p>
+
+
+
+<h3 class="wp-block-heading">SASS</h3>
+
+
+
+<p>Sass is a CSS Pre-Processor. You use a Sass complier to compile .sass or .scss files into regular CSS. It is everything that CSS is plus some additional features such as…</p>
+
+
+
+<ul>
+<li>Simple variable syntax</li>
+
+
+
+<li>Nesting</li>
+
+
+
+<li>Functions &amp; Mixins</li>
+
+
+
+<li>Importing &amp; Partials</li>
+
+
+
+<li>Extend / Inheritance</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">POST CSS</h3>
+
+
+
+<p>Post CSS is a tool that transforms your CSS using JS plugins. For instance, if you wanted to minify or auto add prefixes, you could use specific plugins to do that.</p>
+
+
+
+<p>You can essentially do everything that Sass does with Post CSS, just in a different way.</p>
+
+
+
+<p>Post CSS has more of a learning curver and is usually used with tooling such as Webpack, which we will talk about soon.</p>
+
+
+
+<h2 class="wp-block-heading">CSS FRAMEWORKS</h2>
+
+
+
+<ul>
+<li>It is important that you learn CSS before jumping into any of these frameworks</li>
+
+
+
+<li>Saves your time when it comes to creating and styling layouts</li>
+
+
+
+<li>You may need to learn Sass in order to really customize your layouts</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">TAILWIND</h3>
+
+
+
+<ul>
+<li>Utility-based framework</li>
+
+
+
+<li>Very popular</li>
+
+
+
+<li>Easily integrate into projects</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">BOOTSTRAP</h3>
+
+
+
+<ul>
+<li>Component-based framework</li>
+
+
+
+<li>Very popular</li>
+
+
+
+<li>Includes dynamic JS components</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">MATERIALIZE</h3>
+
+
+
+<ul>
+<li>Component-based framework</li>
+
+
+
+<li>Uses Google Material Design</li>
+
+
+
+<li>Includes dynamic JS components</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">BULMA</h3>
+
+
+
+<ul>
+<li>Modular (Import what you need)</li>
+
+
+
+<li>Very lightweight &amp; fast</li>
+
+
+
+<li>Easy to use</li>
+</ul>
+
+
+
+<p>FRONT-END BASICS / UI DESIGN</p>
+
+
+
+<h2 class="wp-block-heading">UI DESIGN PRINCIPLES</h2>
+
+
+
+<ul>
+<li>COLOR &amp; CONTRAST<br>Text should always be 100% readable</li>
+
+
+
+<li>WHITESPACE<br>The spacing between elements. Correct margin, padding, width, height, etc</li>
+
+
+
+<li>SCALE<br>Sizing relative to other elements on the page and in that area</li>
+
+
+
+<li>VISUAL HIERARCHY<br>Arrange your elements in the order of importance</li>
+
+
+
+<li>TYPOGRAPHY<br>Text typefaces, font styles and sizing</li>
+
+
+
+<li>ALIGNMENT &amp; FLOW<br>Create visual flow. Direct the user’s eyes where they need to go</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">DESIGN SOFTWARE</h2>
+
+
+
+<ul>
+<li>You may or may not need to use design software. It depends on what you are doing</li>
+
+
+
+<li>It is good to at least know the very basics and create a basic layout</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">ADOBE XD</h3>
+
+
+
+<ul>
+<li>Free for “starter” version</li>
+
+
+
+<li>Easy if familiar with other Adobe products</li>
+
+
+
+<li>Collaboration &amp; organization</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">FIMGA</h3>
+
+
+
+<ul>
+<li>Web based</li>
+
+
+
+<li>Very popular</li>
+
+
+
+<li>Collaborate, prototype, wireframe</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">SKETCH</h3>
+
+
+
+<ul>
+<li>Mac only</li>
+
+
+
+<li>Hig performance</li>
+
+
+
+<li>Component-based structure</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">INVISION</h3>
+
+
+
+<ul>
+<li>Great for prototyping</li>
+
+
+
+<li>Sharing &amp; collaboration</li>
+
+
+
+<li>Easy to use</li>
+</ul>
+
+
+
+<p>FRONT-END BASICS / TOOLS &amp; RESOURCES</p>
+
+
+
+<h2 class="wp-block-heading">TOOLS &amp; UTILITIES</h2>
+
+
+
+<ul>
+<li>Git &amp; GitHub<br>Version control is a necessity for all developers</li>
+
+
+
+<li>Browser Developer Tools<br>Elements, console, application, network tabs</li>
+
+
+
+<li>NPM (Node Package Manager)<br>Install 3rd party packages, run scripts</li>
+
+
+
+<li>Markdown<br>Lightweight markup language, used in many areas</li>
+
+
+
+<li>Editor / IDE Extensions<br>Emmet, Prettier, ES Lint, framework-specific extensions</li>
+
+
+
+<li>HTTP Clients<br>Axios, Postman, CURL</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">GITHUB COPILOT</h2>
+
+
+
+<p>Text editor extension for ai-powered code completion and suggestions. It was developed by GitHub and OpenAI.</p>
+
+
+
+<p>Can be installed in VS Code, Neovim and JetBrains environments.</p>
+
+
+
+<p>Can improve developer productivity, but it is important not to rely on it too much.</p>
+
+
+
+<h2 class="wp-block-heading">CHATGPT</h2>
+
+
+
+<p>AI chatbot created by OpenAI. and is the most advanced form of available to the public.</p>
+
+
+
+<p>It is a large language model that has been trained on a massive amount of text data, allowing it to generate human-like responses.</p>
+
+
+
+<p>It is a useful for generating code, help with debugging, suggestions, converting code, generating sample data.</p>
+
+
+
+<p>FRONT-END BASICS / DEPLOYMENT</p>
+
+
+
+<h2 class="wp-block-heading">FRONT-END DEPLOYMENT</h2>
+
+
+
+<ul>
+<li>DOMAIN NAMES<br>Register domain names, configure DNS, etc</li>
+
+
+
+<li>HOSTING<br>Push your code to a platform and connect your domain</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">NETLIFY</h3>
+
+
+
+<ul>
+<li>Great free tier &amp; reasonable pricing</li>
+
+
+
+<li>Push directly from GitHub</li>
+
+
+
+<li>Form submission &amp; other admins</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">VERCEL</h3>
+
+
+
+<ul>
+<li>Great free tier &amp; reasonable pricing</li>
+
+
+
+<li>Push directly from GitHub</li>
+
+
+
+<li>Embraces serverless &amp; edge computing</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">GITHUB PAGES</h3>
+
+
+
+<ul>
+<li>Free hosting for small, static projects</li>
+
+
+
+<li>Easy to use with your existing GitHub</li>
+
+
+
+<li>Simple deployments</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">CPANEL</h3>
+
+
+
+<ul>
+<li>All-in one service (hosting, email, databases)</li>
+
+
+
+<li>Cheap pricing</li>
+
+
+
+<li>Hostinger, inMotion Hosting, Bluehost</li>
+</ul>
+
+
+
+<p>FRONT-END BASICS / FOUNDATIONAL FRONT-END DEVELOPER</p>
+
+
+
+<h2 class="wp-block-heading">FOUNDATIONAL FE DEVELOPER</h2>
+
+
+
+<ul>
+<li>Set up a basic dev environment<br>Text editor, plugins, dev server</li>
+
+
+
+<li>Create layouts with HTML / CSS<br>Create decent looking websites</li>
+
+
+
+<li>Understand simple design principles<br>Contrast, whitespace, alignment</li>
+
+
+
+<li>JavaScript &amp; The DOM<br>Dynamic pages, events, manipulate the DOM</li>
+
+
+
+<li>Fetch &amp; HTTP<br>Methods, status codes</li>
+
+
+
+<li>Version Control<br>Use Git and GitHub</li>
+
+
+
+<li>Basic Deployment<br>Deploy a basic website &amp; connect a domain</li>
+</ul>
+
+
+
+<p>It is optional, but good to know Sass and a CSS framework</p>
+
+
+
+<p>THE NEXT STEP</p>
+
+
+
+<h2 class="wp-block-heading">YOUR NEXT MOVE</h2>
+
+
+
+<h3 class="wp-block-heading">Web Design</h3>
+
+
+
+<ul>
+<li>Leaning toward building basic websites</li>
+
+
+
+<li>Creating ana agency</li>
+
+
+
+<li>Really into the design aspect</li>
+
+
+
+<li>No-code tools</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Server-Side / Back-End</h3>
+
+
+
+<ul>
+<li>Node.js, PHP, Python, C#, etc</li>
+
+
+
+<li>Building APIs &amp; microservices</li>
+
+
+
+<li>Learn databases</li>
+
+
+
+<li>Not really interested in UI</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Front-End Framework &amp; Tooling</h3>
+
+
+
+<ul>
+<li>Learn modern JS workflows &amp; tooling</li>
+
+
+
+<li>Choose a FE framework like React or Vue</li>
+
+
+
+<li>SPA &amp; SSR</li>
+
+
+
+<li>Option for both FE &amp; full stack</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Sharpen Your JavaScript</h3>
+
+
+
+<ul>
+<li>Work on algorithms &amp; data structures</li>
+
+
+
+<li>Become a better problem solver</li>
+
+
+
+<li>Hobby coding</li>
+</ul>
+
+
+
+<p>FRONT-END INTERMEDIATE / TOOLING</p>
+
+
+
+<h2 class="wp-block-heading">BUILD TOOLS</h2>
+
+
+
+<ul>
+<li>These tools allow you to create an advanced front-end file structure and dev environment</li>
+
+
+
+<li>Some are module bundlers and some utilize ES Modules in the browser</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">WEBPACK</h3>
+
+
+
+<ul>
+<li>Been around for a long time</li>
+
+
+
+<li>Very full-featured</li>
+
+
+
+<li>Bundle non-JS assets</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">PARCEL</h3>
+
+
+
+<ul>
+<li>Requires no configuration</li>
+
+
+
+<li>Supports more out of the box</li>
+
+
+
+<li>CSS, SCSS, Babel, TypeScript and more</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">VITE</h3>
+
+
+
+<ul>
+<li>Leverages ES Modules in browser</li>
+
+
+
+<li>Extremely fast</li>
+
+
+
+<li>Uses Rollup to bundle for production</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">SNOWPACK</h3>
+
+
+
+<ul>
+<li>Also uses ES Modules</li>
+
+
+
+<li>Also uses Rollup for bundling</li>
+
+
+
+<li>Build once, cache forever</li>
+</ul>
+
+
+
+<p>FRONT-END INTERMEDIATE / FRAMEWORKS</p>
+
+
+
+<h2 class="wp-block-heading">FRONT-END FRAMEWORKS</h2>
+
+
+
+<ul>
+<li>Help you easily create modern websites and interfaces in an organized way</li>
+
+
+
+<li>Interfaces are created using UI components. Think of everything on the page as a component</li>
+
+
+
+<li>Component and global state can be managed within the framework tools or a 3rd-party state manager</li>
+
+
+
+<li>Created for SPAs, but now can be used with meta frameworks for server rendered content</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">REACT</h3>
+
+
+
+<ul>
+<li>Backed by Facebook/Meta</li>
+
+
+
+<li>Intermediate learning curve</li>
+
+
+
+<li>Extremely popular</li>
+
+
+
+<li>Great community / resources</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">ECOSYSTEM</h4>
+
+
+
+<ul>
+<li>Create React App</li>
+
+
+
+<li>React Router</li>
+
+
+
+<li>JSX</li>
+
+
+
+<li>Context API</li>
+
+
+
+<li>Hooks</li>
+
+
+
+<li>Redux, XState</li>
+
+
+
+<li>NextJS, Remix</li>
+
+
+
+<li>Gatsby</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">VUE</h3>
+
+
+
+<ul>
+<li>Not backed by large company</li>
+
+
+
+<li>Easy learning curve</li>
+
+
+
+<li>Gaining popularity</li>
+
+
+
+<li>Great community / resource</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">ECOSYSTEM</h4>
+
+
+
+<ul>
+<li>Vue CLI / Vue UI</li>
+
+
+
+<li>Vue Router</li>
+
+
+
+<li>Vuex / Pinia</li>
+
+
+
+<li>Composition API</li>
+
+
+
+<li>Vuetify</li>
+
+
+
+<li>NuxtJS</li>
+
+
+
+<li>Gridsome</li>
+
+
+
+<li>Vue Devtools</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">ANGULAR</h3>
+
+
+
+<ul>
+<li>Backed by Google</li>
+
+
+
+<li>Steep learning curve</li>
+
+
+
+<li>Popular in enterprise</li>
+
+
+
+<li>Good for complex projects</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">ECOSYSTEM</h4>
+
+
+
+<ul>
+<li>Angular CLI</li>
+
+
+
+<li>TypeScript</li>
+
+
+
+<li>Services</li>
+
+
+
+<li>Observables</li>
+
+
+
+<li>NgRx</li>
+
+
+
+<li>RxJS</li>
+
+
+
+<li>Angular Universal</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">SLVELTE</h3>
+
+
+
+<ul>
+<li>Compiles into pure JavaScript</li>
+
+
+
+<li>Easy learning curve</li>
+
+
+
+<li>Very fast &amp; lightweight</li>
+
+
+
+<li>Feels like vanilla JavaScript</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">ECOSYSTEM</h4>
+
+
+
+<ul>
+<li>Svelte Stores</li>
+
+
+
+<li>SvelteKit</li>
+
+
+
+<li>Svelte Devtools</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">SOLIDJS</h3>
+
+
+
+<ul>
+<li>Reactive UI library</li>
+
+
+
+<li>Similar to React in certain ways</li>
+
+
+
+<li>Extremely lightweight (6.5kb)</li>
+
+
+
+<li>Easy learning curve</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">ECOSYSTEM</h4>
+
+
+
+<ul>
+<li>SolidStart (Beta)</li>
+
+
+
+<li>JSX</li>
+
+
+
+<li>solid-jest</li>
+
+
+
+<li>Hope UI</li>
+</ul>
+
+
+
+<p>FRONT-END INTERMEDIATE</p>
+
+
+
+<h2 class="wp-block-heading">TYPESCRIPT</h2>
+
+
+
+<ul>
+<li>Superset of JavaScript with additional features, including static types</li>
+
+
+
+<li>TypeScript can be used with any client-side framework as well as with Node.js</li>
+
+
+
+<li>There are pros and cons to TypeScript. It is up to you if you think you would benefit from it</li>
+</ul>
+
+
+
+<p>FRONT-END INTERMEDIATE / STYLING</p>
+
+
+
+<h2 class="wp-block-heading">UI KITS</h2>
+
+
+
+<ul>
+<li>Libraires with pre-defined styled components that you can use in your UI</li>
+
+
+
+<li>They take a lot of the work out of styling your application’s components from scratch</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">REACT</h3>
+
+
+
+<ul>
+<li>Styled Components</li>
+
+
+
+<li>Material UI</li>
+
+
+
+<li>React Bootstrap</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">VUE</h3>
+
+
+
+<ul>
+<li>Vuetify</li>
+
+
+
+<li>Bootstrap Vue</li>
+
+
+
+<li>Quasar</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">ANGULAR</h3>
+
+
+
+<ul>
+<li>Angular Material</li>
+
+
+
+<li>ng-Bootstrap</li>
+
+
+
+<li>IgniteUI</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">SVELTE</h3>
+
+
+
+<ul>
+<li>Svelte Material UI</li>
+
+
+
+<li>SvelteStrap</li>
+
+
+
+<li>SvelteFlat UI</li>
+</ul>
+
+
+
+<p>FRONT-END ADVANCED / TESTING</p>
+
+
+
+<h2 class="wp-block-heading">TESTING</h2>
+
+
+
+<ul>
+<li>Unit Testing<br>Testing individual units (functions, classes, etc)</li>
+
+
+
+<li>Integration Testing<br>Test how different pieces of code work together</li>
+
+
+
+<li>End to End Testing<br>Test entire app from user’s perspective</li>
+
+
+
+<li>Performance Testing<br>Test how well the app does under heavy load</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">JS</h3>
+
+
+
+<ul>
+<li>Jest</li>
+
+
+
+<li>Mocha</li>
+
+
+
+<li>Cypress</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Python</h3>
+
+
+
+<ul>
+<li>Robot</li>
+
+
+
+<li>PyTest</li>
+
+
+
+<li>DocTest</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">C#</h3>
+
+
+
+<ul>
+<li>MSTest</li>
+
+
+
+<li>NUnit</li>
+
+
+
+<li>xUnit</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Go</h3>
+
+
+
+<ul>
+<li>GoTesting</li>
+
+
+
+<li>Testify</li>
+
+
+
+<li>Ginko</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Java</h3>
+
+
+
+<ul>
+<li>Selenium</li>
+
+
+
+<li>JUnit</li>
+
+
+
+<li>TestNG</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Rust</h3>
+
+
+
+<ul>
+<li>Native</li>
+
+
+
+<li>Skeptic</li>
+
+
+
+<li>QuickChk</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">PHP</h3>
+
+
+
+<ul>
+<li>PHPUnit</li>
+
+
+
+<li>Behat</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Ruby</h3>
+
+
+
+<ul>
+<li>Cucumber</li>
+
+
+
+<li>MiniTest</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Kotlin</h3>
+
+
+
+<ul>
+<li>Spek</li>
+
+
+
+<li>Kotlintest</li>
+</ul>
+
+
+
+<p>FRONT-END INTERMEDIATE / WEB &amp; BROWSER APIS</p>
+
+
+
+<h2 class="wp-block-heading">WEB APIS</h2>
+
+
+
+<ul>
+<li>Canvas API<br>Dynamic graphics &amp; visualization</li>
+
+
+
+<li>GeoLocation<br>Get a user’s location</li>
+
+
+
+<li>Speech API<br>Speech recognition &amp; synthesis</li>
+
+
+
+<li>Audio &amp; Video API<br>Audio/video controls and customization</li>
+
+
+
+<li>Web RTC<br>Real-time communication with audio/video</li>
+
+
+
+<li>Local Storage<br>Store data in the browser</li>
+</ul>
+
+
+
+<p>FRONT-END ADVANCED / SSR</p>
+
+
+
+<h2 class="wp-block-heading">FULL STACK FRAMEWORKS (SSR)</h2>
+
+
+
+<ul>
+<li>It has become very popular to render some things on the client and some on the server</li>
+
+
+
+<li>There are benefits to SSR, such as SEO, performance and simplicity</li>
+
+
+
+<li>SSR makes things less complex when it comes to preloading, state, authentication, etc</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">NEXTJS</h3>
+
+
+
+<ul>
+<li>Uses React</li>
+
+
+
+<li>Extremely popular</li>
+
+
+
+<li>File based routing, API routes, data fetching</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">REMIX</h3>
+
+
+
+<ul>
+<li>Uses React</li>
+
+
+
+<li>Gaining in popularity</li>
+
+
+
+<li>Native form component, loading states</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">NUXTJS</h3>
+
+
+
+<ul>
+<li>Uses Vue</li>
+
+
+
+<li>Comparable to NextJS</li>
+
+
+
+<li>Hybrid rendering, Nitro server engine</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">UNIVERSAL</h3>
+
+
+
+<ul>
+<li>Uses Angular</li>
+
+
+
+<li>Integrates with Angular-CLI</li>
+
+
+
+<li>Rich debugging tools, lazy loading</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">SVELTEKIT</h3>
+
+
+
+<ul>
+<li>Uses Svelte</li>
+
+
+
+<li>SSR, SSG, Routing &amp; More</li>
+
+
+
+<li>Loads components on server first</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">BLAZOR</h3>
+
+
+
+<ul>
+<li>Uses C# &amp; WASM</li>
+
+
+
+<li>Can render on the client-side</li>
+
+
+
+<li>Hot reload, lazy loading, virtualization</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">REDWOOD</h3>
+
+
+
+<ul>
+<li>Built on top of NextJS</li>
+
+
+
+<li>Prisma, GraphQL, Jest, Storybook</li>
+
+
+
+<li>End-to-end workflow great for startups</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">BLITZ</h3>
+
+
+
+<ul>
+<li>NextJS Toolkit</li>
+
+
+
+<li>Typesafe Data Layer &amp; Scaffolding</li>
+
+
+
+<li>Authentication</li>
+</ul>
+
+
+
+<p>FRONT-END ADVANCED / SSG</p>
+
+
+
+<h2 class="wp-block-heading">STATIC SITE GENERATORS (SSG)</h2>
+
+
+
+<ul>
+<li>SSG frameworks are used to create extremely fast and optimized websites</li>
+
+
+
+<li>Benefits to SSG sites are SEO, performance, flexibility and security</li>
+
+
+
+<li>SSG sites can still be dynamic and fetch data from an API or headless CMS</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">ASTRO</h3>
+
+
+
+<ul>
+<li>Astro components or React, Vue, Svelte</li>
+
+
+
+<li>Generates static HTML with little to no JS</li>
+
+
+
+<li>Loads components on server first</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">GATSBY</h3>
+
+
+
+<ul>
+<li>Uses React components</li>
+
+
+
+<li>Has GraphQL Data Layer</li>
+
+
+
+<li>Image optimization, code splitting</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">GRIDSOME</h3>
+
+
+
+<ul>
+<li>Uses Vue</li>
+
+
+
+<li>Great for progressive web apps</li>
+
+
+
+<li>SEO friendly, simple safe deployment</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">JEKYLL</h3>
+
+
+
+<ul>
+<li>Ruby Based</li>
+
+
+
+<li>Uses Liquid templates</li>
+
+
+
+<li>Default generator for GitHub Pages</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">HUGO</h3>
+
+
+
+<ul>
+<li>Based on GO</li>
+
+
+
+<li>Use any front-end technology</li>
+
+
+
+<li>Powerful theming</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">HEXO</h3>
+
+
+
+<ul>
+<li>Based on Node.js</li>
+
+
+
+<li>Blog generator</li>
+
+
+
+<li>Highly customizable</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">PELICAN</h3>
+
+
+
+<ul>
+<li>Based on Python</li>
+
+
+
+<li>Use Jinja2 templates</li>
+
+
+
+<li>Rich ecosystem of plugins</li>
+</ul>
+
+
+
+<p>FRONT-END ADVANCED / CONTENT MANAGEMENT</p>
+
+
+
+<h2 class="wp-block-heading">HEADLESS CMS</h2>
+
+
+
+<ul>
+<li>Admin area to create content without being bound to a specific front-end</li>
+
+
+
+<li>Output JSON, so that you can just fetch the data and use a custom front-end / UI</li>
+
+
+
+<li>Great solution for clients that want to be able to update and add their own content</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">STRAPI</h3>
+
+
+
+<ul>
+<li>Built on Node.js</li>
+
+
+
+<li>Completely open source &amp; self hosted</li>
+
+
+
+<li>Loads of features for content creation</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">SANITY.IO</h3>
+
+
+
+<ul>
+<li>Fully customizable CMS</li>
+
+
+
+<li>Real-time data store for structured content</li>
+
+
+
+<li>Flexible querying API</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">KEYSTONE</h3>
+
+
+
+<ul>
+<li>Powerful content management</li>
+
+
+
+<li>GraphQL API</li>
+
+
+
+<li>Primitive &amp; advanced fields, custom schemas</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">CONTENTFUL</h3>
+
+
+
+<ul>
+<li>Cloud-based CMS</li>
+
+
+
+<li>Flexible content model, rubust API</li>
+
+
+
+<li>Free and paid plans</li>
+</ul>
+
+
+
+<p>FRONT-END ADVANCED / JAMSTACK</p>
+
+
+
+<h2 class="wp-block-heading">THE JAMSTACK</h2>
+
+
+
+<ul>
+<li>Architectural approach to building websites with JavaScript, APIs &amp; Markup</li>
+
+
+
+<li>Emphasizes the use of SSG, SSR, headless CMS, serverless functions</li>
+
+
+
+<li>Jamstack websites are decoupled and extremely fast, secure and easily maintained</li>
+</ul>
+
+
+
+<p>FRONT-END ADVANCED / EXTRAS</p>
+
+
+
+<h2 class="wp-block-heading">ALPINE.JS</h2>
+
+
+
+<p>Alpine is technically a framework, but works more like a library. It actually labels itself modern jQuery.</p>
+
+
+
+<ul>
+<li>Data binding</li>
+
+
+
+<li>Event handling</li>
+
+
+
+<li>Hide / show elements</li>
+
+
+
+<li>Data synchronization</li>
+
+
+
+<li>Conditionals &amp; loops</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">LIT</h2>
+
+
+
+<p>Library that allows you to create custom components</p>
+
+
+
+<ul>
+<li>Build on web components standard</li>
+
+
+
+<li>Reactive state</li>
+
+
+
+<li>Scoped styles</li>
+
+
+
+<li>Declarative template system</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">VISUALIZATION</h2>
+
+
+
+<ul>
+<li>These tools allow you to create advanced visualizations and animations</li>
+
+
+
+<li>Knowing how to do this can take you to the next level as a front-end developer</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">MOTION UI</h3>
+
+
+
+<ul>
+<li>Sass library for animation</li>
+
+
+
+<li>Add animated elements to your website</li>
+
+
+
+<li>Pre-built and custom</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">FRAMER</h3>
+
+
+
+<ul>
+<li>Animations in React</li>
+
+
+
+<li>Fuild &amp; dynamic UI</li>
+
+
+
+<li>Support for 3D animations</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">THREE.JS</h3>
+
+
+
+<ul>
+<li>Very popular (90K Stars)</li>
+
+
+
+<li>JavaScript API for 2D/3D graphics</li>
+
+
+
+<li>Powered by WebGL</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">GSAP</h3>
+
+
+
+<ul>
+<li>High-performance timeline-based animations</li>
+
+
+
+<li>uses tweens</li>
+
+
+
+<li>Don’t need to know a lot of JS</li>
+</ul>
+
+
+
+<p>EXTRAS</p>
+
+
+
+<h2 class="wp-block-heading">NO-CODE TOOLS</h2>
+
+
+
+<ul>
+<li>WORDPRESS</li>
+
+
+
+<li>WEBFLOW</li>
+
+
+
+<li>SHOPIFY</li>
+
+
+
+<li>OTHER TOOLS: Kajabi、WIX、SQUARESPACE</li>
+</ul>
+
+
+
+<p>FRONT-END ADVANCED / FRONT-END SUPERSTAR</p>
+
+
+
+<h2 class="wp-block-heading">FRONT-END SUPERSTAR</h2>
+
+
+
+<ul>
+<li>Know a front-end framework well<br>Understand concepts like components, state</li>
+
+
+
+<li>HTTP / APIS<br>Very comfortable with HTTP &amp; consuming APIS</li>
+
+
+
+<li>Full stack / SSR framework<br>Becoming a necessity</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Optional, but beneficial</h3>
+
+
+
+<ul>
+<li>TyperScript<br>Really in-demand and fairly easy to learn</li>
+
+
+
+<li>Jamstack technologies<br>SSG, headless CMS, serverless functions</li>
+
+
+
+<li>Testing<br>Unit tests with a framework like Jest</li>
+</ul>
+
+
+
+<p>BACK-END ESSENTIALS / PROGRAMMING LANGUAGES</p>
+
+
+
+<h2 class="wp-block-heading">SERVER-SIDE LANGUAGE</h2>
+
+
+
+<ul>
+<li>Choose a language<br>Try a few out and see what feels right</li>
+
+
+
+<li>Check job listings<br>See what companies are using in your area</li>
+
+
+
+<li>Learn the fundamentals<br>Don’t move to a framework too fast</li>
+</ul>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td>NODE.JS</td><td>PYTHON</td><td>PHP</td></tr><tr><td>C#</td><td>GOLANG</td><td>RUBY</td></tr><tr><td>JAVA</td><td>KOTLIN</td><td>RUST</td></tr><tr><td>SCALA</td><td>R</td><td>SWIFT</td></tr></tbody></table></figure>
+
+
+
+<p>BACK-END ESSENTIALS / FRAMEWORKS</p>
+
+
+
+<h3 class="wp-block-heading">NODE.JS</h3>
+
+
+
+<ul>
+<li>Express</li>
+
+
+
+<li>Fastify</li>
+
+
+
+<li>NestJS</li>
+
+
+
+<li>Adonis</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">PYTHON</h3>
+
+
+
+<ul>
+<li>Django</li>
+
+
+
+<li>Flask</li>
+
+
+
+<li>Fast API</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">PHP</h3>
+
+
+
+<ul>
+<li>Laravel</li>
+
+
+
+<li>Symfony</li>
+
+
+
+<li>Codeigniter</li>
+
+
+
+<li>SlimPHP</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">RUBY</h3>
+
+
+
+<ul>
+<li>Rails</li>
+
+
+
+<li>Sinatra</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">GO</h3>
+
+
+
+<ul>
+<li>Gin</li>
+
+
+
+<li>Beego</li>
+
+
+
+<li>Echo</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">JAVA</h3>
+
+
+
+<ul>
+<li>Spring</li>
+
+
+
+<li>Struts</li>
+
+
+
+<li>Blade</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">KOTLIN</h3>
+
+
+
+<ul>
+<li>Spring</li>
+
+
+
+<li>Javelin</li>
+
+
+
+<li>Ktor</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">C#</h3>
+
+
+
+<ul>
+<li>ASP.NET MVC</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">RUST</h3>
+
+
+
+<ul>
+<li>Rocket</li>
+</ul>
+
+
+
+<p>BACK-END ESSENTIALS / DATA</p>
+
+
+
+<h2 class="wp-block-heading">RELATIONAL DATABASES</h2>
+
+
+
+<ul>
+<li>Traditional table-based structure</li>
+
+
+
+<li>Data stored in columns and rows</li>
+
+
+
+<li>Usually use SQL (Structure Query Language)</li>
+
+
+
+<li>Been around since the 70s</li>
+
+
+
+<li>Great for related data (social networks, etc)</li>
+
+
+
+<li>Very rigid in terms of structure</li>
+
+
+
+<li>Good with complex queries</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">NOSQL DATABASES</h2>
+
+
+
+<ul>
+<li>Many types (Document, column-based, key/value)</li>
+
+
+
+<li>Data stored in JSON-like documents (Document DB)</li>
+
+
+
+<li>Newer type of database</li>
+
+
+
+<li>Very flexible structure (schema-less)</li>
+
+
+
+<li>Used in big data applications</li>
+
+
+
+<li>Great scalability</li>
+
+
+
+<li>Not as well suited for complex queries</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">RELATIONAL DATABASES</h2>
+
+
+
+<h3 class="wp-block-heading">PostgreSQL</h3>
+
+
+
+<ul>
+<li>Intuitive functionality &amp; versatile security</li>
+
+
+
+<li>Object-oriented data structure</li>
+
+
+
+<li>Used by Apple, Skype, Etsy, Cisco</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">MySQL</h3>
+
+
+
+<ul>
+<li>Widely used in web development</li>
+
+
+
+<li>Strong community</li>
+
+
+
+<li>Used by Google, Udemy, Netflix, Amazon</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">ORACLE</h3>
+
+
+
+<ul>
+<li>Used for large-scale enterprise</li>
+
+
+
+<li>Handles large and complex data sets</li>
+
+
+
+<li>Used by American Express, Amazon, Verizon</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">MS SQL</h3>
+
+
+
+<ul>
+<li>Commercial solution for big businesses</li>
+
+
+
+<li>Commercial – free tier with limitations</li>
+
+
+
+<li>Used by UPS, Bank of America, JPMorgan</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">NOSQL DATABASES</h2>
+
+
+
+<h3 class="wp-block-heading">MongoDB</h3>
+
+
+
+<ul>
+<li>Most popular document database</li>
+
+
+
+<li>Very flexible, scalable and high performance</li>
+
+
+
+<li>Used by IBM, Verizon, Forbes, Adobe</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Cassandra</h3>
+
+
+
+<ul>
+<li>Column-based database</li>
+
+
+
+<li>High performance &amp; high availability</li>
+
+
+
+<li>Apple iCloud, Twitter, eBay</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Couchbase</h3>
+
+
+
+<ul>
+<li>Document database</li>
+
+
+
+<li>Designed to handle unstructured data</li>
+
+
+
+<li>Used by Linkedin, Marriot, Walmart</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">DynamoDB</h3>
+
+
+
+<ul>
+<li>Amazon proprietary document database</li>
+
+
+
+<li>Can also be used as key/value store</li>
+
+
+
+<li>Used by Amazon, Netflix, Airbnb</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">SERVERLESS / CLOUD DATABASES</h2>
+
+
+
+<h3 class="wp-block-heading">MongoDB Atlas</h3>
+
+
+
+<ul>
+<li>MongoDB in the cloud</li>
+
+
+
+<li>Setup user and network access</li>
+
+
+
+<li>Generous free tier</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Firebase</h3>
+
+
+
+<ul>
+<li>Owned by Google</li>
+
+
+
+<li>Real-time NoSQL database</li>
+
+
+
+<li>Authentication, file storage, serverless functions</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Supabase</h3>
+
+
+
+<ul>
+<li>Backend as a service</li>
+
+
+
+<li>Uses a PostgreSQL database</li>
+
+
+
+<li>No company lock-in</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">FaunaDB</h3>
+
+
+
+<ul>
+<li>NoSQL &amp; relational models</li>
+
+
+
+<li>Support for ACID transactions</li>
+
+
+
+<li>Support for GraphQL</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">FILE-BASED DATABASED</h2>
+
+
+
+<h3 class="wp-block-heading">SQLite</h3>
+
+
+
+<ul>
+<li>Most common file-based database</li>
+
+
+
+<li>Uses SQL</li>
+
+
+
+<li>Extremely easy to setup</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">.md Files</h3>
+
+
+
+<ul>
+<li>Good alternative to a database</li>
+
+
+
+<li>No installations, maintenance, etc</li>
+
+
+
+<li>Only very small projects like personal blogs</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">H2 DB</h3>
+
+
+
+<ul>
+<li>Lightweight and high performance</li>
+
+
+
+<li>Supports SQL</li>
+
+
+
+<li>Web-based console</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Redis</h3>
+
+
+
+<ul>
+<li>in-memory database for caching</li>
+
+
+
+<li>Data can be persisted to disk</li>
+
+
+
+<li>Fast and scalable</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">ORMS (OBJECT RELATIONAL MAPPER)</h2>
+
+
+
+<ul>
+<li>Provides a way to work interact with data from within your code without writing raw SQL queries</li>
+
+
+
+<li>Simplifies database interaction, increases productivity and readability</li>
+
+
+
+<li>Allows the application to be independent of the database</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">PRISMA</h3>
+
+
+
+<ul>
+<li>Type-safe database client</li>
+
+
+
+<li>Supports many databases</li>
+
+
+
+<li>Easy relation API</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">MONGOOSE</h3>
+
+
+
+<ul>
+<li>ORM/ODM for MongoDB &amp; Node.js</li>
+
+
+
+<li>Create models &amp; schemas</li>
+
+
+
+<li>Middleware support</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">SEQUELIZE</h3>
+
+
+
+<ul>
+<li>ORM for Node.js &amp; MySQL</li>
+
+
+
+<li>Supports all SQL-based databases</li>
+
+
+
+<li>Migrations, model associations, hooks</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">SQLALCHEMY</h3>
+
+
+
+<ul>
+<li>ORM for Python</li>
+
+
+
+<li>Supports MySQL, Postgres, SQLite &amp; Oracle</li>
+
+
+
+<li>Rich API for complex queries</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">REST API</h2>
+
+
+
+<ul>
+<li>“Representational State Transfer”</li>
+
+
+
+<li>Traditional client-server model</li>
+
+
+
+<li>Much more common</li>
+
+
+
+<li>Uses specific HTTP methods and endpoints</li>
+
+
+
+<li>Fetches all or nothing</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">GRAPHQL</h2>
+
+
+
+<ul>
+<li>Query language and runtime for APIs</li>
+
+
+
+<li>Allows client to specify the data they want</li>
+
+
+
+<li>Improved performance</li>
+
+
+
+<li>One /graphql endpoint</li>
+
+
+
+<li>Use a client such as Apollo</li>
+</ul>
+
+
+
+<p>BACK-END ADVANCED / SECURITY</p>
+
+
+
+<h2 class="wp-block-heading">AUTHENTICATION</h2>
+
+
+
+<ul>
+<li>Sessions &amp; Cookies<br>Server maintains session &amp; ID stored in cookie</li>
+
+
+
+<li>JSON Web Tokens<br>Token is stored and sent to protected routes</li>
+
+
+
+<li>OAuth<br>Open standard to use 3rd-party services</li>
+
+
+
+<li>Third Party Services<br>Auth0, Okta, AWS Cognito, Firebase</li>
+
+
+
+<li>Other Related Topics<br>Password hashing, two-factor auth, protecting routes</li>
+</ul>
+
+
+
+<p>BACK-END ADVANCED / DEPLOYMENT</p>
+
+
+
+<h2 class="wp-block-heading">BACK-END / FULLSTACK DEPLOYMENT</h2>
+
+
+
+<ul>
+<li>PaaS<br>Everything is set up for you</li>
+
+
+
+<li>Cloud Hosting<br>You create and provision a server from scratch</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">RENDER</h3>
+
+
+
+<ul>
+<li>PaaS that supports many languages</li>
+
+
+
+<li>Push directly from GitHub</li>
+
+
+
+<li>Generous free tier</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">HEROKU</h3>
+
+
+
+<ul>
+<li>PaaS that supports many languages</li>
+
+
+
+<li>Uses a Heroku-CLI or Git</li>
+
+
+
+<li>Embraces serverless &amp; edge computing</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">LINODE</h3>
+
+
+
+<ul>
+<li>Cloud hosting</li>
+
+
+
+<li>Install any software that you want</li>
+
+
+
+<li>Great pricing and no lock-in</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">AWS</h3>
+
+
+
+<ul>
+<li>Most powerful hosting company in the world</li>
+
+
+
+<li>Tons of services</li>
+
+
+
+<li>Great for large projects with a lot of traffic</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">DEVOPS SKILLS</h2>
+
+
+
+<ul>
+<li>Terminal / Linux Commands<br>Very comfortable with the shell and utilities</li>
+
+
+
+<li>Web Servers<br>NGINX, Apache configuration</li>
+
+
+
+<li>Containerization &amp; Virtualization<br>Docker, Kubernetes, Vagrant</li>
+
+
+
+<li>Assets &amp; File Storage<br>Cloudinary, Amazon S3</li>
+
+
+
+<li>CI / CD<br>Jenkins, Travis CI, CircleCI</li>
+
+
+
+<li>Infrastructure as Code (IaC)<br>Terraform, CloudFormation, Pulumi</li>
+</ul>
+
+
+
+<p>BACK-END ADVANCED / BACKEND SUPERSTAR</p>
+
+
+
+<h2 class="wp-block-heading">BACKEND / FULL STACK SUPERSTAR</h2>
+
+
+
+<ul>
+<li>Server-Side Language/Technology<br>Node.js, Python, PHP, Ruby, etc</li>
+
+
+
+<li>Server-Side Framework<br>Know how to create apps/apis with a framework</li>
+
+
+
+<li>Database &amp; ORM<br>Relational or NoSQL database and ORM layer</li>
+
+
+
+<li>REST API Creation<br>CRUD, HTTP response formation, GraphQL is a plus</li>
+
+
+
+<li>Authentication &amp; Authorization<br>Protect routes, sessions, tokens, etc</li>
+
+
+
+<li>Project Deployment<br>Deploy on a PaaS or cloud hosting</li>
+</ul>
+
+
+
+<p>BEYOND THE BROWSER / MOBILE DEVELOPMENT</p>
+
+
+
+<h2 class="wp-block-heading">MOBILE DEVELOPMENT</h2>
+
+
+
+<ul>
+<li>There are many web technologies that we can use to build native and hybrid applications</li>
+
+
+
+<li>Having the skill to create mobile applications can be really beneficial for web developers</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">REACT NATIVE</h3>
+
+
+
+<ul>
+<li>Uses the React libray</li>
+
+
+
+<li>React components</li>
+
+
+
+<li>Cross platform with iOS &amp; Android</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">FLUTTER</h3>
+
+
+
+<ul>
+<li>Open-source framework by Google</li>
+
+
+
+<li>Uses the Dart programming language</li>
+
+
+
+<li>Cross-platform with iOS &amp; Android</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">IONIC</h3>
+
+
+
+<ul>
+<li>Hybrid &amp; progressive web apps</li>
+
+
+
+<li>Use any front-end framework</li>
+
+
+
+<li>Cross-platform with iOS &amp; Android</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">XAMARIN</h3>
+
+
+
+<ul>
+<li>C# framework for building mobile apps</li>
+
+
+
+<li>Utilize .NET platform</li>
+
+
+
+<li>Cross-platform with iOS &amp; Android</li>
+</ul>
+
+
+
+<p>MODERN TECH</p>
+
+
+
+<h2 class="wp-block-heading">PROGRESSIVE WEB APPS</h2>
+
+
+
+<ul>
+<li>Best of both worlds including mobile and web applications</li>
+
+
+
+<li>Leverage modern web technologies such as responsive design, service workers, HTTPS</li>
+
+
+
+<li>Anyone that knows HTML, CSS &amp; JavaScript can get into building progressive web apps</li>
+</ul>
+
+
+
+<p>BEYOND THE BROWSER / DESKTOP APP DEVELOPMENT</p>
+
+
+
+<h2 class="wp-block-heading">DESKTOP APPS</h2>
+
+
+
+<ul>
+<li>There are frameworks that we can use to build cross-platform desktop applications</li>
+
+
+
+<li>This includes JavaScript frameworks as well as other languages like Python</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">ELECTRON</h3>
+
+
+
+<ul>
+<li>Cross platform apps with JavaScript</li>
+
+
+
+<li>Use any FE framework or library</li>
+
+
+
+<li>VS Code, Slack, Discord, Postman</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">NW.JS</h3>
+
+
+
+<ul>
+<li>Native desktop apps with web technologies</li>
+
+
+
+<li>Call Node.js modules from DOM</li>
+
+
+
+<li>Cross-platform with Windows, MacOS, Linux</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">TKINTER</h3>
+
+
+
+<ul>
+<li>Create-cross platform GUI apps with Python</li>
+
+
+
+<li>Python interface to the Tk GUI toolkit</li>
+
+
+
+<li>Cross-platform with iOS &amp; Android</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">NATIVE</h3>
+
+
+
+<ul>
+<li>Native apps with C#, Java, Swift, etc</li>
+
+
+
+<li>Beyond the scope of web technologies</li>
+</ul>
+
+
+
+<p>MODERN TECH</p>
+
+
+
+<h2 class="wp-block-heading">WEB ASSEMBLY</h2>
+
+
+
+<ul>
+<li>Binary instruction format for browsers to run code more efficiently than JavaScript</li>
+
+
+
+<li>Can be used with languages like Rust, C, C++ as well as a superset of TypeScript called AssemblyScript</li>
+
+
+
+<li>Web Assembly is reaching beyond the browser with projects in server-side and mobile apps</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">ADVANCED AI</h2>
+
+
+
+<ul>
+<li>AI for art and creation<br>Tools like DALL-E for generating realistic images</li>
+
+
+
+<li>AI powered databases<br>Databases + machine learning</li>
+
+
+
+<li>AI powered content<br>Tools like Jasper and GPT-3</li>
+
+
+
+<li>Chatbots &amp; voice<br>AI powered virtual assistants</li>
+
+
+
+<li>Code generators<br>Copilot, Tabnine, Kite</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">WEB3</h2>
+
+
+
+<ul>
+<li>Blockchain<br>Distributed database that records transactions</li>
+
+
+
+<li>dAPPs<br>Decentralized applications</li>
+
+
+
+<li>Smart contracts<br>Solidity development</li>
+
+
+
+<li>Cryptocurrency<br>Facilitate transactions with Bitcoin, Ethereum, etc</li>
+
+
+
+<li>Identity Solutions<br>Control over personal data</li>
+</ul>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Web Development In 2022 &#8211; A Practical Guide</title>
 		<link>/wordpress_blog/web-development-in-2022/</link>
 		
@@ -54,7 +3393,7 @@
 
 
 
-<h2>Why Learn To Code?</h2>
+<h2 class="wp-block-heading">Why Learn To Code?</h2>
 
 
 
@@ -66,11 +3405,11 @@
 
 
 
-<h2>Types Of Web Developers</h2>
+<h2 class="wp-block-heading">Types Of Web Developers</h2>
 
 
 
-<h3>Fronted Developer</h3>
+<h3 class="wp-block-heading">Fronted Developer</h3>
 
 
 
@@ -78,7 +3417,7 @@
 
 
 
-<h3>Backend Developer</h3>
+<h3 class="wp-block-heading">Backend Developer</h3>
 
 
 
@@ -86,7 +3425,7 @@
 
 
 
-<h3>Full Stack Developer</h3>
+<h3 class="wp-block-heading">Full Stack Developer</h3>
 
 
 
@@ -94,7 +3433,7 @@
 
 
 
-<h2>Tools: The Necessities</h2>
+<h2 class="wp-block-heading">Tools: The Necessities</h2>
 
 
 
@@ -106,7 +3445,7 @@
 
 
 
-<h2>HTML &amp; CSS</h2>
+<h2 class="wp-block-heading">HTML &amp; CSS</h2>
 
 
 
@@ -118,7 +3457,7 @@
 
 
 
-<h2>Sass &amp; PostCSS</h2>
+<h2 class="wp-block-heading">Sass &amp; PostCSS</h2>
 
 
 
@@ -130,7 +3469,7 @@
 
 
 
-<h2>CSS Frameworks (Choose One)</h2>
+<h2 class="wp-block-heading">CSS Frameworks (Choose One)</h2>
 
 
 
@@ -142,7 +3481,7 @@
 
 
 
-<h2>UI Design Principles</h2>
+<h2 class="wp-block-heading">UI Design Principles</h2>
 
 
 
@@ -154,7 +3493,7 @@
 
 
 
-<h2>JavaScript</h2>
+<h2 class="wp-block-heading">JavaScript</h2>
 
 
 
@@ -170,7 +3509,7 @@
 
 
 
-<h2>Extra Programming Tools</h2>
+<h2 class="wp-block-heading">Extra Programming Tools</h2>
 
 
 
@@ -178,11 +3517,11 @@
 
 
 
-<h2>Deploying Frontend Projects</h2>
+<h2 class="wp-block-heading">Deploying Frontend Projects</h2>
 
 
 
-<h3>Popular Platforms</h3>
+<h3 class="wp-block-heading">Popular Platforms</h3>
 
 
 
@@ -190,7 +3529,7 @@
 
 
 
-<h3>Domain Name Registrars</h3>
+<h3 class="wp-block-heading">Domain Name Registrars</h3>
 
 
 
@@ -202,7 +3541,7 @@
 
 
 
-<h2 class="has-background" style="background-color:#ff6663">Basic Frontend Developer</h2>
+<h2 class="has-background wp-block-heading" style="background-color:#ff6663">Basic Frontend Developer</h2>
 
 
 
@@ -214,7 +3553,7 @@
 
 
 
-<h2>Where To Go From Here (Choose one)</h2>
+<h2 class="wp-block-heading">Where To Go From Here (Choose one)</h2>
 
 
 
@@ -222,7 +3561,7 @@
 
 
 
-<h2 class="has-background" style="background-color:#ff6663">Frontend Frameworks (Choose One)</h2>
+<h2 class="has-background wp-block-heading" style="background-color:#ff6663">Frontend Frameworks (Choose One)</h2>
 
 
 
@@ -230,7 +3569,7 @@
 
 
 
-<h3>React</h3>
+<h3 class="wp-block-heading">React</h3>
 
 
 
@@ -242,7 +3581,7 @@
 
 
 
-<h3>Vue</h3>
+<h3 class="wp-block-heading">Vue</h3>
 
 
 
@@ -254,7 +3593,7 @@
 
 
 
-<h3>Angular</h3>
+<h3 class="wp-block-heading">Angular</h3>
 
 
 
@@ -266,7 +3605,7 @@
 
 
 
-<h3>Svelte</h3>
+<h3 class="wp-block-heading">Svelte</h3>
 
 
 
@@ -278,7 +3617,7 @@
 
 
 
-<h2>TypeScript</h2>
+<h2 class="wp-block-heading">TypeScript</h2>
 
 
 
@@ -290,7 +3629,7 @@
 
 
 
-<h2 class="has-background" style="background-color:#ff6663">UI Kits (Choose One)</h2>
+<h2 class="has-background wp-block-heading" style="background-color:#ff6663">UI Kits (Choose One)</h2>
 
 
 
@@ -298,7 +3637,7 @@
 
 
 
-<h3>React</h3>
+<h3 class="wp-block-heading">React</h3>
 
 
 
@@ -306,7 +3645,7 @@
 
 
 
-<h3>Vue</h3>
+<h3 class="wp-block-heading">Vue</h3>
 
 
 
@@ -314,7 +3653,7 @@
 
 
 
-<h3>Angular</h3>
+<h3 class="wp-block-heading">Angular</h3>
 
 
 
@@ -322,7 +3661,7 @@
 
 
 
-<h3>Svelte</h3>
+<h3 class="wp-block-heading">Svelte</h3>
 
 
 
@@ -330,7 +3669,7 @@
 
 
 
-<h2>Testing</h2>
+<h2 class="wp-block-heading">Testing</h2>
 
 
 
@@ -350,7 +3689,7 @@
 
 
 
-<h2 class="has-background" style="background-color:#ff6663">Server-Side Rendering (Choose One)</h2>
+<h2 class="has-background wp-block-heading" style="background-color:#ff6663">Server-Side Rendering (Choose One)</h2>
 
 
 
@@ -358,7 +3697,7 @@
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Next.js</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Next.js</h3>
 
 
 
@@ -366,7 +3705,7 @@
 
 
 
-<h3>Nuxt.js</h3>
+<h3 class="wp-block-heading">Nuxt.js</h3>
 
 
 
@@ -374,7 +3713,7 @@
 
 
 
-<h3>Remix</h3>
+<h3 class="wp-block-heading">Remix</h3>
 
 
 
@@ -382,7 +3721,7 @@
 
 
 
-<h3>SvelteKit</h3>
+<h3 class="wp-block-heading">SvelteKit</h3>
 
 
 
@@ -390,7 +3729,7 @@
 
 
 
-<h2 class="has-background" style="background-color:#ff6663">Static Site Generators (Choose One)</h2>
+<h2 class="has-background wp-block-heading" style="background-color:#ff6663">Static Site Generators (Choose One)</h2>
 
 
 
@@ -398,7 +3737,7 @@
 
 
 
-<h3>Gatsby</h3>
+<h3 class="wp-block-heading">Gatsby</h3>
 
 
 
@@ -406,7 +3745,7 @@
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Next.js</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Next.js</h3>
 
 
 
@@ -414,7 +3753,7 @@
 
 
 
-<h3>Gridsome</h3>
+<h3 class="wp-block-heading">Gridsome</h3>
 
 
 
@@ -422,7 +3761,7 @@
 
 
 
-<h3>Jekyll</h3>
+<h3 class="wp-block-heading">Jekyll</h3>
 
 
 
@@ -430,7 +3769,7 @@
 
 
 
-<h2 class="has-background" style="background-color:#ff6663">Headless CMS (Choose One)</h2>
+<h2 class="has-background wp-block-heading" style="background-color:#ff6663">Headless CMS (Choose One)</h2>
 
 
 
@@ -438,7 +3777,7 @@
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Strapi</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Strapi</h3>
 
 
 
@@ -446,7 +3785,7 @@
 
 
 
-<h3>Sanity.io</h3>
+<h3 class="wp-block-heading">Sanity.io</h3>
 
 
 
@@ -454,7 +3793,7 @@
 
 
 
-<h3>ContentFul</h3>
+<h3 class="wp-block-heading">ContentFul</h3>
 
 
 
@@ -462,7 +3801,7 @@
 
 
 
-<h3>GraphCMS</h3>
+<h3 class="wp-block-heading">GraphCMS</h3>
 
 
 
@@ -470,7 +3809,7 @@
 
 
 
-<h2>The JamStack</h2>
+<h2 class="wp-block-heading">The JamStack</h2>
 
 
 
@@ -482,7 +3821,7 @@
 
 
 
-<h2 class="has-background" style="background-color:#ff6663">Frontend Superstar</h2>
+<h2 class="has-background wp-block-heading" style="background-color:#ff6663">Frontend Superstar</h2>
 
 
 
@@ -502,7 +3841,7 @@
 
 
 
-<h2 class="has-background" style="background-color:#ff6663">Server-Side Language (Choose One)</h2>
+<h2 class="has-background wp-block-heading" style="background-color:#ff6663">Server-Side Language (Choose One)</h2>
 
 
 
@@ -514,11 +3853,11 @@
 
 
 
-<h2 class="has-background" style="background-color:#ff6663">Server-Side Web Framework (Choose One)</h2>
+<h2 class="has-background wp-block-heading" style="background-color:#ff6663">Server-Side Web Framework (Choose One)</h2>
 
 
 
-<h3>Node.js</h3>
+<h3 class="wp-block-heading">Node.js</h3>
 
 
 
@@ -526,7 +3865,7 @@
 
 
 
-<h3>Python</h3>
+<h3 class="wp-block-heading">Python</h3>
 
 
 
@@ -534,7 +3873,7 @@
 
 
 
-<h3>PHP</h3>
+<h3 class="wp-block-heading">PHP</h3>
 
 
 
@@ -542,7 +3881,7 @@
 
 
 
-<h3>C#</h3>
+<h3 class="wp-block-heading">C#</h3>
 
 
 
@@ -550,7 +3889,7 @@
 
 
 
-<h3>GoLang</h3>
+<h3 class="wp-block-heading">GoLang</h3>
 
 
 
@@ -558,7 +3897,7 @@
 
 
 
-<h3>Ruby</h3>
+<h3 class="wp-block-heading">Ruby</h3>
 
 
 
@@ -566,7 +3905,7 @@
 
 
 
-<h3>Java</h3>
+<h3 class="wp-block-heading">Java</h3>
 
 
 
@@ -574,7 +3913,7 @@
 
 
 
-<h3>Kotlin</h3>
+<h3 class="wp-block-heading">Kotlin</h3>
 
 
 
@@ -582,7 +3921,7 @@
 
 
 
-<h3>Scala</h3>
+<h3 class="wp-block-heading">Scala</h3>
 
 
 
@@ -590,7 +3929,7 @@
 
 
 
-<h3>Rust</h3>
+<h3 class="wp-block-heading">Rust</h3>
 
 
 
@@ -598,7 +3937,7 @@
 
 
 
-<h2>Databases (Choose One)</h2>
+<h2 class="wp-block-heading">Databases (Choose One)</h2>
 
 
 
@@ -610,7 +3949,7 @@
 
 
 
-<h3>ORMs</h3>
+<h3 class="wp-block-heading">ORMs</h3>
 
 
 
@@ -618,7 +3957,7 @@
 
 
 
-<h2>REST APIs</h2>
+<h2 class="wp-block-heading">REST APIs</h2>
 
 
 
@@ -634,7 +3973,7 @@
 
 
 
-<h2>GraphQL</h2>
+<h2 class="wp-block-heading">GraphQL</h2>
 
 
 
@@ -646,7 +3985,7 @@
 
 
 
-<h2>Authentication &amp; Authorization</h2>
+<h2 class="wp-block-heading">Authentication &amp; Authorization</h2>
 
 
 
@@ -658,7 +3997,7 @@
 
 
 
-<h2>WordPress</h2>
+<h2 class="wp-block-heading">WordPress</h2>
 
 
 
@@ -670,11 +4009,11 @@
 
 
 
-<h2>Deploying Full Stack Projects &amp; DevOps</h2>
+<h2 class="wp-block-heading">Deploying Full Stack Projects &amp; DevOps</h2>
 
 
 
-<h3>Hosting Platforms</h3>
+<h3 class="wp-block-heading">Hosting Platforms</h3>
 
 
 
@@ -682,7 +4021,7 @@
 
 
 
-<h3>Server Software</h3>
+<h3 class="wp-block-heading">Server Software</h3>
 
 
 
@@ -690,7 +4029,7 @@
 
 
 
-<h3>Containers &amp; Virtualization</h3>
+<h3 class="wp-block-heading">Containers &amp; Virtualization</h3>
 
 
 
@@ -706,7 +4045,7 @@
 
 
 
-<h2 class="has-background" style="background-color:#ff6663">Backend &amp; Full Stack Web Developer</h2>
+<h2 class="has-background wp-block-heading" style="background-color:#ff6663">Backend &amp; Full Stack Web Developer</h2>
 
 
 
@@ -722,7 +4061,7 @@
 
 
 
-<h2 class="has-background" style="background-color:#ff6663">Mobile Development (Choose One)</h2>
+<h2 class="has-background wp-block-heading" style="background-color:#ff6663">Mobile Development (Choose One)</h2>
 
 
 
@@ -730,7 +4069,7 @@
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">React Native</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">React Native</h3>
 
 
 
@@ -738,7 +4077,7 @@
 
 
 
-<h3>Flutter</h3>
+<h3 class="wp-block-heading">Flutter</h3>
 
 
 
@@ -746,7 +4085,7 @@
 
 
 
-<h3>Ionic</h3>
+<h3 class="wp-block-heading">Ionic</h3>
 
 
 
@@ -754,7 +4093,7 @@
 
 
 
-<h3>Xamarin</h3>
+<h3 class="wp-block-heading">Xamarin</h3>
 
 
 
@@ -762,7 +4101,7 @@
 
 
 
-<h3>Web3</h3>
+<h3 class="wp-block-heading">Web3</h3>
 
 
 
@@ -774,7 +4113,7 @@
 
 
 
-<h2>Web Assembly</h2>
+<h2 class="wp-block-heading">Web Assembly</h2>
 
 
 
@@ -786,7 +4125,7 @@
 
 
 
-<h2>Artificial Intelligence</h2>
+<h2 class="wp-block-heading">Artificial Intelligence</h2>
 
 
 
@@ -815,15 +4154,15 @@
 
 
 
-<h2>Course content</h2>
+<h2 class="wp-block-heading">Course content</h2>
 
 
 
-<h3>Intro</h3>
+<h3 class="wp-block-heading">Intro</h3>
 
 
 
-<h3>1. Starting to think responsively</h3>
+<h3 class="wp-block-heading">1. Starting to think responsively</h3>
 
 
 
@@ -867,11 +4206,11 @@
 
 
 
-<h3>2. CSS Units</h3>
+<h3 class="wp-block-heading">2. CSS Units</h3>
 
 
 
-<h4 class="has-vivid-cyan-blue-background-color has-background">CSS Units</h4>
+<h4 class="has-vivid-cyan-blue-background-color has-background wp-block-heading">CSS Units</h4>
 
 
 
@@ -879,7 +4218,7 @@
 
 
 
-<h4 class="has-vivid-cyan-blue-background-color has-background">There are different types of units that we can use</h4>
+<h4 class="has-vivid-cyan-blue-background-color has-background wp-block-heading">There are different types of units that we can use</h4>
 
 
 
@@ -891,7 +4230,7 @@
 
 
 
-<h4 class="has-vivid-cyan-blue-background-color has-background">CSS Units</h4>
+<h4 class="has-vivid-cyan-blue-background-color has-background wp-block-heading">CSS Units</h4>
 
 
 
@@ -903,7 +4242,7 @@
 
 
 
-<h4 class="has-vivid-cyan-blue-background-color has-background">CSS Units – Percentage</h4>
+<h4 class="has-vivid-cyan-blue-background-color has-background wp-block-heading">CSS Units – Percentage</h4>
 
 
 
@@ -915,7 +4254,7 @@
 
 
 
-<h4 class="has-vivid-cyan-blue-background-color has-background">CSS Units – Relative units</h4>
+<h4 class="has-vivid-cyan-blue-background-color has-background wp-block-heading">CSS Units – Relative units</h4>
 
 
 
@@ -931,7 +4270,7 @@
 
 
 
-<h4 class="has-vivid-cyan-blue-background-color has-background">CSS Units – Relative units</h4>
+<h4 class="has-vivid-cyan-blue-background-color has-background wp-block-heading">CSS Units – Relative units</h4>
 
 
 
@@ -939,11 +4278,11 @@
 
 
 
-<h3>3. CSS Units – Percentage</h3>
+<h3 class="wp-block-heading">3. CSS Units – Percentage</h3>
 
 
 
-<h4 class="has-vivid-cyan-blue-background-color has-background">Percentages</h4>
+<h4 class="has-vivid-cyan-blue-background-color has-background wp-block-heading">Percentages</h4>
 
 
 
@@ -955,7 +4294,7 @@
 
 
 
-<h5>程式碼範例 – .container</h5>
+<h5 class="wp-block-heading">程式碼範例 – .container</h5>
 
 
 
@@ -970,11 +4309,11 @@
 
 
 
-<h3>4. Controlling the width of images</h3>
+<h3 class="wp-block-heading">4. Controlling the width of images</h3>
 
 
 
-<h5>程式碼範例 – img</h5>
+<h5 class="wp-block-heading">程式碼範例 – img</h5>
 
 
 
@@ -1137,7 +4476,7 @@ section{
 
 
 
-<h3>5. min-width and max-width</h3>
+<h3 class="wp-block-heading">5. min-width and max-width</h3>
 
 
 
@@ -1150,11 +4489,11 @@ section{
 
 
 
-<h3>6. CSS Units – The em unit</h3>
+<h3 class="wp-block-heading">6. CSS Units – The em unit</h3>
 
 
 
-<h4 class="has-vivid-cyan-blue-background-color has-background">The “em” unit</h4>
+<h4 class="has-vivid-cyan-blue-background-color has-background wp-block-heading">The “em” unit</h4>
 
 
 
@@ -1162,7 +4501,7 @@ section{
 
 
 
-<h4 class="has-vivid-cyan-blue-background-color has-background">CSS Units – Relative units</h4>
+<h4 class="has-vivid-cyan-blue-background-color has-background wp-block-heading">CSS Units – Relative units</h4>
 
 
 
@@ -1174,7 +4513,7 @@ section{
 
 
 
-<h4 class="has-vivid-cyan-blue-background-color has-background">CSS Units – Relative units</h4>
+<h4 class="has-vivid-cyan-blue-background-color has-background wp-block-heading">CSS Units – Relative units</h4>
 
 
 
@@ -1190,7 +4529,7 @@ section{
 
 
 
-<h5>程式碼範例</h5>
+<h5 class="wp-block-heading">程式碼範例</h5>
 
 
 
@@ -1347,11 +4686,11 @@ section{
 
 
 
-<h3>7. The problem with ems</h3>
+<h3 class="wp-block-heading">7. The problem with ems</h3>
 
 
 
-<h4 class="has-vivid-cyan-blue-background-color has-background">CSS Units – The problem with em</h4>
+<h4 class="has-vivid-cyan-blue-background-color has-background wp-block-heading">CSS Units – The problem with em</h4>
 
 
 
@@ -1363,7 +4702,7 @@ section{
 
 
 
-<h5>程式碼範例</h5>
+<h5 class="wp-block-heading">程式碼範例</h5>
 
 
 
@@ -1524,11 +4863,11 @@ section{
 
 
 
-<h3>8. The Solution: Rems</h3>
+<h3 class="wp-block-heading">8. The Solution: Rems</h3>
 
 
 
-<h4 class="has-vivid-cyan-blue-background-color has-background">The solution: rems</h4>
+<h4 class="has-vivid-cyan-blue-background-color has-background wp-block-heading">The solution: rems</h4>
 
 
 
@@ -1536,7 +4875,7 @@ section{
 
 
 
-<h4 class="has-vivid-cyan-blue-background-color has-background">CSS Units – The problem with em</h4>
+<h4 class="has-vivid-cyan-blue-background-color has-background wp-block-heading">CSS Units – The problem with em</h4>
 
 
 
@@ -1552,7 +4891,7 @@ section{
 
 
 
-<h5>程式碼範例</h5>
+<h5 class="wp-block-heading">程式碼範例</h5>
 
 
 
@@ -1717,11 +5056,11 @@ section{
 
 
 
-<h3>9. Picking which unit to use</h3>
+<h3 class="wp-block-heading">9. Picking which unit to use</h3>
 
 
 
-<h4 class="has-vivid-cyan-blue-background-color has-background">How to decide which unit to use</h4>
+<h4 class="has-vivid-cyan-blue-background-color has-background wp-block-heading">How to decide which unit to use</h4>
 
 
 
@@ -1729,7 +5068,7 @@ section{
 
 
 
-<h4 class="has-vivid-cyan-blue-background-color has-background">How to decide which unit to use</h4>
+<h4 class="has-vivid-cyan-blue-background-color has-background wp-block-heading">How to decide which unit to use</h4>
 
 
 
@@ -1741,7 +5080,7 @@ section{
 
 
 
-<h4 class="has-vivid-cyan-blue-background-color has-background">How to decide which unit to use</h4>
+<h4 class="has-vivid-cyan-blue-background-color has-background wp-block-heading">How to decide which unit to use</h4>
 
 
 
@@ -1753,7 +5092,7 @@ section{
 
 
 
-<h4 class="has-vivid-cyan-blue-background-color has-background">How to decide which unit to use</h4>
+<h4 class="has-vivid-cyan-blue-background-color has-background wp-block-heading">How to decide which unit to use</h4>
 
 
 
@@ -1777,11 +5116,11 @@ section{
 
 
 
-<h3>10. ems and rems – an example</h3>
+<h3 class="wp-block-heading">10. ems and rems – an example</h3>
 
 
 
-<h5>程式碼範例</h5>
+<h5 class="wp-block-heading">程式碼範例</h5>
 
 
 
@@ -1879,11 +5218,11 @@ a{
 
 
 
-<h3>11. Flexbox refresher and setting up some HTML</h3>
+<h3 class="wp-block-heading">11. Flexbox refresher and setting up some HTML</h3>
 
 
 
-<h4 class="has-vivid-cyan-blue-background-color has-background">Responsive layout basics</h4>
+<h4 class="has-vivid-cyan-blue-background-color has-background wp-block-heading">Responsive layout basics</h4>
 
 
 
@@ -1891,7 +5230,7 @@ a{
 
 
 
-<h4 class="has-vivid-cyan-blue-background-color has-background">The basics of flexbox</h4>
+<h4 class="has-vivid-cyan-blue-background-color has-background wp-block-heading">The basics of flexbox</h4>
 
 
 
@@ -1899,7 +5238,7 @@ a{
 
 
 
-<h5>投影片範例</h5>
+<h5 class="wp-block-heading">投影片範例</h5>
 
 
 
@@ -1913,7 +5252,7 @@ a{
 
 
 
-<h4 class="has-vivid-cyan-blue-background-color has-background">The basics of flexbox</h4>
+<h4 class="has-vivid-cyan-blue-background-color has-background wp-block-heading">The basics of flexbox</h4>
 
 
 
@@ -1925,7 +5264,7 @@ a{
 
 
 
-<h4 class="has-vivid-cyan-blue-background-color has-background">The basics of flexbox</h4>
+<h4 class="has-vivid-cyan-blue-background-color has-background wp-block-heading">The basics of flexbox</h4>
 
 
 
@@ -1937,7 +5276,7 @@ a{
 
 
 
-<h4 class="has-vivid-cyan-blue-background-color has-background">The basics of flexbox</h4>
+<h4 class="has-vivid-cyan-blue-background-color has-background wp-block-heading">The basics of flexbox</h4>
 
 
 
@@ -1945,7 +5284,7 @@ a{
 
 
 
-<h5>網站結構</h5>
+<h5 class="wp-block-heading">網站結構</h5>
 
 
 
@@ -1953,7 +5292,7 @@ a{
 
 
 
-<h5>程式碼範例</h5>
+<h5 class="wp-block-heading">程式碼範例</h5>
 
 
 
@@ -2008,11 +5347,11 @@ a{
 
 
 
-<h3>12. Basic Styles and setting up the columns</h3>
+<h3 class="wp-block-heading">12. Basic Styles and setting up the columns</h3>
 
 
 
-<h5>Colors</h5>
+<h5 class="wp-block-heading">Colors</h5>
 
 
 
@@ -2020,7 +5359,7 @@ a{
 
 
 
-<h5>Font-sizes</h5>
+<h5 class="wp-block-heading">Font-sizes</h5>
 
 
 
@@ -2028,7 +5367,7 @@ a{
 
 
 
-<h5>Layout</h5>
+<h5 class="wp-block-heading">Layout</h5>
 
 
 
@@ -2036,7 +5375,7 @@ a{
 
 
 
-<h5>程式碼範例</h5>
+<h5 class="wp-block-heading">程式碼範例</h5>
 
 
 
@@ -2133,11 +5472,11 @@ img {
 
 
 
-<h3>13. Adding the background color</h3>
+<h3 class="wp-block-heading">13. Adding the background color</h3>
 
 
 
-<h5>程式碼範例</h5>
+<h5 class="wp-block-heading">程式碼範例</h5>
 
 
 
@@ -2247,11 +5586,11 @@ img {
 
 
 
-<h3>14. Setting the column widths</h3>
+<h3 class="wp-block-heading">14. Setting the column widths</h3>
 
 
 
-<h5>程式碼範例</h5>
+<h5 class="wp-block-heading">程式碼範例</h5>
 
 
 
@@ -2373,11 +5712,11 @@ img {
 
 
 
-<h3>15. Spacing out the columns</h3>
+<h3 class="wp-block-heading">15. Spacing out the columns</h3>
 
 
 
-<h4 class="has-vivid-cyan-blue-background-color has-background">justify-content</h4>
+<h4 class="has-vivid-cyan-blue-background-color has-background wp-block-heading">justify-content</h4>
 
 
 
@@ -2385,7 +5724,7 @@ img {
 
 
 
-<h5>投影片範例</h5>
+<h5 class="wp-block-heading">投影片範例</h5>
 
 
 
@@ -2404,7 +5743,7 @@ img {
 
 
 
-<h5>程式碼範例</h5>
+<h5 class="wp-block-heading">程式碼範例</h5>
 
 
 
@@ -2527,11 +5866,11 @@ img {
 
 
 
-<h3>16. Controlling the vertical position of flex items</h3>
+<h3 class="wp-block-heading">16. Controlling the vertical position of flex items</h3>
 
 
 
-<h4 class="has-vivid-cyan-blue-background-color has-background">algin-items</h4>
+<h4 class="has-vivid-cyan-blue-background-color has-background wp-block-heading">algin-items</h4>
 
 
 
@@ -2539,7 +5878,7 @@ img {
 
 
 
-<h5>投影片範例</h5>
+<h5 class="wp-block-heading">投影片範例</h5>
 
 
 
@@ -2558,7 +5897,7 @@ img {
 
 
 
-<h5>程式碼範例</h5>
+<h5 class="wp-block-heading">程式碼範例</h5>
 
 
 
@@ -2682,11 +6021,11 @@ img {
 
 
 
-<h3>17. Media Query basics</h3>
+<h3 class="wp-block-heading">17. Media Query basics</h3>
 
 
 
-<h4 class="has-vivid-cyan-blue-background-color has-background">Media queries – the basics</h4>
+<h4 class="has-vivid-cyan-blue-background-color has-background wp-block-heading">Media queries – the basics</h4>
 
 
 
@@ -2698,7 +6037,7 @@ img {
 
 
 
-<h4 class="has-vivid-cyan-blue-background-color has-background">Media queries – basic syntax</h4>
+<h4 class="has-vivid-cyan-blue-background-color has-background wp-block-heading">Media queries – basic syntax</h4>
 
 
 
@@ -2706,7 +6045,7 @@ img {
 
 
 
-<h4 class="has-vivid-cyan-blue-background-color has-background">Media queries – basic syntax</h4>
+<h4 class="has-vivid-cyan-blue-background-color has-background wp-block-heading">Media queries – basic syntax</h4>
 
 
 
@@ -2714,7 +6053,7 @@ img {
 
 
 
-<h4 class="has-vivid-cyan-blue-background-color has-background">Media queries – basic syntax</h4>
+<h4 class="has-vivid-cyan-blue-background-color has-background wp-block-heading">Media queries – basic syntax</h4>
 
 
 
@@ -2722,7 +6061,7 @@ img {
 
 
 
-<h4 class="has-vivid-cyan-blue-background-color has-background">Media queries – media type</h4>
+<h4 class="has-vivid-cyan-blue-background-color has-background wp-block-heading">Media queries – media type</h4>
 
 
 
@@ -2734,7 +6073,7 @@ img {
 
 
 
-<h4 class="has-vivid-cyan-blue-background-color has-background">Media queries – media condition</h4>
+<h4 class="has-vivid-cyan-blue-background-color has-background wp-block-heading">Media queries – media condition</h4>
 
 
 
@@ -2746,7 +6085,7 @@ img {
 
 
 
-<h4 class="has-vivid-cyan-blue-background-color has-background">Media queries</h4>
+<h4 class="has-vivid-cyan-blue-background-color has-background wp-block-heading">Media queries</h4>
 
 
 
@@ -2758,7 +6097,7 @@ img {
 
 
 
-<h4 class="has-vivid-cyan-blue-background-color has-background">Media queries</h4>
+<h4 class="has-vivid-cyan-blue-background-color has-background wp-block-heading">Media queries</h4>
 
 
 
@@ -2770,7 +6109,7 @@ img {
 
 
 
-<h4 class="has-vivid-cyan-blue-background-color has-background">Media queries</h4>
+<h4 class="has-vivid-cyan-blue-background-color has-background wp-block-heading">Media queries</h4>
 
 
 
@@ -2782,7 +6121,7 @@ img {
 
 
 
-<h4 class="has-vivid-cyan-blue-background-color has-background">Media queries</h4>
+<h4 class="has-vivid-cyan-blue-background-color has-background wp-block-heading">Media queries</h4>
 
 
 
@@ -2806,7 +6145,7 @@ img {
 
 
 
-<h5>程式碼範例</h5>
+<h5 class="wp-block-heading">程式碼範例</h5>
 
 
 
@@ -2945,11 +6284,11 @@ img {
 
 
 
-<h3>18. Making out layout responsive with flex-direction</h3>
+<h3 class="wp-block-heading">18. Making out layout responsive with flex-direction</h3>
 
 
 
-<h4 class="has-vivid-cyan-blue-background-color has-background">Making our layout fully responsive</h4>
+<h4 class="has-vivid-cyan-blue-background-color has-background wp-block-heading">Making our layout fully responsive</h4>
 
 
 
@@ -2957,11 +6296,11 @@ img {
 
 
 
-<h4 class="has-vivid-cyan-blue-background-color has-background">Flexbox – changing the axis around</h4>
+<h4 class="has-vivid-cyan-blue-background-color has-background wp-block-heading">Flexbox – changing the axis around</h4>
 
 
 
-<h5>投影片範例</h5>
+<h5 class="wp-block-heading">投影片範例</h5>
 
 
 
@@ -2970,7 +6309,7 @@ flex-direction: row; /* default behavior */</code></pre>
 
 
 
-<h4 class="has-vivid-cyan-blue-background-color has-background">Flexbox – changing the axis around</h4>
+<h4 class="has-vivid-cyan-blue-background-color has-background wp-block-heading">Flexbox – changing the axis around</h4>
 
 
 
@@ -2990,7 +6329,7 @@ flex-direction: column; /* switches the axis */</code></pre>
 
 
 
-<h5>程式碼範例 – 方式一</h5>
+<h5 class="wp-block-heading">程式碼範例 – 方式一</h5>
 
 
 
@@ -3210,11 +6549,11 @@ img {
 
 
 
-<h3>19. flex-direction explained</h3>
+<h3 class="wp-block-heading">19. flex-direction explained</h3>
 
 
 
-<h4 class="has-vivid-cyan-blue-background-color has-background">Flex-direction explained</h4>
+<h4 class="has-vivid-cyan-blue-background-color has-background wp-block-heading">Flex-direction explained</h4>
 
 
 
@@ -3222,7 +6561,7 @@ img {
 
 
 
-<h4 class="has-vivid-cyan-blue-background-color has-background">Flexbox – changing the axis around</h4>
+<h4 class="has-vivid-cyan-blue-background-color has-background wp-block-heading">Flexbox – changing the axis around</h4>
 
 
 
@@ -3231,7 +6570,7 @@ flex-direction: row; /* default behavior */</code></pre>
 
 
 
-<h4 class="has-vivid-cyan-blue-background-color has-background">Flexbox – changing the axis around</h4>
+<h4 class="has-vivid-cyan-blue-background-color has-background wp-block-heading">Flexbox – changing the axis around</h4>
 
 
 
@@ -3240,7 +6579,7 @@ flex-direction: column; /* switches the axis */</code></pre>
 
 
 
-<h5>投影片範例</h5>
+<h5 class="wp-block-heading">投影片範例</h5>
 
 
 
@@ -3255,7 +6594,7 @@ flex-direction: column; /* switches the axis */</code></pre>
 
 
 
-<h5>投影片範例</h5>
+<h5 class="wp-block-heading">投影片範例</h5>
 
 
 
@@ -3266,7 +6605,7 @@ flex-direction: column; /* switches the axis */</code></pre>
 
 
 
-<h5>投影片範例</h5>
+<h5 class="wp-block-heading">投影片範例</h5>
 
 
 
@@ -3282,7 +6621,7 @@ flex-direction: column; /* switches the axis */</code></pre>
 
 
 
-<h5>投影片範例</h5>
+<h5 class="wp-block-heading">投影片範例</h5>
 
 
 
@@ -3301,7 +6640,7 @@ flex-direction: column; /* switches the axis */</code></pre>
 
 
 
-<h5>投影片範例</h5>
+<h5 class="wp-block-heading">投影片範例</h5>
 
 
 
@@ -3329,11 +6668,11 @@ flex-direction: column; /* switches the axis */</code></pre>
 
 
 
-<h3>20. Creating a navigation</h3>
+<h3 class="wp-block-heading">20. Creating a navigation</h3>
 
 
 
-<h4 class="has-vivid-cyan-blue-background-color has-background">Creating a navigation</h4>
+<h4 class="has-vivid-cyan-blue-background-color has-background wp-block-heading">Creating a navigation</h4>
 
 
 
@@ -3341,7 +6680,7 @@ flex-direction: column; /* switches the axis */</code></pre>
 
 
 
-<h4 class="has-vivid-cyan-blue-background-color has-background">Creating a navigation</h4>
+<h4 class="has-vivid-cyan-blue-background-color has-background wp-block-heading">Creating a navigation</h4>
 
 
 
@@ -3349,7 +6688,7 @@ flex-direction: column; /* switches the axis */</code></pre>
 
 
 
-<h4 class="has-vivid-cyan-blue-background-color has-background">Creating a navigation</h4>
+<h4 class="has-vivid-cyan-blue-background-color has-background wp-block-heading">Creating a navigation</h4>
 
 
 
@@ -3357,7 +6696,7 @@ flex-direction: column; /* switches the axis */</code></pre>
 
 
 
-<h4 class="has-vivid-cyan-blue-background-color has-background">Creating a navigation</h4>
+<h4 class="has-vivid-cyan-blue-background-color has-background wp-block-heading">Creating a navigation</h4>
 
 
 
@@ -3371,7 +6710,7 @@ flex-direction: column; /* switches the axis */</code></pre>
 
 
 
-<h5>Colors</h5>
+<h5 class="wp-block-heading">Colors</h5>
 
 
 
@@ -3379,7 +6718,7 @@ flex-direction: column; /* switches the axis */</code></pre>
 
 
 
-<h5>font-sizes</h5>
+<h5 class="wp-block-heading">font-sizes</h5>
 
 
 
@@ -3387,7 +6726,7 @@ flex-direction: column; /* switches the axis */</code></pre>
 
 
 
-<h5>程式碼範例</h5>
+<h5 class="wp-block-heading">程式碼範例</h5>
 
 
 
@@ -3439,11 +6778,11 @@ flex-direction: column; /* switches the axis */</code></pre>
 
 
 
-<h3>21. Using flexbox to start styling our navigation</h3>
+<h3 class="wp-block-heading">21. Using flexbox to start styling our navigation</h3>
 
 
 
-<h5>程式碼範例</h5>
+<h5 class="wp-block-heading">程式碼範例</h5>
 
 
 
@@ -3517,11 +6856,11 @@ nav a:hover {
 
 
 
-<h3>22. Making out navigation look good</h3>
+<h3 class="wp-block-heading">22. Making out navigation look good</h3>
 
 
 
-<h5>程式碼範例</h5>
+<h5 class="wp-block-heading">程式碼範例</h5>
 
 
 
@@ -3624,11 +6963,11 @@ nav a:focus {
 
 
 
-<h3>23. Adding the underline</h3>
+<h3 class="wp-block-heading">23. Adding the underline</h3>
 
 
 
-<h5>程式碼範例</h5>
+<h5 class="wp-block-heading">程式碼範例</h5>
 
 
 
@@ -3746,11 +7085,11 @@ nav a:focus {
 
 
 
-<h3>24. A more complicated navigation</h3>
+<h3 class="wp-block-heading">24. A more complicated navigation</h3>
 
 
 
-<h5>程式碼範例</h5>
+<h5 class="wp-block-heading">程式碼範例</h5>
 
 
 
@@ -3880,11 +7219,11 @@ nav a:focus {
 
 
 
-<h3>25. Making the navigation responsive</h3>
+<h3 class="wp-block-heading">25. Making the navigation responsive</h3>
 
 
 
-<h4 class="has-vivid-cyan-blue-background-color has-background">Adding a media query to our nav</h4>
+<h4 class="has-vivid-cyan-blue-background-color has-background wp-block-heading">Adding a media query to our nav</h4>
 
 
 
@@ -3892,7 +7231,7 @@ nav a:focus {
 
 
 
-<h5>程式碼範例</h5>
+<h5 class="wp-block-heading">程式碼範例</h5>
 
 
 
@@ -4042,11 +7381,11 @@ nav a:focus {
 
 
 
-<h3>26. Taking a look at the rest of the project</h3>
+<h3 class="wp-block-heading">26. Taking a look at the rest of the project</h3>
 
 
 
-<h5>投影片範例 – 5 Screens</h5>
+<h5 class="wp-block-heading">投影片範例 – 5 Screens</h5>
 
 
 
@@ -4054,7 +7393,7 @@ nav a:focus {
 
 
 
-<h5>資源</h5>
+<h5 class="wp-block-heading">資源</h5>
 
 
 
@@ -4062,19 +7401,19 @@ nav a:focus {
 
 
 
-<h5>Adobe XD 設計稿文件講解</h5>
+<h5 class="wp-block-heading">Adobe XD 設計稿文件講解</h5>
 
 
 
-<h3>27. Setting up the structure</h3>
+<h3 class="wp-block-heading">27. Setting up the structure</h3>
 
 
 
-<h5>投影片講解 – HOME</h5>
+<h5 class="wp-block-heading">投影片講解 – HOME</h5>
 
 
 
-<figure class="wp-block-image size-full"><img width="643" height="583" src="/wordpress_blog/wp-content/uploads/2022/04/structure.png" alt="" class="wp-image-704"/><figcaption>structure</figcaption></figure>
+<figure class="wp-block-image size-full"><img decoding="async" fetchpriority="high" width="643" height="583" src="/wordpress_blog/wp-content/uploads/2022/04/structure.png" alt="" class="wp-image-704"/><figcaption>structure</figcaption></figure>
 
 
 
@@ -4082,7 +7421,7 @@ nav a:focus {
 
 
 
-<h5>程式碼範例</h5>
+<h5 class="wp-block-heading">程式碼範例</h5>
 
 
 
@@ -4243,11 +7582,11 @@ nav a:focus {
 
 
 
-<h3>28. Featured article structure</h3>
+<h3 class="wp-block-heading">28. Featured article structure</h3>
 
 
 
-<h5>程式碼範例</h5>
+<h5 class="wp-block-heading">程式碼範例</h5>
 
 
 
@@ -4421,11 +7760,11 @@ nav a:focus {
 
 
 
-<h3>29. The home page – HTML for the recent articles</h3>
+<h3 class="wp-block-heading">29. The home page – HTML for the recent articles</h3>
 
 
 
-<h5>程式碼範例</h5>
+<h5 class="wp-block-heading">程式碼範例</h5>
 
 
 
@@ -4629,11 +7968,11 @@ nav a:focus {
 
 
 
-<h3>30. Home Page – HTML for the aside</h3>
+<h3 class="wp-block-heading">30. Home Page – HTML for the aside</h3>
 
 
 
-<h5>程式碼範例</h5>
+<h5 class="wp-block-heading">程式碼範例</h5>
 
 
 
@@ -4858,7 +8197,7 @@ nav a:focus {
 
 
 
-<h3>31. Starting the CSS for our page</h3>
+<h3 class="wp-block-heading">31. Starting the CSS for our page</h3>
 
 
 
@@ -4866,7 +8205,7 @@ nav a:focus {
 
 
 
-<h5>Colors</h5>
+<h5 class="wp-block-heading">Colors</h5>
 
 
 
@@ -4874,7 +8213,7 @@ nav a:focus {
 
 
 
-<h5>Font-sizes</h5>
+<h5 class="wp-block-heading">Font-sizes</h5>
 
 
 
@@ -4882,7 +8221,7 @@ nav a:focus {
 
 
 
-<h5>程式碼範例</h5>
+<h5 class="wp-block-heading">程式碼範例</h5>
 
 
 
@@ -5153,11 +8492,11 @@ nav a:focus {
 
 
 
-<h3>32. Starting the layout – looking at the big picture</h3>
+<h3 class="wp-block-heading">32. Starting the layout – looking at the big picture</h3>
 
 
 
-<h5>程式碼範例</h5>
+<h5 class="wp-block-heading">程式碼範例</h5>
 
 
 
@@ -5441,11 +8780,11 @@ nav a:focus {
 
 
 
-<h3>33. Starting to think mobile first</h3>
+<h3 class="wp-block-heading">33. Starting to think mobile first</h3>
 
 
 
-<h5>程式碼範例</h5>
+<h5 class="wp-block-heading">程式碼範例</h5>
 
 
 
@@ -5727,11 +9066,11 @@ nav a:focus {
 
 
 
-<h3>34. Styling the featured article</h3>
+<h3 class="wp-block-heading">34. Styling the featured article</h3>
 
 
 
-<h5>程式碼範例</h5>
+<h5 class="wp-block-heading">程式碼範例</h5>
 
 
 
@@ -6024,11 +9363,11 @@ nav a:focus {
 
 
 
-<h3>35. Changing the visual order width flex box</h3>
+<h3 class="wp-block-heading">35. Changing the visual order width flex box</h3>
 
 
 
-<h5>程式碼範例</h5>
+<h5 class="wp-block-heading">程式碼範例</h5>
 
 
 
@@ -6336,11 +9675,11 @@ nav a:focus {
 
 
 
-<h3>36. Playing with the title’s position, and the downsides of negative margins</h3>
+<h3 class="wp-block-heading">36. Playing with the title’s position, and the downsides of negative margins</h3>
 
 
 
-<h5>程式碼範例</h5>
+<h5 class="wp-block-heading">程式碼範例</h5>
 
 
 
@@ -6658,11 +9997,11 @@ nav a:focus {
 
 
 
-<h3>37. Changing the visual order with flex box</h3>
+<h3 class="wp-block-heading">37. Changing the visual order with flex box</h3>
 
 
 
-<h5>程式碼範例</h5>
+<h5 class="wp-block-heading">程式碼範例</h5>
 
 
 
@@ -6992,15 +10331,15 @@ nav a:focus {
 
 
 
-<h5>自我補充：<a href="https://developer.mozilla.org/zh-TW/docs/Web/CSS/object-fit" target="_blank" rel="noreferrer noopener">object-fit – MDN Web Docs</a></h5>
+<h5 class="wp-block-heading">自我補充：<a href="https://developer.mozilla.org/zh-TW/docs/Web/CSS/object-fit" target="_blank" rel="noreferrer noopener">object-fit – MDN Web Docs</a></h5>
 
 
 
-<h3>38. Styling recent articles for large screens</h3>
+<h3 class="wp-block-heading">38. Styling recent articles for large screens</h3>
 
 
 
-<h5>程式碼範例</h5>
+<h5 class="wp-block-heading">程式碼範例</h5>
 
 
 
@@ -7336,11 +10675,11 @@ nav a:focus {
 
 
 
-<h3>39. Setting up the widgets and talking breakpoints</h3>
+<h3 class="wp-block-heading">39. Setting up the widgets and talking breakpoints</h3>
 
 
 
-<h5>程式碼範例</h5>
+<h5 class="wp-block-heading">程式碼範例</h5>
 
 
 
@@ -7689,11 +11028,11 @@ nav a:focus {
 
 
 
-<h3>40. Using a new pseudo-class to wrap-up the homepage</h3>
+<h3 class="wp-block-heading">40. Using a new pseudo-class to wrap-up the homepage</h3>
 
 
 
-<h5>程式碼範例</h5>
+<h5 class="wp-block-heading">程式碼範例</h5>
 
 
 
@@ -8075,11 +11414,11 @@ nav a:focus {
 
 
 
-<h3>41. Creating the recent posts page</h3>
+<h3 class="wp-block-heading">41. Creating the recent posts page</h3>
 
 
 
-<h5>程式碼範例</h5>
+<h5 class="wp-block-heading">程式碼範例</h5>
 
 
 
@@ -8570,11 +11909,11 @@ nav a:focus {
 
 
 
-<h3>42. Setting up the About Me page</h3>
+<h3 class="wp-block-heading">42. Setting up the About Me page</h3>
 
 
 
-<h5>程式碼範例</h5>
+<h5 class="wp-block-heading">程式碼範例</h5>
 
 
 
@@ -9148,11 +12487,11 @@ nav a:focus {
 
 
 
-<h3>43. Fixing up some loose ends</h3>
+<h3 class="wp-block-heading">43. Fixing up some loose ends</h3>
 
 
 
-<h5>程式碼範例</h5>
+<h5 class="wp-block-heading">程式碼範例</h5>
 
 
 
@@ -9749,11 +13088,11 @@ nav a:focus {
 
 
 
-<h3>44. Important Note. The viewport meta tag</h3>
+<h3 class="wp-block-heading">44. Important Note. The viewport meta tag</h3>
 
 
 
-<h4 class="has-vivid-cyan-blue-background-color has-background">The viewport meta</h4>
+<h4 class="has-vivid-cyan-blue-background-color has-background wp-block-heading">The viewport meta</h4>
 
 
 
@@ -9761,7 +13100,7 @@ nav a:focus {
 
 
 
-<h4 class="has-vivid-cyan-blue-background-color has-background">The viewport meta tag</h4>
+<h4 class="has-vivid-cyan-blue-background-color has-background wp-block-heading">The viewport meta tag</h4>
 
 
 
@@ -9773,7 +13112,7 @@ nav a:focus {
 
 
 
-<h4 class="has-vivid-cyan-blue-background-color has-background">The viewport meta tag</h4>
+<h4 class="has-vivid-cyan-blue-background-color has-background wp-block-heading">The viewport meta tag</h4>
 
 
 
@@ -9781,7 +13120,7 @@ nav a:focus {
 
 
 
-<h4 class="has-vivid-cyan-blue-background-color has-background">The viewport meta tag</h4>
+<h4 class="has-vivid-cyan-blue-background-color has-background wp-block-heading">The viewport meta tag</h4>
 
 
 
@@ -9789,7 +13128,7 @@ nav a:focus {
 
 
 
-<h4 class="has-vivid-cyan-blue-background-color has-background">The viewport meta tag</h4>
+<h4 class="has-vivid-cyan-blue-background-color has-background wp-block-heading">The viewport meta tag</h4>
 
 
 
@@ -9805,7 +13144,7 @@ nav a:focus {
 
 
 
-<h4 class="has-vivid-cyan-blue-background-color has-background">The viewport meta tag</h4>
+<h4 class="has-vivid-cyan-blue-background-color has-background wp-block-heading">The viewport meta tag</h4>
 
 
 
@@ -9817,7 +13156,7 @@ nav a:focus {
 
 
 
-<h5>程式碼範例</h5>
+<h5 class="wp-block-heading">程式碼範例</h5>
 
 
 
@@ -9840,7 +13179,7 @@ nav a:focus {
 
 
 
-<h3>45. Module wrap up</h3>
+<h3 class="wp-block-heading">45. Module wrap up</h3>
 
 
 
@@ -9848,7 +13187,7 @@ nav a:focus {
 
 
 
-<h3>Outro</h3>
+<h3 class="wp-block-heading">Outro</h3>
 ]]></content:encoded>
 					
 		

@@ -8,32 +8,1436 @@
 	>
 
 <channel>
-	<title>The Net Ninja &#8211; wordpress_blog</title>
+	<title>Net Ninja &#8211; wordpress_blog</title>
 	<atom:link href="/wordpress_blog/category/ninja/feed/" rel="self" type="application/rss+xml" />
 	<link>/wordpress_blog</link>
 	<description>This is a dynamic to static website.</description>
-	<lastBuildDate>Wed, 06 Apr 2022 07:11:52 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 04 Oct 2023 03:55:24 +0000</lastBuildDate>
 	<language>zh-TW</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=5.9.3</generator>
+	<generator>https://wordpress.org/?v=6.3.1</generator>
 
 <image>
 	<url>/wordpress_blog/wp-content/uploads/2022/03/logo.png</url>
-	<title>The Net Ninja &#8211; wordpress_blog</title>
+	<title>Net Ninja &#8211; wordpress_blog</title>
 	<link>/wordpress_blog</link>
 	<width>32</width>
 	<height>32</height>
 </image> 
 	<item>
+		<title>Complete MongoDB Tutorial</title>
+		<link>/wordpress_blog/complete-mongodb-tutorial/</link>
+		
+		<dc:creator><![CDATA[gee.hsu]]></dc:creator>
+		<pubDate>Wed, 04 Oct 2023 03:55:22 +0000</pubDate>
+				<category><![CDATA[Net Ninja]]></category>
+		<guid isPermaLink="false">/wordpress_blog/?p=764</guid>
+
+					<description><![CDATA[#1 – What is MongoDB? In this se [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<h2 class="wp-block-heading">#1 – What is MongoDB?</h2>
+
+
+
+<p>In this series you’ll learn how to use MongoDB (a NoSQL database) from scratch. You’ll also learn how to integrate it into a simple Node.js API.</p>
+
+
+
+<h2 class="wp-block-heading">#2 – Installing MongoDB</h2>
+
+
+
+<p>Learn how to install MongoDB locally onto your computer.</p>
+
+
+
+<ul>
+<li><a href="https://www.mongodb.com/try/download/community" target="_blank" rel="noreferrer noopener">MongoDB Community Server Download</a></li>
+
+
+
+<li><a href="https://www.mongodb.com/try/download/shell" target="_blank" rel="noreferrer noopener">TOOLS – MongoDB Shell Download</a></li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">#3 – Collections &amp; Documents</h2>
+
+
+
+<h2 class="wp-block-heading">#4 – Using MongoDB Compass</h2>
+
+
+
+<h2 class="wp-block-heading">#5 – Using the MongoDB Shell</h2>
+
+
+
+<h3 class="wp-block-heading">指令</h3>
+
+
+
+<ul>
+<li>show dbs</li>
+
+
+
+<li>use database’s</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">使用其他終端機 – 指令</h3>
+
+
+
+<ul>
+<li>mongosh</li>
+
+
+
+<li>cls</li>
+
+
+
+<li>db</li>
+
+
+
+<li>show collections</li>
+
+
+
+<li>help</li>
+
+
+
+<li>exit</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">#6 – Adding New Documents</h2>
+
+
+
+<h3 class="wp-block-heading">指令</h3>
+
+
+
+<pre class="wp-block-code"><code>// insertOne
+db.books.insertOne({title: "The Color of Magic", author: "Terry Pratchett", pages: 300, rating: 7, genres: &#91;"fantasy", "magic"]})</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// insertMany
+db.books.insertMany(&#91;{title: "The Light Fantastic", author: "Terry Pratchett", pages: 250, rating: 6, genres: &#91;"fantasy"]}, {title: "Dune", author: "Frank Herbert", pages: 500, rating: 10, genres: &#91;"sci-fi", "dystopian"]}])
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">#7 – Finding Documents</h2>
+
+
+
+<h3 class="wp-block-heading">指令</h3>
+
+
+
+<ul>
+<li>db.books.find()</li>
+
+
+
+<li>db.books.find({author: “Terry Pratchett”})</li>
+
+
+
+<li>db.books.find({author: “Terry Pratchett”, rating: 7})</li>
+
+
+
+<li>db.books.find({author: “Brandon Sanderson”})</li>
+
+
+
+<li>db.books.find({author: “Brandon Sanderson”}, {title: 1, author: 1})</li>
+
+
+
+<li>db.books.find({}, {title: 1, author: 1})</li>
+
+
+
+<li>db.books.find({_id: ObjectId(“650be28b103e76e586910c81”)})</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">#8 – Sorting &amp; Limiting Data</h2>
+
+
+
+<h3 class="wp-block-heading">指令</h3>
+
+
+
+<ul>
+<li>db.books.find().count()</li>
+
+
+
+<li>db.books.find({ author: “Brandon Sanderson” }).count()</li>
+
+
+
+<li>db.books.find().limit(3)</li>
+
+
+
+<li>db.books.find().limit(3).count()</li>
+
+
+
+<li>db.books.find().sort({ title: 1 })</li>
+
+
+
+<li>db.books.find().sort({ title: -1 })</li>
+
+
+
+<li>db.books.find().sort({ title: 1 }).limit(3)</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">#9 – Nested Documents</h2>
+
+
+
+<h3 class="wp-block-heading">指令</h3>
+
+
+
+<pre class="wp-block-code"><code>// insertOne
+db.books.insertOne({title: "The Way of Kings", author: "Brandon Sanderson", rating: 9, pages: 400, genres: &#91;"fantasy"], reviews: &#91;{name: "Yoshi", body: "Great book!!"}, {name: "mario", body: "so so"}]})</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// insertMany
+db.books.insertMany(&#91;{title: "The Light Fantastic", author: "Terry Pratchett", pages: 250, rating: 6, genres: &#91;"fantasy", "magic"], reviews: &#91;{name:"luigi", body: "it was pretty good"}, {name: "bowser", body: "loved it!!"}]}, {title: "The Name of the Wind", "author": "Patrick Rothfuss", page: 500, "rating": 10, genres: &#91;"fantasy"], review: &#91;{name: "peach", body: "one of my favs"}]}, {title: "The Color of Magic", "author": "Terry Pratchett", page: 350, "rating": 8, genres: &#91;"fantasy", "magic"], review: &#91;{name: "luigi", body: "it was ok"}, {name: "bowser", body: "really good book"}]}, {title: "1984", "author": "George Orwell", page: 300, "rating": 6, genres: &#91;"sci-fi", "dystopian"], review: &#91;{name: "peach", body: "not my cup of tea"}, {name: "mario", body: "meh"}]}])</code></pre>
+
+
+
+<h2 class="wp-block-heading">#10 – Operators &amp; Complex Queries</h2>
+
+
+
+<h3 class="wp-block-heading">指令</h3>
+
+
+
+<ul>
+<li>db.books.find({rating: 7})</li>
+
+
+
+<li>db.books.find({ rating: {$gt: 7}})</li>
+
+
+
+<li>db.books.find({ rating: {$gt: 8}})</li>
+
+
+
+<li>db.books.find({ rating: {$lte: 8}})</li>
+
+
+
+<li>db.books.find({ rating: {$gte: 8}})</li>
+
+
+
+<li>db.books.find({ rating: {$gt: 7}, author: “Patrick Rothfuss”})</li>
+
+
+
+<li>db.books.find({$or: [{rating: 7}, {rating: 9}]})</li>
+
+
+
+<li>db.books.find({$or: [{rating: 7}, {author: “Terry Pratchett”}]})</li>
+
+
+
+<li>db.books.find({$or: [{pages: {$lt: 300}}, {pages: {$gt: 400}}]})</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">#11 – Using $in &amp; $nin</h2>
+
+
+
+<h3 class="wp-block-heading">指令</h3>
+
+
+
+<ul>
+<li>db.books.find({ rating: {$in: [7,8,9]}})</li>
+
+
+
+<li>db.books.find({$or: [{rating: 7}, {rating: 8}, {rating: 9}]})</li>
+
+
+
+<li>db.books.find({rating: {$nin: [7,8,9]}})</li>
+
+
+
+<li>db.books.find({rating: {$nin: [7,8]}})</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">#12 – Querying Arrays</h2>
+
+
+
+<h3 class="wp-block-heading">指令</h3>
+
+
+
+<ul>
+<li>db.books.find({genres: “fantasy”})</li>
+
+
+
+<li>db.books.find({genres: “magic”})</li>
+
+
+
+<li>db.books.find({genres: [“magic”]})</li>
+
+
+
+<li>db.books.find({genres: [“fantasy”]})</li>
+
+
+
+<li>db.books.find({genres: [“fantasy”, “magic”]})</li>
+
+
+
+<li>db.books.find({genres: {$all: [“fantasy”, “sci-fi”]}})</li>
+
+
+
+<li>db.books.find({“reviews.name”: “luigi”})</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">#13 – Deleting Documents</h2>
+
+
+
+<p>事先使用 MongoDB Compass EXPORT DATA 把資料匯出成JSON檔案。</p>
+
+
+
+<h3 class="wp-block-heading">指令</h3>
+
+
+
+<ul>
+<li>db.books.find()</li>
+
+
+
+<li>db.books.deleteOne({_id: ObjectId(“650d22be248ed3d1c20642d0”)})</li>
+
+
+
+<li>db.books.deleteMany({author: “Terry Pratchett”})</li>
+</ul>
+
+
+
+<p>使用 MongoDB Compass ADD DATA 把檔案匯入。</p>
+
+
+
+<h2 class="wp-block-heading">#14 – Updating Documents</h2>
+
+
+
+<h3 class="wp-block-heading">指令</h3>
+
+
+
+<ul>
+<li>db.books.updateOne({_id: ObjectId(“650d22be248ed3d1c20642cf”)}, {$set: {rating: 8, pages: 360}})</li>
+
+
+
+<li>db.books.updateMany({author: “Terry Pratchett”}, {$set: {author: “Terry Pratchet”}})</li>
+
+
+
+<li>db.books.updateOne({_id: ObjectId(“650d22be248ed3d1c20642d0”)}, {$inc: {pages: 2}})</li>
+
+
+
+<li>db.books.updateOne({_id: ObjectId(“650d22be248ed3d1c20642d0”)}, {$inc: {pages: -2}})</li>
+
+
+
+<li>db.books.updateOne({_id: ObjectId(“650d22be248ed3d1c20642d0”)}, {$pull: {genres: “fantasy”}})</li>
+
+
+
+<li>db.books.updateOne({_id: ObjectId(“650d22be248ed3d1c20642d0”)}, {$push: {genres: “fantasy”}})</li>
+
+
+
+<li>db.books.updateOne({_id: ObjectId(“650d22be248ed3d1c20642d0”)}, {$push: {genres: {$each: [“1″,”2”]}}})</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">#15 – MongoDB Drivers</h2>
+
+
+
+<ul>
+<li><a href="https://www.mongodb.com/docs/drivers/" target="_blank" rel="noreferrer noopener">Start Developing with MongoDB</a></li>
+
+
+
+<li><a href="https://www.mongodb.com/docs/drivers/node/current/" target="_blank" rel="noreferrer noopener">MongoDB Node Driver</a></li>
+
+
+
+<li><a href="https://nodejs.org/en" target="_blank" rel="noreferrer noopener">Node.js</a></li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">指令 &amp; 操作步驟</h3>
+
+
+
+<ol>
+<li>npm init</li>
+
+
+
+<li>建立一個 app.js 檔案</li>
+
+
+
+<li>npm install express –save</li>
+
+
+
+<li>npm install -g nodemon</li>
+
+
+
+<li>nodemon app</li>
+
+
+
+<li>http://localhost:3000/books</li>
+
+
+
+<li>新增終端 npm install mongodb –save</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// app.js
+const express = require('express')
+
+// init app &amp; middleware
+const app = express()
+
+app.listen(3000, () =&gt; {
+  console.log('app listening on port 3000')
+})
+
+// routes
+app.get('/books', (req, res) =&gt; {
+  res.json({mssg: "welcome to the api"})
+})</code></pre>
+
+
+
+<h2 class="wp-block-heading">#16 – Connecting to MongoDB</h2>
+
+
+
+<h3 class="wp-block-heading">操作步驟</h3>
+
+
+
+<ol>
+<li>建立一個 db.js 檔案</li>
+
+
+
+<li>修改 app.js 檔案內容</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// db.js
+const { MongoClient } = require('mongodb')
+
+let dbConnection
+
+module.exports = {
+  connectToDb: (cb) =&gt; {
+    MongoClient.connect('mongodb://localhost:27017/bookstore')
+      .then((client) =&gt; {
+        dbConnection = client.db()
+        return cb()
+      })
+      .catch(err =&gt; {
+        console.log(err)
+        return cb(err)
+      })
+  },
+  getDb: () =&gt; dbConnection
+}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// app.js
+const express = require('express')
+const { connectToDb, getDb } = require('./db')
+
+// init app &amp; middleware
+const app = express()
+
+// db connection
+let db
+
+connectToDb((err) =&gt; {
+  if (!err) {
+    app.listen(3000, () =&gt; {
+      console.log('app listening on port 3000')
+    })
+    db = getDb()
+  }
+})
+
+// routes
+app.get('/books', (req, res) =&gt; {
+  res.json({mssg: "welcome to the api"})
+})</code></pre>
+
+
+
+<h2 class="wp-block-heading">#17 – Cursors &amp; Fetching Data</h2>
+
+
+
+<h3 class="wp-block-heading">操作步驟</h3>
+
+
+
+<ol>
+<li>繼續修改 app.js 檔案內容</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// app.js
+const express = require('express')
+const { connectToDb, getDb } = require('./db')
+
+// init app &amp; middleware
+const app = express()
+
+// db connection
+let db
+
+connectToDb((err) =&gt; {
+  if (!err) {
+    app.listen(3000, () =&gt; {
+      console.log('app listening on port 3000')
+    })
+    db = getDb()
+  }
+})
+
+// routes
+app.get('/books', (req, res) =&gt; {
+  let books = &#91;]
+
+  db.collection('books')
+    .find()
+    .sort({ author: 1 })
+    .forEach(book =&gt; books.push(book))
+    .then(() =&gt; {
+      res.status(200).json(books)
+    })
+    .catch(() =&gt; {
+      res.status(500).json({error: 'Could not fetch the documents'})
+    })
+})</code></pre>
+
+
+
+<h2 class="wp-block-heading">#18 – Finding Single Documents</h2>
+
+
+
+<h3 class="wp-block-heading">操作步驟</h3>
+
+
+
+<ol>
+<li>繼續修改 app.js</li>
+
+
+
+<li>使用 URL 測試是否能正常找到單一文件 http://localhost:3000/books/650d22be248ed3d1c20642cf</li>
+
+
+
+<li>增加一些 ObjectId 布林判斷 app.js</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// app.js - 1
+const express = require('express')
+const { ObjectId } = require('mongodb')
+const { connectToDb, getDb } = require('./db')
+
+// init app &amp; middleware
+const app = express()
+
+// db connection
+let db
+
+connectToDb((err) =&gt; {
+  if (!err) {
+    app.listen(3000, () =&gt; {
+      console.log('app listening on port 3000')
+    })
+    db = getDb()
+  }
+})
+
+// routes
+app.get('/books', (req, res) =&gt; {
+  let books = &#91;]
+
+  db.collection('books')
+    .find()
+    .sort({ author: 1 })
+    .forEach(book =&gt; books.push(book))
+    .then(() =&gt; {
+      res.status(200).json(books)
+    })
+    .catch(() =&gt; {
+      res.status(500).json({error: 'Could not fetch the documents'})
+    })
+})
+
+app.get('/books/:id', (req, res) =&gt; {
+
+  db.collection('books')
+    .findOne({_id: new ObjectId(req.params.id)})
+    .then(doc =&gt; {
+      res.status(200).json(doc)
+    })
+    .catch(err =&gt; {
+      res.status(500).json({error: 'Could not fetch the document'})
+    })
+
+})
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// app.js -3
+const express = require('express')
+const { ObjectId } = require('mongodb')
+const { connectToDb, getDb } = require('./db')
+
+// init app &amp; middleware
+const app = express()
+
+// db connection
+let db
+
+connectToDb((err) =&gt; {
+  if (!err) {
+    app.listen(3000, () =&gt; {
+      console.log('app listening on port 3000')
+    })
+    db = getDb()
+  }
+})
+
+// routes
+app.get('/books', (req, res) =&gt; {
+  let books = &#91;]
+
+  db.collection('books')
+    .find()
+    .sort({ author: 1 })
+    .forEach(book =&gt; books.push(book))
+    .then(() =&gt; {
+      res.status(200).json(books)
+    })
+    .catch(() =&gt; {
+      res.status(500).json({error: 'Could not fetch the documents'})
+    })
+})
+
+app.get('/books/:id', (req, res) =&gt; {
+
+  if (ObjectId.isValid(req.params.id)) {
+    db.collection('books')
+    .findOne({_id: new ObjectId(req.params.id)})
+    .then(doc =&gt; {
+      res.status(200).json(doc)
+    })
+    .catch(err =&gt; {
+      res.status(500).json({error: 'Could not fetch the document'})
+    })
+  } else {
+    res.status(500).json({error: 'Not a valid doc id'})
+  }
+  
+})</code></pre>
+
+
+
+<h2 class="wp-block-heading">#19 – Using POSTMAN</h2>
+
+
+
+<ul>
+<li><a href="https://www.postman.com/" target="_blank" rel="noreferrer noopener">POSTMAN</a></li>
+
+
+
+<li><a href="https://hoppscotch.io/" target="_blank" rel="noreferrer noopener">HOPPSCOTCH</a></li>
+
+
+
+<li><a rel="noreferrer noopener" href="https://docs.hoppscotch.io/documentation/features/interceptor" target="_blank">HOPPSCOTCH Browser extension</a></li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Request</h3>
+
+
+
+<ul>
+<li>http://localhost:3000/books</li>
+
+
+
+<li>http://localhost:3000/books/650d1421248ed3d1c20642cc</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">#20 – Handling POST Request</h2>
+
+
+
+<h3 class="wp-block-heading">操作步驟</h3>
+
+
+
+<ol>
+<li>在 app.js 新增 post 相關程式碼</li>
+
+
+
+<li>使用 POSTMAN 請求 POST 方法</li>
+
+
+
+<li>http://localhost:3000/books</li>
+
+
+
+<li>Body &gt; raw 貼上準備好的資料內容然後送出</li>
+
+
+
+<li>可以看到 Response Body 呈現的訊息</li>
+
+
+
+<li>點擊之前的 Get Collection – books 測試</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// app.js
+const express = require('express')
+const { ObjectId } = require('mongodb')
+const { connectToDb, getDb } = require('./db')
+
+// init app &amp; middleware
+const app = express()
+app.use(express.json())
+
+// db connection
+let db
+
+connectToDb((err) =&gt; {
+  if (!err) {
+    app.listen(3000, () =&gt; {
+      console.log('app listening on port 3000')
+    })
+    db = getDb()
+  }
+})
+
+// routes
+app.get('/books', (req, res) =&gt; {
+  let books = &#91;]
+
+  db.collection('books')
+    .find()
+    .sort({ author: 1 })
+    .forEach(book =&gt; books.push(book))
+    .then(() =&gt; {
+      res.status(200).json(books)
+    })
+    .catch(() =&gt; {
+      res.status(500).json({error: 'Could not fetch the documents'})
+    })
+})
+
+app.get('/books/:id', (req, res) =&gt; {
+
+  if (ObjectId.isValid(req.params.id)) {
+    db.collection('books')
+    .findOne({_id: new ObjectId(req.params.id)})
+    .then(doc =&gt; {
+      res.status(200).json(doc)
+    })
+    .catch(err =&gt; {
+      res.status(500).json({error: 'Could not fetch the document'})
+    })
+  } else {
+    res.status(500).json({error: 'Not a valid doc id'})
+  }
+  
+})
+
+app.post('/books', (req, res) =&gt; {
+  const book = req.body
+
+  db.collection('books')
+    .insertOne(book)
+    .then(result =&gt; {
+      res.status(201).json(result)
+    })
+    .catch(err =&gt; {
+      res.status(500).json({err: 'Could not create a new document'})
+    })
+})</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Body &gt; raw JSON
+{
+  "title": "The Final Empire",
+  "author": "Brandon Sanderson",
+  "rating": 9,
+  "pages": 420,
+  "genres": &#91;
+    "fantasy",
+    "magic"
+  ],
+  "reviews": &#91;
+    {
+      "name": "Shaun",
+      "body": "Couldn't put this book down."
+    },
+    {
+      "name": "Chun-Li",
+      "body": "Love it."
+    }
+  ]
+}
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">#21 – Handling DELETE Requests</h2>
+
+
+
+<h3 class="wp-block-heading">操作步驟</h3>
+
+
+
+<ol>
+<li>在 app.js 新增 delete 相關程式碼</li>
+
+
+
+<li>使用 POSTMAN 請求 DELETE 方法</li>
+
+
+
+<li>http://localhost:3000/books/650d22be248ed3d1c20642d0</li>
+
+
+
+<li>送出後可以看到 Response Body 的訊息</li>
+
+
+
+<li>點擊 Get 方法查看是否有刪除資料</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// app.js
+const express = require('express')
+const { ObjectId } = require('mongodb')
+const { connectToDb, getDb } = require('./db')
+
+// init app &amp; middleware
+const app = express()
+app.use(express.json())
+
+// db connection
+let db
+
+connectToDb((err) =&gt; {
+  if (!err) {
+    app.listen(3000, () =&gt; {
+      console.log('app listening on port 3000')
+    })
+    db = getDb()
+  }
+})
+
+// routes
+app.get('/books', (req, res) =&gt; {
+  let books = &#91;]
+
+  db.collection('books')
+    .find()
+    .sort({ author: 1 })
+    .forEach(book =&gt; books.push(book))
+    .then(() =&gt; {
+      res.status(200).json(books)
+    })
+    .catch(() =&gt; {
+      res.status(500).json({error: 'Could not fetch the documents'})
+    })
+})
+
+app.get('/books/:id', (req, res) =&gt; {
+
+  if (ObjectId.isValid(req.params.id)) {
+    db.collection('books')
+    .findOne({_id: new ObjectId(req.params.id)})
+    .then(doc =&gt; {
+      res.status(200).json(doc)
+    })
+    .catch(err =&gt; {
+      res.status(500).json({error: 'Could not fetch the document'})
+    })
+  } else {
+    res.status(500).json({error: 'Not a valid doc id'})
+  }
+  
+})
+
+app.post('/books', (req, res) =&gt; {
+  const book = req.body
+
+  db.collection('books')
+    .insertOne(book)
+    .then(result =&gt; {
+      res.status(201).json(result)
+    })
+    .catch(err =&gt; {
+      res.status(500).json({err: 'Could not create a new document'})
+    })
+})
+
+app.delete('/books/:id', (req, res) =&gt; {
+
+  if (ObjectId.isValid(req.params.id)) {
+    db.collection('books')
+    .deleteOne({_id: new ObjectId(req.params.id)})
+    .then(result =&gt; {
+      res.status(200).json(result)
+    })
+    .catch(err =&gt; {
+      res.status(500).json({error: 'Could not delete the document'})
+    })
+  } else {
+    res.status(500).json({error: 'Not a valid doc id'})
+  }
+})</code></pre>
+
+
+
+<h2 class="wp-block-heading">#22 – PATCH Requests</h2>
+
+
+
+<h3 class="wp-block-heading">操作步驟</h3>
+
+
+
+<ol>
+<li>在 app.js 新增 PATCH 相關程式碼</li>
+
+
+
+<li>使用 POSTMAN 請求 PATCH 方法</li>
+
+
+
+<li>因為出現錯誤，有重新 import bookstore.books 檔案</li>
+
+
+
+<li>http://localhost:3000/books/650d1421248ed3d1c20642cc</li>
+
+
+
+<li>Body &gt; raw JSON 更新資料後送出會呈現 Body 訊息</li>
+
+
+
+<li>使用 GET Collection 查看是否有正確更新</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// app.js
+const express = require('express')
+const { ObjectId } = require('mongodb')
+const { connectToDb, getDb } = require('./db')
+
+// init app &amp; middleware
+const app = express()
+app.use(express.json())
+
+// db connection
+let db
+
+connectToDb((err) =&gt; {
+  if (!err) {
+    app.listen(3000, () =&gt; {
+      console.log('app listening on port 3000')
+    })
+    db = getDb()
+  }
+})
+
+// routes
+app.get('/books', (req, res) =&gt; {
+  let books = &#91;]
+
+  db.collection('books')
+    .find()
+    .sort({ author: 1 })
+    .forEach(book =&gt; books.push(book))
+    .then(() =&gt; {
+      res.status(200).json(books)
+    })
+    .catch(() =&gt; {
+      res.status(500).json({error: 'Could not fetch the documents'})
+    })
+})
+
+app.get('/books/:id', (req, res) =&gt; {
+
+  if (ObjectId.isValid(req.params.id)) {
+    db.collection('books')
+    .findOne({_id: new ObjectId(req.params.id)})
+    .then(doc =&gt; {
+      res.status(200).json(doc)
+    })
+    .catch(err =&gt; {
+      res.status(500).json({error: 'Could not fetch the document'})
+    })
+  } else {
+    res.status(500).json({error: 'Not a valid doc id'})
+  }
+  
+})
+
+app.post('/books', (req, res) =&gt; {
+  const book = req.body
+
+  db.collection('books')
+    .insertOne(book)
+    .then(result =&gt; {
+      res.status(201).json(result)
+    })
+    .catch(err =&gt; {
+      res.status(500).json({err: 'Could not create a new document'})
+    })
+})
+
+app.delete('/books/:id', (req, res) =&gt; {
+
+  if (ObjectId.isValid(req.params.id)) {
+    db.collection('books')
+    .deleteOne({_id: new ObjectId(req.params.id)})
+    .then(result =&gt; {
+      res.status(200).json(result)
+    })
+    .catch(err =&gt; {
+      res.status(500).json({error: 'Could not delete the document'})
+    })
+  } else {
+    res.status(500).json({error: 'Not a valid doc id'})
+  }
+})
+
+app.patch('/books/:id', (req, res) =&gt; {
+  const updates = req.body
+
+  if (ObjectId.isValid(req.params.id)) {
+    db.collection('books')
+    .updateOne({_id: new ObjectId(req.params.id)}, {$set: updates})
+    .then(result =&gt; {
+      res.status(200).json(result)
+    })
+    .catch(err =&gt; {
+      res.status(500).json({error: 'Could not update the document'})
+    })
+  } else {
+    res.status(500).json({error: 'Not a valid doc id'})
+  }
+})</code></pre>
+
+
+
+<pre class="wp-block-code"><code>Body &gt; raw JSON
+{
+  "pages": 350,
+  "rating": 8
+}</code></pre>
+
+
+
+<h2 class="wp-block-heading">#23 – Pagination</h2>
+
+
+
+<p>In this MongoDB tutorial I’ll explain how to implement pagination into your requests.</p>
+
+
+
+<h3 class="wp-block-heading">操作步驟</h3>
+
+
+
+<ol>
+<li>在 app.js 新增關於 pagination 程式碼</li>
+
+
+
+<li>使用 POSTMAN 請求 GET 方法<br>以下兩種結果會相同</li>
+
+
+
+<li>http://localhost:3000/books</li>
+
+
+
+<li>http://localhost:3000/books?p=0</li>
+
+
+
+<li>使用 http://localhost:3000/books?p=1<br>會忽略前面的資料</li>
+
+
+
+<li>http://localhost:3000/books?p=2<br>因為沒有資料會出現空陣列</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// app.js
+const express = require('express')
+const { ObjectId } = require('mongodb')
+const { connectToDb, getDb } = require('./db')
+
+// init app &amp; middleware
+const app = express()
+app.use(express.json())
+
+// db connection
+let db
+
+connectToDb((err) =&gt; {
+  if (!err) {
+    app.listen(3000, () =&gt; {
+      console.log('app listening on port 3000')
+    })
+    db = getDb()
+  }
+})
+
+// routes
+app.get('/books', (req, res) =&gt; {
+  // current page
+  const page = req.query.p || 0
+  const booksPerPage = 3
+
+  let books = &#91;]
+
+  db.collection('books')
+    .find()
+    .sort({ author: 1 })
+    .skip(page * booksPerPage)
+    .limit(booksPerPage)
+    .forEach(book =&gt; books.push(book))
+    .then(() =&gt; {
+      res.status(200).json(books)
+    })
+    .catch(() =&gt; {
+      res.status(500).json({error: 'Could not fetch the documents'})
+    })
+})
+
+app.get('/books/:id', (req, res) =&gt; {
+
+  if (ObjectId.isValid(req.params.id)) {
+    db.collection('books')
+    .findOne({_id: new ObjectId(req.params.id)})
+    .then(doc =&gt; {
+      res.status(200).json(doc)
+    })
+    .catch(err =&gt; {
+      res.status(500).json({error: 'Could not fetch the document'})
+    })
+  } else {
+    res.status(500).json({error: 'Not a valid doc id'})
+  }
+  
+})
+
+app.post('/books', (req, res) =&gt; {
+  const book = req.body
+
+  db.collection('books')
+    .insertOne(book)
+    .then(result =&gt; {
+      res.status(201).json(result)
+    })
+    .catch(err =&gt; {
+      res.status(500).json({err: 'Could not create a new document'})
+    })
+})
+
+app.delete('/books/:id', (req, res) =&gt; {
+
+  if (ObjectId.isValid(req.params.id)) {
+    db.collection('books')
+    .deleteOne({_id: new ObjectId(req.params.id)})
+    .then(result =&gt; {
+      res.status(200).json(result)
+    })
+    .catch(err =&gt; {
+      res.status(500).json({error: 'Could not delete the document'})
+    })
+  } else {
+    res.status(500).json({error: 'Not a valid doc id'})
+  }
+})
+
+app.patch('/books/:id', (req, res) =&gt; {
+  const updates = req.body
+
+  if (ObjectId.isValid(req.params.id)) {
+    db.collection('books')
+    .updateOne({_id: new ObjectId(req.params.id)}, {$set: updates})
+    .then(result =&gt; {
+      res.status(200).json(result)
+    })
+    .catch(err =&gt; {
+      res.status(500).json({error: 'Could not update the document'})
+    })
+  } else {
+    res.status(500).json({error: 'Not a valid doc id'})
+  }
+})
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">#24 – Indexes</h2>
+
+
+
+<p>In this mongodb tutorial we’ll talk about indexes and see how to create them.</p>
+
+
+
+<h3 class="wp-block-heading">簡報</h3>
+
+
+
+<ul>
+<li>db.collection(“books”).find({“rating”: 10})</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">指令 &amp; 操作步驟</h3>
+
+
+
+<ol>
+<li>使用終端機執行 mongosh</li>
+
+
+
+<li>使用 bookstore 資料庫 use bookstore</li>
+
+
+
+<li>db.books.find({rating: 8}).explain(‘executionStats’)</li>
+
+
+
+<li>db.books.createIndex({ rating: 8 })</li>
+
+
+
+<li>db.books.getIndexes()</li>
+
+
+
+<li>db.books.dropIndex({rating: 8})</li>
+
+
+
+<li>db.books.getIndexes()</li>
+</ol>
+
+
+
+<h2 class="wp-block-heading">#25 – MongoDB Atlas</h2>
+
+
+
+<p>In this mongodb tutorial you’ll learn how to use MongoDB Atlas, a Cloud Database service which allows you to easily set up a hosted database online.</p>
+
+
+
+<h3 class="wp-block-heading">操作步驟</h3>
+
+
+
+<ol>
+<li>註冊或登入 MongoDB</li>
+
+
+
+<li>DEPLOYMENT &gt; Database 選擇建立一個 Database</li>
+
+
+
+<li>選擇 Shared 免費方案</li>
+
+
+
+<li>aws &gt; default 或者自行選擇 &gt; Cluster Name 默認原本名稱 &gt; 建立 Cluster</li>
+
+
+
+<li>Security Quickstart 可以設定 Username 和 Password</li>
+
+
+
+<li>設定好後可以到 Database Access 查看</li>
+
+
+
+<li>Network Access &gt; 新增一個 IP address &gt; 在這裡選擇 ALLOW ACCESS FROM ANYWHERE 僅作測試使用，之後生產版本請勿選擇這個選項</li>
+
+
+
+<li>到 Database Deployment 點擊 Connection &gt; 選擇 Connect your application</li>
+
+
+
+<li>Add your connection string into your application code</li>
+
+
+
+<li>在 db.js 修改成指定的 connection string &gt; 修改設定的 Username 和 Password</li>
+
+
+
+<li>我們不需要修改這些 Request，我們仍然使用這些 Request 關於 localhost</li>
+
+
+
+<li>Mongodb online 資料庫尚未有任何資料 &gt; 可以 post 新的資料到線上資料庫 &gt; Browse Collections</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// db.js
+const { MongoClient } = require('mongodb')
+
+let dbConnection
+let uri = '指定的 connection string'
+
+module.exports = {
+  connectToDb: (cb) =&gt; {
+    MongoClient.connect(uri)
+      .then((client) =&gt; {
+        dbConnection = client.db()
+        return cb()
+      })
+      .catch(err =&gt; {
+        console.log(err)
+        return cb(err)
+      })
+  },
+  getDb: () =&gt; dbConnection
+}</code></pre>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Build Web Apps With Vue JS 3 &#038; Firebase (1)</title>
 		<link>/wordpress_blog/vuejs3firebase-1/</link>
 		
 		<dc:creator><![CDATA[gee.hsu]]></dc:creator>
 		<pubDate>Wed, 16 Feb 2022 07:01:00 +0000</pubDate>
-				<category><![CDATA[The Net Ninja]]></category>
+				<category><![CDATA[Net Ninja]]></category>
 		<guid isPermaLink="false">/wordpress_blog/?p=536</guid>
 
 					<description><![CDATA[Learn Vue JS 3 &#38; Firebase by [&#8230;]]]></description>
@@ -42,7 +1446,7 @@
 
 
 
-<h3>您會學到</h3>
+<h3 class="wp-block-heading">您會學到</h3>
 
 
 
@@ -50,15 +1454,15 @@
 
 
 
-<h2>第1節：Introduction &amp; Setup</h2>
+<h2 class="wp-block-heading">第1節：Introduction &amp; Setup</h2>
 
 
 
-<h3>What is Vue?</h3>
+<h3 class="wp-block-heading">What is Vue?</h3>
 
 
 
-<h4>What is Vue?</h4>
+<h4 class="wp-block-heading">What is Vue?</h4>
 
 
 
@@ -66,15 +1470,15 @@
 
 
 
-<h4>Vue Widgets</h4>
+<h4 class="wp-block-heading">Vue Widgets</h4>
 
 
 
-<figure class="wp-block-image size-full"><img width="1536" height="823" src="/wordpress_blog/wp-content/uploads/2022/04/Vue-Widgets.png" alt="" class="wp-image-538"/><figcaption>Vue Widgets</figcaption></figure>
+<figure class="wp-block-image size-full"><img decoding="async" fetchpriority="high" width="1536" height="823" src="/wordpress_blog/wp-content/uploads/2022/04/Vue-Widgets.png" alt="" class="wp-image-538"/><figcaption>Vue Widgets</figcaption></figure>
 
 
 
-<h4>Vue Websites</h4>
+<h4 class="wp-block-heading">Vue Websites</h4>
 
 
 
@@ -82,59 +1486,59 @@
 
 
 
-<h4>Typical non-Vue Websites</h4>
+<h4 class="wp-block-heading">Typical non-Vue Websites</h4>
 
 
 
-<figure class="wp-block-gallery has-nested-images columns-1 is-cropped">
-<figure class="wp-block-image size-large"><img loading="lazy" width="1755" height="603" data-id="545"  src="/wordpress_blog/wp-content/uploads/2022/04/Typical-non-Vue-Websites-01.png" alt="" class="wp-image-545"/><figcaption>Typical non-Vue Website 01</figcaption></figure>
+<figure class="wp-block-gallery has-nested-images columns-1 is-cropped wp-block-gallery-1 is-layout-flex wp-block-gallery-is-layout-flex">
+<figure class="wp-block-image size-large"><img decoding="async" width="1755" height="603" data-id="545" src="/wordpress_blog/wp-content/uploads/2022/04/Typical-non-Vue-Websites-01.png" alt="" class="wp-image-545"/><figcaption>Typical non-Vue Website 01</figcaption></figure>
 
 
 
-<figure class="wp-block-image size-large"><img loading="lazy" width="1765" height="615" data-id="546"  src="/wordpress_blog/wp-content/uploads/2022/04/Typical-non-Vue-Websites-02.png" alt="" class="wp-image-546"/><figcaption>Typical non-Vue Website 02</figcaption></figure>
+<figure class="wp-block-image size-large"><img decoding="async" width="1765" height="615" data-id="546" src="/wordpress_blog/wp-content/uploads/2022/04/Typical-non-Vue-Websites-02.png" alt="" class="wp-image-546"/><figcaption>Typical non-Vue Website 02</figcaption></figure>
 
 
 
-<figure class="wp-block-image size-large"><img loading="lazy" width="1743" height="579" data-id="547"  src="/wordpress_blog/wp-content/uploads/2022/04/Typical-non-Vue-Websites-03.png" alt="" class="wp-image-547"/><figcaption>Typical non-Vue Website 03</figcaption></figure>
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1743" height="579" data-id="547" src="/wordpress_blog/wp-content/uploads/2022/04/Typical-non-Vue-Websites-03.png" alt="" class="wp-image-547"/><figcaption>Typical non-Vue Website 03</figcaption></figure>
 
 
 
-<figure class="wp-block-image size-large"><img loading="lazy" width="1769" height="605" data-id="548"  src="/wordpress_blog/wp-content/uploads/2022/04/Typical-non-Vue-Websites-04.png" alt="" class="wp-image-548"/><figcaption>Typical non-Vue Website 04</figcaption></figure>
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1769" height="605" data-id="548" src="/wordpress_blog/wp-content/uploads/2022/04/Typical-non-Vue-Websites-04.png" alt="" class="wp-image-548"/><figcaption>Typical non-Vue Website 04</figcaption></figure>
 
 
 
-<figure class="wp-block-image size-large"><img loading="lazy" width="1759" height="705" data-id="549"  src="/wordpress_blog/wp-content/uploads/2022/04/Typical-non-Vue-Websites-05.png" alt="" class="wp-image-549"/><figcaption>Typical non-Vue Website 05</figcaption></figure>
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1759" height="705" data-id="549" src="/wordpress_blog/wp-content/uploads/2022/04/Typical-non-Vue-Websites-05.png" alt="" class="wp-image-549"/><figcaption>Typical non-Vue Website 05</figcaption></figure>
 </figure>
 
 
 
-<h4>Vue Websites</h4>
+<h4 class="wp-block-heading">Vue Websites</h4>
 
 
 
-<figure class="wp-block-gallery has-nested-images columns-1 is-cropped">
-<figure class="wp-block-image size-large"><img loading="lazy" width="1747" height="609" data-id="554"  src="/wordpress_blog/wp-content/uploads/2022/04/Vue-Websites-01.png" alt="" class="wp-image-554"/><figcaption>Vue Websites 01</figcaption></figure>
+<figure class="wp-block-gallery has-nested-images columns-1 is-cropped wp-block-gallery-3 is-layout-flex wp-block-gallery-is-layout-flex">
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1747" height="609" data-id="554" src="/wordpress_blog/wp-content/uploads/2022/04/Vue-Websites-01.png" alt="" class="wp-image-554"/><figcaption>Vue Websites 01</figcaption></figure>
 
 
 
-<figure class="wp-block-image size-large"><img loading="lazy" width="1743" height="595" data-id="552"  src="/wordpress_blog/wp-content/uploads/2022/04/Vue-Websites-02.png" alt="" class="wp-image-552"/><figcaption>Vue Websites 02</figcaption></figure>
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1743" height="595" data-id="552" src="/wordpress_blog/wp-content/uploads/2022/04/Vue-Websites-02.png" alt="" class="wp-image-552"/><figcaption>Vue Websites 02</figcaption></figure>
 
 
 
-<figure class="wp-block-image size-large"><img loading="lazy" width="1741" height="571" data-id="553"  src="/wordpress_blog/wp-content/uploads/2022/04/Vue-Websites-03.png" alt="" class="wp-image-553"/><figcaption>Vue Websites 03</figcaption></figure>
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1741" height="571" data-id="553" src="/wordpress_blog/wp-content/uploads/2022/04/Vue-Websites-03.png" alt="" class="wp-image-553"/><figcaption>Vue Websites 03</figcaption></figure>
 
 
 
-<figure class="wp-block-image size-large"><img loading="lazy" width="1747" height="593" data-id="551"  src="/wordpress_blog/wp-content/uploads/2022/04/Vue-Websites-04.png" alt="" class="wp-image-551"/><figcaption>Vue Websites 04</figcaption></figure>
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1747" height="593" data-id="551" src="/wordpress_blog/wp-content/uploads/2022/04/Vue-Websites-04.png" alt="" class="wp-image-551"/><figcaption>Vue Websites 04</figcaption></figure>
 
 
 
-<figure class="wp-block-image size-large"><img loading="lazy" width="1745" height="597" data-id="555"  src="/wordpress_blog/wp-content/uploads/2022/04/Vue-Websites-05.png" alt="" class="wp-image-555"/><figcaption>Vue Websites 05</figcaption></figure>
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1745" height="597" data-id="555" src="/wordpress_blog/wp-content/uploads/2022/04/Vue-Websites-05.png" alt="" class="wp-image-555"/><figcaption>Vue Websites 05</figcaption></figure>
 </figure>
 
 
 
-<h4>Single Page Application (SPA)</h4>
+<h4 class="wp-block-heading">Single Page Application (SPA)</h4>
 
 
 
@@ -142,15 +1546,15 @@
 
 
 
-<h3>New Features in Vue 3</h3>
+<h3 class="wp-block-heading">New Features in Vue 3</h3>
 
 
 
-<h4>Vue 3 New Features</h4>
+<h4 class="wp-block-heading">Vue 3 New Features</h4>
 
 
 
-<h4>The Composition API</h4>
+<h4 class="wp-block-heading">The Composition API</h4>
 
 
 
@@ -158,7 +1562,7 @@
 
 
 
-<h4>Multiple Root Elements</h4>
+<h4 class="wp-block-heading">Multiple Root Elements</h4>
 
 
 
@@ -177,7 +1581,7 @@
 
 
 
-<h4>Teleport Component</h4>
+<h4 class="wp-block-heading">Teleport Component</h4>
 
 
 
@@ -185,7 +1589,7 @@
 
 
 
-<h4>Suspense Component</h4>
+<h4 class="wp-block-heading">Suspense Component</h4>
 
 
 
@@ -193,7 +1597,7 @@
 
 
 
-<h4>TypeScript Support</h4>
+<h4 class="wp-block-heading">TypeScript Support</h4>
 
 
 
@@ -201,7 +1605,7 @@
 
 
 
-<h4>More Changes</h4>
+<h4 class="wp-block-heading">More Changes</h4>
 
 
 
@@ -209,11 +1613,11 @@
 
 
 
-<h3>What You Should Already Know</h3>
+<h3 class="wp-block-heading">What You Should Already Know</h3>
 
 
 
-<h4>資源</h4>
+<h4 class="wp-block-heading">資源</h4>
 
 
 
@@ -221,7 +1625,7 @@
 
 
 
-<h4>Before You Start…</h4>
+<h4 class="wp-block-heading">Before You Start…</h4>
 
 
 
@@ -229,7 +1633,7 @@
 
 
 
-<h3>Environment Setup</h3>
+<h3 class="wp-block-heading">Environment Setup</h3>
 
 
 
@@ -237,11 +1641,11 @@
 
 
 
-<h3>Course Files</h3>
+<h3 class="wp-block-heading">Course Files</h3>
 
 
 
-<h4>資源</h4>
+<h4 class="wp-block-heading">資源</h4>
 
 
 
@@ -249,15 +1653,15 @@
 
 
 
-<h2>Vue Basics</h2>
+<h2 class="wp-block-heading">Vue Basics</h2>
 
 
 
-<h3>How to use Vue (using the CDN)</h3>
+<h3 class="wp-block-heading">How to use Vue (using the CDN)</h3>
 
 
 
-<h4>資源</h4>
+<h4 class="wp-block-heading">資源</h4>
 
 
 
@@ -265,7 +1669,7 @@
 
 
 
-<h4>Vue CDN</h4>
+<h4 class="wp-block-heading">Vue CDN</h4>
 
 
 
@@ -277,7 +1681,7 @@
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -311,7 +1715,7 @@ console.log('hello, vue')</code></pre>
 
 
 
-<h3>Creating a Vue App</h3>
+<h3 class="wp-block-heading">Creating a Vue App</h3>
 
 
 
@@ -351,7 +1755,7 @@ app.mount('#app')</code></pre>
 
 
 
-<h3>Templates &amp; Data</h3>
+<h3 class="wp-block-heading">Templates &amp; Data</h3>
 
 
 
@@ -396,7 +1800,7 @@ app.mount('#app')</code></pre>
 
 
 
-<h3>Methods &amp; Click Events</h3>
+<h3 class="wp-block-heading">Methods &amp; Click Events</h3>
 
 
 
@@ -451,7 +1855,7 @@ app.mount('#app')</code></pre>
 
 
 
-<h3>Conditional Rendering (條件渲染)</h3>
+<h3 class="wp-block-heading">Conditional Rendering (條件渲染)</h3>
 
 
 
@@ -511,7 +1915,7 @@ app.mount('#app')</code></pre>
 
 
 
-<h3>Other Mouse Events</h3>
+<h3 class="wp-block-heading">Other Mouse Events</h3>
 
 
 
@@ -598,7 +2002,7 @@ app.mount('#app')</code></pre>
 
 
 
-<h3>Outputting Lists (v-for)</h3>
+<h3 class="wp-block-heading">Outputting Lists (v-for)</h3>
 
 
 
@@ -674,7 +2078,7 @@ app.mount('#app')</code></pre>
 
 
 
-<h3>Attribute Binding</h3>
+<h3 class="wp-block-heading">Attribute Binding</h3>
 
 
 
@@ -755,7 +2159,7 @@ app.mount('#app')</code></pre>
 
 
 
-<h4>縮寫</h4>
+<h4 class="wp-block-heading">縮寫</h4>
 
 
 
@@ -764,11 +2168,11 @@ v-bind = :</code></pre>
 
 
 
-<h3>Dynamic Classes</h3>
+<h3 class="wp-block-heading">Dynamic Classes</h3>
 
 
 
-<h4>資源</h4>
+<h4 class="wp-block-heading">資源</h4>
 
 
 
@@ -867,7 +2271,7 @@ app.mount('#app')</code></pre>
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">CHALLENGE – Add to Favs</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">CHALLENGE – Add to Favs</h3>
 
 
 
@@ -967,7 +2371,7 @@ app.mount('#app')
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">SOLUTION – Add to Favs</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">SOLUTION – Add to Favs</h3>
 
 
 
@@ -1069,7 +2473,7 @@ app.mount('#app')
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Computes Properties</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Computes Properties</h3>
 
 
 
@@ -1173,15 +2577,15 @@ app.mount('#app')
 
 
 
-<h2>第3節：The Vue CLI (for Bigger Projects)</h2>
+<h2 class="wp-block-heading">第3節：The Vue CLI (for Bigger Projects)</h2>
 
 
 
-<h3>Why Use the Vue CLI?</h3>
+<h3 class="wp-block-heading">Why Use the Vue CLI?</h3>
 
 
 
-<h4>Vue Websites</h4>
+<h4 class="wp-block-heading">Vue Websites</h4>
 
 
 
@@ -1189,7 +2593,7 @@ app.mount('#app')
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">How to Use the Vue CLI</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">How to Use the Vue CLI</h3>
 
 
 
@@ -1197,7 +2601,7 @@ app.mount('#app')
 
 
 
-<h4>關於舊版本</h4>
+<h4 class="wp-block-heading">關於舊版本</h4>
 
 
 
@@ -1209,7 +2613,7 @@ app.mount('#app')
 
 
 
-<h4>執行指令步驟 vue create modal-project</h4>
+<h4 class="wp-block-heading">執行指令步驟 vue create modal-project</h4>
 
 
 
@@ -1217,7 +2621,7 @@ app.mount('#app')
 
 
 
-<h4>安裝完成後指令</h4>
+<h4 class="wp-block-heading">安裝完成後指令</h4>
 
 
 
@@ -1225,15 +2629,15 @@ app.mount('#app')
 
 
 
-<h3>New Project Walkthrough</h3>
+<h3 class="wp-block-heading">New Project Walkthrough</h3>
 
 
 
-<h3>Vue Files &amp; Templates</h3>
+<h3 class="wp-block-heading">Vue Files &amp; Templates</h3>
 
 
 
-<h4>打開 VSCode 終端機</h4>
+<h4 class="wp-block-heading">打開 VSCode 終端機</h4>
 
 
 
@@ -1277,7 +2681,7 @@ h1 {
 
 
 
-<h4>下載 GitHub Course Files 須知</h4>
+<h4 class="wp-block-heading">下載 GitHub Course Files 須知</h4>
 
 
 
@@ -1285,7 +2689,7 @@ h1 {
 
 
 
-<h3>Template Refs (模板引用)</h3>
+<h3 class="wp-block-heading">Template Refs (模板引用)</h3>
 
 
 
@@ -1334,11 +2738,11 @@ h1 {
 
 
 
-<h3>Multiple Components</h3>
+<h3 class="wp-block-heading">Multiple Components</h3>
 
 
 
-<h4>Multiple Components</h4>
+<h4 class="wp-block-heading">Multiple Components</h4>
 
 
 
@@ -1346,7 +2750,7 @@ h1 {
 
 
 
-<h4>Terminology</h4>
+<h4 class="wp-block-heading">Terminology</h4>
 
 
 
@@ -1358,7 +2762,7 @@ h1 {
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -1435,11 +2839,11 @@ h1 {
 
 
 
-<h3>Component Styles &amp; Global Styles</h3>
+<h3 class="wp-block-heading">Component Styles &amp; Global Styles</h3>
 
 
 
-<h4>Modal.vue style 設定方式</h4>
+<h4 class="wp-block-heading">Modal.vue style 設定方式</h4>
 
 
 
@@ -1517,7 +2921,7 @@ h1 {
 
 
 
-<h4>global styles</h4>
+<h4 class="wp-block-heading">global styles</h4>
 
 
 
@@ -1585,15 +2989,15 @@ createApp(App).mount('#app')
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Passing Data with Props (使用 Props 傳遞資料)</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Passing Data with Props (使用 Props 傳遞資料)</h3>
 
 
 
-<h4>we do this by using what’s known as props in vue, and we can pass props from a parent component to a child component</h4>
+<h4 class="wp-block-heading">we do this by using what’s known as props in vue, and we can pass props from a parent component to a child component</h4>
 
 
 
-<h4>為什麼我們要這樣做，兩個原因</h4>
+<h4 class="wp-block-heading">為什麼我們要這樣做，兩個原因</h4>
 
 
 
@@ -1869,7 +3273,7 @@ export default {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Emitting Custom Events</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Emitting Custom Events</h3>
 
 
 
@@ -1986,11 +3390,11 @@ export default {
 
 
 
-<h3>Click Event Modifiers</h3>
+<h3 class="wp-block-heading">Click Event Modifiers</h3>
 
 
 
-<h4>open modal</h4>
+<h4 class="wp-block-heading">open modal</h4>
 
 
 
@@ -1998,7 +3402,7 @@ export default {
 
 
 
-<h4>close modal</h4>
+<h4 class="wp-block-heading">close modal</h4>
 
 
 
@@ -2114,7 +3518,7 @@ export default {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Slots(插槽)</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Slots(插槽)</h3>
 
 
 
@@ -2522,7 +3926,7 @@ export default {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">CHALLENGE – Reusing Components</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">CHALLENGE – Reusing Components</h3>
 
 
 
@@ -2676,7 +4080,7 @@ export default {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Using Teleport (new features 新功能)</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Using Teleport (new features 新功能)</h3>
 
 
 
@@ -2684,7 +4088,7 @@ export default {
 
 
 
-<h4>class, id 都可以使用 e.g. – .modals、#modals</h4>
+<h4 class="wp-block-heading">class, id 都可以使用 e.g. – .modals、#modals</h4>
 
 
 
@@ -2786,15 +4190,15 @@ h1 {
 
 
 
-<h2>第4節：PROJECT BUILD – Reaction Timer</h2>
+<h2 class="wp-block-heading">第4節：PROJECT BUILD – Reaction Timer</h2>
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Project 1 Preview &amp; Setup</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Project 1 Preview &amp; Setup</h3>
 
 
 
-<h4>Reaction Timer Project</h4>
+<h4 class="wp-block-heading">Reaction Timer Project</h4>
 
 
 
@@ -2802,7 +4206,7 @@ h1 {
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -2839,7 +4243,7 @@ export default {
 
 
 
-<h4>參考文件</h4>
+<h4 class="wp-block-heading">參考文件</h4>
 
 
 
@@ -2847,7 +4251,7 @@ export default {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Starting a New Game</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Starting a New Game</h3>
 
 
 
@@ -2927,7 +4331,7 @@ export default {
 
 
 
-<h4>Vetur can’t find&nbsp;<code>tsconfig.json</code>,&nbsp;<code>jsconfig.json</code>&nbsp;in /xxxx/xxxxxx.</h4>
+<h4 class="wp-block-heading">Vetur can’t find&nbsp;<code>tsconfig.json</code>,&nbsp;<code>jsconfig.json</code>&nbsp;in /xxxx/xxxxxx.</h4>
 
 
 
@@ -2935,11 +4339,11 @@ export default {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Component Lifecycle Hooks (組件生命週期鉤子) 重要!</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Component Lifecycle Hooks (組件生命週期鉤子) 重要!</h3>
 
 
 
-<h4>資源</h4>
+<h4 class="wp-block-heading">資源</h4>
 
 
 
@@ -3037,7 +4441,7 @@ export default {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Creating the Reaction Timer</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Creating the Reaction Timer</h3>
 
 
 
@@ -3093,7 +4497,7 @@ export default {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Emitting Custom Events with Data</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Emitting Custom Events with Data</h3>
 
 
 
@@ -3201,7 +4605,7 @@ export default {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">CHALLENGE – Showing a Results Component</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">CHALLENGE – Showing a Results Component</h3>
 
 
 
@@ -3280,7 +4684,7 @@ export default {
 
 
 
-<h3>Finishing Touches</h3>
+<h3 class="wp-block-heading">Finishing Touches</h3>
 
 
 
@@ -3395,15 +4799,15 @@ button&#91;disabled] {
 
 
 
-<h2>第5節：Forms &amp; Data Binding</h2>
+<h2 class="wp-block-heading">第5節：Forms &amp; Data Binding</h2>
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Forms Intro &amp; Setup (表單介紹 &amp; 安裝)</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Forms Intro &amp; Setup (表單介紹 &amp; 安裝)</h3>
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -3519,7 +4923,7 @@ body {
 
 
 
-<h3>Two-way Data Binding (雙向綁定)</h3>
+<h3 class="wp-block-heading">Two-way Data Binding (雙向綁定)</h3>
 
 
 
@@ -3580,7 +4984,7 @@ export default {
 
 
 
-<h4>Vue.js 文件</h4>
+<h4 class="wp-block-heading">Vue.js 文件</h4>
 
 
 
@@ -3588,7 +4992,7 @@ export default {
 
 
 
-<h3>Select Fields</h3>
+<h3 class="wp-block-heading">Select Fields</h3>
 
 
 
@@ -3657,11 +5061,11 @@ export default {
 
 
 
-<h3>Checkboxes</h3>
+<h3 class="wp-block-heading">Checkboxes</h3>
 
 
 
-<h4>使用方式</h4>
+<h4 class="wp-block-heading">使用方式</h4>
 
 
 
@@ -3763,7 +5167,7 @@ export default {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Keyboard Events &amp; Modifiers</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Keyboard Events &amp; Modifiers</h3>
 
 
 
@@ -3869,7 +5273,7 @@ export default {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">CHALLENGE – Deleting Skills</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">CHALLENGE – Deleting Skills</h3>
 
 
 
@@ -3989,7 +5393,7 @@ export default {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Submitting the Form</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Submitting the Form</h3>
 
 
 
@@ -4146,7 +5550,7 @@ export default {
 
 
 
-<h2 class="has-background" style="background-color:#ff6663">第6節：Vue Router Basics</h2>
+<h2 class="has-background wp-block-heading" style="background-color:#ff6663">第6節：Vue Router Basics</h2>
 
 
 
@@ -4154,7 +5558,7 @@ export default {
 
 
 
-<h3>Why Use the Vue Router?</h3>
+<h3 class="wp-block-heading">Why Use the Vue Router?</h3>
 
 
 
@@ -4162,37 +5566,37 @@ export default {
 
 
 
-<h4>The Vue Router (圖片講解)</h4>
+<h4 class="wp-block-heading">The Vue Router (圖片講解)</h4>
 
 
 
-<figure class="wp-block-gallery has-nested-images columns-1 is-cropped">
-<figure class="wp-block-image size-large"><img loading="lazy" width="753" height="611" data-id="558"  src="/wordpress_blog/wp-content/uploads/2022/04/The-Vue-Router-01.png" alt="" class="wp-image-558"/><figcaption>The Vue Router 01</figcaption></figure>
+<figure class="wp-block-gallery has-nested-images columns-1 is-cropped wp-block-gallery-5 is-layout-flex wp-block-gallery-is-layout-flex">
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="753" height="611" data-id="558" src="/wordpress_blog/wp-content/uploads/2022/04/The-Vue-Router-01.png" alt="" class="wp-image-558"/><figcaption>The Vue Router 01</figcaption></figure>
 
 
 
-<figure class="wp-block-image size-large"><img loading="lazy" width="1791" height="563" data-id="557"  src="/wordpress_blog/wp-content/uploads/2022/04/The-Vue-Router-02.png" alt="" class="wp-image-557"/><figcaption>The Vue Router 02</figcaption></figure>
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1791" height="563" data-id="557" src="/wordpress_blog/wp-content/uploads/2022/04/The-Vue-Router-02.png" alt="" class="wp-image-557"/><figcaption>The Vue Router 02</figcaption></figure>
 
 
 
-<figure class="wp-block-image size-large"><img loading="lazy" width="1785" height="581" data-id="560"  src="/wordpress_blog/wp-content/uploads/2022/04/The-Vue-Router-03.png" alt="" class="wp-image-560"/><figcaption>The Vue Router 03</figcaption></figure>
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1785" height="581" data-id="560" src="/wordpress_blog/wp-content/uploads/2022/04/The-Vue-Router-03.png" alt="" class="wp-image-560"/><figcaption>The Vue Router 03</figcaption></figure>
 
 
 
-<figure class="wp-block-image size-large"><img loading="lazy" width="1737" height="563" data-id="562"  src="/wordpress_blog/wp-content/uploads/2022/04/The-Vue-Router-04.png" alt="" class="wp-image-562"/><figcaption>The Vue Router 04</figcaption></figure>
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1737" height="563" data-id="562" src="/wordpress_blog/wp-content/uploads/2022/04/The-Vue-Router-04.png" alt="" class="wp-image-562"/><figcaption>The Vue Router 04</figcaption></figure>
 
 
 
-<figure class="wp-block-image size-large"><img loading="lazy" width="1771" height="569" data-id="559"  src="/wordpress_blog/wp-content/uploads/2022/04/The-Vue-Router-05.png" alt="" class="wp-image-559"/><figcaption>The Vue Router 05</figcaption></figure>
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1771" height="569" data-id="559" src="/wordpress_blog/wp-content/uploads/2022/04/The-Vue-Router-05.png" alt="" class="wp-image-559"/><figcaption>The Vue Router 05</figcaption></figure>
 
 
 
-<figure class="wp-block-image size-large"><img loading="lazy" width="1171" height="611" data-id="561"  src="/wordpress_blog/wp-content/uploads/2022/04/The-Vue-Router-06.png" alt="" class="wp-image-561"/><figcaption>The Vue Router 06</figcaption></figure>
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1171" height="611" data-id="561" src="/wordpress_blog/wp-content/uploads/2022/04/The-Vue-Router-06.png" alt="" class="wp-image-561"/><figcaption>The Vue Router 06</figcaption></figure>
 </figure>
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Router Setup for New Projects</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Router Setup for New Projects</h3>
 
 
 
@@ -4200,7 +5604,7 @@ export default {
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -4237,7 +5641,7 @@ export default router
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Router Links (路由連結)</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Router Links (路由連結)</h3>
 
 
 
@@ -4245,7 +5649,7 @@ export default router
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -4404,7 +5808,7 @@ export default {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Folder Structure (資料夾結構)</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Folder Structure (資料夾結構)</h3>
 
 
 
@@ -4412,7 +5816,7 @@ export default {
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -4560,7 +5964,7 @@ export default router
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Route Parameters (路由參數)</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Route Parameters (路由參數)</h3>
 
 
 
@@ -4568,7 +5972,7 @@ export default router
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -4576,11 +5980,11 @@ export default router
 
 
 
-<h4>Route Parameters</h4>
+<h4 class="wp-block-heading">Route Parameters</h4>
 
 
 
-<figure class="wp-block-image size-full"><img loading="lazy" width="1757" height="707" src="/wordpress_blog/wp-content/uploads/2022/04/Route-Parameters.png" alt="" class="wp-image-564"/><figcaption>Route Parameters</figcaption></figure>
+<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="1757" height="707" src="/wordpress_blog/wp-content/uploads/2022/04/Route-Parameters.png" alt="" class="wp-image-564"/><figcaption>Route Parameters</figcaption></figure>
 
 
 
@@ -4685,7 +6089,7 @@ export default {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Dynamic Links (動態連結)</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Dynamic Links (動態連結)</h3>
 
 
 
@@ -4693,7 +6097,7 @@ export default {
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -4867,7 +6271,7 @@ export default {
 
 
 
-<h3>404 Pages &amp; Redirects</h3>
+<h3 class="wp-block-heading">404 Pages &amp; Redirects</h3>
 
 
 
@@ -4875,7 +6279,7 @@ export default {
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -4993,7 +6397,7 @@ export default router
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Programmatic Navigation (程序化導航)</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Programmatic Navigation (程序化導航)</h3>
 
 
 
@@ -5001,7 +6405,7 @@ export default router
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -5141,7 +6545,7 @@ button {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Lazy Loading Components</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Lazy Loading Components</h3>
 
 
 
@@ -5149,7 +6553,7 @@ button {
 
 
 
-<h4>資源</h4>
+<h4 class="wp-block-heading">資源</h4>
 
 
 
@@ -5157,7 +6561,7 @@ button {
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -5226,7 +6630,7 @@ export default router</code></pre>
 		
 		<dc:creator><![CDATA[gee.hsu]]></dc:creator>
 		<pubDate>Tue, 15 Feb 2022 06:17:00 +0000</pubDate>
-				<category><![CDATA[The Net Ninja]]></category>
+				<category><![CDATA[Net Ninja]]></category>
 		<guid isPermaLink="false">/wordpress_blog/?p=527</guid>
 
 					<description><![CDATA[(Complete guide, from Novice to  [&#8230;]]]></description>
@@ -5243,7 +6647,7 @@ export default router</code></pre>
 
 
 
-<h4>您會學到</h4>
+<h4 class="wp-block-heading">您會學到</h4>
 
 
 
@@ -5251,15 +6655,15 @@ export default router</code></pre>
 
 
 
-<h2>Modern Workflow with Babel &amp; Webpack</h2>
+<h2 class="wp-block-heading">Modern Workflow with Babel &amp; Webpack</h2>
 
 
 
-<h3>Modern Feature Support</h3>
+<h3 class="wp-block-heading">Modern Feature Support</h3>
 
 
 
-<h4>MDN 文件</h4>
+<h4 class="wp-block-heading">MDN 文件</h4>
 
 
 
@@ -5267,7 +6671,7 @@ export default router</code></pre>
 
 
 
-<h4>工具</h4>
+<h4 class="wp-block-heading">工具</h4>
 
 
 
@@ -5275,7 +6679,7 @@ export default router</code></pre>
 
 
 
-<h3>An Introduction to Babel</h3>
+<h3 class="wp-block-heading">An Introduction to Babel</h3>
 
 
 
@@ -5283,7 +6687,7 @@ export default router</code></pre>
 
 
 
-<h4>資源</h4>
+<h4 class="wp-block-heading">資源</h4>
 
 
 
@@ -5291,7 +6695,7 @@ export default router</code></pre>
 
 
 
-<h4>操作</h4>
+<h4 class="wp-block-heading">操作</h4>
 
 
 
@@ -5349,7 +6753,7 @@ class User {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Installing Node.js &amp; Babel</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Installing Node.js &amp; Babel</h3>
 
 
 
@@ -5357,7 +6761,7 @@ class User {
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -5373,7 +6777,7 @@ class User {
 
 
 
-<h4>Using Babel</h4>
+<h4 class="wp-block-heading">Using Babel</h4>
 
 
 
@@ -5381,11 +6785,11 @@ class User {
 
 
 
-<h3>Using the Babel CLI</h3>
+<h3 class="wp-block-heading">Using the Babel CLI</h3>
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -5403,7 +6807,7 @@ const greet = (name) =&gt; {
 
 
 
-<h4>講解</h4>
+<h4 class="wp-block-heading">講解</h4>
 
 
 
@@ -5411,7 +6815,7 @@ const greet = (name) =&gt; {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">NPM Scripts &amp; Watching Files</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">NPM Scripts &amp; Watching Files</h3>
 
 
 
@@ -5419,7 +6823,7 @@ const greet = (name) =&gt; {
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -5478,7 +6882,7 @@ greet('link');</code></pre>
 
 
 
-<h4>使用 “scripts” 指令產生錯誤無法執行</h4>
+<h4 class="wp-block-heading">使用 “scripts” 指令產生錯誤無法執行</h4>
 
 
 
@@ -5548,11 +6952,11 @@ class User {
 
 
 
-<h3>What is Webpack?</h3>
+<h3 class="wp-block-heading">What is Webpack?</h3>
 
 
 
-<h4>Webpack</h4>
+<h4 class="wp-block-heading">Webpack</h4>
 
 
 
@@ -5560,11 +6964,11 @@ class User {
 
 
 
-<figure class="wp-block-image size-full"><img loading="lazy" width="1399" height="533" src="/wordpress_blog/wp-content/uploads/2022/04/bundle.png" alt="" class="wp-image-529"/><figcaption>bundle</figcaption></figure>
+<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="1399" height="533" src="/wordpress_blog/wp-content/uploads/2022/04/bundle.png" alt="" class="wp-image-529"/><figcaption>bundle</figcaption></figure>
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Setting up a Webpack File</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Setting up a Webpack File</h3>
 
 
 
@@ -5572,7 +6976,7 @@ class User {
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -5596,7 +7000,7 @@ module.exports = {
 
 
 
-<h4>webpack 文件</h4>
+<h4 class="wp-block-heading">webpack 文件</h4>
 
 
 
@@ -5604,7 +7008,7 @@ module.exports = {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Webpack CLI (Command-Line Interface 命令列介面)</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Webpack CLI (Command-Line Interface 命令列介面)</h3>
 
 
 
@@ -5612,7 +7016,7 @@ module.exports = {
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -5699,7 +7103,7 @@ greet('link');
 
 
 
-<h4>執行 webpack 指令產生錯誤</h4>
+<h4 class="wp-block-heading">執行 webpack 指令產生錯誤</h4>
 
 
 
@@ -5732,7 +7136,7 @@ greet('link');
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Introduction to Modules</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Introduction to Modules</h3>
 
 
 
@@ -5740,7 +7144,7 @@ greet('link');
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -5911,7 +7315,7 @@ export { styleBody, addTitle, contact };</code></pre>
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Default Exports</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Default Exports</h3>
 
 
 
@@ -5919,7 +7323,7 @@ export { styleBody, addTitle, contact };</code></pre>
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -6014,11 +7418,11 @@ export { getPremUsers, users as default }</code></pre>
 
 
 
-<h3>Watching for Changes</h3>
+<h3 class="wp-block-heading">Watching for Changes</h3>
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -6071,7 +7475,7 @@ console.log('test');</code></pre>
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">The Webpack Dev Server</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">The Webpack Dev Server</h3>
 
 
 
@@ -6079,7 +7483,7 @@ console.log('test');</code></pre>
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -6087,7 +7491,7 @@ console.log('test');</code></pre>
 
 
 
-<h4>webpack 文件</h4>
+<h4 class="wp-block-heading">webpack 文件</h4>
 
 
 
@@ -6242,7 +7646,7 @@ console.log('test 3');</code></pre>
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Production &amp; Development Modes</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Production &amp; Development Modes</h3>
 
 
 
@@ -6250,7 +7654,7 @@ console.log('test 3');</code></pre>
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -6338,7 +7742,7 @@ module.exports = {
 
 
 
-<h4>webpack 指令模式</h4>
+<h4 class="wp-block-heading">webpack 指令模式</h4>
 
 
 
@@ -6346,7 +7750,7 @@ module.exports = {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Babel &amp; Webpack Together</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Babel &amp; Webpack Together</h3>
 
 
 
@@ -6354,7 +7758,7 @@ module.exports = {
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -6398,7 +7802,7 @@ module.exports = {
 
 
 
-<h3>Webpack Boilerplate (Webpack 樣板)</h3>
+<h3 class="wp-block-heading">Webpack Boilerplate (Webpack 樣板)</h3>
 
 
 
@@ -6406,7 +7810,7 @@ module.exports = {
 
 
 
-<h4>資源</h4>
+<h4 class="wp-block-heading">資源</h4>
 
 
 
@@ -6414,7 +7818,7 @@ module.exports = {
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -6428,7 +7832,7 @@ console.log('hello, ninjas');</code></pre>
 
 
 
-<h2 class="has-background" style="background-color:#ff6663">Project – UI Library</h2>
+<h2 class="has-background wp-block-heading" style="background-color:#ff6663">Project – UI Library</h2>
 
 
 
@@ -6436,7 +7840,7 @@ console.log('hello, ninjas');</code></pre>
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Project Preview &amp; Setup</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Project Preview &amp; Setup</h3>
 
 
 
@@ -6444,7 +7848,7 @@ console.log('hello, ninjas');</code></pre>
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -6458,7 +7862,7 @@ console.log('test');</code></pre>
 
 
 
-<h4>UI Library CSS</h4>
+<h4 class="wp-block-heading">UI Library CSS</h4>
 
 
 
@@ -6470,7 +7874,7 @@ console.log('test');</code></pre>
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">CSS &amp; Style Loaders (webpack)</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">CSS &amp; Style Loaders (webpack)</h3>
 
 
 
@@ -6478,7 +7882,7 @@ console.log('test');</code></pre>
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -6544,7 +7948,7 @@ console.log('test');</code></pre>
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Tooltips (工具提示框)</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Tooltips (工具提示框)</h3>
 
 
 
@@ -6552,7 +7956,7 @@ console.log('test');</code></pre>
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -6738,7 +8142,7 @@ export { Tooltip as default };</code></pre>
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Dropdowns</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Dropdowns</h3>
 
 
 
@@ -6746,7 +8150,7 @@ export { Tooltip as default };</code></pre>
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -6891,7 +8295,7 @@ export { Dropdown as default };</code></pre>
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Tabbed Content (頁籤內容)</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Tabbed Content (頁籤內容)</h3>
 
 
 
@@ -6899,7 +8303,7 @@ export { Dropdown as default };</code></pre>
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -7143,7 +8547,7 @@ export { Tabs as default };</code></pre>
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Snackbars</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Snackbars</h3>
 
 
 
@@ -7151,7 +8555,7 @@ export { Tabs as default };</code></pre>
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -7393,11 +8797,11 @@ export { Snackbar as default };</code></pre>
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Extending the Library</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Extending the Library</h3>
 
 
 
-<h4>build and upload our final project (建立以及上傳你最終專案)</h4>
+<h4 class="wp-block-heading">build and upload our final project (建立以及上傳你最終專案)</h4>
 
 
 
@@ -7405,7 +8809,7 @@ export { Snackbar as default };</code></pre>
 
 
 
-<h4>延伸使用 Library</h4>
+<h4 class="wp-block-heading">延伸使用 Library</h4>
 
 
 
@@ -7413,7 +8817,7 @@ export { Snackbar as default };</code></pre>
 
 
 
-<h2 class="has-background" style="background-color:#ff6663">Using Firebase Database (&amp; Auth) Version 9</h2>
+<h2 class="has-background wp-block-heading" style="background-color:#ff6663">Using Firebase Database (&amp; Auth) Version 9</h2>
 
 
 
@@ -7421,11 +8825,11 @@ export { Snackbar as default };</code></pre>
 
 
 
-<h3>What’s New in Firebase 9?</h3>
+<h3 class="wp-block-heading">What’s New in Firebase 9?</h3>
 
 
 
-<h4>Firebase Documentation</h4>
+<h4 class="wp-block-heading">Firebase Documentation</h4>
 
 
 
@@ -7433,7 +8837,7 @@ export { Snackbar as default };</code></pre>
 
 
 
-<h4>資源</h4>
+<h4 class="wp-block-heading">資源</h4>
 
 
 
@@ -7441,7 +8845,7 @@ export { Snackbar as default };</code></pre>
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Webpack Setup</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Webpack Setup</h3>
 
 
 
@@ -7449,7 +8853,7 @@ export { Snackbar as default };</code></pre>
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -7537,7 +8941,7 @@ console.log('hello from index.js');</code></pre>
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Creating a Firebase Project</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Creating a Firebase Project</h3>
 
 
 
@@ -7545,7 +8949,7 @@ console.log('hello from index.js');</code></pre>
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -7600,7 +9004,7 @@ initializeApp(firebaseConfig)</code></pre>
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Firestore Setup &amp; Fetching Data</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Firestore Setup &amp; Fetching Data</h3>
 
 
 
@@ -7608,7 +9012,7 @@ initializeApp(firebaseConfig)</code></pre>
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -7690,7 +9094,7 @@ getDocs(colRef)
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Adding &amp; Deleting Documents</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Adding &amp; Deleting Documents</h3>
 
 
 
@@ -7698,7 +9102,7 @@ getDocs(colRef)
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -7932,7 +9336,7 @@ deleteBookForm.addEventListener('submit', (e) =&gt; {
 
 
 
-<h4>Google Console 出現警告 – DevTools failed to load source map</h4>
+<h4 class="wp-block-heading">Google Console 出現警告 – DevTools failed to load source map</h4>
 
 
 
@@ -7940,7 +9344,7 @@ deleteBookForm.addEventListener('submit', (e) =&gt; {
 
 
 
-<h4>新增一筆資料，Google Console 沒有顯示新增的資料</h4>
+<h4 class="wp-block-heading">新增一筆資料，Google Console 沒有顯示新增的資料</h4>
 
 
 
@@ -7948,7 +9352,7 @@ deleteBookForm.addEventListener('submit', (e) =&gt; {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Real Time Collection Data</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Real Time Collection Data</h3>
 
 
 
@@ -7956,7 +9360,7 @@ deleteBookForm.addEventListener('submit', (e) =&gt; {
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -8041,7 +9445,7 @@ deleteBookForm.addEventListener('submit', (e) =&gt; {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Firestore Queries</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Firestore Queries</h3>
 
 
 
@@ -8049,7 +9453,7 @@ deleteBookForm.addEventListener('submit', (e) =&gt; {
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -8127,7 +9531,7 @@ deleteBookForm.addEventListener('submit', (e) =&gt; {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Timestamps &amp; Ordering Data</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Timestamps &amp; Ordering Data</h3>
 
 
 
@@ -8135,7 +9539,7 @@ deleteBookForm.addEventListener('submit', (e) =&gt; {
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -8293,7 +9697,7 @@ deleteBookForm.addEventListener('submit', (e) =&gt; {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Fetching Single Documents</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Fetching Single Documents</h3>
 
 
 
@@ -8301,7 +9705,7 @@ deleteBookForm.addEventListener('submit', (e) =&gt; {
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -8470,7 +9874,7 @@ onSnapshot(docRef, (doc) =&gt; {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Updating Documents</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Updating Documents</h3>
 
 
 
@@ -8478,7 +9882,7 @@ onSnapshot(docRef, (doc) =&gt; {
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -8625,11 +10029,11 @@ updateForm.addEventListener('submit', (e) =&gt; {
 
 
 
-<h3>Firebase Auth Setup</h3>
+<h3 class="wp-block-heading">Firebase Auth Setup</h3>
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -8737,7 +10141,7 @@ updateForm.addEventListener('submit', (e) =&gt; {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Signing Users Up</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Signing Users Up</h3>
 
 
 
@@ -8745,7 +10149,7 @@ updateForm.addEventListener('submit', (e) =&gt; {
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -8926,7 +10330,7 @@ signupForm.addEventListener('submit', (e) =&gt; {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Logging in &amp; Logging Out</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Logging in &amp; Logging Out</h3>
 
 
 
@@ -8934,7 +10338,7 @@ signupForm.addEventListener('submit', (e) =&gt; {
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -9159,7 +10563,7 @@ loginForm.addEventListener('submit', (e) =&gt; {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Listening to Auth Changes</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Listening to Auth Changes</h3>
 
 
 
@@ -9167,7 +10571,7 @@ loginForm.addEventListener('submit', (e) =&gt; {
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -9331,7 +10735,7 @@ onAuthStateChanged(auth, (user) =&gt; {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Unsubscribing from Changes</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Unsubscribing from Changes</h3>
 
 
 
@@ -9339,7 +10743,7 @@ onAuthStateChanged(auth, (user) =&gt; {
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -9582,15 +10986,15 @@ unsubButton.addEventListener('click', () =&gt; {
 
 
 
-<h2>Next Steps</h2>
+<h2 class="wp-block-heading">Next Steps</h2>
 
 
 
-<h3>Bonus Lecture: Next Steps</h3>
+<h3 class="wp-block-heading">Bonus Lecture: Next Steps</h3>
 
 
 
-<h4>資源</h4>
+<h4 class="wp-block-heading">資源</h4>
 
 
 
@@ -9606,7 +11010,7 @@ unsubButton.addEventListener('click', () =&gt; {
 		
 		<dc:creator><![CDATA[gee.hsu]]></dc:creator>
 		<pubDate>Fri, 11 Feb 2022 04:18:00 +0000</pubDate>
-				<category><![CDATA[The Net Ninja]]></category>
+				<category><![CDATA[Net Ninja]]></category>
 		<guid isPermaLink="false">/wordpress_blog/?p=508</guid>
 
 					<description><![CDATA[(Complete guide, from Novice to  [&#8230;]]]></description>
@@ -9623,7 +11027,7 @@ unsubButton.addEventListener('click', () =&gt; {
 
 
 
-<h4>您會學到</h4>
+<h4 class="wp-block-heading">您會學到</h4>
 
 
 
@@ -9631,15 +11035,15 @@ unsubButton.addEventListener('click', () =&gt; {
 
 
 
-<h2 class="has-background" style="background-color:#ff6663">Project – Weather App</h2>
+<h2 class="has-background wp-block-heading" style="background-color:#ff6663">Project – Weather App</h2>
 
 
 
-<h3>Project Preview &amp; Setup</h3>
+<h3 class="wp-block-heading">Project Preview &amp; Setup</h3>
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -9668,11 +11072,11 @@ unsubButton.addEventListener('click', () =&gt; {
 
 
 
-<h3>HTML &amp; CSS Template</h3>
+<h3 class="wp-block-heading">HTML &amp; CSS Template</h3>
 
 
 
-<h4>資源</h4>
+<h4 class="wp-block-heading">資源</h4>
 
 
 
@@ -9740,7 +11144,7 @@ body{
 
 
 
-<h4>Placeholder Image</h4>
+<h4 class="wp-block-heading">Placeholder Image</h4>
 
 
 
@@ -9748,11 +11152,11 @@ body{
 
 
 
-<h3>AccuWeather API</h3>
+<h3 class="wp-block-heading">AccuWeather API</h3>
 
 
 
-<h4>資源</h4>
+<h4 class="wp-block-heading">資源</h4>
 
 
 
@@ -9760,7 +11164,7 @@ body{
 
 
 
-<h4>API Reference</h4>
+<h4 class="wp-block-heading">API Reference</h4>
 
 
 
@@ -9768,7 +11172,7 @@ body{
 
 
 
-<h4>個人練習</h4>
+<h4 class="wp-block-heading">個人練習</h4>
 
 
 
@@ -9776,7 +11180,7 @@ body{
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Get City API Call</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Get City API Call</h3>
 
 
 
@@ -9805,7 +11209,7 @@ getCity('臺南市')
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Get Weather API Call</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Get Weather API Call</h3>
 
 
 
@@ -9895,7 +11299,7 @@ getCity('臺南市').then(data =&gt; {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Updating the Location</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Updating the Location</h3>
 
 
 
@@ -9933,7 +11337,7 @@ cityForm.addEventListener('submit', e =&gt; {
 
 
 
-<h3>Object Shorthand Notation</h3>
+<h3 class="wp-block-heading">Object Shorthand Notation</h3>
 
 
 
@@ -9968,7 +11372,7 @@ cityForm.addEventListener('submit', e =&gt; {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Updating the UI</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Updating the UI</h3>
 
 
 
@@ -10122,7 +11526,7 @@ const getCity = async (city) =&gt; {
 
 
 
-<h3>Destructuring (解構賦值)</h3>
+<h3 class="wp-block-heading">Destructuring (解構賦值)</h3>
 
 
 
@@ -10282,7 +11686,7 @@ const getCity = async (city) =&gt; {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Weather Icons &amp; images</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Weather Icons &amp; images</h3>
 
 
 
@@ -10432,7 +11836,7 @@ body{
 
 
 
-<h3>Ternary Operator (三元運算子)</h3>
+<h3 class="wp-block-heading">Ternary Operator (三元運算子)</h3>
 
 
 
@@ -10520,15 +11924,15 @@ cityForm.addEventListener('submit', e =&gt; {
 
 
 
-<h2>Local Storage</h2>
+<h2 class="wp-block-heading">Local Storage</h2>
 
 
 
-<h3>What is Local Storage?</h3>
+<h3 class="wp-block-heading">What is Local Storage?</h3>
 
 
 
-<h4>Application Data</h4>
+<h4 class="wp-block-heading">Application Data</h4>
 
 
 
@@ -10536,16 +11940,16 @@ cityForm.addEventListener('submit', e =&gt; {
 
 
 
-<h4>Local Storage</h4>
+<h4 class="wp-block-heading">Local Storage</h4>
 
 
 
-<figure class="wp-block-gallery has-nested-images columns-1 is-cropped">
-<figure class="wp-block-image size-large"><img loading="lazy" width="1435" height="705" data-id="510"  src="/wordpress_blog/wp-content/uploads/2022/04/localstorage-1.png" alt="" class="wp-image-510"/><figcaption>Local Storage &#8211; 1</figcaption></figure>
+<figure class="wp-block-gallery has-nested-images columns-1 is-cropped wp-block-gallery-7 is-layout-flex wp-block-gallery-is-layout-flex">
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1435" height="705" data-id="510" src="/wordpress_blog/wp-content/uploads/2022/04/localstorage-1.png" alt="" class="wp-image-510"/><figcaption>Local Storage &#8211; 1</figcaption></figure>
 
 
 
-<figure class="wp-block-image size-large"><img loading="lazy" width="1461" height="613" data-id="511"  src="/wordpress_blog/wp-content/uploads/2022/04/localstorage-2.png" alt="" class="wp-image-511"/><figcaption>Local Storage &#8211; 2</figcaption></figure>
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1461" height="613" data-id="511" src="/wordpress_blog/wp-content/uploads/2022/04/localstorage-2.png" alt="" class="wp-image-511"/><figcaption>Local Storage &#8211; 2</figcaption></figure>
 </figure>
 
 
@@ -10557,7 +11961,7 @@ cityForm.addEventListener('submit', e =&gt; {
 
 
 
-<h3>Storing &amp; Getting Data</h3>
+<h3 class="wp-block-heading">Storing &amp; Getting Data</h3>
 
 
 
@@ -10601,7 +12005,7 @@ console.log(name, age);</code></pre>
 
 
 
-<h3>Deleting Storage Data</h3>
+<h3 class="wp-block-heading">Deleting Storage Data</h3>
 
 
 
@@ -10666,7 +12070,7 @@ console.log(name, age);
 
 
 
-<h3>Stringifying &amp; Parsing Data</h3>
+<h3 class="wp-block-heading">Stringifying &amp; Parsing Data</h3>
 
 
 
@@ -10697,7 +12101,7 @@ console.log(JSON.parse(stored));</code></pre>
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Updating the Weather App</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Updating the Weather App</h3>
 
 
 
@@ -10798,11 +12202,11 @@ if(localStorage.getItem('city')){
 
 
 
-<h2 class="has-background" style="background-color:#ff6663">Object Oriented JavaScript (物件導向)</h2>
+<h2 class="has-background wp-block-heading" style="background-color:#ff6663">Object Oriented JavaScript (物件導向)</h2>
 
 
 
-<h3>What is OOP? (物件導向程式設計)</h3>
+<h3 class="wp-block-heading">What is OOP? (物件導向程式設計)</h3>
 
 
 
@@ -10843,7 +12247,7 @@ if(localStorage.getItem('city')){
 
 
 
-<h3>Object Literal Recap (物件實字回顧)</h3>
+<h3 class="wp-block-heading">Object Literal Recap (物件實字回顧)</h3>
 
 
 
@@ -10944,7 +12348,7 @@ const userThree = new User('shaun@thenetninja.co.uk', 'shaun');</code></pre>
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Classes (類別)</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Classes (類別)</h3>
 
 
 
@@ -10982,7 +12386,7 @@ const userThree = new User('shaun@thenetninja.co.uk', 'shaun');</code></pre>
 
 
 
-<h4>Classes</h4>
+<h4 class="wp-block-heading">Classes</h4>
 
 
 
@@ -10990,21 +12394,21 @@ const userThree = new User('shaun@thenetninja.co.uk', 'shaun');</code></pre>
 
 
 
-<figure class="wp-block-gallery has-nested-images columns-1 is-cropped">
-<figure class="wp-block-image size-large"><img loading="lazy" width="1536" height="553" data-id="513"  src="/wordpress_blog/wp-content/uploads/2022/04/Classes-1.png" alt="" class="wp-image-513"/><figcaption>Classes &#8211; 1</figcaption></figure>
+<figure class="wp-block-gallery has-nested-images columns-1 is-cropped wp-block-gallery-9 is-layout-flex wp-block-gallery-is-layout-flex">
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1536" height="553" data-id="513" src="/wordpress_blog/wp-content/uploads/2022/04/Classes-1.png" alt="" class="wp-image-513"/><figcaption>Classes &#8211; 1</figcaption></figure>
 
 
 
-<figure class="wp-block-image size-large"><img loading="lazy" width="1211" height="599" data-id="514"  src="/wordpress_blog/wp-content/uploads/2022/04/Classes-2.png" alt="" class="wp-image-514"/><figcaption>Classes &#8211; 2</figcaption></figure>
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1211" height="599" data-id="514" src="/wordpress_blog/wp-content/uploads/2022/04/Classes-2.png" alt="" class="wp-image-514"/><figcaption>Classes &#8211; 2</figcaption></figure>
 
 
 
-<figure class="wp-block-image size-large"><img loading="lazy" width="1536" height="603" data-id="515"  src="/wordpress_blog/wp-content/uploads/2022/04/Classes-3.png" alt="" class="wp-image-515"/><figcaption>Classes &#8211; 3</figcaption></figure>
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1536" height="603" data-id="515" src="/wordpress_blog/wp-content/uploads/2022/04/Classes-3.png" alt="" class="wp-image-515"/><figcaption>Classes &#8211; 3</figcaption></figure>
 </figure>
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Class Constructors (類別建構子)</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Class Constructors (類別建構子)</h3>
 
 
 
@@ -11091,7 +12495,7 @@ console.log(userOne, userTwo);
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Class Methods &amp; Method Chaining</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Class Methods &amp; Method Chaining</h3>
 
 
 
@@ -11207,7 +12611,7 @@ userOne.login().incScore().incScore().logout();</code></pre>
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Class Inheritance (類別繼承) (subclasses) (子類別)</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Class Inheritance (類別繼承) (subclasses) (子類別)</h3>
 
 
 
@@ -11380,7 +12784,7 @@ console.log(users);
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Super()</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Super()</h3>
 
 
 
@@ -11433,7 +12837,7 @@ console.log(userThree);
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Constructors (under the hood)</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Constructors (under the hood)</h3>
 
 
 
@@ -11478,7 +12882,7 @@ userOne.login();
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Prototype Model (原型模型)</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Prototype Model (原型模型)</h3>
 
 
 
@@ -11518,7 +12922,7 @@ userOne.login();
 
 
 
-<h4>Prototypes (原型)</h4>
+<h4 class="wp-block-heading">Prototypes (原型)</h4>
 
 
 
@@ -11526,16 +12930,16 @@ userOne.login();
 
 
 
-<figure class="wp-block-gallery has-nested-images columns-1 is-cropped">
-<figure class="wp-block-image size-large"><img loading="lazy" width="1476" height="516" data-id="518"  src="/wordpress_blog/wp-content/uploads/2022/04/prototype-1.png" alt="" class="wp-image-518"/><figcaption>Prototype &#8211; 1</figcaption></figure>
+<figure class="wp-block-gallery has-nested-images columns-1 is-cropped wp-block-gallery-11 is-layout-flex wp-block-gallery-is-layout-flex">
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1476" height="516" data-id="518" src="/wordpress_blog/wp-content/uploads/2022/04/prototype-1.png" alt="" class="wp-image-518"/><figcaption>Prototype &#8211; 1</figcaption></figure>
 
 
 
-<figure class="wp-block-image size-large"><img loading="lazy" width="1536" height="674" data-id="517"  src="/wordpress_blog/wp-content/uploads/2022/04/prototype-2.png" alt="" class="wp-image-517"/><figcaption>Prototype &#8211; 2</figcaption></figure>
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1536" height="674" data-id="517" src="/wordpress_blog/wp-content/uploads/2022/04/prototype-2.png" alt="" class="wp-image-517"/><figcaption>Prototype &#8211; 2</figcaption></figure>
 
 
 
-<figure class="wp-block-image size-large"><img loading="lazy" width="1536" height="681" data-id="519"  src="/wordpress_blog/wp-content/uploads/2022/04/prototype-3.png" alt="" class="wp-image-519"/><figcaption>Prototype &#8211; 3</figcaption></figure>
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1536" height="681" data-id="519" src="/wordpress_blog/wp-content/uploads/2022/04/prototype-3.png" alt="" class="wp-image-519"/><figcaption>Prototype &#8211; 3</figcaption></figure>
 </figure>
 
 
@@ -11661,7 +13065,7 @@ userOne.login().logout();
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Prototypal Inheritance</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Prototypal Inheritance</h3>
 
 
 
@@ -11862,7 +13266,7 @@ userOne.login().logout();</code></pre>
 
 
 
-<h3>Built-in Objects</h3>
+<h3 class="wp-block-heading">Built-in Objects</h3>
 
 
 
@@ -11877,7 +13281,7 @@ userOne.login().logout();</code></pre>
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Making a Forecast Class (weather app)</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Making a Forecast Class (weather app)</h3>
 
 
 
@@ -11979,15 +13383,15 @@ if(localStorage.getItem('city')){
 
 
 
-<h2 class="has-background" style="background-color:#ff6663">Databases (Firebase)</h2>
+<h2 class="has-background wp-block-heading" style="background-color:#ff6663">Databases (Firebase)</h2>
 
 
 
-<h3>NoSQL Databases</h3>
+<h3 class="wp-block-heading">NoSQL Databases</h3>
 
 
 
-<h4>Storing Data</h4>
+<h4 class="wp-block-heading">Storing Data</h4>
 
 
 
@@ -11995,27 +13399,27 @@ if(localStorage.getItem('city')){
 
 
 
-<h4>Storing Data</h4>
+<h4 class="wp-block-heading">Storing Data</h4>
 
 
 
-<figure class="wp-block-image size-full"><img loading="lazy" width="1497" height="725" src="/wordpress_blog/wp-content/uploads/2022/04/Storing-Data.png" alt="" class="wp-image-521"/><figcaption>Storing Data</figcaption></figure>
+<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="1497" height="725" src="/wordpress_blog/wp-content/uploads/2022/04/Storing-Data.png" alt="" class="wp-image-521"/><figcaption>Storing Data</figcaption></figure>
 
 
 
-<h4>NoSQL Databases</h4>
+<h4 class="wp-block-heading">NoSQL Databases</h4>
 
 
 
-<figure class="wp-block-image size-full"><img loading="lazy" width="1536" height="652" src="/wordpress_blog/wp-content/uploads/2022/04/NoSQL-Databases.png" alt="" class="wp-image-522"/><figcaption>NoSQL Databases</figcaption></figure>
+<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="1536" height="652" src="/wordpress_blog/wp-content/uploads/2022/04/NoSQL-Databases.png" alt="" class="wp-image-522"/><figcaption>NoSQL Databases</figcaption></figure>
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Firebase &amp; Firestore</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Firebase &amp; Firestore</h3>
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -12027,7 +13431,7 @@ if(localStorage.getItem('city')){
 
 
 
-<h4>課程補充文件</h4>
+<h4 class="wp-block-heading">課程補充文件</h4>
 
 
 
@@ -12073,7 +13477,7 @@ db.collection('recipes')
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Connecting to Firestore</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Connecting to Firestore</h3>
 
 
 
@@ -12097,7 +13501,7 @@ db.collection('recipes')
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -12183,7 +13587,7 @@ db.collection('recipes')
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Getting Collections</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Getting Collections</h3>
 
 
 
@@ -12275,7 +13679,7 @@ db.collection('recipes').get().then(snapshot =&gt; {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Saving Documents</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Saving Documents</h3>
 
 
 
@@ -12329,7 +13733,7 @@ form.addEventListener('submit', e =&gt; {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Deleting Documents</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Deleting Documents</h3>
 
 
 
@@ -12452,7 +13856,7 @@ list.addEventListener('click', e =&gt; {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Real-time Listeners</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Real-time Listeners</h3>
 
 
 
@@ -12536,7 +13940,7 @@ list.addEventListener('click', e =&gt; {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Unsubscribing</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Unsubscribing</h3>
 
 
 
@@ -12675,7 +14079,7 @@ button.addEventListener('click', () =&gt; {
 
 
 
-<h2 class="has-background" style="background-color:#ff6663">Project – Real-time Chatroom</h2>
+<h2 class="has-background wp-block-heading" style="background-color:#ff6663">Project – Real-time Chatroom</h2>
 
 
 
@@ -12683,11 +14087,11 @@ button.addEventListener('click', () =&gt; {
 
 
 
-<h3>Project Preview &amp; Setup</h3>
+<h3 class="wp-block-heading">Project Preview &amp; Setup</h3>
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -12695,7 +14099,7 @@ button.addEventListener('click', () =&gt; {
 
 
 
-<h3>HTML Template</h3>
+<h3 class="wp-block-heading">HTML Template</h3>
 
 
 
@@ -12785,7 +14189,7 @@ button.addEventListener('click', () =&gt; {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Connecting to Firebase</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Connecting to Firebase</h3>
 
 
 
@@ -12793,7 +14197,7 @@ button.addEventListener('click', () =&gt; {
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -12887,7 +14291,7 @@ button.addEventListener('click', () =&gt; {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Chatroom Class &amp; Adding Chats</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Chatroom Class &amp; Adding Chats</h3>
 
 
 
@@ -12932,7 +14336,7 @@ chatroom.addChat('hello everyone')
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Setting up a Real-time Listener</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Setting up a Real-time Listener</h3>
 
 
 
@@ -12983,7 +14387,7 @@ chatroom.getChats((data) =&gt; {
 
 
 
-<h4>測試 – 在 Firestore Database 新增文件是否會 console.log 出物件資料</h4>
+<h4 class="wp-block-heading">測試 – 在 Firestore Database 新增文件是否會 console.log 出物件資料</h4>
 
 
 
@@ -12991,7 +14395,7 @@ chatroom.getChats((data) =&gt; {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Complex Queries</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Complex Queries</h3>
 
 
 
@@ -13048,7 +14452,7 @@ chatroom.getChats((data) =&gt; {
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -13056,7 +14460,7 @@ chatroom.getChats((data) =&gt; {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Updating the Room &amp; Username</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Updating the Room &amp; Username</h3>
 
 
 
@@ -13133,7 +14537,7 @@ setTimeout(() =&gt; {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Creating a ChatUI Class</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Creating a ChatUI Class</h3>
 
 
 
@@ -13236,11 +14640,11 @@ class ChatUI {
 
 
 
-<h3>Formatting the Dates</h3>
+<h3 class="wp-block-heading">Formatting the Dates</h3>
 
 
 
-<h4>GitHub Course</h4>
+<h4 class="wp-block-heading">GitHub Course</h4>
 
 
 
@@ -13388,7 +14792,7 @@ class ChatUI {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Sending New Chats</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Sending New Chats</h3>
 
 
 
@@ -13420,7 +14824,7 @@ chatroom.getChats(data =&gt; chatUI.render(data));</code></pre>
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Changing Username &amp; Local Storage</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Changing Username &amp; Local Storage</h3>
 
 
 
@@ -13616,7 +15020,7 @@ chatroom.getChats(data =&gt; chatUI.render(data));</code></pre>
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Updating the Room</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Updating the Room</h3>
 
 
 
@@ -13709,11 +15113,11 @@ class ChatUI {
 
 
 
-<h3>Testing the App</h3>
+<h3 class="wp-block-heading">Testing the App</h3>
 
 
 
-<h4>資源</h4>
+<h4 class="wp-block-heading">資源</h4>
 
 
 
@@ -13721,11 +15125,11 @@ class ChatUI {
 
 
 
-<h2>More ES6 Features</h2>
+<h2 class="wp-block-heading">More ES6 Features</h2>
 
 
 
-<h3>Spread &amp; Rest</h3>
+<h3 class="wp-block-heading">Spread &amp; Rest</h3>
 
 
 
@@ -13775,7 +15179,7 @@ console.log(personClone);</code></pre>
 
 
 
-<h3>Sets</h3>
+<h3 class="wp-block-heading">Sets</h3>
 
 
 
@@ -13836,7 +15240,7 @@ ninjas.forEach(ninja =&gt; {
 
 
 
-<h3>Symbols (符號)</h3>
+<h3 class="wp-block-heading">Symbols (符號)</h3>
 
 
 
@@ -13888,7 +15292,7 @@ console.log(ninja);</code></pre>
 		
 		<dc:creator><![CDATA[gee.hsu]]></dc:creator>
 		<pubDate>Mon, 17 Jan 2022 03:46:00 +0000</pubDate>
-				<category><![CDATA[The Net Ninja]]></category>
+				<category><![CDATA[Net Ninja]]></category>
 		<guid isPermaLink="false">/wordpress_blog/?p=492</guid>
 
 					<description><![CDATA[(Complete guide, from Novice to  [&#8230;]]]></description>
@@ -13905,7 +15309,7 @@ console.log(ninja);</code></pre>
 
 
 
-<h4>您會學到</h4>
+<h4 class="wp-block-heading">您會學到</h4>
 
 
 
@@ -13913,15 +15317,15 @@ console.log(ninja);</code></pre>
 
 
 
-<h2>Forms &amp; Form Events</h2>
+<h2 class="wp-block-heading">Forms &amp; Form Events</h2>
 
 
 
-<h3>Events Inside Forms</h3>
+<h3 class="wp-block-heading">Events Inside Forms</h3>
 
 
 
-<h4>Form Events</h4>
+<h4 class="wp-block-heading">Form Events</h4>
 
 
 
@@ -13929,7 +15333,7 @@ console.log(ninja);</code></pre>
 
 
 
-<h4>Submit Events</h4>
+<h4 class="wp-block-heading">Submit Events</h4>
 
 
 
@@ -13937,7 +15341,7 @@ console.log(ninja);</code></pre>
 
 
 
-<h3>Submit Events</h3>
+<h3 class="wp-block-heading">Submit Events</h3>
 
 
 
@@ -13995,11 +15399,11 @@ form.addEventListener('submit', e =&gt; {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Regular Expressions (正規表達式)</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Regular Expressions (正規表達式)</h3>
 
 
 
-<h4>資源</h4>
+<h4 class="wp-block-heading">資源</h4>
 
 
 
@@ -14007,7 +15411,7 @@ form.addEventListener('submit', e =&gt; {
 
 
 
-<h4>Regex101 介紹</h4>
+<h4 class="wp-block-heading">Regex101 介紹</h4>
 
 
 
@@ -14015,7 +15419,7 @@ form.addEventListener('submit', e =&gt; {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Testing RegEx Patterns</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Testing RegEx Patterns</h3>
 
 
 
@@ -14231,7 +15635,7 @@ console.log(result);</code></pre>
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Basic Form Validation</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Basic Form Validation</h3>
 
 
 
@@ -14303,11 +15707,11 @@ form.addEventListener('submit', e =&gt; {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Keyboard Events</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Keyboard Events</h3>
 
 
 
-<h4>MDN 文件</h4>
+<h4 class="wp-block-heading">MDN 文件</h4>
 
 
 
@@ -14531,19 +15935,19 @@ form.username.addEventListener('keyup', e =&gt; {
 
 
 
-<h2>Project – Interactive Ninja Quiz</h2>
+<h2 class="wp-block-heading">Project – Interactive Ninja Quiz</h2>
 
 
 
-<h3>Project Preview &amp; Setup</h3>
+<h3 class="wp-block-heading">Project Preview &amp; Setup</h3>
 
 
 
-<h3>Bootstrap Basics</h3>
+<h3 class="wp-block-heading">Bootstrap Basics</h3>
 
 
 
-<h4>資源</h4>
+<h4 class="wp-block-heading">資源</h4>
 
 
 
@@ -14551,11 +15955,11 @@ form.username.addEventListener('keyup', e =&gt; {
 
 
 
-<h3>HTML Template</h3>
+<h3 class="wp-block-heading">HTML Template</h3>
 
 
 
-<h4>資源</h4>
+<h4 class="wp-block-heading">資源</h4>
 
 
 
@@ -14646,7 +16050,7 @@ form.username.addEventListener('keyup', e =&gt; {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Checking Answers</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Checking Answers</h3>
 
 
 
@@ -14757,7 +16161,7 @@ form.addEventListener('submit', e =&gt; {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Showing the Score</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Showing the Score</h3>
 
 
 
@@ -14879,7 +16283,7 @@ form.addEventListener('submit', e =&gt; {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">The Window Object (觀念、scrollTo)</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">The Window Object (觀念、scrollTo)</h3>
 
 
 
@@ -15028,7 +16432,7 @@ form.addEventListener('submit', e =&gt; {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Intervals &amp; Animating the Score</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Intervals &amp; Animating the Score</h3>
 
 
 
@@ -15174,11 +16578,11 @@ form.addEventListener('submit', e =&gt; {
 
 
 
-<h2>Array Methods(陣列方法)</h2>
+<h2 class="wp-block-heading">Array Methods(陣列方法)</h2>
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Filter Method</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Filter Method</h3>
 
 
 
@@ -15250,7 +16654,7 @@ console.log(premiumUsers);</code></pre>
 
 
 
-<h3>Map Method</h3>
+<h3 class="wp-block-heading">Map Method</h3>
 
 
 
@@ -15386,7 +16790,7 @@ console.log(saleProducts, products);</code></pre>
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Reduce Method</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Reduce Method</h3>
 
 
 
@@ -15483,7 +16887,7 @@ console.log(marioTotal);
 
 
 
-<h4>補充 MDN 文件</h4>
+<h4 class="wp-block-heading">補充 MDN 文件</h4>
 
 
 
@@ -15491,7 +16895,7 @@ console.log(marioTotal);
 
 
 
-<h3>Find Method</h3>
+<h3 class="wp-block-heading">Find Method</h3>
 
 
 
@@ -15539,7 +16943,7 @@ console.log(firstHighScore);</code></pre>
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Sort Method (排序方法)</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Sort Method (排序方法)</h3>
 
 
 
@@ -15756,7 +17160,7 @@ console.log(players);</code></pre>
 
 
 
-<h4 class="has-background" style="background-color:#ff6663">MDN 文件</h4>
+<h4 class="has-background wp-block-heading" style="background-color:#ff6663">MDN 文件</h4>
 
 
 
@@ -15764,7 +17168,7 @@ console.log(players);</code></pre>
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Chaining Array Methods</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Chaining Array Methods</h3>
 
 
 
@@ -15838,15 +17242,15 @@ console.log(promos);</code></pre>
 
 
 
-<h2 class="has-background" style="background-color:#ff6663">Project – Todo List (待辦清單)</h2>
+<h2 class="has-background wp-block-heading" style="background-color:#ff6663">Project – Todo List (待辦清單)</h2>
 
 
 
-<h3>Project Preview and Setup</h3>
+<h3 class="wp-block-heading">Project Preview and Setup</h3>
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -15875,11 +17279,11 @@ console.log(promos);</code></pre>
 
 
 
-<h3>HTML &amp; CSS Template</h3>
+<h3 class="wp-block-heading">HTML &amp; CSS Template</h3>
 
 
 
-<h4>資源</h4>
+<h4 class="wp-block-heading">資源</h4>
 
 
 
@@ -15887,7 +17291,7 @@ console.log(promos);</code></pre>
 
 
 
-<h4>操作步驟</h4>
+<h4 class="wp-block-heading">操作步驟</h4>
 
 
 
@@ -15971,7 +17375,7 @@ input&#91;type=text]:focus{
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Adding Todos</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Adding Todos</h3>
 
 
 
@@ -16008,7 +17412,7 @@ addForm.addEventListener('submit', e =&gt; {
 
 
 
-<h4>Todo text overflowing outside the list</h4>
+<h4 class="wp-block-heading">Todo text overflowing outside the list</h4>
 
 
 
@@ -16049,7 +17453,7 @@ input&#91;type=text]:focus{
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Deleting Todos</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Deleting Todos</h3>
 
 
 
@@ -16095,7 +17499,7 @@ list.addEventListener('click', e =&gt; {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Searching &amp; Filtering Todos</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Searching &amp; Filtering Todos</h3>
 
 
 
@@ -16188,15 +17592,15 @@ input&#91;type=text]:focus{
 
 
 
-<h2>Dates &amp; Times</h2>
+<h2 class="wp-block-heading">Dates &amp; Times</h2>
 
 
 
-<h3>Dates &amp; Times in JavaScript</h3>
+<h3 class="wp-block-heading">Dates &amp; Times in JavaScript</h3>
 
 
 
-<h4>JavaScript Data Types</h4>
+<h4 class="wp-block-heading">JavaScript Data Types</h4>
 
 
 
@@ -16251,7 +17655,7 @@ console.log(now.toLocaleString());</code></pre>
 
 
 
-<h3>Timestamps &amp; Comparisons (時間戳記 &amp; 比較)</h3>
+<h3 class="wp-block-heading">Timestamps &amp; Comparisons (時間戳記 &amp; 比較)</h3>
 
 
 
@@ -16301,7 +17705,7 @@ console.log(new Date(timestamp));</code></pre>
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Building a Digital Clock</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Building a Digital Clock</h3>
 
 
 
@@ -16368,11 +17772,11 @@ setInterval(tick, 1000);</code></pre>
 
 
 
-<h3>Date-fns Library</h3>
+<h3 class="wp-block-heading">Date-fns Library</h3>
 
 
 
-<h4>資源</h4>
+<h4 class="wp-block-heading">資源</h4>
 
 
 
@@ -16380,7 +17784,7 @@ setInterval(tick, 1000);</code></pre>
 
 
 
-<h4>Date-fns Library 文件使用</h4>
+<h4 class="wp-block-heading">Date-fns Library 文件使用</h4>
 
 
 
@@ -16431,7 +17835,7 @@ console.log(dateFns.distanceInWords(now, before, {addSuffix: true}));</code></pr
 
 
 
-<h2 class="has-background" style="background-color:#ff6663">Async JavaScript (非同步)</h2>
+<h2 class="has-background wp-block-heading" style="background-color:#ff6663">Async JavaScript (非同步)</h2>
 
 
 
@@ -16439,11 +17843,11 @@ console.log(dateFns.distanceInWords(now, before, {addSuffix: true}));</code></pr
 
 
 
-<h3>What is Asynchronous JavaScript?</h3>
+<h3 class="wp-block-heading">What is Asynchronous JavaScript?</h3>
 
 
 
-<h4>Async JavaScript</h4>
+<h4 class="wp-block-heading">Async JavaScript</h4>
 
 
 
@@ -16455,7 +17859,7 @@ console.log(dateFns.distanceInWords(now, before, {addSuffix: true}));</code></pr
 
 
 
-<h4>Synchronous JavaScript (同步)</h4>
+<h4 class="wp-block-heading">Synchronous JavaScript (同步)</h4>
 
 
 
@@ -16469,15 +17873,15 @@ console.log('line three');</code></pre>
 
 
 
-<h4>Single Threaded</h4>
+<h4 class="wp-block-heading">Single Threaded</h4>
 
 
 
-<figure class="wp-block-image size-full"><img loading="lazy" width="1183" height="757" src="/wordpress_blog/wp-content/uploads/2022/04/single-threaded.png" alt="" class="wp-image-493"/><figcaption>Single Threaded</figcaption></figure>
+<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="1183" height="757" src="/wordpress_blog/wp-content/uploads/2022/04/single-threaded.png" alt="" class="wp-image-493"/><figcaption>Single Threaded</figcaption></figure>
 
 
 
-<h4>Async to the Rescue…</h4>
+<h4 class="wp-block-heading">Async to the Rescue…</h4>
 
 
 
@@ -16485,11 +17889,11 @@ console.log('line three');</code></pre>
 
 
 
-<figure class="wp-block-image size-full"><img loading="lazy" width="1283" height="829" src="/wordpress_blog/wp-content/uploads/2022/04/async-to-the-rescue.png" alt="" class="wp-image-494"/><figcaption>Async to the rescue</figcaption></figure>
+<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="1283" height="829" src="/wordpress_blog/wp-content/uploads/2022/04/async-to-the-rescue.png" alt="" class="wp-image-494"/><figcaption>Async to the rescue</figcaption></figure>
 
 
 
-<h3>Async Code in Action</h3>
+<h3 class="wp-block-heading">Async Code in Action</h3>
 
 
 
@@ -16537,11 +17941,11 @@ console.log(4);</code></pre>
 
 
 
-<h3>What are HTTP Requests?</h3>
+<h3 class="wp-block-heading">What are HTTP Requests?</h3>
 
 
 
-<h4>HTTP Requests</h4>
+<h4 class="wp-block-heading">HTTP Requests</h4>
 
 
 
@@ -16549,7 +17953,7 @@ console.log(4);</code></pre>
 
 
 
-<h4>API Endpoints</h4>
+<h4 class="wp-block-heading">API Endpoints</h4>
 
 
 
@@ -16557,11 +17961,11 @@ console.log(4);</code></pre>
 
 
 
-<figure class="wp-block-image size-full"><img loading="lazy" width="1536" height="465" src="/wordpress_blog/wp-content/uploads/2022/04/api-endpoints.png" alt="" class="wp-image-496"/><figcaption>API Endpoints</figcaption></figure>
+<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="1536" height="465" src="/wordpress_blog/wp-content/uploads/2022/04/api-endpoints.png" alt="" class="wp-image-496"/><figcaption>API Endpoints</figcaption></figure>
 
 
 
-<h4>JSONPlaceholder</h4>
+<h4 class="wp-block-heading">JSONPlaceholder</h4>
 
 
 
@@ -16569,7 +17973,7 @@ console.log(4);</code></pre>
 
 
 
-<h4>Google Network</h4>
+<h4 class="wp-block-heading">Google Network</h4>
 
 
 
@@ -16577,7 +17981,7 @@ console.log(4);</code></pre>
 
 
 
-<h3>Making HTTP Requests (XHR)</h3>
+<h3 class="wp-block-heading">Making HTTP Requests (XHR)</h3>
 
 
 
@@ -16597,7 +18001,7 @@ request.send();</code></pre>
 
 
 
-<h4>MDN Web Docs</h4>
+<h4 class="wp-block-heading">MDN Web Docs</h4>
 
 
 
@@ -16605,7 +18009,7 @@ request.send();</code></pre>
 
 
 
-<h3>Response Status</h3>
+<h3 class="wp-block-heading">Response Status</h3>
 
 
 
@@ -16631,7 +18035,7 @@ request.send();</code></pre>
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Callback Functions (回呼函式)</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Callback Functions (回呼函式)</h3>
 
 
 
@@ -16673,7 +18077,7 @@ console.log(4);</code></pre>
 
 
 
-<h3>JSON Data</h3>
+<h3 class="wp-block-heading">JSON Data</h3>
 
 
 
@@ -16717,7 +18121,7 @@ getTodos((err, data) =&gt; {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Callback Hell</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Callback Hell</h3>
 
 
 
@@ -16782,7 +18186,7 @@ getTodos('todos/luigi.json', (err, data) =&gt; {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Promise Basics</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Promise Basics</h3>
 
 
 
@@ -16840,7 +18244,7 @@ getTodos('todos/luigi.json').then(data =&gt; {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Chaining Promises</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Chaining Promises</h3>
 
 
 
@@ -16880,7 +18284,7 @@ getTodos('todos/luigi.json').then(data =&gt; {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">The Fetch API</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">The Fetch API</h3>
 
 
 
@@ -16899,7 +18303,7 @@ fetch('todos/luigi.json').then((response) =&gt; {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Async &amp; Await</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Async &amp; Await</h3>
 
 
 
@@ -16936,7 +18340,7 @@ console.log(4);
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Throwing &amp; Catching Errors</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Throwing &amp; Catching Errors</h3>
 
 
 
@@ -16972,12 +18376,12 @@ getTodos()
 		
 		<dc:creator><![CDATA[gee.hsu]]></dc:creator>
 		<pubDate>Sun, 16 Jan 2022 02:59:00 +0000</pubDate>
-				<category><![CDATA[The Net Ninja]]></category>
+				<category><![CDATA[Net Ninja]]></category>
 		<guid isPermaLink="false">/wordpress_blog/?p=484</guid>
 
 					<description><![CDATA[#1 – Why Use CSS Grid? In this f [&#8230;]]]></description>
 										<content:encoded><![CDATA[
-<h2>#1 – Why Use CSS Grid?</h2>
+<h2 class="wp-block-heading">#1 – Why Use CSS Grid?</h2>
 
 
 
@@ -16985,7 +18389,7 @@ getTodos()
 
 
 
-<h3>COURSE LINKS</h3>
+<h3 class="wp-block-heading">COURSE LINKS</h3>
 
 
 
@@ -16993,7 +18397,7 @@ getTodos()
 
 
 
-<h4>floats、flex、grid 範例程式碼</h4>
+<h4 class="wp-block-heading">floats、flex、grid 範例程式碼</h4>
 
 
 
@@ -17225,21 +18629,21 @@ getTodos()
 
 
 
-<h4>CSS Grid</h4>
+<h4 class="wp-block-heading">CSS Grid</h4>
 
 
 
-<figure class="wp-block-gallery has-nested-images columns-1 is-cropped">
-<figure class="wp-block-image size-large"><img loading="lazy" width="1536" height="731" data-id="485"  src="/wordpress_blog/wp-content/uploads/2022/04/grid-desktop-mobile.jpg" alt="" class="wp-image-485"/><figcaption>Grid Desktop Mobile</figcaption></figure>
+<figure class="wp-block-gallery has-nested-images columns-1 is-cropped wp-block-gallery-13 is-layout-flex wp-block-gallery-is-layout-flex">
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1536" height="731" data-id="485" src="/wordpress_blog/wp-content/uploads/2022/04/grid-desktop-mobile.jpg" alt="" class="wp-image-485"/><figcaption>Grid Desktop Mobile</figcaption></figure>
 
 
 
-<figure class="wp-block-image size-large"><img loading="lazy" width="1102" height="1035" data-id="486"  src="/wordpress_blog/wp-content/uploads/2022/04/grid-webpage.jpg" alt="" class="wp-image-486"/><figcaption>Grid Webpage</figcaption></figure>
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1102" height="1035" data-id="486" src="/wordpress_blog/wp-content/uploads/2022/04/grid-webpage.jpg" alt="" class="wp-image-486"/><figcaption>Grid Webpage</figcaption></figure>
 </figure>
 
 
 
-<h2>#2 – Columns</h2>
+<h2 class="wp-block-heading">#2 – Columns</h2>
 
 
 
@@ -17301,7 +18705,7 @@ getTodos()
 
 
 
-<h4>格線布局的基本概念</h4>
+<h4 class="wp-block-heading">格線布局的基本概念</h4>
 
 
 
@@ -17309,7 +18713,7 @@ getTodos()
 
 
 
-<h2>#3 – Rows</h2>
+<h2 class="wp-block-heading">#3 – Rows</h2>
 
 
 
@@ -17378,7 +18782,7 @@ getTodos()
 
 
 
-<h4>屬性更新說明</h4>
+<h4 class="wp-block-heading">屬性更新說明</h4>
 
 
 
@@ -17386,7 +18790,7 @@ getTodos()
 
 
 
-<h2>#4 – Grid Lines</h2>
+<h2 class="wp-block-heading">#4 – Grid Lines</h2>
 
 
 
@@ -17394,7 +18798,7 @@ getTodos()
 
 
 
-<figure class="wp-block-image size-full"><img loading="lazy" width="1123" height="959" src="/wordpress_blog/wp-content/uploads/2022/04/grid-lines.jpg" alt="" class="wp-image-488"/><figcaption>Grid Lines</figcaption></figure>
+<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="1123" height="959" src="/wordpress_blog/wp-content/uploads/2022/04/grid-lines.jpg" alt="" class="wp-image-488"/><figcaption>Grid Lines</figcaption></figure>
 
 
 
@@ -17470,7 +18874,7 @@ getTodos()
 
 
 
-<h2>#5 – Nested Grids</h2>
+<h2 class="wp-block-heading">#5 – Nested Grids</h2>
 
 
 
@@ -17603,11 +19007,11 @@ getTodos()
 
 
 
-<h2>#6 – Aligning &amp; Justifying Items</h2>
+<h2 class="wp-block-heading">#6 – Aligning &amp; Justifying Items</h2>
 
 
 
-<h4>align-items</h4>
+<h4 class="wp-block-heading">align-items</h4>
 
 
 
@@ -17615,7 +19019,7 @@ getTodos()
 
 
 
-<h4>justify-items</h4>
+<h4 class="wp-block-heading">justify-items</h4>
 
 
 
@@ -17623,7 +19027,7 @@ getTodos()
 
 
 
-<h4>justify-self</h4>
+<h4 class="wp-block-heading">justify-self</h4>
 
 
 
@@ -17631,7 +19035,7 @@ getTodos()
 
 
 
-<h4>align-self</h4>
+<h4 class="wp-block-heading">align-self</h4>
 
 
 
@@ -17701,7 +19105,7 @@ getTodos()
 
 
 
-<h2 class="has-background" style="background-color:#ff6663">#7 – Create a 12-Column Grid</h2>
+<h2 class="has-background wp-block-heading" style="background-color:#ff6663">#7 – Create a 12-Column Grid</h2>
 
 
 
@@ -17813,7 +19217,7 @@ getTodos()
 
 
 
-<h2>#8 – Mosaic Layout</h2>
+<h2 class="wp-block-heading">#8 – Mosaic Layout</h2>
 
 
 
@@ -17888,7 +19292,7 @@ getTodos()
 
 
 
-<h2 class="has-background" style="background-color:#ff6663">#9 – Grid Areas</h2>
+<h2 class="has-background wp-block-heading" style="background-color:#ff6663">#9 – Grid Areas</h2>
 
 
 
@@ -17966,7 +19370,7 @@ getTodos()
 
 
 
-<h4>使用 . 產生空白區域</h4>
+<h4 class="wp-block-heading">使用 . 產生空白區域</h4>
 
 
 
@@ -18040,7 +19444,7 @@ getTodos()
 
 
 
-<h2 class="has-background" style="background-color:#ff6663">#10 – Responsive Grid Example</h2>
+<h2 class="has-background wp-block-heading" style="background-color:#ff6663">#10 – Responsive Grid Example</h2>
 
 
 
@@ -18144,12 +19548,12 @@ getTodos()
 		
 		<dc:creator><![CDATA[gee.hsu]]></dc:creator>
 		<pubDate>Sun, 09 Jan 2022 01:36:00 +0000</pubDate>
-				<category><![CDATA[The Net Ninja]]></category>
+				<category><![CDATA[Net Ninja]]></category>
 		<guid isPermaLink="false">/wordpress_blog/?p=472</guid>
 
 					<description><![CDATA[#01 – Introduction Hey gang &#038;amp [&#8230;]]]></description>
 										<content:encoded><![CDATA[
-<h2>#01 – Introduction</h2>
+<h2 class="wp-block-heading">#01 – Introduction</h2>
 
 
 
@@ -18157,7 +19561,7 @@ getTodos()
 
 
 
-<h3>HTML &amp; CSS</h3>
+<h3 class="wp-block-heading">HTML &amp; CSS</h3>
 
 
 
@@ -18165,7 +19569,7 @@ getTodos()
 
 
 
-<h4>Course Links:</h4>
+<h4 class="wp-block-heading">Course Links:</h4>
 
 
 
@@ -18173,7 +19577,7 @@ getTodos()
 
 
 
-<h3>What is HTML?</h3>
+<h3 class="wp-block-heading">What is HTML?</h3>
 
 
 
@@ -18191,7 +19595,7 @@ getTodos()
 
 
 
-<h3>What is CSS?</h3>
+<h3 class="wp-block-heading">What is CSS?</h3>
 
 
 
@@ -18203,7 +19607,7 @@ getTodos()
 
 
 
-<h4>程式編輯器</h4>
+<h4 class="wp-block-heading">程式編輯器</h4>
 
 
 
@@ -18211,7 +19615,7 @@ getTodos()
 
 
 
-<h4>網頁瀏覽器</h4>
+<h4 class="wp-block-heading">網頁瀏覽器</h4>
 
 
 
@@ -18219,7 +19623,7 @@ getTodos()
 
 
 
-<h4>打開資料夾</h4>
+<h4 class="wp-block-heading">打開資料夾</h4>
 
 
 
@@ -18227,7 +19631,7 @@ getTodos()
 
 
 
-<h4>新增檔案方式</h4>
+<h4 class="wp-block-heading">新增檔案方式</h4>
 
 
 
@@ -18256,7 +19660,7 @@ getTodos()
 
 
 
-<h4>Extensioins</h4>
+<h4 class="wp-block-heading">Extensioins</h4>
 
 
 
@@ -18264,7 +19668,7 @@ getTodos()
 
 
 
-<h4>在瀏覽器檢視程式碼</h4>
+<h4 class="wp-block-heading">在瀏覽器檢視程式碼</h4>
 
 
 
@@ -18272,7 +19676,7 @@ getTodos()
 
 
 
-<h3>Summary</h3>
+<h3 class="wp-block-heading">Summary</h3>
 
 
 
@@ -18280,7 +19684,7 @@ getTodos()
 
 
 
-<h2>#02 – HTML Basics</h2>
+<h2 class="wp-block-heading">#02 – HTML Basics</h2>
 
 
 
@@ -18288,7 +19692,7 @@ getTodos()
 
 
 
-<h4>HTML Tags</h4>
+<h4 class="wp-block-heading">HTML Tags</h4>
 
 
 
@@ -18296,7 +19700,7 @@ getTodos()
 
 
 
-<h4>快捷鍵</h4>
+<h4 class="wp-block-heading">快捷鍵</h4>
 
 
 
@@ -18377,7 +19781,7 @@ getTodos()
 
 
 
-<h3>Summary</h3>
+<h3 class="wp-block-heading">Summary</h3>
 
 
 
@@ -18385,7 +19789,7 @@ getTodos()
 
 
 
-<h2>#03 – HTML Forms</h2>
+<h2 class="wp-block-heading">#03 – HTML Forms</h2>
 
 
 
@@ -18453,7 +19857,7 @@ getTodos()
 
 
 
-<h4>快捷鍵</h4>
+<h4 class="wp-block-heading">快捷鍵</h4>
 
 
 
@@ -18461,7 +19865,7 @@ getTodos()
 
 
 
-<h4>補充文件</h4>
+<h4 class="wp-block-heading">補充文件</h4>
 
 
 
@@ -18469,7 +19873,7 @@ getTodos()
 
 
 
-<h3>Summary</h3>
+<h3 class="wp-block-heading">Summary</h3>
 
 
 
@@ -18477,7 +19881,7 @@ getTodos()
 
 
 
-<h2>#04 – CSS Basics</h2>
+<h2 class="wp-block-heading">#04 – CSS Basics</h2>
 
 
 
@@ -18485,7 +19889,7 @@ getTodos()
 
 
 
-<h3>CSS (Style Sheets)</h3>
+<h3 class="wp-block-heading">CSS (Style Sheets)</h3>
 
 
 
@@ -18505,7 +19909,7 @@ p {
 
 
 
-<h4>selectors (選擇器)</h4>
+<h4 class="wp-block-heading">selectors (選擇器)</h4>
 
 
 
@@ -18513,7 +19917,7 @@ p {
 
 
 
-<h4>declarations (宣告)</h4>
+<h4 class="wp-block-heading">declarations (宣告)</h4>
 
 
 
@@ -18695,7 +20099,7 @@ p {
 
 
 
-<h4>text-decoration</h4>
+<h4 class="wp-block-heading">text-decoration</h4>
 
 
 
@@ -18703,7 +20107,7 @@ p {
 
 
 
-<h4>CSS Web Safe Fonts</h4>
+<h4 class="wp-block-heading">CSS Web Safe Fonts</h4>
 
 
 
@@ -18711,7 +20115,7 @@ p {
 
 
 
-<h4>text-align</h4>
+<h4 class="wp-block-heading">text-align</h4>
 
 
 
@@ -18719,7 +20123,7 @@ p {
 
 
 
-<h4>light-height</h4>
+<h4 class="wp-block-heading">light-height</h4>
 
 
 
@@ -18727,7 +20131,7 @@ p {
 
 
 
-<h4>letter-spacing</h4>
+<h4 class="wp-block-heading">letter-spacing</h4>
 
 
 
@@ -18735,7 +20139,7 @@ p {
 
 
 
-<h4>column-count</h4>
+<h4 class="wp-block-heading">column-count</h4>
 
 
 
@@ -18743,7 +20147,7 @@ p {
 
 
 
-<h4>column-gap</h4>
+<h4 class="wp-block-heading">column-gap</h4>
 
 
 
@@ -18751,7 +20155,7 @@ p {
 
 
 
-<h4>border</h4>
+<h4 class="wp-block-heading">border</h4>
 
 
 
@@ -18767,7 +20171,7 @@ p {
 
 
 
-<h4>comment</h4>
+<h4 class="wp-block-heading">comment</h4>
 
 
 
@@ -18775,7 +20179,7 @@ p {
 
 
 
-<h4>list-style-type</h4>
+<h4 class="wp-block-heading">list-style-type</h4>
 
 
 
@@ -18783,7 +20187,7 @@ p {
 
 
 
-<h4>text-shadow</h4>
+<h4 class="wp-block-heading">text-shadow</h4>
 
 
 
@@ -18824,7 +20228,7 @@ li {
 
 
 
-<h3>Colours / Hex Codes</h3>
+<h3 class="wp-block-heading">Colours / Hex Codes</h3>
 
 
 
@@ -18832,7 +20236,7 @@ li {
 
 
 
-<h4>#42f4f1</h4>
+<h4 class="wp-block-heading">#42f4f1</h4>
 
 
 
@@ -18874,7 +20278,7 @@ li {
 
 
 
-<h3>Inline Elements</h3>
+<h3 class="wp-block-heading">Inline Elements</h3>
 
 
 
@@ -18882,7 +20286,7 @@ li {
 
 
 
-<h3>Block-level Elements</h3>
+<h3 class="wp-block-heading">Block-level Elements</h3>
 
 
 
@@ -18923,7 +20327,7 @@ li {
 
 
 
-<h4>Inline、Block-level elements 區分</h4>
+<h4 class="wp-block-heading">Inline、Block-level elements 區分</h4>
 
 
 
@@ -18975,16 +20379,16 @@ div {
 
 
 
-<h3>Margin &amp; Padding</h3>
+<h3 class="wp-block-heading">Margin &amp; Padding</h3>
 
 
 
-<figure class="wp-block-gallery has-nested-images columns-1 is-cropped">
-<figure class="wp-block-image size-large"><img loading="lazy" width="1494" height="679" data-id="474"  src="/wordpress_blog/wp-content/uploads/2022/04/div-marinpadding.jpg" alt="" class="wp-image-474"/><figcaption>div &#8211; margin &amp; padding</figcaption></figure>
+<figure class="wp-block-gallery has-nested-images columns-1 is-cropped wp-block-gallery-15 is-layout-flex wp-block-gallery-is-layout-flex">
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1494" height="679" data-id="474" src="/wordpress_blog/wp-content/uploads/2022/04/div-marinpadding.jpg" alt="" class="wp-image-474"/><figcaption>div &#8211; margin &amp; padding</figcaption></figure>
 
 
 
-<figure class="wp-block-image size-large"><img loading="lazy" width="952" height="496" data-id="475"  src="/wordpress_blog/wp-content/uploads/2022/04/span-marginpadding.jpg" alt="" class="wp-image-475"/><figcaption>span &#8211; margin &amp; padding</figcaption></figure>
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="952" height="496" data-id="475" src="/wordpress_blog/wp-content/uploads/2022/04/span-marginpadding.jpg" alt="" class="wp-image-475"/><figcaption>span &#8211; margin &amp; padding</figcaption></figure>
 </figure>
 
 
@@ -19058,11 +20462,11 @@ div {
 
 
 
-<h4>Default Browser Styles (瀏覽器預設樣式)</h4>
+<h4 class="wp-block-heading">Default Browser Styles (瀏覽器預設樣式)</h4>
 
 
 
-<h3>Summary</h3>
+<h3 class="wp-block-heading">Summary</h3>
 
 
 
@@ -19070,11 +20474,11 @@ div {
 
 
 
-<h2>#05 – CSS Classes &amp; Selectors</h2>
+<h2 class="wp-block-heading">#05 – CSS Classes &amp; Selectors</h2>
 
 
 
-<h4>ID</h4>
+<h4 class="wp-block-heading">ID</h4>
 
 
 
@@ -19082,7 +20486,7 @@ div {
 
 
 
-<h4>a[href]</h4>
+<h4 class="wp-block-heading">a[href]</h4>
 
 
 
@@ -19160,11 +20564,11 @@ a&#91;href$=".com"]{
 
 
 
-<h3>The Cascade</h3>
+<h3 class="wp-block-heading">The Cascade</h3>
 
 
 
-<h3>Inheritance(繼承)</h3>
+<h3 class="wp-block-heading">Inheritance(繼承)</h3>
 
 
 
@@ -19261,7 +20665,7 @@ p{
 
 
 
-<h2 class="has-background" style="background-color:#ff6663">#06 – HTML 5 Semantics</h2>
+<h2 class="has-background wp-block-heading" style="background-color:#ff6663">#06 – HTML 5 Semantics</h2>
 
 
 
@@ -19273,7 +20677,7 @@ p{
 
 
 
-<h3>HTML5 Semantic Tags</h3>
+<h3 class="wp-block-heading">HTML5 Semantic Tags</h3>
 
 
 
@@ -19341,7 +20745,7 @@ p{
 
 
 
-<h2>#07 – Chrome Dev Tools</h2>
+<h2 class="wp-block-heading">#07 – Chrome Dev Tools</h2>
 
 
 
@@ -19349,7 +20753,7 @@ p{
 
 
 
-<h4>打開 Chrome Dev Tools</h4>
+<h4 class="wp-block-heading">打開 Chrome Dev Tools</h4>
 
 
 
@@ -19357,7 +20761,7 @@ p{
 
 
 
-<h4>講解 Chrome Dev Tools 功能</h4>
+<h4 class="wp-block-heading">講解 Chrome Dev Tools 功能</h4>
 
 
 
@@ -19365,7 +20769,7 @@ p{
 
 
 
-<h2 class="has-background" style="background-color:#ff6663">#08 – CSS Layout &amp; Position</h2>
+<h2 class="has-background wp-block-heading" style="background-color:#ff6663">#08 – CSS Layout &amp; Position</h2>
 
 
 
@@ -19373,7 +20777,7 @@ p{
 
 
 
-<h3>Position &amp; Layout</h3>
+<h3 class="wp-block-heading">Position &amp; Layout</h3>
 
 
 
@@ -19411,7 +20815,7 @@ p{
 
 
 
-<h4>專案範例 – Marioclub</h4>
+<h4 class="wp-block-heading">專案範例 – Marioclub</h4>
 
 
 
@@ -19593,7 +20997,7 @@ footer{
 
 
 
-<h2 class="has-background" style="background-color:#ff6663">#09 – Pseudo Classes &amp; Elements (虛擬類別、偽類別 &amp; 虛擬元素、偽元素)</h2>
+<h2 class="has-background wp-block-heading" style="background-color:#ff6663">#09 – Pseudo Classes &amp; Elements (虛擬類別、偽類別 &amp; 虛擬元素、偽元素)</h2>
 
 
 
@@ -19605,7 +21009,7 @@ footer{
 
 
 
-<h3>Pseudo Classes</h3>
+<h3 class="wp-block-heading">Pseudo Classes</h3>
 
 
 
@@ -19826,7 +21230,7 @@ p::after{
 
 
 
-<h4>偽元素</h4>
+<h4 class="wp-block-heading">偽元素</h4>
 
 
 
@@ -19834,7 +21238,7 @@ p::after{
 
 
 
-<h2 class="has-background" style="background-color:#ff6663">#10 – Intro to Media Queries</h2>
+<h2 class="has-background wp-block-heading" style="background-color:#ff6663">#10 – Intro to Media Queries</h2>
 
 
 
@@ -19842,11 +21246,11 @@ p::after{
 
 
 
-<h3>Responsive Design (響應式設計)</h3>
+<h3 class="wp-block-heading">Responsive Design (響應式設計)</h3>
 
 
 
-<h4>Media Queries</h4>
+<h4 class="wp-block-heading">Media Queries</h4>
 
 
 
@@ -19854,7 +21258,7 @@ p::after{
 
 
 
-<h4>Viewport meta tag</h4>
+<h4 class="wp-block-heading">Viewport meta tag</h4>
 
 
 
@@ -19862,7 +21266,7 @@ p::after{
 
 
 
-<h4>Responsive images</h4>
+<h4 class="wp-block-heading">Responsive images</h4>
 
 
 
@@ -19870,7 +21274,7 @@ p::after{
 
 
 
-<h4>關於 Responsive Web Design 介紹</h4>
+<h4 class="wp-block-heading">關於 Responsive Web Design 介紹</h4>
 
 
 
@@ -20154,7 +21558,7 @@ p::after{
 
 
 
-<h2>#11 – Next Steps</h2>
+<h2 class="wp-block-heading">#11 – Next Steps</h2>
 
 
 
@@ -20166,7 +21570,7 @@ p::after{
 
 
 
-<h4>其他課程清單</h4>
+<h4 class="wp-block-heading">其他課程清單</h4>
 
 
 
@@ -20182,7 +21586,7 @@ p::after{
 		
 		<dc:creator><![CDATA[gee.hsu]]></dc:creator>
 		<pubDate>Thu, 23 Dec 2021 08:36:00 +0000</pubDate>
-				<category><![CDATA[The Net Ninja]]></category>
+				<category><![CDATA[Net Ninja]]></category>
 		<guid isPermaLink="false">/wordpress_blog/?p=448</guid>
 
 					<description><![CDATA[學習資源：The Net Ninja – Youtube #1  [&#8230;]]]></description>
@@ -20191,7 +21595,7 @@ p::after{
 
 
 
-<h2>#1 – Intro &amp; Setup</h2>
+<h2 class="wp-block-heading">#1 – Intro &amp; Setup</h2>
 
 
 
@@ -20199,7 +21603,7 @@ p::after{
 
 
 
-<h3>What is Bootstrap (5)？</h3>
+<h3 class="wp-block-heading">What is Bootstrap (5)？</h3>
 
 
 
@@ -20207,7 +21611,7 @@ p::after{
 
 
 
-<h4>使用工具</h4>
+<h4 class="wp-block-heading">使用工具</h4>
 
 
 
@@ -20215,7 +21619,7 @@ p::after{
 
 
 
-<h4>使用 BS5 的方法有</h4>
+<h4 class="wp-block-heading">使用 BS5 的方法有</h4>
 
 
 
@@ -20223,7 +21627,7 @@ p::after{
 
 
 
-<h4>Access the course files on GitHub</h4>
+<h4 class="wp-block-heading">Access the course files on GitHub</h4>
 
 
 
@@ -20255,7 +21659,7 @@ p::after{
 
 
 
-<h2>#2 – Bootstrap 5 New Features</h2>
+<h2 class="wp-block-heading">#2 – Bootstrap 5 New Features</h2>
 
 
 
@@ -20267,11 +21671,11 @@ p::after{
 
 
 
-<h4>Customize → Color</h4>
+<h4 class="wp-block-heading">Customize → Color</h4>
 
 
 
-<h2>#3 – Colours &amp; Typography</h2>
+<h2 class="wp-block-heading">#3 – Colours &amp; Typography</h2>
 
 
 
@@ -20341,7 +21745,7 @@ p::after{
 
 
 
-<h2>#4 – Buttons &amp; Button Groups</h2>
+<h2 class="wp-block-heading">#4 – Buttons &amp; Button Groups</h2>
 
 
 
@@ -20400,7 +21804,7 @@ p::after{
 
 
 
-<h2>#5 – Utility Classes</h2>
+<h2 class="wp-block-heading">#5 – Utility Classes</h2>
 
 
 
@@ -20452,7 +21856,7 @@ p::after{
 
 
 
-<h2>#6 – Containers</h2>
+<h2 class="wp-block-heading">#6 – Containers</h2>
 
 
 
@@ -20498,7 +21902,7 @@ p::after{
 
 
 
-<h2 class="has-background" style="background-color:#ff6663">#7 – Grid Layout (part 1)</h2>
+<h2 class="has-background wp-block-heading" style="background-color:#ff6663">#7 – Grid Layout (part 1)</h2>
 
 
 
@@ -20591,7 +21995,7 @@ p::after{
 
 
 
-<h4>justifying columns</h4>
+<h4 class="wp-block-heading">justifying columns</h4>
 
 
 
@@ -20599,7 +22003,7 @@ p::after{
 
 
 
-<h2>#8 – Grid Layout (part 2)</h2>
+<h2 class="wp-block-heading">#8 – Grid Layout (part 2)</h2>
 
 
 
@@ -20661,7 +22065,7 @@ p::after{
 
 
 
-<h2>#9 – Navbars</h2>
+<h2 class="wp-block-heading">#9 – Navbars</h2>
 
 
 
@@ -20760,7 +22164,7 @@ p::after{
 
 
 
-<h2>#10 – Cards</h2>
+<h2 class="wp-block-heading">#10 – Cards</h2>
 
 
 
@@ -20907,7 +22311,7 @@ p::after{
 
 
 
-<h2>#11 – Accordions</h2>
+<h2 class="wp-block-heading">#11 – Accordions</h2>
 
 
 
@@ -21155,7 +22559,7 @@ p::after{
 
 
 
-<h2>#12 – List Groups</h2>
+<h2 class="wp-block-heading">#12 – List Groups</h2>
 
 
 
@@ -21435,7 +22839,7 @@ p::after{
 
 
 
-<h2>#13 – Bootstrap Icons</h2>
+<h2 class="wp-block-heading">#13 – Bootstrap Icons</h2>
 
 
 
@@ -21756,7 +23160,7 @@ p::after{
 
 
 
-<h2>#14 – Working with Forms</h2>
+<h2 class="wp-block-heading">#14 – Working with Forms</h2>
 
 
 
@@ -22128,7 +23532,7 @@ p::after{
 
 
 
-<h2>#15 – Tooltips</h2>
+<h2 class="wp-block-heading">#15 – Tooltips</h2>
 
 
 
@@ -22523,7 +23927,7 @@ p::after{
 
 
 
-<h2>#16 – Modals</h2>
+<h2 class="wp-block-heading">#16 – Modals</h2>
 
 
 
@@ -22957,7 +24361,7 @@ p::after{
 
 
 
-<h2>#17 – Offcanvas</h2>
+<h2 class="wp-block-heading">#17 – Offcanvas</h2>
 
 
 
@@ -23408,7 +24812,7 @@ p::after{
 
 
 
-<h2>#18 – Dropdowns</h2>
+<h2 class="wp-block-heading">#18 – Dropdowns</h2>
 
 
 
@@ -23870,7 +25274,7 @@ p::after{
 
 
 
-<h2 class="has-background" style="background-color:#ff6663">#19 – Customizing Bootstrap</h2>
+<h2 class="has-background wp-block-heading" style="background-color:#ff6663">#19 – Customizing Bootstrap</h2>
 
 
 
@@ -24394,7 +25798,7 @@ $utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg");
 
 
 
-<h2>#20 – Tabs</h2>
+<h2 class="wp-block-heading">#20 – Tabs</h2>
 
 
 
@@ -24463,7 +25867,7 @@ $utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg");
 		
 		<dc:creator><![CDATA[gee.hsu]]></dc:creator>
 		<pubDate>Tue, 14 Dec 2021 07:11:00 +0000</pubDate>
-				<category><![CDATA[The Net Ninja]]></category>
+				<category><![CDATA[Net Ninja]]></category>
 		<guid isPermaLink="false">/wordpress_blog/?p=726</guid>
 
 					<description><![CDATA[(Complete guide, from Novice to  [&#8230;]]]></description>
@@ -24480,7 +25884,7 @@ $utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg");
 
 
 
-<h4>您會學到</h4>
+<h4 class="wp-block-heading">您會學到</h4>
 
 
 
@@ -24488,15 +25892,15 @@ $utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg");
 
 
 
-<h2>Introduction</h2>
+<h2 class="wp-block-heading">Introduction</h2>
 
 
 
-<h3>Why You Should Take This Course</h3>
+<h3 class="wp-block-heading">Why You Should Take This Course</h3>
 
 
 
-<h4>JavaScript is a Universal Language</h4>
+<h4 class="wp-block-heading">JavaScript is a Universal Language</h4>
 
 
 
@@ -24504,7 +25908,7 @@ $utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg");
 
 
 
-<h4>JavaScript on the Front-end</h4>
+<h4 class="wp-block-heading">JavaScript on the Front-end</h4>
 
 
 
@@ -24512,11 +25916,11 @@ $utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg");
 
 
 
-<h3>Why JavaScript is Amazing</h3>
+<h3 class="wp-block-heading">Why JavaScript is Amazing</h3>
 
 
 
-<h4>Why JavaScript is Amazing…</h4>
+<h4 class="wp-block-heading">Why JavaScript is Amazing…</h4>
 
 
 
@@ -24528,7 +25932,7 @@ $utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg");
 
 
 
-<h4>The Possibilities are Endless…</h4>
+<h4 class="wp-block-heading">The Possibilities are Endless…</h4>
 
 
 
@@ -24536,15 +25940,15 @@ $utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg");
 
 
 
-<h4>Setting up Your Environment</h4>
+<h4 class="wp-block-heading">Setting up Your Environment</h4>
 
 
 
-<h5>使用 Text Editor：<a rel="noreferrer noopener" href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></h5>
+<h5 class="wp-block-heading">使用 Text Editor：<a rel="noreferrer noopener" href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></h5>
 
 
 
-<h5>Extensions</h5>
+<h5 class="wp-block-heading">Extensions</h5>
 
 
 
@@ -24552,21 +25956,21 @@ $utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg");
 
 
 
-<h4>What is a Server？</h4>
+<h4 class="wp-block-heading">What is a Server？</h4>
 
 
 
-<figure class="wp-block-gallery has-nested-images columns-1 is-cropped">
-<figure class="wp-block-image size-large"><img loading="lazy" width="1536" height="638" data-id="728"  src="/wordpress_blog/wp-content/uploads/2022/04/server-1.png" alt="" class="wp-image-728"/><figcaption>圖片觀念:伺服器-1</figcaption></figure>
+<figure class="wp-block-gallery has-nested-images columns-1 is-cropped wp-block-gallery-17 is-layout-flex wp-block-gallery-is-layout-flex">
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1536" height="638" data-id="728" src="/wordpress_blog/wp-content/uploads/2022/04/server-1.png" alt="" class="wp-image-728"/><figcaption>圖片觀念:伺服器-1</figcaption></figure>
 
 
 
-<figure class="wp-block-image size-large"><img loading="lazy" width="1536" height="540" data-id="729"  src="/wordpress_blog/wp-content/uploads/2022/04/server-2.png" alt="" class="wp-image-729"/><figcaption>圖片觀念:伺服器-2</figcaption></figure>
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1536" height="540" data-id="729" src="/wordpress_blog/wp-content/uploads/2022/04/server-2.png" alt="" class="wp-image-729"/><figcaption>圖片觀念:伺服器-2</figcaption></figure>
 </figure>
 
 
 
-<h5>建立環境</h5>
+<h5 class="wp-block-heading">建立環境</h5>
 
 
 
@@ -24574,7 +25978,7 @@ $utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg");
 
 
 
-<h5>使用 Live Server</h5>
+<h5 class="wp-block-heading">使用 Live Server</h5>
 
 
 
@@ -24582,7 +25986,7 @@ $utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg");
 
 
 
-<h3>Course Files</h3>
+<h3 class="wp-block-heading">Course Files</h3>
 
 
 
@@ -24590,11 +25994,11 @@ $utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg");
 
 
 
-<h2>JavaScript Basics</h2>
+<h2 class="wp-block-heading">JavaScript Basics</h2>
 
 
 
-<h3>Adding JavaScript to a Web Page</h3>
+<h3 class="wp-block-heading">Adding JavaScript to a Web Page</h3>
 
 
 
@@ -24631,7 +26035,7 @@ alert('hello, world');</code></pre>
 
 
 
-<h3>The Browser Console</h3>
+<h3 class="wp-block-heading">The Browser Console</h3>
 
 
 
@@ -24654,11 +26058,11 @@ console.log(2);</code></pre>
 
 
 
-<h3>Variables, Constants &amp; Comments</h3>
+<h3 class="wp-block-heading">Variables, Constants &amp; Comments</h3>
 
 
 
-<h4>Variables</h4>
+<h4 class="wp-block-heading">Variables</h4>
 
 
 
@@ -24691,7 +26095,7 @@ console.log(score);</code></pre>
 
 
 
-<h5>限制</h5>
+<h5 class="wp-block-heading">限制</h5>
 
 
 
@@ -24699,11 +26103,11 @@ console.log(score);</code></pre>
 
 
 
-<h5>資源：<a href="https://www.w3schools.com/js/js_reserved.asp" target="_blank" rel="noreferrer noopener">Link to a list of reserved keywords in JavaScript</a></h5>
+<h5 class="wp-block-heading">資源：<a href="https://www.w3schools.com/js/js_reserved.asp" target="_blank" rel="noreferrer noopener">Link to a list of reserved keywords in JavaScript</a></h5>
 
 
 
-<h5>註解 – comments</h5>
+<h5 class="wp-block-heading">註解 – comments</h5>
 
 
 
@@ -24721,7 +26125,7 @@ console.log(points); */</code></pre>
 
 
 
-<h5>補充說明</h5>
+<h5 class="wp-block-heading">補充說明</h5>
 
 
 
@@ -24729,11 +26133,11 @@ console.log(points); */</code></pre>
 
 
 
-<h3>Data Types at a Glance</h3>
+<h3 class="wp-block-heading">Data Types at a Glance</h3>
 
 
 
-<h4>JavaScript Data Types</h4>
+<h4 class="wp-block-heading">JavaScript Data Types</h4>
 
 
 
@@ -24741,7 +26145,7 @@ console.log(points); */</code></pre>
 
 
 
-<h3>Strings</h3>
+<h3 class="wp-block-heading">Strings</h3>
 
 
 
@@ -24776,7 +26180,7 @@ console.log(index);</code></pre>
 
 
 
-<h3>Common String Methods</h3>
+<h3 class="wp-block-heading">Common String Methods</h3>
 
 
 
@@ -24799,7 +26203,7 @@ console.log(result);</code></pre>
 
 
 
-<h3>Numbers</h3>
+<h3 class="wp-block-heading">Numbers</h3>
 
 
 
@@ -24845,7 +26249,7 @@ console.log(result);</code></pre>
 
 
 
-<h3>Template Strings (樣板字串)</h3>
+<h3 class="wp-block-heading">Template Strings (樣板字串)</h3>
 
 
 
@@ -24874,7 +26278,7 @@ console.log(html);</code></pre>
 
 
 
-<h3>Arrays(陣列)</h3>
+<h3 class="wp-block-heading">Arrays(陣列)</h3>
 
 
 
@@ -24904,7 +26308,7 @@ console.log(result);</code></pre>
 
 
 
-<h3>Null &amp; Undefined</h3>
+<h3 class="wp-block-heading">Null &amp; Undefined</h3>
 
 
 
@@ -24916,7 +26320,7 @@ console.log(age, age + 3, `the age is ${age}`);</code></pre>
 
 
 
-<h3>Booleans &amp; Comparisons</h3>
+<h3 class="wp-block-heading">Booleans &amp; Comparisons</h3>
 
 
 
@@ -24954,7 +26358,7 @@ console.log(name &gt; 'Crystal');</code></pre>
 
 
 
-<h3>Loose vs Strict Comparison</h3>
+<h3 class="wp-block-heading">Loose vs Strict Comparison</h3>
 
 
 
@@ -24979,7 +26383,7 @@ console.log(age !== '25');
 
 
 
-<h3>Type Conversion(類型轉換)</h3>
+<h3 class="wp-block-heading">Type Conversion(類型轉換)</h3>
 
 
 
@@ -25000,15 +26404,15 @@ console.log(result, typeof result);</code></pre>
 
 
 
-<h2>Control Flow Basics</h2>
+<h2 class="wp-block-heading">Control Flow Basics</h2>
 
 
 
-<h3>What is Control Flow?</h3>
+<h3 class="wp-block-heading">What is Control Flow?</h3>
 
 
 
-<h4>Control Flow(控制流程)</h4>
+<h4 class="wp-block-heading">Control Flow(控制流程)</h4>
 
 
 
@@ -25016,7 +26420,7 @@ console.log(result, typeof result);</code></pre>
 
 
 
-<figure class="wp-block-image size-full"><img loading="lazy" width="1433" height="566" src="/wordpress_blog/wp-content/uploads/2022/04/control-flow.png" alt="" class="wp-image-731"/><figcaption>control flow</figcaption></figure>
+<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="1433" height="566" src="/wordpress_blog/wp-content/uploads/2022/04/control-flow.png" alt="" class="wp-image-731"/><figcaption>control flow</figcaption></figure>
 
 
 
@@ -25030,7 +26434,7 @@ console.log(result, typeof result);</code></pre>
 
 
 
-<h3>For Loops</h3>
+<h3 class="wp-block-heading">For Loops</h3>
 
 
 
@@ -25053,7 +26457,7 @@ for(let i = 0; i &lt; names.length; i++){
 
 
 
-<h3>While Loops(While迴圈)</h3>
+<h3 class="wp-block-heading">While Loops(While迴圈)</h3>
 
 
 
@@ -25075,7 +26479,7 @@ while(i &lt; names.length){
 
 
 
-<h3>Do While Loops</h3>
+<h3 class="wp-block-heading">Do While Loops</h3>
 
 
 
@@ -25091,7 +26495,7 @@ do{
 
 
 
-<h3>If Statements</h3>
+<h3 class="wp-block-heading">If Statements</h3>
 
 
 
@@ -25117,7 +26521,7 @@ if(password.length &gt;= 8){
 
 
 
-<h3>Else &amp; Else If</h3>
+<h3 class="wp-block-heading">Else &amp; Else If</h3>
 
 
 
@@ -25136,7 +26540,7 @@ if(password.length &gt;= 12){
 
 
 
-<h3>Logical Operators(邏輯運算子)</h3>
+<h3 class="wp-block-heading">Logical Operators(邏輯運算子)</h3>
 
 
 
@@ -25155,7 +26559,7 @@ if(password.length &gt;= 12 &amp;&amp; password.includes('@')){
 
 
 
-<h3>Logical NOT</h3>
+<h3 class="wp-block-heading">Logical NOT</h3>
 
 
 
@@ -25173,7 +26577,7 @@ console.log(!false);</code></pre>
 
 
 
-<h3>Break &amp; Continue</h3>
+<h3 class="wp-block-heading">Break &amp; Continue</h3>
 
 
 
@@ -25199,7 +26603,7 @@ for(let i = 0; i &lt; scores.length; i++){
 
 
 
-<h3>Switch Statements</h3>
+<h3 class="wp-block-heading">Switch Statements</h3>
 
 
 
@@ -25244,7 +26648,7 @@ switch(grade){
 
 
 
-<h3>Variables &amp; Block Scope</h3>
+<h3 class="wp-block-heading">Variables &amp; Block Scope</h3>
 
 
 
@@ -25269,15 +26673,15 @@ console.log('outside code block: ', age, name);
 
 
 
-<h2>Functions &amp; Methods</h2>
+<h2 class="wp-block-heading">Functions &amp; Methods</h2>
 
 
 
-<h3>What are Functions?</h3>
+<h3 class="wp-block-heading">What are Functions?</h3>
 
 
 
-<h4>JavaScript Data Types</h4>
+<h4 class="wp-block-heading">JavaScript Data Types</h4>
 
 
 
@@ -25285,21 +26689,21 @@ console.log('outside code block: ', age, name);
 
 
 
-<h4>Functions</h4>
+<h4 class="wp-block-heading">Functions</h4>
 
 
 
-<figure class="wp-block-gallery has-nested-images columns-1 is-cropped">
-<figure class="wp-block-image size-large"><img loading="lazy" width="598" height="648" data-id="733"  src="/wordpress_blog/wp-content/uploads/2022/04/function-1.png" alt="" class="wp-image-733"/><figcaption>function &#8211; 1</figcaption></figure>
+<figure class="wp-block-gallery has-nested-images columns-1 is-cropped wp-block-gallery-19 is-layout-flex wp-block-gallery-is-layout-flex">
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="598" height="648" data-id="733" src="/wordpress_blog/wp-content/uploads/2022/04/function-1.png" alt="" class="wp-image-733"/><figcaption>function &#8211; 1</figcaption></figure>
 
 
 
-<figure class="wp-block-image size-large"><img loading="lazy" width="1536" height="304" data-id="734"  src="/wordpress_blog/wp-content/uploads/2022/04/function-2.png" alt="" class="wp-image-734"/><figcaption>function &#8211; 2</figcaption></figure>
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1536" height="304" data-id="734" src="/wordpress_blog/wp-content/uploads/2022/04/function-2.png" alt="" class="wp-image-734"/><figcaption>function &#8211; 2</figcaption></figure>
 </figure>
 
 
 
-<h3>Function Declarations &amp; Expressions(函式宣告 &amp; 表達式)</h3>
+<h3 class="wp-block-heading">Function Declarations &amp; Expressions(函式宣告 &amp; 表達式)</h3>
 
 
 
@@ -25325,7 +26729,7 @@ function greet(){
 
 
 
-<h5>JavaScript裡面的hoisting、是一種提升的觀念。</h5>
+<h5 class="wp-block-heading">JavaScript裡面的hoisting、是一種提升的觀念。</h5>
 
 
 
@@ -25337,7 +26741,7 @@ function greet(){
 
 
 
-<h3>Arguments &amp; Parameters(引數 &amp; 參數)</h3>
+<h3 class="wp-block-heading">Arguments &amp; Parameters(引數 &amp; 參數)</h3>
 
 
 
@@ -25353,7 +26757,7 @@ speak('shaun'); // 引數</code></pre>
 
 
 
-<h5>引用 stack overflow 的解答：</h5>
+<h5 class="wp-block-heading">引用 stack overflow 的解答：</h5>
 
 
 
@@ -25361,7 +26765,7 @@ speak('shaun'); // 引數</code></pre>
 
 
 
-<h3>Returning Values(回傳值)</h3>
+<h3 class="wp-block-heading">Returning Values(回傳值)</h3>
 
 
 
@@ -25402,7 +26806,7 @@ console.log(area);</code></pre>
 
 
 
-<h3>Arrow Functions(箭頭函式)</h3>
+<h3 class="wp-block-heading">Arrow Functions(箭頭函式)</h3>
 
 
 
@@ -25468,7 +26872,7 @@ console.log(bill(&#91;10, 15, 30], 0.2));
 
 
 
-<h3>Functions vs Methods</h3>
+<h3 class="wp-block-heading">Functions vs Methods</h3>
 
 
 
@@ -25490,7 +26894,7 @@ console.log(resultTwo);
 
 
 
-<h3>Foreach Method &amp; Callbacks</h3>
+<h3 class="wp-block-heading">Foreach Method &amp; Callbacks</h3>
 
 
 
@@ -25587,7 +26991,7 @@ people.forEach(logPerson);</code></pre>
 
 
 
-<h3>Callback Functions in Action</h3>
+<h3 class="wp-block-heading">Callback Functions in Action</h3>
 
 
 
@@ -25654,15 +27058,15 @@ ul.innerHTML = html;</code></pre>
 
 
 
-<h2>Object Literals(物件實字)</h2>
+<h2 class="wp-block-heading">Object Literals(物件實字)</h2>
 
 
 
-<h3>Objects at a Glance</h3>
+<h3 class="wp-block-heading">Objects at a Glance</h3>
 
 
 
-<h4>Objects(物件)</h4>
+<h4 class="wp-block-heading">Objects(物件)</h4>
 
 
 
@@ -25670,7 +27074,7 @@ ul.innerHTML = html;</code></pre>
 
 
 
-<h5>a phone</h5>
+<h5 class="wp-block-heading">a phone</h5>
 
 
 
@@ -25682,7 +27086,7 @@ ul.innerHTML = html;</code></pre>
 
 
 
-<h5>user object</h5>
+<h5 class="wp-block-heading">user object</h5>
 
 
 
@@ -25690,7 +27094,7 @@ ul.innerHTML = html;</code></pre>
 
 
 
-<h5>blog object</h5>
+<h5 class="wp-block-heading">blog object</h5>
 
 
 
@@ -25698,7 +27102,7 @@ ul.innerHTML = html;</code></pre>
 
 
 
-<h3>Creating an Object Literal</h3>
+<h3 class="wp-block-heading">Creating an Object Literal</h3>
 
 
 
@@ -25734,7 +27138,7 @@ console.log(typeof user);
 
 
 
-<h3>Adding Methods</h3>
+<h3 class="wp-block-heading">Adding Methods</h3>
 
 
 
@@ -25767,7 +27171,7 @@ name.toUpperCase();
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">‘this’ Keyword</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">‘this’ Keyword</h3>
 
 
 
@@ -26055,7 +27459,7 @@ console.log(this);
 
 
 
-<h3>Objects in Arrays</h3>
+<h3 class="wp-block-heading">Objects in Arrays</h3>
 
 
 
@@ -26124,7 +27528,7 @@ user.logBlogs();
 
 
 
-<h3>Math Object</h3>
+<h3 class="wp-block-heading">Math Object</h3>
 
 
 
@@ -26167,11 +27571,11 @@ console.log(Math.round(random * 100));</code></pre>
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Primitive vs Reference Types</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Primitive vs Reference Types</h3>
 
 
 
-<h4>Primitive &amp; Reference Types</h4>
+<h4 class="wp-block-heading">Primitive &amp; Reference Types</h4>
 
 
 
@@ -26191,11 +27595,11 @@ console.log(Math.round(random * 100));</code></pre>
 
 
 
-<h4>Stack &amp; Heap</h4>
+<h4 class="wp-block-heading">Stack &amp; Heap</h4>
 
 
 
-<figure class="wp-block-image size-full"><img loading="lazy" width="1536" height="783" src="/wordpress_blog/wp-content/uploads/2022/04/stackheap.jpg" alt="" class="wp-image-736"/><figcaption>Stack &amp; Heap</figcaption></figure>
+<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="1536" height="783" src="/wordpress_blog/wp-content/uploads/2022/04/stackheap.jpg" alt="" class="wp-image-736"/><figcaption>Stack &amp; Heap</figcaption></figure>
 
 
 
@@ -26245,15 +27649,15 @@ console.log(userOne, userTwo);</code></pre>
 
 
 
-<h2>The Document Object Model</h2>
+<h2 class="wp-block-heading">The Document Object Model</h2>
 
 
 
-<h3>Interacting with the Browser</h3>
+<h3 class="wp-block-heading">Interacting with the Browser</h3>
 
 
 
-<h4>Interacting with a Browser</h4>
+<h4 class="wp-block-heading">Interacting with a Browser</h4>
 
 
 
@@ -26261,7 +27665,7 @@ console.log(userOne, userTwo);</code></pre>
 
 
 
-<h4>Interacting with a Browser</h4>
+<h4 class="wp-block-heading">Interacting with a Browser</h4>
 
 
 
@@ -26273,11 +27677,11 @@ console.log(userOne, userTwo);</code></pre>
 
 
 
-<h3>The DOM Explained</h3>
+<h3 class="wp-block-heading">The DOM Explained</h3>
 
 
 
-<h4>Document Object Model – 文件物件模型 (DOM)</h4>
+<h4 class="wp-block-heading">Document Object Model – 文件物件模型 (DOM)</h4>
 
 
 
@@ -26296,15 +27700,15 @@ console.log(userOne, userTwo);</code></pre>
 
 
 
-<h4>Document Object Model – 文件物件模型 (DOM)</h4>
+<h4 class="wp-block-heading">Document Object Model – 文件物件模型 (DOM)</h4>
 
 
 
-<figure class="wp-block-image size-full"><img loading="lazy" width="1196" height="707" src="/wordpress_blog/wp-content/uploads/2022/04/DOM.jpg" alt="" class="wp-image-738"/><figcaption>DOM</figcaption></figure>
+<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="1196" height="707" src="/wordpress_blog/wp-content/uploads/2022/04/DOM.jpg" alt="" class="wp-image-738"/><figcaption>DOM</figcaption></figure>
 
 
 
-<h3>The Query Selector</h3>
+<h3 class="wp-block-heading">The Query Selector</h3>
 
 
 
@@ -26497,7 +27901,7 @@ console.log(errors);</code></pre>
 
 
 
-<h3>Other Ways to Query the DOM</h3>
+<h3 class="wp-block-heading">Other Ways to Query the DOM</h3>
 
 
 
@@ -26570,7 +27974,7 @@ console.log(paras&#91;1]);</code></pre>
 
 
 
-<h3>Adding &amp; Changing Page Content</h3>
+<h3 class="wp-block-heading">Adding &amp; Changing Page Content</h3>
 
 
 
@@ -26806,7 +28210,7 @@ yoshi</code></pre>
 
 
 
-<h3>Getting &amp; Setting Attributes</h3>
+<h3 class="wp-block-heading">Getting &amp; Setting Attributes</h3>
 
 
 
@@ -26849,7 +28253,7 @@ mssg.setAttribute('style', 'color: green;');</code></pre>
 
 
 
-<h3>Changing CSS Styles</h3>
+<h3 class="wp-block-heading">Changing CSS Styles</h3>
 
 
 
@@ -26896,7 +28300,7 @@ title.style.margin = '';</code></pre>
 
 
 
-<h3>Adding &amp; Removing Classes</h3>
+<h3 class="wp-block-heading">Adding &amp; Removing Classes</h3>
 
 
 
@@ -27021,15 +28425,15 @@ title.classList.toggle('test');</code></pre>
 
 
 
-<h3>Parents, Children &amp; Siblings</h3>
+<h3 class="wp-block-heading">Parents, Children &amp; Siblings</h3>
 
 
 
-<figure class="wp-block-image size-full"><img loading="lazy" width="1480" height="825" src="/wordpress_blog/wp-content/uploads/2022/04/siblings.jpg" alt="" class="wp-image-739"/><figcaption>Siblings</figcaption></figure>
+<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="1480" height="825" src="/wordpress_blog/wp-content/uploads/2022/04/siblings.jpg" alt="" class="wp-image-739"/><figcaption>Siblings</figcaption></figure>
 
 
 
-<figure class="wp-block-image size-full"><img loading="lazy" width="1439" height="870" src="/wordpress_blog/wp-content/uploads/2022/04/parents-children.jpg" alt="" class="wp-image-740"/><figcaption>Parents &amp; Children</figcaption></figure>
+<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="1439" height="870" src="/wordpress_blog/wp-content/uploads/2022/04/parents-children.jpg" alt="" class="wp-image-740"/><figcaption>Parents &amp; Children</figcaption></figure>
 
 
 
@@ -27178,7 +28582,7 @@ console.log(title.nextElementSibling.parentElement.children);</code></pre>
 
 
 
-<h3>Event Basics (click events)</h3>
+<h3 class="wp-block-heading">Event Basics (click events)</h3>
 
 
 
@@ -27257,7 +28661,7 @@ items.forEach(item =&gt; {
 
 
 
-<h3>Creating &amp; Removing Elements</h3>
+<h3 class="wp-block-heading">Creating &amp; Removing Elements</h3>
 
 
 
@@ -27404,7 +28808,7 @@ items.forEach(item =&gt; {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Event Bubbling (and delegation)</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Event Bubbling (and delegation)</h3>
 
 
 
@@ -27506,7 +28910,7 @@ ul.addEventListener('click', e =&gt; {
 
 
 
-<h3>More DOM Events</h3>
+<h3 class="wp-block-heading">More DOM Events</h3>
 
 
 
@@ -27582,7 +28986,7 @@ document.addEventListener('wheel', e =&gt; {
 
 
 
-<h3 class="has-background" style="background-color:#ff6663">Building a Popup</h3>
+<h3 class="has-background wp-block-heading" style="background-color:#ff6663">Building a Popup</h3>
 
 
 
@@ -27695,16 +29099,16 @@ popup.addEventListener('click', () =&gt; {
 		
 		<dc:creator><![CDATA[gee.hsu]]></dc:creator>
 		<pubDate>Mon, 06 Sep 2021 03:46:00 +0000</pubDate>
-				<category><![CDATA[The Net Ninja]]></category>
+				<category><![CDATA[Net Ninja]]></category>
 		<guid isPermaLink="false">/wordpress_blog/?p=694</guid>
 
 					<description><![CDATA[#1 – Introduction PRE-FLEXBOX (預 [&#8230;]]]></description>
 										<content:encoded><![CDATA[
-<h2>#1 – Introduction</h2>
+<h2 class="wp-block-heading">#1 – Introduction</h2>
 
 
 
-<h3>PRE-FLEXBOX (預先-彈性盒子)</h3>
+<h3 class="wp-block-heading">PRE-FLEXBOX (預先-彈性盒子)</h3>
 
 
 
@@ -27712,7 +29116,7 @@ popup.addEventListener('click', () =&gt; {
 
 
 
-<h2>ENTER FLEXBOX (進入彈性盒子)</h2>
+<h2 class="wp-block-heading">ENTER FLEXBOX (進入彈性盒子)</h2>
 
 
 
@@ -27720,7 +29124,7 @@ popup.addEventListener('click', () =&gt; {
 
 
 
-<h2>FLEXBOX BASICS</h2>
+<h2 class="wp-block-heading">FLEXBOX BASICS</h2>
 
 
 
@@ -27728,11 +29132,11 @@ popup.addEventListener('click', () =&gt; {
 
 
 
-<figure class="wp-block-image size-full"><img loading="lazy" width="481" height="391" src="/wordpress_blog/wp-content/uploads/2022/04/flexbox.png" alt="" class="wp-image-696"/><figcaption>flexbox</figcaption></figure>
+<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="481" height="391" src="/wordpress_blog/wp-content/uploads/2022/04/flexbox.png" alt="" class="wp-image-696"/><figcaption>flexbox</figcaption></figure>
 
 
 
-<h2>BENEFITS</h2>
+<h2 class="wp-block-heading">BENEFITS</h2>
 
 
 
@@ -27744,11 +29148,11 @@ popup.addEventListener('click', () =&gt; {
 
 
 
-<h2>#2 – Flex Containers</h2>
+<h2 class="wp-block-heading">#2 – Flex Containers</h2>
 
 
 
-<h3>FLEXBOX BASICS</h3>
+<h3 class="wp-block-heading">FLEXBOX BASICS</h3>
 
 
 
@@ -27756,11 +29160,11 @@ popup.addEventListener('click', () =&gt; {
 
 
 
-<figure class="wp-block-image size-full"><img loading="lazy" width="481" height="391" src="/wordpress_blog/wp-content/uploads/2022/04/flexbox-1.png" alt="" class="wp-image-697"/><figcaption>flexbox</figcaption></figure>
+<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="481" height="391" src="/wordpress_blog/wp-content/uploads/2022/04/flexbox-1.png" alt="" class="wp-image-697"/><figcaption>flexbox</figcaption></figure>
 
 
 
-<h5>程式碼範例</h5>
+<h5 class="wp-block-heading">程式碼範例</h5>
 
 
 
@@ -27879,7 +29283,7 @@ body{
 
 
 
-<h2>#3 – Flex Grow</h2>
+<h2 class="wp-block-heading">#3 – Flex Grow</h2>
 
 
 
@@ -27887,7 +29291,7 @@ body{
 
 
 
-<h5>程式碼範例</h5>
+<h5 class="wp-block-heading">程式碼範例</h5>
 
 
 
@@ -28137,7 +29541,7 @@ body{
 
 
 
-<h2>#4 – Flex Shrink</h2>
+<h2 class="wp-block-heading">#4 – Flex Shrink</h2>
 
 
 
@@ -28145,7 +29549,7 @@ body{
 
 
 
-<h5>程式碼範例</h5>
+<h5 class="wp-block-heading">程式碼範例</h5>
 
 
 
@@ -28311,11 +29715,11 @@ body{
 
 
 
-<h5>flex-shrink 很少會使用到，了解知道就可以了。</h5>
+<h5 class="wp-block-heading">flex-shrink 很少會使用到，了解知道就可以了。</h5>
 
 
 
-<h2>#5 – Flex Wrap</h2>
+<h2 class="wp-block-heading">#5 – Flex Wrap</h2>
 
 
 
@@ -28327,7 +29731,7 @@ body{
 
 
 
-<h5>程式碼範例</h5>
+<h5 class="wp-block-heading">程式碼範例</h5>
 
 
 
@@ -28485,7 +29889,7 @@ body{
 
 
 
-<h2>#6 – Flex Basis</h2>
+<h2 class="wp-block-heading">#6 – Flex Basis</h2>
 
 
 
@@ -28493,7 +29897,7 @@ body{
 
 
 
-<h5>程式碼範例</h5>
+<h5 class="wp-block-heading">程式碼範例</h5>
 
 
 
@@ -28705,7 +30109,7 @@ body{
 
 
 
-<h5>MDN Web Docs –&nbsp;<a rel="noreferrer noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex" target="_blank">flex</a></h5>
+<h5 class="wp-block-heading">MDN Web Docs –&nbsp;<a rel="noreferrer noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex" target="_blank">flex</a></h5>
 
 
 
@@ -28713,15 +30117,15 @@ body{
 
 
 
-<h2>#7 – Creating a Menu with Flexbox</h2>
+<h2 class="wp-block-heading">#7 – Creating a Menu with Flexbox</h2>
 
 
 
-<h3>Example 1 – Flex Menu</h3>
+<h3 class="wp-block-heading">Example 1 – Flex Menu</h3>
 
 
 
-<h5>程式碼範例</h5>
+<h5 class="wp-block-heading">程式碼範例</h5>
 
 
 
@@ -28871,15 +30275,15 @@ nav a:hover{
 
 
 
-<h2>#8 – Creating Nested Menu’s with Flexbox</h2>
+<h2 class="wp-block-heading">#8 – Creating Nested Menu’s with Flexbox</h2>
 
 
 
-<h3>Example 2 – Nested Flex Menu</h3>
+<h3 class="wp-block-heading">Example 2 – Nested Flex Menu</h3>
 
 
 
-<h5>程式碼範例</h5>
+<h5 class="wp-block-heading">程式碼範例</h5>
 
 
 
@@ -29020,11 +30424,11 @@ nav ul.social li{
 
 
 
-<h2>#9 – Axis</h2>
+<h2 class="wp-block-heading">#9 – Axis</h2>
 
 
 
-<h5>程式碼範例</h5>
+<h5 class="wp-block-heading">程式碼範例</h5>
 
 
 
@@ -29101,15 +30505,15 @@ body{
 
 
 
-<figure class="wp-block-image size-full"><img loading="lazy" width="808" height="910" src="/wordpress_blog/wp-content/uploads/2022/04/flex-flow.jpg" alt="" class="wp-image-699"/><figcaption>flex-flow</figcaption></figure>
+<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="808" height="910" src="/wordpress_blog/wp-content/uploads/2022/04/flex-flow.jpg" alt="" class="wp-image-699"/><figcaption>flex-flow</figcaption></figure>
 
 
 
-<h2>#10 – Align Items on the Cross Axis</h2>
+<h2 class="wp-block-heading">#10 – Align Items on the Cross Axis</h2>
 
 
 
-<h5>程式碼範例</h5>
+<h5 class="wp-block-heading">程式碼範例</h5>
 
 
 
@@ -29235,7 +30639,7 @@ body{
 
 
 
-<h4>main axis(主軸) &amp; cross axis(交錯軸)</h4>
+<h4 class="wp-block-heading">main axis(主軸) &amp; cross axis(交錯軸)</h4>
 
 
 
@@ -29243,15 +30647,15 @@ body{
 
 
 
-<h2>#11 – Grid vs Stacked Layout Example</h2>
+<h2 class="wp-block-heading">#11 – Grid vs Stacked Layout Example</h2>
 
 
 
-<h3>Example 3 – Grid &amp; Stack Layout</h3>
+<h3 class="wp-block-heading">Example 3 – Grid &amp; Stack Layout</h3>
 
 
 
-<h5>程式碼範例</h5>
+<h5 class="wp-block-heading">程式碼範例</h5>
 
 
 
@@ -29463,11 +30867,11 @@ nav ul.social li{
 
 
 
-<h2>#12 – Element Order</h2>
+<h2 class="wp-block-heading">#12 – Element Order</h2>
 
 
 
-<h5>程式碼範例</h5>
+<h5 class="wp-block-heading">程式碼範例</h5>
 
 
 
@@ -29573,350 +30977,6 @@ body{
 .two{order: 2;}
 .three{order: 1;}
 .four{order: 0;}</code></pre>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>CSS Variables Tutorial</title>
-		<link>/wordpress_blog/css-variables-tutorial/</link>
-		
-		<dc:creator><![CDATA[gee.hsu]]></dc:creator>
-		<pubDate>Sun, 12 Apr 2020 02:30:00 +0000</pubDate>
-				<category><![CDATA[The Net Ninja]]></category>
-		<guid isPermaLink="false">/wordpress_blog/?p=598</guid>
-
-					<description><![CDATA[#1 – What are CSS Variables? 什麼是 [&#8230;]]]></description>
-										<content:encoded><![CDATA[
-<h2>#1 – What are CSS Variables?</h2>
-
-
-
-<p>什麼是 CSS 變量?</p>
-
-
-
-<h4>Why CSS Variables?</h4>
-
-
-
-<pre class="wp-block-code"><code>.intro-text{
-  color: #ee44f9;
-  margin: 20px;
-  font-size: 2em;
-  font-weight: bold;
-}
-.outro-text{
-  color: #ee44f9;
-  margin: 10px;
-  font-size: 1em;
-}
-.blurb{
-  color: #ee44f9;
-  margin: 0;
-}</code></pre>
-
-
-
-<p>“primary-colour” variable</p>
-
-
-
-<h2>Custom Properties</h2>
-
-
-
-<ul><li>CSS Variables are also known as “Custom Properties”</li><li>They look like regular CSS properties, with a — before them<ul><li>–my-property: value;</li></ul></li><li>CSS Variables == Custom Properties</li></ul>
-
-
-
-<p>範例程式碼</p>
-
-
-
-<pre class="wp-block-code"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-    &lt;head&gt;
-        &lt;meta charset="utf-8"&gt;
-        &lt;title&gt;CSS Variables&lt;/title&gt;
-        &lt;link rel="stylesheet" href="styles.css"&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;header&gt;
-            &lt;nav class="main-nav"&gt;
-                &lt;ul&gt;
-                    &lt;li&gt;&lt;a href=""&gt;Home&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=""&gt;About&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=""&gt;Contact&lt;/a&gt;&lt;/li&gt;
-                &lt;/ul&gt;
-            &lt;/nav&gt;
-        &lt;/header&gt;
-        &lt;main&gt;
-            &lt;div class="banner"&gt;
-                &lt;h1&gt;Mario &amp; Luigi&lt;/h1&gt;
-                &lt;p&gt;Plumbing Extravaganzas&lt;/p&gt;
-            &lt;/div&gt;
-            &lt;div class="content"&gt;
-                &lt;div class="spot"&gt;
-                    &lt;h2&gt;We Love All Kinds of Pipes...&lt;/h2&gt;
-                    &lt;p&gt;Lorizzle ipsum crunk brizzle amet, gizzle cool elizzle. Nullam dawg velizzle, aliquet volutpizzle, suscipizzle dizzle, gravida yippiyo, arcu. Pellentesque eget check it out. Fo shizzle my nizzle erizzle. Boom shackalack bling bling dolor turpizzle go to hizzle tempor. Yippiyo mah nizzle nibh et turpizzle. Yo izzle da bomb. Daahng dawg eleifend rhoncus daahng dawg. In hac habitasse fo shizzle dictumst. Yo mamma dapibizzle.&lt;/p&gt;
-                    &lt;a href="#"&gt;More info...&lt;/a&gt;
-                &lt;/div&gt;
-                &lt;div class="spot"&gt;
-                    &lt;h2&gt;In Fact, we're Piping-Mad&lt;/h2&gt;
-                    &lt;p&gt;I saw beyonces tizzles and my pizzle went crizzle tellus urna, pretium own yo', mattis away, eleifend we gonna chung, nunc. Daahng dawg suscipizzle. Integer sempizzle velizzle sizzle mah nizzle.&lt;/p&gt;
-                    &lt;a href="#"&gt;More info...&lt;/a&gt;
-                &lt;/div&gt;
-                &lt;div class="spot"&gt;
-                    &lt;h2&gt;Any Shape and Any Size...&lt;/h2&gt;
-                    &lt;p&gt;Phasellizzle interdum volutpizzle shizzlin dizzle. Ut semper adipiscing shiz. Ma nizzle sure est. Nulla sapizzle ass, ultrices nec, accumsizzle pizzle, rizzle quis, pede. Dizzle nec shit. Etizzle rutrizzle ornare ante. Maurizzle its fo rizzle. Vestibulum izzle pede varius nibh commodo commodo.&lt;/p&gt;
-                    &lt;a href="#"&gt;More info...&lt;/a&gt;
-                &lt;/div&gt;
-                &lt;div class="spot"&gt;
-                    &lt;h2&gt;No Job is Too Big&lt;/h2&gt;
-                    &lt;p&gt;Mofo yo mamma dolor sizzle boofron, consectetizzle adipiscing elit. Hizzle izzle shizzle my nizzle crocodizzle. Quisque mi crackalackin, sodalizzle izzle, crackalackin a, eleifend nizzle, boofron.&lt;/p&gt;
-                    &lt;a href="#"&gt;More info...&lt;/a&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/main&gt;
-        &lt;footer&gt;
-            &lt;div class="blurbs"&gt;
-                &lt;div class="blurb"&gt;
-                    &lt;h3&gt;Blurb title&lt;/h3&gt;
-                    &lt;p&gt;Etizzle a magna dang mammasay mammasa mamma oo sa accumsizzle.&lt;/p&gt;
-                &lt;/div&gt;
-                &lt;div class="blurb"&gt;
-                    &lt;h3&gt;Blurb title&lt;/h3&gt;
-                    &lt;p&gt;Funky fresh in stuff. Yo mamma mauris dolor, shit vitae, its fo rizzle.&lt;/p&gt;
-                &lt;/div&gt;
-                &lt;div class="blurb"&gt;
-                    &lt;h3&gt;Blurb title&lt;/h3&gt;
-                    &lt;p&gt;Vestibulizzle ante ipsizzle sure dope orci luctus et ultrices posuere shizzle.&lt;/p&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/footer&gt;
-    &lt;/body&gt;
-&lt;/html&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>/* --- Variables --- */
-
-/* --- Main styles --- */
-
-h1, h2, h3{
-    font-weight: normal;
-}
-
-body{
-    margin: 0;
-    font-family: Verdana;
-}
-
-nav.main-nav ul{
-    width: 600px;
-    margin: 30px auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
-}
-
-nav a{
-    color: #daa33e;
-}
-
-.banner{
-    background: #3e84da;
-    color: #fff;
-    font-size: 1.6em;
-    text-align: center;
-    padding: 100px 0 160px;
-}
-
-.content{
-    width: 760px;
-    margin: 0 auto;
-    position: relative;
-    top: -100px;
-    padding: 40px 60px;
-    background: #fff
-}
-
-.spot{
-    margin: 0 40px 80px;
-    text-align: center;
-}
-
-.spot h2{
-    color: #3e84da;
-}
-
-.spot p{
-    color: #333;
-    line-height: 2em;
-    font-size: 0.9em
-}
-
-.content a{
-    color: #daa33e;
-    font-size: 1.2em;
-}
-
-footer{
-    background: #ddd;
-    padding: 60px 0
-}
-
-footer .blurbs{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    max-width: 760px;
-    margin: 0 auto;
-    grid-gap: 40px;
-}
-
-footer .blurb{
-    text-align: center;
-    color: #333;
-    line-height: 2em;
-    font-size: 0.9em
-}</code></pre>
-
-
-
-<p><a rel="noreferrer noopener" href="https://github.com/iamshaunjp/CSS-Variables" target="_blank">Course files</a><br><a rel="noreferrer noopener" href="https://caniuse.com/#home" target="_blank">Can I use?</a></p>
-
-
-
-<h2>#2 – Declaring Variables</h2>
-
-
-
-<p>範例程式碼</p>
-
-
-
-<pre class="wp-block-code"><code>/* --- Variables --- */
-
-:root{
-  --theme-color: #3e84da;
-  --link-color: #daa33e;
-}
-
-/* --- Main styles --- */
-nav a{
-  color: var(--link-color);
-}
-
-.banner{
-  background: var(--theme-color);
-  color: #fff;
-  font-size: 1.6em;
-  text-align: center;
-  padding: 100px 0 160px;
-}
-
-.spot h2{
-  color: var(--theme-color);
-}
-
-.content a{
-  color: var(--link-color);
-  font-size: 1.2em;
-}</code></pre>
-
-
-
-<h2>#3 – CSS Variable Benefits</h2>
-
-
-
-<p>範例程式碼</p>
-
-
-
-<pre class="wp-block-code"><code>/* --- Variables --- */
-:root{
-  --theme-color: #3e84da;
-  --link-color: #daa33e;
-  --layout: 1fr 1fr 1fr;
-
-nav{
-  --link-color: #000;
-}
-
-@media screen and (max-width: 760px){
-  :root{
-    --layout: 1fr;
-  }
-}
-
-/* --- Main styles --- */
-
-footer .blurbs{
-  display: grid;
-  grid-template-columns: var(--layout);
-  max-width: 760px;
-  margin: 0 auto;
-  gap: 40px;
-}</code></pre>
-
-
-
-<h2>#4 – CSS Variables &amp; JavaScript</h2>
-
-
-
-<p>swatch 色板</p>
-
-
-
-<p>範例程式碼</p>
-
-
-
-<pre class="wp-block-code"><code>&lt;header&gt;
-  &lt;div class="swatches"&gt;
-    &lt;span style="background: #222;"&gt;&lt;/span&gt;
-    &lt;span style="background: #f76262;"&gt;&lt;/span&gt;
-    &lt;span style="background: #3e84da;"&gt;&lt;/span&gt;
-    &lt;span style="background: #ebb332;"&gt;&lt;/span&gt;
-  &lt;/div&gt;
-&lt;/header&gt;
-
-&lt;script type="text/javascript" src="js/swatches.js"&gt;&lt;/script&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>.swatches span{
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  margin: 10px;
-  cursor: pointer;
-}</code></pre>
-
-
-
-<pre class="wp-block-code"><code>var swatches = document.querySelectorAll('.swatches span');
-var root = document.querySelector(':root');
-
-swatches.forEach((swatch)=&gt;{
-  swatch.addEventListener('click',(e)=&gt;{
-    root.style.setProperty('--theme-color',e.target.style.background);
-  });
-});</code></pre>
-
-
-
-<p>Codepen 範例程式碼<br>–&nbsp;<a rel="noreferrer noopener" href="https://codepen.io/GeeHsu/full/VwvLMOw" target="_blank">CSS Variables (CSS 變數)</a></p>
-
-
-
-<p>Codepen 練習<br>–&nbsp;<a href="https://codepen.io/GeeHsu/full/oNjXpeG" target="_blank" rel="noreferrer noopener">Swatches (色板切換)</a></p>
 ]]></content:encoded>
 					
 		

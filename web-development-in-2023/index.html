@@ -1,0 +1,3614 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<title>Web Development In 2023 – A Practical Guide &#8211; wordpress_blog</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="alternate" type="application/rss+xml" title="訂閱《wordpress_blog》&raquo; 資訊提供" href="/wordpress_blog/feed/">
+<link rel="alternate" type="application/rss+xml" title="訂閱《wordpress_blog》&raquo; 留言的資訊提供" href="/wordpress_blog/comments/feed/">
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.3.1"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"🏳️‍⚧️","🏳️​⚧️")?!1:!n(e,"🇺🇳","🇺​🇳")&&!n(e,"🏴󠁧󠁢󠁥󠁮󠁧󠁿","🏴​󠁧​󠁢​󠁥​󠁮​󠁧​󠁿");case"emoji":return!n(e,"🫱🏻‍🫲🏿","🫱🏻​🫲🏿")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+</script>
+<style>img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="/wordpress_blog/wp-includes/css/dist/block-library/style.min.css?ver=6.3.1" media="all">
+<style id="classic-theme-styles-inline-css">/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}</style>
+<style id="global-styles-inline-css">body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--palette-1-color-0: #212121;--wp--preset--color--palette-1-color-1: #757575;--wp--preset--color--palette-1-color-2: #212121;--wp--preset--color--palette-1-color-3: #212121;--wp--preset--color--palette-1-color-4: #212121;--wp--preset--color--palette-1-color-5: #f5f5f5;--wp--preset--color--palette-1-color-6: #ffffff;--wp--preset--color--palette-1-color-7: #ffffff;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 14px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 18px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--normal: 16px;--wp--preset--font-size--larger: 24px;--wp--preset--font-size--extra-large: 32px;--wp--preset--font-size--huge: 48px;--wp--preset--font-size--gigantic: 64px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}</style>
+<link rel="stylesheet" id="botiga-style-css" href="/wordpress_blog/wp-content/themes/botiga/style.css?ver=1.1.2" media="all">
+<link rel="stylesheet" id="botiga-style-min-css" href="/wordpress_blog/wp-content/themes/botiga/assets/css/styles.min.css?ver=1.1.2" media="all">
+<link rel="stylesheet" id="botiga-custom-styles-css" href="/wordpress_blog/wp-content/uploads/botiga/custom-styles.css?ver=1648804469" media="all">
+<link rel="https://api.w.org/" href="/wordpress_blog/wp-json/">
+<link rel="alternate" type="application/json" href="/wordpress_blog/wp-json/wp/v2/posts/768">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/wordpress_blog/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 6.3.1">
+<link rel="canonical" href="/wordpress_blog/web-development-in-2023/">
+<link rel="shortlink" href="/wordpress_blog/?p=768">
+<link rel="alternate" type="application/json+oembed" href="/wordpress_blog/wp-json/oembed/1.0/embed?url=%2Fweb-development-in-2023%2F">
+<link rel="alternate" type="text/xml+oembed" href="/wordpress_blog/wp-json/oembed/1.0/embed?url=%2Fweb-development-in-2023%2F&#038;format=xml">
+<link rel="icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png" sizes="32x32">
+<link rel="icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png" sizes="192x192">
+<link rel="apple-touch-icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png">
+<meta name="msapplication-TileImage" content="/wp-content/uploads/2022/03/logo.png">
+	
+</head>
+
+<body class="post-template-default single single-post postid-768 single-format-standard wp-custom-logo wp-embed-responsive header-header_layout_1 blog-single-layout1">
+
+
+<div id="page" class="site">
+
+	<a class="skip-link screen-reader-text" href="#primary">Skip to content</a>
+
+	
+			<div class="top-bar visibility-desktop-only">
+				<div class="container-fluid">
+					<div class="top-bar-inner">
+						<div class="row valign">
+
+															<div class="col header-elements delimiter-none">
+									<div class="header-item top-bar-social"><div class="social-profile">
+<a target="_blank" href="https://www.facebook.com/watergrass0402/"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></i></a><a target="_blank" href="https://github.com/GeeHsu"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></i></a>
+</div></div>								</div>
+																						<div class="col header-elements delimiter-none">
+													
+			<nav class="header-item top-bar-secondary-navigation secondary-navigation">
+				<div class="menu-topbar-container"><ul id="secondary" class="menu">
+<li id="menu-item-143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143"><a href="/wordpress_blog/setup/">網站架設</a></li>
+<li id="menu-item-144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a href="/wordpress_blog/source/">資料來源</a></li>
+<li id="menu-item-262" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-262"><a href="/wordpress_blog/resource/">學習資源</a></li>
+</ul></div>			</nav>
+											</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			
+							
+				<header id="masthead" class="site-header header_layout_1">
+					<div class="container-fluid">
+						<div class="site-header-inner">
+							<div class="row valign">
+								<div class="col-md-5">
+										
+			<nav id="site-navigation" class="main-navigation">
+				<div class="menu-navbar-container"><ul id="primary-menu" class="menu">
+<li id="menu-item-109" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="/wordpress_blog/about/">關於</a></li>
+<li id="menu-item-110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-110">
+<a href="/wordpress_blog/learn/">學習</a><span tabindex="0" class="dropdown-symbol"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512.011 512.011"><path d="M505.755 123.592c-8.341-8.341-21.824-8.341-30.165 0L256.005 343.176 36.421 123.592c-8.341-8.341-21.824-8.341-30.165 0s-8.341 21.824 0 30.165l234.667 234.667a21.275 21.275 0 0015.083 6.251 21.275 21.275 0 0015.083-6.251l234.667-234.667c8.34-8.341 8.34-21.824-.001-30.165z"></path></svg></i></span>
+<ul class="sub-menu">
+	<li id="menu-item-140" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-140"><a href="/wordpress_blog/category/hexschool/">六角學院</a></li>
+	<li id="menu-item-141" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-141"><a href="/wordpress_blog/category/ninja/">Net Ninja</a></li>
+	<li id="menu-item-483" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-483"><a href="/wordpress_blog/category/youtube/">Youtube</a></li>
+</ul>
+</li>
+<li id="menu-item-111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="/wordpress_blog/linestore/">LINE STORE</a></li>
+</ul></div>			</nav><!-- #site-navigation -->
+											</div>
+								<div class="col-md-2">
+												<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog" decoding="async" fetchpriority="high"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+											</div>
+								<div class="col-md-5 header-elements">
+																	</div>							
+							</div>
+						</div>
+					</div>
+								<div class="header-search-form">
+			<form role="search" method="get" class="search-form" action="/">
+	<label class="screen-reader-text" for="search-form-1">Search&hellip;</label>
+	<input type="search" id="search-form-1" class="search-field" value="" name="s" placeholder="Search &hellip;">
+	<button type="submit" class="search-submit" value="Search"><i class="ws-svg-icon"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 100 14.25 7.125 7.125 0 000-14.25zM2.25 10.875a8.625 8.625 0 1117.25 0 8.625 8.625 0 01-17.25 0z"></path><path fill-rule="evenodd" d="M15.913 15.914a.75.75 0 011.06 0l4.557 4.556a.75.75 0 01-1.06 1.06l-4.557-4.556a.75.75 0 010-1.06z"></path></svg></i></button>
+</form>
+			</div>
+			
+									</header>
+
+										<div class="search-overlay"></div>
+			
+			<div class="botiga-offcanvas-menu">
+				<div class="mobile-header-item">
+					<div class="row">
+						<div class="col">
+										<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog" decoding="async"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+									</div>
+						<div class="col align-right">
+							<a class="mobile-menu-close" href="#"><i class="ws-svg-icon icon-cancel"><svg width="16" height="16" fill="none" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.219.781L.78 2.22 9.562 11l-8.78 8.781 1.437 1.438L11 12.437l8.781 8.782 1.438-1.438L12.437 11l8.782-8.781L19.78.78 11 9.562 2.219.783z"></path></svg></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="mobile-header-item">
+						
+			<nav id="site-navigation" class="main-navigation">
+				<div class="menu-navbar-container"><ul id="primary-menu" class="menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="/wordpress_blog/about/">關於</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-110">
+<a href="/wordpress_blog/learn/">學習</a><span tabindex="0" class="dropdown-symbol"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512.011 512.011"><path d="M505.755 123.592c-8.341-8.341-21.824-8.341-30.165 0L256.005 343.176 36.421 123.592c-8.341-8.341-21.824-8.341-30.165 0s-8.341 21.824 0 30.165l234.667 234.667a21.275 21.275 0 0015.083 6.251 21.275 21.275 0 0015.083-6.251l234.667-234.667c8.34-8.341 8.34-21.824-.001-30.165z"></path></svg></i></span>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-140"><a href="/wordpress_blog/category/hexschool/">六角學院</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-141"><a href="/wordpress_blog/category/ninja/">Net Ninja</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-483"><a href="/wordpress_blog/category/youtube/">Youtube</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="/wordpress_blog/linestore/">LINE STORE</a></li>
+</ul></div>			</nav><!-- #site-navigation -->
+							</div>
+				<div class="mobile-header-item">
+									<a target="&quot;_blank&quot;" class="button header-item" href="https://www.facebook.com/watergrass0402/">聯絡我</a>
+							</div>			
+			</div>
+			
+							<header id="masthead-mobile" class="site-header mobile-header">
+					<div class="container-fluid">
+						<div class="row valign flex-nowrap">
+							<div class="col-sm-6 col-md-4 col-grow-mobile">
+											<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog" decoding="async"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+										</div>
+							<div class="col-auto col-sm-6 col-md-8 col-grow-mobile header-elements valign align-right">
+																	
+															<a href="#" class="menu-toggle">
+				<i class="ws-svg-icon"><svg width="16" height="11" viewbox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="16" height="1"></rect><rect y="5" width="16" height="1"></rect><rect y="10" width="16" height="1"></rect></svg></i>
+			</a>
+																		</div>						
+						</div>
+					</div>
+								<div class="header-search-form">
+			<form role="search" method="get" class="search-form" action="/">
+	<label class="screen-reader-text" for="search-form-2">Search&hellip;</label>
+	<input type="search" id="search-form-2" class="search-field" value="" name="s" placeholder="Search &hellip;">
+	<button type="submit" class="search-submit" value="Search"><i class="ws-svg-icon"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 100 14.25 7.125 7.125 0 000-14.25zM2.25 10.875a8.625 8.625 0 1117.25 0 8.625 8.625 0 01-17.25 0z"></path><path fill-rule="evenodd" d="M15.913 15.914a.75.75 0 011.06 0l4.557 4.556a.75.75 0 01-1.06 1.06l-4.557-4.556a.75.75 0 010-1.06z"></path></svg></i></button>
+</form>
+			</div>
+			
+									</header>
+						<div class="search-overlay"></div>
+			<div class="header-image"><img src="/wordpress_blog/wp-content/uploads/2022/03/seashore.jpg" width="1920" height="500" alt=""></div>
+<div class="container content-wrapper"><div class="row main-row">			
+	<main id="primary" class="site-main no-sidebar">
+
+		
+
+<article id="post-768" class="post-768 post type-post status-publish format-standard hentry category-youtube">
+	
+		
+	<header class="entry-header">
+		
+		
+		<h1 class="entry-title">Web Development In 2023 – A Practical Guide</h1>			<div class="entry-meta entry-meta-below delimiter-none">
+<span class="posted-on"><a href="/wordpress_blog/web-development-in-2023/" rel="bookmark"><time class="entry-date published" datetime="2023-10-04T12:05:55+08:00">2023 年 10 月 4 日</time><time class="updated" datetime="2023-10-04T12:28:48+08:00">2023 年 10 月 4 日</time></a></span><span class="byline"> <span class="author vcard"><a class="url fn n" href="/wordpress_blog/author/gee-hsu/">gee.hsu</a></span></span>
+</div>			</header><!-- .entry-header -->
+
+	
+	<div class="entry-content">
+		
+<p>This is an in-depth guide that goes over every major technology that has to do with web development, from languages to frameworks to utilities.</p>
+
+
+
+<p>INTRODUCTION</p>
+
+
+
+<h2 class="wp-block-heading">ABOUT THIS GUIDE…</h2>
+
+
+
+<ul>
+<li>It’s a step-by-step guide that covers major tools used in web development. It is NOT a “latest trend” video</li>
+
+
+
+<li>Choose your own path based on what you want to do and learn. You don’t have to learn anywhere near everything in this video</li>
+
+
+
+<li>I try to be as objective as possible, but I wiil mention little suggestions and underline the things that I use personally</li>
+</ul>
+
+
+
+<p>GETTING STARTED / GOALS</p>
+
+
+
+<h2 class="wp-block-heading">YOUR OVERALL GOAL</h2>
+
+
+
+<ul>
+<li>CAREER ADVANCEMENT</li>
+
+
+
+<li>FREELANCING / AGENCY</li>
+
+
+
+<li>CREATE PRODUCTS</li>
+
+
+
+<li>HOBBY / FUTURE PROOFING</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">TYPES OF WEB DEVELOPERS</h2>
+
+
+
+<p>I will include specific colors for technologies that are relevant for different type of developers</p>
+
+
+
+<ul>
+<li>Blue: Front-End Developer</li>
+
+
+
+<li>Red: Back-End Developer</li>
+
+
+
+<li>Green: Full-Stack Developer</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading has-text-color" style="color:#0693e3">FRONT-END DEVELOPER</h3>
+
+
+
+<p>Focus on the user interface (UI) of a website/web app.</p>
+
+
+
+<ul>
+<li>HTML &amp; CSS</li>
+
+
+
+<li>JavaScript</li>
+
+
+
+<li>Front-End Framework</li>
+
+
+
+<li>CSS Frameworks</li>
+
+
+
+<li>Module Bundlers &amp; Build Tools</li>
+
+
+
+<li>HTTP &amp; Consuming APIs</li>
+
+
+
+<li>Unit Testing</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading has-text-color" style="color:#cf2e2e">BACK-END DEVELOPER</h3>
+
+
+
+<p>Focus on the server-side programming &amp; databases</p>
+
+
+
+<ul>
+<li>Programming Language (PHP, Python, C#, JS/Node.js, etc)</li>
+
+
+
+<li>Back-End Framework</li>
+
+
+
+<li>Databases</li>
+
+
+
+<li>HTTP &amp; Creating APIs (REST)</li>
+
+
+
+<li>ORM (Object Relational Mapper)</li>
+
+
+
+<li>Dploying To Servers</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading has-text-color" style="color:#00d084">FULL-STACK DEVELOPER</h3>
+
+
+
+<p>Focus on the front and back-end. Usually a little more emphasis on one end</p>
+
+
+
+<ul>
+<li>HTML, CSS, JS</li>
+
+
+
+<li>Front-End Fromework</li>
+
+
+
+<li>Back-End Language &amp; Framework</li>
+
+
+
+<li>Fully Understand HTTP &amp; APIs</li>
+
+
+
+<li>Databases &amp; ORM</li>
+
+
+
+<li>Testing</li>
+
+
+
+<li>Deployment</li>
+</ul>
+
+
+
+<p>GETTING STARTED / THE ESSENTIALS</p>
+
+
+
+<h2 class="wp-block-heading">BASIC TOOLS</h2>
+
+
+
+<ul>
+<li>Computer &amp; OS: At least 8GB of RAM</li>
+
+
+
+<li>Operating System: MacOS , Windows, Linux</li>
+
+
+
+<li>Text Editor / IDE: VS Code, Sublime Text, VM, Atom</li>
+
+
+
+<li>Web Browser: Chrome, Firefox, Edge, Safari, Brave</li>
+
+
+
+<li>Terminal: Default, iTerm, Git Bash, Powershell, WSL, Hyper</li>
+</ul>
+
+
+
+<p>FRONT-END BASICS / THE BUILDING BLOCKS</p>
+
+
+
+<h2 class="wp-block-heading">HTML &amp; CSS</h2>
+
+
+
+<ul>
+<li>HTML Layout, Tags &amp; Attributes<br>&lt;!DOCTYPE html /&gt;, &lt;head&gt;, &lt;body&gt;, &lt;p&gt;, &lt;img&gt;</li>
+
+
+
+<li>Semantic Elements<br>&lt;header&gt;, &lt;footer&gt;, &lt;section&gt;, &lt;aside&gt;, etc</li>
+
+
+
+<li>IDs vs Classes<br>IDs for unique elements, classes for styling</li>
+
+
+
+<li>CSS Fundamentals<br>fonts, colors, box model, positioning, etc</li>
+
+
+
+<li>CSS Specificity<br>The specific weight of selectors</li>
+
+
+
+<li>Flexbox &amp; CSS Grid<br>Create one and two-dimensional layouts</li>
+
+
+
+<li>Responsive Layouts<br>Mediea queries, fluid layouts, etc</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">JAVASCRIPT</h2>
+
+
+
+<ul>
+<li>Learn The Bascis<br>Functions, loops, conditionals, scope</li>
+
+
+
+<li>The Browser Environment<br>The window object, execution context</li>
+
+
+
+<li>Doucment Object Model<br>Manipulate DOM content, styling, events</li>
+
+
+
+<li>ES6+ Features<br>Arrow functions, destructuring, template literals</li>
+
+
+
+<li>Arraw Methods<br>forEach, filter, map, reduce, find</li>
+
+
+
+<li>Asynchronous JS &amp; HTTP<br>Callbacks, promises, fetch, JSON</li>
+</ul>
+
+
+
+<p>FRONT-END BASICS / LAYOUT &amp; STYLING TOOLS</p>
+
+
+
+<h3 class="wp-block-heading">SASS</h3>
+
+
+
+<p>Sass is a CSS Pre-Processor. You use a Sass complier to compile .sass or .scss files into regular CSS. It is everything that CSS is plus some additional features such as…</p>
+
+
+
+<ul>
+<li>Simple variable syntax</li>
+
+
+
+<li>Nesting</li>
+
+
+
+<li>Functions &amp; Mixins</li>
+
+
+
+<li>Importing &amp; Partials</li>
+
+
+
+<li>Extend / Inheritance</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">POST CSS</h3>
+
+
+
+<p>Post CSS is a tool that transforms your CSS using JS plugins. For instance, if you wanted to minify or auto add prefixes, you could use specific plugins to do that.</p>
+
+
+
+<p>You can essentially do everything that Sass does with Post CSS, just in a different way.</p>
+
+
+
+<p>Post CSS has more of a learning curver and is usually used with tooling such as Webpack, which we will talk about soon.</p>
+
+
+
+<h2 class="wp-block-heading">CSS FRAMEWORKS</h2>
+
+
+
+<ul>
+<li>It is important that you learn CSS before jumping into any of these frameworks</li>
+
+
+
+<li>Saves your time when it comes to creating and styling layouts</li>
+
+
+
+<li>You may need to learn Sass in order to really customize your layouts</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">TAILWIND</h3>
+
+
+
+<ul>
+<li>Utility-based framework</li>
+
+
+
+<li>Very popular</li>
+
+
+
+<li>Easily integrate into projects</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">BOOTSTRAP</h3>
+
+
+
+<ul>
+<li>Component-based framework</li>
+
+
+
+<li>Very popular</li>
+
+
+
+<li>Includes dynamic JS components</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">MATERIALIZE</h3>
+
+
+
+<ul>
+<li>Component-based framework</li>
+
+
+
+<li>Uses Google Material Design</li>
+
+
+
+<li>Includes dynamic JS components</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">BULMA</h3>
+
+
+
+<ul>
+<li>Modular (Import what you need)</li>
+
+
+
+<li>Very lightweight &amp; fast</li>
+
+
+
+<li>Easy to use</li>
+</ul>
+
+
+
+<p>FRONT-END BASICS / UI DESIGN</p>
+
+
+
+<h2 class="wp-block-heading">UI DESIGN PRINCIPLES</h2>
+
+
+
+<ul>
+<li>COLOR &amp; CONTRAST<br>Text should always be 100% readable</li>
+
+
+
+<li>WHITESPACE<br>The spacing between elements. Correct margin, padding, width, height, etc</li>
+
+
+
+<li>SCALE<br>Sizing relative to other elements on the page and in that area</li>
+
+
+
+<li>VISUAL HIERARCHY<br>Arrange your elements in the order of importance</li>
+
+
+
+<li>TYPOGRAPHY<br>Text typefaces, font styles and sizing</li>
+
+
+
+<li>ALIGNMENT &amp; FLOW<br>Create visual flow. Direct the user’s eyes where they need to go</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">DESIGN SOFTWARE</h2>
+
+
+
+<ul>
+<li>You may or may not need to use design software. It depends on what you are doing</li>
+
+
+
+<li>It is good to at least know the very basics and create a basic layout</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">ADOBE XD</h3>
+
+
+
+<ul>
+<li>Free for “starter” version</li>
+
+
+
+<li>Easy if familiar with other Adobe products</li>
+
+
+
+<li>Collaboration &amp; organization</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">FIMGA</h3>
+
+
+
+<ul>
+<li>Web based</li>
+
+
+
+<li>Very popular</li>
+
+
+
+<li>Collaborate, prototype, wireframe</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">SKETCH</h3>
+
+
+
+<ul>
+<li>Mac only</li>
+
+
+
+<li>Hig performance</li>
+
+
+
+<li>Component-based structure</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">INVISION</h3>
+
+
+
+<ul>
+<li>Great for prototyping</li>
+
+
+
+<li>Sharing &amp; collaboration</li>
+
+
+
+<li>Easy to use</li>
+</ul>
+
+
+
+<p>FRONT-END BASICS / TOOLS &amp; RESOURCES</p>
+
+
+
+<h2 class="wp-block-heading">TOOLS &amp; UTILITIES</h2>
+
+
+
+<ul>
+<li>Git &amp; GitHub<br>Version control is a necessity for all developers</li>
+
+
+
+<li>Browser Developer Tools<br>Elements, console, application, network tabs</li>
+
+
+
+<li>NPM (Node Package Manager)<br>Install 3rd party packages, run scripts</li>
+
+
+
+<li>Markdown<br>Lightweight markup language, used in many areas</li>
+
+
+
+<li>Editor / IDE Extensions<br>Emmet, Prettier, ES Lint, framework-specific extensions</li>
+
+
+
+<li>HTTP Clients<br>Axios, Postman, CURL</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">GITHUB COPILOT</h2>
+
+
+
+<p>Text editor extension for ai-powered code completion and suggestions. It was developed by GitHub and OpenAI.</p>
+
+
+
+<p>Can be installed in VS Code, Neovim and JetBrains environments.</p>
+
+
+
+<p>Can improve developer productivity, but it is important not to rely on it too much.</p>
+
+
+
+<h2 class="wp-block-heading">CHATGPT</h2>
+
+
+
+<p>AI chatbot created by OpenAI. and is the most advanced form of available to the public.</p>
+
+
+
+<p>It is a large language model that has been trained on a massive amount of text data, allowing it to generate human-like responses.</p>
+
+
+
+<p>It is a useful for generating code, help with debugging, suggestions, converting code, generating sample data.</p>
+
+
+
+<p>FRONT-END BASICS / DEPLOYMENT</p>
+
+
+
+<h2 class="wp-block-heading">FRONT-END DEPLOYMENT</h2>
+
+
+
+<ul>
+<li>DOMAIN NAMES<br>Register domain names, configure DNS, etc</li>
+
+
+
+<li>HOSTING<br>Push your code to a platform and connect your domain</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">NETLIFY</h3>
+
+
+
+<ul>
+<li>Great free tier &amp; reasonable pricing</li>
+
+
+
+<li>Push directly from GitHub</li>
+
+
+
+<li>Form submission &amp; other admins</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">VERCEL</h3>
+
+
+
+<ul>
+<li>Great free tier &amp; reasonable pricing</li>
+
+
+
+<li>Push directly from GitHub</li>
+
+
+
+<li>Embraces serverless &amp; edge computing</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">GITHUB PAGES</h3>
+
+
+
+<ul>
+<li>Free hosting for small, static projects</li>
+
+
+
+<li>Easy to use with your existing GitHub</li>
+
+
+
+<li>Simple deployments</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">CPANEL</h3>
+
+
+
+<ul>
+<li>All-in one service (hosting, email, databases)</li>
+
+
+
+<li>Cheap pricing</li>
+
+
+
+<li>Hostinger, inMotion Hosting, Bluehost</li>
+</ul>
+
+
+
+<p>FRONT-END BASICS / FOUNDATIONAL FRONT-END DEVELOPER</p>
+
+
+
+<h2 class="wp-block-heading">FOUNDATIONAL FE DEVELOPER</h2>
+
+
+
+<ul>
+<li>Set up a basic dev environment<br>Text editor, plugins, dev server</li>
+
+
+
+<li>Create layouts with HTML / CSS<br>Create decent looking websites</li>
+
+
+
+<li>Understand simple design principles<br>Contrast, whitespace, alignment</li>
+
+
+
+<li>JavaScript &amp; The DOM<br>Dynamic pages, events, manipulate the DOM</li>
+
+
+
+<li>Fetch &amp; HTTP<br>Methods, status codes</li>
+
+
+
+<li>Version Control<br>Use Git and GitHub</li>
+
+
+
+<li>Basic Deployment<br>Deploy a basic website &amp; connect a domain</li>
+</ul>
+
+
+
+<p>It is optional, but good to know Sass and a CSS framework</p>
+
+
+
+<p>THE NEXT STEP</p>
+
+
+
+<h2 class="wp-block-heading">YOUR NEXT MOVE</h2>
+
+
+
+<h3 class="wp-block-heading">Web Design</h3>
+
+
+
+<ul>
+<li>Leaning toward building basic websites</li>
+
+
+
+<li>Creating ana agency</li>
+
+
+
+<li>Really into the design aspect</li>
+
+
+
+<li>No-code tools</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Server-Side / Back-End</h3>
+
+
+
+<ul>
+<li>Node.js, PHP, Python, C#, etc</li>
+
+
+
+<li>Building APIs &amp; microservices</li>
+
+
+
+<li>Learn databases</li>
+
+
+
+<li>Not really interested in UI</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Front-End Framework &amp; Tooling</h3>
+
+
+
+<ul>
+<li>Learn modern JS workflows &amp; tooling</li>
+
+
+
+<li>Choose a FE framework like React or Vue</li>
+
+
+
+<li>SPA &amp; SSR</li>
+
+
+
+<li>Option for both FE &amp; full stack</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Sharpen Your JavaScript</h3>
+
+
+
+<ul>
+<li>Work on algorithms &amp; data structures</li>
+
+
+
+<li>Become a better problem solver</li>
+
+
+
+<li>Hobby coding</li>
+</ul>
+
+
+
+<p>FRONT-END INTERMEDIATE / TOOLING</p>
+
+
+
+<h2 class="wp-block-heading">BUILD TOOLS</h2>
+
+
+
+<ul>
+<li>These tools allow you to create an advanced front-end file structure and dev environment</li>
+
+
+
+<li>Some are module bundlers and some utilize ES Modules in the browser</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">WEBPACK</h3>
+
+
+
+<ul>
+<li>Been around for a long time</li>
+
+
+
+<li>Very full-featured</li>
+
+
+
+<li>Bundle non-JS assets</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">PARCEL</h3>
+
+
+
+<ul>
+<li>Requires no configuration</li>
+
+
+
+<li>Supports more out of the box</li>
+
+
+
+<li>CSS, SCSS, Babel, TypeScript and more</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">VITE</h3>
+
+
+
+<ul>
+<li>Leverages ES Modules in browser</li>
+
+
+
+<li>Extremely fast</li>
+
+
+
+<li>Uses Rollup to bundle for production</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">SNOWPACK</h3>
+
+
+
+<ul>
+<li>Also uses ES Modules</li>
+
+
+
+<li>Also uses Rollup for bundling</li>
+
+
+
+<li>Build once, cache forever</li>
+</ul>
+
+
+
+<p>FRONT-END INTERMEDIATE / FRAMEWORKS</p>
+
+
+
+<h2 class="wp-block-heading">FRONT-END FRAMEWORKS</h2>
+
+
+
+<ul>
+<li>Help you easily create modern websites and interfaces in an organized way</li>
+
+
+
+<li>Interfaces are created using UI components. Think of everything on the page as a component</li>
+
+
+
+<li>Component and global state can be managed within the framework tools or a 3rd-party state manager</li>
+
+
+
+<li>Created for SPAs, but now can be used with meta frameworks for server rendered content</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">REACT</h3>
+
+
+
+<ul>
+<li>Backed by Facebook/Meta</li>
+
+
+
+<li>Intermediate learning curve</li>
+
+
+
+<li>Extremely popular</li>
+
+
+
+<li>Great community / resources</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">ECOSYSTEM</h4>
+
+
+
+<ul>
+<li>Create React App</li>
+
+
+
+<li>React Router</li>
+
+
+
+<li>JSX</li>
+
+
+
+<li>Context API</li>
+
+
+
+<li>Hooks</li>
+
+
+
+<li>Redux, XState</li>
+
+
+
+<li>NextJS, Remix</li>
+
+
+
+<li>Gatsby</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">VUE</h3>
+
+
+
+<ul>
+<li>Not backed by large company</li>
+
+
+
+<li>Easy learning curve</li>
+
+
+
+<li>Gaining popularity</li>
+
+
+
+<li>Great community / resource</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">ECOSYSTEM</h4>
+
+
+
+<ul>
+<li>Vue CLI / Vue UI</li>
+
+
+
+<li>Vue Router</li>
+
+
+
+<li>Vuex / Pinia</li>
+
+
+
+<li>Composition API</li>
+
+
+
+<li>Vuetify</li>
+
+
+
+<li>NuxtJS</li>
+
+
+
+<li>Gridsome</li>
+
+
+
+<li>Vue Devtools</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">ANGULAR</h3>
+
+
+
+<ul>
+<li>Backed by Google</li>
+
+
+
+<li>Steep learning curve</li>
+
+
+
+<li>Popular in enterprise</li>
+
+
+
+<li>Good for complex projects</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">ECOSYSTEM</h4>
+
+
+
+<ul>
+<li>Angular CLI</li>
+
+
+
+<li>TypeScript</li>
+
+
+
+<li>Services</li>
+
+
+
+<li>Observables</li>
+
+
+
+<li>NgRx</li>
+
+
+
+<li>RxJS</li>
+
+
+
+<li>Angular Universal</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">SLVELTE</h3>
+
+
+
+<ul>
+<li>Compiles into pure JavaScript</li>
+
+
+
+<li>Easy learning curve</li>
+
+
+
+<li>Very fast &amp; lightweight</li>
+
+
+
+<li>Feels like vanilla JavaScript</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">ECOSYSTEM</h4>
+
+
+
+<ul>
+<li>Svelte Stores</li>
+
+
+
+<li>SvelteKit</li>
+
+
+
+<li>Svelte Devtools</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">SOLIDJS</h3>
+
+
+
+<ul>
+<li>Reactive UI library</li>
+
+
+
+<li>Similar to React in certain ways</li>
+
+
+
+<li>Extremely lightweight (6.5kb)</li>
+
+
+
+<li>Easy learning curve</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">ECOSYSTEM</h4>
+
+
+
+<ul>
+<li>SolidStart (Beta)</li>
+
+
+
+<li>JSX</li>
+
+
+
+<li>solid-jest</li>
+
+
+
+<li>Hope UI</li>
+</ul>
+
+
+
+<p>FRONT-END INTERMEDIATE</p>
+
+
+
+<h2 class="wp-block-heading">TYPESCRIPT</h2>
+
+
+
+<ul>
+<li>Superset of JavaScript with additional features, including static types</li>
+
+
+
+<li>TypeScript can be used with any client-side framework as well as with Node.js</li>
+
+
+
+<li>There are pros and cons to TypeScript. It is up to you if you think you would benefit from it</li>
+</ul>
+
+
+
+<p>FRONT-END INTERMEDIATE / STYLING</p>
+
+
+
+<h2 class="wp-block-heading">UI KITS</h2>
+
+
+
+<ul>
+<li>Libraires with pre-defined styled components that you can use in your UI</li>
+
+
+
+<li>They take a lot of the work out of styling your application’s components from scratch</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">REACT</h3>
+
+
+
+<ul>
+<li>Styled Components</li>
+
+
+
+<li>Material UI</li>
+
+
+
+<li>React Bootstrap</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">VUE</h3>
+
+
+
+<ul>
+<li>Vuetify</li>
+
+
+
+<li>Bootstrap Vue</li>
+
+
+
+<li>Quasar</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">ANGULAR</h3>
+
+
+
+<ul>
+<li>Angular Material</li>
+
+
+
+<li>ng-Bootstrap</li>
+
+
+
+<li>IgniteUI</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">SVELTE</h3>
+
+
+
+<ul>
+<li>Svelte Material UI</li>
+
+
+
+<li>SvelteStrap</li>
+
+
+
+<li>SvelteFlat UI</li>
+</ul>
+
+
+
+<p>FRONT-END ADVANCED / TESTING</p>
+
+
+
+<h2 class="wp-block-heading">TESTING</h2>
+
+
+
+<ul>
+<li>Unit Testing<br>Testing individual units (functions, classes, etc)</li>
+
+
+
+<li>Integration Testing<br>Test how different pieces of code work together</li>
+
+
+
+<li>End to End Testing<br>Test entire app from user’s perspective</li>
+
+
+
+<li>Performance Testing<br>Test how well the app does under heavy load</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">JS</h3>
+
+
+
+<ul>
+<li>Jest</li>
+
+
+
+<li>Mocha</li>
+
+
+
+<li>Cypress</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Python</h3>
+
+
+
+<ul>
+<li>Robot</li>
+
+
+
+<li>PyTest</li>
+
+
+
+<li>DocTest</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">C#</h3>
+
+
+
+<ul>
+<li>MSTest</li>
+
+
+
+<li>NUnit</li>
+
+
+
+<li>xUnit</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Go</h3>
+
+
+
+<ul>
+<li>GoTesting</li>
+
+
+
+<li>Testify</li>
+
+
+
+<li>Ginko</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Java</h3>
+
+
+
+<ul>
+<li>Selenium</li>
+
+
+
+<li>JUnit</li>
+
+
+
+<li>TestNG</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Rust</h3>
+
+
+
+<ul>
+<li>Native</li>
+
+
+
+<li>Skeptic</li>
+
+
+
+<li>QuickChk</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">PHP</h3>
+
+
+
+<ul>
+<li>PHPUnit</li>
+
+
+
+<li>Behat</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Ruby</h3>
+
+
+
+<ul>
+<li>Cucumber</li>
+
+
+
+<li>MiniTest</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Kotlin</h3>
+
+
+
+<ul>
+<li>Spek</li>
+
+
+
+<li>Kotlintest</li>
+</ul>
+
+
+
+<p>FRONT-END INTERMEDIATE / WEB &amp; BROWSER APIS</p>
+
+
+
+<h2 class="wp-block-heading">WEB APIS</h2>
+
+
+
+<ul>
+<li>Canvas API<br>Dynamic graphics &amp; visualization</li>
+
+
+
+<li>GeoLocation<br>Get a user’s location</li>
+
+
+
+<li>Speech API<br>Speech recognition &amp; synthesis</li>
+
+
+
+<li>Audio &amp; Video API<br>Audio/video controls and customization</li>
+
+
+
+<li>Web RTC<br>Real-time communication with audio/video</li>
+
+
+
+<li>Local Storage<br>Store data in the browser</li>
+</ul>
+
+
+
+<p>FRONT-END ADVANCED / SSR</p>
+
+
+
+<h2 class="wp-block-heading">FULL STACK FRAMEWORKS (SSR)</h2>
+
+
+
+<ul>
+<li>It has become very popular to render some things on the client and some on the server</li>
+
+
+
+<li>There are benefits to SSR, such as SEO, performance and simplicity</li>
+
+
+
+<li>SSR makes things less complex when it comes to preloading, state, authentication, etc</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">NEXTJS</h3>
+
+
+
+<ul>
+<li>Uses React</li>
+
+
+
+<li>Extremely popular</li>
+
+
+
+<li>File based routing, API routes, data fetching</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">REMIX</h3>
+
+
+
+<ul>
+<li>Uses React</li>
+
+
+
+<li>Gaining in popularity</li>
+
+
+
+<li>Native form component, loading states</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">NUXTJS</h3>
+
+
+
+<ul>
+<li>Uses Vue</li>
+
+
+
+<li>Comparable to NextJS</li>
+
+
+
+<li>Hybrid rendering, Nitro server engine</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">UNIVERSAL</h3>
+
+
+
+<ul>
+<li>Uses Angular</li>
+
+
+
+<li>Integrates with Angular-CLI</li>
+
+
+
+<li>Rich debugging tools, lazy loading</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">SVELTEKIT</h3>
+
+
+
+<ul>
+<li>Uses Svelte</li>
+
+
+
+<li>SSR, SSG, Routing &amp; More</li>
+
+
+
+<li>Loads components on server first</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">BLAZOR</h3>
+
+
+
+<ul>
+<li>Uses C# &amp; WASM</li>
+
+
+
+<li>Can render on the client-side</li>
+
+
+
+<li>Hot reload, lazy loading, virtualization</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">REDWOOD</h3>
+
+
+
+<ul>
+<li>Built on top of NextJS</li>
+
+
+
+<li>Prisma, GraphQL, Jest, Storybook</li>
+
+
+
+<li>End-to-end workflow great for startups</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">BLITZ</h3>
+
+
+
+<ul>
+<li>NextJS Toolkit</li>
+
+
+
+<li>Typesafe Data Layer &amp; Scaffolding</li>
+
+
+
+<li>Authentication</li>
+</ul>
+
+
+
+<p>FRONT-END ADVANCED / SSG</p>
+
+
+
+<h2 class="wp-block-heading">STATIC SITE GENERATORS (SSG)</h2>
+
+
+
+<ul>
+<li>SSG frameworks are used to create extremely fast and optimized websites</li>
+
+
+
+<li>Benefits to SSG sites are SEO, performance, flexibility and security</li>
+
+
+
+<li>SSG sites can still be dynamic and fetch data from an API or headless CMS</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">ASTRO</h3>
+
+
+
+<ul>
+<li>Astro components or React, Vue, Svelte</li>
+
+
+
+<li>Generates static HTML with little to no JS</li>
+
+
+
+<li>Loads components on server first</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">GATSBY</h3>
+
+
+
+<ul>
+<li>Uses React components</li>
+
+
+
+<li>Has GraphQL Data Layer</li>
+
+
+
+<li>Image optimization, code splitting</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">GRIDSOME</h3>
+
+
+
+<ul>
+<li>Uses Vue</li>
+
+
+
+<li>Great for progressive web apps</li>
+
+
+
+<li>SEO friendly, simple safe deployment</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">JEKYLL</h3>
+
+
+
+<ul>
+<li>Ruby Based</li>
+
+
+
+<li>Uses Liquid templates</li>
+
+
+
+<li>Default generator for GitHub Pages</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">HUGO</h3>
+
+
+
+<ul>
+<li>Based on GO</li>
+
+
+
+<li>Use any front-end technology</li>
+
+
+
+<li>Powerful theming</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">HEXO</h3>
+
+
+
+<ul>
+<li>Based on Node.js</li>
+
+
+
+<li>Blog generator</li>
+
+
+
+<li>Highly customizable</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">PELICAN</h3>
+
+
+
+<ul>
+<li>Based on Python</li>
+
+
+
+<li>Use Jinja2 templates</li>
+
+
+
+<li>Rich ecosystem of plugins</li>
+</ul>
+
+
+
+<p>FRONT-END ADVANCED / CONTENT MANAGEMENT</p>
+
+
+
+<h2 class="wp-block-heading">HEADLESS CMS</h2>
+
+
+
+<ul>
+<li>Admin area to create content without being bound to a specific front-end</li>
+
+
+
+<li>Output JSON, so that you can just fetch the data and use a custom front-end / UI</li>
+
+
+
+<li>Great solution for clients that want to be able to update and add their own content</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">STRAPI</h3>
+
+
+
+<ul>
+<li>Built on Node.js</li>
+
+
+
+<li>Completely open source &amp; self hosted</li>
+
+
+
+<li>Loads of features for content creation</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">SANITY.IO</h3>
+
+
+
+<ul>
+<li>Fully customizable CMS</li>
+
+
+
+<li>Real-time data store for structured content</li>
+
+
+
+<li>Flexible querying API</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">KEYSTONE</h3>
+
+
+
+<ul>
+<li>Powerful content management</li>
+
+
+
+<li>GraphQL API</li>
+
+
+
+<li>Primitive &amp; advanced fields, custom schemas</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">CONTENTFUL</h3>
+
+
+
+<ul>
+<li>Cloud-based CMS</li>
+
+
+
+<li>Flexible content model, rubust API</li>
+
+
+
+<li>Free and paid plans</li>
+</ul>
+
+
+
+<p>FRONT-END ADVANCED / JAMSTACK</p>
+
+
+
+<h2 class="wp-block-heading">THE JAMSTACK</h2>
+
+
+
+<ul>
+<li>Architectural approach to building websites with JavaScript, APIs &amp; Markup</li>
+
+
+
+<li>Emphasizes the use of SSG, SSR, headless CMS, serverless functions</li>
+
+
+
+<li>Jamstack websites are decoupled and extremely fast, secure and easily maintained</li>
+</ul>
+
+
+
+<p>FRONT-END ADVANCED / EXTRAS</p>
+
+
+
+<h2 class="wp-block-heading">ALPINE.JS</h2>
+
+
+
+<p>Alpine is technically a framework, but works more like a library. It actually labels itself modern jQuery.</p>
+
+
+
+<ul>
+<li>Data binding</li>
+
+
+
+<li>Event handling</li>
+
+
+
+<li>Hide / show elements</li>
+
+
+
+<li>Data synchronization</li>
+
+
+
+<li>Conditionals &amp; loops</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">LIT</h2>
+
+
+
+<p>Library that allows you to create custom components</p>
+
+
+
+<ul>
+<li>Build on web components standard</li>
+
+
+
+<li>Reactive state</li>
+
+
+
+<li>Scoped styles</li>
+
+
+
+<li>Declarative template system</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">VISUALIZATION</h2>
+
+
+
+<ul>
+<li>These tools allow you to create advanced visualizations and animations</li>
+
+
+
+<li>Knowing how to do this can take you to the next level as a front-end developer</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">MOTION UI</h3>
+
+
+
+<ul>
+<li>Sass library for animation</li>
+
+
+
+<li>Add animated elements to your website</li>
+
+
+
+<li>Pre-built and custom</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">FRAMER</h3>
+
+
+
+<ul>
+<li>Animations in React</li>
+
+
+
+<li>Fuild &amp; dynamic UI</li>
+
+
+
+<li>Support for 3D animations</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">THREE.JS</h3>
+
+
+
+<ul>
+<li>Very popular (90K Stars)</li>
+
+
+
+<li>JavaScript API for 2D/3D graphics</li>
+
+
+
+<li>Powered by WebGL</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">GSAP</h3>
+
+
+
+<ul>
+<li>High-performance timeline-based animations</li>
+
+
+
+<li>uses tweens</li>
+
+
+
+<li>Don’t need to know a lot of JS</li>
+</ul>
+
+
+
+<p>EXTRAS</p>
+
+
+
+<h2 class="wp-block-heading">NO-CODE TOOLS</h2>
+
+
+
+<ul>
+<li>WORDPRESS</li>
+
+
+
+<li>WEBFLOW</li>
+
+
+
+<li>SHOPIFY</li>
+
+
+
+<li>OTHER TOOLS: Kajabi、WIX、SQUARESPACE</li>
+</ul>
+
+
+
+<p>FRONT-END ADVANCED / FRONT-END SUPERSTAR</p>
+
+
+
+<h2 class="wp-block-heading">FRONT-END SUPERSTAR</h2>
+
+
+
+<ul>
+<li>Know a front-end framework well<br>Understand concepts like components, state</li>
+
+
+
+<li>HTTP / APIS<br>Very comfortable with HTTP &amp; consuming APIS</li>
+
+
+
+<li>Full stack / SSR framework<br>Becoming a necessity</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Optional, but beneficial</h3>
+
+
+
+<ul>
+<li>TyperScript<br>Really in-demand and fairly easy to learn</li>
+
+
+
+<li>Jamstack technologies<br>SSG, headless CMS, serverless functions</li>
+
+
+
+<li>Testing<br>Unit tests with a framework like Jest</li>
+</ul>
+
+
+
+<p>BACK-END ESSENTIALS / PROGRAMMING LANGUAGES</p>
+
+
+
+<h2 class="wp-block-heading">SERVER-SIDE LANGUAGE</h2>
+
+
+
+<ul>
+<li>Choose a language<br>Try a few out and see what feels right</li>
+
+
+
+<li>Check job listings<br>See what companies are using in your area</li>
+
+
+
+<li>Learn the fundamentals<br>Don’t move to a framework too fast</li>
+</ul>
+
+
+
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td>NODE.JS</td>
+<td>PYTHON</td>
+<td>PHP</td>
+</tr>
+<tr>
+<td>C#</td>
+<td>GOLANG</td>
+<td>RUBY</td>
+</tr>
+<tr>
+<td>JAVA</td>
+<td>KOTLIN</td>
+<td>RUST</td>
+</tr>
+<tr>
+<td>SCALA</td>
+<td>R</td>
+<td>SWIFT</td>
+</tr>
+</tbody></table></figure>
+
+
+
+<p>BACK-END ESSENTIALS / FRAMEWORKS</p>
+
+
+
+<h3 class="wp-block-heading">NODE.JS</h3>
+
+
+
+<ul>
+<li>Express</li>
+
+
+
+<li>Fastify</li>
+
+
+
+<li>NestJS</li>
+
+
+
+<li>Adonis</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">PYTHON</h3>
+
+
+
+<ul>
+<li>Django</li>
+
+
+
+<li>Flask</li>
+
+
+
+<li>Fast API</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">PHP</h3>
+
+
+
+<ul>
+<li>Laravel</li>
+
+
+
+<li>Symfony</li>
+
+
+
+<li>Codeigniter</li>
+
+
+
+<li>SlimPHP</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">RUBY</h3>
+
+
+
+<ul>
+<li>Rails</li>
+
+
+
+<li>Sinatra</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">GO</h3>
+
+
+
+<ul>
+<li>Gin</li>
+
+
+
+<li>Beego</li>
+
+
+
+<li>Echo</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">JAVA</h3>
+
+
+
+<ul>
+<li>Spring</li>
+
+
+
+<li>Struts</li>
+
+
+
+<li>Blade</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">KOTLIN</h3>
+
+
+
+<ul>
+<li>Spring</li>
+
+
+
+<li>Javelin</li>
+
+
+
+<li>Ktor</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">C#</h3>
+
+
+
+<ul>
+<li>ASP.NET MVC</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">RUST</h3>
+
+
+
+<ul>
+<li>Rocket</li>
+</ul>
+
+
+
+<p>BACK-END ESSENTIALS / DATA</p>
+
+
+
+<h2 class="wp-block-heading">RELATIONAL DATABASES</h2>
+
+
+
+<ul>
+<li>Traditional table-based structure</li>
+
+
+
+<li>Data stored in columns and rows</li>
+
+
+
+<li>Usually use SQL (Structure Query Language)</li>
+
+
+
+<li>Been around since the 70s</li>
+
+
+
+<li>Great for related data (social networks, etc)</li>
+
+
+
+<li>Very rigid in terms of structure</li>
+
+
+
+<li>Good with complex queries</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">NOSQL DATABASES</h2>
+
+
+
+<ul>
+<li>Many types (Document, column-based, key/value)</li>
+
+
+
+<li>Data stored in JSON-like documents (Document DB)</li>
+
+
+
+<li>Newer type of database</li>
+
+
+
+<li>Very flexible structure (schema-less)</li>
+
+
+
+<li>Used in big data applications</li>
+
+
+
+<li>Great scalability</li>
+
+
+
+<li>Not as well suited for complex queries</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">RELATIONAL DATABASES</h2>
+
+
+
+<h3 class="wp-block-heading">PostgreSQL</h3>
+
+
+
+<ul>
+<li>Intuitive functionality &amp; versatile security</li>
+
+
+
+<li>Object-oriented data structure</li>
+
+
+
+<li>Used by Apple, Skype, Etsy, Cisco</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">MySQL</h3>
+
+
+
+<ul>
+<li>Widely used in web development</li>
+
+
+
+<li>Strong community</li>
+
+
+
+<li>Used by Google, Udemy, Netflix, Amazon</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">ORACLE</h3>
+
+
+
+<ul>
+<li>Used for large-scale enterprise</li>
+
+
+
+<li>Handles large and complex data sets</li>
+
+
+
+<li>Used by American Express, Amazon, Verizon</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">MS SQL</h3>
+
+
+
+<ul>
+<li>Commercial solution for big businesses</li>
+
+
+
+<li>Commercial – free tier with limitations</li>
+
+
+
+<li>Used by UPS, Bank of America, JPMorgan</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">NOSQL DATABASES</h2>
+
+
+
+<h3 class="wp-block-heading">MongoDB</h3>
+
+
+
+<ul>
+<li>Most popular document database</li>
+
+
+
+<li>Very flexible, scalable and high performance</li>
+
+
+
+<li>Used by IBM, Verizon, Forbes, Adobe</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Cassandra</h3>
+
+
+
+<ul>
+<li>Column-based database</li>
+
+
+
+<li>High performance &amp; high availability</li>
+
+
+
+<li>Apple iCloud, Twitter, eBay</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Couchbase</h3>
+
+
+
+<ul>
+<li>Document database</li>
+
+
+
+<li>Designed to handle unstructured data</li>
+
+
+
+<li>Used by Linkedin, Marriot, Walmart</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">DynamoDB</h3>
+
+
+
+<ul>
+<li>Amazon proprietary document database</li>
+
+
+
+<li>Can also be used as key/value store</li>
+
+
+
+<li>Used by Amazon, Netflix, Airbnb</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">SERVERLESS / CLOUD DATABASES</h2>
+
+
+
+<h3 class="wp-block-heading">MongoDB Atlas</h3>
+
+
+
+<ul>
+<li>MongoDB in the cloud</li>
+
+
+
+<li>Setup user and network access</li>
+
+
+
+<li>Generous free tier</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Firebase</h3>
+
+
+
+<ul>
+<li>Owned by Google</li>
+
+
+
+<li>Real-time NoSQL database</li>
+
+
+
+<li>Authentication, file storage, serverless functions</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Supabase</h3>
+
+
+
+<ul>
+<li>Backend as a service</li>
+
+
+
+<li>Uses a PostgreSQL database</li>
+
+
+
+<li>No company lock-in</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">FaunaDB</h3>
+
+
+
+<ul>
+<li>NoSQL &amp; relational models</li>
+
+
+
+<li>Support for ACID transactions</li>
+
+
+
+<li>Support for GraphQL</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">FILE-BASED DATABASED</h2>
+
+
+
+<h3 class="wp-block-heading">SQLite</h3>
+
+
+
+<ul>
+<li>Most common file-based database</li>
+
+
+
+<li>Uses SQL</li>
+
+
+
+<li>Extremely easy to setup</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">.md Files</h3>
+
+
+
+<ul>
+<li>Good alternative to a database</li>
+
+
+
+<li>No installations, maintenance, etc</li>
+
+
+
+<li>Only very small projects like personal blogs</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">H2 DB</h3>
+
+
+
+<ul>
+<li>Lightweight and high performance</li>
+
+
+
+<li>Supports SQL</li>
+
+
+
+<li>Web-based console</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Redis</h3>
+
+
+
+<ul>
+<li>in-memory database for caching</li>
+
+
+
+<li>Data can be persisted to disk</li>
+
+
+
+<li>Fast and scalable</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">ORMS (OBJECT RELATIONAL MAPPER)</h2>
+
+
+
+<ul>
+<li>Provides a way to work interact with data from within your code without writing raw SQL queries</li>
+
+
+
+<li>Simplifies database interaction, increases productivity and readability</li>
+
+
+
+<li>Allows the application to be independent of the database</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">PRISMA</h3>
+
+
+
+<ul>
+<li>Type-safe database client</li>
+
+
+
+<li>Supports many databases</li>
+
+
+
+<li>Easy relation API</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">MONGOOSE</h3>
+
+
+
+<ul>
+<li>ORM/ODM for MongoDB &amp; Node.js</li>
+
+
+
+<li>Create models &amp; schemas</li>
+
+
+
+<li>Middleware support</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">SEQUELIZE</h3>
+
+
+
+<ul>
+<li>ORM for Node.js &amp; MySQL</li>
+
+
+
+<li>Supports all SQL-based databases</li>
+
+
+
+<li>Migrations, model associations, hooks</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">SQLALCHEMY</h3>
+
+
+
+<ul>
+<li>ORM for Python</li>
+
+
+
+<li>Supports MySQL, Postgres, SQLite &amp; Oracle</li>
+
+
+
+<li>Rich API for complex queries</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">REST API</h2>
+
+
+
+<ul>
+<li>“Representational State Transfer”</li>
+
+
+
+<li>Traditional client-server model</li>
+
+
+
+<li>Much more common</li>
+
+
+
+<li>Uses specific HTTP methods and endpoints</li>
+
+
+
+<li>Fetches all or nothing</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">GRAPHQL</h2>
+
+
+
+<ul>
+<li>Query language and runtime for APIs</li>
+
+
+
+<li>Allows client to specify the data they want</li>
+
+
+
+<li>Improved performance</li>
+
+
+
+<li>One /graphql endpoint</li>
+
+
+
+<li>Use a client such as Apollo</li>
+</ul>
+
+
+
+<p>BACK-END ADVANCED / SECURITY</p>
+
+
+
+<h2 class="wp-block-heading">AUTHENTICATION</h2>
+
+
+
+<ul>
+<li>Sessions &amp; Cookies<br>Server maintains session &amp; ID stored in cookie</li>
+
+
+
+<li>JSON Web Tokens<br>Token is stored and sent to protected routes</li>
+
+
+
+<li>OAuth<br>Open standard to use 3rd-party services</li>
+
+
+
+<li>Third Party Services<br>Auth0, Okta, AWS Cognito, Firebase</li>
+
+
+
+<li>Other Related Topics<br>Password hashing, two-factor auth, protecting routes</li>
+</ul>
+
+
+
+<p>BACK-END ADVANCED / DEPLOYMENT</p>
+
+
+
+<h2 class="wp-block-heading">BACK-END / FULLSTACK DEPLOYMENT</h2>
+
+
+
+<ul>
+<li>PaaS<br>Everything is set up for you</li>
+
+
+
+<li>Cloud Hosting<br>You create and provision a server from scratch</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">RENDER</h3>
+
+
+
+<ul>
+<li>PaaS that supports many languages</li>
+
+
+
+<li>Push directly from GitHub</li>
+
+
+
+<li>Generous free tier</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">HEROKU</h3>
+
+
+
+<ul>
+<li>PaaS that supports many languages</li>
+
+
+
+<li>Uses a Heroku-CLI or Git</li>
+
+
+
+<li>Embraces serverless &amp; edge computing</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">LINODE</h3>
+
+
+
+<ul>
+<li>Cloud hosting</li>
+
+
+
+<li>Install any software that you want</li>
+
+
+
+<li>Great pricing and no lock-in</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">AWS</h3>
+
+
+
+<ul>
+<li>Most powerful hosting company in the world</li>
+
+
+
+<li>Tons of services</li>
+
+
+
+<li>Great for large projects with a lot of traffic</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">DEVOPS SKILLS</h2>
+
+
+
+<ul>
+<li>Terminal / Linux Commands<br>Very comfortable with the shell and utilities</li>
+
+
+
+<li>Web Servers<br>NGINX, Apache configuration</li>
+
+
+
+<li>Containerization &amp; Virtualization<br>Docker, Kubernetes, Vagrant</li>
+
+
+
+<li>Assets &amp; File Storage<br>Cloudinary, Amazon S3</li>
+
+
+
+<li>CI / CD<br>Jenkins, Travis CI, CircleCI</li>
+
+
+
+<li>Infrastructure as Code (IaC)<br>Terraform, CloudFormation, Pulumi</li>
+</ul>
+
+
+
+<p>BACK-END ADVANCED / BACKEND SUPERSTAR</p>
+
+
+
+<h2 class="wp-block-heading">BACKEND / FULL STACK SUPERSTAR</h2>
+
+
+
+<ul>
+<li>Server-Side Language/Technology<br>Node.js, Python, PHP, Ruby, etc</li>
+
+
+
+<li>Server-Side Framework<br>Know how to create apps/apis with a framework</li>
+
+
+
+<li>Database &amp; ORM<br>Relational or NoSQL database and ORM layer</li>
+
+
+
+<li>REST API Creation<br>CRUD, HTTP response formation, GraphQL is a plus</li>
+
+
+
+<li>Authentication &amp; Authorization<br>Protect routes, sessions, tokens, etc</li>
+
+
+
+<li>Project Deployment<br>Deploy on a PaaS or cloud hosting</li>
+</ul>
+
+
+
+<p>BEYOND THE BROWSER / MOBILE DEVELOPMENT</p>
+
+
+
+<h2 class="wp-block-heading">MOBILE DEVELOPMENT</h2>
+
+
+
+<ul>
+<li>There are many web technologies that we can use to build native and hybrid applications</li>
+
+
+
+<li>Having the skill to create mobile applications can be really beneficial for web developers</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">REACT NATIVE</h3>
+
+
+
+<ul>
+<li>Uses the React libray</li>
+
+
+
+<li>React components</li>
+
+
+
+<li>Cross platform with iOS &amp; Android</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">FLUTTER</h3>
+
+
+
+<ul>
+<li>Open-source framework by Google</li>
+
+
+
+<li>Uses the Dart programming language</li>
+
+
+
+<li>Cross-platform with iOS &amp; Android</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">IONIC</h3>
+
+
+
+<ul>
+<li>Hybrid &amp; progressive web apps</li>
+
+
+
+<li>Use any front-end framework</li>
+
+
+
+<li>Cross-platform with iOS &amp; Android</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">XAMARIN</h3>
+
+
+
+<ul>
+<li>C# framework for building mobile apps</li>
+
+
+
+<li>Utilize .NET platform</li>
+
+
+
+<li>Cross-platform with iOS &amp; Android</li>
+</ul>
+
+
+
+<p>MODERN TECH</p>
+
+
+
+<h2 class="wp-block-heading">PROGRESSIVE WEB APPS</h2>
+
+
+
+<ul>
+<li>Best of both worlds including mobile and web applications</li>
+
+
+
+<li>Leverage modern web technologies such as responsive design, service workers, HTTPS</li>
+
+
+
+<li>Anyone that knows HTML, CSS &amp; JavaScript can get into building progressive web apps</li>
+</ul>
+
+
+
+<p>BEYOND THE BROWSER / DESKTOP APP DEVELOPMENT</p>
+
+
+
+<h2 class="wp-block-heading">DESKTOP APPS</h2>
+
+
+
+<ul>
+<li>There are frameworks that we can use to build cross-platform desktop applications</li>
+
+
+
+<li>This includes JavaScript frameworks as well as other languages like Python</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">ELECTRON</h3>
+
+
+
+<ul>
+<li>Cross platform apps with JavaScript</li>
+
+
+
+<li>Use any FE framework or library</li>
+
+
+
+<li>VS Code, Slack, Discord, Postman</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">NW.JS</h3>
+
+
+
+<ul>
+<li>Native desktop apps with web technologies</li>
+
+
+
+<li>Call Node.js modules from DOM</li>
+
+
+
+<li>Cross-platform with Windows, MacOS, Linux</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">TKINTER</h3>
+
+
+
+<ul>
+<li>Create-cross platform GUI apps with Python</li>
+
+
+
+<li>Python interface to the Tk GUI toolkit</li>
+
+
+
+<li>Cross-platform with iOS &amp; Android</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">NATIVE</h3>
+
+
+
+<ul>
+<li>Native apps with C#, Java, Swift, etc</li>
+
+
+
+<li>Beyond the scope of web technologies</li>
+</ul>
+
+
+
+<p>MODERN TECH</p>
+
+
+
+<h2 class="wp-block-heading">WEB ASSEMBLY</h2>
+
+
+
+<ul>
+<li>Binary instruction format for browsers to run code more efficiently than JavaScript</li>
+
+
+
+<li>Can be used with languages like Rust, C, C++ as well as a superset of TypeScript called AssemblyScript</li>
+
+
+
+<li>Web Assembly is reaching beyond the browser with projects in server-side and mobile apps</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">ADVANCED AI</h2>
+
+
+
+<ul>
+<li>AI for art and creation<br>Tools like DALL-E for generating realistic images</li>
+
+
+
+<li>AI powered databases<br>Databases + machine learning</li>
+
+
+
+<li>AI powered content<br>Tools like Jasper and GPT-3</li>
+
+
+
+<li>Chatbots &amp; voice<br>AI powered virtual assistants</li>
+
+
+
+<li>Code generators<br>Copilot, Tabnine, Kite</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">WEB3</h2>
+
+
+
+<ul>
+<li>Blockchain<br>Distributed database that records transactions</li>
+
+
+
+<li>dAPPs<br>Decentralized applications</li>
+
+
+
+<li>Smart contracts<br>Solidity development</li>
+
+
+
+<li>Cryptocurrency<br>Facilitate transactions with Bitcoin, Ethereum, etc</li>
+
+
+
+<li>Identity Solutions<br>Control over personal data</li>
+</ul>
+	</div>
+<!-- .entry-content -->
+
+	<footer class="entry-footer">
+			</footer><!-- .entry-footer -->
+</article><!-- #post-768 -->
+
+	<nav class="navigation post-navigation" aria-label="文章">
+		<h2 class="screen-reader-text">文章導覽</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="/wordpress_blog/complete-mongodb-tutorial/" rel="prev"><span class="nav-subtitle">Previous:</span> <span class="nav-title">Complete MongoDB Tutorial</span></a></div></div>
+	</nav>
+	</main><!-- #main -->
+
+
+	</div></div>
+			
+			<footer id="colophon" class="site-footer">
+
+				
+				<div class="container-fluid">
+					<div class="site-info">
+						<div class="row">
+
+															
+								<div class="col-12 footer-copyright-elements footer-copyright-alignment-center">
+
+									<div class="botiga-credits">&copy; 2023 wordpress_blog. 
+Created by Gee Hsu. 
+<br>Proudly powered by <a rel="nofollow" href="https://athemes.com/theme/botiga/">Botiga</a>
+</div>
+<div class="social-profile">
+<a target="_blank" href="https://www.facebook.com/watergrass0402/"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></i></a><a target="_blank" href="https://github.com/GeeHsu"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></i></a>
+</div>
+								</div>
+														
+						</div>
+					</div>
+				</div>
+<!-- .site-info -->
+
+				
+			</footer><!-- #colophon -->
+
+			
+			<div class="back-to-top visibility-all position-right"><i class="ws-svg-icon"><svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 15l7-7 7 7" stroke-width="3" stroke-linejoin="round"></path></svg></i></div>
+</div>
+<!-- #page -->
+
+
+<script id="botiga-custom-js-extra">
+var botiga = {"ajaxurl":"\/wp-admin\/admin-ajax.php","i18n":{"botiga_sharebox_copy_link":"Copy link","botiga_sharebox_copy_link_copied":"Copied!"}};
+</script>
+<script src="/wordpress_blog/wp-content/themes/botiga/assets/js/custom.min.js?ver=1.1.2" id="botiga-custom-js"></script>
+
+</body>
+</html>

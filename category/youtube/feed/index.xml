@@ -12,13 +12,13 @@
 	<atom:link href="/wordpress_blog/category/youtube/feed/" rel="self" type="application/rss+xml" />
 	<link>/wordpress_blog</link>
 	<description>This is a dynamic to static website.</description>
-	<lastBuildDate>Wed, 04 Oct 2023 05:39:49 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 21 Mar 2024 01:54:09 +0000</lastBuildDate>
 	<language>zh-TW</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=6.3.1</generator>
+	<generator>https://wordpress.org/?v=6.4.3</generator>
 
 <image>
 	<url>/wordpress_blog/wp-content/uploads/2022/03/logo.png</url>
@@ -28,6 +28,4208 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>Web Development In 2024 &#8211; A Practical Guide</title>
+		<link>/wordpress_blog/web-development-in-2024-a-practical-guide/</link>
+		
+		<dc:creator><![CDATA[gee.hsu]]></dc:creator>
+		<pubDate>Tue, 13 Feb 2024 10:09:00 +0000</pubDate>
+				<category><![CDATA[Youtube]]></category>
+		<guid isPermaLink="false">/wordpress_blog/?p=809</guid>
+
+					<description><![CDATA[Learning From Youtube Channel: T [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p>Learning From Youtube Channel: Traversy Media<br>Video:&nbsp;<a href="https://www.youtube.com/watch?v=8sXRyHI3bLw" target="_blank" rel="noreferrer noopener">Web Development In 2024</a><br>Thank you!</p>
+
+
+
+<p>Timestamps:</p>
+
+
+
+<p>00:00:00 – Intro<br>00:01:12 – About This Guide<br>00:02:43 – Developer Roles<br>00:07:15 – Developer Goals<br>00:11:38 – Essential Tools<br>00:16:02 – HTML &amp; CSS<br>00:18:35 – CSS Frameworks<br>00:22:28 – Sass<br>00:24:17 – Other Helpful Tools<br>00:29:59 – Design Principles<br>00:31:34 – JavaScript<br>00:34:00 – WordPress<br>00:35:54 – Basic Deployment<br>00:38:46 – Checkpoint #1<br>00:41:49 – Where To Next?<br>00:45:12 – Evolving Frontend Architecture<br>00:49:05 – Frontend Frameworks<br>00:49:33 – React<br>00:52:17 – Vue<br>00:54:05 – Angular<br>00:56:30 – Svelte<br>00:58:32 – React Ecosystem<br>01:06:14 – Vue Ecosystem<br>01:10:00 – Angular Ecosystem<br>01:12:50 – Svelte Ecosystem<br>01:15:11 – TypeScript<br>01:16:36 – Headless CMS<br>01:20:03 – Other Frontend Tools<br>01:24:23 – Web APIs<br>01:27:10 – Testing<br>01:29:16 – Checkpoint #2<br>01:30:49 – Server-Side Language<br>01:42:29 – Server-Side Framework<br>01:53:50 – REST API<br>01:54:37 – GraphQL<br>01:56:09 – Databases<br>02:04:27 – Database ORMs<br>02:09:14 – Authentication<br>02:12:03 – Serverless Architecture<br>02:13:54 – Full Stack Deployment<br>02:17:09 – Bun.js<br>02:18:36 – Checkpoint #3<br>02:20:25 – Containerization<br>02:23:00 – Web Assembly<br>02:24:15 – Mobile Development<br>02:27:18 – Progressive Web Apps<br>02:28:53 – Desktop Apps<br>02:31:56 – Design Trends<br>02:34:12 – IoT &amp; Metaverse<br>02:35:03 – Artificial Intelligence<br>02:36:50 – DevOps<br>02:38:00 – Animation<br>02:39:50 – VR &amp; AR<br>02:40:58 – Web3 &amp; Blockchain<br>02:42:37 – Outro</p>
+
+
+
+<h3 class="wp-block-heading">ABOUT THIS GUIDE</h3>
+
+
+
+<ul>
+<li>Youd do&nbsp;<strong>NOT</strong>&nbsp;need to learn everything. It’s like a restaurant menu. You make choices from the selections</li>
+
+
+
+<li>This is&nbsp;<strong>NOT</strong>&nbsp;a latest trends video. It includes just about every popular technology used today in web development</li>
+
+
+
+<li>I keep everything objective for the most part, but I will share my opinions and preferences from time to time</li>
+</ul>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>PLANNING</p>
+
+
+
+<h3 class="wp-block-heading"><strong>ROLES</strong>&nbsp;FOR WEB DEVELOPERS</h3>
+
+
+
+<p>The first step is to figure out whick type of web developer that you want to be</p>
+
+
+
+<ul>
+<li>WEB DESIGNER<br>Focused on creating eye-pleasing websites with limited dynamic functionality. May use no-code tools and CMS like WordPress.</li>
+
+
+
+<li>FRONTEND DEVELOPER<br>Focused on client-side websites and web apps. In addition to HTML/CSS, they need to know a lot of JavaScript and most likely a frontend framework.</li>
+
+
+
+<li>BACKEND DEVELOPER<br>Focuses on the server-side functionality of a website or web app. Many programming languages to choose from. Database experience as well.</li>
+
+
+
+<li>FULL STACK DEVELOPER<br>Works on both the client-side and server-side to create more complex applications. May focus more on one side than the other.</li>
+
+
+
+<li>DEV OPS ENGINEER<br>Responsible for the deployment &amp; maintenance of applications and the server that they run on.</li>
+</ul>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>PLANNING</p>
+
+
+
+<h3 class="wp-block-heading">GOALS &amp; PATHS OF WEB DEVELOPERS</h3>
+
+
+
+<p>Figure our which path you would like to take once you gain the skills</p>
+
+
+
+<ul>
+<li>FULL TIME EMPLOYEE<br>Work as a developer at a company. Salary can vary greatly depending on the company and where you live.</li>
+
+
+
+<li>FREELANCER<br>Work for yourself and directly with clients. You can work as an individual for as an agency. You could niche down and work with a certain industry.</li>
+
+
+
+<li>STARTUP<br>Can be risky but has the potential to be very rewarding, especially if you were on of the first employees.</li>
+
+
+
+<li>CREATE A PRODUCT/SAAS<br>Work on your own product or Software-as-a-service. This is great as a secondary goal for people that have a lot of skill.</li>
+
+
+
+<li>INTERSHIPS<br>Internships offer real-world experience and can be a great option to get you going in the industry.</li>
+</ul>
+
+
+
+<p>WD FE BE FS DO</p>
+
+
+
+<h3 class="wp-block-heading">ESSENTIAL TOOLS</h3>
+
+
+
+<h4 class="wp-block-heading">Operating System</h4>
+
+
+
+<ul>
+<li>MacOS</li>
+
+
+
+<li>Windows</li>
+
+
+
+<li>Linux</li>
+
+
+
+<li>Chromebook</li>
+</ul>
+
+
+
+<p><a>Pick One</a></p>
+
+
+
+<h4 class="wp-block-heading">Text Editors &amp; IDEs</h4>
+
+
+
+<ul>
+<li>VS Code</li>
+
+
+
+<li>Sublime Text</li>
+
+
+
+<li>Vim</li>
+
+
+
+<li>Atom</li>
+</ul>
+
+
+
+<ul>
+<li>Webstorm</li>
+
+
+
+<li>PHPStorm</li>
+
+
+
+<li>PyCharm</li>
+
+
+
+<li>Eclipse</li>
+</ul>
+
+
+
+<p><a>Pick One</a></p>
+
+
+
+<h4 class="wp-block-heading">Web Browser</h4>
+
+
+
+<ul>
+<li>Chrome</li>
+
+
+
+<li>Firefox</li>
+
+
+
+<li>Edge</li>
+
+
+
+<li>Safari</li>
+
+
+
+<li>Brave</li>
+
+
+
+<li>Vivaldi</li>
+
+
+
+<li>Polypane</li>
+</ul>
+
+
+
+<p><a>Pick One</a></p>
+
+
+
+<h4 class="wp-block-heading">Terminals</h4>
+
+
+
+<ul>
+<li>MacOS Term</li>
+
+
+
+<li>iTerm2</li>
+
+
+
+<li>Windows Term</li>
+
+
+
+<li>WSL</li>
+
+
+
+<li>Git Bash</li>
+
+
+
+<li>Linux Term</li>
+
+
+
+<li>Alacrity</li>
+
+
+
+<li>Tilix</li>
+</ul>
+
+
+
+<p><a>Pick One</a></p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>WD FE FS</p>
+
+
+
+<h3 class="wp-block-heading">HTML &amp; CSS</h3>
+
+
+
+<p>Semantic markup (&lt;header&gt;, &lt;footer&gt;, &lt;main&gt;, etc)</p>
+
+
+
+<p>Accessiblility, common tags &amp; attributes</p>
+
+
+
+<p>Basic CSS Properties, box model, specificity</p>
+
+
+
+<p>Units of measurement (px, rem, em, vh, vw)</p>
+
+
+
+<p>Layout methods (flex &amp; grid)</p>
+
+
+
+<p>Responsive layouts &amp; media queries</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>WD FE FS</p>
+
+
+
+<p>OPTIONAL</p>
+
+
+
+<h3 class="wp-block-heading">CSS FRAMEWORKS</h3>
+
+
+
+<h4 class="wp-block-heading">BOOTSTRAP</h4>
+
+
+
+<ul>
+<li>Widely used &amp; large community</li>
+
+
+
+<li>Component based for rapid development</li>
+
+
+
+<li>Responsive grid system</li>
+
+
+
+<li>Useful JavaScript widgets</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">TAILWIND CSS</h4>
+
+
+
+<ul>
+<li>Very popular</li>
+
+
+
+<li>Utility-based framework</li>
+
+
+
+<li>Create very customized layouts</li>
+
+
+
+<li>Write almost no custom CSS</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">BULMA</h4>
+
+
+
+<ul>
+<li>Extremely customizable</li>
+
+
+
+<li>Easy-to-use classes</li>
+
+
+
+<li>Fast &amp; very small file size</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">MATERIALIZE CSS</h4>
+
+
+
+<ul>
+<li>Uses Google’s Material Design</li>
+
+
+
+<li>Lots of components</li>
+
+
+
+<li>Useful JavaScript widgets</li>
+</ul>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>WD FE FS</p>
+
+
+
+<p>OPTIONAL</p>
+
+
+
+<h3 class="wp-block-heading">SASS</h3>
+
+
+
+<p>Pre-processor for added CSS functionality</p>
+
+
+
+<p>CSS variables, functions, mixins</p>
+
+
+
+<p>Nesting &amp; inheriting styles</p>
+
+
+
+<p>Modularize your CSS</p>
+
+
+
+<p>Community and ecosystem</p>
+
+
+
+<p>Easier theming</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>WD FE BE FS DO</p>
+
+
+
+<p>OPTIONAL</p>
+
+
+
+<h3 class="wp-block-heading">OTHER HELPFUL TOOLS</h3>
+
+
+
+<h4 class="wp-block-heading">Git Version Control</h4>
+
+
+
+<ul>
+<li>Basic Commands</li>
+
+
+
+<li>Push To Remote</li>
+
+
+
+<li>Github, Gitlab, Bitbucket</li>
+
+
+
+<li>Markdown</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">Editor Extensions</h4>
+
+
+
+<ul>
+<li>Emmet</li>
+
+
+
+<li>Live Server</li>
+
+
+
+<li>Prettier</li>
+
+
+
+<li>Learn Shortcuts</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">AI Tools</h4>
+
+
+
+<ul>
+<li>Github CoPilot</li>
+
+
+
+<li>Cody</li>
+
+
+
+<li>TabNine</li>
+
+
+
+<li>ChatGPT</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">Design &amp; Mockup</h4>
+
+
+
+<ul>
+<li>Figma</li>
+
+
+
+<li>Sketch</li>
+
+
+
+<li>Adobe Products</li>
+
+
+
+<li>InVison</li>
+
+
+
+<li>Canva</li>
+
+
+
+<li>Balsamiq</li>
+</ul>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>WD FE FS</p>
+
+
+
+<p>OPTIONAL</p>
+
+
+
+<h3 class="wp-block-heading">DESIGN PRINCIPLES</h3>
+
+
+
+<h4 class="wp-block-heading">COLOR &amp; CONTRAST</h4>
+
+
+
+<ul>
+<li>Use of color/hue/shades</li>
+
+
+
+<li>Color palette choices</li>
+
+
+
+<li>Difference in brightness between elements</li>
+
+
+
+<li>Text readability</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">WHITESPACE</h4>
+
+
+
+<ul>
+<li>Empty space between elements (Negative space)</li>
+
+
+
+<li>Know when there is too much or too little space</li>
+
+
+
+<li>Improve readability</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">SCALE</h4>
+
+
+
+<ul>
+<li>Size and proportion of elements within a design</li>
+
+
+
+<li>Text, images and other visual elements</li>
+
+
+
+<li>Should be proportionate to each other</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">VISUAL HIERARCHY</h4>
+
+
+
+<ul>
+<li>Arrangement and presentation of elements</li>
+
+
+
+<li>Guide the user’s attention to the most important areas</li>
+
+
+
+<li>Helps user navigate your website</li>
+</ul>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>WD FE BE FS</p>
+
+
+
+<h3 class="wp-block-heading">JAVASCRIPT</h3>
+
+
+
+<p>The amount of JS to learn depends on your goals</p>
+
+
+
+<p>Fundamentals: functions, loops, conditionals</p>
+
+
+
+<p>DOM (Document Object Model)</p>
+
+
+
+<p>Hight order array methods (forEach, map, filter, etc)</p>
+
+
+
+<p>Fetch API, Promises, Async Await</p>
+
+
+
+<p>JSON &amp; HTTP basics</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>WD</p>
+
+
+
+<p>OPTIONAL</p>
+
+
+
+<h3 class="wp-block-heading">WORDPRESS</h3>
+
+
+
+<p>Great for freelancers &amp; agencies</p>
+
+
+
+<p>Build websites quickly with little to no coding</p>
+
+
+
+<p>Clients can update their content</p>
+
+
+
+<p>Tons of themes &amp; plugins (free &amp; paid)</p>
+
+
+
+<p>I always recommend learning PHP</p>
+
+
+
+<p>Huge community</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>WD FE BE FS DO</p>
+
+
+
+<h3 class="wp-block-heading">BASIC DEPLOYMENT</h3>
+
+
+
+<p>Make Your Projects Live<br>Deploy your websites and make them live for others to use.</p>
+
+
+
+<p>Frontend Hosting Services<br>Services like Netlify and Vercel are great for frontend projects that do not require a server to run.</p>
+
+
+
+<p>Domain Names<br>Purchase domain names and link to your hosting account via DNS.</p>
+
+
+
+<p>SSL Certificates<br>All live projects should use HTTPS/SSL. Many services include SSL by default. “Let’s Encrypt” offers free SSL.</p>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td>NETLIFY</td><td>VERCEL</td><td>GITHUB PAGES</td></tr><tr><td>HOSTINGER</td><td>BLUEHOST</td><td>NAMECHEAP<br>(DOMAINS &amp; SSL)</td></tr></tbody></table></figure>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<h3 class="wp-block-heading">UP TO THIS POINT</h3>
+
+
+
+<p>FOUNDATIONAL FRONTEND DEVELOPER OR WEB DESIGNER</p>
+
+
+
+<ol>
+<li>Dev Environment &amp; Workflow<br>Fluent with a text editor and extensions, Git &amp; Github, local dev server, etc.</li>
+
+
+
+<li>Create Statci Websites<br>Create responsive layouts with HTML &amp; CSS. You should also know some basic design principles.</li>
+
+
+
+<li>Dynamic Pages<br>Add some basic dynamic functionality such as modals, popups, form validation, etc.</li>
+
+
+
+<li>HTTP Requests<br>Use the fetch API to make requests to JSON apis and update data on a web page.</li>
+
+
+
+<li>Basic Website Deployment<br>Deploy frontend projects to a hosting service such as Netlify or Vercel.</li>
+
+
+
+<li>CSS Framework (Optional)<br>Learn a CSS framework to make styling your websites easier and more efficient. Sass is also an option.</li>
+
+
+
+<li>WordPress (Optional)<br>Create dynamic websites with WordPress. This can be beneficial for freelance work.</li>
+</ol>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>PLANNING</p>
+
+
+
+<h3 class="wp-block-heading">WHERE TO NEXT?</h3>
+
+
+
+<h4 class="wp-block-heading">WEB DESIGN</h4>
+
+
+
+<ul>
+<li>Get better at CSS</li>
+
+
+
+<li>Learn more design</li>
+
+
+
+<li>WordPress or other no-code tools</li>
+
+
+
+<li>Freelance / Agency</li>
+
+
+
+<li>SEO skills</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">FRONTEND MASTERY</h4>
+
+
+
+<ul>
+<li>Frontend framework</li>
+
+
+
+<li>Get Better at JavaScript</li>
+
+
+
+<li>SPA, SSR &amp; SSG</li>
+
+
+
+<li>Frontend tooling</li>
+
+
+
+<li>TypeScript</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">BACKEND / SERVER</h4>
+
+
+
+<ul>
+<li>Server-side language (Node.js, PHP, Python, C#, etc)</li>
+
+
+
+<li>Server-side frameworks</li>
+
+
+
+<li>REST APIs &amp; HTTP</li>
+
+
+
+<li>Database &amp; ORM</li>
+</ul>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>FE FS</p>
+
+
+
+<p>EVOLVING FE ARCHITECTURE</p>
+
+
+
+<h4 class="wp-block-heading">TRADITIONAL MULTI-PAGE</h4>
+
+
+
+<p>Each page is rendered with separate HTML pages</p>
+
+
+
+<p>UIs were not very fast or dynamic</p>
+
+
+
+<h4 class="wp-block-heading">SPA (SINGLE PAGE APPLICATION)</h4>
+
+
+
+<p>Single HTML page loads and the UI is bundled into JS</p>
+
+
+
+<p>Fast UIs but page loads suffer &amp; bad SEO</p>
+
+
+
+<h4 class="wp-block-heading">SSR (SERVER-SIDE RENDERED)</h4>
+
+
+
+<p>Pages/components load on the server but also have dynamic UIs</p>
+
+
+
+<p>Meta frameworks like Next.js &amp; Nuxt.js</p>
+
+
+
+<h4 class="wp-block-heading">SSG (STATIC SITE GENERATORS)</h4>
+
+
+
+<p>Builds websites into static HTML files and also has dynamic UIs</p>
+
+
+
+<p>Static site generators like Gatsby, Next &amp; Gridsome</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>FE FS</p>
+
+
+
+<h3 class="wp-block-heading">FRONT-END FRAMEWORKS &amp; ECOSYSTEMS</h3>
+
+
+
+<h4 class="wp-block-heading">REACT</h4>
+
+
+
+<h4 class="wp-block-heading">VUE</h4>
+
+
+
+<h4 class="wp-block-heading">ANGULAR</h4>
+
+
+
+<h4 class="wp-block-heading">SVELTE</h4>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>FS FS</p>
+
+
+
+<h3 class="wp-block-heading">REACT</h3>
+
+
+
+<p>Most popular framework. Lots of jobs.</p>
+
+
+
+<p>Uses JSX (JavaScript Syntax Extension)</p>
+
+
+
+<p>Technically a UI library. 3rd party packages</p>
+
+
+
+<p>Mid-range learning curve</p>
+
+
+
+<p>Mid-range performance &amp; bundle size</p>
+
+
+
+<p>Lots of jobs using React (Also lots of devs)</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>FE FS</p>
+
+
+
+<h3 class="wp-block-heading">VUE</h3>
+
+
+
+<p>Rising in popularity</p>
+
+
+
+<p>Focus on Performance &amp; simplicity</p>
+
+
+
+<p>Easy to use template syntax</p>
+
+
+
+<p>Good sized ecosystem</p>
+
+
+
+<p>Easy learning curve</p>
+
+
+
+<p>Min-range performance &amp; bundle size</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>FE FS</p>
+
+
+
+<h3 class="wp-block-heading">ANGULAR</h3>
+
+
+
+<p>Popular in enterprise business</p>
+
+
+
+<p>Full-featured (router, http, services, animations)</p>
+
+
+
+<p>Uses TypeScript by default</p>
+
+
+
+<p>SSR &amp; SSG built into the CLI</p>
+
+
+
+<p>Hard learning curve</p>
+
+
+
+<p>Relatively larger bundle size, but still fast</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>FE FS</p>
+
+
+
+<h3 class="wp-block-heading">SVELTE</h3>
+
+
+
+<p>Compiler that builds to optimized vanilla JS</p>
+
+
+
+<p>Extremely fast and lightweight</p>
+
+
+
+<p>Components are clean and very vanilla-JS like</p>
+
+
+
+<p>Easy learning curve</p>
+
+
+
+<p>Still new and not a ton of jobs</p>
+
+
+
+<p>SvelteKit offers SSR, pre-rendering, routing, etc</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<h3 class="wp-block-heading">REACT ECOSYSTEM</h3>
+
+
+
+<h4 class="wp-block-heading">Create React App</h4>
+
+
+
+<ul>
+<li>CLI To Build App</li>
+
+
+
+<li>Zero Configuration</li>
+
+
+
+<li>Built on Webpack</li>
+
+
+
+<li>Dev Server With Hot Reload</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">React Router</h4>
+
+
+
+<ul>
+<li>Declarative Routing</li>
+
+
+
+<li>Nested Routing</li>
+
+
+
+<li>Route Matching</li>
+
+
+
+<li>Route Parameters</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">State Management</h4>
+
+
+
+<ul>
+<li>Context API &amp; Hooks</li>
+
+
+
+<li>Redux / Redux Toolkit</li>
+
+
+
+<li>MobX</li>
+
+
+
+<li>Zustand</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">Next.js &amp; Remix</h4>
+
+
+
+<ul>
+<li>SSR / Meta Frameworks</li>
+
+
+
+<li>Performance &amp; SEO</li>
+
+
+
+<li>File-Based Routing</li>
+
+
+
+<li>React Server Components</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">Gatsby</h4>
+
+
+
+<ul>
+<li>Static Site Generator</li>
+
+
+
+<li>Extremely Performant</li>
+
+
+
+<li>Good for SEO</li>
+
+
+
+<li>GraphQL Data Layer</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">UI Kits / Libraries</h4>
+
+
+
+<ul>
+<li>Material UI</li>
+
+
+
+<li>React Bootstrap</li>
+
+
+
+<li>Chakra UI</li>
+
+
+
+<li>Styled Components</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">React Native</h4>
+
+
+
+<ul>
+<li>Native Mobile Apps with React</li>
+
+
+
+<li>Cross-Platform</li>
+
+
+
+<li>Single Codebase</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">Other Tools</h4>
+
+
+
+<ul>
+<li>React Query, SWR</li>
+
+
+
+<li>Formik, React Hook Form</li>
+
+
+
+<li>React Testing Library, Vitest</li>
+
+
+
+<li>Emotion, React Animations</li>
+
+
+
+<li>React VR, React360</li>
+</ul>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<h3 class="wp-block-heading">VUE ECOSYSTEM</h3>
+
+
+
+<h4 class="wp-block-heading">Create Vue / Vite</h4>
+
+
+
+<ul>
+<li>CLI To Build SPAs</li>
+
+
+
+<li>Zero Configuration</li>
+
+
+
+<li>Built on Vite</li>
+
+
+
+<li>Hot Reload</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">Vue Router</h4>
+
+
+
+<ul>
+<li>Expressive &amp; Configurable</li>
+
+
+
+<li>Multiple History Modes</li>
+
+
+
+<li>Component-based Config</li>
+
+
+
+<li>Fine-grained Control</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">State Management</h4>
+
+
+
+<ul>
+<li>Provide / Inject</li>
+
+
+
+<li>Pinia / Vuex</li>
+
+
+
+<li>XState</li>
+
+
+
+<li>Harlem</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">Nuxt.js</h4>
+
+
+
+<ul>
+<li>SSR / Meta Framework</li>
+
+
+
+<li>Performance &amp; SEO</li>
+
+
+
+<li>File-Based Routing</li>
+
+
+
+<li>Data Fetching on Server</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">Gridsome</h4>
+
+
+
+<ul>
+<li>Static Site Gnerator</li>
+
+
+
+<li>Extremely Performant</li>
+
+
+
+<li>Good for SEO</li>
+
+
+
+<li>GraphQL Data Layer</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">UI Kits / Libraries</h4>
+
+
+
+<ul>
+<li>Vuetify</li>
+
+
+
+<li>Bootstrap Vue</li>
+
+
+
+<li>Quasar</li>
+
+
+
+<li>Buefy</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">NativeScript-Vue</h4>
+
+
+
+<ul>
+<li>Native Mobile Apps with Vue</li>
+
+
+
+<li>Cross-Platform</li>
+
+
+
+<li>Single Codebase</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">Other Tools</h4>
+
+
+
+<ul>
+<li>TanStack / Vue Query</li>
+
+
+
+<li>Vue Test Utils</li>
+
+
+
+<li>Native Animations</li>
+
+
+
+<li>Vue VR</li>
+</ul>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<h3 class="wp-block-heading">ANGULAR ECOSYSTEM</h3>
+
+
+
+<h4 class="wp-block-heading">Angular CLI</h4>
+
+
+
+<ul>
+<li>CLI To Build SPAs</li>
+
+
+
+<li>Run, Build &amp; Scaffold Apps</li>
+
+
+
+<li>Enable SSR</li>
+
+
+
+<li>Dev Server With Hot Reload</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">@angular/router</h4>
+
+
+
+<ul>
+<li>Built-In Routing Service</li>
+
+
+
+<li>Nested Routing</li>
+
+
+
+<li>Route Guards</li>
+
+
+
+<li>Router Animations</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">State Management</h4>
+
+
+
+<ul>
+<li>Built-In Services</li>
+
+
+
+<li>NgRx</li>
+
+
+
+<li>NGXS</li>
+
+
+
+<li>Akita</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">Built-In SSR &amp; SSG</h4>
+
+
+
+<ul>
+<li>Included with Angular &amp; CLI</li>
+
+
+
+<li>CommonEngine Rendering</li>
+
+
+
+<li>Formerly Angular Universal</li>
+
+
+
+<li>SSR &amp; Prerender for Static</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">UI Kits / Libraries</h4>
+
+
+
+<ul>
+<li>Angular Material</li>
+
+
+
+<li>NG Bootstrap</li>
+
+
+
+<li>PrimeNG</li>
+
+
+
+<li>Clarity</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">NativeScript-Angular</h4>
+
+
+
+<ul>
+<li>Mobile Apps with Angular</li>
+
+
+
+<li>Cross-Platform</li>
+
+
+
+<li>Single Codebase</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">Other Tools</h4>
+
+
+
+<ul>
+<li>TypeScript</li>
+
+
+
+<li>Angular Fire (Firebase)</li>
+
+
+
+<li>Formly</li>
+
+
+
+<li>Built-In Testing</li>
+
+
+
+<li>Built-In Animations</li>
+</ul>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<h3 class="wp-block-heading">SVELTE ECOSYSTEM</h3>
+
+
+
+<h4 class="wp-block-heading">SvelteKit</h4>
+
+
+
+<ul>
+<li>Built SPA, SSR &amp; SSG</li>
+
+
+
+<li>Router, images, Adapters</li>
+
+
+
+<li>PWA Support</li>
+
+
+
+<li>Dev Server With Hot Reload</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">State Management</h4>
+
+
+
+<ul>
+<li>Context API</li>
+
+
+
+<li>Writeable Stores</li>
+
+
+
+<li>Readable Stores</li>
+
+
+
+<li>Zustand</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">UI Kits &amp; Libraries</h4>
+
+
+
+<ul>
+<li>Flowbite Svelte</li>
+
+
+
+<li>Svelte Headless UI</li>
+
+
+
+<li>Smelte</li>
+
+
+
+<li>Smeltestrap</li>
+</ul>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>FE BE FS</p>
+
+
+
+<h3 class="wp-block-heading">TYPESCRIPT</h3>
+
+
+
+<p>Superset of JavaScript</p>
+
+
+
+<p>Adds static typing and other features</p>
+
+
+
+<p>Makes code more robust and descriptive</p>
+
+
+
+<p>Less prone to errors</p>
+
+
+
+<p>IDE Intellisense</p>
+
+
+
+<p>Learn JavaScript first!</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>WD FE BE FS</p>
+
+
+
+<h3 class="wp-block-heading">HEADLESS CMS</h3>
+
+
+
+<h4 class="wp-block-heading">SANITY.IO</h4>
+
+
+
+<ul>
+<li>Hosted solution</li>
+
+
+
+<li>Generates REST &amp; GraphQL</li>
+
+
+
+<li>Scalable &amp; used by large companies</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">PRISMIC</h4>
+
+
+
+<ul>
+<li>Hosted solution</li>
+
+
+
+<li>Generates REST &amp; GraphQL</li>
+
+
+
+<li>Well structured content model</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">CONTENTFUL</h4>
+
+
+
+<ul>
+<li>Hosted solution</li>
+
+
+
+<li>Free for personal projects</li>
+
+
+
+<li>Lots of features &amp; extensive integration</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">HYGRAPH</h4>
+
+
+
+<ul>
+<li>GraphQL APIs</li>
+
+
+
+<li>E-commerce capabilities</li>
+
+
+
+<li>Great for large projects</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">STRAPI</h4>
+
+
+
+<ul>
+<li>Open-source &amp; self hosted</li>
+
+
+
+<li>Built on top of Node.js</li>
+
+
+
+<li>Generates REST &amp; GraphQL APIs</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">WORDPRESS</h4>
+
+
+
+<ul>
+<li>Familiar WordPress interface</li>
+
+
+
+<li>Full headless capabilities</li>
+
+
+
+<li>Plugin ecosystem</li>
+</ul>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>WD FE FS</p>
+
+
+
+<h3 class="wp-block-heading">OTHER USEFUL FRONTEND TOOLS</h3>
+
+
+
+<h4 class="wp-block-heading">SOLID JS</h4>
+
+
+
+<ul>
+<li>Declarative UI library similar to React</li>
+
+
+
+<li>Reactive rendering</li>
+
+
+
+<li>Fairly easy to learn</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">ASTRO</h4>
+
+
+
+<ul>
+<li>Static &amp; SSR websites</li>
+
+
+
+<li>Can use components from React, Vue, Svelte as well as Astro components</li>
+
+
+
+<li>Create API endpoints</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">ALPINE JS</h4>
+
+
+
+<ul>
+<li>Minimal framework for dynamic markup</li>
+
+
+
+<li>More like a library like jQuery</li>
+
+
+
+<li>Adds interactivity without having to use a full frontend framework</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">STENCIL</h4>
+
+
+
+<ul>
+<li>Build reusable, scalable component libraries</li>
+
+
+
+<li>Compiler that generates web components</li>
+
+
+
+<li>Use in any framework</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">HTMX</h4>
+
+
+
+<ul>
+<li>Dynamic web pages, write no JavaScript</li>
+
+
+
+<li>Uses special attributes like ‘hx-get’</li>
+
+
+
+<li>Make HTTP requests and update the DOM from within the HTML</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">JSDOC</h4>
+
+
+
+<ul>
+<li>API documentation generator</li>
+
+
+
+<li>Scans for @JSdoc tags</li>
+
+
+
+<li>Some devs moving from TS to JSDoc</li>
+</ul>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>FE FS</p>
+
+
+
+<h3 class="wp-block-heading">WEB APIS</h3>
+
+
+
+<p>Canvas: Visualization, animation, games</p>
+
+
+
+<p>Geolocation: User location data</p>
+
+
+
+<p>Web Storage: Store local data in browser</p>
+
+
+
+<p>Web Workers API: Run scripts in background</p>
+
+
+
+<p>Web Sockets: Real-time communication</p>
+
+
+
+<p>Audio/Video APIs: Create &amp; manipulate audio/video</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>FE BE FS DO</p>
+
+
+
+<h3 class="wp-block-heading">TESTING</h3>
+
+
+
+<p>Depending on your goals, testing may be something that you want to get into</p>
+
+
+
+<p>Every language has testing libraries</p>
+
+
+
+<h4 class="wp-block-heading">JEST</h4>
+
+
+
+<h4 class="wp-block-heading">MOCHA</h4>
+
+
+
+<h4 class="wp-block-heading">CYPRESS</h4>
+
+
+
+<h4 class="wp-block-heading">ENZYME</h4>
+
+
+
+<h4 class="wp-block-heading">TYPES OF TESTING</h4>
+
+
+
+<ul>
+<li>UNIT TESTING<br>This type of testing pertains to individual units of code. This is the most common type in web development.</li>
+
+
+
+<li>INTEGRATION TESTING<br>Integration testing is the process of seeing how different elements of your application work together.</li>
+
+
+
+<li>END TO END TESTING<br>Process of testing your entire application from start to finish.</li>
+</ul>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<h3 class="wp-block-heading">UP TO THIS POINT</h3>
+
+
+
+<p>ADVANCED FRONTEND DEVELOPER</p>
+
+
+
+<ol>
+<li>Frontend Framework<br>Fluent with a frontend framework like React, Vue, Svelte or Angular and their ecosystems.</li>
+
+
+
+<li>Frontend Tooling<br>NPM and CLI tools, module bundlers like Vite and Webpack.</li>
+
+
+
+<li>Server-Side Rendering<br>Create server-rendered pages. Next.js, Remix, Nuxt.js, SvelteKit, Angular SSR.</li>
+
+
+
+<li>Static Site Generators<br>Generate fast static websites. Next.js, Gatsby, Astro, Gridsome, etc.</li>
+
+
+
+<li>Headless CMS (Optional)<br>GUI tools to create REST &amp; GraphQL APIs. Sanity, Strapi, Contentful, etc.</li>
+
+
+
+<li>Additional Tools (Optional)<br>Maybe learn some additional frontend tools such as TypeScript, Alpine.js, HTMX.</li>
+
+
+
+<li>Web APIs<br>Understand some of the common APIs that are available in the browser. Canvas, speech, geolocation, etc.</li>
+</ol>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>BE FS</p>
+
+
+
+<h3 class="wp-block-heading">SERVER-SIDE LANGUAGES</h3>
+
+
+
+<h4 class="wp-block-heading">JS / NODE</h4>
+
+
+
+<ul>
+<li>High performance (I/O)</li>
+
+
+
+<li>Built on V8 JS engine</li>
+
+
+
+<li>Scalable &amp; used by large companies</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">PYTHON</h4>
+
+
+
+<ul>
+<li>General purpose, good for web</li>
+
+
+
+<li>Ease of learning &amp; readability</li>
+
+
+
+<li>Great frameworks available</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">PHP</h4>
+
+
+
+<ul>
+<li>Designed for web development</li>
+
+
+
+<li>Lots of freedom</li>
+
+
+
+<li>Templating within HTML</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">GOLANG</h4>
+
+
+
+<ul>
+<li>High performance &amp; efficiency</li>
+
+
+
+<li>Vast standard library</li>
+
+
+
+<li>Security &amp; scalability</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">C#</h4>
+
+
+
+<ul>
+<li>Robust OOP language</li>
+
+
+
+<li>.NET ecosystem</li>
+
+
+
+<li>Great performance</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">JAVA</h4>
+
+
+
+<ul>
+<li>General purpose OOP language</li>
+
+
+
+<li>Popular in business enterprise</li>
+
+
+
+<li>Been around a long time</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">RUBY</h4>
+
+
+
+<ul>
+<li>Very readable and clean</li>
+
+
+
+<li>Ruby Gems</li>
+
+
+
+<li>Rapid development</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">RUST</h4>
+
+
+
+<ul>
+<li>Good for specific web dev</li>
+
+
+
+<li>Ease of learning &amp; readability</li>
+
+
+
+<li>Great frameworks available</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">ELIXIR</h4>
+
+
+
+<ul>
+<li>Functional language runs on Erlang</li>
+
+
+
+<li>Very scalable &amp; fault tolerant</li>
+
+
+
+<li>Real-time applications</li>
+</ul>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>Which programming, scripting, and markup languages have you used in the last 12 months?</p>
+
+
+
+<ul>
+<li><a href="https://www.jetbrains.com/lp/devecosystem-2023/languages/" target="_blank" rel="noreferrer noopener">JET BRAINS – Developer Ecosystem</a></li>
+</ul>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>BE FS</p>
+
+
+
+<h3 class="wp-block-heading">SERVER-SIDE FRAMEWORKS</h3>
+
+
+
+<h4 class="wp-block-heading">JS / NODE</h4>
+
+
+
+<ul>
+<li>Optinionated: Nest, Adonis</li>
+
+
+
+<li>Minimal: Express, Koa, Falstify</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">PYTHON</h4>
+
+
+
+<ul>
+<li>Opinionated: Django</li>
+
+
+
+<li>Minimal: Flask</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">PHP</h4>
+
+
+
+<ul>
+<li>Opinional: Laravel, Symfony, CodeIgniter</li>
+
+
+
+<li>Minimal: SlimPHP</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">GOLANG</h4>
+
+
+
+<ul>
+<li>Opinionated: Beego, Revel</li>
+
+
+
+<li>Minimal: Gin, Chi, Echo</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">C#</h4>
+
+
+
+<ul>
+<li>Opinionated: ASP.NET MVC, Blazor</li>
+
+
+
+<li>Minimal: Nancy</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">JAVA</h4>
+
+
+
+<ul>
+<li>Opinionated: Spring Boot, Play</li>
+
+
+
+<li>Minimal: Spark</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">RUBY</h4>
+
+
+
+<ul>
+<li>Opinionated: Ruby On Rails</li>
+
+
+
+<li>Minimal: Sinatra</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">RUST</h4>
+
+
+
+<ul>
+<li>Opionionated: Rocket, Actix</li>
+
+
+
+<li>Minimal: Wrap</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">ELIXIR</h4>
+
+
+
+<ul>
+<li>Opionated: Phoenix</li>
+
+
+
+<li>Minimal: Plug</li>
+</ul>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>FE BE FS</p>
+
+
+
+<h3 class="wp-block-heading">REST APIS</h3>
+
+
+
+<p>Representational State Transfer</p>
+
+
+
+<p>HTTP methods (GET, POST, PUT, DELETE)</p>
+
+
+
+<p>HTTP status codes (200, 400, 500, etc)</p>
+
+
+
+<p>All developers shoul understand REST</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>FE BE FS</p>
+
+
+
+<h3 class="wp-block-heading">GRAPHQL – OPTIONAL</h3>
+
+
+
+<p>Query language for APIs</p>
+
+
+
+<p>More targeted than REST</p>
+
+
+
+<p>Optional but good to know</p>
+
+
+
+<p>Backend will create, frontend will consume APIs</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>BE FS DO</p>
+
+
+
+<h3 class="wp-block-heading">DATABASES</h3>
+
+
+
+<h4 class="wp-block-heading">RELATIONAL</h4>
+
+
+
+<ul>
+<li>Structured related data</li>
+
+
+
+<li>Store data in tables and rows</li>
+
+
+
+<li>SQL (Structured Query Language)</li>
+
+
+
+<li>Been around a long time and still most common</li>
+</ul>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>POSTGRESQL</p>
+
+
+
+<p>MYSQL</p>
+
+
+
+<p>MS SQL</p>
+
+
+
+<h4 class="wp-block-heading">NOSQL</h4>
+
+
+
+<ul>
+<li>Never type of database</li>
+
+
+
+<li>Very scalable and made for huge datasets</li>
+
+
+
+<li>Documents, key-value stores</li>
+
+
+
+<li>Similar to JSON documents</li>
+</ul>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>MONGODB</p>
+
+
+
+<p>REDIS</p>
+
+
+
+<p>NEO4J</p>
+
+
+
+<h4 class="wp-block-heading">CLOUD DATABASES</h4>
+
+
+
+<ul>
+<li>Hosted remotely</li>
+
+
+
+<li>Easier to manage</li>
+
+
+
+<li>Some services include things like auth and file storage</li>
+</ul>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>FIREBASE</p>
+
+
+
+<p>SUPABASE</p>
+
+
+
+<p>FAUNADB</p>
+
+
+
+<h4 class="wp-block-heading">FILE-BASED</h4>
+
+
+
+<ul>
+<li>Little to no setup</li>
+
+
+
+<li>Good for dev, testing &amp; small projects</li>
+</ul>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>SQLITE</p>
+
+
+
+<p>MARKDOWN</p>
+
+
+
+<p>H2</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>BE FS</p>
+
+
+
+<h3 class="wp-block-heading">DATABASE ORMS</h3>
+
+
+
+<h4 class="wp-block-heading">MONGOOSE</h4>
+
+
+
+<p>Node.js &amp; MongoDB</p>
+
+
+
+<h4 class="wp-block-heading">SEQUELIZE</h4>
+
+
+
+<p>Node.js &amp; SQL</p>
+
+
+
+<h4 class="wp-block-heading">django</h4>
+
+
+
+<p>DJANGO ORM</p>
+
+
+
+<p>Python/Django &amp; SQL</p>
+
+
+
+<h4 class="wp-block-heading">SQLALCHEMY</h4>
+
+
+
+<p>Python &amp; SQL</p>
+
+
+
+<h4 class="wp-block-heading">PYMONGO</h4>
+
+
+
+<p>Python &amp; MongoDB</p>
+
+
+
+<h4 class="wp-block-heading">ELOQUENT</h4>
+
+
+
+<p>PHP/Laravel &amp; SQL</p>
+
+
+
+<h4 class="wp-block-heading">DOCTRINE</h4>
+
+
+
+<p>PHP &amp; SQL</p>
+
+
+
+<h4 class="wp-block-heading">DAPPER</h4>
+
+
+
+<p>C# .NET &amp; SQL</p>
+
+
+
+<h4 class="wp-block-heading">PRISMA</h4>
+
+
+
+<p>JS, TS, Rust, GoLang</p>
+
+
+
+<h4 class="wp-block-heading">DRIZZLE ORM</h4>
+
+
+
+<p>TypeScript &amp; SQL</p>
+
+
+
+<h4 class="wp-block-heading">MIKRO ORM</h4>
+
+
+
+<p>PHP &amp; SQL</p>
+
+
+
+<h4 class="wp-block-heading">KNEX.JS</h4>
+
+
+
+<p>Node.js &amp; SQL</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>FE BE FS</p>
+
+
+
+<h3 class="wp-block-heading">AUTHENTICATION</h3>
+
+
+
+<h4 class="wp-block-heading">COOKIES &amp; SESSIONS</h4>
+
+
+
+<ul>
+<li>Session is created on the server</li>
+
+
+
+<li>Cookie stored on the client</li>
+
+
+
+<li>Send cookie with each request</li>
+
+
+
+<li>HTTP-Only cookies</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">JSON WEB TOKENS</h4>
+
+
+
+<ul>
+<li>JSON object signed by the server</li>
+
+
+
+<li>Sent with each request and verified by the server</li>
+
+
+
+<li>Common with RESTful APIs</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">OAUTH</h4>
+
+
+
+<ul>
+<li>Open standard for access delegation</li>
+
+
+
+<li>Log in without passwords</li>
+
+
+
+<li>Use Google, Github, Twitter and many other providers</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">AUTH LIBRARIES</h4>
+
+
+
+<ul>
+<li>Many libraries and middleware to make this process easier</li>
+
+
+
+<li>Many frameworks have these systems built-in</li>
+
+
+
+<li>Libraries for password hashing such as BCrypt</li>
+</ul>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>FE BE FS</p>
+
+
+
+<h3 class="wp-block-heading">SERVERLESS</h3>
+
+
+
+<p>Run server-side code without having to manage your own server</p>
+
+
+
+<p>Platforms like Vercel, Netlify, AWS Lambda, Azure Functions, Firebase, Supabase</p>
+
+
+
+<p>Authentication, send emails, protect data, etc</p>
+
+
+
+<p>Save money as you only pay for use-time</p>
+
+
+
+<p>Big part of the&nbsp;<strong>Jamstack</strong></p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>BE FS DO</p>
+
+
+
+<h3 class="wp-block-heading">FS &amp; API DEPLOYMENT</h3>
+
+
+
+<h4 class="wp-block-heading">Web Server Technology</h4>
+
+
+
+<p>You will typically need a web server like Apache or NGINX.</p>
+
+
+
+<h4 class="wp-block-heading">Platform as a Service (PaaS)</h4>
+
+
+
+<p>Services like Render and Heroku do a TON of the configuration and setup for you.</p>
+
+
+
+<h4 class="wp-block-heading">Cloud Hosting &amp; Infrastructure as a Service (IaaS)</h4>
+
+
+
+<p>Services like Linode and Digital Ocean offer a semi-managed solution</p>
+
+
+
+<p>AWS and Azure offer large infrastructures of barebones servers</p>
+
+
+
+<h4 class="wp-block-heading">RENDER</h4>
+
+
+
+<h4 class="wp-block-heading">HEROKU</h4>
+
+
+
+<h4 class="wp-block-heading">LINODE</h4>
+
+
+
+<h4 class="wp-block-heading">DIGITAL OCEAN</h4>
+
+
+
+<h4 class="wp-block-heading">AWS</h4>
+
+
+
+<h4 class="wp-block-heading">AZURE</h4>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>FE BE FS</p>
+
+
+
+<h3 class="wp-block-heading">BUN.JS</h3>
+
+
+
+<p>All-In-One Toolkit for full stack JavaScript</p>
+
+
+
+<p>Server-side runtime designed for speed</p>
+
+
+
+<p>Includes a bundler for frontend dev</p>
+
+
+
+<p>Node.js-compatible package manager</p>
+
+
+
+<p>Written in the Zig programming language</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<h3 class="wp-block-heading">UP TO THIS POINT</h3>
+
+
+
+<p>FULL STACK DEVELOPER</p>
+
+
+
+<ol>
+<li>Server-Side Language<br>Fluent with a server-side language/technology like Node.js, Python, PHP, C#, etc.</li>
+
+
+
+<li>Server-Side Framework<br>Know a web framework like Express, Laravel, Django, ASP.NET, etc.</li>
+
+
+
+<li>Database &amp; ORM<br>Relational or NoSQL database like PostgreSQL or MongoDB as well as an ORM (built in or 3rd party).</li>
+
+
+
+<li>Authentication<br>Authentication and authorization strategies like sessions and JWT. Password hashing, etc.</li>
+
+
+
+<li>REST APIs<br>Create RESTful APIs from scratch and fully understand the HTTP request/response cycle.</li>
+
+
+
+<li>App &amp; API Deployment<br>Apache &amp; NGINX. Deploy to hosting services like Render or Digital Ocean.</li>
+</ol>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>BE FS DO</p>
+
+
+
+<h3 class="wp-block-heading">CONTAINERIZATION – OPTIONAL</h3>
+
+
+
+<p>Package software into standardized units</p>
+
+
+
+<p>Same environment for everyone &amp; everywhere</p>
+
+
+
+<p><strong>Docker</strong>&nbsp;is the main tool for containerization</p>
+
+
+
+<p><strong>Kubernetes</strong>&nbsp;is used for automating deployment, scaling and management and used with Docker</p>
+
+
+
+<p>These tools are essential for DevOps</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>FE BE FS</p>
+
+
+
+<h3 class="wp-block-heading">WEB ASSEMBLY – OPTIONAL</h3>
+
+
+
+<p>Low-level assembly-like language that runs in the browser and is extremely fast</p>
+
+
+
+<p>Use languages like C, C++, Rust, Go, Zig</p>
+
+
+
+<p>Computationally intensive tasks in the browser</p>
+
+
+
+<p>Port existing codebases to the web</p>
+
+
+
+<p>Games, video editing, CAD software, etc</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>FE BE FS</p>
+
+
+
+<p>OPTIONAL</p>
+
+
+
+<h3 class="wp-block-heading">MOBLIE DEVELOPMENT</h3>
+
+
+
+<h4 class="wp-block-heading">REACT NATIVE</h4>
+
+
+
+<ul>
+<li>Use React to build native mobile applications</li>
+
+
+
+<li>Single codebase for iOS and Android</li>
+
+
+
+<li>Popular with many companies</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">FLUTTER</h4>
+
+
+
+<ul>
+<li>Build native mobile applications with Dart</li>
+
+
+
+<li>Rendering engine written in C++ called Skia</li>
+
+
+
+<li>Slight advantage over React Native. No bridge</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">NATIVESCRIPT</h4>
+
+
+
+<ul>
+<li>Build native mobiles apps with any JS framework</li>
+
+
+
+<li>Set of native APIs</li>
+
+
+
+<li>Not as popular as RN or Flutter, but viable option</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">IONIC</h4>
+
+
+
+<ul>
+<li>Mobile SDK for hybrid apps</li>
+
+
+
+<li>Use HTML/CSS/JS to build mobile applications</li>
+
+
+
+<li>Great for progressive web apps</li>
+</ul>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>FE BE FS</p>
+
+
+
+<h3 class="wp-block-heading">PWA – OPTIONAL</h3>
+
+
+
+<p>Web apps with a native feel on all devices</p>
+
+
+
+<p>Fast, work offline, push notifications</p>
+
+
+
+<p>They can be installed like a native app</p>
+
+
+
+<p>Utilizes service workers for offline functionality</p>
+
+
+
+<p>Use any framework that you want</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>FE BE FS</p>
+
+
+
+<p>OPTIONAL</p>
+
+
+
+<h3 class="wp-block-heading">DESKTOP APP DEVELOPMENT</h3>
+
+
+
+<h4 class="wp-block-heading">ELECTRON</h4>
+
+
+
+<ul>
+<li>Build fast desktop apps with JavaScript</li>
+
+
+
+<li>Bundles Node.js/Chromium</li>
+
+
+
+<li>VSCode, Atom, Postman, Discord, Slack all use Electron</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">TAURI</h4>
+
+
+
+<ul>
+<li>More lightweight than Electron</li>
+
+
+
+<li>Built on the Rust programming language</li>
+
+
+
+<li>Uses the OS native renderer</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">NEUTRALINOJS</h4>
+
+
+
+<ul>
+<li>Lightweight desktop apps with HTML/CSS/JS</li>
+
+
+
+<li>Implements secure web socket connection</li>
+
+
+
+<li>Embeds a static web server</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">NW.JS</h4>
+
+
+
+<ul>
+<li>Use JS (vanilla or framework) for desktop</li>
+
+
+
+<li>Bundles Node.js/Chromium similar to Electron</li>
+</ul>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>WD FE FS</p>
+
+
+
+<h3 class="wp-block-heading">DESIGN TRENDS</h3>
+
+
+
+<p>Dark Mode: Sleek looking &amp; easy on the eyes</p>
+
+
+
+<p>AI Generated Designs: Midjourney, Sensei, etc</p>
+
+
+
+<p>Glassmorphism: Frosted glass effect</p>
+
+
+
+<p>Claymorphism: Soft, rounded shapes and pastel</p>
+
+
+
+<p>Retro Futurism: Future as imagined in the past</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>BE FS DO</p>
+
+
+
+<h3 class="wp-block-heading">IOT &amp; METAVERSE</h3>
+
+
+
+<p>Everyday objects connected to the internet</p>
+
+
+
+<p>IoT-Enabled Web Applications</p>
+
+
+
+<p>Real-time analytics</p>
+
+
+
+<p>The&nbsp;<strong>Metaverse</strong>&nbsp;allows people to interact with one another throught a virtual environment</p>
+
+
+
+<p>Could be a big part of the future of web dev</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>WD FE BE FS DO</p>
+
+
+
+<h3 class="wp-block-heading">ARTIFICIAL INTELLIGENCE</h3>
+
+
+
+<p>Tools to help aid in development (CoPilot, Cody)</p>
+
+
+
+<p>Chatbots &amp; Voice Assistants</p>
+
+
+
+<p>Open AI APIs</p>
+
+
+
+<p>No-Code Tools</p>
+
+
+
+<p>AI Generated Design / UI</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>DO</p>
+
+
+
+<h3 class="wp-block-heading">DEVOPS</h3>
+
+
+
+<p>Combines software development &amp; IT Operations</p>
+
+
+
+<p>Deployment &amp; maintenance</p>
+
+
+
+<p>Containerization</p>
+
+
+
+<p>CI/CD Tools (TravisCI, CircleCI, etc)</p>
+
+
+
+<p>Infrastructure as Code (IoC) – Terraform</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>WD FE FS</p>
+
+
+
+<h3 class="wp-block-heading">ANIMATION LIBRARIES</h3>
+
+
+
+<h4 class="wp-block-heading">GSAP</h4>
+
+
+
+<ul>
+<li>Powerful JS animation library</li>
+
+
+
+<li>Used by large companies</li>
+
+
+
+<li>Can create complex animations</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">REACT SPRING</h4>
+
+
+
+<ul>
+<li>Library for React</li>
+
+
+
+<li>Physics-based animation</li>
+
+
+
+<li>Simple API for creating animations</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">ANIME.JS</h4>
+
+
+
+<ul>
+<li>Lightweight JS animation library</li>
+
+
+
+<li>Simple &amp; Flexible</li>
+
+
+
+<li>Supports CSS properties, transforms, etc</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">THREE.JS</h4>
+
+
+
+<ul>
+<li>Create 3D animations</li>
+
+
+
+<li>Provides high-level API for WebGL</li>
+
+
+
+<li>Powerful rendering engine</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">VELOCITY</h4>
+
+
+
+<ul>
+<li>Known for speed &amp; performance</li>
+
+
+
+<li>Animate SVG and DOM elements</li>
+
+
+
+<li>Simple syntax &amp; good docs</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">TYPED.JS</h4>
+
+
+
+<ul>
+<li>Text-based animations</li>
+
+
+
+<li>Typewriter effects and text transitions</li>
+
+
+
+<li>Very easy to use</li>
+</ul>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>FE FS</p>
+
+
+
+<h3 class="wp-block-heading">VR / AR</h3>
+
+
+
+<p>VR – Computer generated environments</p>
+
+
+
+<p>AR – Real world with generated elements</p>
+
+
+
+<p>A-Frame: Web framework for VR experiences</p>
+
+
+
+<p>React 360 &amp; ViroReact</p>
+
+
+
+<p>AR.js is a library for creating AR experiences on the web</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>FE BE FS DO</p>
+
+
+
+<h3 class="wp-block-heading">WEB3 &amp; BLOCKCHAIN</h3>
+
+
+
+<p>It’s unknown where Web3 will take us</p>
+
+
+
+<p>Blockchain is a very powerful technology</p>
+
+
+
+<p>Ethereum, Solidity &amp; smart contracts</p>
+
+
+
+<p>Could be beneficial to learn this stuff early</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>JSON Server Tutorial</title>
+		<link>/wordpress_blog/json-server-tutorial/</link>
+		
+		<dc:creator><![CDATA[gee.hsu]]></dc:creator>
+		<pubDate>Mon, 23 Oct 2023 01:30:00 +0000</pubDate>
+				<category><![CDATA[Youtube]]></category>
+		<guid isPermaLink="false">/wordpress_blog/?p=777</guid>
+
+					<description><![CDATA[learning from Youtube Channel:&#038;n [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p>learning from Youtube Channel:&nbsp;<a rel="noreferrer noopener" href="https://www.youtube.com/@Codevolution/videos" target="_blank">Codevolution</a><br>JSON Server Tutorial for Beginner:&nbsp;<a rel="noreferrer noopener" href="https://www.youtube.com/watch?v=_1kNqAybxW0&amp;list=PLC3y8-rFHvwhc9YZIdqNL5sWeTCGxF4ya" target="_blank">Playlist</a><br>Thank you.</p>
+
+
+
+<h2 class="wp-block-heading">#1 – Introduction</h2>
+
+
+
+<h3 class="wp-block-heading">What and Why?</h3>
+
+
+
+<p>Json server is an npm package that let you create fake REST APIs with zero coding</p>
+
+
+
+<p>As a front end developer, I constantly need mock data that I can use to quickly prototype front end components</p>
+
+
+
+<p>Data should be fetched asynchronously and the APIs should support not just GET but also POST, PUT and DELETE requests</p>
+
+
+
+<p>Creating a node + express + mongodb backend is pretty time consuming</p>
+
+
+
+<h3 class="wp-block-heading">Course structure</h3>
+
+
+
+<p>How to create a simple json file that can be used as a database<br>Querying a list of items<br>Querying by id<br>Filtering<br>Sorting<br>Pagination<br>Querying with operations<br>Querying by full text search<br>Querying parent or child entities<br>Making POST, PUT or DELETE requests<br>Configuration options</p>
+
+
+
+<h3 class="wp-block-heading">Prerequisites</h3>
+
+
+
+<p>JSON format<br>How APIs are consumed in a frontend app</p>
+
+
+
+<pre class="wp-block-code"><code>// db.json
+{
+  "products": &#91;
+    {
+      "id": 1,
+      "title": "Product 1",
+      "category": "electronics",
+      "price": 4000,
+      "description": "This is description about product 1"
+    },
+    {
+      "id": 2,
+      "title": "Product 2",
+      "category": "electronics",
+      "price": 2000,
+      "description": "This is description about product 2"
+    },
+    {
+      "id": 3,
+      "title": "Product 3",
+      "category": "books",
+      "price": 1000,
+      "description": "This is description about product 3"
+    },
+    {
+      "id": 4,
+      "title": "Product 4",
+      "category": "fitness",
+      "price": 3000,
+      "description": "This is description about product 4"
+    },
+    {
+      "id": 5,
+      "title": "Product 5",
+      "category": "fitness",
+      "price": 4000,
+      "description": "This is description about product 5"
+    },
+    {
+      "id": 6,
+      "title": "Product 6",
+      "category": "gardening",
+      "price": 5000,
+      "description": "This is description about product 6"
+    },
+    {
+      "id": 7,
+      "title": "Product 7",
+      "category": "furniture",
+      "price": 6000,
+      "description": "This is description about product 7"
+    },
+    {
+      "id": 8,
+      "title": "Product 8",
+      "category": "furniture",
+      "price": 7000,
+      "description": "This is description about product 8"
+    },
+    {
+      "id": 9,
+      "title": "Product 9",
+      "category": "accessories",
+      "price": 4000,
+      "description": "This is description about product 9"
+    },
+    {
+      "id": 10,
+      "title": "Product 10",
+      "category": "electronics",
+      "price": 3000,
+      "description": "This is description about product 10",
+      "discount": {
+        "type": "shipping"
+      }
+    }
+  ],
+  "reviews": &#91;
+    {
+      "id": 1,
+      "rating": 3,
+      "comment": "Review 1 for product id 1",
+      "productId": 1
+    },
+    {
+      "id": 2,
+      "rating": 4,
+      "comment": "Review 2 for product id 1",
+      "productId": 1
+    },
+    {
+      "id": 3,
+      "rating": 4,
+      "comment": "Review 3 for product id 1",
+      "productId": 1
+    },
+    {
+      "id": 4,
+      "rating": 5,
+      "comment": "Review 1 for product id 2",
+      "productId": 2
+    },
+    {
+      "id": 1,
+      "rating": 3,
+      "comment": "Review 1 for product id 3",
+      "productId": 3
+    }
+  ]
+}</code></pre>
+
+
+
+<h3 class="wp-block-heading">操作步驟&amp;指令</h3>
+
+
+
+<ol>
+<li>打開終端機<br>輸入 npm init -y<br>產生 package.json</li>
+
+
+
+<li>安裝 json server package<br>輸入 npm install json-server</li>
+
+
+
+<li>新增 package.json “scripts” 指令<br>“serve-json”: “json-server –watch db.json”</li>
+
+
+
+<li>輸入 npm run serve-json</li>
+</ol>
+
+
+
+<h2 class="wp-block-heading">#2 – GET Request</h2>
+
+
+
+<ul>
+<li>http://localhost:3000/products</li>
+
+
+
+<li>http://localhost:3000/products/1</li>
+
+
+
+<li>http://localhost:3000/reviews</li>
+
+
+
+<li>http://localhost:3000/reviews/1</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">#3 – Filtering</h2>
+
+
+
+<ul>
+<li>http://localhost:3000/products/?category=electronics</li>
+
+
+
+<li>http://localhost:3000/products/?category=electronics&amp;discount.type=shipping</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">#4 – Sorting</h2>
+
+
+
+<ul>
+<li>http://localhost:3000/products?_sort=price</li>
+
+
+
+<li>http://localhost:3000/products?_sort=price&amp;_order=desc</li>
+
+
+
+<li>http://localhost:3000/products?_sort=price,category&amp;_order=desc,asc</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">#5 – Pagination</h2>
+
+
+
+<ul>
+<li>http://localhost:3000/products?_page=1</li>
+
+
+
+<li>http://localhost:3000/products?_page=1&amp;_limit=2</li>
+
+
+
+<li>http://localhost:3000/products?_page=2&amp;_limit=2</li>
+
+
+
+<li>http://localhost:3000/products?_page=3&amp;_limit=2</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">講解</h3>
+
+
+
+<ul>
+<li>使用 Chrome 打開 Network 查看 Headers 資訊<br>Link: 的資訊內容</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">#6 – Operators</h2>
+
+
+
+<ul>
+<li>http://localhost:3000/products?price_gte=2000&amp;lte=6000</li>
+
+
+
+<li>http://localhost:3000/products?id_ne=1</li>
+
+
+
+<li>http://localhost:3000/products?category_like=^f</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">#7 – Full text Search</h2>
+
+
+
+<ul>
+<li>http://localhost:3000/products?q=in</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">#8 – Relationships</h2>
+
+
+
+<ul>
+<li>http://localhost:3000/products?_embed=reviews</li>
+
+
+
+<li>http://localhost:3000/products/1?_embed=reviews</li>
+
+
+
+<li>http://localhost:3000/reviews?_expand=product</li>
+
+
+
+<li>http://localhost:3000/reviews/1?_expand=product</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">#9 – POST Request</h2>
+
+
+
+<h3 class="wp-block-heading">講解&amp;操作步驟</h3>
+
+
+
+<ol>
+<li>安裝 VS Code 插件 – Thunder Client</li>
+
+
+
+<li>導覽列會出現 Thunder Client 功能</li>
+
+
+
+<li>點擊 New Request 按鈕</li>
+
+
+
+<li>選擇 POST 方法</li>
+
+
+
+<li>修改 Request Url<br>http://localhost:3000/products</li>
+
+
+
+<li>點擊 Body &gt; Json</li>
+
+
+
+<li>複製 db.json 檔案中一筆資料來做修改</li>
+
+
+
+<li>修改後點擊送出</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// 7.複製 db.json 檔案中一筆資料來做修改
+{
+      "id": 11,
+      "title": "Product 11",
+      "category": "electronics",
+      "price": 4000,
+      "description": "This is description about product 11"
+}</code></pre>
+
+
+
+<h2 class="wp-block-heading">#10 – PUT, PATCH and DELETE Request</h2>
+
+
+
+<h3 class="wp-block-heading">講解 PUT &amp; 操作步驟</h3>
+
+
+
+<ol>
+<li>繼續使用 Thunder Client</li>
+
+
+
+<li>改成 PUT 方法</li>
+
+
+
+<li>修改 Request Url<br>http://localhost:3000/products/11</li>
+
+
+
+<li>修改 Json Content<br>category 的值由electronics改成furniture</li>
+
+
+
+<li>點擊傳送</li>
+</ol>
+
+
+
+<h3 class="wp-block-heading">講解 PATCH &amp; 操作步驟</h3>
+
+
+
+<ol>
+<li>修改部分</li>
+
+
+
+<li>改成 PATCH 方法</li>
+
+
+
+<li>Request Url<br>http://localhost:3000/products/11</li>
+
+
+
+<li>修改 Json Content</li>
+
+
+
+<li>點擊傳送</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// 4. 修改 Json Content
+{
+  "price": 8000
+}</code></pre>
+
+
+
+<h3 class="wp-block-heading">講解 DELETE &amp; 操作步驟</h3>
+
+
+
+<ol>
+<li>改成 DELETE 方法</li>
+
+
+
+<li>Request Url<br>http://localhost:3000/products/11</li>
+
+
+
+<li>清除 Json Content 內容</li>
+
+
+
+<li>點擊傳送</li>
+</ol>
+
+
+
+<h2 class="wp-block-heading">#11 – Configurations</h2>
+
+
+
+<h3 class="wp-block-heading">講解 &amp; 操作步驟</h3>
+
+
+
+<ol>
+<li>修改 package.json 檔案<br>“serve-json”: “json-server –watch db.json –port 4000”</li>
+
+
+
+<li>儲存後，終止終端機</li>
+
+
+
+<li>執行 npm run serve-json 指令</li>
+
+
+
+<li>客製化 route configuration</li>
+
+
+
+<li>建立 routes.json 檔案</li>
+
+
+
+<li>修改 package.json 檔案<br>“serve-json”: “json-server –watch db.json –port 4000 –routes routes.json”</li>
+
+
+
+<li>終端機重新啟動</li>
+
+
+
+<li>在網址列輸入<br>http://localhost:4000/api/v1/products</li>
+
+
+
+<li>修改 routes.json 檔案</li>
+
+
+
+<li>終端機重新啟動</li>
+
+
+
+<li>在網址列輸入<br>http://localhost:4000/api/v1/products/electronics</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// 5. 建立 routes.json 檔案
+{
+  "/api/v1/*": "/$1"
+}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 9. 修改 routes.json 檔案
+{
+  "/api/v1/*": "/$1",
+  "/products/:category": "/products?category=:category"
+}</code></pre>
+
+
+
+<h2 class="wp-block-heading">#12 – Generate Random Data</h2>
+
+
+
+<h3 class="wp-block-heading">講解 &amp; 操作步驟</h3>
+
+
+
+<ol>
+<li>建立 data.js 檔案</li>
+
+
+
+<li>修改 package.json “scripts” 指令</li>
+
+
+
+<li>終端機重新啟動</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// 1. 建立 data.js 檔案
+module.exports = () =&gt; {
+  const data = {
+    products: &#91;]
+  }
+  for (let i = 0; i &lt; 1000; i++) {
+    data.products.push({
+      id: i,
+      title: `products${i}`,
+    })
+  }
+  return data
+}
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 2. 修改 package.json "scripts" 指令
+"serve-json": "json-server --watch data.js --port 4000 --routes routes.json"</code></pre>
+
+
+
+<h3 class="wp-block-heading">想要更多真實資料</h3>
+
+
+
+<ul>
+<li><a href="https://github.com/faker-js/faker" target="_blank" rel="noreferrer noopener">faker.js</a></li>
+
+
+
+<li><a href="https://github.com/boo1ean/casual" target="_blank" rel="noreferrer noopener">casual</a></li>
+
+
+
+<li><a href="https://github.com/chancejs/chancejs" target="_blank" rel="noreferrer noopener">chancejs</a></li>
+</ul>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>15 Web Developer-Related Career Paths</title>
 		<link>/wordpress_blog/web-developer-career/</link>
 		
@@ -7892,7 +12094,7 @@ nav a:focus {
 
 
 
-<figure class="wp-block-image size-full"><img decoding="async" fetchpriority="high" width="643" height="583" src="/wordpress_blog/wp-content/uploads/2022/04/structure.png" alt="" class="wp-image-704"/><figcaption>structure</figcaption></figure>
+<figure class="wp-block-image size-full"><img fetchpriority="high" decoding="async" width="643" height="583" src="/wordpress_blog/wp-content/uploads/2022/04/structure.png" alt="" class="wp-image-704"/><figcaption>structure</figcaption></figure>
 
 
 

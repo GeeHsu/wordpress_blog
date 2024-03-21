@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Redirecting...</title>
+		<meta http-equiv="refresh" content="0;url=/reviewjs01/%E2%80%9Dall.js">
+	</head>
+	<body>
+		<script type="text/javascript">
+			window.location = "/reviewjs01/%E2%80%9Dall.js";
+		</script>
+
+		<p>You are being redirected to <a href="/reviewjs01/%E2%80%9Dall.js">/reviewjs01/%E2%80%9Dall.js</a></p>
+	</body>
+</html>

@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<title>Vue3 複習07 &#8211; wordpress_blog</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="alternate" type="application/rss+xml" title="訂閱《wordpress_blog》&raquo; 資訊提供" href="/wordpress_blog/feed/">
+<link rel="alternate" type="application/rss+xml" title="訂閱《wordpress_blog》&raquo; 留言的資訊提供" href="/wordpress_blog/comments/feed/">
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.4.3"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"🏳️‍⚧️","🏳️​⚧️")?!1:!n(e,"🇺🇳","🇺​🇳")&&!n(e,"🏴󠁧󠁢󠁥󠁮󠁧󠁿","🏴​󠁧​󠁢​󠁥​󠁮​󠁧​󠁿");case"emoji":return!n(e,"🫱🏻‍🫲🏿","🫱🏻​🫲🏿")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+</script>
+<style id="wp-emoji-styles-inline-css">img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}</style>
+<link rel="stylesheet" id="wp-block-library-css" href="/wordpress_blog/wp-includes/css/dist/block-library/style.min.css?ver=6.4.3" media="all">
+<style id="classic-theme-styles-inline-css">/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}</style>
+<style id="global-styles-inline-css">body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--palette-1-color-0: #212121;--wp--preset--color--palette-1-color-1: #757575;--wp--preset--color--palette-1-color-2: #212121;--wp--preset--color--palette-1-color-3: #212121;--wp--preset--color--palette-1-color-4: #212121;--wp--preset--color--palette-1-color-5: #f5f5f5;--wp--preset--color--palette-1-color-6: #ffffff;--wp--preset--color--palette-1-color-7: #ffffff;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 14px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 18px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--normal: 16px;--wp--preset--font-size--larger: 24px;--wp--preset--font-size--extra-large: 32px;--wp--preset--font-size--huge: 48px;--wp--preset--font-size--gigantic: 64px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}</style>
+<link rel="stylesheet" id="botiga-style-css" href="/wordpress_blog/wp-content/themes/botiga/style.css?ver=1.1.2" media="all">
+<link rel="stylesheet" id="botiga-style-min-css" href="/wordpress_blog/wp-content/themes/botiga/assets/css/styles.min.css?ver=1.1.2" media="all">
+<link rel="stylesheet" id="botiga-custom-styles-css" href="/wordpress_blog/wp-content/uploads/botiga/custom-styles.css?ver=1648804469" media="all">
+<link rel="https://api.w.org/" href="/wordpress_blog/wp-json/">
+<link rel="alternate" type="application/json" href="/wordpress_blog/wp-json/wp/v2/posts/830">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/wordpress_blog/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 6.4.3">
+<link rel="canonical" href="/wordpress_blog/reviewvue3_07/">
+<link rel="shortlink" href="/wordpress_blog/?p=830">
+<link rel="alternate" type="application/json+oembed" href="/wordpress_blog/wp-json/oembed/1.0/embed?url=%2Freviewvue3_07%2F">
+<link rel="alternate" type="text/xml+oembed" href="/wordpress_blog/wp-json/oembed/1.0/embed?url=%2Freviewvue3_07%2F&#038;format=xml">
+<link rel="icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png" sizes="32x32">
+<link rel="icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png" sizes="192x192">
+<link rel="apple-touch-icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png">
+<meta name="msapplication-TileImage" content="/wp-content/uploads/2022/03/logo.png">
+	
+</head>
+
+<body class="post-template-default single single-post postid-830 single-format-standard wp-custom-logo wp-embed-responsive header-header_layout_1 blog-single-layout1">
+
+
+<div id="page" class="site">
+
+	<a class="skip-link screen-reader-text" href="#primary">Skip to content</a>
+
+	
+			<div class="top-bar visibility-desktop-only">
+				<div class="container-fluid">
+					<div class="top-bar-inner">
+						<div class="row valign">
+
+															<div class="col header-elements delimiter-none">
+									<div class="header-item top-bar-social"><div class="social-profile">
+<a target="_blank" href="https://www.facebook.com/watergrass0402/"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></i></a><a target="_blank" href="https://github.com/GeeHsu"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></i></a>
+</div></div>								</div>
+																						<div class="col header-elements delimiter-none">
+													
+			<nav class="header-item top-bar-secondary-navigation secondary-navigation">
+				<div class="menu-topbar-container"><ul id="secondary" class="menu">
+<li id="menu-item-143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143"><a href="/wordpress_blog/setup/">網站架設</a></li>
+<li id="menu-item-144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a href="/wordpress_blog/source/">資料來源</a></li>
+<li id="menu-item-262" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-262"><a href="/wordpress_blog/resource/">學習資源</a></li>
+</ul></div>			</nav>
+											</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			
+							
+				<header id="masthead" class="site-header header_layout_1">
+					<div class="container-fluid">
+						<div class="site-header-inner">
+							<div class="row valign">
+								<div class="col-md-5">
+										
+			<nav id="site-navigation" class="main-navigation">
+				<div class="menu-navbar-container"><ul id="primary-menu" class="menu">
+<li id="menu-item-109" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="/wordpress_blog/about/">關於</a></li>
+<li id="menu-item-110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-110">
+<a href="/wordpress_blog/learn/">學習</a><span tabindex="0" class="dropdown-symbol"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512.011 512.011"><path d="M505.755 123.592c-8.341-8.341-21.824-8.341-30.165 0L256.005 343.176 36.421 123.592c-8.341-8.341-21.824-8.341-30.165 0s-8.341 21.824 0 30.165l234.667 234.667a21.275 21.275 0 0015.083 6.251 21.275 21.275 0 0015.083-6.251l234.667-234.667c8.34-8.341 8.34-21.824-.001-30.165z"></path></svg></i></span>
+<ul class="sub-menu">
+	<li id="menu-item-140" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-140"><a href="/wordpress_blog/category/hexschool/">六角學院</a></li>
+	<li id="menu-item-141" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-141"><a href="/wordpress_blog/category/ninja/">Net Ninja</a></li>
+	<li id="menu-item-483" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-483"><a href="/wordpress_blog/category/youtube/">Youtube</a></li>
+</ul>
+</li>
+<li id="menu-item-111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="/wordpress_blog/linestore/">LINE STORE</a></li>
+</ul></div>			</nav><!-- #site-navigation -->
+											</div>
+								<div class="col-md-2">
+												<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog" decoding="async" fetchpriority="high"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+											</div>
+								<div class="col-md-5 header-elements">
+																	</div>							
+							</div>
+						</div>
+					</div>
+								<div class="header-search-form">
+			<form role="search" method="get" class="search-form" action="/">
+	<label class="screen-reader-text" for="search-form-1">Search&hellip;</label>
+	<input type="search" id="search-form-1" class="search-field" value="" name="s" placeholder="Search &hellip;">
+	<button type="submit" class="search-submit" value="Search"><i class="ws-svg-icon"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 100 14.25 7.125 7.125 0 000-14.25zM2.25 10.875a8.625 8.625 0 1117.25 0 8.625 8.625 0 01-17.25 0z"></path><path fill-rule="evenodd" d="M15.913 15.914a.75.75 0 011.06 0l4.557 4.556a.75.75 0 01-1.06 1.06l-4.557-4.556a.75.75 0 010-1.06z"></path></svg></i></button>
+</form>
+			</div>
+			
+									</header>
+
+										<div class="search-overlay"></div>
+			
+			<div class="botiga-offcanvas-menu">
+				<div class="mobile-header-item">
+					<div class="row">
+						<div class="col">
+										<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog" decoding="async"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+									</div>
+						<div class="col align-right">
+							<a class="mobile-menu-close" href="#"><i class="ws-svg-icon icon-cancel"><svg width="16" height="16" fill="none" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.219.781L.78 2.22 9.562 11l-8.78 8.781 1.437 1.438L11 12.437l8.781 8.782 1.438-1.438L12.437 11l8.782-8.781L19.78.78 11 9.562 2.219.783z"></path></svg></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="mobile-header-item">
+						
+			<nav id="site-navigation" class="main-navigation">
+				<div class="menu-navbar-container"><ul id="primary-menu" class="menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="/wordpress_blog/about/">關於</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-110">
+<a href="/wordpress_blog/learn/">學習</a><span tabindex="0" class="dropdown-symbol"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512.011 512.011"><path d="M505.755 123.592c-8.341-8.341-21.824-8.341-30.165 0L256.005 343.176 36.421 123.592c-8.341-8.341-21.824-8.341-30.165 0s-8.341 21.824 0 30.165l234.667 234.667a21.275 21.275 0 0015.083 6.251 21.275 21.275 0 0015.083-6.251l234.667-234.667c8.34-8.341 8.34-21.824-.001-30.165z"></path></svg></i></span>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-140"><a href="/wordpress_blog/category/hexschool/">六角學院</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-141"><a href="/wordpress_blog/category/ninja/">Net Ninja</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-483"><a href="/wordpress_blog/category/youtube/">Youtube</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="/wordpress_blog/linestore/">LINE STORE</a></li>
+</ul></div>			</nav><!-- #site-navigation -->
+							</div>
+				<div class="mobile-header-item">
+									<a target="&quot;_blank&quot;" class="button header-item" href="https://www.facebook.com/watergrass0402/">聯絡我</a>
+							</div>			
+			</div>
+			
+							<header id="masthead-mobile" class="site-header mobile-header">
+					<div class="container-fluid">
+						<div class="row valign flex-nowrap">
+							<div class="col-sm-6 col-md-4 col-grow-mobile">
+											<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog" decoding="async"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+										</div>
+							<div class="col-auto col-sm-6 col-md-8 col-grow-mobile header-elements valign align-right">
+																	
+															<a href="#" class="menu-toggle">
+				<i class="ws-svg-icon"><svg width="16" height="11" viewbox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="16" height="1"></rect><rect y="5" width="16" height="1"></rect><rect y="10" width="16" height="1"></rect></svg></i>
+			</a>
+																		</div>						
+						</div>
+					</div>
+								<div class="header-search-form">
+			<form role="search" method="get" class="search-form" action="/">
+	<label class="screen-reader-text" for="search-form-2">Search&hellip;</label>
+	<input type="search" id="search-form-2" class="search-field" value="" name="s" placeholder="Search &hellip;">
+	<button type="submit" class="search-submit" value="Search"><i class="ws-svg-icon"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 100 14.25 7.125 7.125 0 000-14.25zM2.25 10.875a8.625 8.625 0 1117.25 0 8.625 8.625 0 01-17.25 0z"></path><path fill-rule="evenodd" d="M15.913 15.914a.75.75 0 011.06 0l4.557 4.556a.75.75 0 01-1.06 1.06l-4.557-4.556a.75.75 0 010-1.06z"></path></svg></i></button>
+</form>
+			</div>
+			
+									</header>
+						<div class="search-overlay"></div>
+			<div class="header-image"><img src="/wordpress_blog/wp-content/uploads/2022/03/seashore.jpg" width="1920" height="500" alt=""></div>
+<div class="container content-wrapper"><div class="row main-row">			
+	<main id="primary" class="site-main no-sidebar">
+
+		
+
+<article id="post-830" class="post-830 post type-post status-publish format-standard hentry category-hexschool">
+	
+		
+	<header class="entry-header">
+		
+		
+		<h1 class="entry-title">Vue3 複習07</h1>			<div class="entry-meta entry-meta-below delimiter-none">
+<span class="posted-on"><a href="/wordpress_blog/reviewvue3_07/" rel="bookmark"><time class="entry-date published" datetime="2024-03-18T14:22:00+08:00">2024 年 3 月 18 日</time><time class="updated" datetime="2024-03-21T10:09:46+08:00">2024 年 3 月 21 日</time></a></span><span class="byline"> <span class="author vcard"><a class="url fn n" href="/wordpress_blog/author/gee-hsu/">gee.hsu</a></span></span>
+</div>			</header><!-- .entry-header -->
+
+	
+	<div class="entry-content">
+		
+<h2 class="wp-block-heading">Vue Cli，整合性工具開發好容易</h2>
+
+
+
+<h3 class="wp-block-heading">Vue Cli 介紹</h3>
+
+
+
+<h4 class="wp-block-heading">為什麼要用 Vue Cli</h4>
+
+
+
+<ol>
+<li>前端開發日趨複雜，每個開發者習慣亦有很大不同，因此<strong>整合性的工具可減少彼此開發上的差異</strong>。</li>
+
+
+
+<li>
+<strong>編譯環境越來越複雜</strong>，缺乏整合工具將會在每次專案都耗去大量時間。</li>
+
+
+
+<li>
+<strong>前後端分離形成主流</strong>，單頁式應用程式更符合開發習慣。</li>
+
+
+
+<li>套件引用越來越多，導致難以管理。</li>
+</ol>
+
+
+
+<h4 class="wp-block-heading">Vue Cli 是什麼</h4>
+
+
+
+<ol>
+<li>基於 Webpack 所建置的開發工具</li>
+
+
+
+<li>便於使用各種<strong>第三方套件</strong>&nbsp;(BS4, Vue Router…)</li>
+
+
+
+<li>可運行&nbsp;<strong>Sass, Babel</strong>&nbsp;等編譯工具</li>
+
+
+
+<li>獨特 .vue 檔案，一次包含 html, js, css</li>
+
+
+
+<li>便於開發&nbsp;<strong>SPA</strong>&nbsp;的網頁工具</li>
+</ol>
+
+
+
+<h4 class="wp-block-heading">基於 Webpack 開發的 Vue Cli</h4>
+
+
+
+<h4 class="wp-block-heading">整合了哪些開發環境?</h4>
+
+
+
+<p>編譯各種語言使其可在瀏覽器上運行</p>
+
+
+
+<p>程式碼品質檢視導入確保協作一致性</p>
+
+
+
+<p>獨特 .vue 檔案開發 Vue 元件更為容易</p>
+
+
+
+<h4 class="wp-block-heading">關於 .vue 檔案</h4>
+
+
+
+<p>單一檔案同時包含 html, css, js 元件開發更一目了然</p>
+
+
+
+<h4 class="wp-block-heading">SPA 又是什麼?</h4>
+
+
+
+<p>原文為&nbsp;<strong>s</strong>ingle-<strong>p</strong>age&nbsp;<strong>a</strong>pplication，稱為<strong>單頁式應用程式</strong></p>
+
+
+
+<h4 class="wp-block-heading">傳統的路由概念</h4>
+
+
+
+<p>傳統後端路由 https://www.hexschool.com/<strong>user</strong></p>
+
+
+
+<h4 class="wp-block-heading">SPA 的優點</h4>
+
+
+
+<p>前端路由 https://www.hexschool.com/<strong>#/user</strong></p>
+
+
+
+<h4 class="wp-block-heading">實現前後端分離</h4>
+
+
+
+<h4 class="wp-block-heading">SPA 的優點</h4>
+
+
+
+<p>前端路由 https://www.hexschool.com/<strong>#/order</strong></p>
+
+
+
+<h4 class="wp-block-heading">關於 Cli</h4>
+
+
+
+<p>原文為&nbsp;<strong>C</strong>ommand-<strong>L</strong>ine&nbsp;<strong>I</strong>nterface，簡單來說就是<strong>命令列介面</strong></p>
+
+
+
+<h4 class="wp-block-heading">Vue 同時提供 GUI 的介面</h4>
+
+
+
+<p>原文為&nbsp;<strong>G</strong>raphical&nbsp;<strong>U</strong>ser&nbsp;<strong>I</strong>nterface，簡單來說就是<strong>圖形使用者介面</strong></p>
+
+
+
+<ul>
+<li>減少許多指令的記憶</li>
+
+
+
+<li>定義設定檔案</li>
+
+
+
+<li>進行狀態輕鬆檢視</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">讓我們來開始使用 Vue Cli 吧</h4>
+
+
+
+<p>準備流程:</p>
+
+
+
+<ol>
+<li>安裝 Node.js</li>
+
+
+
+<li>安裝 Vue Cli 全域環境</li>
+
+
+
+<li>建立 Vue 專案</li>
+
+
+
+<li>開始開發!</li>
+</ol>
+
+
+
+<h3 class="wp-block-heading">Vue Cli 章節資源</h3>
+
+
+
+<h4 class="wp-block-heading">安裝 Node.js</h4>
+
+
+
+<p>參考 Gulp 課程，安裝流程的部分均可直接預覽(<a rel="noreferrer noopener" href="https://courses.hexschool.com/courses/gulp/lectures/11953830" target="_blank">1-3</a>,&nbsp;<a rel="noreferrer noopener" href="https://courses.hexschool.com/courses/gulp/lectures/11953831" target="_blank">1-4</a>)</p>
+
+
+
+<p><a href="https://nodejs.org/en/" target="_blank" rel="noreferrer noopener">Nodejs 官方網站連結</a></p>
+
+
+
+<h4 class="wp-block-heading">Vue Cli</h4>
+
+
+
+<p><a rel="noreferrer noopener" href="https://cli.vuejs.org/" target="_blank">英文</a>、<a rel="noreferrer noopener" href="https://cli.vuejs.org/zh/guide/" target="_blank">中文</a></p>
+
+
+
+<p>Vue Cli 4.x 同時可建立 Vue 2.x 及 Vue 3.x 的環境，無論你是要開發 2 or 3 都僅需要安裝當前版本的 Vue Cli 即可。</p>
+
+
+
+<h4 class="wp-block-heading">其他相關連結</h4>
+
+
+
+<p>以下為課程中會用到的相關連結</p>
+
+
+
+<p><a href="https://next.router.vuejs.org/zh/index.html" target="_blank" rel="noreferrer noopener">Vue Router</a>、<a href="https://github.com/axios/axios" target="_blank" rel="noreferrer noopener">Axios</a>、<a href="https://www.npmjs.com/package/vue-axios" target="_blank" rel="noreferrer noopener">Vue Axios</a></p>
+
+
+
+<h4 class="wp-block-heading">課程中運用到的指令</h4>
+
+
+
+<p>建立專案 vue create {{ 專案名稱 }}</p>
+
+
+
+<p>運行 Vue 開發環境 npm run serve</p>
+
+
+
+<p>編譯 Production 版本 npm run build</p>
+
+
+
+<h4 class="wp-block-heading">CLI 常用指令</h4>
+
+
+
+<p>通用指令(Mac, Windows 共用)</p>
+
+
+
+<h4 class="wp-block-heading">Nodejs 版本</h4>
+
+
+
+<p>node -v</p>
+
+
+
+<h4 class="wp-block-heading">npm 版本</h4>
+
+
+
+<p>npm -v</p>
+
+
+
+<h4 class="wp-block-heading">Windows 指令</h4>
+
+
+
+<p>回到資料夾頂端 cd\\</p>
+
+
+
+<p>回到上一層 cd..</p>
+
+
+
+<p>進入資料夾路徑 cd {{ 資料夾路徑 }}</p>
+
+
+
+<p>中斷目前操作 ctrl + c</p>
+
+
+
+<h4 class="wp-block-heading">Mac OS 指令</h4>
+
+
+
+<p>回到資料夾頂端 cd \\</p>
+
+
+
+<p>回到上一層 cd ..</p>
+
+
+
+<p>進入資料夾路徑 cd {{ 資料夾路徑 }}</p>
+
+
+
+<p>中斷目前操作 ctrl + c</p>
+
+
+
+<h3 class="wp-block-heading">安裝 Vue Cli 環境</h3>
+
+
+
+<ul>
+<li><a href="https://cli.vuejs.org/guide/installation.html" target="_blank" rel="noreferrer noopener">Vue Cli</a></li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// 終端機
+// 全域環境
+// node.js 是運行環境
+node -v
+// npm 是套件的管理工具
+npm -v
+// 安裝 Vue Cli
+npm install -g @vue/cli
+// 查詢 Vue Cli 版本
+vue -V
+</code></pre>
+
+
+
+<h4 class="wp-block-heading">建立專案</h4>
+
+
+
+<ol>
+<li>移動到指定資料夾位置<br>cd {{ 資料夾路徑 }}</li>
+
+
+
+<li>創建一個項目 vue create<br>vue create new-project</li>
+
+
+
+<li>Please pick a preset: (Use arrow Keys)<br>Manually select features</li>
+
+
+
+<li>Check the features needed for your project: Choose Vue version, Babel, Router, CSS Pre-processors, Linter</li>
+
+
+
+<li>Choose a version of Vue.js that you want to start the project with 3.x (Preview)</li>
+
+
+
+<li>Use history mode for router? (Requires proper server setup for index fallback in production) No</li>
+
+
+
+<li>Pick a CSS pre-processor (PostCSS, Autoprefixer and CSS Modules are supported by default): Sass/SCSS (with node-sass)</li>
+
+
+
+<li>Pick a linter / formatter config: Airbnb</li>
+
+
+
+<li>Pick additional lint features: Lint on save</li>
+
+
+
+<li>Where do you prefer placing config for Babel, ESLint, etc.? In dedicated config files</li>
+
+
+
+<li>Save this as a preset for future projects? (y/N) n</li>
+</ol>
+
+
+
+<h4 class="wp-block-heading">打開專案</h4>
+
+
+
+<ol>
+<li>使用 VSCode 開啟專案</li>
+
+
+
+<li>Ctrl + ` 打開終端機</li>
+
+
+
+<li>使用 npm run serve 運行環境</li>
+
+
+
+<li>點擊連結開啟網頁</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// 常用 NVM 指令
+// 常見指令:
+// nvm ls-remote: 列出目前可用的遠端 Node.js 版本
+// nvm install: 安裝特定版本的 Node.js
+// nvm ls: 列出本地端所安裝的 Node.js 環境
+// nvm alias default node: 設定命令列預設開啟的 Node.js 版本
+// nvm use: 當前命令列套用特定版本的 Node.js
+</code></pre>
+
+
+
+<h3 class="wp-block-heading">Vue Cli 環境中的檔案說明</h3>
+
+
+
+<p>從下往上說明</p>
+
+
+
+<ul>
+<li>README.md – 介紹的檔案</li>
+
+
+
+<li>package.json – 專案的配置檔案
+<ul>
+<li>“scripts” – 指令<br>執行指令，npm run serve、”serve” 滑鼠點擊 Run Script</li>
+</ul>
+</li>
+
+
+
+<li>package-lock.json – 實際安裝的套件版本以及相關描述</li>
+
+
+
+<li>babel.config.js – babel 設定檔案</li>
+
+
+
+<li>.gitignore – 在 git 忽略的檔案</li>
+
+
+
+<li>.eslintrc.js – eslint 設定檔案<br>依據選擇把設定檔以及延伸的規則載入</li>
+
+
+
+<li>.editorconfig – 編輯器設定檔</li>
+
+
+
+<li>.browserslistrc – 預期要支援的版本</li>
+
+
+
+<li>src – 在這個專案中最重要的一個資料夾
+<ul>
+<li><strong>main.js – 整個專案的進入點</strong></li>
+</ul>
+</li>
+
+
+
+<li>App.vue – 在 main.js 第一個生成的主要元件<br>通常只是做簡單的配置</li>
+
+
+
+<li>views – 主要的頁面會放在這個資料夾內</li>
+
+
+
+<li>router – 路由表放在 router 資料夾 index.js 檔案裡面</li>
+
+
+
+<li>components – 掛載的子元件會放在 components 資料夾內</li>
+
+
+
+<li>assets – 相關的一些其他資產<br>例如: 比較小的圖片、CSS、JS 檔案都可以放在這個資料夾內</li>
+
+
+
+<li>public – 原則上是跟進入點沒有相關聯的檔案、不需要編譯的檔案<br>index.html，主要在 Vue 的元件生成之後要掛載在一個實體的頁面上所需要的檔案 (在 public 資料夾內唯一會編譯的檔案)<br>比較大的圖片或其他資源也可以放在 public 資料夾內</li>
+
+
+
+<li>node_modules – 運行所需要的延伸套件<br>依據 package.json 檔案所列的清單安裝</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">指令太麻煩，來試試看 GUI 吧</h3>
+
+
+
+<h4 class="wp-block-heading">建立專案</h4>
+
+
+
+<ol>
+<li>指令 vue ui</li>
+
+
+
+<li>在 Vue 專案管理器按下新增</li>
+
+
+
+<li>選擇專案路徑</li>
+
+
+
+<li>在此新增專案</li>
+
+
+
+<li>新增新專案
+<ul>
+<li>專案資料夾 gui-demo</li>
+
+
+
+<li>包管理器 npm</li>
+
+
+
+<li>Git 倉庫 初始化 git 倉庫(建議)</li>
+</ul>
+</li>
+
+
+
+<li>模板<br>選擇一套模板 – 手動</li>
+
+
+
+<li>功能<br>Choose Vue version、Babel、Router、CSS Pre-processors、Linter / Formatter</li>
+
+
+
+<li>設定
+<ul>
+<li>Choose a version of Vue.js that you want to start the project with – 3.x (Preview)</li>
+
+
+
+<li>Use history mode for router? (Requires proper server setup for index fallback in production) – No</li>
+
+
+
+<li>Pick a CSS pr-processor: Sass/SCSS (with node-sass)</li>
+
+
+
+<li>Pick a linter / formatter config: ESLint + Airbnb config</li>
+
+
+
+<li>Pick additional lint features: Lint on save</li>
+</ul>
+</li>
+
+
+
+<li>保存為新模板 – 新增專案，不保存預設</li>
+</ol>
+
+
+
+<h4 class="wp-block-heading">專案控制台</h4>
+
+
+
+<ul>
+<li>插件 – 加入新的 Vue CLI 插件</li>
+
+
+
+<li>依賴 – 是用來管理包 (package)</li>
+
+
+
+<li>設定 – 可以設定工具</li>
+
+
+
+<li>任務 – 可以執行腳本 (例如 webpack)<br>serve 編譯和熱更新 (用於開發環境)<br>build 編譯並壓縮 (用於生產環境)</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">如何在 Cli 環境中加入 Vue 元件</h3>
+
+
+
+<ol>
+<li>安裝 Bootstrap 套件<br>終止終端機 – Ctrl + c，輸入 npm install bootstrap@5.3.3 安裝</li>
+
+
+
+<li>重新運行 npm run serve</li>
+
+
+
+<li>把 App.vue 檔案預設 CSS 樣式清除<br>匯入外部套件 – @import “bootstrap”;<br>載入 Bootstrap 元件測試</li>
+
+
+
+<li>新增元件加到 About 頁面<br>到 Bootstrap Card 元件複製相對簡單的程式碼</li>
+
+
+
+<li>新增的元件會放在 components 資料夾內<br>獨立的頁面會放在 views 資料夾內</li>
+
+
+
+<li>在 components 資料夾內新增一個檔案 Card.vue<br>命名通常會使用開頭字母大寫的形式<br>使用 &lt;template&gt; 標籤把 Bootstrap Card 元件程式碼貼上</li>
+
+
+
+<li>在 About.vue 加入卡片元件</li>
+
+
+
+<li>在 Card.vue 加入 data</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// App.vue
+&lt;template&gt;
+  &lt;div id="nav"&gt;
+    &lt;router-link to="/"&gt;Home&lt;/router-link&gt; |
+    &lt;router-link to="/about"&gt;About&lt;/router-link&gt;
+  &lt;/div&gt;
+  &lt;router-view /&gt;
+  &lt;button type="button" class="btn btn-primary"&gt;Primary&lt;/button&gt;
+&lt;/template&gt;
+
+&lt;style lang="scss"&gt;
+@import "bootstrap";
+&lt;/style&gt;
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Card.vue
+&lt;template&gt;
+  &lt;div class="card" style="width: 18rem"&gt;
+    &lt;div class="card-body"&gt;
+      &lt;h5 class="card-title"&gt;{{ title }}&lt;/h5&gt;
+      &lt;h6 class="card-subtitle mb-2 text-body-secondary"&gt;Card subtitle&lt;/h6&gt;
+      &lt;p class="card-text"&gt;
+        Some quick example text to build on the card title and make up the bulk of the card's
+        content.
+      &lt;/p&gt;
+      &lt;a href="#" class="card-link"&gt;Card link&lt;/a&gt;
+      &lt;a href="#" class="card-link"&gt;Another link&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  data() {
+    return {
+      title: '這是一段標題',
+    };
+  },
+};
+&lt;/script&gt;
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// About.vue
+&lt;template&gt;
+  &lt;div class="about"&gt;
+    &lt;h1&gt;This is an about page&lt;/h1&gt;
+    &lt;!-- 7-4. Card 呈現在畫面上 --&gt;
+    &lt;Card&gt;&lt;/Card&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+// 7-2. 外部元件匯入進來
+import Card from '@/components/Card.vue';
+
+// 7-1. 元件 js 匯出
+export default {
+  // 7-3. 區域註冊
+  components: {
+    Card,
+  },
+};
+&lt;/script&gt;
+</code></pre>
+
+
+
+<h3 class="wp-block-heading">Cli 中引入外部套件</h3>
+
+
+
+<h4 class="wp-block-heading">VeeValidate</h4>
+
+
+
+<p><a rel="noreferrer noopener" href="https://vee-validate.logaretm.com/v4/guide/overview/#using-a-package-manager" target="_blank">Getting Started – Using a package manager</a></p>
+
+
+
+<p><a rel="noreferrer noopener" href="https://vee-validate.logaretm.com/v4/guide/global-validators/#vee-validaterules" target="_blank">Global Validators / @vee-validate/rules</a></p>
+
+
+
+<p><a href="https://vee-validate.logaretm.com/v4/guide/i18n/#using-vee-validatei18n" target="_blank" rel="noreferrer noopener">Localization (i18n) / Using @vee-validate/i18n</a></p>
+
+
+
+<ol>
+<li>安裝 VeeValidate 套件</li>
+
+
+
+<li>總共有三個套件必須要安裝<br>npm i vee-validate @vee-validate/rules @vee-validate/i18n –save</li>
+
+
+
+<li>main.js 是 webpack 的主要進入點<br>外部資源匯入可以撰寫到 main.js 裡面</li>
+
+
+
+<li>匯入 vee-validate 主套件、相關規則、多國語系的功能<br>import { Field, Form, ErrorMessage, defineRule, configure, } from ‘vee-validate’;<br>import { required, email, min } from ‘@vee-validate/rules’;<br>import { localize, setLocale } from ‘@vee-validate/i18n’;</li>
+
+
+
+<li>基本設定<br>defineRule(‘required’, required);<br>defineRule(’email’, email);<br>defineRule(‘min’, min);<br>configure({<br>generateMessage: localize({ zh_TW: zhTW }),<br>validateOnInput: true,<br>});<br>setLocale(‘zh_TW’);</li>
+
+
+
+<li>匯入繁體中文語系檔案<br>import zhTW from ‘@vee-validate/i18n/dist/locale/zh_TW.json’;</li>
+
+
+
+<li>註冊元件- 程式碼改寫，註冊 Form, Field, ErrorMessage 元件<br>const app = createApp(App).use(router);<br>app.component(‘Form’, Form);<br>app.component(‘Field’, Field);<br>app.component(‘ErrorMessage’, ErrorMessage);<br><br>app.mount(‘#app’);</li>
+
+
+
+<li>重新運行 npm run serve</li>
+
+
+
+<li>表單驗證的表單加到畫面上加到 Home.vue &lt;template&gt; 標籤內，<br>並在 script 加上一些內容</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// main.js
+import { createApp } from 'vue';
+
+// 匯入 vee-validate 主套件
+import {
+  Field, Form, ErrorMessage, defineRule, configure,
+} from 'vee-validate';
+// 匯入 vee-validate 相關規則
+import { required, email, min } from '@vee-validate/rules';
+// 匯入多國語系的功能
+import { localize, setLocale } from '@vee-validate/i18n';
+// 匯入繁體中文語系檔案
+import zhTW from '@vee-validate/i18n/dist/locale/zh_TW.json';
+
+import App from './App.vue';
+import router from './router';
+
+// 定義驗證規則
+defineRule('required', required);
+defineRule('email', email);
+defineRule('min', min);
+// 設定 vee-validate 全域規則
+configure({
+  generateMessage: localize({ zh_TW: zhTW }), // 載入繁體中文語系
+  validateOnInput: true, // 當輸入任何內容直接進行驗證
+});
+// 設定預設語系
+setLocale('zh_TW');
+
+const app = createApp(App).use(router);
+// 註冊 vee-validate 三個全域元件
+app.component('Form', Form);
+app.component('Field', Field);
+app.component('ErrorMessage', ErrorMessage);
+
+app.mount('#app');
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Home.vue
+&lt;template&gt;
+  &lt;div class="home"&gt;
+    &lt;img alt="Vue logo" src="../assets/logo.png"&gt;
+    &lt;HelloWorld msg="Welcome to Your Vue.js App"/&gt;
+    &lt;Form v-slot="{ errors, values, validate }" @submit="onSubmit"&gt;
+      {{ errors }} {{ values }}
+      &lt;div class="mb-3"&gt;
+        &lt;label for="email" class="form-label"&gt;Email&lt;/label&gt;
+        &lt;Field id="email" name="email" type="email"
+        class="form-control" :class="{ 'is-invalid': errors&#91;'email'] }"
+        placeholder="請輸入 Email" rules="email|required" v-model="user.email"&gt;&lt;/Field&gt;
+        &lt;error-message name="email" class="invalid-feedback"&gt;&lt;/error-message&gt;
+      &lt;/div&gt;
+      &lt;button class="btn me-2 btn-outline-primary" type="button" @click="validate"&gt;驗證&lt;/button&gt;
+      &lt;button class="btn btn-primary" type="submit"&gt;Submit&lt;/button&gt;
+    &lt;/Form&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+// @ is an alias to /src
+import HelloWorld from '@/components/HelloWorld.vue';
+
+export default {
+  name: 'Home',
+  components: {
+    HelloWorld,
+  },
+  data() {
+    return {
+      user: {},
+    };
+  },
+  methods: {
+    onSubmit() {
+      console.log(this.user);
+    },
+  },
+  created() {
+    console.log(this);
+  },
+};
+&lt;/script&gt;
+</code></pre>
+
+
+
+<h3 class="wp-block-heading">Vue Cli 中 VeeValidate 範例程式碼</h3>
+
+
+
+<pre class="wp-block-code"><code>// main.js
+import { createApp } from 'vue';
+
+// 匯入 vee-validate 主套件
+import {
+  Field, Form, ErrorMessage, defineRule, configure,
+} from 'vee-validate';
+// 匯入 vee-validate 相關規則
+import { required, email, min } from '@vee-validate/rules';
+// 匯入多國語系的功能
+import { localize, setLocale } from '@vee-validate/i18n';
+// 匯入繁體中文語系檔案
+import zhTW from '@vee-validate/i18n/dist/locale/zh_TW.json';
+
+import App from './App.vue';
+import router from './router';
+
+// 定義驗證規則
+defineRule('required', required);
+defineRule('email', email);
+defineRule('min', min);
+// 設定 vee-validate 全域規則
+configure({
+  generateMessage: localize({ zh_TW: zhTW }), // 載入繁體中文語系
+  validateOnInput: true, // 當輸入任何內容直接進行驗證
+});
+// 設定預設語系
+setLocale('zh_TW');
+
+const app = createApp(App).use(router);
+// 註冊 vee-validate 三個全域元件
+app.component('Form', Form);
+app.component('Field', Field);
+app.component('ErrorMessage', ErrorMessage);
+
+app.mount('#app');
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Home.vue
+&lt;template&gt;
+  &lt;div class="home"&gt;
+    &lt;Form v-slot="{ errors, values, validate }" @submit="onSubmit"&gt;
+      {{ errors }} {{ values }}
+      &lt;div class="mb-3"&gt;
+        &lt;label for="email" class="form-label"&gt;Email&lt;/label&gt;
+        &lt;Field id="email" name="email" type="email"
+        class="form-control" :class="{ 'is-invalid': errors&#91;'email'] }"
+        placeholder="請輸入 Email" rules="email|required" v-model="user.email"&gt;&lt;/Field&gt;
+        &lt;error-message name="email" class="invalid-feedback"&gt;&lt;/error-message&gt;
+      &lt;/div&gt;
+      &lt;button class="btn me-2 btn-outline-primary" type="button" @click="validate"&gt;驗證&lt;/button&gt;
+      &lt;button class="btn btn-primary" type="submit"&gt;Submit&lt;/button&gt;
+    &lt;/Form&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+
+export default {
+  name: 'Home',
+  data() {
+    return {
+      user: {},
+    };
+  },
+  methods: {
+    onSubmit() {
+      console.log(this.user);
+    },
+  },
+  created() {
+    console.log(this);
+  },
+};
+&lt;/script&gt;
+</code></pre>
+
+
+
+<h3 class="wp-block-heading">Vue Cli 中環境變數基礎觀念</h3>
+
+
+
+<p>環境變數簡單區分為，development 開發者環境、production 正式環境。</p>
+
+
+
+<ul>
+<li><a href="https://cli.vuejs.org/zh/guide/mode-and-env.html#%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F" target="_blank" rel="noreferrer noopener">環境變數</a></li>
+</ul>
+
+
+
+<h4 class="wp-block-heading">建立環境變數流程</h4>
+
+
+
+<ol>
+<li>在專案資料夾新增 .env 檔案<br>VUE_APP_NAME=小明的家</li>
+
+
+
+<li>在 APP.vue 加上 &lt;script&gt; 程式碼</li>
+
+
+
+<li>使用 {{ name }} 方式把 name 呈現到畫面上</li>
+
+
+
+<li>調整環境變數後需重新運行 npm run serve</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// .env
+VUE_APP_NAME=小明的家
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// App.vue
+&lt;template&gt;
+  &lt;div id="nav"&gt;
+    &lt;router-link to="/"&gt;Home&lt;/router-link&gt; |
+    &lt;router-link to="/about"&gt;About&lt;/router-link&gt;
+  &lt;/div&gt;
+  &lt;router-view /&gt;
+  {{ name }}
+  &lt;button type="button" class="btn btn-primary"&gt;Primary&lt;/button&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  data() {
+    return {
+      name: process.env.VUE_APP_NAME,
+    };
+  },
+};
+&lt;/script&gt;
+
+&lt;style lang="scss"&gt;
+@import "bootstrap";
+&lt;/style&gt;
+</code></pre>
+
+
+
+<h3 class="wp-block-heading">Vue Cli 編譯設定檔</h3>
+
+
+
+<ol>
+<li>編譯專案 – npm run build<br>編譯完成後會產生 dist 資料夾</li>
+
+
+
+<li>dist/index.html 檔案路徑是使用絕對路徑的方式進行撰寫，沒有透過 web server 的形式是沒辦法瀏覽</li>
+
+
+
+<li>用 VSCode 把 dist 資料夾打開，使用 Go Live 打開</li>
+
+
+
+<li>複製 .env 檔案改為 .env.production 檔案名稱</li>
+
+
+
+<li>修改 .env.production 檔案內容<br>VUE_APP_NAME=老闆的家<br>重新編譯檔案 npm run build</li>
+
+
+
+<li>再用 VSCode 把 dist 資料夾打開，使用 Go Live 打開<br>小明的家就變成老闆的家<br>環境變數在使用 production 之後的差異</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>// .env.production
+VUE_APP_NAME=老闆的家
+</code></pre>
+
+
+
+<h4 class="wp-block-heading">調整編譯後的路徑</h4>
+
+
+
+<ol>
+<li>新增 vue.config.js 檔案<br>建議直接使用 vue ui 建立 vue.config.js</li>
+
+
+
+<li>在專案終端機輸入 vue ui<br>透過這種方式就不需要記太多的參數，就可以直接透過介面的形式來調整參數</li>
+
+
+
+<li>設定 &gt; Vue CLI &gt; 公開路徑<br>公開路徑: /dist/，保存修改後就產生 vue.config.js 檔案</li>
+
+
+
+<li>重新編譯專案 – npm run build<br>dist 路徑就可以直接在當前的專案下直接使用 web serve 的形式打開</li>
+
+
+
+<li>直接選用 dist/index 檔案使用 Go Live 打開</li>
+</ol>
+
+
+
+<h4 class="wp-block-heading">哪些情況必須調整路徑</h4>
+
+
+
+<ul>
+<li>專案完成後把專案交給後端部署的時候</li>
+
+
+
+<li>完成課程最終作業部屬部署到 GitHub Pages</li>
+</ul>
+
+
+
+<p>GitHub Pages 是一個免費的網頁空間，適合放置靜態網站。Vue Cli 編譯後的檔案就是屬於靜態網頁。</p>
+
+
+
+<h3 class="wp-block-heading">Github Pages 教學連結</h3>
+
+
+
+<ul>
+<li>
+<a href="https://youtu.be/njlABvVRB68?si=PUx9maAWm84p3GmI&amp;t=3574" target="_blank" rel="noreferrer noopener">GitHub Pages 教學影片</a>&nbsp;– 59:34 開始</li>
+</ul>
+
+
+
+<p>修正公開路徑: /專案資料夾名稱/dist/</p>
+	</div>
+<!-- .entry-content -->
+
+	<footer class="entry-footer">
+			</footer><!-- .entry-footer -->
+</article><!-- #post-830 -->
+
+	<nav class="navigation post-navigation" aria-label="文章">
+		<h2 class="screen-reader-text">文章導覽</h2>
+		<div class="nav-links">
+<div class="nav-previous"><a href="/wordpress_blog/reviewvue3_06/" rel="prev"><span class="nav-subtitle">Previous:</span> <span class="nav-title">Vue3 複習06</span></a></div>
+<div class="nav-next"><a href="/wordpress_blog/reviewvue3_08/" rel="next"><span class="nav-subtitle">Next:</span> <span class="nav-title">Vue3 複習08</span></a></div>
+</div>
+	</nav>
+	</main><!-- #main -->
+
+
+	</div></div>
+			
+			<footer id="colophon" class="site-footer">
+
+				
+				<div class="container-fluid">
+					<div class="site-info">
+						<div class="row">
+
+															
+								<div class="col-12 footer-copyright-elements footer-copyright-alignment-center">
+
+									<div class="botiga-credits">&copy; 2024 wordpress_blog. 
+Created by Gee Hsu. 
+<br>Proudly powered by <a rel="nofollow" href="https://athemes.com/theme/botiga/">Botiga</a>
+</div>
+<div class="social-profile">
+<a target="_blank" href="https://www.facebook.com/watergrass0402/"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></i></a><a target="_blank" href="https://github.com/GeeHsu"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></i></a>
+</div>
+								</div>
+														
+						</div>
+					</div>
+				</div>
+<!-- .site-info -->
+
+				
+			</footer><!-- #colophon -->
+
+			
+			<div class="back-to-top visibility-all position-right"><i class="ws-svg-icon"><svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 15l7-7 7 7" stroke-width="3" stroke-linejoin="round"></path></svg></i></div>
+</div>
+<!-- #page -->
+
+
+<script id="botiga-custom-js-extra">
+var botiga = {"ajaxurl":"\/wp-admin\/admin-ajax.php","i18n":{"botiga_sharebox_copy_link":"Copy link","botiga_sharebox_copy_link_copied":"Copied!"}};
+</script>
+<script src="/wordpress_blog/wp-content/themes/botiga/assets/js/custom.min.js?ver=1.1.2" id="botiga-custom-js"></script>
+
+</body>
+</html>

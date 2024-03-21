@@ -18,7 +18,7 @@
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=6.3.1</generator>
+	<generator>https://wordpress.org/?v=6.4.3</generator>
 
 <image>
 	<url>/wordpress_blog/wp-content/uploads/2022/03/logo.png</url>
@@ -1474,7 +1474,7 @@ module.exports = {
 
 
 
-<figure class="wp-block-image size-full"><img decoding="async" fetchpriority="high" width="1536" height="823" src="/wordpress_blog/wp-content/uploads/2022/04/Vue-Widgets.png" alt="" class="wp-image-538"/><figcaption>Vue Widgets</figcaption></figure>
+<figure class="wp-block-image size-full"><img fetchpriority="high" decoding="async" width="1536" height="823" src="/wordpress_blog/wp-content/uploads/2022/04/Vue-Widgets.png" alt="" class="wp-image-538"/><figcaption>Vue Widgets</figcaption></figure>
 
 
 
@@ -1499,15 +1499,15 @@ module.exports = {
 
 
 
-<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1743" height="579" data-id="547" src="/wordpress_blog/wp-content/uploads/2022/04/Typical-non-Vue-Websites-03.png" alt="" class="wp-image-547"/><figcaption>Typical non-Vue Website 03</figcaption></figure>
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1743" height="579" data-id="547" src="/wordpress_blog/wp-content/uploads/2022/04/Typical-non-Vue-Websites-03.png" alt="" class="wp-image-547"/><figcaption>Typical non-Vue Website 03</figcaption></figure>
 
 
 
-<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1769" height="605" data-id="548" src="/wordpress_blog/wp-content/uploads/2022/04/Typical-non-Vue-Websites-04.png" alt="" class="wp-image-548"/><figcaption>Typical non-Vue Website 04</figcaption></figure>
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1769" height="605" data-id="548" src="/wordpress_blog/wp-content/uploads/2022/04/Typical-non-Vue-Websites-04.png" alt="" class="wp-image-548"/><figcaption>Typical non-Vue Website 04</figcaption></figure>
 
 
 
-<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1759" height="705" data-id="549" src="/wordpress_blog/wp-content/uploads/2022/04/Typical-non-Vue-Websites-05.png" alt="" class="wp-image-549"/><figcaption>Typical non-Vue Website 05</figcaption></figure>
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1759" height="705" data-id="549" src="/wordpress_blog/wp-content/uploads/2022/04/Typical-non-Vue-Websites-05.png" alt="" class="wp-image-549"/><figcaption>Typical non-Vue Website 05</figcaption></figure>
 </figure>
 
 
@@ -1516,24 +1516,24 @@ module.exports = {
 
 
 
-<figure class="wp-block-gallery has-nested-images columns-1 is-cropped wp-block-gallery-3 is-layout-flex wp-block-gallery-is-layout-flex">
-<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1747" height="609" data-id="554" src="/wordpress_blog/wp-content/uploads/2022/04/Vue-Websites-01.png" alt="" class="wp-image-554"/><figcaption>Vue Websites 01</figcaption></figure>
+<figure class="wp-block-gallery has-nested-images columns-1 is-cropped wp-block-gallery-2 is-layout-flex wp-block-gallery-is-layout-flex">
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1747" height="609" data-id="554" src="/wordpress_blog/wp-content/uploads/2022/04/Vue-Websites-01.png" alt="" class="wp-image-554"/><figcaption>Vue Websites 01</figcaption></figure>
 
 
 
-<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1743" height="595" data-id="552" src="/wordpress_blog/wp-content/uploads/2022/04/Vue-Websites-02.png" alt="" class="wp-image-552"/><figcaption>Vue Websites 02</figcaption></figure>
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1743" height="595" data-id="552" src="/wordpress_blog/wp-content/uploads/2022/04/Vue-Websites-02.png" alt="" class="wp-image-552"/><figcaption>Vue Websites 02</figcaption></figure>
 
 
 
-<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1741" height="571" data-id="553" src="/wordpress_blog/wp-content/uploads/2022/04/Vue-Websites-03.png" alt="" class="wp-image-553"/><figcaption>Vue Websites 03</figcaption></figure>
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1741" height="571" data-id="553" src="/wordpress_blog/wp-content/uploads/2022/04/Vue-Websites-03.png" alt="" class="wp-image-553"/><figcaption>Vue Websites 03</figcaption></figure>
 
 
 
-<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1747" height="593" data-id="551" src="/wordpress_blog/wp-content/uploads/2022/04/Vue-Websites-04.png" alt="" class="wp-image-551"/><figcaption>Vue Websites 04</figcaption></figure>
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1747" height="593" data-id="551" src="/wordpress_blog/wp-content/uploads/2022/04/Vue-Websites-04.png" alt="" class="wp-image-551"/><figcaption>Vue Websites 04</figcaption></figure>
 
 
 
-<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1745" height="597" data-id="555" src="/wordpress_blog/wp-content/uploads/2022/04/Vue-Websites-05.png" alt="" class="wp-image-555"/><figcaption>Vue Websites 05</figcaption></figure>
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1745" height="597" data-id="555" src="/wordpress_blog/wp-content/uploads/2022/04/Vue-Websites-05.png" alt="" class="wp-image-555"/><figcaption>Vue Websites 05</figcaption></figure>
 </figure>
 
 
@@ -5570,28 +5570,28 @@ export default {
 
 
 
-<figure class="wp-block-gallery has-nested-images columns-1 is-cropped wp-block-gallery-5 is-layout-flex wp-block-gallery-is-layout-flex">
-<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="753" height="611" data-id="558" src="/wordpress_blog/wp-content/uploads/2022/04/The-Vue-Router-01.png" alt="" class="wp-image-558"/><figcaption>The Vue Router 01</figcaption></figure>
+<figure class="wp-block-gallery has-nested-images columns-1 is-cropped wp-block-gallery-3 is-layout-flex wp-block-gallery-is-layout-flex">
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="753" height="611" data-id="558" src="/wordpress_blog/wp-content/uploads/2022/04/The-Vue-Router-01.png" alt="" class="wp-image-558"/><figcaption>The Vue Router 01</figcaption></figure>
 
 
 
-<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1791" height="563" data-id="557" src="/wordpress_blog/wp-content/uploads/2022/04/The-Vue-Router-02.png" alt="" class="wp-image-557"/><figcaption>The Vue Router 02</figcaption></figure>
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1791" height="563" data-id="557" src="/wordpress_blog/wp-content/uploads/2022/04/The-Vue-Router-02.png" alt="" class="wp-image-557"/><figcaption>The Vue Router 02</figcaption></figure>
 
 
 
-<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1785" height="581" data-id="560" src="/wordpress_blog/wp-content/uploads/2022/04/The-Vue-Router-03.png" alt="" class="wp-image-560"/><figcaption>The Vue Router 03</figcaption></figure>
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1785" height="581" data-id="560" src="/wordpress_blog/wp-content/uploads/2022/04/The-Vue-Router-03.png" alt="" class="wp-image-560"/><figcaption>The Vue Router 03</figcaption></figure>
 
 
 
-<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1737" height="563" data-id="562" src="/wordpress_blog/wp-content/uploads/2022/04/The-Vue-Router-04.png" alt="" class="wp-image-562"/><figcaption>The Vue Router 04</figcaption></figure>
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1737" height="563" data-id="562" src="/wordpress_blog/wp-content/uploads/2022/04/The-Vue-Router-04.png" alt="" class="wp-image-562"/><figcaption>The Vue Router 04</figcaption></figure>
 
 
 
-<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1771" height="569" data-id="559" src="/wordpress_blog/wp-content/uploads/2022/04/The-Vue-Router-05.png" alt="" class="wp-image-559"/><figcaption>The Vue Router 05</figcaption></figure>
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1771" height="569" data-id="559" src="/wordpress_blog/wp-content/uploads/2022/04/The-Vue-Router-05.png" alt="" class="wp-image-559"/><figcaption>The Vue Router 05</figcaption></figure>
 
 
 
-<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1171" height="611" data-id="561" src="/wordpress_blog/wp-content/uploads/2022/04/The-Vue-Router-06.png" alt="" class="wp-image-561"/><figcaption>The Vue Router 06</figcaption></figure>
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1171" height="611" data-id="561" src="/wordpress_blog/wp-content/uploads/2022/04/The-Vue-Router-06.png" alt="" class="wp-image-561"/><figcaption>The Vue Router 06</figcaption></figure>
 </figure>
 
 
@@ -5984,7 +5984,7 @@ export default router
 
 
 
-<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="1757" height="707" src="/wordpress_blog/wp-content/uploads/2022/04/Route-Parameters.png" alt="" class="wp-image-564"/><figcaption>Route Parameters</figcaption></figure>
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1757" height="707" src="/wordpress_blog/wp-content/uploads/2022/04/Route-Parameters.png" alt="" class="wp-image-564"/><figcaption>Route Parameters</figcaption></figure>
 
 
 
@@ -6964,7 +6964,7 @@ class User {
 
 
 
-<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="1399" height="533" src="/wordpress_blog/wp-content/uploads/2022/04/bundle.png" alt="" class="wp-image-529"/><figcaption>bundle</figcaption></figure>
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1399" height="533" src="/wordpress_blog/wp-content/uploads/2022/04/bundle.png" alt="" class="wp-image-529"/><figcaption>bundle</figcaption></figure>
 
 
 
@@ -11944,12 +11944,12 @@ cityForm.addEventListener('submit', e =&gt; {
 
 
 
-<figure class="wp-block-gallery has-nested-images columns-1 is-cropped wp-block-gallery-7 is-layout-flex wp-block-gallery-is-layout-flex">
-<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1435" height="705" data-id="510" src="/wordpress_blog/wp-content/uploads/2022/04/localstorage-1.png" alt="" class="wp-image-510"/><figcaption>Local Storage &#8211; 1</figcaption></figure>
+<figure class="wp-block-gallery has-nested-images columns-1 is-cropped wp-block-gallery-4 is-layout-flex wp-block-gallery-is-layout-flex">
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1435" height="705" data-id="510" src="/wordpress_blog/wp-content/uploads/2022/04/localstorage-1.png" alt="" class="wp-image-510"/><figcaption>Local Storage &#8211; 1</figcaption></figure>
 
 
 
-<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1461" height="613" data-id="511" src="/wordpress_blog/wp-content/uploads/2022/04/localstorage-2.png" alt="" class="wp-image-511"/><figcaption>Local Storage &#8211; 2</figcaption></figure>
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1461" height="613" data-id="511" src="/wordpress_blog/wp-content/uploads/2022/04/localstorage-2.png" alt="" class="wp-image-511"/><figcaption>Local Storage &#8211; 2</figcaption></figure>
 </figure>
 
 
@@ -12394,16 +12394,16 @@ const userThree = new User('shaun@thenetninja.co.uk', 'shaun');</code></pre>
 
 
 
-<figure class="wp-block-gallery has-nested-images columns-1 is-cropped wp-block-gallery-9 is-layout-flex wp-block-gallery-is-layout-flex">
-<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1536" height="553" data-id="513" src="/wordpress_blog/wp-content/uploads/2022/04/Classes-1.png" alt="" class="wp-image-513"/><figcaption>Classes &#8211; 1</figcaption></figure>
+<figure class="wp-block-gallery has-nested-images columns-1 is-cropped wp-block-gallery-5 is-layout-flex wp-block-gallery-is-layout-flex">
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1536" height="553" data-id="513" src="/wordpress_blog/wp-content/uploads/2022/04/Classes-1.png" alt="" class="wp-image-513"/><figcaption>Classes &#8211; 1</figcaption></figure>
 
 
 
-<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1211" height="599" data-id="514" src="/wordpress_blog/wp-content/uploads/2022/04/Classes-2.png" alt="" class="wp-image-514"/><figcaption>Classes &#8211; 2</figcaption></figure>
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1211" height="599" data-id="514" src="/wordpress_blog/wp-content/uploads/2022/04/Classes-2.png" alt="" class="wp-image-514"/><figcaption>Classes &#8211; 2</figcaption></figure>
 
 
 
-<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1536" height="603" data-id="515" src="/wordpress_blog/wp-content/uploads/2022/04/Classes-3.png" alt="" class="wp-image-515"/><figcaption>Classes &#8211; 3</figcaption></figure>
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1536" height="603" data-id="515" src="/wordpress_blog/wp-content/uploads/2022/04/Classes-3.png" alt="" class="wp-image-515"/><figcaption>Classes &#8211; 3</figcaption></figure>
 </figure>
 
 
@@ -12930,16 +12930,16 @@ userOne.login();
 
 
 
-<figure class="wp-block-gallery has-nested-images columns-1 is-cropped wp-block-gallery-11 is-layout-flex wp-block-gallery-is-layout-flex">
-<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1476" height="516" data-id="518" src="/wordpress_blog/wp-content/uploads/2022/04/prototype-1.png" alt="" class="wp-image-518"/><figcaption>Prototype &#8211; 1</figcaption></figure>
+<figure class="wp-block-gallery has-nested-images columns-1 is-cropped wp-block-gallery-6 is-layout-flex wp-block-gallery-is-layout-flex">
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1476" height="516" data-id="518" src="/wordpress_blog/wp-content/uploads/2022/04/prototype-1.png" alt="" class="wp-image-518"/><figcaption>Prototype &#8211; 1</figcaption></figure>
 
 
 
-<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1536" height="674" data-id="517" src="/wordpress_blog/wp-content/uploads/2022/04/prototype-2.png" alt="" class="wp-image-517"/><figcaption>Prototype &#8211; 2</figcaption></figure>
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1536" height="674" data-id="517" src="/wordpress_blog/wp-content/uploads/2022/04/prototype-2.png" alt="" class="wp-image-517"/><figcaption>Prototype &#8211; 2</figcaption></figure>
 
 
 
-<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1536" height="681" data-id="519" src="/wordpress_blog/wp-content/uploads/2022/04/prototype-3.png" alt="" class="wp-image-519"/><figcaption>Prototype &#8211; 3</figcaption></figure>
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1536" height="681" data-id="519" src="/wordpress_blog/wp-content/uploads/2022/04/prototype-3.png" alt="" class="wp-image-519"/><figcaption>Prototype &#8211; 3</figcaption></figure>
 </figure>
 
 
@@ -13403,7 +13403,7 @@ if(localStorage.getItem('city')){
 
 
 
-<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="1497" height="725" src="/wordpress_blog/wp-content/uploads/2022/04/Storing-Data.png" alt="" class="wp-image-521"/><figcaption>Storing Data</figcaption></figure>
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1497" height="725" src="/wordpress_blog/wp-content/uploads/2022/04/Storing-Data.png" alt="" class="wp-image-521"/><figcaption>Storing Data</figcaption></figure>
 
 
 
@@ -13411,7 +13411,7 @@ if(localStorage.getItem('city')){
 
 
 
-<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="1536" height="652" src="/wordpress_blog/wp-content/uploads/2022/04/NoSQL-Databases.png" alt="" class="wp-image-522"/><figcaption>NoSQL Databases</figcaption></figure>
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1536" height="652" src="/wordpress_blog/wp-content/uploads/2022/04/NoSQL-Databases.png" alt="" class="wp-image-522"/><figcaption>NoSQL Databases</figcaption></figure>
 
 
 
@@ -17877,7 +17877,7 @@ console.log('line three');</code></pre>
 
 
 
-<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="1183" height="757" src="/wordpress_blog/wp-content/uploads/2022/04/single-threaded.png" alt="" class="wp-image-493"/><figcaption>Single Threaded</figcaption></figure>
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1183" height="757" src="/wordpress_blog/wp-content/uploads/2022/04/single-threaded.png" alt="" class="wp-image-493"/><figcaption>Single Threaded</figcaption></figure>
 
 
 
@@ -17889,7 +17889,7 @@ console.log('line three');</code></pre>
 
 
 
-<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="1283" height="829" src="/wordpress_blog/wp-content/uploads/2022/04/async-to-the-rescue.png" alt="" class="wp-image-494"/><figcaption>Async to the rescue</figcaption></figure>
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1283" height="829" src="/wordpress_blog/wp-content/uploads/2022/04/async-to-the-rescue.png" alt="" class="wp-image-494"/><figcaption>Async to the rescue</figcaption></figure>
 
 
 
@@ -17961,7 +17961,7 @@ console.log(4);</code></pre>
 
 
 
-<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="1536" height="465" src="/wordpress_blog/wp-content/uploads/2022/04/api-endpoints.png" alt="" class="wp-image-496"/><figcaption>API Endpoints</figcaption></figure>
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1536" height="465" src="/wordpress_blog/wp-content/uploads/2022/04/api-endpoints.png" alt="" class="wp-image-496"/><figcaption>API Endpoints</figcaption></figure>
 
 
 
@@ -18633,12 +18633,12 @@ getTodos()
 
 
 
-<figure class="wp-block-gallery has-nested-images columns-1 is-cropped wp-block-gallery-13 is-layout-flex wp-block-gallery-is-layout-flex">
-<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1536" height="731" data-id="485" src="/wordpress_blog/wp-content/uploads/2022/04/grid-desktop-mobile.jpg" alt="" class="wp-image-485"/><figcaption>Grid Desktop Mobile</figcaption></figure>
+<figure class="wp-block-gallery has-nested-images columns-1 is-cropped wp-block-gallery-7 is-layout-flex wp-block-gallery-is-layout-flex">
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1536" height="731" data-id="485" src="/wordpress_blog/wp-content/uploads/2022/04/grid-desktop-mobile.jpg" alt="" class="wp-image-485"/><figcaption>Grid Desktop Mobile</figcaption></figure>
 
 
 
-<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1102" height="1035" data-id="486" src="/wordpress_blog/wp-content/uploads/2022/04/grid-webpage.jpg" alt="" class="wp-image-486"/><figcaption>Grid Webpage</figcaption></figure>
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1102" height="1035" data-id="486" src="/wordpress_blog/wp-content/uploads/2022/04/grid-webpage.jpg" alt="" class="wp-image-486"/><figcaption>Grid Webpage</figcaption></figure>
 </figure>
 
 
@@ -18798,7 +18798,7 @@ getTodos()
 
 
 
-<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="1123" height="959" src="/wordpress_blog/wp-content/uploads/2022/04/grid-lines.jpg" alt="" class="wp-image-488"/><figcaption>Grid Lines</figcaption></figure>
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1123" height="959" src="/wordpress_blog/wp-content/uploads/2022/04/grid-lines.jpg" alt="" class="wp-image-488"/><figcaption>Grid Lines</figcaption></figure>
 
 
 
@@ -20383,12 +20383,12 @@ div {
 
 
 
-<figure class="wp-block-gallery has-nested-images columns-1 is-cropped wp-block-gallery-15 is-layout-flex wp-block-gallery-is-layout-flex">
-<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1494" height="679" data-id="474" src="/wordpress_blog/wp-content/uploads/2022/04/div-marinpadding.jpg" alt="" class="wp-image-474"/><figcaption>div &#8211; margin &amp; padding</figcaption></figure>
+<figure class="wp-block-gallery has-nested-images columns-1 is-cropped wp-block-gallery-8 is-layout-flex wp-block-gallery-is-layout-flex">
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1494" height="679" data-id="474" src="/wordpress_blog/wp-content/uploads/2022/04/div-marinpadding.jpg" alt="" class="wp-image-474"/><figcaption>div &#8211; margin &amp; padding</figcaption></figure>
 
 
 
-<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="952" height="496" data-id="475" src="/wordpress_blog/wp-content/uploads/2022/04/span-marginpadding.jpg" alt="" class="wp-image-475"/><figcaption>span &#8211; margin &amp; padding</figcaption></figure>
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="952" height="496" data-id="475" src="/wordpress_blog/wp-content/uploads/2022/04/span-marginpadding.jpg" alt="" class="wp-image-475"/><figcaption>span &#8211; margin &amp; padding</figcaption></figure>
 </figure>
 
 
@@ -25960,12 +25960,12 @@ $utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg");
 
 
 
-<figure class="wp-block-gallery has-nested-images columns-1 is-cropped wp-block-gallery-17 is-layout-flex wp-block-gallery-is-layout-flex">
-<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1536" height="638" data-id="728" src="/wordpress_blog/wp-content/uploads/2022/04/server-1.png" alt="" class="wp-image-728"/><figcaption>圖片觀念:伺服器-1</figcaption></figure>
+<figure class="wp-block-gallery has-nested-images columns-1 is-cropped wp-block-gallery-9 is-layout-flex wp-block-gallery-is-layout-flex">
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1536" height="638" data-id="728" src="/wordpress_blog/wp-content/uploads/2022/04/server-1.png" alt="" class="wp-image-728"/><figcaption>圖片觀念:伺服器-1</figcaption></figure>
 
 
 
-<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1536" height="540" data-id="729" src="/wordpress_blog/wp-content/uploads/2022/04/server-2.png" alt="" class="wp-image-729"/><figcaption>圖片觀念:伺服器-2</figcaption></figure>
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1536" height="540" data-id="729" src="/wordpress_blog/wp-content/uploads/2022/04/server-2.png" alt="" class="wp-image-729"/><figcaption>圖片觀念:伺服器-2</figcaption></figure>
 </figure>
 
 
@@ -26420,7 +26420,7 @@ console.log(result, typeof result);</code></pre>
 
 
 
-<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="1433" height="566" src="/wordpress_blog/wp-content/uploads/2022/04/control-flow.png" alt="" class="wp-image-731"/><figcaption>control flow</figcaption></figure>
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1433" height="566" src="/wordpress_blog/wp-content/uploads/2022/04/control-flow.png" alt="" class="wp-image-731"/><figcaption>control flow</figcaption></figure>
 
 
 
@@ -26693,12 +26693,12 @@ console.log('outside code block: ', age, name);
 
 
 
-<figure class="wp-block-gallery has-nested-images columns-1 is-cropped wp-block-gallery-19 is-layout-flex wp-block-gallery-is-layout-flex">
-<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="598" height="648" data-id="733" src="/wordpress_blog/wp-content/uploads/2022/04/function-1.png" alt="" class="wp-image-733"/><figcaption>function &#8211; 1</figcaption></figure>
+<figure class="wp-block-gallery has-nested-images columns-1 is-cropped wp-block-gallery-10 is-layout-flex wp-block-gallery-is-layout-flex">
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="598" height="648" data-id="733" src="/wordpress_blog/wp-content/uploads/2022/04/function-1.png" alt="" class="wp-image-733"/><figcaption>function &#8211; 1</figcaption></figure>
 
 
 
-<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="1536" height="304" data-id="734" src="/wordpress_blog/wp-content/uploads/2022/04/function-2.png" alt="" class="wp-image-734"/><figcaption>function &#8211; 2</figcaption></figure>
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1536" height="304" data-id="734" src="/wordpress_blog/wp-content/uploads/2022/04/function-2.png" alt="" class="wp-image-734"/><figcaption>function &#8211; 2</figcaption></figure>
 </figure>
 
 
@@ -27599,7 +27599,7 @@ console.log(Math.round(random * 100));</code></pre>
 
 
 
-<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="1536" height="783" src="/wordpress_blog/wp-content/uploads/2022/04/stackheap.jpg" alt="" class="wp-image-736"/><figcaption>Stack &amp; Heap</figcaption></figure>
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1536" height="783" src="/wordpress_blog/wp-content/uploads/2022/04/stackheap.jpg" alt="" class="wp-image-736"/><figcaption>Stack &amp; Heap</figcaption></figure>
 
 
 
@@ -27704,7 +27704,7 @@ console.log(userOne, userTwo);</code></pre>
 
 
 
-<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="1196" height="707" src="/wordpress_blog/wp-content/uploads/2022/04/DOM.jpg" alt="" class="wp-image-738"/><figcaption>DOM</figcaption></figure>
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1196" height="707" src="/wordpress_blog/wp-content/uploads/2022/04/DOM.jpg" alt="" class="wp-image-738"/><figcaption>DOM</figcaption></figure>
 
 
 
@@ -28429,11 +28429,11 @@ title.classList.toggle('test');</code></pre>
 
 
 
-<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="1480" height="825" src="/wordpress_blog/wp-content/uploads/2022/04/siblings.jpg" alt="" class="wp-image-739"/><figcaption>Siblings</figcaption></figure>
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1480" height="825" src="/wordpress_blog/wp-content/uploads/2022/04/siblings.jpg" alt="" class="wp-image-739"/><figcaption>Siblings</figcaption></figure>
 
 
 
-<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="1439" height="870" src="/wordpress_blog/wp-content/uploads/2022/04/parents-children.jpg" alt="" class="wp-image-740"/><figcaption>Parents &amp; Children</figcaption></figure>
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1439" height="870" src="/wordpress_blog/wp-content/uploads/2022/04/parents-children.jpg" alt="" class="wp-image-740"/><figcaption>Parents &amp; Children</figcaption></figure>
 
 
 
@@ -29132,7 +29132,7 @@ popup.addEventListener('click', () =&gt; {
 
 
 
-<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="481" height="391" src="/wordpress_blog/wp-content/uploads/2022/04/flexbox.png" alt="" class="wp-image-696"/><figcaption>flexbox</figcaption></figure>
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="481" height="391" src="/wordpress_blog/wp-content/uploads/2022/04/flexbox.png" alt="" class="wp-image-696"/><figcaption>flexbox</figcaption></figure>
 
 
 
@@ -29160,7 +29160,7 @@ popup.addEventListener('click', () =&gt; {
 
 
 
-<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="481" height="391" src="/wordpress_blog/wp-content/uploads/2022/04/flexbox-1.png" alt="" class="wp-image-697"/><figcaption>flexbox</figcaption></figure>
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="481" height="391" src="/wordpress_blog/wp-content/uploads/2022/04/flexbox-1.png" alt="" class="wp-image-697"/><figcaption>flexbox</figcaption></figure>
 
 
 
@@ -30505,7 +30505,7 @@ body{
 
 
 
-<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="808" height="910" src="/wordpress_blog/wp-content/uploads/2022/04/flex-flow.jpg" alt="" class="wp-image-699"/><figcaption>flex-flow</figcaption></figure>
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="808" height="910" src="/wordpress_blog/wp-content/uploads/2022/04/flex-flow.jpg" alt="" class="wp-image-699"/><figcaption>flex-flow</figcaption></figure>
 
 
 

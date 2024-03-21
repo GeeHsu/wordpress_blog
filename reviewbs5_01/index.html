@@ -1,0 +1,1711 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<title>Bootstrap5 複習01 &#8211; wordpress_blog</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="alternate" type="application/rss+xml" title="訂閱《wordpress_blog》&raquo; 資訊提供" href="/wordpress_blog/feed/">
+<link rel="alternate" type="application/rss+xml" title="訂閱《wordpress_blog》&raquo; 留言的資訊提供" href="/wordpress_blog/comments/feed/">
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.4.3"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"🏳️‍⚧️","🏳️​⚧️")?!1:!n(e,"🇺🇳","🇺​🇳")&&!n(e,"🏴󠁧󠁢󠁥󠁮󠁧󠁿","🏴​󠁧​󠁢​󠁥​󠁮​󠁧​󠁿");case"emoji":return!n(e,"🫱🏻‍🫲🏿","🫱🏻​🫲🏿")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+</script>
+<style id="wp-emoji-styles-inline-css">img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}</style>
+<link rel="stylesheet" id="wp-block-library-css" href="/wordpress_blog/wp-includes/css/dist/block-library/style.min.css?ver=6.4.3" media="all">
+<style id="classic-theme-styles-inline-css">/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}</style>
+<style id="global-styles-inline-css">body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--palette-1-color-0: #212121;--wp--preset--color--palette-1-color-1: #757575;--wp--preset--color--palette-1-color-2: #212121;--wp--preset--color--palette-1-color-3: #212121;--wp--preset--color--palette-1-color-4: #212121;--wp--preset--color--palette-1-color-5: #f5f5f5;--wp--preset--color--palette-1-color-6: #ffffff;--wp--preset--color--palette-1-color-7: #ffffff;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 14px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 18px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--normal: 16px;--wp--preset--font-size--larger: 24px;--wp--preset--font-size--extra-large: 32px;--wp--preset--font-size--huge: 48px;--wp--preset--font-size--gigantic: 64px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}</style>
+<link rel="stylesheet" id="botiga-style-css" href="/wordpress_blog/wp-content/themes/botiga/style.css?ver=1.1.2" media="all">
+<link rel="stylesheet" id="botiga-style-min-css" href="/wordpress_blog/wp-content/themes/botiga/assets/css/styles.min.css?ver=1.1.2" media="all">
+<link rel="stylesheet" id="botiga-custom-styles-css" href="/wordpress_blog/wp-content/uploads/botiga/custom-styles.css?ver=1648804469" media="all">
+<link rel="https://api.w.org/" href="/wordpress_blog/wp-json/">
+<link rel="alternate" type="application/json" href="/wordpress_blog/wp-json/wp/v2/posts/806">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/wordpress_blog/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 6.4.3">
+<link rel="canonical" href="/wordpress_blog/reviewbs5_01/">
+<link rel="shortlink" href="/wordpress_blog/?p=806">
+<link rel="alternate" type="application/json+oembed" href="/wordpress_blog/wp-json/oembed/1.0/embed?url=%2Freviewbs5_01%2F">
+<link rel="alternate" type="text/xml+oembed" href="/wordpress_blog/wp-json/oembed/1.0/embed?url=%2Freviewbs5_01%2F&#038;format=xml">
+<link rel="icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png" sizes="32x32">
+<link rel="icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png" sizes="192x192">
+<link rel="apple-touch-icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png">
+<meta name="msapplication-TileImage" content="/wp-content/uploads/2022/03/logo.png">
+	
+</head>
+
+<body class="post-template-default single single-post postid-806 single-format-standard wp-custom-logo wp-embed-responsive header-header_layout_1 blog-single-layout1">
+
+
+<div id="page" class="site">
+
+	<a class="skip-link screen-reader-text" href="#primary">Skip to content</a>
+
+	
+			<div class="top-bar visibility-desktop-only">
+				<div class="container-fluid">
+					<div class="top-bar-inner">
+						<div class="row valign">
+
+															<div class="col header-elements delimiter-none">
+									<div class="header-item top-bar-social"><div class="social-profile">
+<a target="_blank" href="https://www.facebook.com/watergrass0402/"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></i></a><a target="_blank" href="https://github.com/GeeHsu"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></i></a>
+</div></div>								</div>
+																						<div class="col header-elements delimiter-none">
+													
+			<nav class="header-item top-bar-secondary-navigation secondary-navigation">
+				<div class="menu-topbar-container"><ul id="secondary" class="menu">
+<li id="menu-item-143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143"><a href="/wordpress_blog/setup/">網站架設</a></li>
+<li id="menu-item-144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a href="/wordpress_blog/source/">資料來源</a></li>
+<li id="menu-item-262" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-262"><a href="/wordpress_blog/resource/">學習資源</a></li>
+</ul></div>			</nav>
+											</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			
+							
+				<header id="masthead" class="site-header header_layout_1">
+					<div class="container-fluid">
+						<div class="site-header-inner">
+							<div class="row valign">
+								<div class="col-md-5">
+										
+			<nav id="site-navigation" class="main-navigation">
+				<div class="menu-navbar-container"><ul id="primary-menu" class="menu">
+<li id="menu-item-109" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="/wordpress_blog/about/">關於</a></li>
+<li id="menu-item-110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-110">
+<a href="/wordpress_blog/learn/">學習</a><span tabindex="0" class="dropdown-symbol"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512.011 512.011"><path d="M505.755 123.592c-8.341-8.341-21.824-8.341-30.165 0L256.005 343.176 36.421 123.592c-8.341-8.341-21.824-8.341-30.165 0s-8.341 21.824 0 30.165l234.667 234.667a21.275 21.275 0 0015.083 6.251 21.275 21.275 0 0015.083-6.251l234.667-234.667c8.34-8.341 8.34-21.824-.001-30.165z"></path></svg></i></span>
+<ul class="sub-menu">
+	<li id="menu-item-140" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-140"><a href="/wordpress_blog/category/hexschool/">六角學院</a></li>
+	<li id="menu-item-141" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-141"><a href="/wordpress_blog/category/ninja/">Net Ninja</a></li>
+	<li id="menu-item-483" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-483"><a href="/wordpress_blog/category/youtube/">Youtube</a></li>
+</ul>
+</li>
+<li id="menu-item-111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="/wordpress_blog/linestore/">LINE STORE</a></li>
+</ul></div>			</nav><!-- #site-navigation -->
+											</div>
+								<div class="col-md-2">
+												<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog" decoding="async" fetchpriority="high"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+											</div>
+								<div class="col-md-5 header-elements">
+																	</div>							
+							</div>
+						</div>
+					</div>
+								<div class="header-search-form">
+			<form role="search" method="get" class="search-form" action="/">
+	<label class="screen-reader-text" for="search-form-1">Search&hellip;</label>
+	<input type="search" id="search-form-1" class="search-field" value="" name="s" placeholder="Search &hellip;">
+	<button type="submit" class="search-submit" value="Search"><i class="ws-svg-icon"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 100 14.25 7.125 7.125 0 000-14.25zM2.25 10.875a8.625 8.625 0 1117.25 0 8.625 8.625 0 01-17.25 0z"></path><path fill-rule="evenodd" d="M15.913 15.914a.75.75 0 011.06 0l4.557 4.556a.75.75 0 01-1.06 1.06l-4.557-4.556a.75.75 0 010-1.06z"></path></svg></i></button>
+</form>
+			</div>
+			
+									</header>
+
+										<div class="search-overlay"></div>
+			
+			<div class="botiga-offcanvas-menu">
+				<div class="mobile-header-item">
+					<div class="row">
+						<div class="col">
+										<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog" decoding="async"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+									</div>
+						<div class="col align-right">
+							<a class="mobile-menu-close" href="#"><i class="ws-svg-icon icon-cancel"><svg width="16" height="16" fill="none" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.219.781L.78 2.22 9.562 11l-8.78 8.781 1.437 1.438L11 12.437l8.781 8.782 1.438-1.438L12.437 11l8.782-8.781L19.78.78 11 9.562 2.219.783z"></path></svg></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="mobile-header-item">
+						
+			<nav id="site-navigation" class="main-navigation">
+				<div class="menu-navbar-container"><ul id="primary-menu" class="menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="/wordpress_blog/about/">關於</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-110">
+<a href="/wordpress_blog/learn/">學習</a><span tabindex="0" class="dropdown-symbol"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512.011 512.011"><path d="M505.755 123.592c-8.341-8.341-21.824-8.341-30.165 0L256.005 343.176 36.421 123.592c-8.341-8.341-21.824-8.341-30.165 0s-8.341 21.824 0 30.165l234.667 234.667a21.275 21.275 0 0015.083 6.251 21.275 21.275 0 0015.083-6.251l234.667-234.667c8.34-8.341 8.34-21.824-.001-30.165z"></path></svg></i></span>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-140"><a href="/wordpress_blog/category/hexschool/">六角學院</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-141"><a href="/wordpress_blog/category/ninja/">Net Ninja</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-483"><a href="/wordpress_blog/category/youtube/">Youtube</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="/wordpress_blog/linestore/">LINE STORE</a></li>
+</ul></div>			</nav><!-- #site-navigation -->
+							</div>
+				<div class="mobile-header-item">
+									<a target="&quot;_blank&quot;" class="button header-item" href="https://www.facebook.com/watergrass0402/">聯絡我</a>
+							</div>			
+			</div>
+			
+							<header id="masthead-mobile" class="site-header mobile-header">
+					<div class="container-fluid">
+						<div class="row valign flex-nowrap">
+							<div class="col-sm-6 col-md-4 col-grow-mobile">
+											<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog" decoding="async"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+										</div>
+							<div class="col-auto col-sm-6 col-md-8 col-grow-mobile header-elements valign align-right">
+																	
+															<a href="#" class="menu-toggle">
+				<i class="ws-svg-icon"><svg width="16" height="11" viewbox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="16" height="1"></rect><rect y="5" width="16" height="1"></rect><rect y="10" width="16" height="1"></rect></svg></i>
+			</a>
+																		</div>						
+						</div>
+					</div>
+								<div class="header-search-form">
+			<form role="search" method="get" class="search-form" action="/">
+	<label class="screen-reader-text" for="search-form-2">Search&hellip;</label>
+	<input type="search" id="search-form-2" class="search-field" value="" name="s" placeholder="Search &hellip;">
+	<button type="submit" class="search-submit" value="Search"><i class="ws-svg-icon"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 100 14.25 7.125 7.125 0 000-14.25zM2.25 10.875a8.625 8.625 0 1117.25 0 8.625 8.625 0 01-17.25 0z"></path><path fill-rule="evenodd" d="M15.913 15.914a.75.75 0 011.06 0l4.557 4.556a.75.75 0 01-1.06 1.06l-4.557-4.556a.75.75 0 010-1.06z"></path></svg></i></button>
+</form>
+			</div>
+			
+									</header>
+						<div class="search-overlay"></div>
+			<div class="header-image"><img src="/wordpress_blog/wp-content/uploads/2022/03/seashore.jpg" width="1920" height="500" alt=""></div>
+<div class="container content-wrapper"><div class="row main-row">			
+	<main id="primary" class="site-main no-sidebar">
+
+		
+
+<article id="post-806" class="post-806 post type-post status-publish format-standard hentry category-hexschool">
+	
+		
+	<header class="entry-header">
+		
+		
+		<h1 class="entry-title">Bootstrap5 複習01</h1>			<div class="entry-meta entry-meta-below delimiter-none">
+<span class="posted-on"><a href="/wordpress_blog/reviewbs5_01/" rel="bookmark"><time class="entry-date published" datetime="2023-12-14T12:23:00+08:00">2023 年 12 月 14 日</time><time class="updated" datetime="2024-03-21T09:52:38+08:00">2024 年 3 月 21 日</time></a></span><span class="byline"> <span class="author vcard"><a class="url fn n" href="/wordpress_blog/author/gee-hsu/">gee.hsu</a></span></span>
+</div>			</header><!-- .entry-header -->
+
+	
+	<div class="entry-content">
+		
+<p>學習來自: 六角學院<br>課程: Bootstrap 5 網頁切版整合術<br>Thank you</p>
+
+
+
+<h2 class="wp-block-heading">環境建置</h2>
+
+
+
+<h3 class="wp-block-heading">Bootstrap 文件介紹</h3>
+
+
+
+<h4 class="wp-block-heading">文件說明 – 中文版</h4>
+
+
+
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td>Getting started</td>
+<td>快速開始</td>
+</tr>
+<tr>
+<td>Customize</td>
+<td>自定義</td>
+</tr>
+<tr>
+<td>Layout</td>
+<td>排版</td>
+</tr>
+<tr>
+<td>Content</td>
+<td>內容</td>
+</tr>
+<tr>
+<td>Form</td>
+<td>表單</td>
+</tr>
+<tr>
+<td>Components</td>
+<td>元件</td>
+</tr>
+<tr>
+<td>Helpers</td>
+<td>工具</td>
+</tr>
+<tr>
+<td>Utilities</td>
+<td>通用類別</td>
+</tr>
+<tr>
+<td>Extend</td>
+<td>擴增</td>
+</tr>
+<tr>
+<td>About</td>
+<td>關於</td>
+</tr>
+</tbody></table></figure>
+
+
+
+<h3 class="wp-block-heading">Bootstrap 中英文文件連結</h3>
+
+
+
+<ul>
+<li><a href="https://getbootstrap.com/" target="_blank" rel="noreferrer noopener">官方原文 Bootstrap</a></li>
+
+
+
+<li><a href="https://bootstrap5.hexschool.com/" target="_blank" rel="noreferrer noopener">六角學院繁體中文版本</a></li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">VSCode 基礎環境建置</h3>
+
+
+
+<h3 class="wp-block-heading">VSCode 與相關資源連結</h3>
+
+
+
+<ul>
+<li><a href="https://code.visualstudio.com/">VSCode 官方網站</a></li>
+</ul>
+
+
+
+<p>相關套件:</p>
+
+
+
+<ul>
+<li><a href="https://www.casper.tw/development/2019/12/01/vscode-chinese/" target="_blank" rel="noreferrer noopener">繁體中文版安裝說明</a></li>
+
+
+
+<li><a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer" target="_blank" rel="noreferrer noopener">Live Server</a></li>
+
+
+
+<li>
+<a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass" target="_blank" rel="noreferrer noopener">Live Sass</a>&nbsp;(後方課程會運用到)</li>
+</ul>
+
+
+
+<p>更多參考套件</p>
+
+
+
+<ul>
+<li><a href="https://www.casper.tw/development/2020/12/13/vscode-extension/" target="_blank" rel="noreferrer noopener">套件</a></li>
+
+
+
+<li>樣式主題&nbsp;<a href="https://marketplace.visualstudio.com/items?itemName=andischerer.theme-atom-one-dark" target="_blank" rel="noreferrer noopener">Atom One</a>
+</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">語系設置與 Bootstrap CDN</h3>
+
+
+
+<ul>
+<li><a href="https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry" target="_blank" rel="noreferrer noopener">語系參考文件</a></li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// index.html - 語系
+&lt;!DOCTYPE html&gt;
+&lt;html lang="zh-tw"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+    &lt;title&gt;Review BS5&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p lang="zh-TW"&gt;繁中台灣 zh-TW: 骨、花、學、崎、雨&lt;/p&gt;
+    &lt;p lang="zh-HK"&gt;繁中香港 zh-HK: 骨、花、學、崎、雨&lt;/p&gt;
+    &lt;p lang="zh-CN"&gt;簡忠 zh-CN: 骨、花、學、崎、雨&lt;/p&gt;
+    &lt;p lang="ja"&gt;日文 ja: 骨、花、學、崎、雨&lt;/p&gt;
+    &lt;hr /&gt;
+    &lt;p lang="zh-TW"&gt;繁中台灣 zh-TW: 骨、花、學、崎、雨&lt;/p&gt;
+    &lt;p lang="zh-Hant-TW"&gt;繁中台灣 zh-Hant-TW: 骨、花、學、崎、雨&lt;/p&gt;
+    &lt;p lang="zh-HK"&gt;繁中香港 zh-HK: 骨、花、學、崎、雨&lt;/p&gt;
+    &lt;p lang="zh-Hant-HK"&gt;繁中香港 zh-Hant-HK: 骨、花、學、崎、雨&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.html - Bootstrap CDN
+&lt;!DOCTYPE html&gt;
+&lt;html lang="zh-tw"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+    &lt;title&gt;Review BS5&lt;/title&gt;
+    &lt;link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;button type="button" class="btn btn-primary"&gt;Primary&lt;/button&gt;
+    &lt;button type="button" class="btn btn-secondary"&gt;Secondary&lt;/button&gt;
+    &lt;button type="button" class="btn btn-success"&gt;Success&lt;/button&gt;
+    &lt;button type="button" class="btn btn-danger"&gt;Danger&lt;/button&gt;
+    &lt;button type="button" class="btn btn-warning"&gt;Warning&lt;/button&gt;
+    &lt;button type="button" class="btn btn-info"&gt;Info&lt;/button&gt;
+    &lt;button type="button" class="btn btn-light"&gt;Light&lt;/button&gt;
+    &lt;button type="button" class="btn btn-dark"&gt;Dark&lt;/button&gt;
+    &lt;button type="button" class="btn btn-link"&gt;Link&lt;/button&gt;
+    &lt;hr /&gt;
+    &lt;button
+      type="button"
+      class="btn btn-outline-primary"
+      data-bs-toggle="button"
+      autocomplete="off"
+    &gt;
+      Toggle button
+    &lt;/button&gt;
+    &lt;button
+      type="button"
+      class="btn btn-outline-primary active"
+      data-bs-toggle="button"
+      autocomplete="off"
+      aria-pressed="true"
+    &gt;
+      Active toggle button
+    &lt;/button&gt;
+    &lt;button
+      type="button"
+      class="btn btn-outline-primary"
+      disabled
+      data-bs-toggle="button"
+      autocomplete="off"
+    &gt;
+      Disabled toggle button
+    &lt;/button&gt;
+
+    &lt;script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    &gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+
+
+<h3 class="wp-block-heading">CSS 的 Class 運用</h3>
+
+
+
+<h4 class="wp-block-heading">補充說明: Class</h4>
+
+
+
+<pre class="wp-block-code"><code>// 樣式補充說明
+&lt;button type="button" class="btn btn-primary"&gt;Primary&lt;/button&gt;</code></pre>
+
+
+
+<p>Bootstrap 中會加入大量的 Class 來套用樣式，每一個 Class 都代表了部分的結構、樣式、狀態等等…</p>
+
+
+
+<p>Class 其中的:</p>
+
+
+
+<ul>
+<li>class 是 HTML 標籤的屬性名稱 – 每個標籤只能有一個</li>
+
+
+
+<li>btn 則是其值 – 每個 Class 可以用空白隔開多個值</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+&lt;!DOCTYPE html&gt;
+&lt;html lang="zh-tw"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+    &lt;title&gt;Review BS5&lt;/title&gt;
+    &lt;link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;button type="button" class="btn btn-primary"&gt;Primary&lt;/button&gt;
+
+    &lt;script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    &gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+
+
+<h3 class="wp-block-heading">快速體驗 Bootstrap 建立一個網站</h3>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+&lt;!DOCTYPE html&gt;
+&lt;html lang="zh-tw"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+    &lt;title&gt;Review BS5&lt;/title&gt;
+    &lt;link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;nav class="navbar navbar-expand-lg navbar-dark bg-dark"&gt;
+      &lt;div class="container-fluid"&gt;
+        &lt;a class="navbar-brand" href="#"&gt;Navbar&lt;/a&gt;
+        &lt;button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        &gt;
+          &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;div class="collapse navbar-collapse" id="navbarSupportedContent"&gt;
+          &lt;ul class="navbar-nav me-auto mb-2 mb-lg-0"&gt;
+            &lt;li class="nav-item"&gt;
+              &lt;a class="nav-link active" aria-current="page" href="#"&gt;Home&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="nav-item"&gt;
+              &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="nav-item dropdown"&gt;
+              &lt;a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              &gt;
+                Dropdown
+              &lt;/a&gt;
+              &lt;ul class="dropdown-menu" aria-labelledby="navbarDropdown"&gt;
+                &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;hr class="dropdown-divider" /&gt;&lt;/li&gt;
+                &lt;li&gt;
+                  &lt;a class="dropdown-item" href="#"&gt;Something else here&lt;/a&gt;
+                &lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li class="nav-item"&gt;
+              &lt;a class="nav-link disabled"&gt;Disabled&lt;/a&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+          &lt;form class="d-flex"&gt;
+            &lt;input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            /&gt;
+            &lt;button class="btn btn-outline-success" type="submit"&gt;
+              Search
+            &lt;/button&gt;
+          &lt;/form&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/nav&gt;
+
+    &lt;div class="container my-4"&gt;
+      &lt;div class="row row-cols-1 row-cols-md-2 g-4"&gt;
+        &lt;div class="col"&gt;
+          &lt;div class="card"&gt;
+            &lt;img
+              src="https://images.unsplash.com/photo-1663947718652-fa32fb546da2?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="card-img-top"
+              alt="..."
+            /&gt;
+            &lt;div class="card-body"&gt;
+              &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+              &lt;p class="card-text"&gt;
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              &lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col"&gt;
+          &lt;div class="card"&gt;
+            &lt;img
+              src="https://images.unsplash.com/photo-1663947718652-fa32fb546da2?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="card-img-top"
+              alt="..."
+            /&gt;
+            &lt;div class="card-body"&gt;
+              &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+              &lt;p class="card-text"&gt;
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              &lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col"&gt;
+          &lt;div class="card"&gt;
+            &lt;img
+              src="https://images.unsplash.com/photo-1663947718652-fa32fb546da2?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="card-img-top"
+              alt="..."
+            /&gt;
+            &lt;div class="card-body"&gt;
+              &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+              &lt;p class="card-text"&gt;
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content.
+              &lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col"&gt;
+          &lt;div class="card"&gt;
+            &lt;img
+              src="https://images.unsplash.com/photo-1663947718652-fa32fb546da2?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="card-img-top"
+              alt="..."
+            /&gt;
+            &lt;div class="card-body"&gt;
+              &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+              &lt;p class="card-text"&gt;
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              &lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;footer class="bg-light py-4"&gt;
+      &lt;div class="container"&gt;
+        &lt;p class="mb-0"&gt;這裡是 Footer&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/footer&gt;
+
+    &lt;script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    &gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">Bootstrap 文件介紹</h2>
+
+
+
+<h3 class="wp-block-heading">知識點: box-sizing</h3>
+
+
+
+<h4 class="wp-block-heading">補充說明: box-sizing</h4>
+
+
+
+<p>由於 padding 及 border 會改變元素運算後的寬度，避免麻煩的計算，Bootstrap 預設載入 box-sizing: border-box</p>
+
+
+
+<p><strong>定義的寬度 = 實際呈現的寬度</strong></p>
+
+
+
+<pre class="wp-block-code"><code>// 簡報1
+// width: 300px;
+// height: 300px;
+// padding: 50px;
+// border: 10px solid green;
+// margin: 50px;
+div {
+  width: 300px;
+  height: 300px;
+  padding: 50px;
+  border: 10px solid green;
+  margin: 50px;
+}
+
+// 寬度: 300px + 50 * 2px + 10 * 2px = 420px</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 簡報2
+// width: 300px;
+// height: 300px;
+// padding: 50px;
+// border: 10px solid green;
+// margin: 50px;
+
+div {
+  width: 300px;
+  height: 300px;
+  border: 10px solid green;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+// 寬度: 300px = X + 50 * 2px + 10 * 2px</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+&lt;!DOCTYPE html&gt;
+&lt;html lang="zh-tw"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+    &lt;title&gt;Review BS5&lt;/title&gt;
+    &lt;style&gt;
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: #ccc;
+
+        padding: 50px;
+        border: 5px solid black;
+        margin: 50px;
+
+        box-sizing: border-box;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+
+
+<h3 class="wp-block-heading">知識點: CSS Variables</h3>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+&lt;!DOCTYPE html&gt;
+&lt;html lang="zh-tw"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+    &lt;title&gt;Review BS5&lt;/title&gt;
+    &lt;style&gt;
+      /* 全域 */
+      :root {
+        --primary: #69f0ae;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        padding: 20px;
+        border: 5px solid #eee;
+      }
+
+      .bg-primary {
+        background-color: var(--primary);
+      }
+
+      /* 進階技巧 */
+      .local {
+        --primary: orange;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class="box bg-primary"&gt;&lt;/div&gt;
+    &lt;div class="local"&gt;
+      &lt;div class="box bg-primary"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+
+
+<h3 class="wp-block-heading">知識點: rem 單位</h3>
+
+
+
+<pre class="wp-block-code"><code>// em 與 rem
+//  em 是相對的的數值單位，它會受到外圍的文字大小所影響，而 1em 即是 1 的文字大小， 1.5em 也就是 1.5 倍的文字大小。
+// rem 也是相對的文字尺寸，和 em 使用方法接近，不同的是他僅相對於 root 層級的文字大小(網頁中的 html)。</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+&lt;!DOCTYPE html&gt;
+&lt;html lang="zh-tw"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+    &lt;title&gt;Review BS5&lt;/title&gt;
+    &lt;style&gt;
+      html {
+        font-size: 20px;
+      }
+      .em2 {
+        font-size: 2em;
+      }
+      .rem2 {
+        font-size: 2rem;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- 
+      網頁文字預設大小是 16px
+      rem 與 em 的差別
+      最外層設定會使用 :root 或者 html
+    --&gt;
+    &lt;div&gt;
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque voluptatem
+      libero, magni consequatur quisquam quidem enim, alias voluptates, autem
+      qui dolores eaque nam ad nostrum porro dignissimos vel totam. Error.
+    &lt;/div&gt;
+    &lt;hr /&gt;
+    &lt;div class="em2"&gt;
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. In consectetur
+      cum veritatis earum nesciunt nihil laudantium autem culpa, minima debitis,
+      eligendi corrupti praesentium, id architecto soluta dolor quaerat dicta
+      iure.
+      &lt;strong class="em2"&gt;veritatis earum nesciunt&lt;/strong&gt;
+    &lt;/div&gt;
+    &lt;hr /&gt;
+    &lt;div class="rem2"&gt;
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias delectus
+      voluptate magnam placeat quos sapiente error harum est! At vero dolorum,
+      nostrum porro assumenda delectus veniam expedita possimus exercitationem
+      praesentium.
+      &lt;strong class="rem2"&gt;veritatis earum nesciunt&lt;/strong&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+
+
+<h3 class="wp-block-heading">知識點: 系統預設字體</h3>
+
+
+
+<h4 class="wp-block-heading">補充說明: 系統預設字體 – 樣式補充說明</h4>
+
+
+
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td>系統</td>
+<td>系統預設</td>
+<td>英文字體</td>
+<td>中文字體</td>
+</tr>
+<tr>
+<td>Windows</td>
+<td></td>
+<td>Segoe UI</td>
+<td>Microsoft JhengHei / 微軟正黑體</td>
+</tr>
+<tr>
+<td>Mac OS</td>
+<td>-apple-system</td>
+<td>San Francisco / Helvetica Neue</td>
+<td>蘋方(PingFang) / Heiti TC</td>
+</tr>
+<tr>
+<td>iOS</td>
+<td>-apple-system</td>
+<td>San Francisco / Helvetica Neue</td>
+<td>蘋方(PingFang) / Heiti TC</td>
+</tr>
+<tr>
+<td>Android</td>
+<td></td>
+<td>Roboto</td>
+<td>Noto Sans</td>
+</tr>
+</tbody></table></figure>
+
+
+
+<h4 class="wp-block-heading">Bootstrap 預設字體</h4>
+
+
+
+<pre class="wp-block-code"><code>// Bootstrap 預設字體
+$font-family-sans-serif:
+
+  // 使用系統預設的字體
+  // Cross-platform generic font family (default user interface font)
+  system-ui,
+  // Safari for macOS and iOS (San Francisco)
+  -apple-system,
+
+  // 指定已知的系統 UI 字體
+  // Windows
+  "Segoe UI",
+  // Android
+  Roboto,
+  // Basic web fallback
+  "Helvetica Neue", Arial,
+  // Linux
+  "Noto Sans",
+  "Liberation Sans",
+  // CSS 定義字體、Emoji 等等
+  // Sans serif fallback
+  sans-serif,
+  // Emoji fonts
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;</code></pre>
+
+
+
+<h3 class="wp-block-heading">CSS Reset 做了什麼</h3>
+
+
+
+<ul>
+<li><a href="https://github.com/twbs/bootstrap/blob/v5.1.0/dist/css/bootstrap-reboot.css" target="_blank" rel="noreferrer noopener">Reboot 專用 CSS</a></li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// index.html
+&lt;!DOCTYPE html&gt;
+&lt;html lang="zh-tw"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+    &lt;title&gt;Review BS5&lt;/title&gt;
+    &lt;link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    /&gt;
+    &lt;style&gt;
+      .box {
+        width: 100px;
+        height: 100px;
+        padding: 20px;
+        background-color: #ccc;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- 重點 1: 會套用 Bootstrap 預設字體、字體大小、行間距等等 --&gt;
+    &lt;h1&gt;h1. Bootstrap heading&lt;/h1&gt;
+    &lt;h2&gt;h2. Bootstrap heading&lt;/h2&gt;
+
+    &lt;!-- 重點 2: 套用 box-sizing --&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
+
+    &lt;!-- 重點 3: 套用 list 等其他標準 Normalize 樣式 --&gt;
+    &lt;ul&gt;
+      &lt;li&gt;All lists have their top margin removed&lt;/li&gt;
+      &lt;li&gt;And their bottom margin normalized&lt;/li&gt;
+      &lt;li&gt;
+        Nested lists have no bottom margin
+        &lt;ul&gt;
+          &lt;li&gt;This way they have a more even appearance&lt;/li&gt;
+          &lt;li&gt;Particularly when followed by more list items&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;The left padding has also been reset&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;!-- 重點 4: 包含 Bootstrap 所釋出的變數色彩 --&gt;
+    &lt;div class="box" style="background-color: var(--bs-primary)"&gt;&lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+
+
+<h3 class="wp-block-heading">六角學院專屬「Bootstrap 練習手冊」</h3>
+
+
+
+<p>使用 ctrl + p 然後把檔名貼上，開啟練習的檔案。</p>
+
+
+
+<h3 class="wp-block-heading">Bootstrap 5 練習手冊連結</h3>
+
+
+
+<ul>
+<li><a href="https://github.com/hexschool/bootstrap5-starter-files" target="_blank" rel="noreferrer noopener">Bootstrap 5 練習手冊</a></li>
+</ul>
+
+
+
+<p>解壓縮後請<strong>務必使用 Live Server 開啟</strong>。</p>
+
+
+
+<h3 class="wp-block-heading">文字運用</h3>
+
+
+
+<ul>
+<li><a rel="noreferrer noopener" href="https://bootstrap5.hexschool.com/docs/5.1/content/typography/" target="_blank">內容 &gt; 文字排版 (Typography)</a></li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// 標題
+// 全部的 HTML 標題從 &lt;h1&gt; 到 &lt;h6&gt; 均可使用。
+&lt;h1&gt;h1. Bootstrap heading&lt;/h1&gt;
+&lt;h2&gt;h2. Bootstrap heading&lt;/h2&gt;
+&lt;h3&gt;h3. Bootstrap heading&lt;/h3&gt;
+&lt;h4&gt;h4. Bootstrap heading&lt;/h4&gt;
+&lt;h5&gt;h5. Bootstrap heading&lt;/h5&gt;
+&lt;h6&gt;h6. Bootstrap heading&lt;/h6&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 當你想匹配某一標題的字體樣式，但不能直接使用 HTML 元素時，使用 .h1 到 .h6 的類別。
+&lt;p class="h1"&gt;h1. Bootstrap heading&lt;/p&gt;
+&lt;p class="h2"&gt;h2. Bootstrap heading&lt;/p&gt;
+&lt;p class="h3"&gt;h3. Bootstrap heading&lt;/p&gt;
+&lt;p class="h4"&gt;h4. Bootstrap heading&lt;/p&gt;
+&lt;p class="h5"&gt;h5. Bootstrap heading&lt;/p&gt;
+&lt;p class="h6"&gt;h6. Bootstrap heading&lt;/p&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 自定義標題
+// 使用通用類別重現 Bootstrap 3.0 中的小標題文本。
+&lt;h3&gt;
+  Fancy display heading
+  &lt;small class="text-muted"&gt;With faded secondary text&lt;/small&gt;
+&lt;/h3&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 顯示標題
+// 一般的標題元素能在頁面內容繁多時發揮最佳作用。當你需要突出一個標題時，請考慮使用 display heading 以獲得更大、更細、稍具有風格化的標題樣式。
+&lt;h1 class="display-1"&gt;Display 1&lt;/h1&gt;
+&lt;h1 class="display-2"&gt;Display 2&lt;/h1&gt;
+&lt;h1 class="display-3"&gt;Display 3&lt;/h1&gt;
+&lt;h1 class="display-4"&gt;Display 4&lt;/h1&gt;
+&lt;h1 class="display-5"&gt;Display 5&lt;/h1&gt;
+&lt;h1 class="display-6"&gt;Display 6&lt;/h1&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 前導主題
+// 使用 .lead 讓一個段落脫穎而出。
+&lt;p class="lead"&gt;
+  This is a lead paragraph. It stands out from regular paragraphs.
+&lt;/p&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 行內文本元素
+// 使用行內 HTML5 元素的格式。
+&lt;p&gt;You can use the mark tag to &lt;mark&gt;highlight&lt;/mark&gt; text.&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;This line of text is meant to be treated as deleted text.&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;&lt;s&gt;This line of text is meant to be treated as no longer accurate.&lt;/s&gt;&lt;/p&gt;
+&lt;p&gt;&lt;ins&gt;This line of text is meant to be treated as an addition to the document.&lt;/ins&gt;&lt;/p&gt;
+&lt;p&gt;&lt;u&gt;This line of text will render as underlined.&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;&lt;small&gt;This line of text is meant to be treated as fine print.&lt;/small&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;This line rendered as bold text.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This line rendered as italicized text.&lt;/em&gt;&lt;/p&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 縮寫
+// 對縮寫和字母字首縮寫使用 HTML &lt;abbr&gt; 元素以 Hover 方式顯示縮寫的擴增內容。縮寫具有預設的底線和説明游標，透過懸停和輔助性技術幫助使用者提供額外的內容。
+// 縮寫字加入 .initialism 可將字體略為縮小。
+&lt;p&gt;&lt;abbr title="attribute"&gt;attr&lt;/abbr&gt;&lt;/p&gt;
+&lt;p&gt;&lt;abbr title="HyperText Markup Language" class="initialism"&gt;HTML&lt;/abbr&gt;&lt;/p&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 引用
+// 用於文件中引用來自另一個來源的內容。在 HTML 周圍使用 &lt;blockquote class="blockquote"&gt;。
+&lt;blockquote class="blockquote"&gt;
+  &lt;p&gt;A well-known quote, contained in a blockquote element.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+// 引用來源
+// HTML 規範要求將 blockquote 歸屬於 &lt;blockquote&gt; 之外。當提供來源歸屬，需要將 &lt;blockquote&gt; 包在 &lt;figure&gt; 之內，並且使用 &lt;figure&gt; 和加上 .blockquote-footer 類別的 &lt;figcaption&gt; 或是一個區塊元素(例如：&lt;p&gt;)。還要確保將來源的名稱包在 &lt;cite&gt; 中。
+&lt;figure&gt;
+  &lt;blockquote class="blockquote"&gt;
+    &lt;p&gt;A well-known quote, contained in a blockquote element.&lt;/p&gt;
+  &lt;/blockquote&gt;
+  &lt;figcaption class="blockquote-footer"&gt;
+    Someone famous in &lt;cite title="Source Title"&gt;Source Title&lt;/cite&gt;
+  &lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 對齊
+// 使用文字通用類別來更改 blockquote 的對齊方式。
+&lt;figure class="text-center"&gt;
+  &lt;blockquote class="blockquote"&gt;
+    &lt;p&gt;A well-known quote, contained in a blockquote element.&lt;/p&gt;
+  &lt;/blockquote&gt;
+  &lt;figcaption class="blockquote-footer"&gt;
+    Someone famous in &lt;cite title="Source Title"&gt;Source Title&lt;/cite&gt;
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure class="text-end"&gt;
+  &lt;blockquote class="blockquote"&gt;
+    &lt;p&gt;A well-known quote, contained in a blockquote element.&lt;/p&gt;
+  &lt;/blockquote&gt;
+  &lt;figcaption class="blockquote-footer"&gt;
+    Someone famous in &lt;cite title="Source Title"&gt;Source Title&lt;/cite&gt;
+  &lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 列表
+// 無樣式
+// 刪除預設的 list-style 和列表項目上的左 margin（僅限直接子項）。僅適用於直接子項目列表，這意味著你需要為巢狀的列表添加類別。
+&lt;ul class="list-unstyled"&gt;
+  &lt;li&gt;This is a list.&lt;/li&gt;
+  &lt;li&gt;It appears completely unstyled.&lt;/li&gt;
+  &lt;li&gt;Structurally, it's still a list.&lt;/li&gt;
+  &lt;li&gt;However, this style only applies to immediate child elements.&lt;/li&gt;
+  &lt;li&gt;Nested lists:
+    &lt;ul&gt;
+      &lt;li&gt;are unaffected by this style&lt;/li&gt;
+      &lt;li&gt;will still show a bullet&lt;/li&gt;
+      &lt;li&gt;and have appropriate left margin&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;This may still come in handy in some situations.&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 行內
+// 移除了列表編號並增加些許 margin，結合使用 .list-inline 和 .list-inline-item。
+&lt;ul class="list-inline"&gt;
+  &lt;li class="list-inline-item"&gt;This is a list item.&lt;/li&gt;
+  &lt;li class="list-inline-item"&gt;And another one.&lt;/li&gt;
+  &lt;li class="list-inline-item"&gt;But they're displayed inline.&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 描述列表對齊
+// 通過使用我們網格系統定義的類別（或是語意 mixins）將項目和說明水平對齊。對於較長的術語，你可選擇性加上 .text-truncate 來用 … 取代多餘內容。
+&lt;dl class="row"&gt;
+  &lt;dt class="col-sm-3"&gt;Description lists&lt;/dt&gt;
+  &lt;dd class="col-sm-9"&gt;A description list is perfect for defining terms.&lt;/dd&gt;
+
+  &lt;dt class="col-sm-3"&gt;Term&lt;/dt&gt;
+  &lt;dd class="col-sm-9"&gt;
+    &lt;p&gt;Definition for the term.&lt;/p&gt;
+    &lt;p&gt;And some more placeholder definition text.&lt;/p&gt;
+  &lt;/dd&gt;
+
+  &lt;dt class="col-sm-3"&gt;Another term&lt;/dt&gt;
+  &lt;dd class="col-sm-9"&gt;This definition is short, so no extra paragraphs or anything.&lt;/dd&gt;
+
+  &lt;dt class="col-sm-3 text-truncate"&gt;Truncated term is truncated&lt;/dt&gt;
+  &lt;dd class="col-sm-9"&gt;This can be useful when space is tight. Adds an ellipsis at the end.&lt;/dd&gt;
+
+  &lt;dt class="col-sm-3"&gt;Nesting&lt;/dt&gt;
+  &lt;dd class="col-sm-9"&gt;
+    &lt;dl class="row"&gt;
+      &lt;dt class="col-sm-4"&gt;Nested definition list&lt;/dt&gt;
+      &lt;dd class="col-sm-8"&gt;I heard you like definition lists. Let me put a definition list inside your definition list.&lt;/dd&gt;
+    &lt;/dl&gt;
+  &lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+
+
+
+<h3 class="wp-block-heading">基本圖片運用</h3>
+
+
+
+<ul>
+<li>
+<a href="https://bootstrap5.hexschool.com/docs/5.1/content/images/">內容 &gt; 圖片 (Ima</a><a rel="noreferrer noopener" href="https://bootstrap5.hexschool.com/docs/5.1/content/images/" target="_blank">g</a><a href="https://bootstrap5.hexschool.com/docs/5.1/content/images/">es)</a>
+</li>
+
+
+
+<li><a href="https://bootstrap5.hexschool.com/docs/5.1/utilities/float/" target="_blank" rel="noreferrer noopener">通用類別 &gt; 浮動 (Float)</a></li>
+
+
+
+<li><a href="https://bootstrap5.hexschool.com/docs/5.1/helpers/clearfix/" target="_blank" rel="noreferrer noopener">工具 &gt; 清除浮動 (Clearfix)</a></li>
+
+
+
+<li><a href="https://bootstrap5.hexschool.com/docs/5.1/utilities/text/" target="_blank" rel="noreferrer noopener">通用類別 &gt; 文字 (Text)</a></li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// 響應式圖片
+// Bootstrap 中的圖片可利用 .img-fluid 設定為響應式圖片。運用 max-width: 100%; 和 height: auto;，讓圖片可依父元素進行縮放。
+&lt;img src="..." class="img-fluid" alt="..."&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 圖片縮略圖
+// 除了我們的 邊框-圓角 通用類別 之外，你可以使用 .img-thumbnail 讓圖片呈現圓角 1px 的邊框。
+&lt;img src="..." class="img-thumbnail" alt="..."&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 對齊圖片
+// 用 輔助方法 浮動類別 或是 文字 對齊類別 讓圖片對齊。屬性為 block 的圖片可以使用 .mx-auto margin 通用類別 置中。
+&lt;img src="..." class="rounded float-start" alt="..."&gt;
+&lt;img src="..." class="rounded float-end" alt="..."&gt;
+
+&lt;img src="..." class="rounded mx-auto d-block" alt="..."&gt;
+
+&lt;div class="text-center"&gt;
+&lt;img src="..." class="rounded" alt="..."&gt;
+&lt;/div&gt;</code></pre>
+
+
+
+<h3 class="wp-block-heading">圖片區</h3>
+
+
+
+<ul>
+<li><a href="https://bootstrap5.hexschool.com/docs/5.1/content/figures/" target="_blank" rel="noreferrer noopener">內容 &gt; 圖片區 (Figures)</a></li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// 圖片區 (Figures)
+// 當需要顯示一段內容，例如包含可選擇標題的圖檔時，可以考慮使用 &lt;figure&gt;。
+&lt;figure class="figure"&gt;
+  &lt;img src="..." class="figure-img img-fluid rounded" alt="..."&gt;
+  &lt;figcaption class="figure-caption"&gt;A caption for the above image.&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 使用我們的 text utilities 可以很容易地對齊圖片標題。
+&lt;figure class="figure"&gt;
+  &lt;img src="..." class="figure-img img-fluid rounded" alt="..."&gt;
+  &lt;figcaption class="figure-caption text-end"&gt;A caption for the above image.&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+
+
+
+<h3 class="wp-block-heading">表格運用</h3>
+
+
+
+<ul>
+<li><a rel="noreferrer noopener" href="https://bootstrap5.hexschool.com/docs/5.1/content/tables/" target="_blank">內容 &gt; 表格 (Tables)</a></li>
+
+
+
+<li><a href="https://bootstrap5.hexschool.com/docs/5.1/utilities/borders/" target="_blank" rel="noreferrer noopener">通用類別 &gt; 邊框 (Borders)</a></li>
+
+
+
+<li><a href="https://bootstrap5.hexschool.com/docs/5.1/utilities/vertical-align/" target="_blank" rel="noreferrer noopener">通用類別 &gt; 垂直對齊 (Vertical align)</a></li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// 表格
+// 概述
+// 在任何 &lt;table&gt; 加上基本類別 .table，接著使用我們的可選修飾類別或是自定義樣式進行擴展。所有表格樣式在 Bootstrap 中都不會繼承，意味著巢狀表格的樣式都是獨立於父表格。
+// 使用最基本的表格排版，以下是基本的 .table 在 Bootstrap 中的外觀。
+&lt;table class="table"&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope="col"&gt;#&lt;/th&gt;
+      &lt;th scope="col"&gt;First&lt;/th&gt;
+      &lt;th scope="col"&gt;Last&lt;/th&gt;
+      &lt;th scope="col"&gt;Handle&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th scope="row"&gt;1&lt;/th&gt;
+      &lt;td&gt;Mark&lt;/td&gt;
+      &lt;td&gt;Otto&lt;/td&gt;
+      &lt;td&gt;@mdo&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th scope="row"&gt;2&lt;/th&gt;
+      &lt;td&gt;Jacob&lt;/td&gt;
+      &lt;td&gt;Thornton&lt;/td&gt;
+      &lt;td&gt;@fat&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th scope="row"&gt;3&lt;/th&gt;
+      &lt;td colspan="2"&gt;Larry the Bird&lt;/td&gt;
+      &lt;td&gt;@twitter&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 變數
+// 使用語意化 class 給表格列或單元格上色。
+&lt;!-- On tables --&gt;
+&lt;table class="table-primary"&gt;...&lt;/table&gt;
+&lt;table class="table-secondary"&gt;...&lt;/table&gt;
+&lt;table class="table-success"&gt;...&lt;/table&gt;
+&lt;table class="table-danger"&gt;...&lt;/table&gt;
+&lt;table class="table-warning"&gt;...&lt;/table&gt;
+&lt;table class="table-info"&gt;...&lt;/table&gt;
+&lt;table class="table-light"&gt;...&lt;/table&gt;
+&lt;table class="table-dark"&gt;...&lt;/table&gt;
+
+&lt;!-- On rows --&gt;
+&lt;tr class="table-primary"&gt;...&lt;/tr&gt;
+&lt;tr class="table-secondary"&gt;...&lt;/tr&gt;
+&lt;tr class="table-success"&gt;...&lt;/tr&gt;
+&lt;tr class="table-danger"&gt;...&lt;/tr&gt;
+&lt;tr class="table-warning"&gt;...&lt;/tr&gt;
+&lt;tr class="table-info"&gt;...&lt;/tr&gt;
+&lt;tr class="table-light"&gt;...&lt;/tr&gt;
+&lt;tr class="table-dark"&gt;...&lt;/tr&gt;
+
+&lt;!-- On cells (`td` or `th`) --&gt;
+&lt;tr&gt;
+  &lt;td class="table-primary"&gt;...&lt;/td&gt;
+  &lt;td class="table-secondary"&gt;...&lt;/td&gt;
+  &lt;td class="table-success"&gt;...&lt;/td&gt;
+  &lt;td class="table-danger"&gt;...&lt;/td&gt;
+  &lt;td class="table-warning"&gt;...&lt;/td&gt;
+  &lt;td class="table-info"&gt;...&lt;/td&gt;
+  &lt;td class="table-light"&gt;...&lt;/td&gt;
+  &lt;td class="table-dark"&gt;...&lt;/td&gt;
+&lt;/tr&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 表格強調
+// 條紋行
+// 使用 .table-striped 在 &lt;tbody&gt; 範圍內任何表格行增加條紋樣式。
+&lt;table class="table table-striped"&gt;
+  ...
+&lt;/table&gt;
+
+// 這些類別也可以添加到表格變數中：
+&lt;table class="table table-dark table-striped"&gt;
+  ...
+&lt;/table&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 可滑入行
+// 添加 .table-hover 以便在 &lt;tbody&gt; 範圍內的表格行上能夠呈現已滑入的狀態。
+&lt;table class="table table-hover"&gt;
+  ...
+&lt;/table&gt;
+
+&lt;table class="table table-dark table-hover"&gt;
+  ...
+&lt;/table&gt;
+
+// 這些可滑入行也可以和條紋行的變數結合使用。
+&lt;table class="table table-striped table-hover"&gt;
+  ...
+&lt;/table&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 表格啟用
+// 透過 .table-active 類別突顯表格行或單獨的儲存格。
+&lt;table class="table"&gt;
+  &lt;thead&gt;
+    ...
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr class="table-active"&gt;
+      ...
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      ...
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th scope="row"&gt;3&lt;/th&gt;
+      &lt;td colspan="2" class="table-active"&gt;Larry the Bird&lt;/td&gt;
+      &lt;td&gt;@twitter&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table class="table table-dark"&gt;
+  &lt;thead&gt;
+    ...
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr class="table-active"&gt;
+      ...
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      ...
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th scope="row"&gt;3&lt;/th&gt;
+      &lt;td colspan="2" class="table-active"&gt;Larry the Bird&lt;/td&gt;
+      &lt;td&gt;@twitter&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 表格邊框
+// 帶框的表格
+// 使用 .table-bordered 在表格和儲存格的四邊上添加邊框。
+&lt;table class="table table-bordered"&gt;
+  ...
+&lt;/table&gt;
+
+// 通用類別的邊框顏色 可以用來改變顏色:
+&lt;table class="table table-bordered border-primary"&gt;
+  ...
+&lt;/table&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 無框的表格
+// 使用 .table-borderless 使表格呈現無外部邊框。
+&lt;table class="table table-borderless"&gt;
+  ...
+&lt;/table&gt;
+
+&lt;table class="table table-dark table-borderless"&gt;
+  ...
+&lt;/table&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 小表格
+// 使用 .table-sm 將儲存格 padding 縮減一半的方式讓表格更加精簡。
+&lt;table class="table table-sm"&gt;
+  ...
+&lt;/table&gt;
+
+&lt;table class="table table-dark table-sm"&gt;
+  ...
+&lt;/table&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 垂直對齊
+// &lt;thead&gt; 中的儲存格始終與底部垂直對齊。&lt;tbody&gt; 中的儲存格繼承自 &lt;table&gt; 頂部的對齊方式。使用 垂直對齊 類別在需要的地方重新對齊。
+&lt;div class="table-responsive"&gt;
+  &lt;table class="table align-middle"&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        ...
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        ...
+      &lt;/tr&gt;
+      &lt;tr class="align-bottom"&gt;
+        ...
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;...&lt;/td&gt;
+        &lt;td&gt;...&lt;/td&gt;
+        &lt;td class="align-top"&gt;This cell is aligned to the top.&lt;/td&gt;
+        &lt;td&gt;...&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 巢狀
+// 巢狀表格不會繼承邊框樣式，啟用樣式以及表格變數。
+&lt;table class="table table-striped"&gt;
+  &lt;thead&gt;
+    ...
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    ...
+    &lt;tr&gt;
+      &lt;td colspan="4"&gt;
+        &lt;table class="table mb-0"&gt;
+          ...
+        &lt;/table&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+    ...
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 結構
+// 表頭
+// 與表格和深色表格類似，使用修飾符類別 .table-light 或 .table-dark 使 &lt;thead&gt; 呈現淺灰色或深灰色。
+&lt;table class="table"&gt;
+  &lt;thead class="table-light"&gt;
+    ...
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    ...
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table class="table"&gt;
+  &lt;thead class="table-dark"&gt;
+    ...
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    ...
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 表尾
+&lt;table class="table"&gt;
+  &lt;thead&gt;
+    ...
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    ...
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    ...
+  &lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 表格標題
+// &lt;caption&gt; 是一個表格的標題。它可以協助使用螢幕閱讀器的用戶找到表格，了解它的內容，並且決定是否要閱讀它。
+&lt;table class="table table-sm"&gt;
+  &lt;caption&gt;List of users&lt;/caption&gt;
+  &lt;thead&gt;
+    ...
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    ...
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+// 你也可以使用 .caption-top 將 &lt;caption&gt; 放在表格的最頂端。
+&lt;table class="table caption-top"&gt;
+  &lt;caption&gt;List of users&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope="col"&gt;#&lt;/th&gt;
+      &lt;th scope="col"&gt;First&lt;/th&gt;
+      &lt;th scope="col"&gt;Last&lt;/th&gt;
+      &lt;th scope="col"&gt;Handle&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th scope="row"&gt;1&lt;/th&gt;
+      &lt;td&gt;Mark&lt;/td&gt;
+      &lt;td&gt;Otto&lt;/td&gt;
+      &lt;td&gt;@mdo&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th scope="row"&gt;2&lt;/th&gt;
+      &lt;td&gt;Jacob&lt;/td&gt;
+      &lt;td&gt;Thornton&lt;/td&gt;
+      &lt;td&gt;@fat&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th scope="row"&gt;3&lt;/th&gt;
+      &lt;td&gt;Larry&lt;/td&gt;
+      &lt;td&gt;the Bird&lt;/td&gt;
+      &lt;td&gt;@twitter&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 響應式表格
+// 響應式表格呈現水平滾動，可以使用 .table-responsive 包覆 .table 讓任何響應式表格跨裝置使用。或者 .table 中加入 .table-responsive{-sm|-md|-lg|-xl|-xxl} 創建響應式表格的最大斷點。
+// 始終呈現響應式
+// .table-responsive 可讓表格水平滾動來跨斷點使用。
+&lt;div class="table-responsive"&gt;
+  &lt;table class="table"&gt;
+    ...
+  &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// 特定斷點
+// 根據需要的響應式表格設定 .table-responsive{-sm|-md|-lg|-xl|-xxl}。從該斷點開始，表格將正常運行並且不會水平滾動。
+// 這些表格可能會跑版，直到它們的響應樣式應用於特定的視窗寬度。
+&lt;div class="table-responsive"&gt;
+  &lt;table class="table"&gt;
+    ...
+  &lt;/table&gt;
+&lt;/div&gt;
+
+&lt;div class="table-responsive-sm"&gt;
+  &lt;table class="table"&gt;
+    ...
+  &lt;/table&gt;
+&lt;/div&gt;
+
+&lt;div class="table-responsive-md"&gt;
+  &lt;table class="table"&gt;
+    ...
+  &lt;/table&gt;
+&lt;/div&gt;
+
+&lt;div class="table-responsive-lg"&gt;
+  &lt;table class="table"&gt;
+    ...
+  &lt;/table&gt;
+&lt;/div&gt;
+
+&lt;div class="table-responsive-xl"&gt;
+  &lt;table class="table"&gt;
+    ...
+  &lt;/table&gt;
+&lt;/div&gt;
+
+&lt;div class="table-responsive-xxl"&gt;
+  &lt;table class="table"&gt;
+    ...
+  &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+	</div>
+<!-- .entry-content -->
+
+	<footer class="entry-footer">
+			</footer><!-- .entry-footer -->
+</article><!-- #post-806 -->
+
+	<nav class="navigation post-navigation" aria-label="文章">
+		<h2 class="screen-reader-text">文章導覽</h2>
+		<div class="nav-links">
+<div class="nav-previous"><a href="/wordpress_blog/reviewjs08/" rel="prev"><span class="nav-subtitle">Previous:</span> <span class="nav-title">JavaScript 複習08</span></a></div>
+<div class="nav-next"><a href="/wordpress_blog/web-development-in-2024-a-practical-guide/" rel="next"><span class="nav-subtitle">Next:</span> <span class="nav-title">Web Development In 2024 &#8211; A Practical Guide</span></a></div>
+</div>
+	</nav>
+	</main><!-- #main -->
+
+
+	</div></div>
+			
+			<footer id="colophon" class="site-footer">
+
+				
+				<div class="container-fluid">
+					<div class="site-info">
+						<div class="row">
+
+															
+								<div class="col-12 footer-copyright-elements footer-copyright-alignment-center">
+
+									<div class="botiga-credits">&copy; 2024 wordpress_blog. 
+Created by Gee Hsu. 
+<br>Proudly powered by <a rel="nofollow" href="https://athemes.com/theme/botiga/">Botiga</a>
+</div>
+<div class="social-profile">
+<a target="_blank" href="https://www.facebook.com/watergrass0402/"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></i></a><a target="_blank" href="https://github.com/GeeHsu"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></i></a>
+</div>
+								</div>
+														
+						</div>
+					</div>
+				</div>
+<!-- .site-info -->
+
+				
+			</footer><!-- #colophon -->
+
+			
+			<div class="back-to-top visibility-all position-right"><i class="ws-svg-icon"><svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 15l7-7 7 7" stroke-width="3" stroke-linejoin="round"></path></svg></i></div>
+</div>
+<!-- #page -->
+
+
+<script id="botiga-custom-js-extra">
+var botiga = {"ajaxurl":"\/wp-admin\/admin-ajax.php","i18n":{"botiga_sharebox_copy_link":"Copy link","botiga_sharebox_copy_link_copied":"Copied!"}};
+</script>
+<script src="/wordpress_blog/wp-content/themes/botiga/assets/js/custom.min.js?ver=1.1.2" id="botiga-custom-js"></script>
+
+</body>
+</html>

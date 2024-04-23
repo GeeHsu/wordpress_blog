@@ -18,7 +18,7 @@
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=6.4.3</generator>
+	<generator>https://wordpress.org/?v=6.5.2</generator>
 
 <image>
 	<url>/wordpress_blog/wp-content/uploads/2022/03/logo.png</url>
@@ -1442,7 +1442,7 @@ module.exports = {
 
 					<description><![CDATA[Learn Vue JS 3 &#38; Firebase by [&#8230;]]]></description>
 										<content:encoded><![CDATA[
-<blockquote class="wp-block-quote"><p>Learn Vue JS 3 &amp; Firebase by creating &amp; deploying dynamic web apps (including Authentication).</p><cite>建立者: The Net Ninja (Shaun Pelling)</cite></blockquote>
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"><p>Learn Vue JS 3 &amp; Firebase by creating &amp; deploying dynamic web apps (including Authentication).</p><cite>建立者: The Net Ninja (Shaun Pelling)</cite></blockquote>
 
 
 
@@ -6639,7 +6639,7 @@ export default router</code></pre>
 
 
 
-<blockquote class="wp-block-quote"><p>Learning Udemy Course：<a href="https://www.udemy.com/course/modern-javascript-from-novice-to-ninja/" target="_blank" rel="noreferrer noopener">Modern JavaScript</a></p><cite>建立者：The Net Ninja (Shaun Pelling)</cite></blockquote>
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"><p>Learning Udemy Course：<a href="https://www.udemy.com/course/modern-javascript-from-novice-to-ninja/" target="_blank" rel="noreferrer noopener">Modern JavaScript</a></p><cite>建立者：The Net Ninja (Shaun Pelling)</cite></blockquote>
 
 
 
@@ -11019,7 +11019,7 @@ unsubButton.addEventListener('click', () =&gt; {
 
 
 
-<blockquote class="wp-block-quote"><p>Learning Udemy Course：<a href="https://www.udemy.com/course/modern-javascript-from-novice-to-ninja/" target="_blank" rel="noreferrer noopener">Modern JavaScript</a></p><cite>建立者：The Net Ninja (Shaun Pelling)</cite></blockquote>
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"><p>Learning Udemy Course：<a href="https://www.udemy.com/course/modern-javascript-from-novice-to-ninja/" target="_blank" rel="noreferrer noopener">Modern JavaScript</a></p><cite>建立者：The Net Ninja (Shaun Pelling)</cite></blockquote>
 
 
 
@@ -15301,7 +15301,7 @@ console.log(ninja);</code></pre>
 
 
 
-<blockquote class="wp-block-quote"><p>Learning Udemy Course：<a href="https://www.udemy.com/course/modern-javascript-from-novice-to-ninja/" target="_blank" rel="noreferrer noopener">Modern JavaScript</a></p><cite>建立者：The Net Ninja (Shaun Pelling)</cite></blockquote>
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"><p>Learning Udemy Course：<a href="https://www.udemy.com/course/modern-javascript-from-novice-to-ninja/" target="_blank" rel="noreferrer noopener">Modern JavaScript</a></p><cite>建立者：The Net Ninja (Shaun Pelling)</cite></blockquote>
 
 
 
@@ -25876,7 +25876,7 @@ $utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg");
 
 
 
-<blockquote class="wp-block-quote"><p>Learning Udemy Course：<a href="https://www.udemy.com/course/modern-javascript-from-novice-to-ninja/" target="_blank" rel="noreferrer noopener">Modern JavaScript</a></p><cite>建立者：The Net Ninja (Shaun Pelling)</cite></blockquote>
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"><p>Learning Udemy Course：<a href="https://www.udemy.com/course/modern-javascript-from-novice-to-ninja/" target="_blank" rel="noreferrer noopener">Modern JavaScript</a></p><cite>建立者：The Net Ninja (Shaun Pelling)</cite></blockquote>
 
 
 

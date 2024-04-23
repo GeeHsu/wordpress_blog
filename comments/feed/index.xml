@@ -11,11 +11,11 @@
 	<atom:link href="/wordpress_blog/comments/feed/" rel="self" type="application/rss+xml" />
 	<link>/wordpress_blog</link>
 	<description>This is a dynamic to static website.</description>
-	<lastBuildDate>Thu, 21 Mar 2024 02:11:29 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 23 Apr 2024 09:06:45 +0000</lastBuildDate>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=6.4.3</generator>
+	<generator>https://wordpress.org/?v=6.5.2</generator>
 </channel>
 </rss>

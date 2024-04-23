@@ -18,7 +18,7 @@
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=6.4.3</generator>
+	<generator>https://wordpress.org/?v=6.5.2</generator>
 
 <image>
 	<url>/wordpress_blog/wp-content/uploads/2022/03/logo.png</url>
@@ -8058,7 +8058,7 @@ module.exports = () =&gt; {
 
 					<description><![CDATA[學習資源:&#160;Traversy Media Thank  [&#8230;]]]></description>
 										<content:encoded><![CDATA[
-<blockquote class="wp-block-quote"><p>學習資源:&nbsp;<a href="https://www.youtube.com/watch?v=EqzUcMzfV1w" target="_blank" rel="noreferrer noopener">Traversy Media</a></p><cite>Thank you.</cite></blockquote>
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"><p>學習資源:&nbsp;<a href="https://www.youtube.com/watch?v=EqzUcMzfV1w" target="_blank" rel="noreferrer noopener">Traversy Media</a></p><cite>Thank you.</cite></blockquote>
 
 
 

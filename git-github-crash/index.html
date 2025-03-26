@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<title>Git 和 GitHub 零基礎快速上手 &#8211; wordpress_blog</title>
+<meta name="robots" content="noindex, nofollow">
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	<link rel="alternate" type="application/rss+xml" title="訂閱《wordpress_blog》&raquo; 資訊提供" href="/wordpress_blog/feed/">
+<link rel="alternate" type="application/rss+xml" title="訂閱《wordpress_blog》&raquo; 留言的資訊提供" href="/wordpress_blog/comments/feed/">
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.7.2"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"🏳️‍⚧️","🏳️​⚧️")?!1:!n(e,"🇺🇳","🇺​🇳")&&!n(e,"🏴󠁧󠁢󠁥󠁮󠁧󠁿","🏴​󠁧​󠁢​󠁥​󠁮​󠁧​󠁿");case"emoji":return!n(e,"🐦‍⬛","🐦​⬛")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+</script>
+<style id="wp-emoji-styles-inline-css">img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}</style>
+<link rel="stylesheet" id="wp-block-library-css" href="/wordpress_blog/wp-includes/css/dist/block-library/style.min.css?ver=6.7.2" media="all">
+<style id="classic-theme-styles-inline-css">/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}</style>
+<style id="global-styles-inline-css">:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--palette-1-color-0: #212121;--wp--preset--color--palette-1-color-1: #757575;--wp--preset--color--palette-1-color-2: #212121;--wp--preset--color--palette-1-color-3: #212121;--wp--preset--color--palette-1-color-4: #212121;--wp--preset--color--palette-1-color-5: #f5f5f5;--wp--preset--color--palette-1-color-6: #ffffff;--wp--preset--color--palette-1-color-7: #ffffff;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 14px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 18px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--normal: 16px;--wp--preset--font-size--larger: 24px;--wp--preset--font-size--extra-large: 32px;--wp--preset--font-size--huge: 48px;--wp--preset--font-size--gigantic: 64px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}</style>
+<link rel="stylesheet" id="botiga-style-css" href="/wordpress_blog/wp-content/themes/botiga/style.css?ver=1.1.2" media="all">
+<link rel="stylesheet" id="botiga-style-min-css" href="/wordpress_blog/wp-content/themes/botiga/assets/css/styles.min.css?ver=1.1.2" media="all">
+<link rel="stylesheet" id="botiga-custom-styles-css" href="/wordpress_blog/wp-content/uploads/botiga/custom-styles.css?ver=1648804469" media="all">
+<link rel="https://api.w.org/" href="/wordpress_blog/wp-json/">
+<link rel="alternate" title="JSON" type="application/json" href="/wordpress_blog/wp-json/wp/v2/posts/858">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/wordpress_blog/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 6.7.2">
+<link rel="canonical" href="/wordpress_blog/git-github-crash/">
+<link rel="shortlink" href="/wordpress_blog/?p=858">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="/wordpress_blog/wp-json/oembed/1.0/embed?url=%2Fgit-github-crash%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="/wordpress_blog/wp-json/oembed/1.0/embed?url=%2Fgit-github-crash%2F&#038;format=xml">
+<link rel="icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png" sizes="32x32">
+<link rel="icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png" sizes="192x192">
+<link rel="apple-touch-icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png">
+<meta name="msapplication-TileImage" content="/wp-content/uploads/2022/03/logo.png">
+	
+</head>
+
+<body class="post-template-default single single-post postid-858 single-format-standard wp-custom-logo wp-embed-responsive header-header_layout_1 blog-single-layout1">
+
+
+<div id="page" class="site">
+
+	<a class="skip-link screen-reader-text" href="#primary">Skip to content</a>
+
+	
+			<div class="top-bar visibility-desktop-only">
+				<div class="container-fluid">
+					<div class="top-bar-inner">
+						<div class="row valign">
+
+															<div class="col header-elements delimiter-none">
+									<div class="header-item top-bar-social"><div class="social-profile">
+<a target="_blank" href="https://www.facebook.com/watergrass0402/"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></i></a><a target="_blank" href="https://github.com/GeeHsu"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></i></a>
+</div></div>								</div>
+																						<div class="col header-elements delimiter-none">
+													
+			<nav class="header-item top-bar-secondary-navigation secondary-navigation">
+				<div class="menu-topbar-container"><ul id="secondary" class="menu">
+<li id="menu-item-143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143"><a href="/wordpress_blog/setup/">網站架設</a></li>
+<li id="menu-item-144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a href="/wordpress_blog/source/">資料來源</a></li>
+<li id="menu-item-262" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-262"><a href="/wordpress_blog/resource/">學習資源</a></li>
+</ul></div>			</nav>
+											</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			
+							
+				<header id="masthead" class="site-header header_layout_1">
+					<div class="container-fluid">
+						<div class="site-header-inner">
+							<div class="row valign">
+								<div class="col-md-5">
+										
+			<nav id="site-navigation" class="main-navigation">
+				<div class="menu-navbar-container"><ul id="primary-menu" class="menu">
+<li id="menu-item-109" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="/wordpress_blog/about/">關於</a></li>
+<li id="menu-item-110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-110">
+<a href="/wordpress_blog/learn/">學習</a><span tabindex="0" class="dropdown-symbol"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512.011 512.011"><path d="M505.755 123.592c-8.341-8.341-21.824-8.341-30.165 0L256.005 343.176 36.421 123.592c-8.341-8.341-21.824-8.341-30.165 0s-8.341 21.824 0 30.165l234.667 234.667a21.275 21.275 0 0015.083 6.251 21.275 21.275 0 0015.083-6.251l234.667-234.667c8.34-8.341 8.34-21.824-.001-30.165z"></path></svg></i></span>
+<ul class="sub-menu">
+	<li id="menu-item-140" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-140"><a href="/wordpress_blog/category/hexschool/">六角學院</a></li>
+	<li id="menu-item-141" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-141"><a href="/wordpress_blog/category/ninja/">Net Ninja</a></li>
+	<li id="menu-item-483" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-483"><a href="/wordpress_blog/category/youtube/">Youtube</a></li>
+</ul>
+</li>
+<li id="menu-item-111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="/wordpress_blog/linestore/">LINE STORE</a></li>
+</ul></div>			</nav><!-- #site-navigation -->
+											</div>
+								<div class="col-md-2">
+												<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog" decoding="async" fetchpriority="high"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+											</div>
+								<div class="col-md-5 header-elements">
+																	</div>							
+							</div>
+						</div>
+					</div>
+								<div class="header-search-form">
+			<form role="search" method="get" class="search-form" action="/">
+	<label class="screen-reader-text" for="search-form-1">Search&hellip;</label>
+	<input type="search" id="search-form-1" class="search-field" value="" name="s" placeholder="Search &hellip;">
+	<button type="submit" class="search-submit" value="Search"><i class="ws-svg-icon"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 100 14.25 7.125 7.125 0 000-14.25zM2.25 10.875a8.625 8.625 0 1117.25 0 8.625 8.625 0 01-17.25 0z"></path><path fill-rule="evenodd" d="M15.913 15.914a.75.75 0 011.06 0l4.557 4.556a.75.75 0 01-1.06 1.06l-4.557-4.556a.75.75 0 010-1.06z"></path></svg></i></button>
+</form>
+			</div>
+			
+									</header>
+
+										<div class="search-overlay"></div>
+			
+			<div class="botiga-offcanvas-menu">
+				<div class="mobile-header-item">
+					<div class="row">
+						<div class="col">
+										<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog" decoding="async"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+									</div>
+						<div class="col align-right">
+							<a class="mobile-menu-close" href="#"><i class="ws-svg-icon icon-cancel"><svg width="16" height="16" fill="none" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.219.781L.78 2.22 9.562 11l-8.78 8.781 1.437 1.438L11 12.437l8.781 8.782 1.438-1.438L12.437 11l8.782-8.781L19.78.78 11 9.562 2.219.783z"></path></svg></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="mobile-header-item">
+						
+			<nav id="site-navigation" class="main-navigation">
+				<div class="menu-navbar-container"><ul id="primary-menu" class="menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="/wordpress_blog/about/">關於</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-110">
+<a href="/wordpress_blog/learn/">學習</a><span tabindex="0" class="dropdown-symbol"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512.011 512.011"><path d="M505.755 123.592c-8.341-8.341-21.824-8.341-30.165 0L256.005 343.176 36.421 123.592c-8.341-8.341-21.824-8.341-30.165 0s-8.341 21.824 0 30.165l234.667 234.667a21.275 21.275 0 0015.083 6.251 21.275 21.275 0 0015.083-6.251l234.667-234.667c8.34-8.341 8.34-21.824-.001-30.165z"></path></svg></i></span>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-140"><a href="/wordpress_blog/category/hexschool/">六角學院</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-141"><a href="/wordpress_blog/category/ninja/">Net Ninja</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-483"><a href="/wordpress_blog/category/youtube/">Youtube</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="/wordpress_blog/linestore/">LINE STORE</a></li>
+</ul></div>			</nav><!-- #site-navigation -->
+							</div>
+				<div class="mobile-header-item">
+									<a target="&quot;_blank&quot;" class="button header-item" href="https://www.facebook.com/watergrass0402/">聯絡我</a>
+							</div>			
+			</div>
+			
+							<header id="masthead-mobile" class="site-header mobile-header">
+					<div class="container-fluid">
+						<div class="row valign flex-nowrap">
+							<div class="col-sm-6 col-md-4 col-grow-mobile">
+											<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog" decoding="async"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+										</div>
+							<div class="col-auto col-sm-6 col-md-8 col-grow-mobile header-elements valign align-right">
+																	
+															<a href="#" class="menu-toggle">
+				<i class="ws-svg-icon"><svg width="16" height="11" viewbox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="16" height="1"></rect><rect y="5" width="16" height="1"></rect><rect y="10" width="16" height="1"></rect></svg></i>
+			</a>
+																		</div>						
+						</div>
+					</div>
+								<div class="header-search-form">
+			<form role="search" method="get" class="search-form" action="/">
+	<label class="screen-reader-text" for="search-form-2">Search&hellip;</label>
+	<input type="search" id="search-form-2" class="search-field" value="" name="s" placeholder="Search &hellip;">
+	<button type="submit" class="search-submit" value="Search"><i class="ws-svg-icon"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 100 14.25 7.125 7.125 0 000-14.25zM2.25 10.875a8.625 8.625 0 1117.25 0 8.625 8.625 0 01-17.25 0z"></path><path fill-rule="evenodd" d="M15.913 15.914a.75.75 0 011.06 0l4.557 4.556a.75.75 0 01-1.06 1.06l-4.557-4.556a.75.75 0 010-1.06z"></path></svg></i></button>
+</form>
+			</div>
+			
+									</header>
+						<div class="search-overlay"></div>
+			<div class="header-image"><img src="/wordpress_blog/wp-content/uploads/2022/03/seashore.jpg" width="1920" height="500" alt=""></div>
+<div class="container content-wrapper"><div class="row main-row">			
+	<main id="primary" class="site-main no-sidebar">
+
+		
+
+<article id="post-858" class="post-858 post type-post status-publish format-standard hentry category-youtube">
+	
+		
+	<header class="entry-header">
+		
+		
+		<h1 class="entry-title">Git 和 GitHub 零基礎快速上手</h1>			<div class="entry-meta entry-meta-below delimiter-none">
+<span class="posted-on"><a href="/wordpress_blog/git-github-crash/" rel="bookmark"><time class="entry-date published" datetime="2024-06-19T09:21:43+08:00">2024 年 6 月 19 日</time><time class="updated" datetime="2025-03-26T08:50:27+08:00">2025 年 3 月 26 日</time></a></span><span class="byline"> <span class="author vcard"><a class="url fn n" href="/wordpress_blog/author/gee-hsu/">gee.hsu</a></span></span>
+</div>			</header><!-- .entry-header -->
+
+	
+	<div class="entry-content">
+		
+<p>Learning From Youtube Channel: PAPAYA 電腦教室<br>Video: <a href="https://www.youtube.com/watch?v=FKXRiAiQFiY" target="_blank" rel="noreferrer noopener">程式與網頁開發者必備技能! Git 和 GitHub 零基礎快速上手，輕鬆掌握版本控制的要訣!</a><br>Thank you.</p>
+
+
+
+<p>00:00 – 開場白 &amp; Git 安裝<br>02:03 – Git 基本設定與初始化<br>03:36 – Git 檔案狀態<br>06:46 – 檢視提交紀錄與檔案還原<br>10:06 – 忽略檔案清單<br>10:34 – GitHub 註冊 &amp; 同步儲存庫<br>12:11 – 加入協作者至專案<br>13:36 – 建立分支<br>14:35 – 發起合併請求 &amp; 合併分支</p>
+
+
+
+<h2 class="wp-block-heading">開場白 &amp; Git 安裝</h2>
+
+
+
+<ul class="wp-block-list">
+<li>Git 是協助檔案管理版本工具</li>
+
+
+
+<li>安裝 VSCode 免費軟體</li>
+
+
+
+<li>建立 My Project 資料夾</li>
+
+
+
+<li>安裝 Git</li>
+
+
+
+<li>打開終端機查詢版本，git –version</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">Git 基本設定與初始化</h2>
+
+
+
+<ul class="wp-block-list">
+<li>設定姓名和電子郵件地址<br>git config –global user.name “geehsu”<br>git config –global user.email “geehsu@gmaill.com”</li>
+
+
+
+<li>Git 初始化，git init</li>
+
+
+
+<li>清除終端機畫面，clear</li>
+
+
+
+<li>建立 Price.md 檔案</li>
+
+
+
+<li>建立 Specs.md 檔案</li>
+
+
+
+<li>建立 Systems.md 檔案</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// Price.md
+# 價格分析
+價格分析是一種經濟學和市場分析的方法，用來研究產品或服務的價格如何影響消費者行為和市場動態。這類分析通常涉及以下幾個方面：
+
+需求與供應: 分析價格如何影響產品或服務的需求和供應量。通常來說，價格上升可能會減少需求，但同時也可能刺激供應。
+
+市場結構: 調查市場的競爭程度，包括壟斷、寡頭壟斷、完全競爭等形式。這會影響價格的設定方式和市場參與者的行為。
+
+價格彈性: 衡量價格變動對需求量變動的敏感程度。價格彈性高意味著小幅價格變動可能會對需求產生顯著影響，而價格彈性低則相反。
+
+競爭策略: 分析企業如何透過價格來制定競爭策略，例如價格領導、價格競爭、價格歧視等，以達到市場份額和利潤最大化的目標。
+
+消費者行為: 研究價格如何影響消費者的購買決策和行為模式，包括價格感知、價格預期和購買意願等。
+
+總結來說，價格分析不僅限於價格水平本身，還涉及價格與市場環境、消費者行為和企業策略之間的複雜互動。這些分析能夠幫助企業和政策制定者更好地理解市場運作，並做出相應的策略和政策決策。</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Specs.md
+# 技術規格
+技術分析是一種用來預測金融市場走勢的方法，主要基於過去市場行為的統計數據和圖表模式來做出預測。這種分析方法主要包括以下幾個要素：
+
+圖表模式分析: 技術分析師會觀察股票或其他金融資產的歷史價格走勢，並尋找特定的圖表模式，如頭肩頂、雙底形態、三角形等。這些模式被認為能夠預示未來的價格走勢。
+
+技術指標: 技術分析使用各種技術指標來量化市場的價格和成交量數據，並從中提取有用的信號。常見的技術指標包括移動平均線、相對強弱指標（RSI）、MACD（移動平均匯聚/分歧指標）等。
+
+市場心理學: 技術分析也關注市場參與者的情緒和心理狀態對市場的影響。例如，過度買入或過度賣出情況可能會影響市場走勢。
+
+支撐與阻力: 技術分析師會觀察市場中的支撐位（價格下跌後停止下跌的水平）和阻力位（價格上漲後停止上漲的水平），這些水平通常被認為具有重要的價格反彈或反轉信號。
+
+技術分析的目標是通過以上方法來預測市場走勢，進而制定交易策略或投資決策。然而，技術分析也有其局限性，例如忽略基本面因素、過度依賴歷史模式等，因此通常會與基本面分析結合使用，以獲得更全面的市場洞察。</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Systems.md
+# 軟體兼容性
+軟體兼容性是指一個軟體應用程式或系統能夠在不同的硬體平台、作業系統或環境下正常運行和互動的能力。這在現代軟體開發中至關重要，特別是考慮到各種不同的使用情境和技術設定。
+
+主要考慮因素：
+硬體平台: 軟體必須能夠在不同的硬體設備上運行，包括桌面電腦、筆記型電腦、平板電腦、智能手機等。這些設備可能擁有不同的處理器架構、記憶體容量和圖形處理能力，軟體需要能夠有效利用這些硬體資源。
+
+作業系統: 軟體必須與目標使用的作業系統兼容，如Windows、macOS、Linux、Android、iOS等。不同的作業系統可能有不同的應用程式介面（API）和系統限制，軟體需要根據這些特性進行開發和測試。
+
+依賴的庫和框架: 許多軟體開發依賴於第三方庫和框架，這些庫和框架也需要與目標平台和環境兼容。開發者需要確保這些依賴項目的版本和更新與目標系統相容。
+
+網路環境: 如果軟體需要在網際網路環境下運行，則需要考慮不同的網路設定和帶寬要求，以確保軟體在不同的網路速度和穩定性條件下仍能正常運作。
+
+語言和協議: 如果軟體與其他系統或服務進行通訊，需要確保使用的通訊語言和協議在不同系統之間的相容性，如HTTP、REST API、SOAP等。
+
+管理軟體兼容性的方法：
+測試和驗證: 在開發過程中，進行系統化的測試，包括單元測試、整合測試和系統測試，以確保軟體在各種情況下的正常運行。
+
+版本控制: 管理和追蹤依賴項目的版本，確保軟體與其依賴的庫和框架相容。
+
+文檔和支援: 提供清晰的文檔和支援資源，幫助用戶在不同環境中安裝、配置和使用軟體。
+
+總結來說，有效的軟體兼容性管理是軟體開發過程中的重要一環，它能夠確保軟體在不同平台和環境中的穩定性和功能性，提升用戶的滿意度和整體產品的可靠性。</code></pre>
+
+
+
+<h2 class="wp-block-heading">Git 檔案狀態</h2>
+
+
+
+<ul class="wp-block-list">
+<li>檢查當前目錄中每個檔案的狀態，git status</li>
+
+
+
+<li>檔案狀態:<br>Untracked 未追蹤<br>Tracked 已追蹤<br>Staged 已暫存<br>Committed 已提交</li>
+
+
+
+<li>將檔案狀態未追蹤轉換成已追蹤<br>加到暫存區<br>git add Price.md</li>
+
+
+
+<li>檢查檔案狀態，git status</li>
+
+
+
+<li>把其他兩個檔案也從未追蹤轉換成已追蹤<br>加到暫存區<br>git add Specs.md<br>git add Systems.md</li>
+
+
+
+<li>檢查檔案狀態，git status</li>
+
+
+
+<li>提交叫做 git commit<br>git commit -m “建立還原點”</li>
+
+
+
+<li>檢查檔案狀態，git status</li>
+
+
+
+<li>修改檔案內容</li>
+
+
+
+<li>再次加到暫存區<br>git add *.md<br>將所有變更都加入到暫存區，git add .</li>
+
+
+
+<li>提交 git commit<br>git commit -m “加上新的內容”</li>
+
+
+
+<li>修改檔案內容</li>
+
+
+
+<li>再次加到暫存區<br>git add .</li>
+
+
+
+<li>提交 git commit<br>git commit -m “修改加上新的內容”</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// Price.md
+# 價格分析
+價格分析是一種經濟學和市場分析的方法，用來研究產品或服務的價格如何影響消費者行為和市場動態。這類分析通常涉及以下幾個方面：
+
+需求與供應: 分析價格如何影響產品或服務的需求和供應量。通常來說，價格上升可能會減少需求，但同時也可能刺激供應。
+
+市場結構: 調查市場的競爭程度，包括壟斷、寡頭壟斷、完全競爭等形式。這會影響價格的設定方式和市場參與者的行為。
+
+價格彈性: 衡量價格變動對需求量變動的敏感程度。價格彈性高意味著小幅價格變動可能會對需求產生顯著影響，而價格彈性低則相反。
+
+競爭策略: 分析企業如何透過價格來制定競爭策略，例如價格領導、價格競爭、價格歧視等，以達到市場份額和利潤最大化的目標。
+
+消費者行為: 研究價格如何影響消費者的購買決策和行為模式，包括價格感知、價格預期和購買意願等。
+
+總結來說，價格分析不僅限於價格水平本身，還涉及價格與市場環境、消費者行為和企業策略之間的複雜互動。這些分析能夠幫助企業和政策制定者更好地理解市場運作，並做出相應的策略和政策決策。
+
+謝謝你，ChatGPT</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Specs.md
+# 技術規格
+技術分析是一種用來預測金融市場走勢的方法，主要基於過去市場行為的統計數據和圖表模式來做出預測。這種分析方法主要包括以下幾個要素：
+
+圖表模式分析: 技術分析師會觀察股票或其他金融資產的歷史價格走勢，並尋找特定的圖表模式，如頭肩頂、雙底形態、三角形等。這些模式被認為能夠預示未來的價格走勢。
+
+技術指標: 技術分析使用各種技術指標來量化市場的價格和成交量數據，並從中提取有用的信號。常見的技術指標包括移動平均線、相對強弱指標（RSI）、MACD（移動平均匯聚/分歧指標）等。
+
+市場心理學: 技術分析也關注市場參與者的情緒和心理狀態對市場的影響。例如，過度買入或過度賣出情況可能會影響市場走勢。
+
+支撐與阻力: 技術分析師會觀察市場中的支撐位（價格下跌後停止下跌的水平）和阻力位（價格上漲後停止上漲的水平），這些水平通常被認為具有重要的價格反彈或反轉信號。
+
+技術分析的目標是通過以上方法來預測市場走勢，進而制定交易策略或投資決策。然而，技術分析也有其局限性，例如忽略基本面因素、過度依賴歷史模式等，因此通常會與基本面分析結合使用，以獲得更全面的市場洞察。
+
+謝謝你，ChatGPT</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Systems.md
+# 軟體兼容性
+軟體兼容性是指一個軟體應用程式或系統能夠在不同的硬體平台、作業系統或環境下正常運行和互動的能力。這在現代軟體開發中至關重要，特別是考慮到各種不同的使用情境和技術設定。
+
+主要考慮因素：
+硬體平台: 軟體必須能夠在不同的硬體設備上運行，包括桌面電腦、筆記型電腦、平板電腦、智能手機等。這些設備可能擁有不同的處理器架構、記憶體容量和圖形處理能力，軟體需要能夠有效利用這些硬體資源。
+
+作業系統: 軟體必須與目標使用的作業系統兼容，如Windows、macOS、Linux、Android、iOS等。不同的作業系統可能有不同的應用程式介面（API）和系統限制，軟體需要根據這些特性進行開發和測試。
+
+依賴的庫和框架: 許多軟體開發依賴於第三方庫和框架，這些庫和框架也需要與目標平台和環境兼容。開發者需要確保這些依賴項目的版本和更新與目標系統相容。
+
+網路環境: 如果軟體需要在網際網路環境下運行，則需要考慮不同的網路設定和帶寬要求，以確保軟體在不同的網路速度和穩定性條件下仍能正常運作。
+
+語言和協議: 如果軟體與其他系統或服務進行通訊，需要確保使用的通訊語言和協議在不同系統之間的相容性，如HTTP、REST API、SOAP等。
+
+管理軟體兼容性的方法：
+測試和驗證: 在開發過程中，進行系統化的測試，包括單元測試、整合測試和系統測試，以確保軟體在各種情況下的正常運行。
+
+版本控制: 管理和追蹤依賴項目的版本，確保軟體與其依賴的庫和框架相容。
+
+文檔和支援: 提供清晰的文檔和支援資源，幫助用戶在不同環境中安裝、配置和使用軟體。
+
+總結來說，有效的軟體兼容性管理是軟體開發過程中的重要一環，它能夠確保軟體在不同平台和環境中的穩定性和功能性，提升用戶的滿意度和整體產品的可靠性。
+
+謝謝你，ChatGPT</code></pre>
+
+
+
+<h2 class="wp-block-heading">檢視提交紀錄與檔案還原</h2>
+
+
+
+<ul class="wp-block-list">
+<li>使用終端機輸入指令，git log<br>會列出先前的提交歷史</li>
+
+
+
+<li>按下 q 就可以退出 log 的檢視模式</li>
+
+
+
+<li>git log 指令的簡化版，git log –oneline<br>適合快速瀏覽過去的提交紀錄</li>
+
+
+
+<li>HEAD、master 的說明<br>master 想成是遊戲中的主線劇情<br>HEAD 則是指向遊戲目前的進度，通常為遊戲最新的存檔點</li>
+
+
+
+<li>將文件恢復成較早的狀態<br>還原前先比較新、舊版本的內容差異，git diff<br>git diff f6d9011 — Price.md</li>
+
+
+
+<li>將檔案還原到這個版本，git checkout f6d9011 — Price.md</li>
+
+
+
+<li>注意這個變動同樣需要進行提交<br>git commit -m “改為還原點內容”</li>
+
+
+
+<li>檢視提交紀錄，使用 git log –oneline<br>基本上完整保留先前的歷史紀錄</li>
+
+
+
+<li>有時也許想將全部檔案還原到某個時間點，並且捨棄掉之後的存檔紀錄，git reset –hard 08440ab<br>注意這個操作是不可逆的，有需要先做備份</li>
+
+
+
+<li>建立 Marketing.md 檔案</li>
+
+
+
+<li>修改 Marketing.md 檔案</li>
+
+
+
+<li>同樣用 git add 將檔案加入到暫存區</li>
+
+
+
+<li>同樣用 git commit 將檔案提交</li>
+
+
+
+<li>刪除 Marketing.md 檔案</li>
+
+
+
+<li>檢查當前目錄的狀態，git status</li>
+
+
+
+<li>再次用 git add 加入到暫存區</li>
+
+
+
+<li>檢查當前目錄的狀態，git status</li>
+
+
+
+<li>觀念: Git 追蹤的是檔案的<strong>變化</strong>，而非檔案本身</li>
+
+
+
+<li>再次用 git commit 將檔案提交</li>
+
+
+
+<li>檢查當前目錄的狀態，git status</li>
+
+
+
+<li>檢視提交紀錄(簡化版)，git log –oneline</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">忽略檔案清單</h2>
+
+
+
+<ul class="wp-block-list">
+<li>建立 .gitignore 檔案</li>
+
+
+
+<li>修改 .gitignore 檔案<br>把要忽略的檔名或副檔案寫在裡面<br>git 在提交時就能避免無關的檔案混入到版本紀錄，保持專案整潔，同時避免私人資料不小心被提交到 Git 儲存庫</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// .gitignore
+*.jpg
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">GitHub 註冊 &amp; 同步儲存庫</h2>
+
+
+
+<ul class="wp-block-list">
+<li>git 版本控制系統<br>GitHub 雲端協作平台</li>
+
+
+
+<li>在 GitHub 官網註冊免費帳號</li>
+
+
+
+<li>在主頁面建立儲存庫</li>
+
+
+
+<li>Respository name<br>Description<br>Public、Private<br>Create</li>
+
+
+
+<li>GitHub 有提供現成的指令協作把本地的檔案推送到雲端</li>
+
+
+
+<li>第一行是用來連結本地和遠端的儲存庫<br>git remote add origin https://github.com/papayaclass/VRFusion.git<br>remote: 遠端<br>add: 新增<br>origin: 遠端儲存庫名稱<br>https://github.com/papayaclass/VRFusion.git: 遠端儲存庫網址</li>
+
+
+
+<li>第二行是把原來的主線分支從 master 改為較中性的詞語 main<br>git branch -M main<br>branch: 分支管理<br>-M: 重新命名<br>main: 新的分支名</li>
+
+
+
+<li>第三行則是把本地位於 main 分支的資料推送到雲端<br>git push -u origin main<br>push: 推送<br>-u: 建立關聯<br>origin: 遠端名稱<br>main: 本地名稱</li>
+
+
+
+<li>在 GitHub 打開 Code 頁面就能看到所有已上船的檔案<br>在 Commits 頁面看到所有提交的版本紀錄</li>
+
+
+
+<li>增加 README.md 檔案</li>
+
+
+
+<li>git add 檔案加到暫存區</li>
+
+
+
+<li>git commit 檔案提交</li>
+
+
+
+<li>git push 檔案推送</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">加入協作者至專案</h2>
+
+
+
+<ul class="wp-block-list">
+<li>打開 Collaborators (合作者) 的頁面</li>
+
+
+
+<li>點擊新增成員，輸入帳號名稱或電子郵件</li>
+
+
+
+<li>成為協作者的人，首先要將儲存庫複製到本地端電腦<br>git clone 儲存庫網址</li>
+
+
+
+<li>打開並移動到該專案</li>
+
+
+
+<li>本人修改專案內容後做推送</li>
+
+
+
+<li>協作者此時只要輸入 git pull 指令就能將最新雲端版本紀錄拉回到本地端，團隊成員以維持在同步的狀態</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">建立分支</h2>
+
+
+
+<ul class="wp-block-list">
+<li>以遊戲儲存進度做舉例<br>要求對方儲存自己的遊戲進度<br>git checkout -b branch2<br>checkout: 切換分支<br>-b: 建立並切換至新分支<br>branch2: 新分支名稱</li>
+
+
+
+<li>協作者在自己本地端修改文件<br>同樣可以加到暫存區、提交、推送<br>git push origin branch2<br>push: 推送<br>origin: 遠端名稱<br>branch2: 本地名稱</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">發起合併請求 &amp; 合併分支</h2>
+
+
+
+<ul class="wp-block-list">
+<li>回到 GitHub 的專案頁面會發現分支數量已變成兩個</li>
+
+
+
+<li>協作者可以發起 Pull Request (合併請求)，讓團隊的其他成員知道他已完成了一項編輯或修復了一個問題，並請求將這些變更合併到主線分支</li>
+
+
+
+<li>在自己的帳號中也能看到協作者發起的 Pull Request，我們可以把這個項目打開來檢視協作者在他的分支內做了哪些編輯，審核的過程中如果發現一些需要改進的地方，可以在評論區內寫下我們的建議</li>
+
+
+
+<li>或是從右下角的選單中選擇 Request Change 正式請求協作者進行相應的修改</li>
+
+
+
+<li>如果在審核時覺得協作者所做的變更沒有問題，我們就可以回到原頁面點擊 Merge Pull Request 的按鈕，把協作者在他的分支所做的變更合併到主線分支，合併完成後協作者的分支就完成了他的任務，我們就可以放心地把新分支刪除掉</li>
+
+
+
+<li>至於我們在本地端的檔案則記得要執行 git pull 的指令從 GitHub 下載最新的變更，使本地和遠端的儲存庫能維持同步</li>
+
+
+
+<li>透過這樣的工作流程，團隊成員就能共同協作來完成一個富有挑戰性的專案</li>
+</ul>
+	</div>
+<!-- .entry-content -->
+
+	<footer class="entry-footer">
+			</footer><!-- .entry-footer -->
+</article><!-- #post-858 -->
+
+	<nav class="navigation post-navigation" aria-label="文章">
+		<h2 class="screen-reader-text">文章導覽</h2>
+		<div class="nav-links">
+<div class="nav-previous"><a href="/wordpress_blog/complete-user/" rel="prev"><span class="nav-subtitle">Previous:</span> <span class="nav-title">Complete User Registration, Login &amp; Logout with React JWT, Bcrypt Password | Nodejs | Mern Stack</span></a></div>
+<div class="nav-next"><a href="/wordpress_blog/mern-stack-tutorial/" rel="next"><span class="nav-subtitle">Next:</span> <span class="nav-title">MERN Stack Tutorial</span></a></div>
+</div>
+	</nav>
+	</main><!-- #main -->
+
+
+	</div></div>
+			
+			<footer id="colophon" class="site-footer">
+
+				
+				<div class="container-fluid">
+					<div class="site-info">
+						<div class="row">
+
+															
+								<div class="col-12 footer-copyright-elements footer-copyright-alignment-center">
+
+									<div class="botiga-credits">&copy; 2025 wordpress_blog. 
+Created by Gee Hsu. 
+<br>Proudly powered by <a rel="nofollow" href="https://athemes.com/theme/botiga/">Botiga</a>
+</div>
+<div class="social-profile">
+<a target="_blank" href="https://www.facebook.com/watergrass0402/"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></i></a><a target="_blank" href="https://github.com/GeeHsu"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></i></a>
+</div>
+								</div>
+														
+						</div>
+					</div>
+				</div>
+<!-- .site-info -->
+
+				
+			</footer><!-- #colophon -->
+
+			
+			<div class="back-to-top visibility-all position-right"><i class="ws-svg-icon"><svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 15l7-7 7 7" stroke-width="3" stroke-linejoin="round"></path></svg></i></div>
+</div>
+<!-- #page -->
+
+
+<script id="botiga-custom-js-extra">
+var botiga = {"ajaxurl":"\/wp-admin\/admin-ajax.php","i18n":{"botiga_sharebox_copy_link":"Copy link","botiga_sharebox_copy_link_copied":"Copied!"}};
+</script>
+<script src="/wordpress_blog/wp-content/themes/botiga/assets/js/custom.min.js?ver=1.1.2" id="botiga-custom-js"></script>
+
+</body>
+</html>

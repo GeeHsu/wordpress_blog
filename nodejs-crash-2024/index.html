@@ -1,0 +1,1639 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<title>Node.js Crash Course (2024 Revamp) &#8211; wordpress_blog</title>
+<meta name="robots" content="noindex, nofollow">
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	<link rel="alternate" type="application/rss+xml" title="訂閱《wordpress_blog》&raquo; 資訊提供" href="/wordpress_blog/feed/">
+<link rel="alternate" type="application/rss+xml" title="訂閱《wordpress_blog》&raquo; 留言的資訊提供" href="/wordpress_blog/comments/feed/">
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.7.2"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"🏳️‍⚧️","🏳️​⚧️")?!1:!n(e,"🇺🇳","🇺​🇳")&&!n(e,"🏴󠁧󠁢󠁥󠁮󠁧󠁿","🏴​󠁧​󠁢​󠁥​󠁮​󠁧​󠁿");case"emoji":return!n(e,"🐦‍⬛","🐦​⬛")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+</script>
+<style id="wp-emoji-styles-inline-css">img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}</style>
+<link rel="stylesheet" id="wp-block-library-css" href="/wordpress_blog/wp-includes/css/dist/block-library/style.min.css?ver=6.7.2" media="all">
+<style id="classic-theme-styles-inline-css">/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}</style>
+<style id="global-styles-inline-css">:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--palette-1-color-0: #212121;--wp--preset--color--palette-1-color-1: #757575;--wp--preset--color--palette-1-color-2: #212121;--wp--preset--color--palette-1-color-3: #212121;--wp--preset--color--palette-1-color-4: #212121;--wp--preset--color--palette-1-color-5: #f5f5f5;--wp--preset--color--palette-1-color-6: #ffffff;--wp--preset--color--palette-1-color-7: #ffffff;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 14px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 18px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--normal: 16px;--wp--preset--font-size--larger: 24px;--wp--preset--font-size--extra-large: 32px;--wp--preset--font-size--huge: 48px;--wp--preset--font-size--gigantic: 64px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}</style>
+<link rel="stylesheet" id="botiga-style-css" href="/wordpress_blog/wp-content/themes/botiga/style.css?ver=1.1.2" media="all">
+<link rel="stylesheet" id="botiga-style-min-css" href="/wordpress_blog/wp-content/themes/botiga/assets/css/styles.min.css?ver=1.1.2" media="all">
+<link rel="stylesheet" id="botiga-custom-styles-css" href="/wordpress_blog/wp-content/uploads/botiga/custom-styles.css?ver=1648804469" media="all">
+<link rel="https://api.w.org/" href="/wordpress_blog/wp-json/">
+<link rel="alternate" title="JSON" type="application/json" href="/wordpress_blog/wp-json/wp/v2/posts/844">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/wordpress_blog/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 6.7.2">
+<link rel="canonical" href="/wordpress_blog/nodejs-crash-2024/">
+<link rel="shortlink" href="/wordpress_blog/?p=844">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="/wordpress_blog/wp-json/oembed/1.0/embed?url=%2Fnodejs-crash-2024%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="/wordpress_blog/wp-json/oembed/1.0/embed?url=%2Fnodejs-crash-2024%2F&#038;format=xml">
+<link rel="icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png" sizes="32x32">
+<link rel="icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png" sizes="192x192">
+<link rel="apple-touch-icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png">
+<meta name="msapplication-TileImage" content="/wp-content/uploads/2022/03/logo.png">
+	
+</head>
+
+<body class="post-template-default single single-post postid-844 single-format-standard wp-custom-logo wp-embed-responsive header-header_layout_1 blog-single-layout1">
+
+
+<div id="page" class="site">
+
+	<a class="skip-link screen-reader-text" href="#primary">Skip to content</a>
+
+	
+			<div class="top-bar visibility-desktop-only">
+				<div class="container-fluid">
+					<div class="top-bar-inner">
+						<div class="row valign">
+
+															<div class="col header-elements delimiter-none">
+									<div class="header-item top-bar-social"><div class="social-profile">
+<a target="_blank" href="https://www.facebook.com/watergrass0402/"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></i></a><a target="_blank" href="https://github.com/GeeHsu"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></i></a>
+</div></div>								</div>
+																						<div class="col header-elements delimiter-none">
+													
+			<nav class="header-item top-bar-secondary-navigation secondary-navigation">
+				<div class="menu-topbar-container"><ul id="secondary" class="menu">
+<li id="menu-item-143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143"><a href="/wordpress_blog/setup/">網站架設</a></li>
+<li id="menu-item-144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a href="/wordpress_blog/source/">資料來源</a></li>
+<li id="menu-item-262" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-262"><a href="/wordpress_blog/resource/">學習資源</a></li>
+</ul></div>			</nav>
+											</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			
+							
+				<header id="masthead" class="site-header header_layout_1">
+					<div class="container-fluid">
+						<div class="site-header-inner">
+							<div class="row valign">
+								<div class="col-md-5">
+										
+			<nav id="site-navigation" class="main-navigation">
+				<div class="menu-navbar-container"><ul id="primary-menu" class="menu">
+<li id="menu-item-109" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="/wordpress_blog/about/">關於</a></li>
+<li id="menu-item-110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-110">
+<a href="/wordpress_blog/learn/">學習</a><span tabindex="0" class="dropdown-symbol"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512.011 512.011"><path d="M505.755 123.592c-8.341-8.341-21.824-8.341-30.165 0L256.005 343.176 36.421 123.592c-8.341-8.341-21.824-8.341-30.165 0s-8.341 21.824 0 30.165l234.667 234.667a21.275 21.275 0 0015.083 6.251 21.275 21.275 0 0015.083-6.251l234.667-234.667c8.34-8.341 8.34-21.824-.001-30.165z"></path></svg></i></span>
+<ul class="sub-menu">
+	<li id="menu-item-140" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-140"><a href="/wordpress_blog/category/hexschool/">六角學院</a></li>
+	<li id="menu-item-141" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-141"><a href="/wordpress_blog/category/ninja/">Net Ninja</a></li>
+	<li id="menu-item-483" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-483"><a href="/wordpress_blog/category/youtube/">Youtube</a></li>
+</ul>
+</li>
+<li id="menu-item-111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="/wordpress_blog/linestore/">LINE STORE</a></li>
+</ul></div>			</nav><!-- #site-navigation -->
+											</div>
+								<div class="col-md-2">
+												<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog" decoding="async" fetchpriority="high"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+											</div>
+								<div class="col-md-5 header-elements">
+																	</div>							
+							</div>
+						</div>
+					</div>
+								<div class="header-search-form">
+			<form role="search" method="get" class="search-form" action="/">
+	<label class="screen-reader-text" for="search-form-1">Search&hellip;</label>
+	<input type="search" id="search-form-1" class="search-field" value="" name="s" placeholder="Search &hellip;">
+	<button type="submit" class="search-submit" value="Search"><i class="ws-svg-icon"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 100 14.25 7.125 7.125 0 000-14.25zM2.25 10.875a8.625 8.625 0 1117.25 0 8.625 8.625 0 01-17.25 0z"></path><path fill-rule="evenodd" d="M15.913 15.914a.75.75 0 011.06 0l4.557 4.556a.75.75 0 01-1.06 1.06l-4.557-4.556a.75.75 0 010-1.06z"></path></svg></i></button>
+</form>
+			</div>
+			
+									</header>
+
+										<div class="search-overlay"></div>
+			
+			<div class="botiga-offcanvas-menu">
+				<div class="mobile-header-item">
+					<div class="row">
+						<div class="col">
+										<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog" decoding="async"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+									</div>
+						<div class="col align-right">
+							<a class="mobile-menu-close" href="#"><i class="ws-svg-icon icon-cancel"><svg width="16" height="16" fill="none" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.219.781L.78 2.22 9.562 11l-8.78 8.781 1.437 1.438L11 12.437l8.781 8.782 1.438-1.438L12.437 11l8.782-8.781L19.78.78 11 9.562 2.219.783z"></path></svg></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="mobile-header-item">
+						
+			<nav id="site-navigation" class="main-navigation">
+				<div class="menu-navbar-container"><ul id="primary-menu" class="menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="/wordpress_blog/about/">關於</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-110">
+<a href="/wordpress_blog/learn/">學習</a><span tabindex="0" class="dropdown-symbol"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512.011 512.011"><path d="M505.755 123.592c-8.341-8.341-21.824-8.341-30.165 0L256.005 343.176 36.421 123.592c-8.341-8.341-21.824-8.341-30.165 0s-8.341 21.824 0 30.165l234.667 234.667a21.275 21.275 0 0015.083 6.251 21.275 21.275 0 0015.083-6.251l234.667-234.667c8.34-8.341 8.34-21.824-.001-30.165z"></path></svg></i></span>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-140"><a href="/wordpress_blog/category/hexschool/">六角學院</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-141"><a href="/wordpress_blog/category/ninja/">Net Ninja</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-483"><a href="/wordpress_blog/category/youtube/">Youtube</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="/wordpress_blog/linestore/">LINE STORE</a></li>
+</ul></div>			</nav><!-- #site-navigation -->
+							</div>
+				<div class="mobile-header-item">
+									<a target="&quot;_blank&quot;" class="button header-item" href="https://www.facebook.com/watergrass0402/">聯絡我</a>
+							</div>			
+			</div>
+			
+							<header id="masthead-mobile" class="site-header mobile-header">
+					<div class="container-fluid">
+						<div class="row valign flex-nowrap">
+							<div class="col-sm-6 col-md-4 col-grow-mobile">
+											<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog" decoding="async"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+										</div>
+							<div class="col-auto col-sm-6 col-md-8 col-grow-mobile header-elements valign align-right">
+																	
+															<a href="#" class="menu-toggle">
+				<i class="ws-svg-icon"><svg width="16" height="11" viewbox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="16" height="1"></rect><rect y="5" width="16" height="1"></rect><rect y="10" width="16" height="1"></rect></svg></i>
+			</a>
+																		</div>						
+						</div>
+					</div>
+								<div class="header-search-form">
+			<form role="search" method="get" class="search-form" action="/">
+	<label class="screen-reader-text" for="search-form-2">Search&hellip;</label>
+	<input type="search" id="search-form-2" class="search-field" value="" name="s" placeholder="Search &hellip;">
+	<button type="submit" class="search-submit" value="Search"><i class="ws-svg-icon"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 100 14.25 7.125 7.125 0 000-14.25zM2.25 10.875a8.625 8.625 0 1117.25 0 8.625 8.625 0 01-17.25 0z"></path><path fill-rule="evenodd" d="M15.913 15.914a.75.75 0 011.06 0l4.557 4.556a.75.75 0 01-1.06 1.06l-4.557-4.556a.75.75 0 010-1.06z"></path></svg></i></button>
+</form>
+			</div>
+			
+									</header>
+						<div class="search-overlay"></div>
+			<div class="header-image"><img src="/wordpress_blog/wp-content/uploads/2022/03/seashore.jpg" width="1920" height="500" alt=""></div>
+<div class="container content-wrapper"><div class="row main-row">			
+	<main id="primary" class="site-main no-sidebar">
+
+		
+
+<article id="post-844" class="post-844 post type-post status-publish format-standard hentry category-youtube">
+	
+		
+	<header class="entry-header">
+		
+		
+		<h1 class="entry-title">Node.js Crash Course (2024 Revamp)</h1>			<div class="entry-meta entry-meta-below delimiter-none">
+<span class="posted-on"><a href="/wordpress_blog/nodejs-crash-2024/" rel="bookmark"><time class="entry-date published" datetime="2024-05-22T16:23:35+08:00">2024 年 5 月 22 日</time><time class="updated" datetime="2025-03-26T08:46:08+08:00">2025 年 3 月 26 日</time></a></span><span class="byline"> <span class="author vcard"><a class="url fn n" href="/wordpress_blog/author/gee-hsu/">gee.hsu</a></span></span>
+</div>			</header><!-- .entry-header -->
+
+	
+	<div class="entry-content">
+		
+<p>Learning From Youtube Channel Traversy Media<br>Video:&nbsp;<a href="https://www.youtube.com/watch?v=32M1al-Y6Ag" target="_blank" rel="noreferrer noopener">Node.js Crash Course (2024 Revamp)</a><br>Thank you.</p>
+
+
+
+<p>Timestamps:<br>00:00:00 – Intro &amp; Slides<br>00:12:18 – Installation<br>00:13:22 – Node REPL<br>00:15:05 – Setup &amp; package.json Init<br>00:16:51 – Running JavaScript Files<br>00:19:36 – CommonJS Modules<br>00:23:13 – ES Modules<br>00:27:20 – HTTP Module &amp; Create Server<br>00:35:06 – NPM Scripts<br>00:36:15 – NPM Modules &amp; Nodemon<br>00:38:45 – .gitignore File<br>00:41:06 – Environment Variables &amp; .env<br>00:44:00 – Req Object<br>00:46:10 – Marking Requests From Postman<br>00:47:28 – Simple Routing<br>00:51:52 – Loading Files<br>00:59:45 – Building a Simple API<br>01:10:27 – Middleware<br>01:13:24 – Cleanup (Middleware &amp; Handlers)<br>01:19:08 – Get Req Body For POST<br>01:24:20 – File System Module<br>01:33:43 – Path Module<br>01:39:50 – OS Module<br>01:42:13 – URL Module<br>01:47:46 – Crypto Module<br>01:54:08 – Emitting Events<br>01:59:04 – Process Object</p>
+
+
+
+<h2 class="wp-block-heading">Intro &amp; Slides</h2>
+
+
+
+<h3 class="wp-block-heading">What Is Node.js?</h3>
+
+
+
+<ul class="wp-block-list">
+<li>Node.js is an open-source JavaScript runtime</li>
+
+
+
+<li>Uses the V8 JavaScript engine that Google Chrome uses</li>
+
+
+
+<li>Mostly used for developing server-side &amp; networking apps/apis</li>
+
+
+
+<li>Takes JavaScript out of the browser</li>
+
+
+
+<li>Fast, scalable and popular in many areas of the industry</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Covered In This Course</h3>
+
+
+
+<ul class="wp-block-list">
+<li>What is Node.js and how does it work?</li>
+
+
+
+<li>Installation, setup, package.json, npm, etc</li>
+
+
+
+<li>Modules import/export (CommonJS &amp; ES Modules)</li>
+
+
+
+<li>HTTP Module, req/res, routing, serving JSON/HTML</li>
+
+
+
+<li>Custom middleware</li>
+
+
+
+<li>Other Core Modules – fs, path, url, events, process, os</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Prerequisites</h3>
+
+
+
+<ul class="wp-block-list">
+<li>JavaScript fundamentals (Functions, loops, objects, classes, etc)</li>
+
+
+
+<li>Asynchronous programming – Promises, callbacks, async/await</li>
+
+
+
+<li>HTTP Basics (Methods, status codes, etc)</li>
+
+
+
+<li>How JSON APIs work</li>
+
+
+
+<li>NPM (Node Package Manager)</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">How Node.js Works</h3>
+
+
+
+<ul class="wp-block-list">
+<li>V8 JS Engine</li>
+
+
+
+<li>Non-Blocking</li>
+
+
+
+<li>Single Threaded</li>
+
+
+
+<li>Event Loop</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">What is Node.js Used For?</h3>
+
+
+
+<ul class="wp-block-list">
+<li>APIs</li>
+
+
+
+<li>Server-rendered apps</li>
+
+
+
+<li>Real-time applications</li>
+
+
+
+<li>Micronservices</li>
+
+
+
+<li>Command Line Tools</li>
+
+
+
+<li>Bots</li>
+
+
+
+<li>Web scraping</li>
+
+
+
+<li>Web Servers</li>
+</ul>
+
+
+
+<p>Not good for CPU-intensive tasks</p>
+
+
+
+<h2 class="wp-block-heading">Installation</h2>
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://nodejs.org/en" target="_blank" rel="noreferrer noopener">Nodejs</a></li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// Terminal
+node --version
+npm --version
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">Node REPL</h2>
+
+
+
+<pre class="wp-block-code"><code>// Terminal
+&gt; console.log('Hello World')
+Hello World
+undefined
+&gt; const name = 'John'
+undefined
+&gt; console.log(name)
+John
+undefined
+&gt; const greet = () =&gt; `Hello ${name}`
+undefined
+&gt; greet()
+'Hello John'
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">Setup &amp; package.json Init</h2>
+
+
+
+<pre class="wp-block-code"><code>// Terminal
+mkdir nodejs-crash-2024
+cd nodejs-crash-2024
+code .</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// VSCODE - Terminal
+方式一:
+npm init -y
+// 方式二:
+npm init</code></pre>
+
+
+
+<h2 class="wp-block-heading">Running JavaScript Files</h2>
+
+
+
+<ul class="wp-block-list">
+<li>建立 index.js 檔案</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// index.js
+console.log('Hello World'):
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Terminal
+// 方式一:
+node index.js
+// 方式二:
+node index</code></pre>
+
+
+
+<h2 class="wp-block-heading">CommonJS Modules</h2>
+
+
+
+<ul class="wp-block-list">
+<li>建立 utils.js 檔案</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// utils.js
+function generateRandomNumber() {
+  return Math.floor(Math.random() * 100) + 1;
+}
+
+function celclusToFahrenheit(celcius) {
+  return (celcius * 9) / 5 + 32;
+}
+
+module.exports = {
+  generateRandomNumber,
+  celclusToFahrenheit,
+};
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.js
+const { generateRandomNumber, celclusToFahrenheit } = require('./utils');
+console.log(`Random Number: ${generateRandomNumber()}`);
+console.log(`Celcius to fahrenhiet: ${celclusToFahrenheit(0)}`);
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Terminal
+node index</code></pre>
+
+
+
+<h2 class="wp-block-heading">ES Modules</h2>
+
+
+
+<ul class="wp-block-list">
+<li>在 package.json 檔案加上 type 屬性、值</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// package.json
+"type": "module"
+</code></pre>
+
+
+
+<ul class="wp-block-list">
+<li>建立 postController.js 檔案</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// postController.js - 1
+const posts = &#91;
+  { id: 1, title: 'Post One' },
+  { id: 2, title: 'Post Two' },
+];
+
+export const getPosts = () =&gt; posts;
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.js - 1
+import { getPosts  } from "./postController.js";
+
+console.log(getPosts());
+
+// const { generateRandomNumber, celclusToFahrenheit } = require('./utils');
+// console.log(`Random Number: ${generateRandomNumber()}`);
+// console.log(`Celcius to fahrenhiet: ${celclusToFahrenheit(0)}`);
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// postController.js - 2
+const posts = &#91;
+  { id: 1, title: 'Post One' },
+  { id: 2, title: 'Post Two' },
+];
+
+const getPosts = () =&gt; posts;
+
+export const getPostsLength = () =&gt; posts.length;
+
+export default getPosts;
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.js - 2
+import getPosts, { getPostsLength } from "./postController.js";
+
+console.log(getPosts());
+
+console.log(`Posts Length: ${getPostsLength()}`);
+
+// const { generateRandomNumber, celclusToFahrenheit } = require('./utils');
+// console.log(`Random Number: ${generateRandomNumber()}`);
+// console.log(`Celcius to fahrenhiet: ${celclusToFahrenheit(0)}`);
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">HTTP Module &amp; Create Server</h2>
+
+
+
+<ul class="wp-block-list">
+<li>建立 server.js 檔案</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// server.js - 1
+import http from 'http';
+const PORT = 8000;
+
+const server = http.createServer((req, res) =&gt; {
+  res.write('Hello World!');
+  res.end();
+});
+
+server.listen(8000, () =&gt; {
+  console.log(`Server running on port ${PORT}`);
+});
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// server.js - 2
+import http from 'http';
+const PORT = 8000;
+
+const server = http.createServer((req, res) =&gt; {
+  res.end('Hello World!');
+});
+
+server.listen(8000, () =&gt; {
+  console.log(`Server running on port ${PORT}`);
+});
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// server.js - 3
+import http from 'http';
+const PORT = 8000;
+
+const server = http.createServer((req, res) =&gt; {
+  res.setHeader('Content-Type', 'text/html');
+  
+  res.end('&lt;h1&gt;Hello World!&lt;/h1&gt;');
+});
+
+server.listen(8000, () =&gt; {
+  console.log(`Server running on port ${PORT}`);
+});
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// server.js - 4
+import http from 'http';
+const PORT = 8000;
+
+const server = http.createServer((req, res) =&gt; {
+  // res.setHeader('Content-Type', 'text/html');
+  // res.statusCode = 404;
+
+  res.writeHead(500, { 'Content-Type': 'application/json' })
+  res.end(JSON.stringify({ message: 'Server Error' }));
+});
+
+server.listen(8000, () =&gt; {
+  console.log(`Server running on port ${PORT}`);
+});
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">NPM Scripts、NPM Modules &amp; Nodemon、.gitignore File</h2>
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://www.npmjs.com/package/nodemon" target="_blank" rel="noreferrer noopener">nodemon</a></li>
+
+
+
+<li>安裝 nodemon 套件 – npm i -D nodemon</li>
+
+
+
+<li>建立 .gitignore 檔案</li>
+
+
+
+<li>執行 nodemon<br>npm start</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// .gitignore
+node_modules</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// package.json
+"start": "nodemon server.js",</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// server.js
+import http from 'http';
+const PORT = 8000;
+
+const server = http.createServer((req, res) =&gt; {
+  // res.setHeader('Content-Type', 'text/html');
+  // res.statusCode = 404;
+
+  res.writeHead(200, { 'Content-Type': 'text/html' })
+  res.end('&lt;h1&gt;Hello World&lt;/h1&gt;');
+});
+
+server.listen(8000, () =&gt; {
+  console.log(`Server running on port ${PORT}`);
+});
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">Environment Variables &amp; .env</h2>
+
+
+
+<ul class="wp-block-list">
+<li>建立 .env 檔案</li>
+
+
+
+<li>在 .gitignore 檔案加入 .env</li>
+
+
+
+<li>修改 package.json 檔案</li>
+
+
+
+<li>修改 server.js 檔案</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// .env
+PORT = 8000
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// .gitignore
+node_modules
+.env
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// package.json
+"start": "nodemon --env-file=.env server.js",</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// server.js
+import http from 'http';
+const PORT = process.env.PORT;
+
+const server = http.createServer((req, res) =&gt; {
+  // res.setHeader('Content-Type', 'text/html');
+  // res.statusCode = 404;
+
+  res.writeHead(200, { 'Content-Type': 'text/html' })
+  res.end('&lt;h1&gt;Hello World&lt;/h1&gt;');
+});
+
+server.listen(8000, () =&gt; {
+  console.log(`Server running on port ${PORT}`);
+});
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">Req Object</h2>
+
+
+
+<pre class="wp-block-code"><code>// server.js
+import http from 'http';
+const PORT = process.env.PORT;
+
+const server = http.createServer((req, res) =&gt; {
+  // res.setHeader('Content-Type', 'text/html');
+  // res.statusCode = 404;
+  console.log(req.url);
+  console.log(req.method);
+
+  res.writeHead(200, { 'Content-Type': 'text/html' })
+  res.end('&lt;h1&gt;Hello World&lt;/h1&gt;');
+});
+
+server.listen(8000, () =&gt; {
+  console.log(`Server running on port ${PORT}`);
+});
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">Marking Requests From Postman</h2>
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://www.postman.com/" target="_blank" rel="noreferrer noopener">Postman</a></li>
+
+
+
+<li>替代方法: <a href="https://hoppscotch.io/" target="_blank" rel="noreferrer noopener">Hoppscotch</a>
+</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">Simple Routing</h2>
+
+
+
+<ul class="wp-block-list">
+<li>修改 server.js 檔案</li>
+
+
+
+<li>使用 API 測試工具 Get 方法回傳資料<br>http://localhost:8000/</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// server.js - 1
+import http from 'http';
+const PORT = process.env.PORT;
+
+const server = http.createServer((req, res) =&gt; {
+  if (req.url === '/') {
+    res.writeHead(200, { 'Content-Type': 'text/html' })
+    res.end('&lt;h1&gt;Homepage&lt;/h1&gt;');
+  } else if (req.url === '/about') {
+    res.writeHead(200, { 'Content-Type': 'text/html' })
+    res.end('&lt;h1&gt;About&lt;/h1&gt;');
+  } else {
+    res.writeHead(404, { 'Content-Type': 'text/html' })
+    res.end('&lt;h1&gt;Not Found&lt;/h1&gt;');
+  }
+
+});
+
+server.listen(8000, () =&gt; {
+  console.log(`Server running on port ${PORT}`);
+});
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// server.js - 2
+import http from 'http';
+const PORT = process.env.PORT;
+
+const server = http.createServer((req, res) =&gt; {
+  try {
+    // Check if GET request
+    if (req.method === 'GET') {
+      if (req.url === '/') {
+        res.writeHead(200, { 'Content-Type': 'text/html' })
+        res.end('&lt;h1&gt;Homepage&lt;/h1&gt;');
+      } else if (req.url === '/about') {
+        res.writeHead(200, { 'Content-Type': 'text/html' })
+        res.end('&lt;h1&gt;About&lt;/h1&gt;');
+      } else {
+        res.writeHead(404, { 'Content-Type': 'text/html' })
+        res.end('&lt;h1&gt;Not Found&lt;/h1&gt;');
+      }
+    } else {
+      throw new Error('Method not allowed')
+    }
+  } catch (error) {
+    res.writeHead(500, { 'Content-Type': 'text/plain' })
+        res.end('Server Error');
+  }
+});
+
+server.listen(8000, () =&gt; {
+  console.log(`Server running on port ${PORT}`);
+});
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">Loading Files</h2>
+
+
+
+<ul class="wp-block-list">
+<li>建立 public 資料夾、裡面建立 index.html、about.html 檔案</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// public/index.html
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Homepage&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Homepage&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// public/about.html
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;About&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;About&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// server.js
+import http from 'http';
+import fs from 'fs/promises';
+import url from 'url';
+import path from 'path';
+const PORT = process.env.PORT;
+
+// Get current path
+const __filename = url.fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const server = http.createServer(async (req, res) =&gt; {
+  try {
+    // Check if GET request
+    if (req.method === 'GET') {
+      let filePath;
+      if (req.url === '/') {
+        filePath = path.join(__dirname, 'public', 'index.html');
+      } else if (req.url === '/about') {
+        filePath = path.join(__dirname, 'public', 'about.html');
+      } else {
+        throw new Error('Not Found')
+      }
+
+      const data = await fs.readFile(filePath);
+      res.setHeader('Content-Type', 'text/html');
+      res.write(data);
+      res.end();
+    } else {
+      throw new Error('Method not allowed')
+    }
+  } catch (error) {
+    res.writeHead(500, { 'Content-Type': 'text/plain' })
+        res.end('Server Error');
+  }
+});
+
+server.listen(8000, () =&gt; {
+  console.log(`Server running on port ${PORT}`);
+});
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">Building a Simple API</h2>
+
+
+
+<ul class="wp-block-list">
+<li>建立 server2.js 檔案</li>
+
+
+
+<li>修改 package.json 檔案</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// package.json
+"start": "nodemon --env-file=.env server2.js"</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// server2.js
+import { createServer } from 'http';
+const PORT = process.env.PORT;
+
+const users = &#91;
+  { id: 1, name: 'John Doe' },
+  { id: 2, name: 'Jane Doe' },
+  { id: 3, name: 'Jim Doe' },
+];
+
+const server = createServer((req, res) =&gt; {
+  if (req.url === '/api/users' &amp;&amp; req.method === 'GET') {
+    res.setHeader('Content-Type', 'application/json');
+    res.write(JSON.stringify(users));
+    res.end();
+  } else if (req.url.match(/\/api\/users\/(&#91;0-9]+)/) &amp;&amp; req.method === 'GET') {
+    const id = req.url.split('/')&#91;3];
+    const user = users.find((user) =&gt; user.id === parseInt(id));
+    res.setHeader('Content-Type', 'application/json');
+    if (user) {
+      res.write(JSON.stringify(user));
+    } else {
+      res.statusCode = 404;
+      res.write(JSON.stringify({ message: 'User not found' }));
+    }
+    res.end();
+  } else {
+    res.setHeader('Content-Type', 'application/json');
+    res.statusCode = 404;
+    res.write(JSON.stringify({ message: 'Route not found' }));
+    res.end();
+  }
+});
+
+server.listen(PORT, () =&gt; {
+  console.log(`Server running on port ${PORT}`);
+});
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">Middleware</h2>
+
+
+
+<pre class="wp-block-code"><code>// server2.js
+import { createServer } from 'http';
+const PORT = process.env.PORT;
+
+const users = &#91;
+  { id: 1, name: 'John Doe' },
+  { id: 2, name: 'Jane Doe' },
+  { id: 3, name: 'Jim Doe' },
+];
+
+// Logger middleware
+const logger = (req, res, next) =&gt; {
+  console.log(`${req.method} ${req.url}`);
+  next();
+};
+
+const server = createServer((req, res) =&gt; {
+  logger(req, res, () =&gt; {
+    if (req.url === '/api/users' &amp;&amp; req.method === 'GET') {
+      res.setHeader('Content-Type', 'application/json');
+      res.write(JSON.stringify(users));
+      res.end();
+    } else if (req.url.match(/\/api\/users\/(&#91;0-9]+)/) &amp;&amp; req.method === 'GET') {
+      const id = req.url.split('/')&#91;3];
+      const user = users.find((user) =&gt; user.id === parseInt(id));
+      res.setHeader('Content-Type', 'application/json');
+      if (user) {
+        res.write(JSON.stringify(user));
+      } else {
+        res.statusCode = 404;
+        res.write(JSON.stringify({ message: 'User not found' }));
+      }
+      res.end();
+    } else {
+      res.setHeader('Content-Type', 'application/json');
+      res.statusCode = 404;
+      res.write(JSON.stringify({ message: 'Route not found' }));
+      res.end();
+    }
+  });
+});
+
+server.listen(PORT, () =&gt; {
+  console.log(`Server running on port ${PORT}`);
+});
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">Cleanup (Middleware &amp; Handlers)</h2>
+
+
+
+<pre class="wp-block-code"><code>// server2.js
+import { createServer } from 'http';
+const PORT = process.env.PORT;
+
+const users = &#91;
+  { id: 1, name: 'John Doe' },
+  { id: 2, name: 'Jane Doe' },
+  { id: 3, name: 'Jim Doe' },
+];
+
+// Logger middleware
+const logger = (req, res, next) =&gt; {
+  console.log(`${req.method} ${req.url}`);
+  next();
+};
+
+// JSON middleware
+const jsonMiddleware = (req, res, next) =&gt; {
+  res.setHeader('Content-Type', 'application/json');
+  next();
+};
+
+// Route handler for GET /api/users
+const getUsersHandler = (req, res) =&gt; {
+  res.write(JSON.stringify(users));
+  res.end();
+}
+
+// Route handler for GET /api/:id
+const getUserByIdHandler = (req, res) =&gt; {
+  const id = req.url.split('/')&#91;3];
+  const user = users.find((user) =&gt; user.id === parseInt(id));
+
+  if (user) {
+    res.write(JSON.stringify(user));
+  } else {
+    res.statusCode = 404;
+    res.write(JSON.stringify({ message: 'User not found' }));
+  }
+  res.end();
+}
+
+// Not found handler
+const notFoundHandler = (req, res) =&gt; {
+  res.statusCode = 404;
+  res.write(JSON.stringify({ message: 'Route not found' }));
+  res.end();
+}
+
+const server = createServer((req, res) =&gt; {
+  logger(req, res, () =&gt; {
+    jsonMiddleware(req, res, () =&gt; {
+      if (req.url === '/api/users' &amp;&amp; req.method === 'GET') {
+        getUsersHandler(req, res);
+      } else if (req.url.match(/\/api\/users\/(&#91;0-9]+)/) &amp;&amp; req.method === 'GET') {
+        getUserByIdHandler(req, res);
+      } else {
+        notFoundHandler(req, res)
+      }
+    })
+  });
+});
+
+server.listen(PORT, () =&gt; {
+  console.log(`Server running on port ${PORT}`);
+});
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">Get Req Body For POST</h2>
+
+
+
+<pre class="wp-block-code"><code>// server2.js
+import { createServer } from 'http';
+const PORT = process.env.PORT;
+
+const users = &#91;
+  { id: 1, name: 'John Doe' },
+  { id: 2, name: 'Jane Doe' },
+  { id: 3, name: 'Jim Doe' },
+];
+
+// Logger middleware
+const logger = (req, res, next) =&gt; {
+  console.log(`${req.method} ${req.url}`);
+  next();
+};
+
+// JSON middleware
+const jsonMiddleware = (req, res, next) =&gt; {
+  res.setHeader('Content-Type', 'application/json');
+  next();
+};
+
+// Route handler for GET /api/users
+const getUsersHandler = (req, res) =&gt; {
+  res.write(JSON.stringify(users));
+  res.end();
+}
+
+// Route handler for GET /api/:id
+const getUserByIdHandler = (req, res) =&gt; {
+  const id = req.url.split('/')&#91;3];
+  const user = users.find((user) =&gt; user.id === parseInt(id));
+
+  if (user) {
+    res.write(JSON.stringify(user));
+  } else {
+    res.statusCode = 404;
+    res.write(JSON.stringify({ message: 'User not found' }));
+  }
+  res.end();
+}
+
+// Route handler for POST /api/users
+const createUserHandler = (req, res) =&gt; {
+  let body = '';
+  // Listen for data
+  req.on('data', (chunk) =&gt; {
+    body += chunk.toString();
+  });
+  req.on('end', () =&gt; {
+    const newUser = JSON.parse(body);
+    users.push(newUser);
+    res.statusCode = 201;
+    res.write(JSON.stringify(newUser));
+    res.end();
+  })
+};
+
+// Not found handler
+const notFoundHandler = (req, res) =&gt; {
+  res.statusCode = 404;
+  res.write(JSON.stringify({ message: 'Route not found' }));
+  res.end();
+}
+
+const server = createServer((req, res) =&gt; {
+  logger(req, res, () =&gt; {
+    jsonMiddleware(req, res, () =&gt; {
+      if (req.url === '/api/users' &amp;&amp; req.method === 'GET') {
+        getUsersHandler(req, res);
+      } else if (req.url.match(/\/api\/users\/(&#91;0-9]+)/) &amp;&amp; req.method === 'GET') {
+        getUserByIdHandler(req, res);
+      } else if (req.url === '/api/users' &amp;&amp; req.method === 'POST') {
+        createUserHandler(req, res);
+      } else {
+        notFoundHandler(req, res)
+      }
+    })
+  });
+});
+
+server.listen(PORT, () =&gt; {
+  console.log(`Server running on port ${PORT}`);
+});
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// API 測試工具
+{
+  "id": 4,
+  "name": "Brad"
+}
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">File System Module</h2>
+
+
+
+<ul class="wp-block-list">
+<li>建立 fsDemo.js 檔案</li>
+
+
+
+<li>Node.js docs – <a href="https://nodejs.org/docs/latest/api/fs.html" target="_blank" rel="noreferrer noopener">File System</a>
+</li>
+
+
+
+<li>建立 test.txt 檔案</li>
+
+
+
+<li>使用 Terminal – node fsDemo.js</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// fsDemo.js
+// import fs from 'fs';
+import fs from 'fs/promises';
+
+// readFile() - callback
+// fs.readFile('./test.txt', 'utf8', (err, data) =&gt; {
+//   if (err) throw err;
+//   console.log(data);
+// });
+
+// readFileSync() - Synchronous version
+// const data = fs.readFileSync('./test.txt', 'utf8');
+// console.log(data);
+
+// readFile() - Promise .then()
+// fs.readFile('./test.txt', 'utf8')
+//   .then((data) =&gt; console.log(data))
+//   .catch((err) =&gt; console.log(err));
+
+// readFile() - async/await
+const readFile = async () =&gt; {
+  try {
+    const data = await fs.readFile('./test.txt', 'utf8');
+    console.log(data);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+// writeFile()
+
+const writeFile = async () =&gt; {
+  try {
+    await fs.writeFile('./test.txt', 'Hello, I am writing to this file');
+    console.log('File written to...');
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+// appendFile()
+const appendFile = async () =&gt; {
+  try {
+    await fs.appendFile('./test.txt', '\nThis is appended text');
+    console.log('File appended to...');
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+writeFile();
+appendFile();
+readFile();
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// test.txt - 1
+This is from the text file
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// test.text - 2
+Hello, I am writing to this file
+This is appended text
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">Path Module</h2>
+
+
+
+<ul class="wp-block-list">
+<li>建立 pathDemo.js 檔案</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// pathDemo.js
+import path from 'path';
+import url from 'url';
+
+const filePath = './dir1/dir2/test.txt';
+
+// basename()
+console.log(path.basename(filePath));
+
+// dirname()
+console.log(path.dirname(filePath));
+
+// extname()
+console.log(path.extname(filePath));
+
+// parse()
+console.log(path.parse(filePath));
+
+const __filename = url.fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename);
+
+// join()
+const filePath2 = path.join(__dirname, 'dir1', 'dir2', 'test.txt');
+console.log(filePath2);
+
+// resolve()
+const filePath3 = path.resolve(__dirname, 'dir1', 'dir2', 'test.txt');
+console.log(filePath3);
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">OS Module</h2>
+
+
+
+<ul class="wp-block-list">
+<li>建立 osDemo.js 檔案</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// osDemo.js
+import os from 'os';
+
+// userInfo()
+console.log(os.userInfo());
+
+// totalmem()
+console.log(os.totalmem());
+
+// freemem()
+console.log(os.freemem());
+
+// cpus()
+console.log(os.cpus());
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">URL Module</h2>
+
+
+
+<ul class="wp-block-list">
+<li>建立 urlDemo.js 檔案</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// urlDemo.js
+import url from 'url';
+
+const urlString = 'https://www.google.com/search?q=hello+world';
+
+// URL Object
+const urlObj = new URL(urlString);
+
+console.log(urlObj.pathname);
+
+// format()
+console.log(url.format(urlObj));
+
+// import.meta.url - file URL
+console.log(import.meta.url);
+
+// fileURLToPath()
+console.log(url.fileURLToPath(import.meta.url));
+
+console.log(urlObj.search);
+
+const params = new URLSearchParams(urlObj.search);
+console.log(params.get('q'));
+params.append('limit', '5');
+params.delete('limit');
+console.log(params);
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">Crypto Module</h2>
+
+
+
+<ul class="wp-block-list">
+<li>建立 cryptoDemo.js 檔案</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// cryptoDemo.js
+import crypto from 'crypto';
+
+// createHash()
+// const hash = crypto.createHash('sha256');
+// hash.update('password1234');
+// console.log(hash.digest('hex'));
+
+// randomBytes()
+// crypto.randomBytes(16, (err, buf) =&gt; {
+//   if(err) throw err;
+//   console.log(buf.toString('hex'));
+// });
+
+// createCipheriv &amp; createDecipheriv
+const algorithm = 'aes-256-cbc';
+const key = crypto.randomBytes(32);
+const iv = crypto.randomBytes(16);
+
+const cipher = crypto.createCipheriv(algorithm, key, iv);
+let encrypted = cipher.update('Hello, this is a secret message', 'utf8', 'hex');
+encrypted += cipher.final('hex');
+console.log(encrypted);
+
+const decipher = crypto.createDecipheriv(algorithm, key, iv);
+let decrypted = decipher.update(encrypted, 'hex', 'utf8');
+decrypted += decipher.final('utf8');
+console.log(decrypted);
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">Emitting Events</h2>
+
+
+
+<ul class="wp-block-list">
+<li>建立 eventsDemo.js 檔案</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// eventsDemo.js
+import { EventEmitter } from 'events';
+
+const myEmitter = new EventEmitter();
+
+function greetHandler(name) {
+  console.log('Hello ' + name);
+}
+
+function goodbyeHandler(name) {
+  console.log('Goodbye ' + name);
+}
+
+// Register event listeners
+myEmitter.on('greet', greetHandler);
+myEmitter.on('goodbye', goodbyeHandler);
+
+// Emit events
+myEmitter.emit('greet', 'John');
+myEmitter.emit('goodbye', 'John');
+
+// Error handling
+myEmitter.on('error', (err) =&gt; {
+  console.log('An Error Occured:', err);
+});
+
+// Simulate error
+myEmitter.emit('error', new Error('Something went wrong'));
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">Process Object</h2>
+
+
+
+<ul class="wp-block-list">
+<li>建立 processDemo.js</li>
+
+
+
+<li>終端機執行<br>node processDemo.js<br>node processDemo.js import<br>node processDemo.js import -s</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// processDemo.js
+// argv
+console.log(process.argv);
+console.log(process.argv&#91;3]);
+
+// process.env
+console.log(process.env.USERNAME);
+
+// pid
+console.log(process.pid);
+
+// cwd()
+console.log(process.cwd());
+
+// title
+console.log(process.title);
+
+// memoryUsage()
+console.log(process.memoryUsage());
+
+// update()
+console.log(process.uptime());
+
+process.on('exit', (code) =&gt; {
+  console.log(`About to exit with code: ${code}`);
+});
+
+// exit()
+process.exit(0);
+
+console.log('Hello from after exit');</code></pre>
+
+
+
+<p></p>
+
+
+
+<p></p>
+	</div>
+<!-- .entry-content -->
+
+	<footer class="entry-footer">
+			</footer><!-- .entry-footer -->
+</article><!-- #post-844 -->
+
+	<nav class="navigation post-navigation" aria-label="文章">
+		<h2 class="screen-reader-text">文章導覽</h2>
+		<div class="nav-links">
+<div class="nav-previous"><a href="/wordpress_blog/reviewvue3_09/" rel="prev"><span class="nav-subtitle">Previous:</span> <span class="nav-title">Vue3 複習09</span></a></div>
+<div class="nav-next"><a href="/wordpress_blog/express-crash-2024/" rel="next"><span class="nav-subtitle">Next:</span> <span class="nav-title">Express Crash Course (2024 Revamp)</span></a></div>
+</div>
+	</nav>
+	</main><!-- #main -->
+
+
+	</div></div>
+			
+			<footer id="colophon" class="site-footer">
+
+				
+				<div class="container-fluid">
+					<div class="site-info">
+						<div class="row">
+
+															
+								<div class="col-12 footer-copyright-elements footer-copyright-alignment-center">
+
+									<div class="botiga-credits">&copy; 2025 wordpress_blog. 
+Created by Gee Hsu. 
+<br>Proudly powered by <a rel="nofollow" href="https://athemes.com/theme/botiga/">Botiga</a>
+</div>
+<div class="social-profile">
+<a target="_blank" href="https://www.facebook.com/watergrass0402/"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></i></a><a target="_blank" href="https://github.com/GeeHsu"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></i></a>
+</div>
+								</div>
+														
+						</div>
+					</div>
+				</div>
+<!-- .site-info -->
+
+				
+			</footer><!-- #colophon -->
+
+			
+			<div class="back-to-top visibility-all position-right"><i class="ws-svg-icon"><svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 15l7-7 7 7" stroke-width="3" stroke-linejoin="round"></path></svg></i></div>
+</div>
+<!-- #page -->
+
+
+<script id="botiga-custom-js-extra">
+var botiga = {"ajaxurl":"\/wp-admin\/admin-ajax.php","i18n":{"botiga_sharebox_copy_link":"Copy link","botiga_sharebox_copy_link_copied":"Copied!"}};
+</script>
+<script src="/wordpress_blog/wp-content/themes/botiga/assets/js/custom.min.js?ver=1.1.2" id="botiga-custom-js"></script>
+
+</body>
+</html>

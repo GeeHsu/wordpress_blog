@@ -1,0 +1,1781 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<title>Build &amp; Deploy Full Stack E-commerce Website | Redux | MERN Stack – 03 &#8211; wordpress_blog</title>
+<meta name="robots" content="noindex, nofollow">
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	<link rel="alternate" type="application/rss+xml" title="訂閱《wordpress_blog》&raquo; 資訊提供" href="/wordpress_blog/feed/">
+<link rel="alternate" type="application/rss+xml" title="訂閱《wordpress_blog》&raquo; 留言的資訊提供" href="/wordpress_blog/comments/feed/">
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.7.2"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"🏳️‍⚧️","🏳️​⚧️")?!1:!n(e,"🇺🇳","🇺​🇳")&&!n(e,"🏴󠁧󠁢󠁥󠁮󠁧󠁿","🏴​󠁧​󠁢​󠁥​󠁮​󠁧​󠁿");case"emoji":return!n(e,"🐦‍⬛","🐦​⬛")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+</script>
+<style id="wp-emoji-styles-inline-css">img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}</style>
+<link rel="stylesheet" id="wp-block-library-css" href="/wordpress_blog/wp-includes/css/dist/block-library/style.min.css?ver=6.7.2" media="all">
+<style id="classic-theme-styles-inline-css">/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}</style>
+<style id="global-styles-inline-css">:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--palette-1-color-0: #212121;--wp--preset--color--palette-1-color-1: #757575;--wp--preset--color--palette-1-color-2: #212121;--wp--preset--color--palette-1-color-3: #212121;--wp--preset--color--palette-1-color-4: #212121;--wp--preset--color--palette-1-color-5: #f5f5f5;--wp--preset--color--palette-1-color-6: #ffffff;--wp--preset--color--palette-1-color-7: #ffffff;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 14px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 18px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--normal: 16px;--wp--preset--font-size--larger: 24px;--wp--preset--font-size--extra-large: 32px;--wp--preset--font-size--huge: 48px;--wp--preset--font-size--gigantic: 64px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}</style>
+<link rel="stylesheet" id="botiga-style-css" href="/wordpress_blog/wp-content/themes/botiga/style.css?ver=1.1.2" media="all">
+<link rel="stylesheet" id="botiga-style-min-css" href="/wordpress_blog/wp-content/themes/botiga/assets/css/styles.min.css?ver=1.1.2" media="all">
+<link rel="stylesheet" id="botiga-custom-styles-css" href="/wordpress_blog/wp-content/uploads/botiga/custom-styles.css?ver=1648804469" media="all">
+<link rel="https://api.w.org/" href="/wordpress_blog/wp-json/">
+<link rel="alternate" title="JSON" type="application/json" href="/wordpress_blog/wp-json/wp/v2/posts/889">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/wordpress_blog/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 6.7.2">
+<link rel="canonical" href="/wordpress_blog/full-stack-rabbit-03/">
+<link rel="shortlink" href="/wordpress_blog/?p=889">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="/wordpress_blog/wp-json/oembed/1.0/embed?url=%2Ffull-stack-rabbit-03%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="/wordpress_blog/wp-json/oembed/1.0/embed?url=%2Ffull-stack-rabbit-03%2F&#038;format=xml">
+<link rel="icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png" sizes="32x32">
+<link rel="icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png" sizes="192x192">
+<link rel="apple-touch-icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png">
+<meta name="msapplication-TileImage" content="/wp-content/uploads/2022/03/logo.png">
+	
+</head>
+
+<body class="post-template-default single single-post postid-889 single-format-standard wp-custom-logo wp-embed-responsive header-header_layout_1 blog-single-layout1">
+
+
+<div id="page" class="site">
+
+	<a class="skip-link screen-reader-text" href="#primary">Skip to content</a>
+
+	
+			<div class="top-bar visibility-desktop-only">
+				<div class="container-fluid">
+					<div class="top-bar-inner">
+						<div class="row valign">
+
+															<div class="col header-elements delimiter-none">
+									<div class="header-item top-bar-social"><div class="social-profile">
+<a target="_blank" href="https://www.facebook.com/watergrass0402/"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></i></a><a target="_blank" href="https://github.com/GeeHsu"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></i></a>
+</div></div>								</div>
+																						<div class="col header-elements delimiter-none">
+													
+			<nav class="header-item top-bar-secondary-navigation secondary-navigation">
+				<div class="menu-topbar-container"><ul id="secondary" class="menu">
+<li id="menu-item-143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143"><a href="/wordpress_blog/setup/">網站架設</a></li>
+<li id="menu-item-144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a href="/wordpress_blog/source/">資料來源</a></li>
+<li id="menu-item-262" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-262"><a href="/wordpress_blog/resource/">學習資源</a></li>
+</ul></div>			</nav>
+											</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			
+							
+				<header id="masthead" class="site-header header_layout_1">
+					<div class="container-fluid">
+						<div class="site-header-inner">
+							<div class="row valign">
+								<div class="col-md-5">
+										
+			<nav id="site-navigation" class="main-navigation">
+				<div class="menu-navbar-container"><ul id="primary-menu" class="menu">
+<li id="menu-item-109" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="/wordpress_blog/about/">關於</a></li>
+<li id="menu-item-110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-110">
+<a href="/wordpress_blog/learn/">學習</a><span tabindex="0" class="dropdown-symbol"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512.011 512.011"><path d="M505.755 123.592c-8.341-8.341-21.824-8.341-30.165 0L256.005 343.176 36.421 123.592c-8.341-8.341-21.824-8.341-30.165 0s-8.341 21.824 0 30.165l234.667 234.667a21.275 21.275 0 0015.083 6.251 21.275 21.275 0 0015.083-6.251l234.667-234.667c8.34-8.341 8.34-21.824-.001-30.165z"></path></svg></i></span>
+<ul class="sub-menu">
+	<li id="menu-item-140" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-140"><a href="/wordpress_blog/category/hexschool/">六角學院</a></li>
+	<li id="menu-item-141" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-141"><a href="/wordpress_blog/category/ninja/">Net Ninja</a></li>
+	<li id="menu-item-483" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-483"><a href="/wordpress_blog/category/youtube/">Youtube</a></li>
+</ul>
+</li>
+<li id="menu-item-111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="/wordpress_blog/linestore/">LINE STORE</a></li>
+</ul></div>			</nav><!-- #site-navigation -->
+											</div>
+								<div class="col-md-2">
+												<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog" decoding="async" fetchpriority="high"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+											</div>
+								<div class="col-md-5 header-elements">
+																	</div>							
+							</div>
+						</div>
+					</div>
+								<div class="header-search-form">
+			<form role="search" method="get" class="search-form" action="/">
+	<label class="screen-reader-text" for="search-form-1">Search&hellip;</label>
+	<input type="search" id="search-form-1" class="search-field" value="" name="s" placeholder="Search &hellip;">
+	<button type="submit" class="search-submit" value="Search"><i class="ws-svg-icon"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 100 14.25 7.125 7.125 0 000-14.25zM2.25 10.875a8.625 8.625 0 1117.25 0 8.625 8.625 0 01-17.25 0z"></path><path fill-rule="evenodd" d="M15.913 15.914a.75.75 0 011.06 0l4.557 4.556a.75.75 0 01-1.06 1.06l-4.557-4.556a.75.75 0 010-1.06z"></path></svg></i></button>
+</form>
+			</div>
+			
+									</header>
+
+										<div class="search-overlay"></div>
+			
+			<div class="botiga-offcanvas-menu">
+				<div class="mobile-header-item">
+					<div class="row">
+						<div class="col">
+										<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog" decoding="async"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+									</div>
+						<div class="col align-right">
+							<a class="mobile-menu-close" href="#"><i class="ws-svg-icon icon-cancel"><svg width="16" height="16" fill="none" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.219.781L.78 2.22 9.562 11l-8.78 8.781 1.437 1.438L11 12.437l8.781 8.782 1.438-1.438L12.437 11l8.782-8.781L19.78.78 11 9.562 2.219.783z"></path></svg></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="mobile-header-item">
+						
+			<nav id="site-navigation" class="main-navigation">
+				<div class="menu-navbar-container"><ul id="primary-menu" class="menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="/wordpress_blog/about/">關於</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-110">
+<a href="/wordpress_blog/learn/">學習</a><span tabindex="0" class="dropdown-symbol"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512.011 512.011"><path d="M505.755 123.592c-8.341-8.341-21.824-8.341-30.165 0L256.005 343.176 36.421 123.592c-8.341-8.341-21.824-8.341-30.165 0s-8.341 21.824 0 30.165l234.667 234.667a21.275 21.275 0 0015.083 6.251 21.275 21.275 0 0015.083-6.251l234.667-234.667c8.34-8.341 8.34-21.824-.001-30.165z"></path></svg></i></span>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-140"><a href="/wordpress_blog/category/hexschool/">六角學院</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-141"><a href="/wordpress_blog/category/ninja/">Net Ninja</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-483"><a href="/wordpress_blog/category/youtube/">Youtube</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="/wordpress_blog/linestore/">LINE STORE</a></li>
+</ul></div>			</nav><!-- #site-navigation -->
+							</div>
+				<div class="mobile-header-item">
+									<a target="&quot;_blank&quot;" class="button header-item" href="https://www.facebook.com/watergrass0402/">聯絡我</a>
+							</div>			
+			</div>
+			
+							<header id="masthead-mobile" class="site-header mobile-header">
+					<div class="container-fluid">
+						<div class="row valign flex-nowrap">
+							<div class="col-sm-6 col-md-4 col-grow-mobile">
+											<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog" decoding="async"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+										</div>
+							<div class="col-auto col-sm-6 col-md-8 col-grow-mobile header-elements valign align-right">
+																	
+															<a href="#" class="menu-toggle">
+				<i class="ws-svg-icon"><svg width="16" height="11" viewbox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="16" height="1"></rect><rect y="5" width="16" height="1"></rect><rect y="10" width="16" height="1"></rect></svg></i>
+			</a>
+																		</div>						
+						</div>
+					</div>
+								<div class="header-search-form">
+			<form role="search" method="get" class="search-form" action="/">
+	<label class="screen-reader-text" for="search-form-2">Search&hellip;</label>
+	<input type="search" id="search-form-2" class="search-field" value="" name="s" placeholder="Search &hellip;">
+	<button type="submit" class="search-submit" value="Search"><i class="ws-svg-icon"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 100 14.25 7.125 7.125 0 000-14.25zM2.25 10.875a8.625 8.625 0 1117.25 0 8.625 8.625 0 01-17.25 0z"></path><path fill-rule="evenodd" d="M15.913 15.914a.75.75 0 011.06 0l4.557 4.556a.75.75 0 01-1.06 1.06l-4.557-4.556a.75.75 0 010-1.06z"></path></svg></i></button>
+</form>
+			</div>
+			
+									</header>
+						<div class="search-overlay"></div>
+			<div class="header-image"><img src="/wordpress_blog/wp-content/uploads/2022/03/seashore.jpg" width="1920" height="500" alt=""></div>
+<div class="container content-wrapper"><div class="row main-row">			
+	<main id="primary" class="site-main no-sidebar">
+
+		
+
+<article id="post-889" class="post-889 post type-post status-publish format-standard hentry category-youtube">
+	
+		
+	<header class="entry-header">
+		
+		
+		<h1 class="entry-title">Build &amp; Deploy Full Stack E-commerce Website | Redux | MERN Stack – 03</h1>			<div class="entry-meta entry-meta-below delimiter-none">
+<span class="posted-on"><a href="/wordpress_blog/full-stack-rabbit-03/" rel="bookmark"><time class="entry-date published" datetime="2025-03-26T08:45:04+08:00">2025 年 3 月 26 日</time><time class="updated" datetime="2025-03-26T08:45:05+08:00">2025 年 3 月 26 日</time></a></span><span class="byline"> <span class="author vcard"><a class="url fn n" href="/wordpress_blog/author/gee-hsu/">gee.hsu</a></span></span>
+</div>			</header><!-- .entry-header -->
+
+	
+	<div class="entry-content">
+		
+<p>學習來自 YT:&nbsp;<a rel="noreferrer noopener" href="https://www.youtube.com/@compiletab" target="_blank">compiletab</a><br>影片:&nbsp;<a rel="noreferrer noopener" href="https://www.youtube.com/watch?v=hpgh2BTtac8" target="_blank">Build &amp; Deploy Full Stack E-commerce Website | Redux | MERN Stack Project</a><br>Github assets:&nbsp;<a rel="noreferrer noopener" href="https://github.com/kushald/rabbit-assets" target="_blank">連結</a><br>Thank you, teacher</p>
+
+
+
+<h1 class="wp-block-heading">建立 &amp; 部署全端商業網站</h1>
+
+
+
+<h2 class="wp-block-heading">影片時間戳</h2>
+
+
+
+<p>00:00:00 – Introduction<br>00:01:56 – Demo<br>00:05:26 – Installation &amp; set up<br>05:50:25 – Admin UI<br>07:20:25 – Backend setup<br>07:32:40 – user routes<br>08:05:40 – Products routes<br>09:18:56 – cart routes<br>10:13:26 – checkout routes<br>10:57:55 – Admin routes<br>11:58:30 – Redux</p>
+
+
+
+<h2 class="wp-block-heading">Redux</h2>
+
+
+
+<p>Redux 透過提供統一的狀態儲存、規範化的狀態更新流程，讓開發者能夠更容易地管理大型應用的狀態，並提高應用的可維護性和可擴展性。</p>
+
+
+
+<ul class="wp-block-list">
+<li>
+<a href="https://redux.js.org/" target="_blank" rel="noreferrer noopener">Redux</a> – A JS library for predictable and maintainable global state management</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">安裝套件</h2>
+
+
+
+<pre class="wp-block-code"><code>// frontend
+// terminal - 終端機
+npm i react-redux @reduxjs/toolkit axios
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// frontend/src/redux/store.js
+import { configureStore } from "@reduxjs/toolkit";
+
+const store = configureStore({
+  reducer: {
+},
+});
+
+export default store;
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// frontend/.env
+VITE_PAYPAL_CLIENT_ID=你的client-id
+VITE_BACKEND_URL=你後端的localhost
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">Auth Slice (身份驗證切片)</h2>
+
+
+
+<pre class="wp-block-code"><code>// frontend/src/redux/slices/authSlice.js
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import axios from "axios";
+
+// Retrieve user info and token from localStorage if available - 如果可用，從本地存儲中獲取用戶資訊和令牌
+const userFromStorage = localStorage.getItem("userInfo")
+  ? JSON.parse(localStorage.getItem("userInfo"))
+  : null;
+
+// Check for an existing guest ID in the localStorage or generate a new one - 檢查本地存儲中是否已有現有的訪客 ID，若沒有則生成一個新的
+const initialGuestId =
+  localStorage.getItem("guestId") || `guest_${new Date().getTime()}`;
+localStorage.setItem("guestId", initialGuestId);
+
+// Initial state - 初始狀態
+const initialState = {
+  user: userFromStorage,
+  guestId: initialGuestId,
+  loading: false,
+  error: null,
+};
+
+// Async Thunk for User Login - 用於用戶登入的非同步延遲函數
+export const loginUser = createAsyncThunk(
+  "auth/loginUser",
+  async (userData, { rejectWithValue }) =&gt; {
+    try {
+      const response = await axios.post(
+        `${import.meta.env.VITE_BACKEND_URL}/api/users/login`,
+        userData
+      );
+      localStorage.setItem("userInfo", JSON.stringify(response.data.user));
+      localStorage.setItem("userToken", response.data.token);
+
+      return response.data.user; // Return the user object from the response - 從回應中返回用戶對象
+    } catch (error) {
+      return rejectWithValue(error.response.data);
+    }
+  }
+);
+
+// Async Thunk for User Registration - 用於用戶註冊的非同步延遲函數
+export const registerUser = createAsyncThunk(
+  "auth/registerUser",
+  async (userData, { rejectWithValue }) =&gt; {
+    try {
+      const response = await axios.post(
+        `${import.meta.env.VITE_BACKEND_URL}/api/users/register`,
+        userData
+      );
+      localStorage.setItem("userInfo", JSON.stringify(response.data.user));
+      localStorage.setItem("userToken", response.data.token);
+
+      return response.data.user; // Return the user object from the response - 從回應中返回用戶對象
+    } catch (error) {
+      return rejectWithValue(error.response.data);
+    }
+  }
+);
+
+// Slice - 切片
+const authSlice = createSlice({
+  name: "auth",
+  initialState,
+  reducers: {
+    logout: (state) =&gt; {
+      state.user = null;
+      state.guestId = `guest_${new Date().getTime()}`; // Reset guest ID on logout - 在登出時重置訪客 ID
+      localStorage.removeItem("userInfo");
+      localStorage.removeItem("userToken");
+      localStorage.setItem("guestId", state.guestId); // Set new guest ID in localStorage - 在本地存儲中設置新的訪客 ID
+    },
+    generateNewGuestId: (state) =&gt; {
+      state.guestId = `guest_${new Date().getTime()}`;
+      localStorage.setItem("guestId", state.guestId);
+    },
+  },
+  extraReducers: (builder) =&gt; {
+    builder
+      .addCase(loginUser.pending, (state) =&gt; {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(loginUser.fulfilled, (state, action) =&gt; {
+        state.loading = false;
+        state.error = action.payload;
+      })
+      .addCase(loginUser.rejected, (state, action) =&gt; {
+        state.loading = false;
+        state.error = action.payload.message;
+      })
+      .addCase(registerUser.pending, (state) =&gt; {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(registerUser.fulfilled, (state, action) =&gt; {
+        state.loading = false;
+        state.error = action.payload;
+      })
+      .addCase(registerUser.rejected, (state, action) =&gt; {
+        state.loading = false;
+        state.error = action.payload.message;
+      });
+  },
+});
+
+export const { logout, generateNewGuestId } = authSlice.actions;
+export default authSlice.reducer;
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// frontend/src/App.jsx
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import UserLayout from "./components/Layout/UserLayout";
+import Home from "./pages/Home";
+import { Toaster } from "sonner";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Profile from "./pages/Profile";
+import CollectionPage from "./pages/CollectionPage";
+import ProductDetails from "./components/Products/ProductDetails";
+import Checkout from "./components/Cart/Checkout";
+import OrderConfirmationPage from "./pages/OrderConfirmationPage";
+import OrderDetailsPage from "./pages/OrderDetailsPage";
+import MyOrdersPage from "./pages/MyOrdersPage";
+import AdminLayout from "./components/Admin/AdminLayout";
+import AdminHomePage from "./pages/AdminHomePage";
+import UserManagement from "./components/Admin/UserManagement";
+import ProductManagement from "./components/Admin/ProductManagement";
+import EditProductPage from "./components/Admin/EditProductPage";
+import OrderManagement from "./components/Admin/OrderManagement";
+
+import { Provider } from "react-redux";
+import store from "./redux/store";
+
+const App = () =&gt; {
+  return (
+    &lt;Provider store={store}&gt;
+      &lt;BrowserRouter&gt;
+        &lt;Toaster position="top-right" /&gt;
+        &lt;Routes&gt;
+          &lt;Route path="/" element={&lt;UserLayout /&gt;}&gt;
+            {/* User Layout - 使用者佈局 */}
+            &lt;Route index element={&lt;Home /&gt;} /&gt;
+            &lt;Route path="login" element={&lt;Login /&gt;} /&gt;
+            &lt;Route path="register" element={&lt;Register /&gt;} /&gt;
+            &lt;Route path="profile" element={&lt;Profile /&gt;} /&gt;
+            &lt;Route
+              path="collections/:collection"
+              element={&lt;CollectionPage /&gt;}
+            /&gt;
+            &lt;Route path="product/:id" element={&lt;ProductDetails /&gt;} /&gt;
+            &lt;Route path="checkout" element={&lt;Checkout /&gt;} /&gt;
+            &lt;Route
+              path="order-confirmation"
+              element={&lt;OrderConfirmationPage /&gt;}
+            /&gt;
+            &lt;Route path="order/:id" element={&lt;OrderDetailsPage /&gt;} /&gt;
+            &lt;Route path="my-orders" element={&lt;MyOrdersPage /&gt;} /&gt;
+          &lt;/Route&gt;
+          &lt;Route path="/admin" element={&lt;AdminLayout /&gt;}&gt;
+            {/* Admin Layout - 管理員佈局 */}
+            &lt;Route index element={&lt;AdminHomePage /&gt;} /&gt;
+            &lt;Route path="users" element={&lt;UserManagement /&gt;} /&gt;
+            &lt;Route path="products" element={&lt;ProductManagement /&gt;} /&gt;
+            &lt;Route path="products/:id/edit" element={&lt;EditProductPage /&gt;} /&gt;
+            &lt;Route path="orders" element={&lt;OrderManagement /&gt;} /&gt;
+          &lt;/Route&gt;
+        &lt;/Routes&gt;
+      &lt;/BrowserRouter&gt;
+    &lt;/Provider&gt;
+  );
+};
+
+export default App;
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// frontend/src/pages/Login.jsx
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import login from "../assets/login.webp";
+import { loginUser } from "../redux/slices/authSlice";
+import { useDispatch } from "react-redux";
+
+const Login = () =&gt; {
+  const &#91;email, setEmail] = useState("");
+  const &#91;password, setPassword] = useState("");
+  const dispatch = useDispatch();
+
+  const handleSubmit = (e) =&gt; {
+    e.preventDefault();
+    // console.log("User Login:", { email, password });
+    dispatch(loginUser({ email, password }));
+  };
+
+  return (
+    &lt;div className="flex"&gt;
+      &lt;div className="w-full md:w-1/2 flex flex-col justify-center items-center p-8 md:p-12"&gt;
+        &lt;form
+          onSubmit={handleSubmit}
+          className="w-full max-w-md bg-white p-8 rounded-lg border shadow-sm"
+        &gt;
+          &lt;div className="flex justify-center mb-6"&gt;
+            &lt;h2 className="text-xl font-medium"&gt;Rabbit&lt;/h2&gt;
+          &lt;/div&gt;
+          &lt;h2 className="text-2xl font-bold text-center mb-6"&gt;Hey there! &lt;/h2&gt;
+          &lt;p className="text-center mb-6"&gt;
+            Enter your username and password to Login.
+          &lt;/p&gt;
+          &lt;div className="mb-4"&gt;
+            &lt;label className="block text-sm font-semibold mb-2"&gt;Email&lt;/label&gt;
+            &lt;input
+              type="email"
+              value={email}
+              onChange={(e) =&gt; setEmail(e.target.value)}
+              className="w-full p-2 border rounded"
+              placeholder="Enter your email address"
+            /&gt;
+          &lt;/div&gt;
+          &lt;div className="mb-4"&gt;
+            &lt;label className="block text-sm font-semibold mb-2"&gt;Password&lt;/label&gt;
+            &lt;input
+              type="password"
+              value={password}
+              onChange={(e) =&gt; setPassword(e.target.value)}
+              className="w-full p-2 border rounded"
+              placeholder="Enter your password"
+            /&gt;
+          &lt;/div&gt;
+          &lt;button
+            type="submit"
+            className="w-full bg-black text-white p-2 rounded-lg font-semibold hover:bg-gray-800 transition"
+          &gt;
+            Sign In
+          &lt;/button&gt;
+          &lt;p className="mt-6 text-center text-sm"&gt;
+            Don't have an account?{" "}
+            &lt;Link to="/register" className="text-blue-500"&gt;
+              Register
+            &lt;/Link&gt;
+          &lt;/p&gt;
+        &lt;/form&gt;
+      &lt;/div&gt;
+
+      &lt;div className="hidden md:block w-1/2 bg-gray-800"&gt;
+        &lt;div className="h-full flex flex-col justify-center items-center"&gt;
+          &lt;img
+            src={login}
+            alt="Login to Account"
+            className="h-&#91;750px] w-full object-cover"
+          /&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default Login;
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">測試登入頁面功能</h2>
+
+
+
+<ul class="wp-block-list">
+<li>http://localhost:5173/login</li>
+
+
+
+<li>輸入電子信箱、密碼 > 登入</li>
+
+
+
+<li>檢查 > Network<br>可以看到 token 和 user 資料</li>
+
+
+
+<li>檢查 > Application<br>從 Local storage 可以看到 userInfo、userToken</li>
+
+
+
+<li>檢查 > Console<br>出現一些問題，進行除錯</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// frontend/src/redux/store.js
+// 除錯
+import { configureStore } from "@reduxjs/toolkit";
+import authReducer from "./slices/authSlice";
+
+const store = configureStore({
+  reducer: {
+    auth: authReducer,
+  },
+});
+
+export default store;
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// frontend/src/pages/Register.jsx
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">測試註冊頁面功能</h2>
+
+
+
+<ul class="wp-block-list">
+<li>http://localhost:5173/register</li>
+
+
+
+<li>輸入名字、電子信箱、密碼</li>
+
+
+
+<li>檢查 > Network<br>可以看到 user 和 token</li>
+
+
+
+<li>檢查 > Application<br>從 Local storage 可以看到 userInfo、userToken</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">查看 MongoDB Atlas 資料庫</h2>
+
+
+
+<ul class="wp-block-list">
+<li>Browse collections (瀏覽集合) > users<br>查看是否有更新使用者</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">Product Slice (產品切片)</h2>
+
+
+
+<pre class="wp-block-code"><code>// frontend/src/redux/slices/productsSlice.js
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import axios from "axios";
+
+// Async Thunk to Fetch Products by Collection and optional Filters - 使用非同步函數根據集合和可選過濾條件獲取產品
+export const fetchProductsByFilters = createAsyncThunk(
+  "products/fetchByFilters",
+  async ({
+    collection,
+    size,
+    color,
+    gender,
+    minPrice,
+    maxPrice,
+    sortBy,
+    search,
+    category,
+    material,
+    brand,
+    limit,
+  }) =&gt; {
+    const query = new URLSearchParams();
+    if (collection) query.append("collection", collection);
+    if (size) query.append("size", size);
+    if (color) query.append("color", color);
+    if (gender) query.append("gender", gender);
+    if (minPrice) query.append("minPrice", minPrice);
+    if (maxPrice) query.append("maxPrice", maxPrice);
+    if (sortBy) query.append("sortBy", sortBy);
+    if (search) query.append("search", search);
+    if (category) query.append("category", category);
+    if (material) query.append("material", material);
+    if (brand) query.append("brand", brand);
+    if (limit) query.append("limit", limit);
+
+    const response = await axios.get(
+      `${import.meta.env.VITE_BACKEND_URL}/api/products?${query.toString()}`
+    );
+    return response.data;
+  }
+);
+
+// Async thunk to fetch a single product by ID - 使用非同步函數根據 ID 獲取單個產品
+export const fetchProductDetails = createAsyncThunk(
+  "products/fetchProductDetails",
+  async (id) =&gt; {
+    const response = await axios.get(
+      `${import.meta.env.VITE_BACKEND_URL}/api/products/${id}`
+    );
+    return response.data;
+  }
+);
+
+// Async thunk to fetch update existing products - 使用非同步函數獲取並更新現有產品
+export const updateProduct = createAsyncThunk(
+  "products/updateProduct",
+  async ({ id, productData }) =&gt; {
+    const response = await axios.put(
+      `${import.meta.env.VITE_BACKEND_URL}/api/products/${id}`,
+      productData,
+      {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("userToken")}`,
+        },
+      }
+    );
+    return response.data;
+  }
+);
+
+// Async thunk to fetch similar products - 使用非同步函數獲取相似產品
+export const fetchSimilarProducts = createAsyncThunk(
+  "products/fetchSimilarProducts",
+  async ({ id }) =&gt; {
+    const response = await axios.get(
+      `${import.meta.env.VITE_BACKEND_URL}/api/products/similar/${id}`
+    );
+    return response.data;
+  }
+);
+
+const productsSlice = createSlice({
+  name: "products",
+  initialState: {
+    products: &#91;],
+    selectedProduct: null, // Store the details of the single Product - 儲存單一產品的詳細資料
+    similarProducts: &#91;],
+    loading: false,
+    error: null,
+    filters: {
+      category: "",
+      size: "",
+      color: "",
+      gender: "",
+      brand: "",
+      minPrice: "",
+      maxPrice: "",
+      sortBy: "",
+      search: "",
+      material: "",
+      collection: "",
+    },
+  },
+  reducers: {
+    setFilters: (state, action) =&gt; {
+      state.filters = { ...state.filters, ...action.payload };
+    },
+    clearFilters: (state) =&gt; {
+      state.filters = {
+        category: "",
+        size: "",
+        color: "",
+        gender: "",
+        brand: "",
+        minPrice: "",
+        maxPrice: "",
+        sortBy: "",
+        search: "",
+        material: "",
+        collection: "",
+      };
+    },
+  },
+  extraReducers: (builder) =&gt; {
+    builder
+      // Handle fetching products with filter - 處理使用篩選條件獲取產品
+      .addCase(fetchProductsByFilters.pending, (state) =&gt; {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(fetchProductsByFilters.fulfilled, (state, action) =&gt; {
+        state.loading = false;
+        state.products = Array.isArray(action.payload) ? action.payload : &#91;];
+      })
+      .addCase(fetchProductsByFilters.rejected, (state, action) =&gt; {
+        state.loading = false;
+        state.error = action.error.message;
+      })
+      // Handle fetching single product details - 處理獲取單一產品詳細資料
+      .addCase(fetchProductDetails.pending, (state) =&gt; {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(fetchProductDetails.fulfilled, (state, action) =&gt; {
+        state.loading = false;
+        state.selectedProduct = action.payload;
+      })
+      .addCase(fetchProductDetails.rejected, (state, action) =&gt; {
+        state.loading = false;
+        state.error = action.error.message;
+      })
+      // Handle updating product - 處理更新產品
+      .addCase(updateProduct.pending, (state) =&gt; {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(updateProduct.fulfilled, (state, action) =&gt; {
+        state.loading = false;
+        const updatedProduct = action.payload;
+        const index = state.products.findIndex(
+          (product) =&gt; product._id === updateProduct._id
+        );
+        if (index !== -1) {
+          state.products&#91;index] = updateProduct;
+        }
+      })
+      .addCase(updateProduct.rejected, (state, action) =&gt; {
+        state.loading = false;
+        state.error = action.error.message;
+      })
+      // Handle fetching similar products - 處理獲取相似產品
+      .addCase(fetchSimilarProducts.pending, (state) =&gt; {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(fetchSimilarProducts.fulfilled, (state, action) =&gt; {
+        state.loading = false;
+        state.products = action.payload;
+      })
+      .addCase(fetchSimilarProducts.rejected, (state, action) =&gt; {
+        state.loading = false;
+        state.error = action.error.message;
+      });
+  },
+});
+
+export const { setFilters, clearFilters } = productsSlice.actions;
+export default productsSlice.reducer;
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// frontend/src/redux/store.js
+import { configureStore } from "@reduxjs/toolkit";
+import authReducer from "./slices/authSlice";
+import productReducer from "./slices/productsSlice";
+
+const store = configureStore({
+  reducer: {
+    auth: authReducer,
+    products: productReducer,
+  },
+});
+
+export default store;
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">Cart Slice (購物車切片)</h2>
+
+
+
+<pre class="wp-block-code"><code>// frontend/src/redux/slices/cartSlice.js
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import axios from "axios";
+
+// Helper function to load cart from localStorage - 從本地儲存載入購物車的輔助函數
+const loadCartFromStorage = () =&gt; {
+  const storedCart = localStorage.getItem("cart");
+  return storedCart ? JSON.parse(storedCart) : { products: &#91;] };
+};
+
+// Helper function to save cart to localStorage - 將購物車儲存到本地儲存的輔助函數
+const saveCartToStorage = (cart) =&gt; {
+  localStorage.setItem("cart", JSON.stringify(cart));
+};
+
+// Fetch cart for a user or guest - 為用戶或訪客獲取購物車
+export const fetchCart = createAsyncThunk(
+  "cart/fetchCart",
+  async ({ userId, guestId }, { rejectWithValue }) =&gt; {
+    try {
+      const response = await axios.get(
+        `${import.meta.env.VITE_BACKEND_URL}/api/cart`,
+        {
+          params: { userId, guestId },
+        }
+      );
+      return response.data;
+    } catch (error) {
+      console.error(error);
+      return rejectWithValue(error.response.data);
+    }
+  }
+);
+
+// Add an item to the cart for a user or guest - 為用戶或訪客將商品加入購物車
+export const addToCart = createAsyncThunk(
+  "cart/addToCart",
+  async (
+    { productId, quantity, size, color, guestId, userId },
+    { rejectWithValue }
+  ) =&gt; {
+    try {
+      const response = await axios.post(
+        `${import.meta.env.VITE_BACKEND_URL}/api/cart`,
+        {
+          productId,
+          quantity,
+          size,
+          color,
+          guestId,
+          userId,
+        }
+      );
+      return response.data;
+    } catch (error) {
+      return rejectWithValue(error.response.data);
+    }
+  }
+);
+
+// Update the quantity of an item in the cart - 更新購物車中商品的數量
+export const updateCartItemQuantity = createAsyncThunk(
+  "cart/updateCartItemQuantity",
+  async (
+    { productId, quantity, guestId, userId, size, color },
+    { rejectWithValue }
+  ) =&gt; {
+    try {
+      const response = await axios.put(
+        `${import.meta.env.VITE_BACKEND_URL}/api/cart`,
+        {
+          productId,
+          quantity,
+          guestId,
+          userId,
+          size,
+          color,
+        }
+      );
+      return response.data;
+    } catch (error) {
+      return rejectWithValue(error.response.data);
+    }
+  }
+);
+
+// Remove an item from the cart - 從購物車中移除商品
+export const removeFromCart = createAsyncThunk(
+  "cart/removeFromCart",
+  async ({ productId, guestId, userId, size, color }, { rejectWithValue }) =&gt; {
+    try {
+      const response = await axios({
+        method: "DELETE",
+        url: `${import.meta.env.VITE_BACKEND_URL}/api/cart`,
+        data: {
+          productId,
+          guestId,
+          userId,
+          size,
+          color,
+        },
+      });
+      return response.data;
+    } catch (error) {
+      return rejectWithValue(error.response.data);
+    }
+  }
+);
+
+// Merge guest cart into user cart
+export const mergeCart = createAsyncThunk(
+  "cart/mergeCart",
+  async ({ guestId, user }, { rejectWithValue }) =&gt; {
+    try {
+      const response = await axios.post(
+        `${import.meta.env.VITE_BACKEND_URL}/api/cart/merge`,
+        { guestId, user },
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("userToken")}`,
+          },
+        }
+      );
+      return response.data;
+    } catch (error) {
+      return rejectWithValue(error.response.data);
+    }
+  }
+);
+
+const cartSlice = createSlice({
+  name: "cart",
+  initialState: {
+    cart: loadCartFromStorage(),
+    loading: false,
+    error: null,
+  },
+  reducers: {
+    clearCart: (state) =&gt; {
+      state.cart = { products: &#91;] };
+      localStorage.removeItem("cart");
+    },
+  },
+  extraReducers: (builder) =&gt; {
+    builder
+      .addCase(fetchCart.pending, (state) =&gt; {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(fetchCart.fulfilled, (state, action) =&gt; {
+        state.loading = false;
+        state.error = action.payload;
+        saveCartToStorage(action.payload);
+      })
+      .addCase(fetchCart.rejected, (state, action) =&gt; {
+        state.loading = false;
+        state.error = action.error.message || "Failed to fetch cart";
+      })
+      .addCase(addToCart.pending, (state) =&gt; {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(addToCart.fulfilled, (state, action) =&gt; {
+        state.loading = false;
+        state.error = action.payload;
+        saveCartToStorage(action.payload);
+      })
+      .addCase(addToCart.rejected, (state, action) =&gt; {
+        state.loading = false;
+        state.error = action.payload?.message || "Failed to add to cart";
+      })
+      .addCase(updateCartItemQuantity.pending, (state) =&gt; {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(updateCartItemQuantity.fulfilled, (state, action) =&gt; {
+        state.loading = false;
+        state.error = action.payload;
+        saveCartToStorage(action.payload);
+      })
+      .addCase(updateCartItemQuantity.rejected, (state, action) =&gt; {
+        state.loading = false;
+        state.error =
+          action.payload?.message || "Failed to update item quantity";
+      })
+      .addCase(removeFromCart.pending, (state) =&gt; {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(removeFromCart.fulfilled, (state, action) =&gt; {
+        state.loading = false;
+        state.error = action.payload;
+        saveCartToStorage(action.payload);
+      })
+      .addCase(removeFromCart.rejected, (state, action) =&gt; {
+        state.loading = false;
+        state.error = action.payload?.message || "Failed to remove item";
+      })
+      .addCase(mergeCart.pending, (state) =&gt; {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(mergeCart.fulfilled, (state, action) =&gt; {
+        state.loading = false;
+        state.error = action.payload;
+        saveCartToStorage(action.payload);
+      })
+      .addCase(mergeCart.rejected, (state, action) =&gt; {
+        state.loading = false;
+        state.error = action.payload?.message || "Failed to merge cart";
+      });
+  },
+});
+
+export const { clearCart } = cartSlice.actions;
+export default cartSlice.reducer;
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// frontend/src/redux/store.js
+import { configureStore } from "@reduxjs/toolkit";
+import authReducer from "./slices/authSlice";
+import productReducer from "./slices/productsSlice";
+import cartReducer from "./slices/cartSlice";
+
+const store = configureStore({
+  reducer: {
+    auth: authReducer,
+    products: productReducer,
+    cart: cartReducer,
+  },
+});
+
+export default store;
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">Checkout Slice (結帳切片)</h2>
+
+
+
+<pre class="wp-block-code"><code>// frontend/src/redux/slices/checkoutSlice.js
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import axios from "axios";
+
+// Async thunk to create a checkout session - 創建結帳會話的非同步函數
+export const createCheckout = createAsyncThunk(
+  "checkout/createCheckout",
+  async (checkoutdata, { rejectWithValue }) =&gt; {
+    try {
+      const response = await axios.post(
+        `${import.meta.env.VITE_BACKEND_URL}/api/checkout`,
+        checkoutdata,
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("userToken")}`,
+          },
+        }
+      );
+      return response.data;
+    } catch (error) {
+      return rejectWithValue(error.response.data);
+    }
+  }
+);
+
+const checkoutSlice = createSlice({
+  name: "checkout",
+  initialState: {
+    checkout: null,
+    loading: false,
+    error: null,
+  },
+  reducers: {},
+  extraReducers: (builder) =&gt; {
+    builder.addCase(createCheckout.pending, (state) =&gt; {
+      state.loading = true;
+      state.error = null;
+    })
+    .addCase(createCheckout.fulfilled, (state, action) =&gt; {
+      state.loading = false;
+      state.checkout = action.payload;
+    });
+    .addCase(createCheckout.rejected, (state, action) =&gt; {
+      state.loading = true;
+      state.error = action.payload.message;
+    });
+  },
+});
+
+export default checkoutSlice.reducer;
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// frontend/src/redux/store.js
+import { configureStore } from "@reduxjs/toolkit";
+import authReducer from "./slices/authSlice";
+import productReducer from "./slices/productsSlice";
+import cartReducer from "./slices/cartSlice";
+import checkoutReducer from "./slices/checkoutSlice";
+
+const store = configureStore({
+  reducer: {
+    auth: authReducer,
+    products: productReducer,
+    cart: cartReducer,
+    checkout: checkoutReducer,
+  },
+});
+
+export default store;
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">Order Slice (訂單切片)</h2>
+
+
+
+<pre class="wp-block-code"><code>// frontend/src/redux/slices/orderSlice.js
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import axios from "axios";
+
+// Async Thunk to fetch user orders - 用於獲取用戶訂單的非同步函數
+export const fetchUserOrders = createAsyncThunk(
+  "orders/fetchUserOrders",
+  async (_, { rejectWithValue }) =&gt; {
+    try {
+      const response = await axios.get(
+        `${import.meta.env.VITE_BACKEND_URL}/api/orders/my-orders`,
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("userToken")}`,
+          },
+        }
+      );
+      return response.data;
+    } catch (error) {
+      return rejectWithValue(error.response.data);
+    }
+  }
+);
+
+// Async thunk to fetch orders details by ID - 根據 ID 獲取訂單詳情的非同步函數
+export const fetchOrderDetails = createAsyncThunk(
+  "orders/fetchOrderDetails",
+  async (orderId, { rejectWithValue }) =&gt; {
+    try {
+      const response = await axios.get(
+        `${import.meta.env.VITE_BACKEND_URL}/api/orders/${orderId}`,
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("userToken")}`,
+          },
+        }
+      );
+      return response.data;
+    } catch (error) {
+      rejectWithValue(error.response.data);
+    }
+  }
+);
+
+const orderSlice = createSlice({
+  name: "orders",
+  initialState: {
+    orders: &#91;],
+    totalOrders: 0,
+    orderDetails: null,
+    loading: false,
+    error: null,
+  },
+  reducers: {},
+  extraReducers: (builder) =&gt; {
+    builder
+      // Fetch user order - 獲取用戶訂單
+      .addCase(fetchUserOrders.pending, (state) =&gt; {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(fetchUserOrders.fulfilled, (state, action) =&gt; {
+        state.loading = false;
+        state.orders = action.payload;
+      })
+      .addCase(fetchUserOrders.rejected, (state, action) =&gt; {
+        state.loading = false;
+        state.error = action.payload.message;
+      })
+      // Fetch order details - 獲取訂單詳情
+      .addCase(fetchOrderDetails.pending, (state) =&gt; {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(fetchOrderDetails.fulfilled, (state, action) =&gt; {
+        state.loading = false;
+        state.orderDetails = action.payload;
+      })
+      .addCase(fetchOrderDetails.rejected, (state, action) =&gt; {
+        state.loading = false;
+        state.error = action.payload.message;
+      });
+  },
+});
+
+export default orderSlice.reducer;
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// frontend/src/redux/store.js
+import { configureStore } from "@reduxjs/toolkit";
+import authReducer from "./slices/authSlice";
+import productReducer from "./slices/productsSlice";
+import cartReducer from "./slices/cartSlice";
+import checkoutReducer from "./slices/checkoutSlice";
+import orderReducer from "./slices/orderSlice";
+
+const store = configureStore({
+  reducer: {
+    auth: authReducer,
+    products: productReducer,
+    cart: cartReducer,
+    checkout: checkoutReducer,
+    orders: orderReducer,
+  },
+});
+
+export default store;
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">Admin Slice (管理員切片)</h2>
+
+
+
+<pre class="wp-block-code"><code>// frontend/src/redux/slices/adminSlice.js
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import axios from "axios";
+
+// fetch all users (admin only) - 獲取所有用戶 (僅限管理員)
+export const fetchUsers = createAsyncThunk("admin/fetchUsers", async () =&gt; {
+  const response = await axios.get(
+    `${import.meta.env.VITE_BACKEND_URL}/api/admin/users`,
+    {
+      headers: { Authorization: `Bearer ${localStorage.getItem("userToken")}` },
+    }
+  );
+  response.data;
+});
+
+// Add the create user action - 新增創建用戶的動作
+export const addUser = createAsyncThunk(
+  "admin/addUser",
+  async (userData, { rejectWithValue }) =&gt; {
+    try {
+      const response = await axios.post(
+        `${import.meta.env.VITE_BACKEND_URL}/api/admin/users`,
+        userData,
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("userToken")}`,
+          },
+        }
+      );
+      return response.data;
+    } catch (error) {
+      return rejectWithValue(error.response.data);
+    }
+  }
+);
+
+// Update user info - 更新用戶資訊
+export const updateUser = createAsyncThunk(
+  "admin/updateUser",
+  async ({ id, name, email, role }) =&gt; {
+    const response = await axios.put(
+      `${import.meta.env.VITE_BACKEND_URL}/api/admin/users/${id}`,
+      { name, email, role },
+      {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("userToken")}`,
+        },
+      }
+    );
+    return response.data;
+  }
+);
+
+// Delete a user - 刪除用戶
+export const deleteUser = createAsyncThunk("admin/deleteUser", async (id) =&gt; {
+  await axios.delete(
+    `${import.meta.env.VITE_BACKEND_URL}/api/admin/users/${id}`,
+    {
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("userToken")}`,
+      },
+    }
+  );
+  return id;
+});
+
+const adminSlice = createSlice({
+  name: "admin",
+  initialState: {
+    users: &#91;],
+    loading: false,
+    error: null,
+  },
+  reducers: {},
+  extraReducers: (builder) =&gt; {
+    builder
+      .addCase(fetchUsers.pending, (state) =&gt; {
+        state.loading = true;
+      })
+      .addCase(fetchUsers.fulfilled, (state, action) =&gt; {
+        state.loading = false;
+        state.users = action.payload;
+      })
+      .addCase(fetchUsers.rejected, (state, action) =&gt; {
+        state.loading = false;
+        state.error = action.error.message;
+      })
+      .addCase(updateUser.fulfilled, (state, action) =&gt; {
+        const updatedUser = action.payload;
+        const userIndex = state.users.findIndex(
+          (user) =&gt; user._id === updatedUser._id
+        );
+        if (userIndex !== -1) {
+          state.users&#91;userIndex] = updatedUser;
+        }
+      })
+      .addCase(deleteUser.fulfilled, (state, action) =&gt; {
+        state.users = state.users.filter((user) =&gt; user._id !== action.payload);
+      })
+      .addCase(addUser.pending, (state) =&gt; {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(addUser.fulfilled, (state, action) =&gt; {
+        state.loading = false;
+        state.users.push(action.payload.user); // add a new user to the state - 將新用戶增加到狀態中
+      })
+      .addCase(addUser.rejected, (state, action) =&gt; {
+        state.loading = false;
+        state.error = action.payload.message;
+      });
+  },
+});
+
+export default adminSlice.reducer;
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// frontend/src/redux/store.js
+import { configureStore } from "@reduxjs/toolkit";
+import authReducer from "./slices/authSlice";
+import productReducer from "./slices/productsSlice";
+import cartReducer from "./slices/cartSlice";
+import checkoutReducer from "./slices/checkoutSlice";
+import orderReducer from "./slices/orderSlice";
+import adminReducer from "./slices/adminSlice";
+
+const store = configureStore({
+  reducer: {
+    auth: authReducer,
+    products: productReducer,
+    cart: cartReducer,
+    checkout: checkoutReducer,
+    orders: orderReducer,
+    admin: adminReducer,
+  },
+});
+
+export default store;
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">Admin Product Slice (管理員產品切片)</h2>
+
+
+
+<pre class="wp-block-code"><code>// frontend/src/redux/slices/adminProductSlice.js
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import axios from "axios";
+
+const API_URL = `${import.meta.env.VITE_BACKEND_URL}`;
+const USER_TOKEN = `Bearer ${localStorage.getItem("userToken")}`;
+
+// async thunk to fetch admin products - 獲取管理員產品的非同步函數
+export const fetchAdminProducts = createAsyncThunk(
+  "adminProducts/fetchProducts",
+  async () =&gt; {
+    const response = await axios.get(`${API_URL}/api/admin/products`, {
+      headers: {
+        Authorization: USER_TOKEN,
+      },
+    });
+    return response.data;
+  }
+);
+
+// async function to create a new product - 創建新產品的非同步函數
+export const createProduct = createAsyncThunk(
+  "adminProducts/createProduct",
+  async (productData) =&gt; {
+    const response = await axios.post(
+      `${API_URL}/api/admin/products`,
+      productData,
+      {
+        headers: {
+          Authorization: USER_TOKEN,
+        },
+      }
+    );
+    return response.data;
+  }
+);
+
+// async thunk to update an existing product - 更新現有產品的非同步函數
+export const updateProduct = createAsyncThunk(
+  "adminProducts/updateProduct",
+  async ({ id, productData }) =&gt; {
+    const response = await axios.put(
+      `${API_URL}/api/admin/products/${id}`,
+      productData,
+      {
+        headers: {
+          Authorization: USER_TOKEN,
+        },
+      }
+    );
+    return response.data;
+  }
+);
+
+// async thunk to delete a product - 刪除產品的非同步函數
+export const deleteProduct = createAsyncThunk(
+  "adminProducts/deleteProduct",
+  async (id) =&gt; {
+    await axios.delete(`${API_URL}/api/admin/products/${id}`, {
+      headers: { Authorization: USER_TOKEN },
+    });
+    return id;
+  }
+);
+
+const adminProductSlice = createSlice({
+  name: "adminProducts",
+  initialState: {
+    products: &#91;],
+    loading: false,
+    error: null,
+  },
+  reducers: {},
+  extraReducers: (builder) =&gt; {
+    builder
+      .addCase(fetchAdminProducts.pending, (state) =&gt; {
+        state.loading = true;
+      })
+      .addCase(fetchAdminProducts.fulfilled, (state, action) =&gt; {
+        state.loading = false;
+        state.products = action.payload;
+      })
+      .addCase(fetchAdminProducts.rejected, (state, action) =&gt; {
+        state.loading = false;
+        state.error = action.error.message;
+      })
+      // Create Product - 新增產品
+      .addCase(createProduct.fulfilled, (state, action) =&gt; {
+        state.products.push(action.payload);
+      })
+      // Update Product - 更新產品
+      .addCase(updateProduct.fulfilled, (state, action) =&gt; {
+        const index = state.products.findIndex(
+          (product) =&gt; product._id === action.payload._id
+        );
+        if (index !== -1) {
+          state.products&#91;index] = action.payload;
+        }
+      })
+      // Delete Product - 刪除產品
+      .addCase(deleteProduct.fulfilled, (state, action) =&gt; {
+        state.products = state.products.filter(
+          (product) =&gt; product._id !== action.payload
+        );
+      });
+  },
+});
+
+export default adminProductSlice.reducer;
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// frontend/src/redux/store.js
+import { configureStore } from "@reduxjs/toolkit";
+import authReducer from "./slices/authSlice";
+import productReducer from "./slices/productsSlice";
+import cartReducer from "./slices/cartSlice";
+import checkoutReducer from "./slices/checkoutSlice";
+import orderReducer from "./slices/orderSlice";
+import adminReducer from "./slices/adminSlice";
+import adminProductReducer from "./slices/adminProductSlice";
+
+const store = configureStore({
+  reducer: {
+    auth: authReducer,
+    products: productReducer,
+    cart: cartReducer,
+    checkout: checkoutReducer,
+    orders: orderReducer,
+    admin: adminReducer,
+    adminProducts: adminProductReducer,
+  },
+});
+
+export default store;
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">Admin Order Slice (管理員訂單切片)</h2>
+
+
+
+<pre class="wp-block-code"><code>// frontend/src/redux/slices/adminOrderSlice.js
+import {
+  createSlice,
+  createAsyncThunk,
+  __DO_NOT_USE__ActionTypes,
+} from "@reduxjs/toolkit";
+import axios from "axios";
+
+// Fetch all orders (admin only) - 獲取全部訂單 (僅限管理員)
+export const fetchAllOrders = createAsyncThunk(
+  "adminOrders/fetchAllOrders",
+  async (_, { rejectWithValue }) =&gt; {
+    try {
+      const response = await axios.get(
+        `${import.meta.env.VITE_BACKEND_URL}/api/admin/orders`,
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("userToken")}`,
+          },
+        }
+      );
+      return response.data;
+    } catch (error) {
+      return rejectWithValue(error.response.data);
+    }
+  }
+);
+
+// Update order delivery status - 更新訂單配送狀態
+export const updateOrderStatus = createAsyncThunk(
+  "adminOrders/updateOrderStatus",
+  async ({ id, status }, { rejectWithValue }) =&gt; {
+    try {
+      const response = await axios.put(
+        `${import.meta.env.VITE_BACKEND_URL}/api/admin/orders/${id}`,
+        { status },
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("userToken")}`,
+          },
+        }
+      );
+      return response.data;
+    } catch (error) {
+      return rejectWithValue(error.response.data);
+    }
+  }
+);
+
+// Delete an order - 刪除訂單
+export const deleteOrder = createAsyncThunk(
+  "adminOrders/deleteOrder",
+  async (id, { rejectWithValue }) =&gt; {
+    try {
+      await axios.delete(
+        `${import.meta.env.VITE_BACKEND_URL}/api/admin/orders/${id}`,
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("userToken")}`,
+          },
+        }
+      );
+      return id;
+    } catch (error) {
+      return rejectWithValue(error.response.data);
+    }
+  }
+);
+
+const adminOrderSlice = createSlice({
+  name: "adminOrders",
+  initialState: {
+    orders: &#91;],
+    totalOrders: 0,
+    totalSales: 0,
+    loading: false,
+    error: null,
+  },
+  reducers: {},
+  extraReducers: (builder) =&gt; {
+    builder
+      // Fetch all orders - 獲取所有訂單
+      .addCase(fetchAllOrders.pending, (state) =&gt; {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(fetchAllOrders.fulfilled, (state, action) =&gt; {
+        state.loading = false;
+        state.orders = action.payload;
+        state.totalOrders = action.payload.length;
+
+        // Calculate total sales - 計算總銷售額
+        const totalSales = action.payload.reduce((acc, order) =&gt; {
+          return acc + order.totalPrice;
+        }, 0);
+        state.totalSales = totalSales;
+      })
+      .addCase(fetchAllOrders.rejected, (state, action) =&gt; {
+        state.loading = false;
+        state.error = action.payload.message;
+      })
+      // Update order status - 更新訂單狀態
+      .addCase(updateOrderStatus.fulfilled, (state, action) =&gt; {
+        const updatedOrder = action.payload;
+        const orderIndex = state.orders.findIndex(
+          (order) =&gt; order._id === updatedOrder._id
+        );
+        if (orderIndex !== -1) {
+          state.orders&#91;orderIndex] = updatedOrder;
+        }
+      })
+      // Delete order - 刪除訂單
+      .addCase(deleteOrder.fulfilled, (state, action) =&gt; {
+        state.orders = state.orders.filter(
+          (order) =&gt; order._id !== action.payload
+        );
+      });
+  },
+});
+
+export default adminOrderSlice.reducer;
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// frontend/src/redux/store.js
+import { configureStore } from "@reduxjs/toolkit";
+import authReducer from "./slices/authSlice";
+import productReducer from "./slices/productsSlice";
+import cartReducer from "./slices/cartSlice";
+import checkoutReducer from "./slices/checkoutSlice";
+import orderReducer from "./slices/orderSlice";
+import adminReducer from "./slices/adminSlice";
+import adminProductReducer from "./slices/adminProductSlice";
+import adminOrdersReducer from "./slices/adminOrderSlice";
+
+const store = configureStore({
+  reducer: {
+    auth: authReducer,
+    products: productReducer,
+    cart: cartReducer,
+    checkout: checkoutReducer,
+    orders: orderReducer,
+    admin: adminReducer,
+    adminProducts: adminProductReducer,
+    adminOrders: adminOrdersReducer,
+  },
+});
+
+export default store;</code></pre>
+	</div>
+<!-- .entry-content -->
+
+	<footer class="entry-footer">
+			</footer><!-- .entry-footer -->
+</article><!-- #post-889 -->
+
+	<nav class="navigation post-navigation" aria-label="文章">
+		<h2 class="screen-reader-text">文章導覽</h2>
+		<div class="nav-links">
+<div class="nav-previous"><a href="/wordpress_blog/full-stack-rabbit-02/" rel="prev"><span class="nav-subtitle">Previous:</span> <span class="nav-title">Build &amp; Deploy Full Stack E-commerce Website | Redux | MERN Stack – 02</span></a></div>
+<div class="nav-next"><a href="/wordpress_blog/full-stack-rabbit-04/" rel="next"><span class="nav-subtitle">Next:</span> <span class="nav-title">Build &amp; Deploy Full Stack E-commerce Website | Redux | MERN Stack – 04</span></a></div>
+</div>
+	</nav>
+	</main><!-- #main -->
+
+
+	</div></div>
+			
+			<footer id="colophon" class="site-footer">
+
+				
+				<div class="container-fluid">
+					<div class="site-info">
+						<div class="row">
+
+															
+								<div class="col-12 footer-copyright-elements footer-copyright-alignment-center">
+
+									<div class="botiga-credits">&copy; 2025 wordpress_blog. 
+Created by Gee Hsu. 
+<br>Proudly powered by <a rel="nofollow" href="https://athemes.com/theme/botiga/">Botiga</a>
+</div>
+<div class="social-profile">
+<a target="_blank" href="https://www.facebook.com/watergrass0402/"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></i></a><a target="_blank" href="https://github.com/GeeHsu"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></i></a>
+</div>
+								</div>
+														
+						</div>
+					</div>
+				</div>
+<!-- .site-info -->
+
+				
+			</footer><!-- #colophon -->
+
+			
+			<div class="back-to-top visibility-all position-right"><i class="ws-svg-icon"><svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 15l7-7 7 7" stroke-width="3" stroke-linejoin="round"></path></svg></i></div>
+</div>
+<!-- #page -->
+
+
+<script id="botiga-custom-js-extra">
+var botiga = {"ajaxurl":"\/wp-admin\/admin-ajax.php","i18n":{"botiga_sharebox_copy_link":"Copy link","botiga_sharebox_copy_link_copied":"Copied!"}};
+</script>
+<script src="/wordpress_blog/wp-content/themes/botiga/assets/js/custom.min.js?ver=1.1.2" id="botiga-custom-js"></script>
+
+</body>
+</html>

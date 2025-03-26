@@ -12,13 +12,13 @@
 	<atom:link href="/wordpress_blog/category/hexschool/feed/" rel="self" type="application/rss+xml" />
 	<link>/wordpress_blog</link>
 	<description>This is a dynamic to static website.</description>
-	<lastBuildDate>Tue, 23 Apr 2024 09:06:45 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 26 Mar 2025 00:59:40 +0000</lastBuildDate>
 	<language>zh-TW</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=6.5.2</generator>
+	<generator>https://wordpress.org/?v=6.7.2</generator>
 
 <image>
 	<url>/wordpress_blog/wp-content/uploads/2022/03/logo.png</url>
@@ -28,6 +28,1311 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>Vue3 複習10</title>
+		<link>/wordpress_blog/reviewvue3_10/</link>
+		
+		<dc:creator><![CDATA[gee.hsu]]></dc:creator>
+		<pubDate>Tue, 06 Aug 2024 06:24:43 +0000</pubDate>
+				<category><![CDATA[六角學院]]></category>
+		<guid isPermaLink="false">/wordpress_blog/?p=870</guid>
+
+					<description><![CDATA[從頭開始 – Pinia 製作一個購物車 2023 新增章節 P [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<h2 class="wp-block-heading">從頭開始 – Pinia 製作一個購物車 2023 新增章節</h2>
+
+
+
+<h3 class="wp-block-heading">Pinia 相關資源</h3>
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://pinia.vuejs.org/" target="_blank" rel="noreferrer noopener">Pinia 官方文件</a></li>
+
+
+
+<li><a href="https://www.youtube.com/watch?v=_vFuDQ_6Xt8" target="_blank" rel="noreferrer noopener">陣列方法補充</a></li>
+
+
+
+<li>課程 Pinia CDN 範例</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// 課程 Pinia CDN 範例
+&lt;!-- VueDemi，使用 Pinia 必要的相依套件 --&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/vue-demi/0.13.11/index.iife.js"&gt;&lt;/script&gt;
+&lt;script&gt;const I = VueDemi; const vueDemi = VueDemi;&lt;/script&gt;
+
+&lt;!-- Pinia 網頁版，實戰中還是以 npm 為主，這是比較少見的使用方式 --&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pinia/2.0.22/pinia.iife.js"&gt;&lt;/script&gt;</code></pre>
+
+
+
+<h3 class="wp-block-heading">01. pinia 簡介</h3>
+
+
+
+<h4 class="wp-block-heading">元件資料獨立與傳遞</h4>
+
+
+
+<h4 class="wp-block-heading">頁面元件結構</h4>
+
+
+
+<h4 class="wp-block-heading">Pinia 好處</h4>
+
+
+
+<ul class="wp-block-list">
+<li>跨元件的狀態、方法管理</li>
+
+
+
+<li>易於學習，許多觀念與 Vue.js 連貫</li>
+
+
+
+<li>相對於其他狀態管理工具更容易上手</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">02. 專案簡介</h3>
+
+
+
+<ul class="wp-block-list">
+<li>完成版型製作</li>
+
+
+
+<li>將產品資料渲染至畫面上</li>
+
+
+
+<li>最終範例</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">03. 版型製作</h3>
+
+
+
+<ul class="wp-block-list">
+<li>新增 layout.html 檔案</li>
+
+
+
+<li>開啟 Bootstrap 5 文件<br>Components > Navbar > Text<br>選擇單純的結構複製程式碼</li>
+
+
+
+<li>修改 layout.html 檔案<br>品牌名稱、按鈕<br>Components > Buttons<br>選擇單純的結構複製程式碼</li>
+
+
+
+<li>在購物車的地方加上數字<br>Components > Badge > Pill Badges，選擇 danger 的顏色<br>修改 Badge 的 class</li>
+
+
+
+<li>完成購物車版型<br>Form > Select<br>Utilities > Vertical align</li>
+
+
+
+<li>製作產品卡片結構<br>Components > Card</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// pinia/layout.html
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+    &lt;title&gt;完整版型製作&lt;/title&gt;
+    &lt;!-- Bootstarp 5 CSS CDN --&gt;
+    &lt;link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    /&gt;
+    &lt;style&gt;
+      .table-image {
+        height: 100px;
+        width: 100px;
+        object-fit: cover;
+      }
+
+      .card-img-top {
+        height: 200px;
+        object-fit: cover;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id="app"&gt;
+      &lt;div class="container py-5"&gt;
+        &lt;h2&gt;完成版型製作&lt;/h2&gt;
+        &lt;nav class="navbar bg-body-tertiary"&gt;
+          &lt;div class="container-fluid"&gt;
+            &lt;span class="navbar-brand mb-0 h1"&gt;香香餅乾店&lt;/span&gt;
+            &lt;button type="button" class="btn"&gt;購物車
+              &lt;span class="badge rounded-pill bg-danger text-white"&gt;0&lt;/span&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/nav&gt;
+
+        &lt;div class="bg-light my-4 p-4"&gt;
+          &lt;div&gt;購物車沒有任何品項&lt;/div&gt; &lt;!-- v-if --&gt;
+          &lt;!-- v-else --&gt;
+          &lt;table class="table align-middle"&gt;
+          &lt;tbody&gt;
+            &lt;tr&gt;
+              &lt;td&gt;
+                &lt;a href="#" class="text-dark"&gt;x&lt;/a&gt;
+              &lt;/td&gt;
+              &lt;td&gt;
+                &lt;img src="https://images.unsplash.com/photo-1597733153203-a54d0fbc47de?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1090&amp;q=80" class="table-image" alt=""&gt;
+              &lt;/td&gt;
+              &lt;td&gt;好吃的餅乾&lt;/td&gt;
+              &lt;td&gt;
+                &lt;select name="" id="" class="form-select"&gt;
+                  &lt;option value=""&gt;1&lt;/option&gt;
+                &lt;/select&gt;
+              &lt;/td&gt;
+              &lt;td class="text-end"&gt;
+                $900
+              &lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+          &lt;tfoot&gt;
+            &lt;td colspan="5" class="text-end"&gt;總金額 NT$ 900&lt;/td&gt;
+          &lt;/tfoot&gt;
+          &lt;/table&gt;
+        &lt;/div&gt;
+
+        &lt;div class="row row-cols-3 my-4"&gt;
+          &lt;div class="col"&gt;
+            &lt;div class="card"&gt;
+              &lt;img src="https://images.unsplash.com/photo-1597733153203-a54d0fbc47de?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1090&amp;q=80"
+              class="card-img-top" alt=""&gt;
+              &lt;div class="card-body"&gt;
+                &lt;h6 class="card-title"&gt;好吃的餅乾
+                  &lt;span class="float-end"&gt;$900&lt;/span&gt;
+                &lt;/h6&gt;
+                &lt;a href="#" class="btn btn-outline-primary w-100"&gt;加入購物車&lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Vue 3 CDN --&gt;
+    &lt;script src="https://unpkg.com/vue@3/dist/vue.global.js"&gt;&lt;/script&gt;
+    &lt;!-- Bootstrap 5 JS CDN --&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+    &lt;script type="module"&gt;
+      const app = Vue.createApp({
+        // 資料 (函式)
+        data() {
+          return {};
+        },
+        // 生命週期 (函式)
+        created() {
+          console.log(this);
+        },
+        // 方法 (物件)
+        methods: {},
+      });
+
+      app.mount("#app");
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+
+
+<h3 class="wp-block-heading">04. 轉換vue元件</h3>
+
+
+
+<ul class="wp-block-list">
+<li>修改 layout.html 檔案，增加 script 片段</li>
+
+
+
+<li>新增 homeworkComponents 資料夾</li>
+
+
+
+<li>製作 Navbar 元件，避免出錯可以先直接在目前的專案位置進行撰寫</li>
+
+
+
+<li>新增 navbarComponent.js 檔案</li>
+
+
+
+<li>修改 navbarComponent.js 檔案</li>
+
+
+
+<li>修改 layout.html 檔案，匯入 NavbarComponent</li>
+
+
+
+<li>新增 cartComponent.js 檔案</li>
+
+
+
+<li>修改 cartComponent.js 檔案</li>
+
+
+
+<li>修改 layout.html 檔案，匯入 CartComponent</li>
+
+
+
+<li>新增 productsComponent.js 檔案</li>
+
+
+
+<li>修改 prodcutsComponent.js 檔案</li>
+
+
+
+<li>修改 layout.html 檔案，匯入 ProductComponent</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// pinia/layout.html
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+    &lt;title&gt;完整版型製作&lt;/title&gt;
+    &lt;!-- Bootstarp 5 CSS CDN --&gt;
+    &lt;link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    /&gt;
+    &lt;style&gt;
+      .table-image {
+        height: 100px;
+        width: 100px;
+        object-fit: cover;
+      }
+
+      .card-img-top {
+        height: 200px;
+        object-fit: cover;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id="app"&gt;
+      &lt;div class="container py-5"&gt;
+        &lt;h2&gt;完成版型製作&lt;/h2&gt;
+
+        &lt;Navbar-Component&gt;&lt;/Navbar-Component&gt;
+
+        &lt;Cart-Component&gt;&lt;/Cart-Component&gt;
+
+        &lt;Product-Component&gt;&lt;/Product-Component&gt;
+        
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Vue 3 CDN --&gt;
+    &lt;script src="https://unpkg.com/vue@3/dist/vue.global.js"&gt;&lt;/script&gt;
+    &lt;!-- Bootstrap 5 JS CDN --&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+    &lt;script type="module"&gt;
+      const { createApp } = Vue;
+
+      import NavbarComponent from './homeworkComponents/navbarComponent.js'
+      import CartComponent from './homeworkComponents/cartComponent.js'
+      import ProductComponent from './homeworkComponents/productsComponent.js'
+
+      const app =createApp({
+        components: {
+          NavbarComponent,
+          CartComponent,
+          ProductComponent
+        }
+      }).mount('#app');
+
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// pinia/homeworkComponents/navbarComponent.js
+
+export default {
+  template: `&lt;nav class="navbar bg-body-tertiary"&gt;
+    &lt;div class="container-fluid"&gt;
+      &lt;span class="navbar-brand mb-0 h1"&gt;香香餅乾店&lt;/span&gt;
+      &lt;button type="button" class="btn"&gt;購物車
+        &lt;span class="badge rounded-pill bg-danger text-white"&gt;0&lt;/span&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/nav&gt;`
+}
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// pinia/homeworkComponents/cartComponent.js
+
+export default {
+  template: `&lt;div class="bg-light my-4 p-4"&gt;
+    &lt;div&gt;購物車沒有任何品項&lt;/div&gt; &lt;!-- v-if --&gt;
+    &lt;!-- v-else --&gt;
+    &lt;table class="table align-middle"&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;
+          &lt;a href="#" class="text-dark"&gt;x&lt;/a&gt;
+        &lt;/td&gt;
+        &lt;td&gt;
+          &lt;img src="https://images.unsplash.com/photo-1597733153203-a54d0fbc47de?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1090&amp;q=80" class="table-image" alt=""&gt;
+        &lt;/td&gt;
+        &lt;td&gt;好吃的餅乾&lt;/td&gt;
+        &lt;td&gt;
+          &lt;select name="" id="" class="form-select"&gt;
+            &lt;option value=""&gt;1&lt;/option&gt;
+          &lt;/select&gt;
+        &lt;/td&gt;
+        &lt;td class="text-end"&gt;
+          $900
+        &lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+      &lt;td colspan="5" class="text-end"&gt;總金額 NT$ 900&lt;/td&gt;
+    &lt;/tfoot&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;`
+}
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// pinia/homeworkComponents/productsComponent.js
+
+export default {
+  template: `&lt;div class="row row-cols-3 my-4"&gt;
+    &lt;div class="col"&gt;
+      &lt;div class="card"&gt;
+        &lt;img src="https://images.unsplash.com/photo-1597733153203-a54d0fbc47de?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1090&amp;q=80"
+        class="card-img-top" alt=""&gt;
+        &lt;div class="card-body"&gt;
+          &lt;h6 class="card-title"&gt;好吃的餅乾
+            &lt;span class="float-end"&gt;$900&lt;/span&gt;
+          &lt;/h6&gt;
+          &lt;a href="#" class="btn btn-outline-primary w-100"&gt;加入購物車&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;`
+}
+</code></pre>
+
+
+
+<h3 class="wp-block-heading">05. 導入產品資料</h3>
+
+
+
+<ul class="wp-block-list">
+<li>從範例程式碼 productComponet.js 檔案複製產品資料</li>
+
+
+
+<li>修改 productsComponent.js 檔案</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// pinia/homeworkComponents/productsComponent.js
+
+export default {
+  data() {
+    return {
+      products: &#91;
+        {
+          id: 1,
+          title: '多色餅乾',
+          imageUrl: 'https://images.unsplash.com/photo-1576717585968-8ea8166b89b8?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1170&amp;q=80',
+          price: 80
+        },
+        {
+          id: 2,
+          title: '綠色馬卡龍',
+          imageUrl: 'https://images.unsplash.com/photo-1623066463831-3f7f6762734d?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1135&amp;q=80',
+          price: 120
+        },
+        {
+          id: 3,
+          title: '甜蜜左擁右抱',
+          imageUrl: 'https://images.unsplash.com/photo-1558312657-b2dead03d494?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1170&amp;q=80',
+          price: 200,
+        },
+        {
+          id: 4,
+          title: '巧克力心連心',
+          imageUrl: 'https://images.unsplash.com/photo-1606913084603-3e7702b01627?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1170&amp;q=80',
+          price: 160
+        },
+        {
+          id: 5,
+          title: '粉係馬卡龍',
+          imageUrl: 'https://images.unsplash.com/photo-1612201142855-7873bc1661b4?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1170&amp;q=80',
+          price: 120
+        }
+      ]
+    }
+  },
+  template: `&lt;div class="row row-cols-3 my-4 g-4"&gt;
+    &lt;div class="col" v-for="product in products" :key="product.id"&gt;
+      &lt;div class="card"&gt;
+        &lt;img :src="product.imageUrl"
+        class="card-img-top" alt=""&gt;
+        &lt;div class="card-body"&gt;
+          &lt;h6 class="card-title"&gt;{{ product.title }}
+            &lt;span class="float-end"&gt;$ {{ product.price }}&lt;/span&gt;
+          &lt;/h6&gt;
+          &lt;a href="#" class="btn btn-outline-primary w-100"&gt;加入購物車&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;`
+}
+</code></pre>
+
+
+
+<h3 class="wp-block-heading">06. 建立 store</h3>
+
+
+
+<ul class="wp-block-list">
+<li>修改 layout.html 檔案，複製範例片段程式碼、載入套件程式碼，實戰中比較少用這種方式</li>
+
+
+
+<li>使用 log 查詢 Pinia 是否有正確匯入</li>
+
+
+
+<li>在 pinia 資料夾裡面建立 store 資料夾</li>
+
+
+
+<li>在 store 資料夾裡面建立 productsStore.js 檔案</li>
+
+
+
+<li>會使用到的 layout.html、productsComponent.js、productsStore.js 檔案</li>
+
+
+
+<li>修改 layout.html 檔案，匯入 productStore</li>
+
+
+
+<li>修改 productsStore.js 檔案</li>
+
+
+
+<li>修改 productsComponent.js 檔案</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// pinia/layout.html
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+    &lt;title&gt;完整版型製作&lt;/title&gt;
+    &lt;!-- Bootstarp 5 CSS CDN --&gt;
+    &lt;link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    /&gt;
+    &lt;style&gt;
+      .table-image {
+        height: 100px;
+        width: 100px;
+        object-fit: cover;
+      }
+
+      .card-img-top {
+        height: 200px;
+        object-fit: cover;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id="app"&gt;
+      &lt;div class="container py-5"&gt;
+        &lt;h2&gt;完成版型製作&lt;/h2&gt;
+
+        &lt;Navbar-Component&gt;&lt;/Navbar-Component&gt;
+
+        &lt;Cart-Component&gt;&lt;/Cart-Component&gt;
+
+        &lt;Product-Component&gt;&lt;/Product-Component&gt;
+        
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Vue 3 CDN --&gt;
+    &lt;script src="https://unpkg.com/vue@3/dist/vue.global.js"&gt;&lt;/script&gt;
+    &lt;!-- Bootstrap 5 JS CDN --&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+    &lt;!-- VueDemi，使用 Pinia 必要的相依套件 --&gt;
+    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/vue-demi/0.13.11/index.iife.js"&gt;&lt;/script&gt;
+    &lt;script&gt;const I = VueDemi; const vueDemi = VueDemi;&lt;/script&gt;
+    &lt;!-- Pinia 網頁版，實戰中還是以 npm 為主，這是比較少見的使用方式 --&gt;
+    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pinia/2.0.22/pinia.iife.js"&gt;&lt;/script&gt;
+    &lt;script type="module"&gt;
+      const { createApp } = Vue;
+      const { createPinia } = Pinia;
+
+      import NavbarComponent from './homeworkComponents/navbarComponent.js'
+      import CartComponent from './homeworkComponents/cartComponent.js'
+      import ProductComponent from './homeworkComponents/productsComponent.js'
+
+      const app =createApp({
+        components: {
+          NavbarComponent,
+          CartComponent,
+          ProductComponent
+        }
+      })
+
+      const pinia = createPinia()
+      app.use(pinia)      
+      app.mount('#app')
+
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// pinia/store/productsStore.js
+const { defineStore } = Pinia;
+
+export default defineStore('productsStore', {
+  // data, methods, computed
+  // state, action, getters
+  state: () =&gt; ({
+    products: &#91;
+      {
+        id: 1,
+        title: '多色餅乾',
+        imageUrl: 'https://images.unsplash.com/photo-1576717585968-8ea8166b89b8?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1170&amp;q=80',
+        price: 80
+      },
+      {
+        id: 2,
+        title: '綠色馬卡龍',
+        imageUrl: 'https://images.unsplash.com/photo-1623066463831-3f7f6762734d?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1135&amp;q=80',
+        price: 120
+      },
+      {
+        id: 3,
+        title: '甜蜜左擁右抱',
+        imageUrl: 'https://images.unsplash.com/photo-1558312657-b2dead03d494?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1170&amp;q=80',
+        price: 200,
+      },
+      {
+        id: 4,
+        title: '巧克力心連心',
+        imageUrl: 'https://images.unsplash.com/photo-1606913084603-3e7702b01627?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1170&amp;q=80',
+        price: 160
+      },
+      {
+        id: 5,
+        title: '粉係馬卡龍',
+        imageUrl: 'https://images.unsplash.com/photo-1612201142855-7873bc1661b4?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1170&amp;q=80',
+        price: 120
+      }
+    ]
+  }),
+  getters: {
+    sortProducts: ({ products }) =&gt; {
+      return products 
+    }
+  }
+})
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// pinia/homeworkComponents/productsComponent.js
+import productsStore from "../store/productsStore.js"
+const { mapState } = Pinia
+
+export default {
+  data() {
+    return {
+      
+    }
+  },
+  template: `&lt;div class="row row-cols-3 my-4 g-4"&gt;
+    &lt;div class="col" v-for="product in sortProducts" :key="product.id"&gt;
+      &lt;div class="card"&gt;
+        &lt;img :src="product.imageUrl"
+        class="card-img-top" alt=""&gt;
+        &lt;div class="card-body"&gt;
+          &lt;h6 class="card-title"&gt;{{ product.title }}
+            &lt;span class="float-end"&gt;$ {{ product.price }}&lt;/span&gt;
+          &lt;/h6&gt;
+          &lt;a href="#" class="btn btn-outline-primary w-100"&gt;加入購物車&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;`,
+  computed: {
+    ...mapState(productsStore, &#91;'sortProducts'])
+  }
+}
+</code></pre>
+
+
+
+<h3 class="wp-block-heading">07. 建立購物車 Store</h3>
+
+
+
+<ul class="wp-block-list">
+<li>修改 productsStore.js 檔案</li>
+
+
+
+<li>加入購物車的行為<br>在 store 資料夾裡面建立 cartStore.js 檔案，專門管理購物車所有方法</li>
+
+
+
+<li>修改 cartStore.js 檔案</li>
+
+
+
+<li>修改 productsComponent 檔案，匯入 cartStore</li>
+
+
+
+<li>修改 cartStore.js 檔案</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// pinia/store/productsStore.js
+const { defineStore } = Pinia;
+
+export default defineStore('productsStore', {
+  // data, methods, computed
+  // state, action, getters
+  state: () =&gt; ({
+    products: &#91;
+      {
+        id: 1,
+        title: '多色餅乾',
+        imageUrl: 'https://images.unsplash.com/photo-1576717585968-8ea8166b89b8?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1170&amp;q=80',
+        price: 80
+      },
+      {
+        id: 2,
+        title: '綠色馬卡龍',
+        imageUrl: 'https://images.unsplash.com/photo-1623066463831-3f7f6762734d?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1135&amp;q=80',
+        price: 120
+      },
+      {
+        id: 3,
+        title: '甜蜜左擁右抱',
+        imageUrl: 'https://images.unsplash.com/photo-1558312657-b2dead03d494?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1170&amp;q=80',
+        price: 200,
+      },
+      {
+        id: 4,
+        title: '巧克力心連心',
+        imageUrl: 'https://images.unsplash.com/photo-1606913084603-3e7702b01627?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1170&amp;q=80',
+        price: 160
+      },
+      {
+        id: 5,
+        title: '粉係馬卡龍',
+        imageUrl: 'https://images.unsplash.com/photo-1612201142855-7873bc1661b4?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1170&amp;q=80',
+        price: 120
+      }
+    ]
+  }),
+  getters: {
+    sortProducts: ({ products }) =&gt; {
+      return products.sort((a, b) =&gt; a.price - b.price)
+    }
+  }
+})
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// pinia/store/cartStore.js
+const { defineStore } = Pinia;
+
+export default defineStore('cart', {
+  // methods
+  // actions
+  state: () =&gt; ({
+    cart: &#91;]
+  }),
+  actions: {
+    addToCart(productId, qty = 1) {
+      console.log(productId, qty);
+      this.cart.push({
+        id: new Date().getTime(),
+        productId,
+        qty
+      })
+      console.log(this.cart);
+    }
+  }
+})
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// pinia/homeworkComponents/productsComponent.js
+import productsStore from "../store/productsStore.js"
+import cartStore from '../store/cartStore.js'
+const { mapState, mapActions } = Pinia
+
+export default {
+  data() {
+    return {
+      
+    }
+  },
+  template: `&lt;div class="row row-cols-3 my-4 g-4"&gt;
+    &lt;div class="col" v-for="product in sortProducts" :key="product.id"&gt;
+      &lt;div class="card"&gt;
+        &lt;img :src="product.imageUrl"
+        class="card-img-top" alt=""&gt;
+        &lt;div class="card-body"&gt;
+          &lt;h6 class="card-title"&gt;{{ product.title }}
+            &lt;span class="float-end"&gt;$ {{ product.price }}&lt;/span&gt;
+          &lt;/h6&gt;
+          &lt;a href="#" class="btn btn-outline-primary w-100" @click.prevent="addToCart(product.id)"&gt;加入購物車&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;`,
+  computed: {
+    ...mapState(productsStore, &#91;'sortProducts'])
+  },
+  methods: {
+    ...mapActions(cartStore, &#91;'addToCart'])
+  },
+}
+</code></pre>
+
+
+
+<h3 class="wp-block-heading">08. 購物車資訊 Store</h3>
+
+
+
+<ul class="wp-block-list">
+<li>使用簡報解釋頁面元件結構</li>
+
+
+
+<li>修改 cartStore.js 檔案</li>
+
+
+
+<li>修改 cartComponent.js 檔案，匯入 cartStore、使用 mapState</li>
+
+
+
+<li>修改 cartStore.js 檔案，調整 cartList</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// pinia/store/cartStore.js
+const { defineStore } = Pinia;
+import productsStore from './productsStore.js';
+
+export default defineStore('cart', {
+  // methods
+  // actions
+  state: () =&gt; ({
+    cart: &#91;]
+  }),
+  actions: {
+    addToCart(productId, qty = 1) {
+      console.log(productId, qty);
+      this.cart.push({
+        id: new Date().getTime(),
+        productId,
+        qty
+      })
+      // console.log(this.cart);
+    }
+  },
+  getters: {
+    cartList: ({ cart }) =&gt; {
+      // 1. 購物車的品項資訊，需要整合產品資訊
+      // 2. 必須計算小計的金額
+      // 3. 必須提供總金額
+      const { products } = productsStore();
+      // console.log(products);
+      // console.log(cart);
+      const carts = cart.map((item) =&gt; {
+        // console.log(item);
+        // 單一產品取出
+        const product = products.find((product) =&gt; product.id === item.productId);
+        // console.log('相同 id 的產品', product);
+        return {
+          ...item,
+          product,
+          subtotal: product.price * item.qty
+        }
+      })
+      // console.log(carts);
+      const total = carts.reduce((a, b) =&gt; a + b.subtotal ,0);
+      // console.log(total);
+
+      return {
+        carts, // 列表
+        total
+      }
+    }
+  }
+})
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// pinia/homeworkComponents/cartComponent.js
+import cartStore from '../store/cartStore.js'
+const { mapState } = Pinia;
+
+export default {
+  template: `&lt;div class="bg-light my-4 p-4"&gt;
+    &lt;div&gt;購物車沒有任何品項&lt;/div&gt; &lt;!-- v-if --&gt;
+    &lt;!-- v-else --&gt;
+    &lt;table class="table align-middle"&gt;
+    &lt;tbody&gt;
+      &lt;tr v-for="item in cartList.carts"&gt;
+        &lt;td&gt;
+          &lt;a href="#" class="text-dark"&gt;x&lt;/a&gt;
+        &lt;/td&gt;
+        &lt;td&gt;
+          &lt;img src="https://images.unsplash.com/photo-1597733153203-a54d0fbc47de?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1090&amp;q=80" class="table-image" alt=""&gt;
+        &lt;/td&gt;
+        &lt;td&gt;好吃的餅乾&lt;/td&gt;
+        &lt;td&gt;
+          &lt;select name="" id="" class="form-select"&gt;
+            &lt;option value=""&gt;1&lt;/option&gt;
+          &lt;/select&gt;
+        &lt;/td&gt;
+        &lt;td class="text-end"&gt;
+          $900
+        &lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+      &lt;td colspan="5" class="text-end"&gt;總金額 NT$ {{cartList.total}}&lt;/td&gt;
+    &lt;/tfoot&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;`,
+  computed: {
+    ...mapState(cartStore, &#91;'cartList'])
+  }
+}
+</code></pre>
+
+
+
+<h3 class="wp-block-heading">09. 呈現購物車列表並刪除品項</h3>
+
+
+
+<ul class="wp-block-list">
+<li>修改 cartComponent.js 檔案</li>
+
+
+
+<li>修改 cartStore.js 檔案，撰寫刪除的方法</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// pinia/homeworkComponents/cartComponent.js
+import cartStore from '../store/cartStore.js'
+const { mapState, mapActions } = Pinia;
+
+export default {
+  template: `&lt;div class="bg-light my-4 p-4"&gt;
+    &lt;div v-if="!cartList.carts.length"&gt;購物車沒有任何品項&lt;/div&gt; &lt;!-- v-if --&gt;
+    &lt;table v-else class="table align-middle"&gt;
+    &lt;tbody&gt;
+      &lt;tr v-for="item in cartList.carts" :key="item.id"&gt;
+        &lt;td width="100"&gt;
+          &lt;a href="#" class="text-dark"
+          @click.prevent="removeCartItem(item.id)"&gt;x&lt;/a&gt;
+        &lt;/td&gt;
+        &lt;td&gt;
+          &lt;img :src="item.product.imageUrl" class="table-image" alt=""&gt;
+        &lt;/td&gt;
+        &lt;td&gt;{{ item.product.title }}&lt;/td&gt;
+        &lt;td&gt;
+          &lt;select name="" id="" class="form-select"&gt;
+            &lt;option value=""&gt;1&lt;/option&gt;
+          &lt;/select&gt;
+        &lt;/td&gt;
+        &lt;td class="text-end"&gt;
+          $ {{ item.subtotal }}
+        &lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+      &lt;td colspan="5" class="text-end"&gt;總金額 NT$ {{cartList.total}}&lt;/td&gt;
+    &lt;/tfoot&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;`,
+  computed: {
+    ...mapState(cartStore, &#91;'cartList'])
+  },
+  methods: {
+    ...mapActions(cartStore, &#91;'removeCartItem'])
+  }
+}
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// pinia/store/cartStore.js
+const { defineStore } = Pinia;
+import productsStore from './productsStore.js';
+
+export default defineStore('cart', {
+  // methods
+  // actions
+  state: () =&gt; ({
+    cart: &#91;]
+  }),
+  actions: {
+    addToCart(productId, qty = 1) {
+      console.log(productId, qty);
+      this.cart.push({
+        id: new Date().getTime(),
+        productId,
+        qty
+      })
+      // console.log(this.cart);
+    },
+    removeCartItem(id) {
+      const index = this.cart.findIndex((item) =&gt; item.id === id);
+      this.cart.splice(index, 1);
+    }
+  },
+  getters: {
+    cartList: ({ cart }) =&gt; {
+      // 1. 購物車的品項資訊，需要整合產品資訊
+      // 2. 必須計算小計的金額
+      // 3. 必須提供總金額
+      const { products } = productsStore();
+      // console.log(products);
+      // console.log(cart);
+      const carts = cart.map((item) =&gt; {
+        // console.log(item);
+        // 單一產品取出
+        const product = products.find((product) =&gt; product.id === item.productId);
+        // console.log('相同 id 的產品', product);
+        return {
+          ...item,
+          product,
+          subtotal: product.price * item.qty
+        }
+      })
+      // console.log(carts);
+      const total = carts.reduce((a, b) =&gt; a + b.subtotal ,0);
+      // console.log(total);
+
+      return {
+        carts, // 列表
+        total
+      }
+    }
+  }
+})
+</code></pre>
+
+
+
+<h3 class="wp-block-heading">10. 新增品項加總至原品項</h3>
+
+
+
+<ul class="wp-block-list">
+<li>修改 cartStore.js 檔案</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// pinia/store/cartStore.js
+const { defineStore } = Pinia;
+import productsStore from './productsStore.js';
+
+export default defineStore('cart', {
+  // methods
+  // actions
+  state: () =&gt; ({
+    cart: &#91;]
+  }),
+  actions: {
+    addToCart(productId, qty = 1) {
+      // 取得已經有加入購物車的項目
+      // 進行判斷，如果購物車有該項目則 +1，如果沒有則是新增一個購物車項目
+      const currentCart = this.cart.find((item) =&gt; item.productId === productId)
+
+      if (currentCart) {
+        currentCart.qty += qty;
+      } else {
+        this.cart.push({
+          id: new Date().getTime(),
+          productId,
+          qty
+        });
+      }
+      console.log(this.cart);
+      // console.log(this.cart);
+    },
+    removeCartItem(id) {
+      const index = this.cart.findIndex((item) =&gt; item.id === id);
+      this.cart.splice(index, 1);
+    }
+  },
+  getters: {
+    cartList: ({ cart }) =&gt; {
+      // 1. 購物車的品項資訊，需要整合產品資訊
+      // 2. 必須計算小計的金額
+      // 3. 必須提供總金額
+      const { products } = productsStore();
+      // console.log(products);
+      // console.log(cart);
+      const carts = cart.map((item) =&gt; {
+        // console.log(item);
+        // 單一產品取出
+        const product = products.find((product) =&gt; product.id === item.productId);
+        // console.log('相同 id 的產品', product);
+        return {
+          ...item,
+          product,
+          subtotal: product.price * item.qty
+        }
+      })
+      // console.log(carts);
+      const total = carts.reduce((a, b) =&gt; a + b.subtotal ,0);
+      // console.log(total);
+
+      return {
+        carts, // 列表
+        total
+      }
+    }
+  }
+})
+</code></pre>
+
+
+
+<h3 class="wp-block-heading">11. 設定數量</h3>
+
+
+
+<ul class="wp-block-list">
+<li>修改 cartComponent.js 檔案</li>
+
+
+
+<li>修改 cartStore.js 檔案</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// pinia/homeworkComponent/cartComponent.js
+import cartStore from '../store/cartStore.js'
+const { mapState, mapActions } = Pinia;
+
+export default {
+  template: `&lt;div class="bg-light my-4 p-4"&gt;
+    &lt;div v-if="!cartList.carts.length"&gt;購物車沒有任何品項&lt;/div&gt; &lt;!-- v-if --&gt;
+    &lt;table v-else class="table align-middle"&gt;
+    &lt;tbody&gt;
+      &lt;tr v-for="item in cartList.carts" :key="item.id"&gt;
+        &lt;td width="100"&gt;
+          &lt;a href="#" class="text-dark"
+          @click.prevent="removeCartItem(item.id)"&gt;x&lt;/a&gt;
+        &lt;/td&gt;
+        &lt;td&gt;
+          &lt;img :src="item.product.imageUrl" class="table-image" alt=""&gt;
+        &lt;/td&gt;
+        &lt;td&gt;{{ item.product.title }}&lt;/td&gt;
+        &lt;td&gt;
+          &lt;select name="" id="" class="form-select" :value="item.qty"
+          @change="(evt) =&gt; setCartQty(item.id, evt)"&gt;
+            &lt;option :value="i" v-for="i in 20" :key="i"&gt;{{ i }}&lt;/option&gt;
+          &lt;/select&gt;
+        &lt;/td&gt;
+        &lt;td class="text-end"&gt;
+          $ {{ item.subtotal }}
+        &lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+      &lt;td colspan="5" class="text-end"&gt;總金額 NT$ {{cartList.total}}&lt;/td&gt;
+    &lt;/tfoot&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;`,
+  computed: {
+    ...mapState(cartStore, &#91;'cartList'])
+  },
+  methods: {
+    ...mapActions(cartStore, &#91;'removeCartItem', 'setCartQty'])
+  }
+}
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// pinia/store/cartStore.js
+const { defineStore } = Pinia;
+import productsStore from './productsStore.js';
+
+export default defineStore('cart', {
+  // methods
+  // actions
+  state: () =&gt; ({
+    cart: &#91;]
+  }),
+  actions: {
+    addToCart(productId, qty = 1) {
+      // 取得已經有加入購物車的項目
+      // 進行判斷，如果購物車有該項目則 +1，如果沒有則是新增一個購物車項目
+      const currentCart = this.cart.find((item) =&gt; item.productId === productId)
+
+      if (currentCart) {
+        currentCart.qty += qty;
+      } else {
+        this.cart.push({
+          id: new Date().getTime(),
+          productId,
+          qty
+        });
+      }
+      console.log(this.cart);
+      // console.log(this.cart);
+    },
+    setCartQty(id, event) {
+      // console.log(id, event);
+      // console.log(event.target.value, typeof event.target.value);
+      const currentCart = this.cart.find((item) =&gt; item.id === id);
+      // console.log(currentCart);
+      currentCart.qty = event.target.value * 1;
+    },
+    removeCartItem(id) {
+      const index = this.cart.findIndex((item) =&gt; item.id === id);
+      this.cart.splice(index, 1);
+    }
+  },
+  getters: {
+    cartList: ({ cart }) =&gt; {
+      // 1. 購物車的品項資訊，需要整合產品資訊
+      // 2. 必須計算小計的金額
+      // 3. 必須提供總金額
+      const { products } = productsStore();
+      // console.log(products);
+      // console.log(cart);
+      const carts = cart.map((item) =&gt; {
+        // console.log(item);
+        // 單一產品取出
+        const product = products.find((product) =&gt; product.id === item.productId);
+        // console.log('相同 id 的產品', product);
+        return {
+          ...item,
+          product,
+          subtotal: product.price * item.qty
+        }
+      })
+      // console.log(carts);
+      const total = carts.reduce((a, b) =&gt; a + b.subtotal ,0);
+      // console.log(total);
+
+      return {
+        carts, // 列表
+        total
+      }
+    }
+  }
+})
+</code></pre>
+
+
+
+<h3 class="wp-block-heading">12. Navbar 數量呈現</h3>
+
+
+
+<ul class="wp-block-list">
+<li>修改 navbarComponent.js 檔案</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// pinia/homeworkComponents/navbarComponent.js
+const { mapState } = Pinia;
+import cartStore from "../store/cartStore.js";
+
+export default {
+  template: `&lt;nav class="navbar bg-body-tertiary"&gt;
+    &lt;div class="container-fluid"&gt;
+      &lt;span class="navbar-brand mb-0 h1"&gt;香香餅乾店&lt;/span&gt;
+      &lt;button type="button" class="btn"&gt;購物車
+        &lt;span class="badge rounded-pill bg-danger text-white"&gt;{{ cart.length }}&lt;/span&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/nav&gt;`,
+  computed: {
+    ...mapState(cartStore, &#91;'cart'])
+  }
+}</code></pre>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Vue3 複習09</title>
 		<link>/wordpress_blog/reviewvue3_09/</link>
 		
@@ -58,7 +1363,7 @@
 
 
 
-<ul>
+<ul class="wp-block-list">
 <li>管理員</li>
 
 
@@ -72,9 +1377,9 @@
 
 
 
-<ul>
+<ul class="wp-block-list">
 <li>前端
-<ul>
+<ul class="wp-block-list">
 <li>前台</li>
 
 
@@ -94,13 +1399,13 @@
 
 
 
-<ul>
+<ul class="wp-block-list">
 <li>後台 – 登入授權、編輯商品、檢視訂單、建立優惠券…<br>學習開發流程、後台邏輯建構</li>
 
 
 
 <li>前台 – 檢視商品、選購並加入購物車、提交訂單、模擬付款…
-<ul>
+<ul class="wp-block-list">
 <li>完整作品經營</li>
 
 
@@ -124,7 +1429,7 @@
 
 
 
-<ul>
+<ul class="wp-block-list">
 <li>申請帳號 – 登入授權也是使用此帳號</li>
 
 
@@ -166,7 +1471,7 @@
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>課程需要先註冊屬於個人的 API 路徑，註冊方法在下一小節會介紹，<a href="https://vue3-course-api.hexschool.io/" target="_blank" rel="noreferrer noopener">註冊網址與 API 站點連結</a></li>
 
 
@@ -184,7 +1489,7 @@
 
 
 <li>雖然課程中 ESLint 選擇為 Airbnb 格式：
-<ul>
+<ul class="wp-block-list">
 <li>體驗簡單一點的開發規則可選擇 Standard</li>
 
 
@@ -204,7 +1509,7 @@
 
 
 
-<ul>
+<ul class="wp-block-list">
 <li>可多利用文字編輯器的提示來除錯（除錯也是開發者必學的技能之一）</li>
 
 
@@ -222,7 +1527,7 @@
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>申請一個專屬的課程練習帳號</li>
 
 
@@ -240,7 +1545,7 @@
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>使用 Vue Cli 建立環境 vue create vue3_dashboard_record</li>
 
 
@@ -286,7 +1591,7 @@
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>在根目錄新增 .env 檔案<br>API Server 路徑: VUE_APP_API<br>API 個人路徑: VUE_APP_PATH</li>
 
 
@@ -375,7 +1680,7 @@ module.exports = {
 
 
 
-<ul>
+<ul class="wp-block-list">
 <li>路徑是否拼對</li>
 
 
@@ -401,7 +1706,7 @@ module.exports = {
 
 
 
-<ul>
+<ul class="wp-block-list">
 <li>錯誤的問題描述 (哪一個 API、做了什麼事、預期有怎樣的進展、錯誤的問題點)</li>
 
 
@@ -423,7 +1728,7 @@ module.exports = {
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>安裝 Bootstrap 套件 – npm install bootstrap</li>
 
 
@@ -548,7 +1853,7 @@ $theme-colors: (
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>查看登入及驗證 API 文件<br>[API]、[方法]、[參數]、[成功回應]、[失敗回應]</li>
 
 
@@ -753,7 +2058,7 @@ VUE_APP_PATH=geehsu-api
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>查看瀏覽器 Cookie 儲存位置</li>
 
 
@@ -877,7 +2182,7 @@ this.$http.defaults.headers.common.Authorization = `${token}`;
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>查看登入及驗證文件<br>檢查用戶是否仍持續登入<br>驗證方法 – 將 Token 加入 Headers</li>
 
 
@@ -1082,7 +2387,7 @@ export default {
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>新增 Products.vue 檔案 – 產品頁面</li>
 
 
@@ -1662,7 +2967,7 @@ export default router;
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>主要撰寫 Products.vue 檔案<br>稍微調整 Dashboard.vue 檔案</li>
 
 
@@ -1817,7 +3122,7 @@ export default {
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>製作新增產品的彈跳視窗<br>使用事件的方式呼叫元件</li>
 
 
@@ -2029,7 +3334,7 @@ export default {
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>新增產品在互動邏輯是相對複雜很多</li>
 
 
@@ -2405,7 +3710,7 @@ export default {
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>在 Products.vue 檔案的 tempProduct不是只為了新增，還為了編輯做使用</li>
 
 
@@ -2565,7 +3870,7 @@ export default {
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>介紹上傳圖片的功能</li>
 
 
@@ -2797,7 +4102,7 @@ export default {
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>元件裡面有相同的程式碼要怎麼樣進行合併</li>
 
 
@@ -3147,7 +4452,7 @@ export default {
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>使用 vue3-loading-overlay 套件</li>
 
 
@@ -3352,7 +4657,7 @@ export default {
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>錯誤通知算是相對複雜的章節<br>主要原因會牽動到非常多的檔案的互相溝通</li>
 
 
@@ -3686,7 +4991,7 @@ export default {
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>分頁會使用元件的方式製作<br>在之後的訂單、優惠券也可使用分頁的功能</li>
 
 
@@ -3707,7 +5012,7 @@ export default {
 
 
 
-<li>在 Products.vue 檔案加入 &lt;Pagination&gt; 標籤<br>在外層定義 Products 元件，在內層定義 Pagination 元件，把分頁所需要的資訊傳進去，使用 props 的形式把分頁的資訊傳進去 props:pagination，就是從 AJAX 娶回來的相關資訊。在點擊分頁的時候會觸發 emit，執行頁面切換使用，會回傳 emits 觸發 getProduct 事件、同時把頁碼帶進來，透過這種方式進行頁面的切換</li>
+<li>在 Products.vue 檔案加入 &lt;Pagination> 標籤<br>在外層定義 Products 元件，在內層定義 Pagination 元件，把分頁所需要的資訊傳進去，使用 props 的形式把分頁的資訊傳進去 props:pagination，就是從 AJAX 取回來的相關資訊。在點擊分頁的時候會觸發 emit，執行頁面切換使用，會回傳 emits 觸發 getProduct 事件、同時把頁碼帶進來，透過這種方式進行頁面的切換</li>
 
 
 
@@ -3960,7 +5265,7 @@ export default {
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>數值超過一千以上建議加上千分號，在閱讀上面會比較好，在產品頁面、訂單、優惠券…等都有可能會加入千分號，會建議把千分號功能獨立起來，在每一個頁面、元件都可以使用</li>
 
 
@@ -4207,7 +5512,7 @@ app.mount('#app');
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>完成訂單、優惠券的頁面</li>
 
 
@@ -4903,13 +6208,13 @@ export default {
 
 
 
-<ul>
+<ul class="wp-block-list">
 <li>使用測試 Web API 應用程式 Postman、 Hoppscotch 建立優惠券和訂單</li>
 
 
 
 <li>Vue3_API
-<ul>
+<ul class="wp-block-list">
 <li>POST 登入功能</li>
 
 
@@ -4945,7 +6250,7 @@ export default {
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>製作客戶購物的部分<br>查看 API 文件 – 客戶購物 [免驗證]<br>購物流程: 取得商品列表、單一商品細節、加入購物車、刪除某一筆購物車資料、套用優惠券、結帳頁面、結帳付款…等</li>
 
 
@@ -5239,7 +6544,7 @@ export default {
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>撰寫加入購物車的行為 api</li>
 
 
@@ -5459,7 +6764,7 @@ export default {
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>製作購物車列表</li>
 
 
@@ -5699,7 +7004,7 @@ app.mount('#app');
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>看資料的部分<br>使用 Vue.js devtools 查看元件裡面的資料，購物車品項<br>&lt;RouterView&gt; &gt; &lt;UserCart&gt;</li>
 
 
@@ -5942,7 +7247,7 @@ export default {
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>要使用優惠券的功能務必先把優惠券的後台完成，才可以套用優惠券的功能<br>至少先新增一個優惠券<br>優惠券名稱、到期日、是否啟用、折扣百分比會直接套用在購物車內的所有的品項</li>
 
 
@@ -6207,7 +7512,7 @@ export default {
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>購物車已經有部分的品項</li>
 
 
@@ -6596,7 +7901,7 @@ export default {
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>建立新的一筆訂單，並填好用戶表端資料，預期在送出訂單之後會產一個 orderId，複製 orderId 的值等下使用，送出訂單之後預期會轉只到另外一個頁面，checkout 路由下的頁面，讓用戶確認產品還有表單內容是否正確，再進行結帳的流程，現在的流程是必須先把 checkout 加上再讓用戶進行結帳</li>
 
 
@@ -6828,7 +8133,7 @@ export default router;
 
 
 
-<ul>
+<ul class="wp-block-list">
 <li>僅檢視原始碼</li>
 
 
@@ -6846,7 +8151,7 @@ export default router;
 
 
 
-<ul>
+<ul class="wp-block-list">
 <li>檢視畫面設計及原始碼</li>
 
 
@@ -6880,7 +8185,7 @@ export default router;
 
 
 
-<ul>
+<ul class="wp-block-list">
 <li>搜集素材</li>
 
 
@@ -6906,7 +8211,7 @@ export default router;
 
 
 
-<ul>
+<ul class="wp-block-list">
 <li><a href="https://getbootstrap.com/" target="_blank" rel="noreferrer noopener">Bootstrap</a>、<a href="https://bootstrap5.hexschool.com/" target="_blank" rel="noreferrer noopener">Bootstrap 中文版</a></li>
 
 
@@ -6948,7 +8253,7 @@ export default router;
 
 
 
-<ul>
+<ul class="wp-block-list">
 <li>缺少文案、作品不完整</li>
 
 
@@ -6974,7 +8279,7 @@ export default router;
 
 
 
-<ul>
+<ul class="wp-block-list">
 <li>先參考學長姐的作品</li>
 
 
@@ -7089,7 +8394,7 @@ export default router;
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>引入 Vue Router 環境</li>
 
 
@@ -7111,7 +8416,7 @@ export default router;
 
 
 
-<ul>
+<ul class="wp-block-list">
 <li><a href="https://next.router.vuejs.org/" target="_blank" rel="noreferrer noopener">官方文件</a></li>
 
 
@@ -7125,7 +8430,7 @@ export default router;
 
 
 
-<ul>
+<ul class="wp-block-list">
 <li><a href="https://github.com/Wcc723/Vue3-Coures-Router-Demo/commits/master" target="_blank" rel="noreferrer noopener">本章節的所有操作紀錄範例</a></li>
 </ul>
 
@@ -7210,7 +8515,7 @@ app.mount('#app');
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>使用 vue create vue_router_record</li>
 
 
@@ -7264,7 +8569,7 @@ app.mount('#app');
 
 
 
-<ul>
+<ul class="wp-block-list">
 <li>router/index.js 檔案</li>
 
 
@@ -7366,7 +8671,7 @@ createApp(App).use(router).mount('#app');
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>新增一個元件加到畫面上<br>新增 views/NewPage.vue<br>原則: 先建立元件再加入路由</li>
 
 
@@ -7469,7 +8774,7 @@ export default router;
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>在 public/index.html 加入 Bootstrap 5 CSS CDN</li>
 
 
@@ -7570,7 +8875,7 @@ export default router;
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>App.vue CSS 樣式移除</li>
 
 
@@ -7685,7 +8990,7 @@ export default router;
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>新增元件 C</li>
 
 
@@ -7837,7 +9142,7 @@ export default router;
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>安裝 axios 套件 – npm install axios</li>
 
 
@@ -8013,7 +9318,7 @@ module.exports = {
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>打開 DynamicRouter.vue 檔案<br>直接另存新檔 DynamicRouterByProps.vue</li>
 
 
@@ -8188,13 +9493,13 @@ export default router;
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>新增 RouterNavigation.vue 檔案、調整 router/index.js 檔案、調整 views/NewPage.vue 檔案</li>
 
 
 
 <li>getRoute 取得屬性以及方法
-<ul>
+<ul class="wp-block-list">
 <li>$route – 取得目前在這個路由下有哪些的資訊<br>fullPath、params、<br>http://localhost:8080/#/newpage/routerNavigation?search=123</li>
 
 
@@ -8475,7 +9780,7 @@ export default {
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>新增 NotFound.vue 檔案</li>
 
 
@@ -8608,7 +9913,7 @@ export default router;
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>在 App.vue 檔案程式碼調整<br>調整 Navbar固定在最上方、調整網頁的高度、在最下方增加一個 router-link</li>
 
 
@@ -8808,7 +10113,7 @@ export default router;</code></pre>
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>前端開發日趨複雜，每個開發者習慣亦有很大不同，因此<strong>整合性的工具可減少彼此開發上的差異</strong>。</li>
 
 
@@ -8830,7 +10135,7 @@ export default router;</code></pre>
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>基於 Webpack 所建置的開發工具</li>
 
 
@@ -8932,7 +10237,7 @@ export default router;</code></pre>
 
 
 
-<ul>
+<ul class="wp-block-list">
 <li>減少許多指令的記憶</li>
 
 
@@ -8954,7 +10259,7 @@ export default router;</code></pre>
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>安裝 Node.js</li>
 
 
@@ -9096,7 +10401,7 @@ export default router;</code></pre>
 
 
 
-<ul>
+<ul class="wp-block-list">
 <li><a href="https://cli.vuejs.org/guide/installation.html" target="_blank" rel="noreferrer noopener">Vue Cli</a></li>
 </ul>
 
@@ -9120,7 +10425,7 @@ vue -V
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>移動到指定資料夾位置<br>cd {{ 資料夾路徑 }}</li>
 
 
@@ -9170,7 +10475,7 @@ vue -V
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>使用 VSCode 開啟專案</li>
 
 
@@ -9207,13 +10512,13 @@ vue -V
 
 
 
-<ul>
+<ul class="wp-block-list">
 <li>README.md – 介紹的檔案</li>
 
 
 
 <li>package.json – 專案的配置檔案
-<ul>
+<ul class="wp-block-list">
 <li>“scripts” – 指令<br>執行指令，npm run serve、”serve” 滑鼠點擊 Run Script</li>
 </ul>
 </li>
@@ -9245,7 +10550,7 @@ vue -V
 
 
 <li>src – 在這個專案中最重要的一個資料夾
-<ul>
+<ul class="wp-block-list">
 <li><strong>main.js – 整個專案的進入點</strong></li>
 </ul>
 </li>
@@ -9289,7 +10594,7 @@ vue -V
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>指令 vue ui</li>
 
 
@@ -9307,7 +10612,7 @@ vue -V
 
 
 <li>新增新專案
-<ul>
+<ul class="wp-block-list">
 <li>專案資料夾 gui-demo</li>
 
 
@@ -9331,7 +10636,7 @@ vue -V
 
 
 <li>設定
-<ul>
+<ul class="wp-block-list">
 <li>Choose a version of Vue.js that you want to start the project with – 3.x (Preview)</li>
 
 
@@ -9363,7 +10668,7 @@ vue -V
 
 
 
-<ul>
+<ul class="wp-block-list">
 <li>插件 – 加入新的 Vue CLI 插件</li>
 
 
@@ -9385,7 +10690,7 @@ vue -V
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>安裝 Bootstrap 套件<br>終止終端機 – Ctrl + c，輸入 npm install bootstrap@5.3.3 安裝</li>
 
 
@@ -9510,7 +10815,7 @@ export default {
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>安裝 VeeValidate 套件</li>
 
 
@@ -9729,7 +11034,7 @@ export default {
 
 
 
-<ul>
+<ul class="wp-block-list">
 <li><a href="https://cli.vuejs.org/zh/guide/mode-and-env.html#%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F" target="_blank" rel="noreferrer noopener">環境變數</a></li>
 </ul>
 
@@ -9739,7 +11044,7 @@ export default {
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>在專案資料夾新增 .env 檔案<br>VUE_APP_NAME=小明的家</li>
 
 
@@ -9795,7 +11100,7 @@ export default {
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>編譯專案 – npm run build<br>編譯完成後會產生 dist 資料夾</li>
 
 
@@ -9831,7 +11136,7 @@ VUE_APP_NAME=老闆的家
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>新增 vue.config.js 檔案<br>建議直接使用 vue ui 建立 vue.config.js</li>
 
 
@@ -9857,7 +11162,7 @@ VUE_APP_NAME=老闆的家
 
 
 
-<ul>
+<ul class="wp-block-list">
 <li>專案完成後把專案交給後端部署的時候</li>
 
 
@@ -9875,7 +11180,7 @@ VUE_APP_NAME=老闆的家
 
 
 
-<ul>
+<ul class="wp-block-list">
 <li><a href="https://youtu.be/njlABvVRB68?si=PUx9maAWm84p3GmI&amp;t=3574" target="_blank" rel="noreferrer noopener">GitHub Pages 教學影片</a>&nbsp;– 59:34 開始</li>
 </ul>
 
@@ -10647,7 +11952,7 @@ VUE_APP_NAME=老闆的家
 
 
 
-<ul>
+<ul class="wp-block-list">
 <li><a href="https://hackmd.io/FFv0a5cBToOATP7uI5COMQ" target="_blank" rel="noreferrer noopener">表單驗證套件補充資源</a></li>
 </ul>
 
@@ -10657,13 +11962,13 @@ VUE_APP_NAME=老闆的家
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>加入 VeeValidation 相關資源</li>
 
 
 
 <li>註冊元件
-<ul>
+<ul class="wp-block-list">
 <li>註冊全域的表單驗證元件 (VForm, VField, ErrorMessage)</li>
 </ul>
 </li>
@@ -10671,7 +11976,7 @@ VUE_APP_NAME=老闆的家
 
 
 <li>定義規則
-<ul>
+<ul class="wp-block-list">
 <li>選擇加入特定規則，全規則可<a href="https://vee-validate.logaretm.com/v4/guide/global-validators#vee-validaterules" target="_blank" rel="noreferrer noopener">參考</a></li>
 </ul>
 </li>
@@ -10679,7 +11984,7 @@ VUE_APP_NAME=老闆的家
 
 
 <li>加入多國語系
-<ul>
+<ul class="wp-block-list">
 <li>將<a href="https://github.com/logaretm/vee-validate/blob/vee-validate%404.1.16/packages/i18n/src/locale/zh_TW.json" target="_blank" rel="noreferrer noopener">外部資源</a>儲存至本地</li>
 </ul>
 </li>
@@ -10910,7 +12215,7 @@ VUE_APP_NAME=老闆的家
 
 
 
-<ul>
+<ul class="wp-block-list">
 <li>增加程式碼的可複用性</li>
 
 
@@ -11805,7 +13110,7 @@ export default {
 
 
 
-<ul>
+<ul class="wp-block-list">
 <li>每張卡片都需要使用元件製作</li>
 
 
@@ -12700,7 +14005,7 @@ Vue.createApp(App).mount("#app");
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>使用生命週期取得遠端資料</li>
 
 
@@ -14169,9 +15474,9 @@ Vue.createApp(App).mount("#app");
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>試著拆解流程
-<ul>
+<ul class="wp-block-list">
 <li>左邊的清單完成</li>
 
 
@@ -14203,7 +15508,7 @@ Vue.createApp(App).mount("#app");
 
 
 
-<ol>
+<ol class="wp-block-list">
 <li>先準備左邊的品項呈現</li>
 
 
@@ -14556,9 +15861,9 @@ Vue.createApp(App).mount("#app");
 
 
 
-<ul>
+<ul class="wp-block-list">
 <li>先寫出流程，一個一個拆解
-<ol>
+<ol class="wp-block-list">
 <li>列表</li>
 
 
@@ -15657,7 +16962,7 @@ Vue.createApp(App).mount("#app");</code></pre>
 
 
 
-<ul>
+<ul class="wp-block-list">
 <li><a href="https://www.youtube.com/watch?v=_vFuDQ_6Xt8" target="_blank" rel="noreferrer noopener">JavaScript 陣列處理必學巧技</a></li>
 
 
@@ -15743,7 +17048,7 @@ Vue.createApp(App).mount("#app");</code></pre>
 
 
 
-<ul>
+<ul class="wp-block-list">
 <li>需確保當前頁面一定要有 createApp 的程式碼 (如果當頁有，可以另開新分頁確認，有時候重新整理也不會顯示)</li>
 
 
@@ -16096,7 +17401,7 @@ component.init();
 
 
 
-<ul>
+<ul class="wp-block-list">
 <li>將文字提取</li>
 
 
@@ -16110,7 +17415,7 @@ component.init();
 
 
 
-<ul>
+<ul class="wp-block-list">
 <li>將文字提取出，並且寫入資料集</li>
 
 
@@ -16620,1385 +17925,6 @@ export function c(a, b) {
 
 
 <h3 class="wp-block-heading">縮寫</h3>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Bootstrap5 複習01</title>
-		<link>/wordpress_blog/reviewbs5_01/</link>
-		
-		<dc:creator><![CDATA[gee.hsu]]></dc:creator>
-		<pubDate>Thu, 14 Dec 2023 04:23:00 +0000</pubDate>
-				<category><![CDATA[六角學院]]></category>
-		<guid isPermaLink="false">/wordpress_blog/?p=806</guid>
-
-					<description><![CDATA[學習來自: 六角學院課程: Bootstrap 5 網頁切版整合 [&#8230;]]]></description>
-										<content:encoded><![CDATA[
-<p>學習來自: 六角學院<br>課程: Bootstrap 5 網頁切版整合術<br>Thank you</p>
-
-
-
-<h2 class="wp-block-heading">環境建置</h2>
-
-
-
-<h3 class="wp-block-heading">Bootstrap 文件介紹</h3>
-
-
-
-<h4 class="wp-block-heading">文件說明 – 中文版</h4>
-
-
-
-<figure class="wp-block-table"><table><tbody><tr><td>Getting started</td><td>快速開始</td></tr><tr><td>Customize</td><td>自定義</td></tr><tr><td>Layout</td><td>排版</td></tr><tr><td>Content</td><td>內容</td></tr><tr><td>Form</td><td>表單</td></tr><tr><td>Components</td><td>元件</td></tr><tr><td>Helpers</td><td>工具</td></tr><tr><td>Utilities</td><td>通用類別</td></tr><tr><td>Extend</td><td>擴增</td></tr><tr><td>About</td><td>關於</td></tr></tbody></table></figure>
-
-
-
-<h3 class="wp-block-heading">Bootstrap 中英文文件連結</h3>
-
-
-
-<ul>
-<li><a href="https://getbootstrap.com/" target="_blank" rel="noreferrer noopener">官方原文 Bootstrap</a></li>
-
-
-
-<li><a href="https://bootstrap5.hexschool.com/" target="_blank" rel="noreferrer noopener">六角學院繁體中文版本</a></li>
-</ul>
-
-
-
-<h3 class="wp-block-heading">VSCode 基礎環境建置</h3>
-
-
-
-<h3 class="wp-block-heading">VSCode 與相關資源連結</h3>
-
-
-
-<ul>
-<li><a href="https://code.visualstudio.com/">VSCode 官方網站</a></li>
-</ul>
-
-
-
-<p>相關套件:</p>
-
-
-
-<ul>
-<li><a href="https://www.casper.tw/development/2019/12/01/vscode-chinese/" target="_blank" rel="noreferrer noopener">繁體中文版安裝說明</a></li>
-
-
-
-<li><a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer" target="_blank" rel="noreferrer noopener">Live Server</a></li>
-
-
-
-<li><a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass" target="_blank" rel="noreferrer noopener">Live Sass</a>&nbsp;(後方課程會運用到)</li>
-</ul>
-
-
-
-<p>更多參考套件</p>
-
-
-
-<ul>
-<li><a href="https://www.casper.tw/development/2020/12/13/vscode-extension/" target="_blank" rel="noreferrer noopener">套件</a></li>
-
-
-
-<li>樣式主題&nbsp;<a href="https://marketplace.visualstudio.com/items?itemName=andischerer.theme-atom-one-dark" target="_blank" rel="noreferrer noopener">Atom One</a></li>
-</ul>
-
-
-
-<h3 class="wp-block-heading">語系設置與 Bootstrap CDN</h3>
-
-
-
-<ul>
-<li><a href="https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry" target="_blank" rel="noreferrer noopener">語系參考文件</a></li>
-</ul>
-
-
-
-<pre class="wp-block-code"><code>// index.html - 語系
-&lt;!DOCTYPE html&gt;
-&lt;html lang="zh-tw"&gt;
-  &lt;head&gt;
-    &lt;meta charset="UTF-8" /&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
-    &lt;title&gt;Review BS5&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;p lang="zh-TW"&gt;繁中台灣 zh-TW: 骨、花、學、崎、雨&lt;/p&gt;
-    &lt;p lang="zh-HK"&gt;繁中香港 zh-HK: 骨、花、學、崎、雨&lt;/p&gt;
-    &lt;p lang="zh-CN"&gt;簡忠 zh-CN: 骨、花、學、崎、雨&lt;/p&gt;
-    &lt;p lang="ja"&gt;日文 ja: 骨、花、學、崎、雨&lt;/p&gt;
-    &lt;hr /&gt;
-    &lt;p lang="zh-TW"&gt;繁中台灣 zh-TW: 骨、花、學、崎、雨&lt;/p&gt;
-    &lt;p lang="zh-Hant-TW"&gt;繁中台灣 zh-Hant-TW: 骨、花、學、崎、雨&lt;/p&gt;
-    &lt;p lang="zh-HK"&gt;繁中香港 zh-HK: 骨、花、學、崎、雨&lt;/p&gt;
-    &lt;p lang="zh-Hant-HK"&gt;繁中香港 zh-Hant-HK: 骨、花、學、崎、雨&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// index.html - Bootstrap CDN
-&lt;!DOCTYPE html&gt;
-&lt;html lang="zh-tw"&gt;
-  &lt;head&gt;
-    &lt;meta charset="UTF-8" /&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
-    &lt;title&gt;Review BS5&lt;/title&gt;
-    &lt;link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
-      crossorigin="anonymous"
-    /&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;button type="button" class="btn btn-primary"&gt;Primary&lt;/button&gt;
-    &lt;button type="button" class="btn btn-secondary"&gt;Secondary&lt;/button&gt;
-    &lt;button type="button" class="btn btn-success"&gt;Success&lt;/button&gt;
-    &lt;button type="button" class="btn btn-danger"&gt;Danger&lt;/button&gt;
-    &lt;button type="button" class="btn btn-warning"&gt;Warning&lt;/button&gt;
-    &lt;button type="button" class="btn btn-info"&gt;Info&lt;/button&gt;
-    &lt;button type="button" class="btn btn-light"&gt;Light&lt;/button&gt;
-    &lt;button type="button" class="btn btn-dark"&gt;Dark&lt;/button&gt;
-    &lt;button type="button" class="btn btn-link"&gt;Link&lt;/button&gt;
-    &lt;hr /&gt;
-    &lt;button
-      type="button"
-      class="btn btn-outline-primary"
-      data-bs-toggle="button"
-      autocomplete="off"
-    &gt;
-      Toggle button
-    &lt;/button&gt;
-    &lt;button
-      type="button"
-      class="btn btn-outline-primary active"
-      data-bs-toggle="button"
-      autocomplete="off"
-      aria-pressed="true"
-    &gt;
-      Active toggle button
-    &lt;/button&gt;
-    &lt;button
-      type="button"
-      class="btn btn-outline-primary"
-      disabled
-      data-bs-toggle="button"
-      autocomplete="off"
-    &gt;
-      Disabled toggle button
-    &lt;/button&gt;
-
-    &lt;script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-      crossorigin="anonymous"
-    &gt;&lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-
-
-
-<h3 class="wp-block-heading">CSS 的 Class 運用</h3>
-
-
-
-<h4 class="wp-block-heading">補充說明: Class</h4>
-
-
-
-<pre class="wp-block-code"><code>// 樣式補充說明
-&lt;button type="button" class="btn btn-primary"&gt;Primary&lt;/button&gt;</code></pre>
-
-
-
-<p>Bootstrap 中會加入大量的 Class 來套用樣式，每一個 Class 都代表了部分的結構、樣式、狀態等等…</p>
-
-
-
-<p>Class 其中的:</p>
-
-
-
-<ul>
-<li>class 是 HTML 標籤的屬性名稱 – 每個標籤只能有一個</li>
-
-
-
-<li>btn 則是其值 – 每個 Class 可以用空白隔開多個值</li>
-</ul>
-
-
-
-<pre class="wp-block-code"><code>// index.html
-&lt;!DOCTYPE html&gt;
-&lt;html lang="zh-tw"&gt;
-  &lt;head&gt;
-    &lt;meta charset="UTF-8" /&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
-    &lt;title&gt;Review BS5&lt;/title&gt;
-    &lt;link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
-      crossorigin="anonymous"
-    /&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;button type="button" class="btn btn-primary"&gt;Primary&lt;/button&gt;
-
-    &lt;script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-      crossorigin="anonymous"
-    &gt;&lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-
-
-
-<h3 class="wp-block-heading">快速體驗 Bootstrap 建立一個網站</h3>
-
-
-
-<pre class="wp-block-code"><code>// index.html
-&lt;!DOCTYPE html&gt;
-&lt;html lang="zh-tw"&gt;
-  &lt;head&gt;
-    &lt;meta charset="UTF-8" /&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
-    &lt;title&gt;Review BS5&lt;/title&gt;
-    &lt;link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
-      crossorigin="anonymous"
-    /&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;nav class="navbar navbar-expand-lg navbar-dark bg-dark"&gt;
-      &lt;div class="container-fluid"&gt;
-        &lt;a class="navbar-brand" href="#"&gt;Navbar&lt;/a&gt;
-        &lt;button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        &gt;
-          &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
-        &lt;/button&gt;
-        &lt;div class="collapse navbar-collapse" id="navbarSupportedContent"&gt;
-          &lt;ul class="navbar-nav me-auto mb-2 mb-lg-0"&gt;
-            &lt;li class="nav-item"&gt;
-              &lt;a class="nav-link active" aria-current="page" href="#"&gt;Home&lt;/a&gt;
-            &lt;/li&gt;
-            &lt;li class="nav-item"&gt;
-              &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
-            &lt;/li&gt;
-            &lt;li class="nav-item dropdown"&gt;
-              &lt;a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              &gt;
-                Dropdown
-              &lt;/a&gt;
-              &lt;ul class="dropdown-menu" aria-labelledby="navbarDropdown"&gt;
-                &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;hr class="dropdown-divider" /&gt;&lt;/li&gt;
-                &lt;li&gt;
-                  &lt;a class="dropdown-item" href="#"&gt;Something else here&lt;/a&gt;
-                &lt;/li&gt;
-              &lt;/ul&gt;
-            &lt;/li&gt;
-            &lt;li class="nav-item"&gt;
-              &lt;a class="nav-link disabled"&gt;Disabled&lt;/a&gt;
-            &lt;/li&gt;
-          &lt;/ul&gt;
-          &lt;form class="d-flex"&gt;
-            &lt;input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            /&gt;
-            &lt;button class="btn btn-outline-success" type="submit"&gt;
-              Search
-            &lt;/button&gt;
-          &lt;/form&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/nav&gt;
-
-    &lt;div class="container my-4"&gt;
-      &lt;div class="row row-cols-1 row-cols-md-2 g-4"&gt;
-        &lt;div class="col"&gt;
-          &lt;div class="card"&gt;
-            &lt;img
-              src="https://images.unsplash.com/photo-1663947718652-fa32fb546da2?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              class="card-img-top"
-              alt="..."
-            /&gt;
-            &lt;div class="card-body"&gt;
-              &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
-              &lt;p class="card-text"&gt;
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              &lt;/p&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class="col"&gt;
-          &lt;div class="card"&gt;
-            &lt;img
-              src="https://images.unsplash.com/photo-1663947718652-fa32fb546da2?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              class="card-img-top"
-              alt="..."
-            /&gt;
-            &lt;div class="card-body"&gt;
-              &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
-              &lt;p class="card-text"&gt;
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              &lt;/p&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class="col"&gt;
-          &lt;div class="card"&gt;
-            &lt;img
-              src="https://images.unsplash.com/photo-1663947718652-fa32fb546da2?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              class="card-img-top"
-              alt="..."
-            /&gt;
-            &lt;div class="card-body"&gt;
-              &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
-              &lt;p class="card-text"&gt;
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content.
-              &lt;/p&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class="col"&gt;
-          &lt;div class="card"&gt;
-            &lt;img
-              src="https://images.unsplash.com/photo-1663947718652-fa32fb546da2?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              class="card-img-top"
-              alt="..."
-            /&gt;
-            &lt;div class="card-body"&gt;
-              &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
-              &lt;p class="card-text"&gt;
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              &lt;/p&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;footer class="bg-light py-4"&gt;
-      &lt;div class="container"&gt;
-        &lt;p class="mb-0"&gt;這裡是 Footer&lt;/p&gt;
-      &lt;/div&gt;
-    &lt;/footer&gt;
-
-    &lt;script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-      crossorigin="anonymous"
-    &gt;&lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-
-
-
-<h2 class="wp-block-heading">Bootstrap 文件介紹</h2>
-
-
-
-<h3 class="wp-block-heading">知識點: box-sizing</h3>
-
-
-
-<h4 class="wp-block-heading">補充說明: box-sizing</h4>
-
-
-
-<p>由於 padding 及 border 會改變元素運算後的寬度，避免麻煩的計算，Bootstrap 預設載入 box-sizing: border-box</p>
-
-
-
-<p><strong>定義的寬度 = 實際呈現的寬度</strong></p>
-
-
-
-<pre class="wp-block-code"><code>// 簡報1
-// width: 300px;
-// height: 300px;
-// padding: 50px;
-// border: 10px solid green;
-// margin: 50px;
-div {
-  width: 300px;
-  height: 300px;
-  padding: 50px;
-  border: 10px solid green;
-  margin: 50px;
-}
-
-// 寬度: 300px + 50 * 2px + 10 * 2px = 420px</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// 簡報2
-// width: 300px;
-// height: 300px;
-// padding: 50px;
-// border: 10px solid green;
-// margin: 50px;
-
-div {
-  width: 300px;
-  height: 300px;
-  border: 10px solid green;
-  padding: 50px;
-  box-sizing: border-box;
-}
-
-// 寬度: 300px = X + 50 * 2px + 10 * 2px</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// index.html
-&lt;!DOCTYPE html&gt;
-&lt;html lang="zh-tw"&gt;
-  &lt;head&gt;
-    &lt;meta charset="UTF-8" /&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
-    &lt;title&gt;Review BS5&lt;/title&gt;
-    &lt;style&gt;
-      .box {
-        width: 200px;
-        height: 200px;
-        background-color: #ccc;
-
-        padding: 50px;
-        border: 5px solid black;
-        margin: 50px;
-
-        box-sizing: border-box;
-      }
-    &lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;div class="box"&gt;&lt;/div&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-
-
-
-<h3 class="wp-block-heading">知識點: CSS Variables</h3>
-
-
-
-<pre class="wp-block-code"><code>// index.html
-&lt;!DOCTYPE html&gt;
-&lt;html lang="zh-tw"&gt;
-  &lt;head&gt;
-    &lt;meta charset="UTF-8" /&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
-    &lt;title&gt;Review BS5&lt;/title&gt;
-    &lt;style&gt;
-      /* 全域 */
-      :root {
-        --primary: #69f0ae;
-      }
-      .box {
-        width: 100px;
-        height: 100px;
-        padding: 20px;
-        border: 5px solid #eee;
-      }
-
-      .bg-primary {
-        background-color: var(--primary);
-      }
-
-      /* 進階技巧 */
-      .local {
-        --primary: orange;
-      }
-    &lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;div class="box bg-primary"&gt;&lt;/div&gt;
-    &lt;div class="local"&gt;
-      &lt;div class="box bg-primary"&gt;&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-
-
-
-<h3 class="wp-block-heading">知識點: rem 單位</h3>
-
-
-
-<pre class="wp-block-code"><code>// em 與 rem
-//  em 是相對的的數值單位，它會受到外圍的文字大小所影響，而 1em 即是 1 的文字大小， 1.5em 也就是 1.5 倍的文字大小。
-// rem 也是相對的文字尺寸，和 em 使用方法接近，不同的是他僅相對於 root 層級的文字大小(網頁中的 html)。</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// index.html
-&lt;!DOCTYPE html&gt;
-&lt;html lang="zh-tw"&gt;
-  &lt;head&gt;
-    &lt;meta charset="UTF-8" /&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
-    &lt;title&gt;Review BS5&lt;/title&gt;
-    &lt;style&gt;
-      html {
-        font-size: 20px;
-      }
-      .em2 {
-        font-size: 2em;
-      }
-      .rem2 {
-        font-size: 2rem;
-      }
-    &lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;!-- 
-      網頁文字預設大小是 16px
-      rem 與 em 的差別
-      最外層設定會使用 :root 或者 html
-    --&gt;
-    &lt;div&gt;
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque voluptatem
-      libero, magni consequatur quisquam quidem enim, alias voluptates, autem
-      qui dolores eaque nam ad nostrum porro dignissimos vel totam. Error.
-    &lt;/div&gt;
-    &lt;hr /&gt;
-    &lt;div class="em2"&gt;
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. In consectetur
-      cum veritatis earum nesciunt nihil laudantium autem culpa, minima debitis,
-      eligendi corrupti praesentium, id architecto soluta dolor quaerat dicta
-      iure.
-      &lt;strong class="em2"&gt;veritatis earum nesciunt&lt;/strong&gt;
-    &lt;/div&gt;
-    &lt;hr /&gt;
-    &lt;div class="rem2"&gt;
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias delectus
-      voluptate magnam placeat quos sapiente error harum est! At vero dolorum,
-      nostrum porro assumenda delectus veniam expedita possimus exercitationem
-      praesentium.
-      &lt;strong class="rem2"&gt;veritatis earum nesciunt&lt;/strong&gt;
-    &lt;/div&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-
-
-
-<h3 class="wp-block-heading">知識點: 系統預設字體</h3>
-
-
-
-<h4 class="wp-block-heading">補充說明: 系統預設字體 – 樣式補充說明</h4>
-
-
-
-<figure class="wp-block-table"><table><tbody><tr><td>系統</td><td>系統預設</td><td>英文字體</td><td>中文字體</td></tr><tr><td>Windows</td><td></td><td>Segoe UI</td><td>Microsoft JhengHei / 微軟正黑體</td></tr><tr><td>Mac OS</td><td>-apple-system</td><td>San Francisco / Helvetica Neue</td><td>蘋方(PingFang) / Heiti TC</td></tr><tr><td>iOS</td><td>-apple-system</td><td>San Francisco / Helvetica Neue</td><td>蘋方(PingFang) / Heiti TC</td></tr><tr><td>Android</td><td></td><td>Roboto</td><td>Noto Sans</td></tr></tbody></table></figure>
-
-
-
-<h4 class="wp-block-heading">Bootstrap 預設字體</h4>
-
-
-
-<pre class="wp-block-code"><code>// Bootstrap 預設字體
-$font-family-sans-serif:
-
-  // 使用系統預設的字體
-  // Cross-platform generic font family (default user interface font)
-  system-ui,
-  // Safari for macOS and iOS (San Francisco)
-  -apple-system,
-
-  // 指定已知的系統 UI 字體
-  // Windows
-  "Segoe UI",
-  // Android
-  Roboto,
-  // Basic web fallback
-  "Helvetica Neue", Arial,
-  // Linux
-  "Noto Sans",
-  "Liberation Sans",
-  // CSS 定義字體、Emoji 等等
-  // Sans serif fallback
-  sans-serif,
-  // Emoji fonts
-  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;</code></pre>
-
-
-
-<h3 class="wp-block-heading">CSS Reset 做了什麼</h3>
-
-
-
-<ul>
-<li><a href="https://github.com/twbs/bootstrap/blob/v5.1.0/dist/css/bootstrap-reboot.css" target="_blank" rel="noreferrer noopener">Reboot 專用 CSS</a></li>
-</ul>
-
-
-
-<pre class="wp-block-code"><code>// index.html
-&lt;!DOCTYPE html&gt;
-&lt;html lang="zh-tw"&gt;
-  &lt;head&gt;
-    &lt;meta charset="UTF-8" /&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
-    &lt;title&gt;Review BS5&lt;/title&gt;
-    &lt;link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
-      crossorigin="anonymous"
-    /&gt;
-    &lt;style&gt;
-      .box {
-        width: 100px;
-        height: 100px;
-        padding: 20px;
-        background-color: #ccc;
-      }
-    &lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;!-- 重點 1: 會套用 Bootstrap 預設字體、字體大小、行間距等等 --&gt;
-    &lt;h1&gt;h1. Bootstrap heading&lt;/h1&gt;
-    &lt;h2&gt;h2. Bootstrap heading&lt;/h2&gt;
-
-    &lt;!-- 重點 2: 套用 box-sizing --&gt;
-    &lt;div class="box"&gt;&lt;/div&gt;
-
-    &lt;!-- 重點 3: 套用 list 等其他標準 Normalize 樣式 --&gt;
-    &lt;ul&gt;
-      &lt;li&gt;All lists have their top margin removed&lt;/li&gt;
-      &lt;li&gt;And their bottom margin normalized&lt;/li&gt;
-      &lt;li&gt;
-        Nested lists have no bottom margin
-        &lt;ul&gt;
-          &lt;li&gt;This way they have a more even appearance&lt;/li&gt;
-          &lt;li&gt;Particularly when followed by more list items&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;The left padding has also been reset&lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;!-- 重點 4: 包含 Bootstrap 所釋出的變數色彩 --&gt;
-    &lt;div class="box" style="background-color: var(--bs-primary)"&gt;&lt;/div&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-
-
-
-<h3 class="wp-block-heading">六角學院專屬「Bootstrap 練習手冊」</h3>
-
-
-
-<p>使用 ctrl + p 然後把檔名貼上，開啟練習的檔案。</p>
-
-
-
-<h3 class="wp-block-heading">Bootstrap 5 練習手冊連結</h3>
-
-
-
-<ul>
-<li><a href="https://github.com/hexschool/bootstrap5-starter-files" target="_blank" rel="noreferrer noopener">Bootstrap 5 練習手冊</a></li>
-</ul>
-
-
-
-<p>解壓縮後請<strong>務必使用 Live Server 開啟</strong>。</p>
-
-
-
-<h3 class="wp-block-heading">文字運用</h3>
-
-
-
-<ul>
-<li><a rel="noreferrer noopener" href="https://bootstrap5.hexschool.com/docs/5.1/content/typography/" target="_blank">內容 &gt; 文字排版 (Typography)</a></li>
-</ul>
-
-
-
-<pre class="wp-block-code"><code>// 標題
-// 全部的 HTML 標題從 &lt;h1&gt; 到 &lt;h6&gt; 均可使用。
-&lt;h1&gt;h1. Bootstrap heading&lt;/h1&gt;
-&lt;h2&gt;h2. Bootstrap heading&lt;/h2&gt;
-&lt;h3&gt;h3. Bootstrap heading&lt;/h3&gt;
-&lt;h4&gt;h4. Bootstrap heading&lt;/h4&gt;
-&lt;h5&gt;h5. Bootstrap heading&lt;/h5&gt;
-&lt;h6&gt;h6. Bootstrap heading&lt;/h6&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// 當你想匹配某一標題的字體樣式，但不能直接使用 HTML 元素時，使用 .h1 到 .h6 的類別。
-&lt;p class="h1"&gt;h1. Bootstrap heading&lt;/p&gt;
-&lt;p class="h2"&gt;h2. Bootstrap heading&lt;/p&gt;
-&lt;p class="h3"&gt;h3. Bootstrap heading&lt;/p&gt;
-&lt;p class="h4"&gt;h4. Bootstrap heading&lt;/p&gt;
-&lt;p class="h5"&gt;h5. Bootstrap heading&lt;/p&gt;
-&lt;p class="h6"&gt;h6. Bootstrap heading&lt;/p&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// 自定義標題
-// 使用通用類別重現 Bootstrap 3.0 中的小標題文本。
-&lt;h3&gt;
-  Fancy display heading
-  &lt;small class="text-muted"&gt;With faded secondary text&lt;/small&gt;
-&lt;/h3&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// 顯示標題
-// 一般的標題元素能在頁面內容繁多時發揮最佳作用。當你需要突出一個標題時，請考慮使用 display heading 以獲得更大、更細、稍具有風格化的標題樣式。
-&lt;h1 class="display-1"&gt;Display 1&lt;/h1&gt;
-&lt;h1 class="display-2"&gt;Display 2&lt;/h1&gt;
-&lt;h1 class="display-3"&gt;Display 3&lt;/h1&gt;
-&lt;h1 class="display-4"&gt;Display 4&lt;/h1&gt;
-&lt;h1 class="display-5"&gt;Display 5&lt;/h1&gt;
-&lt;h1 class="display-6"&gt;Display 6&lt;/h1&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// 前導主題
-// 使用 .lead 讓一個段落脫穎而出。
-&lt;p class="lead"&gt;
-  This is a lead paragraph. It stands out from regular paragraphs.
-&lt;/p&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// 行內文本元素
-// 使用行內 HTML5 元素的格式。
-&lt;p&gt;You can use the mark tag to &lt;mark&gt;highlight&lt;/mark&gt; text.&lt;/p&gt;
-&lt;p&gt;&lt;del&gt;This line of text is meant to be treated as deleted text.&lt;/del&gt;&lt;/p&gt;
-&lt;p&gt;&lt;s&gt;This line of text is meant to be treated as no longer accurate.&lt;/s&gt;&lt;/p&gt;
-&lt;p&gt;&lt;ins&gt;This line of text is meant to be treated as an addition to the document.&lt;/ins&gt;&lt;/p&gt;
-&lt;p&gt;&lt;u&gt;This line of text will render as underlined.&lt;/u&gt;&lt;/p&gt;
-&lt;p&gt;&lt;small&gt;This line of text is meant to be treated as fine print.&lt;/small&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;This line rendered as bold text.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;This line rendered as italicized text.&lt;/em&gt;&lt;/p&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// 縮寫
-// 對縮寫和字母字首縮寫使用 HTML &lt;abbr&gt; 元素以 Hover 方式顯示縮寫的擴增內容。縮寫具有預設的底線和説明游標，透過懸停和輔助性技術幫助使用者提供額外的內容。
-// 縮寫字加入 .initialism 可將字體略為縮小。
-&lt;p&gt;&lt;abbr title="attribute"&gt;attr&lt;/abbr&gt;&lt;/p&gt;
-&lt;p&gt;&lt;abbr title="HyperText Markup Language" class="initialism"&gt;HTML&lt;/abbr&gt;&lt;/p&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// 引用
-// 用於文件中引用來自另一個來源的內容。在 HTML 周圍使用 &lt;blockquote class="blockquote"&gt;。
-&lt;blockquote class="blockquote"&gt;
-  &lt;p&gt;A well-known quote, contained in a blockquote element.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-// 引用來源
-// HTML 規範要求將 blockquote 歸屬於 &lt;blockquote&gt; 之外。當提供來源歸屬，需要將 &lt;blockquote&gt; 包在 &lt;figure&gt; 之內，並且使用 &lt;figure&gt; 和加上 .blockquote-footer 類別的 &lt;figcaption&gt; 或是一個區塊元素(例如：&lt;p&gt;)。還要確保將來源的名稱包在 &lt;cite&gt; 中。
-&lt;figure&gt;
-  &lt;blockquote class="blockquote"&gt;
-    &lt;p&gt;A well-known quote, contained in a blockquote element.&lt;/p&gt;
-  &lt;/blockquote&gt;
-  &lt;figcaption class="blockquote-footer"&gt;
-    Someone famous in &lt;cite title="Source Title"&gt;Source Title&lt;/cite&gt;
-  &lt;/figcaption&gt;
-&lt;/figure&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// 對齊
-// 使用文字通用類別來更改 blockquote 的對齊方式。
-&lt;figure class="text-center"&gt;
-  &lt;blockquote class="blockquote"&gt;
-    &lt;p&gt;A well-known quote, contained in a blockquote element.&lt;/p&gt;
-  &lt;/blockquote&gt;
-  &lt;figcaption class="blockquote-footer"&gt;
-    Someone famous in &lt;cite title="Source Title"&gt;Source Title&lt;/cite&gt;
-  &lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;figure class="text-end"&gt;
-  &lt;blockquote class="blockquote"&gt;
-    &lt;p&gt;A well-known quote, contained in a blockquote element.&lt;/p&gt;
-  &lt;/blockquote&gt;
-  &lt;figcaption class="blockquote-footer"&gt;
-    Someone famous in &lt;cite title="Source Title"&gt;Source Title&lt;/cite&gt;
-  &lt;/figcaption&gt;
-&lt;/figure&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// 列表
-// 無樣式
-// 刪除預設的 list-style 和列表項目上的左 margin（僅限直接子項）。僅適用於直接子項目列表，這意味著你需要為巢狀的列表添加類別。
-&lt;ul class="list-unstyled"&gt;
-  &lt;li&gt;This is a list.&lt;/li&gt;
-  &lt;li&gt;It appears completely unstyled.&lt;/li&gt;
-  &lt;li&gt;Structurally, it's still a list.&lt;/li&gt;
-  &lt;li&gt;However, this style only applies to immediate child elements.&lt;/li&gt;
-  &lt;li&gt;Nested lists:
-    &lt;ul&gt;
-      &lt;li&gt;are unaffected by this style&lt;/li&gt;
-      &lt;li&gt;will still show a bullet&lt;/li&gt;
-      &lt;li&gt;and have appropriate left margin&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;This may still come in handy in some situations.&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// 行內
-// 移除了列表編號並增加些許 margin，結合使用 .list-inline 和 .list-inline-item。
-&lt;ul class="list-inline"&gt;
-  &lt;li class="list-inline-item"&gt;This is a list item.&lt;/li&gt;
-  &lt;li class="list-inline-item"&gt;And another one.&lt;/li&gt;
-  &lt;li class="list-inline-item"&gt;But they're displayed inline.&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// 描述列表對齊
-// 通過使用我們網格系統定義的類別（或是語意 mixins）將項目和說明水平對齊。對於較長的術語，你可選擇性加上 .text-truncate 來用 … 取代多餘內容。
-&lt;dl class="row"&gt;
-  &lt;dt class="col-sm-3"&gt;Description lists&lt;/dt&gt;
-  &lt;dd class="col-sm-9"&gt;A description list is perfect for defining terms.&lt;/dd&gt;
-
-  &lt;dt class="col-sm-3"&gt;Term&lt;/dt&gt;
-  &lt;dd class="col-sm-9"&gt;
-    &lt;p&gt;Definition for the term.&lt;/p&gt;
-    &lt;p&gt;And some more placeholder definition text.&lt;/p&gt;
-  &lt;/dd&gt;
-
-  &lt;dt class="col-sm-3"&gt;Another term&lt;/dt&gt;
-  &lt;dd class="col-sm-9"&gt;This definition is short, so no extra paragraphs or anything.&lt;/dd&gt;
-
-  &lt;dt class="col-sm-3 text-truncate"&gt;Truncated term is truncated&lt;/dt&gt;
-  &lt;dd class="col-sm-9"&gt;This can be useful when space is tight. Adds an ellipsis at the end.&lt;/dd&gt;
-
-  &lt;dt class="col-sm-3"&gt;Nesting&lt;/dt&gt;
-  &lt;dd class="col-sm-9"&gt;
-    &lt;dl class="row"&gt;
-      &lt;dt class="col-sm-4"&gt;Nested definition list&lt;/dt&gt;
-      &lt;dd class="col-sm-8"&gt;I heard you like definition lists. Let me put a definition list inside your definition list.&lt;/dd&gt;
-    &lt;/dl&gt;
-  &lt;/dd&gt;
-&lt;/dl&gt;</code></pre>
-
-
-
-<h3 class="wp-block-heading">基本圖片運用</h3>
-
-
-
-<ul>
-<li><a href="https://bootstrap5.hexschool.com/docs/5.1/content/images/">內容 &gt; 圖片 (Ima</a><a rel="noreferrer noopener" href="https://bootstrap5.hexschool.com/docs/5.1/content/images/" target="_blank">g</a><a href="https://bootstrap5.hexschool.com/docs/5.1/content/images/">es)</a></li>
-
-
-
-<li><a href="https://bootstrap5.hexschool.com/docs/5.1/utilities/float/" target="_blank" rel="noreferrer noopener">通用類別 &gt; 浮動 (Float)</a></li>
-
-
-
-<li><a href="https://bootstrap5.hexschool.com/docs/5.1/helpers/clearfix/" target="_blank" rel="noreferrer noopener">工具 &gt; 清除浮動 (Clearfix)</a></li>
-
-
-
-<li><a href="https://bootstrap5.hexschool.com/docs/5.1/utilities/text/" target="_blank" rel="noreferrer noopener">通用類別 &gt; 文字 (Text)</a></li>
-</ul>
-
-
-
-<pre class="wp-block-code"><code>// 響應式圖片
-// Bootstrap 中的圖片可利用 .img-fluid 設定為響應式圖片。運用 max-width: 100%; 和 height: auto;，讓圖片可依父元素進行縮放。
-&lt;img src="..." class="img-fluid" alt="..."&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// 圖片縮略圖
-// 除了我們的 邊框-圓角 通用類別 之外，你可以使用 .img-thumbnail 讓圖片呈現圓角 1px 的邊框。
-&lt;img src="..." class="img-thumbnail" alt="..."&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// 對齊圖片
-// 用 輔助方法 浮動類別 或是 文字 對齊類別 讓圖片對齊。屬性為 block 的圖片可以使用 .mx-auto margin 通用類別 置中。
-&lt;img src="..." class="rounded float-start" alt="..."&gt;
-&lt;img src="..." class="rounded float-end" alt="..."&gt;
-
-&lt;img src="..." class="rounded mx-auto d-block" alt="..."&gt;
-
-&lt;div class="text-center"&gt;
-&lt;img src="..." class="rounded" alt="..."&gt;
-&lt;/div&gt;</code></pre>
-
-
-
-<h3 class="wp-block-heading">圖片區</h3>
-
-
-
-<ul>
-<li><a href="https://bootstrap5.hexschool.com/docs/5.1/content/figures/" target="_blank" rel="noreferrer noopener">內容 &gt; 圖片區 (Figures)</a></li>
-</ul>
-
-
-
-<pre class="wp-block-code"><code>// 圖片區 (Figures)
-// 當需要顯示一段內容，例如包含可選擇標題的圖檔時，可以考慮使用 &lt;figure&gt;。
-&lt;figure class="figure"&gt;
-  &lt;img src="..." class="figure-img img-fluid rounded" alt="..."&gt;
-  &lt;figcaption class="figure-caption"&gt;A caption for the above image.&lt;/figcaption&gt;
-&lt;/figure&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// 使用我們的 text utilities 可以很容易地對齊圖片標題。
-&lt;figure class="figure"&gt;
-  &lt;img src="..." class="figure-img img-fluid rounded" alt="..."&gt;
-  &lt;figcaption class="figure-caption text-end"&gt;A caption for the above image.&lt;/figcaption&gt;
-&lt;/figure&gt;</code></pre>
-
-
-
-<h3 class="wp-block-heading">表格運用</h3>
-
-
-
-<ul>
-<li><a rel="noreferrer noopener" href="https://bootstrap5.hexschool.com/docs/5.1/content/tables/" target="_blank">內容 &gt; 表格 (Tables)</a></li>
-
-
-
-<li><a href="https://bootstrap5.hexschool.com/docs/5.1/utilities/borders/" target="_blank" rel="noreferrer noopener">通用類別 &gt; 邊框 (Borders)</a></li>
-
-
-
-<li><a href="https://bootstrap5.hexschool.com/docs/5.1/utilities/vertical-align/" target="_blank" rel="noreferrer noopener">通用類別 &gt; 垂直對齊 (Vertical align)</a></li>
-</ul>
-
-
-
-<pre class="wp-block-code"><code>// 表格
-// 概述
-// 在任何 &lt;table&gt; 加上基本類別 .table，接著使用我們的可選修飾類別或是自定義樣式進行擴展。所有表格樣式在 Bootstrap 中都不會繼承，意味著巢狀表格的樣式都是獨立於父表格。
-// 使用最基本的表格排版，以下是基本的 .table 在 Bootstrap 中的外觀。
-&lt;table class="table"&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th scope="col"&gt;#&lt;/th&gt;
-      &lt;th scope="col"&gt;First&lt;/th&gt;
-      &lt;th scope="col"&gt;Last&lt;/th&gt;
-      &lt;th scope="col"&gt;Handle&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;th scope="row"&gt;1&lt;/th&gt;
-      &lt;td&gt;Mark&lt;/td&gt;
-      &lt;td&gt;Otto&lt;/td&gt;
-      &lt;td&gt;@mdo&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th scope="row"&gt;2&lt;/th&gt;
-      &lt;td&gt;Jacob&lt;/td&gt;
-      &lt;td&gt;Thornton&lt;/td&gt;
-      &lt;td&gt;@fat&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th scope="row"&gt;3&lt;/th&gt;
-      &lt;td colspan="2"&gt;Larry the Bird&lt;/td&gt;
-      &lt;td&gt;@twitter&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// 變數
-// 使用語意化 class 給表格列或單元格上色。
-&lt;!-- On tables --&gt;
-&lt;table class="table-primary"&gt;...&lt;/table&gt;
-&lt;table class="table-secondary"&gt;...&lt;/table&gt;
-&lt;table class="table-success"&gt;...&lt;/table&gt;
-&lt;table class="table-danger"&gt;...&lt;/table&gt;
-&lt;table class="table-warning"&gt;...&lt;/table&gt;
-&lt;table class="table-info"&gt;...&lt;/table&gt;
-&lt;table class="table-light"&gt;...&lt;/table&gt;
-&lt;table class="table-dark"&gt;...&lt;/table&gt;
-
-&lt;!-- On rows --&gt;
-&lt;tr class="table-primary"&gt;...&lt;/tr&gt;
-&lt;tr class="table-secondary"&gt;...&lt;/tr&gt;
-&lt;tr class="table-success"&gt;...&lt;/tr&gt;
-&lt;tr class="table-danger"&gt;...&lt;/tr&gt;
-&lt;tr class="table-warning"&gt;...&lt;/tr&gt;
-&lt;tr class="table-info"&gt;...&lt;/tr&gt;
-&lt;tr class="table-light"&gt;...&lt;/tr&gt;
-&lt;tr class="table-dark"&gt;...&lt;/tr&gt;
-
-&lt;!-- On cells (`td` or `th`) --&gt;
-&lt;tr&gt;
-  &lt;td class="table-primary"&gt;...&lt;/td&gt;
-  &lt;td class="table-secondary"&gt;...&lt;/td&gt;
-  &lt;td class="table-success"&gt;...&lt;/td&gt;
-  &lt;td class="table-danger"&gt;...&lt;/td&gt;
-  &lt;td class="table-warning"&gt;...&lt;/td&gt;
-  &lt;td class="table-info"&gt;...&lt;/td&gt;
-  &lt;td class="table-light"&gt;...&lt;/td&gt;
-  &lt;td class="table-dark"&gt;...&lt;/td&gt;
-&lt;/tr&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// 表格強調
-// 條紋行
-// 使用 .table-striped 在 &lt;tbody&gt; 範圍內任何表格行增加條紋樣式。
-&lt;table class="table table-striped"&gt;
-  ...
-&lt;/table&gt;
-
-// 這些類別也可以添加到表格變數中：
-&lt;table class="table table-dark table-striped"&gt;
-  ...
-&lt;/table&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// 可滑入行
-// 添加 .table-hover 以便在 &lt;tbody&gt; 範圍內的表格行上能夠呈現已滑入的狀態。
-&lt;table class="table table-hover"&gt;
-  ...
-&lt;/table&gt;
-
-&lt;table class="table table-dark table-hover"&gt;
-  ...
-&lt;/table&gt;
-
-// 這些可滑入行也可以和條紋行的變數結合使用。
-&lt;table class="table table-striped table-hover"&gt;
-  ...
-&lt;/table&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// 表格啟用
-// 透過 .table-active 類別突顯表格行或單獨的儲存格。
-&lt;table class="table"&gt;
-  &lt;thead&gt;
-    ...
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr class="table-active"&gt;
-      ...
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      ...
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th scope="row"&gt;3&lt;/th&gt;
-      &lt;td colspan="2" class="table-active"&gt;Larry the Bird&lt;/td&gt;
-      &lt;td&gt;@twitter&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;table class="table table-dark"&gt;
-  &lt;thead&gt;
-    ...
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr class="table-active"&gt;
-      ...
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      ...
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th scope="row"&gt;3&lt;/th&gt;
-      &lt;td colspan="2" class="table-active"&gt;Larry the Bird&lt;/td&gt;
-      &lt;td&gt;@twitter&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// 表格邊框
-// 帶框的表格
-// 使用 .table-bordered 在表格和儲存格的四邊上添加邊框。
-&lt;table class="table table-bordered"&gt;
-  ...
-&lt;/table&gt;
-
-// 通用類別的邊框顏色 可以用來改變顏色:
-&lt;table class="table table-bordered border-primary"&gt;
-  ...
-&lt;/table&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// 無框的表格
-// 使用 .table-borderless 使表格呈現無外部邊框。
-&lt;table class="table table-borderless"&gt;
-  ...
-&lt;/table&gt;
-
-&lt;table class="table table-dark table-borderless"&gt;
-  ...
-&lt;/table&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// 小表格
-// 使用 .table-sm 將儲存格 padding 縮減一半的方式讓表格更加精簡。
-&lt;table class="table table-sm"&gt;
-  ...
-&lt;/table&gt;
-
-&lt;table class="table table-dark table-sm"&gt;
-  ...
-&lt;/table&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// 垂直對齊
-// &lt;thead&gt; 中的儲存格始終與底部垂直對齊。&lt;tbody&gt; 中的儲存格繼承自 &lt;table&gt; 頂部的對齊方式。使用 垂直對齊 類別在需要的地方重新對齊。
-&lt;div class="table-responsive"&gt;
-  &lt;table class="table align-middle"&gt;
-    &lt;thead&gt;
-      &lt;tr&gt;
-        ...
-      &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-      &lt;tr&gt;
-        ...
-      &lt;/tr&gt;
-      &lt;tr class="align-bottom"&gt;
-        ...
-      &lt;/tr&gt;
-      &lt;tr&gt;
-        &lt;td&gt;...&lt;/td&gt;
-        &lt;td&gt;...&lt;/td&gt;
-        &lt;td class="align-top"&gt;This cell is aligned to the top.&lt;/td&gt;
-        &lt;td&gt;...&lt;/td&gt;
-      &lt;/tr&gt;
-    &lt;/tbody&gt;
-  &lt;/table&gt;
-&lt;/div&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// 巢狀
-// 巢狀表格不會繼承邊框樣式，啟用樣式以及表格變數。
-&lt;table class="table table-striped"&gt;
-  &lt;thead&gt;
-    ...
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    ...
-    &lt;tr&gt;
-      &lt;td colspan="4"&gt;
-        &lt;table class="table mb-0"&gt;
-          ...
-        &lt;/table&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-    ...
-  &lt;/tbody&gt;
-&lt;/table&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// 結構
-// 表頭
-// 與表格和深色表格類似，使用修飾符類別 .table-light 或 .table-dark 使 &lt;thead&gt; 呈現淺灰色或深灰色。
-&lt;table class="table"&gt;
-  &lt;thead class="table-light"&gt;
-    ...
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    ...
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;table class="table"&gt;
-  &lt;thead class="table-dark"&gt;
-    ...
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    ...
-  &lt;/tbody&gt;
-&lt;/table&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// 表尾
-&lt;table class="table"&gt;
-  &lt;thead&gt;
-    ...
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    ...
-  &lt;/tbody&gt;
-  &lt;tfoot&gt;
-    ...
-  &lt;/tfoot&gt;
-&lt;/table&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// 表格標題
-// &lt;caption&gt; 是一個表格的標題。它可以協助使用螢幕閱讀器的用戶找到表格，了解它的內容，並且決定是否要閱讀它。
-&lt;table class="table table-sm"&gt;
-  &lt;caption&gt;List of users&lt;/caption&gt;
-  &lt;thead&gt;
-    ...
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    ...
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-// 你也可以使用 .caption-top 將 &lt;caption&gt; 放在表格的最頂端。
-&lt;table class="table caption-top"&gt;
-  &lt;caption&gt;List of users&lt;/caption&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th scope="col"&gt;#&lt;/th&gt;
-      &lt;th scope="col"&gt;First&lt;/th&gt;
-      &lt;th scope="col"&gt;Last&lt;/th&gt;
-      &lt;th scope="col"&gt;Handle&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;th scope="row"&gt;1&lt;/th&gt;
-      &lt;td&gt;Mark&lt;/td&gt;
-      &lt;td&gt;Otto&lt;/td&gt;
-      &lt;td&gt;@mdo&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th scope="row"&gt;2&lt;/th&gt;
-      &lt;td&gt;Jacob&lt;/td&gt;
-      &lt;td&gt;Thornton&lt;/td&gt;
-      &lt;td&gt;@fat&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th scope="row"&gt;3&lt;/th&gt;
-      &lt;td&gt;Larry&lt;/td&gt;
-      &lt;td&gt;the Bird&lt;/td&gt;
-      &lt;td&gt;@twitter&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// 響應式表格
-// 響應式表格呈現水平滾動，可以使用 .table-responsive 包覆 .table 讓任何響應式表格跨裝置使用。或者 .table 中加入 .table-responsive{-sm|-md|-lg|-xl|-xxl} 創建響應式表格的最大斷點。
-// 始終呈現響應式
-// .table-responsive 可讓表格水平滾動來跨斷點使用。
-&lt;div class="table-responsive"&gt;
-  &lt;table class="table"&gt;
-    ...
-  &lt;/table&gt;
-&lt;/div&gt;</code></pre>
-
-
-
-<pre class="wp-block-code"><code>// 特定斷點
-// 根據需要的響應式表格設定 .table-responsive{-sm|-md|-lg|-xl|-xxl}。從該斷點開始，表格將正常運行並且不會水平滾動。
-// 這些表格可能會跑版，直到它們的響應樣式應用於特定的視窗寬度。
-&lt;div class="table-responsive"&gt;
-  &lt;table class="table"&gt;
-    ...
-  &lt;/table&gt;
-&lt;/div&gt;
-
-&lt;div class="table-responsive-sm"&gt;
-  &lt;table class="table"&gt;
-    ...
-  &lt;/table&gt;
-&lt;/div&gt;
-
-&lt;div class="table-responsive-md"&gt;
-  &lt;table class="table"&gt;
-    ...
-  &lt;/table&gt;
-&lt;/div&gt;
-
-&lt;div class="table-responsive-lg"&gt;
-  &lt;table class="table"&gt;
-    ...
-  &lt;/table&gt;
-&lt;/div&gt;
-
-&lt;div class="table-responsive-xl"&gt;
-  &lt;table class="table"&gt;
-    ...
-  &lt;/table&gt;
-&lt;/div&gt;
-
-&lt;div class="table-responsive-xxl"&gt;
-  &lt;table class="table"&gt;
-    ...
-  &lt;/table&gt;
-&lt;/div&gt;</code></pre>
 ]]></content:encoded>
 					
 		

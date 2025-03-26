@@ -1,0 +1,5080 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<title>React Real Estate App UI Design Tutorial for Beginners &#8211; wordpress_blog</title>
+<meta name="robots" content="noindex, nofollow">
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	<link rel="alternate" type="application/rss+xml" title="訂閱《wordpress_blog》&raquo; 資訊提供" href="/wordpress_blog/feed/">
+<link rel="alternate" type="application/rss+xml" title="訂閱《wordpress_blog》&raquo; 留言的資訊提供" href="/wordpress_blog/comments/feed/">
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.7.2"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"🏳️‍⚧️","🏳️​⚧️")?!1:!n(e,"🇺🇳","🇺​🇳")&&!n(e,"🏴󠁧󠁢󠁥󠁮󠁧󠁿","🏴​󠁧​󠁢​󠁥​󠁮​󠁧​󠁿");case"emoji":return!n(e,"🐦‍⬛","🐦​⬛")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+</script>
+<style id="wp-emoji-styles-inline-css">img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}</style>
+<link rel="stylesheet" id="wp-block-library-css" href="/wordpress_blog/wp-includes/css/dist/block-library/style.min.css?ver=6.7.2" media="all">
+<style id="classic-theme-styles-inline-css">/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}</style>
+<style id="global-styles-inline-css">:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--palette-1-color-0: #212121;--wp--preset--color--palette-1-color-1: #757575;--wp--preset--color--palette-1-color-2: #212121;--wp--preset--color--palette-1-color-3: #212121;--wp--preset--color--palette-1-color-4: #212121;--wp--preset--color--palette-1-color-5: #f5f5f5;--wp--preset--color--palette-1-color-6: #ffffff;--wp--preset--color--palette-1-color-7: #ffffff;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 14px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 18px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--normal: 16px;--wp--preset--font-size--larger: 24px;--wp--preset--font-size--extra-large: 32px;--wp--preset--font-size--huge: 48px;--wp--preset--font-size--gigantic: 64px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}</style>
+<link rel="stylesheet" id="botiga-style-css" href="/wordpress_blog/wp-content/themes/botiga/style.css?ver=1.1.2" media="all">
+<link rel="stylesheet" id="botiga-style-min-css" href="/wordpress_blog/wp-content/themes/botiga/assets/css/styles.min.css?ver=1.1.2" media="all">
+<link rel="stylesheet" id="botiga-custom-styles-css" href="/wordpress_blog/wp-content/uploads/botiga/custom-styles.css?ver=1648804469" media="all">
+<link rel="https://api.w.org/" href="/wordpress_blog/wp-json/">
+<link rel="alternate" title="JSON" type="application/json" href="/wordpress_blog/wp-json/wp/v2/posts/876">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/wordpress_blog/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 6.7.2">
+<link rel="canonical" href="/wordpress_blog/react-real-estate-app-ui-design/">
+<link rel="shortlink" href="/wordpress_blog/?p=876">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="/wordpress_blog/wp-json/oembed/1.0/embed?url=%2Freact-real-estate-app-ui-design%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="/wordpress_blog/wp-json/oembed/1.0/embed?url=%2Freact-real-estate-app-ui-design%2F&#038;format=xml">
+<link rel="icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png" sizes="32x32">
+<link rel="icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png" sizes="192x192">
+<link rel="apple-touch-icon" href="/wordpress_blog/wp-content/uploads/2022/03/logo.png">
+<meta name="msapplication-TileImage" content="/wp-content/uploads/2022/03/logo.png">
+	
+</head>
+
+<body class="post-template-default single single-post postid-876 single-format-standard wp-custom-logo wp-embed-responsive header-header_layout_1 blog-single-layout1">
+
+
+<div id="page" class="site">
+
+	<a class="skip-link screen-reader-text" href="#primary">Skip to content</a>
+
+	
+			<div class="top-bar visibility-desktop-only">
+				<div class="container-fluid">
+					<div class="top-bar-inner">
+						<div class="row valign">
+
+															<div class="col header-elements delimiter-none">
+									<div class="header-item top-bar-social"><div class="social-profile">
+<a target="_blank" href="https://www.facebook.com/watergrass0402/"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></i></a><a target="_blank" href="https://github.com/GeeHsu"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></i></a>
+</div></div>								</div>
+																						<div class="col header-elements delimiter-none">
+													
+			<nav class="header-item top-bar-secondary-navigation secondary-navigation">
+				<div class="menu-topbar-container"><ul id="secondary" class="menu">
+<li id="menu-item-143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143"><a href="/wordpress_blog/setup/">網站架設</a></li>
+<li id="menu-item-144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a href="/wordpress_blog/source/">資料來源</a></li>
+<li id="menu-item-262" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-262"><a href="/wordpress_blog/resource/">學習資源</a></li>
+</ul></div>			</nav>
+											</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			
+							
+				<header id="masthead" class="site-header header_layout_1">
+					<div class="container-fluid">
+						<div class="site-header-inner">
+							<div class="row valign">
+								<div class="col-md-5">
+										
+			<nav id="site-navigation" class="main-navigation">
+				<div class="menu-navbar-container"><ul id="primary-menu" class="menu">
+<li id="menu-item-109" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="/wordpress_blog/about/">關於</a></li>
+<li id="menu-item-110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-110">
+<a href="/wordpress_blog/learn/">學習</a><span tabindex="0" class="dropdown-symbol"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512.011 512.011"><path d="M505.755 123.592c-8.341-8.341-21.824-8.341-30.165 0L256.005 343.176 36.421 123.592c-8.341-8.341-21.824-8.341-30.165 0s-8.341 21.824 0 30.165l234.667 234.667a21.275 21.275 0 0015.083 6.251 21.275 21.275 0 0015.083-6.251l234.667-234.667c8.34-8.341 8.34-21.824-.001-30.165z"></path></svg></i></span>
+<ul class="sub-menu">
+	<li id="menu-item-140" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-140"><a href="/wordpress_blog/category/hexschool/">六角學院</a></li>
+	<li id="menu-item-141" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-141"><a href="/wordpress_blog/category/ninja/">Net Ninja</a></li>
+	<li id="menu-item-483" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-483"><a href="/wordpress_blog/category/youtube/">Youtube</a></li>
+</ul>
+</li>
+<li id="menu-item-111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="/wordpress_blog/linestore/">LINE STORE</a></li>
+</ul></div>			</nav><!-- #site-navigation -->
+											</div>
+								<div class="col-md-2">
+												<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog" decoding="async" fetchpriority="high"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+											</div>
+								<div class="col-md-5 header-elements">
+																	</div>							
+							</div>
+						</div>
+					</div>
+								<div class="header-search-form">
+			<form role="search" method="get" class="search-form" action="/">
+	<label class="screen-reader-text" for="search-form-1">Search&hellip;</label>
+	<input type="search" id="search-form-1" class="search-field" value="" name="s" placeholder="Search &hellip;">
+	<button type="submit" class="search-submit" value="Search"><i class="ws-svg-icon"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 100 14.25 7.125 7.125 0 000-14.25zM2.25 10.875a8.625 8.625 0 1117.25 0 8.625 8.625 0 01-17.25 0z"></path><path fill-rule="evenodd" d="M15.913 15.914a.75.75 0 011.06 0l4.557 4.556a.75.75 0 01-1.06 1.06l-4.557-4.556a.75.75 0 010-1.06z"></path></svg></i></button>
+</form>
+			</div>
+			
+									</header>
+
+										<div class="search-overlay"></div>
+			
+			<div class="botiga-offcanvas-menu">
+				<div class="mobile-header-item">
+					<div class="row">
+						<div class="col">
+										<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog" decoding="async"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+									</div>
+						<div class="col align-right">
+							<a class="mobile-menu-close" href="#"><i class="ws-svg-icon icon-cancel"><svg width="16" height="16" fill="none" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.219.781L.78 2.22 9.562 11l-8.78 8.781 1.437 1.438L11 12.437l8.781 8.782 1.438-1.438L12.437 11l8.782-8.781L19.78.78 11 9.562 2.219.783z"></path></svg></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="mobile-header-item">
+						
+			<nav id="site-navigation" class="main-navigation">
+				<div class="menu-navbar-container"><ul id="primary-menu" class="menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="/wordpress_blog/about/">關於</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-110">
+<a href="/wordpress_blog/learn/">學習</a><span tabindex="0" class="dropdown-symbol"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512.011 512.011"><path d="M505.755 123.592c-8.341-8.341-21.824-8.341-30.165 0L256.005 343.176 36.421 123.592c-8.341-8.341-21.824-8.341-30.165 0s-8.341 21.824 0 30.165l234.667 234.667a21.275 21.275 0 0015.083 6.251 21.275 21.275 0 0015.083-6.251l234.667-234.667c8.34-8.341 8.34-21.824-.001-30.165z"></path></svg></i></span>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-140"><a href="/wordpress_blog/category/hexschool/">六角學院</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-141"><a href="/wordpress_blog/category/ninja/">Net Ninja</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-483"><a href="/wordpress_blog/category/youtube/">Youtube</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="/wordpress_blog/linestore/">LINE STORE</a></li>
+</ul></div>			</nav><!-- #site-navigation -->
+							</div>
+				<div class="mobile-header-item">
+									<a target="&quot;_blank&quot;" class="button header-item" href="https://www.facebook.com/watergrass0402/">聯絡我</a>
+							</div>			
+			</div>
+			
+							<header id="masthead-mobile" class="site-header mobile-header">
+					<div class="container-fluid">
+						<div class="row valign flex-nowrap">
+							<div class="col-sm-6 col-md-4 col-grow-mobile">
+											<div class="site-branding">
+				<a href="/wordpress_blog/" class="custom-logo-link" rel="home"><img width="512" height="512" src="/wordpress_blog/wp-content/uploads/2022/03/logo.png" class="custom-logo" alt="wordpress_blog" decoding="async"></a>					<p class="site-title"><a href="/wordpress_blog/" rel="home">wordpress_blog</a></p>
+										<p class="site-description">This is a dynamic to static website.</p>
+							</div>
+<!-- .site-branding -->
+										</div>
+							<div class="col-auto col-sm-6 col-md-8 col-grow-mobile header-elements valign align-right">
+																	
+															<a href="#" class="menu-toggle">
+				<i class="ws-svg-icon"><svg width="16" height="11" viewbox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="16" height="1"></rect><rect y="5" width="16" height="1"></rect><rect y="10" width="16" height="1"></rect></svg></i>
+			</a>
+																		</div>						
+						</div>
+					</div>
+								<div class="header-search-form">
+			<form role="search" method="get" class="search-form" action="/">
+	<label class="screen-reader-text" for="search-form-2">Search&hellip;</label>
+	<input type="search" id="search-form-2" class="search-field" value="" name="s" placeholder="Search &hellip;">
+	<button type="submit" class="search-submit" value="Search"><i class="ws-svg-icon"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 100 14.25 7.125 7.125 0 000-14.25zM2.25 10.875a8.625 8.625 0 1117.25 0 8.625 8.625 0 01-17.25 0z"></path><path fill-rule="evenodd" d="M15.913 15.914a.75.75 0 011.06 0l4.557 4.556a.75.75 0 01-1.06 1.06l-4.557-4.556a.75.75 0 010-1.06z"></path></svg></i></button>
+</form>
+			</div>
+			
+									</header>
+						<div class="search-overlay"></div>
+			<div class="header-image"><img src="/wordpress_blog/wp-content/uploads/2022/03/seashore.jpg" width="1920" height="500" alt=""></div>
+<div class="container content-wrapper"><div class="row main-row">			
+	<main id="primary" class="site-main no-sidebar">
+
+		
+
+<article id="post-876" class="post-876 post type-post status-publish format-standard hentry category-youtube">
+	
+		
+	<header class="entry-header">
+		
+		
+		<h1 class="entry-title">React Real Estate App UI Design Tutorial for Beginners</h1>			<div class="entry-meta entry-meta-below delimiter-none">
+<span class="posted-on"><a href="/wordpress_blog/react-real-estate-app-ui-design/" rel="bookmark"><time class="entry-date published" datetime="2024-09-14T14:07:13+08:00">2024 年 9 月 14 日</time><time class="updated" datetime="2025-03-26T09:00:37+08:00">2025 年 3 月 26 日</time></a></span><span class="byline"> <span class="author vcard"><a class="url fn n" href="/wordpress_blog/author/gee-hsu/">gee.hsu</a></span></span>
+</div>			</header><!-- .entry-header -->
+
+	
+	<div class="entry-content">
+		
+<p>Learning From Youtube Channel: Lama Dev<br>Video: React React Estate App UI Design Tutorial for Beginners<br>Thank you.</p>
+
+
+
+<p>00:00:00 – Introduction<br>00:02:17 – Installation<br>00:08:17 – Responsive Layout with CSS<br>00:15:36 – React Responsive Navbar Design<br>00:24:26 – React Responsive Hamburger Menu Design<br>00:33:09 – Real Estate App Homepage Design<br>00:34:28 – React.js VSCode Snippets<br>00:36:00 – React Responsive Hero Section Design<br>00:44:27 – Search Bar Design with React &amp; CSS<br>01:03:49 – React Router Dom Tutorial 2024<br>01:07:08 – React Router Dom Outlet Tutorial<br>01:12:25 – React Responsive List Page Design<br>01:39:30 – React Map Tutorial (Open Source Map Library)<br>01:40:41 – React Leaflet Map Tutorial<br>01:48:17 – React.js Responsive Single Page Design<br>01:58:23 – React.js Image Slider Tutorial From Scratch<br>02:12:41 – Property Features Design<br>02:30:00 – React.js Responsive Profile Page Design<br>02:45:03 – React.js Chat Component Design<br>02:50:17 – React Messenger Chat Window Design<br>03:00:55 – What’s Next?<br>03:01:25 – Outro</p>
+
+
+
+<h2 class="wp-block-heading">Introduction</h2>
+
+
+
+<h2 class="wp-block-heading">Installation</h2>
+
+
+
+<ul class="wp-block-list">
+<li>建立 estateui 資料夾</li>
+
+
+
+<li>
+<a href="https://github.com/safak/react-estate-ui" target="_blank" rel="noreferrer noopener">Source Code</a><br>可以使用 git clone 下載開始專案<br>git clone –single-branch -b starter web URL</li>
+
+
+
+<li>建議別依賴單一技術，因為在工作上會被要求不同的技術</li>
+
+
+
+<li>安裝 sass 套件 – npm i sass</li>
+
+
+
+<li>在 src 資料夾裡面建立 index.scss 檔案</li>
+
+
+
+<li>修改 main.jsx 檔案</li>
+
+
+
+<li>修改 index.scss 檔案</li>
+
+
+
+<li>修改 App.jsx 檔案</li>
+
+
+
+<li>提到需要知道 CSS 相關知識</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// main.jsx
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App.jsx'
+import './index.scss'
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  &lt;React.StrictMode&gt;
+    &lt;App /&gt;
+  &lt;/React.StrictMode&gt;,
+)
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// index.scss
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  overflow: hidden;
+}
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// App.jsx
+function App() {
+  return (
+    &lt;div&gt;&lt;a href="/"&gt;Hello&lt;/a&gt;&lt;/div&gt;
+  )
+}
+
+export default App
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">Responsive Layout with CSS</h2>
+
+
+
+<ul class="wp-block-list">
+<li>修改 App.jsx 檔案</li>
+
+
+
+<li>在 src 資料夾裡面建立 layout.scss 檔案</li>
+
+
+
+<li>在 src 資料夾裡面建立 responsive.scss 檔案</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// App.jsx
+import "./layout.scss"
+
+function App() {
+  return (
+    &lt;div className="layout"&gt;
+      Hello
+    &lt;/div&gt;
+  )
+}
+
+export default App
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// layout.scss
+@import "./responsive.scss";
+
+.layout {
+  height: 100vh;
+  max-width: 1366px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @include lg{
+    background-color: rgb(247, 210, 196);
+    max-width: 1280px;
+  }
+
+  @include md{
+    background-color: rgb(186, 203, 234);
+    max-width: 768px;
+  }
+
+  @include sm{
+    background-color: rgb(239, 200, 200);
+    max-width: 640px;
+  }
+}
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// responsive.scss
+@mixin sm {
+  @media(max-width: 738px) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media(max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media(max-width: 1366px) {
+    @content;
+  }
+}
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">React Responsive Navbar Design</h2>
+
+
+
+<ul class="wp-block-list">
+<li>在 src 資料夾裡面建立 components 資料夾</li>
+
+
+
+<li>在 components 資料夾裡面建立 Navbar.jsx 檔案</li>
+
+
+
+<li>修改 App.jsx 檔案</li>
+
+
+
+<li>在 components 資料夾裡面建立 navbar.scss 檔案</li>
+
+
+
+<li>在 components 資料夾裡面建立 navbar 資料夾</li>
+
+
+
+<li>把 Navbar.jsx、navbar.scss 檔案移動到 navbar 資料夾裡面</li>
+
+
+
+<li>修改 App.jsx 檔案 Navbar 匯入路徑</li>
+
+
+
+<li>修改 Navbar.jsx 檔案</li>
+
+
+
+<li>修改 navbar.scss 檔案</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// Navbar.jsx
+import "./navbar.scss"
+
+function Navbar() {
+  return (
+    &lt;nav&gt;
+      &lt;div className="left"&gt;
+        &lt;a href="/" className="logo"&gt;
+          &lt;img src="/logo.png" /&gt;
+          &lt;span&gt;LamaEstate&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;a href="/"&gt;Home&lt;/a&gt;
+        &lt;a href="/"&gt;About&lt;/a&gt;
+        &lt;a href="/"&gt;Contact&lt;/a&gt;
+        &lt;a href="/"&gt;Agents&lt;/a&gt;
+      &lt;/div&gt;
+      &lt;div className="right"&gt;
+        &lt;a href="/"&gt;Sign in&lt;/a&gt;
+        &lt;a href="/" className="register"&gt;Sign up&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/nav&gt;
+  )
+}
+
+export default Navbar;
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// App.jsx
+import Navbar from './components/navbar/Navbar'
+import "./layout.scss"
+
+function App() {
+  return (
+    &lt;div className="layout"&gt;
+      &lt;Navbar /&gt;
+    &lt;/div&gt;
+  )
+}
+
+export default App
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// navbar.scss
+nav {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  a {
+    transition: all 0.4s ease;
+
+    &amp;:hover {
+      scale: 1.05;
+    }
+  }
+
+  .left{
+    flex: 3;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    .logo {
+      font-weight: bold;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      img {
+        width: 28px;
+      }
+    }
+  }
+  .right{
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #fcf5f3;
+    height: 100%;
+
+    a {
+      padding: 12px 24px;
+      margin: 20px;
+    }
+
+    .register {
+      background-color: #fece51;
+    }
+  }
+}
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">React Responsive Hamburger Menu Design</h2>
+
+
+
+<ul class="wp-block-list">
+<li>修改 navbar.scss 檔案</li>
+
+
+
+<li>修改 Navbar.jsx 檔案</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// navbar.scss
+@import "../../responsive.scss";
+
+nav {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  a {
+    transition: all 0.4s ease;
+
+    @include sm {
+      display: none;
+    }
+
+    &amp;:hover {
+      scale: 1.05;
+    }
+  }
+
+  .left{
+    flex: 3;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    .logo {
+      font-weight: bold;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      img {
+        width: 28px;
+      }
+
+      span {
+        @include md {
+          display: none;
+        }
+
+        @include sm {
+          display: initial;
+        }
+      }
+    }
+  }
+  .right{
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #fcf5f3;
+    height: 100%;
+
+    @include md {
+      background-color: transparent;
+    }
+
+    a {
+      padding: 12px 24px;
+      margin: 20px;
+    }
+
+    .register {
+      background-color: #fece51;
+    }
+
+    .menuIcon {
+      display: none;
+      z-index: 999;
+
+      img {
+        width: 36px;
+        height: 36px;
+        cursor: pointer;
+      }
+
+      @include sm {
+        display: inline;
+      }
+    }
+
+    .menu {
+      position: absolute;
+      top: 0;
+      right: -50%;
+      background-color: black;
+      color: white;
+      height: 100vh;
+      width: 50%;
+      transition: all 1s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+
+      &amp;.active {
+        right: 0;
+      }
+
+      @include sm {
+        a {
+          display: initial;
+        }
+      }
+    }
+  }
+}
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// Navbar.jsx
+import { useState } from "react";
+import "./navbar.scss"
+
+function Navbar() {
+  const &#91;open, setOpen] = useState(false);
+  return (
+    &lt;nav&gt;
+      &lt;div className="left"&gt;
+        &lt;a href="/" className="logo"&gt;
+          &lt;img src="/logo.png" /&gt;
+          &lt;span&gt;LamaEstate&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;a href="/"&gt;Home&lt;/a&gt;
+        &lt;a href="/"&gt;About&lt;/a&gt;
+        &lt;a href="/"&gt;Contact&lt;/a&gt;
+        &lt;a href="/"&gt;Agents&lt;/a&gt;
+      &lt;/div&gt;
+      &lt;div className="right"&gt;
+        &lt;a href="/"&gt;Sign in&lt;/a&gt;
+        &lt;a href="/" className="register"&gt;Sign up&lt;/a&gt;
+        &lt;div className="menuIcon"&gt;
+          &lt;img src="/menu.png" alt="" onClick={() =&gt; setOpen((prev) =&gt; !prev)} /&gt;
+        &lt;/div&gt;
+        &lt;div className={open ? "menu active" : "menu"}&gt;
+          &lt;a href="/"&gt;Home&lt;/a&gt;
+          &lt;a href="/"&gt;About&lt;/a&gt;
+          &lt;a href="/"&gt;Contact&lt;/a&gt;
+          &lt;a href="/"&gt;Agents&lt;/a&gt;
+          &lt;a href="/"&gt;Sign in&lt;/a&gt;
+          &lt;a href="/"&gt;Sign up&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/nav&gt;
+  )
+}
+
+export default Navbar;
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">Real Estate App Homepage Design</h2>
+
+
+
+<ul class="wp-block-list">
+<li>在 src 資料夾裡面建立 pages 資料夾或者 routes 資料夾<br>這裡選擇建立 routes 資料夾</li>
+
+
+
+<li>在 routes 資料夾裡面建立 homePage 資料夾</li>
+
+
+
+<li>在 homePage 資料夾裡面建立 homePage.jsx 檔案</li>
+
+
+
+<li>在 homePage 資料夾裡面建立 homePage.scss 檔案</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">React.js VSCode Snippets</h2>
+
+
+
+<ul class="wp-block-list">
+<li>使用 fcs 片段快速建立程式碼<br>修改 homePage.jsx 檔案</li>
+
+
+
+<li>介紹如何自訂片段程式碼設定 – <a href="https://github.com/safak/snippets" target="_blank" rel="noreferrer noopener">Snippets</a><br>修改 javascriptreact.json 檔案</li>
+
+
+
+<li>Snippets: Configure User Snippets > javascriptreact.json</li>
+
+
+
+<li>修改 App.jsx 檔案</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// javascriptreact.json
+{
+    "fcs": {
+        "prefix": "fcs",
+        "body": &#91;
+            "import './${TM_FILENAME_BASE/^(.)/${1:/downcase}/}.scss'"
+            ""
+            "function ${1:${TM_FILENAME_BASE/(.)(.*)/${1:/capitalize}${2}/}}(){",
+            "  return (",
+            "    &lt;div className='${TM_FILENAME_BASE/^(.)/${1:/downcase}/}'&gt;${1:${TM_FILENAME_BASE/(.)(.*)/${1:/capitalize}${2}/}}&lt;/div&gt;",
+            "  )",
+            "}",
+            "",
+            "export default ${1:${TM_FILENAME_BASE/(.)(.*)/${1:/capitalize}${2}/}}"
+        ],
+        "description": "Create a functional component with Sass"
+    },
+    "acs": {
+	"prefix": "acs",
+	"body": &#91;
+            "import './${TM_FILENAME_BASE/^(.)/${1:/downcase}/}.scss'"
+            ""
+            "const ${1:${TM_FILENAME_BASE/(.)(.*)/${1:/capitalize}${2}/}} = () =&gt; {",
+            "  return (",
+            "    &lt;div className='${TM_FILENAME_BASE/^(.)/${1:/downcase}/}'&gt;${1:${TM_FILENAME_BASE/(.)(.*)/${1:/capitalize}${2}/}}&lt;/div&gt;",
+            "  )",
+            "}",
+            "",
+            "export default ${1:${TM_FILENAME_BASE/(.)(.*)/${1:/capitalize}${2}/}}" 
+	],
+	"description": "Create an arrow component with Sass"
+    }
+}
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// homePage.jsx
+import './homePage.scss'
+
+function HomePage(){
+  return (
+    &lt;div className='homePage'&gt;HomePage&lt;/div&gt;
+  )
+}
+
+export default HomePage
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">React Responsive Hero Section Design</h2>
+
+
+
+<ul class="wp-block-list">
+<li>修改 App.jsx 檔案</li>
+
+
+
+<li>修改 layout.scss 檔案<br>.content CSS 畫面高度滿版的方法有二<br>– 使用 height: calc(100vh – 100px);<br>– 使用 flex 方法 (這裡選擇這個方法)</li>
+
+
+
+<li>修改 homePage.jsx 檔案</li>
+
+
+
+<li>修改 homePage.scss 檔案</li>
+
+
+
+<li>在 components 資料夾裡面建立 searchBar 資料夾</li>
+
+
+
+<li>在 searchBar 資料夾裡面建立 SearchBar.jsx 檔案</li>
+
+
+
+<li>使用 fcs 片段快速建立程式碼<br>修改 SearchBar.jsx 檔案</li>
+
+
+
+<li>在 searchBar 資料夾裡面建立 searchBar.scss 檔案</li>
+
+
+
+<li>修改 searchBar.scss 檔案</li>
+
+
+
+<li>修改 homePage.jsx 檔案，加入 &lt;SearchBar />、匯入 SearchBar，增加 .boxes 內容</li>
+
+
+
+<li>修改 homePage.scss 檔案</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// App.jsx
+import Navbar from './components/navbar/Navbar'
+import "./layout.scss"
+import HomePage from './routes/homePage/homePage'
+
+function App() {
+  return (
+    &lt;div className="layout"&gt;
+      &lt;div className="navbar"&gt;
+        &lt;Navbar /&gt;
+      &lt;/div&gt;
+      &lt;div className="content"&gt;
+        &lt;HomePage /&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  )
+}
+
+export default App
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// layout.scss
+@import "./responsive.scss";
+
+.layout {
+  height: 100vh;
+  max-width: 1366px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+
+  @include lg{
+    background-color: rgb(247, 210, 196);
+    max-width: 1280px;
+  }
+
+  @include md{
+    background-color: rgb(186, 203, 234);
+    max-width: 768px;
+  }
+
+  @include sm{
+    background-color: rgb(239, 200, 200);
+    max-width: 640px;
+  }
+
+  .content {
+    flex: 1;
+  }
+}
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// homePage.jsx
+import SearchBar from "../../components/searchBar/SearchBar";
+import './homePage.scss';
+
+function HomePage(){
+  return (
+    &lt;div className='homePage'&gt;
+      &lt;div className="textContainer"&gt;
+        &lt;div className="wrapper"&gt;
+          &lt;h1 className='title'&gt;Find Real Estate &amp; Get Your Dream Place&lt;/h1&gt;
+          &lt;p&gt;
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+            explicabo suscipit cum eius, iure est nulla animi consequatur
+            facilis id pariatur fugit quos laudantium temporibus dolor ea
+            repellat provident impedit!
+          &lt;/p&gt;
+          &lt;SearchBar /&gt;
+          &lt;div className="boxes"&gt;
+            &lt;div className="box"&gt;
+              &lt;h1&gt;16+&lt;/h1&gt;
+              &lt;h2&gt;Years of Experience&lt;/h2&gt;
+            &lt;/div&gt;
+            &lt;div className="box"&gt;
+              &lt;h1&gt;200&lt;/h1&gt;
+              &lt;h2&gt;Award Gained&lt;/h2&gt;
+            &lt;/div&gt;
+            &lt;div className="box"&gt;
+              &lt;h1&gt;1200+&lt;/h1&gt;
+              &lt;h2&gt;Property Ready&lt;/h2&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div className="imgContainer"&gt;
+        &lt;img src="/bg.png" alt="" /&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  )
+}
+
+export default HomePage
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// homePage.scss
+.homePage {
+  display: flex;
+  height: 100%;
+
+  .textContainer {
+    flex: 3;
+
+    .wrapper {
+      padding-right: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 50px;
+      height: 100%;
+
+      .title {
+        font-size: 64px;
+      }
+
+      .boxes {
+        display: flex;
+        justify-content: space-between;
+
+        h1 {
+          font-size: 36px;
+        }
+
+        h2 {
+          font-size: 20px;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+
+  .imgContainer {
+    flex: 2;
+    background-color: #fcf5f3;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 115%;
+      position: absolute;
+      right: 0;
+    }
+  }
+}
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// SearchBar.jsx
+import './searchBar.scss'
+
+function SearchBar(){
+  return (
+    &lt;div className='searchBar'&gt;SearchBar&lt;/div&gt;
+  )
+}
+
+export default SearchBar
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// searchBar.scss
+.searchBar {
+  
+}
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">Search Bar Design with React &amp; CSS</h2>
+
+
+
+<ul class="wp-block-list">
+<li>修改 SearchBar.jsx 檔案</li>
+
+
+
+<li>修改 searchBar.scss 檔案</li>
+
+
+
+<li>修改 homePage.scss 檔案</li>
+
+
+
+<li>修改 layout.scss 檔案</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// SearchBar.jsx
+import { useState } from 'react'
+import './searchBar.scss'
+
+const types = &#91;"buy", "rent"];
+
+function SearchBar(){
+  const &#91;query, setQuery] = useState({
+    type: "buy",
+    location: "",
+    minPrice: 0,
+    maxPrice: 0,
+  });
+
+  const switchType = (val) =&gt; {
+    setQuery(prev =&gt; ({ ...prev, type: val }));
+  };
+
+
+  return (
+    &lt;div className='searchBar'&gt;
+      &lt;div className="type"&gt;
+        {types.map((type) =&gt; (
+          &lt;button key={type} onClick={() =&gt; switchType(type)} className={query.type === type ? "active" : ""}&gt;
+            {type}
+          &lt;/button&gt;
+        ))}
+      &lt;/div&gt;
+      &lt;form&gt;
+        &lt;input type="text" name='location' placeholder='City Location' /&gt;
+        &lt;input
+          type="number"
+          name='minPrice'
+          min={0}
+          max={10000000}
+          placeholder='Min Price'
+        /&gt;
+        &lt;input
+          type="number"
+          name='maxPrice'
+          min={0}
+          max={10000000}
+          placeholder='Max Price'
+        /&gt;
+        &lt;button&gt;
+          &lt;img src="/search.png" alt="" /&gt;
+        &lt;/button&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
+  )
+}
+
+export default SearchBar
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// searchBar.scss
+@import "../../responsive.scss";
+
+.searchBar {
+  .type {
+
+
+    button {
+      padding: 16px 36px;
+      border: 1px solid #999;
+      border-bottom: none;
+      cursor: pointer;
+      background-color: white;
+      text-transform: capitalize;
+
+      &amp;.active {
+        background-color: black;
+        color: white;
+      }
+
+      &amp;:first-child {
+        border-top-left-radius: 5px;
+        border-right: none;
+      }
+
+      &amp;:last-child {
+        border-top-right-radius: 5px;
+        border-left: none;
+      }
+    }
+  }
+
+  form {
+    border: 1px solid #999;
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    gap: 5px;
+
+    @include sm {
+      flex-direction: column;
+      border: none;
+    }
+
+    input {
+      border: none;
+      padding: 0px 10px;
+      width: 200px;
+
+      @include lg {
+        padding: 0px 5px;
+
+        &amp;:nth-child(2), &amp;:nth-child(3) {
+          width: 140px;
+        }
+      }
+
+      @include md {
+        width: 200px;
+        &amp;:nth-child(2),
+        &amp;:nth-child(3) {
+          width: 200px;
+        }
+      }
+
+      @include sm {
+        width: auto;
+        &amp;:nth-child(2),
+        &amp;:nth-child(3) {
+          width: auto;
+        }
+        padding: 20px;
+        border: 1px solid #999;
+      }
+    }
+
+    button {
+      border: none;
+      cursor: pointer;
+      background-color: #fece51;
+      flex: 1;
+
+      @include sm {
+        padding: 10px;
+      }
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// homePage.scss
+@import "../../responsive.scss";
+
+.homePage {
+  display: flex;
+  height: 100%;
+
+  .textContainer {
+    flex: 3;
+
+    .wrapper {
+      padding-right: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 50px;
+      height: 100%;
+
+      @include md {
+        padding: 0;
+      }
+
+      @include sm {
+        justify-content: flex-start;
+      }
+
+      .title {
+        font-size: 64px;
+
+        @include lg {
+          font-size: 48px;
+        }
+      }
+
+      .boxes {
+        display: flex;
+        justify-content: space-between;
+
+        @include sm {
+          display: none;
+        }
+
+        h1 {
+          font-size: 36px;
+
+          @include lg {
+            font-size: 32px;
+          }
+        }
+
+        h2 {
+          font-size: 20px;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+
+  .imgContainer {
+    flex: 2;
+    background-color: #fcf5f3;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    @include md {
+      display: none;
+    }
+
+    img {
+      width: 115%;
+      position: absolute;
+      right: 0;
+
+      @include lg {
+        width: 105%;
+      }
+    }
+  }
+}
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// src/layout.scss
+@import "./responsive.scss";
+
+.layout {
+  height: 100vh;
+  max-width: 1366px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+
+  @include lg{
+    // background-color: rgb(247, 210, 196);
+    max-width: 1280px;
+  }
+
+  @include md{
+    // background-color: rgb(186, 203, 234);
+    max-width: 768px;
+  }
+
+  @include sm{
+    // background-color: rgb(239, 200, 200);
+    max-width: 640px;
+  }
+
+  .content {
+    flex: 1;
+  }
+}
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">React Router Dom Tutorial 2024</h2>
+
+
+
+<ul class="wp-block-list">
+<li>在 routes 資料夾裡面建立 listPage 資料夾</li>
+
+
+
+<li>在 listPage 資料夾裡面建立 listPage.jsx 檔案</li>
+
+
+
+<li>修改 listPage.jsx 檔案，使用程式碼片段 fcs 快速建立</li>
+
+
+
+<li>在 listPage 資料夾裡面建立 listPage.scss 檔案</li>
+
+
+
+<li>修改 listPage.scss 檔案</li>
+
+
+
+<li>講解使用 React Router</li>
+
+
+
+<li>安裝 React Router 套件 – npm i react-router-dom</li>
+
+
+
+<li>修改 App.jsx 檔案</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// src/routes/listPage/listPage.jsx
+import './listPage.scss'
+
+function ListPage(){
+  return (
+    &lt;div className='listPage'&gt;ListPage&lt;/div&gt;
+  )
+}
+
+export default ListPage
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// src/routes/listPage/listPage.scss
+.listPage {
+
+}
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// src/App.jsx
+import Navbar from './components/navbar/Navbar'
+import "./layout.scss"
+import HomePage from './routes/homePage/homePage'
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+  Link,
+} from 'react-router-dom'
+import ListPage from './routes/listPage/listPage'
+
+function App() {
+
+  const router = createBrowserRouter(&#91;
+    {
+      path: "/",
+      element: &lt;HomePage /&gt;
+    },
+    {
+      path: "/list",
+      element: &lt;ListPage /&gt;
+    },
+  ]);
+
+  return (
+    // &lt;div className="layout"&gt;
+    //   &lt;div className="navbar"&gt;
+    //     &lt;Navbar /&gt;
+    //   &lt;/div&gt;
+    //   &lt;div className="content"&gt;
+    //     &lt;HomePage /&gt;
+    //   &lt;/div&gt;
+    // &lt;/div&gt;
+    &lt;RouterProvider router={router} /&gt;
+  )
+}
+
+export default App
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">React Router Dom Outlet Tutorial</h2>
+
+
+
+<ul class="wp-block-list">
+<li>修改 App.jsx 檔案</li>
+
+
+
+<li>在 routes 資料夾裡面建立 layout 資料夾</li>
+
+
+
+<li>在 layout 資料夾裡面建立 layout.jsx 檔案</li>
+
+
+
+<li>在 layout 資料夾裡面建立 layout.scss 檔案</li>
+
+
+
+<li>修改 layout.scss 檔案</li>
+
+
+
+<li>修改 layout.jsx 檔案，使用程式碼片段 fcs 快速建立程式碼</li>
+
+
+
+<li>修改 App.jsx 檔案</li>
+
+
+
+<li>修改 layout.jsx 檔案</li>
+
+
+
+<li>到根目錄 layout.scss 檔案複製程式碼</li>
+
+
+
+<li>修改 layout.scss 檔案，貼上程式碼</li>
+
+
+
+<li>刪除根目錄 layout.scss 檔案</li>
+
+
+
+<li>修改 App.jsx 檔案</li>
+
+
+
+<li>在 routes 資料夾裡面建立 singlePage 資料夾</li>
+
+
+
+<li>在 singlePage 資料夾裡面建立 singlePage.jsx 檔案</li>
+
+
+
+<li>修改 singlePage.jsx 檔案，使用程式碼片段 fcs 快速建立</li>
+
+
+
+<li>在 singlePage 資料夾裡面建立 singlePage.scss 檔案</li>
+
+
+
+<li>在 routes 資料夾裡面建立 login 資料夾</li>
+
+
+
+<li>在 login 資料夾裡面建立 login.jsx 檔案</li>
+
+
+
+<li>在 login 資料夾裡面建立 login.scss 檔案</li>
+
+
+
+<li>修改 login.jsx 檔案，使用程式碼片段 fcs 快速建立</li>
+
+
+
+<li>修改 App.jsx 檔案</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// src/App.jsx
+import HomePage from './routes/homePage/homePage'
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from 'react-router-dom'
+import ListPage from './routes/listPage/listPage'
+import Layout from './routes/layout/layout'
+import SinglePage from './routes/singlePage/singlePage'
+
+function App() {
+
+  const router = createBrowserRouter(&#91;
+    {
+      path: "/",
+      element: &lt;Layout /&gt;,
+      children: &#91;
+        {
+          path: "/",
+          element: &lt;HomePage /&gt;
+        },
+        {
+          path: "/list",
+          element: &lt;ListPage /&gt;
+        },
+        {
+          path: "/:id",
+          element: &lt;SinglePage /&gt;
+        },
+      ]
+    },
+  ]);
+
+  return (
+    &lt;RouterProvider router={router} /&gt;
+  )
+}
+
+export default App
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// src/routes/layout/layout.jsx
+import './layout.scss'
+import Navbar from '../../components/navbar/Navbar'
+import { Outlet } from 'react-router-dom'
+
+function Layout(){
+  return (
+    &lt;div className="layout"&gt;
+      &lt;div className="navbar"&gt;
+        &lt;Navbar /&gt;
+      &lt;/div&gt;
+      &lt;div className="content"&gt;
+        &lt;Outlet /&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  )
+}
+
+export default Layout
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// src/routes/layout/layout.scss
+@import "../../responsive.scss";
+
+.layout {
+  height: 100vh;
+  max-width: 1366px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+
+  @include lg{
+    // background-color: rgb(247, 210, 196);
+    max-width: 1280px;
+  }
+
+  @include md{
+    // background-color: rgb(186, 203, 234);
+    max-width: 768px;
+  }
+
+  @include sm{
+    // background-color: rgb(239, 200, 200);
+    max-width: 640px;
+  }
+
+  .content {
+    flex: 1;
+  }
+}
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// src/routes/singlePage/singlePage.jsx
+import './singlePage.scss'
+
+function SinglePage(){
+  return (
+    &lt;div className='singlePage'&gt;SinglePage&lt;/div&gt;
+  )
+}
+
+export default SinglePage
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// src/routes/singlePage/singlePage.scss
+.singlePage {
+
+}
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// src/routes/login/login.jsx
+import './login.scss'
+
+function Login(){
+  return (
+    &lt;div className='login'&gt;Login&lt;/div&gt;
+  )
+}
+
+export default Login
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// src/routes/login/login.scss
+.login {
+
+}
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">React Responsive List Page Design</h2>
+
+
+
+<ul class="wp-block-list">
+<li>修改 listPage.jsx 檔案</li>
+
+
+
+<li>修改 listPage.scss 檔案</li>
+
+
+
+<li>在 src 資料夾裡面建立 lib 資料夾</li>
+
+
+
+<li>在 lib 資料夾裡面建立 dummydata.js 檔案</li>
+
+
+
+<li>修改 dummydata.js 檔案，複製程式碼貼上</li>
+
+
+
+<li>修改 listPage.jsx 檔案</li>
+
+
+
+<li>修改 listPage.scss 檔案</li>
+
+
+
+<li>修改 listPage.jsx 檔案</li>
+
+
+
+<li>修改 listPage.scss 檔案</li>
+
+
+
+<li>在 components 資料夾裡面建立 filter 資料夾</li>
+
+
+
+<li>在 filter 資料夾裡面建立 Filter.jsx 檔案</li>
+
+
+
+<li>在 filter 資料夾裡面建立 filter.scss 檔案</li>
+
+
+
+<li>修改 Filter.jsx 檔案，使用程式碼片段 fcs 快速建立</li>
+
+
+
+<li>修改 filter.scss 檔案</li>
+
+
+
+<li>修改 listPage.jsx 檔案</li>
+
+
+
+<li>在 components 資料夾裡面建立 card 資料夾</li>
+
+
+
+<li>在 card 資料夾裡面建立 Card.jsx 檔案</li>
+
+
+
+<li>在 card 資料夾裡面建立 card.scss 檔案</li>
+
+
+
+<li>修改 listPage.jsx 檔案</li>
+
+
+
+<li>修改 Filter.jsx 檔案</li>
+
+
+
+<li>修改 filter.scss 檔案</li>
+
+
+
+<li>修改 listPage.scss 檔案</li>
+
+
+
+<li>修改 Card.jsx 檔案</li>
+
+
+
+<li>修改 Navbar.jsx 檔案<br>Change the &lt;a> tags in your Navbar component as well</li>
+
+
+
+<li>修改 Card.jsx 檔案</li>
+
+
+
+<li>修改 searchBar.scss 檔案，關於 scss 除錯</li>
+
+
+
+<li>修改 Card.jsx 檔案</li>
+
+
+
+<li>修改 card.scss 檔案</li>
+
+
+
+<li>修改 Card.jsx 檔案</li>
+
+
+
+<li>修改 dummydata.js 檔案</li>
+
+
+
+<li>修改 card.scss 檔案</li>
+
+
+
+<li>修改 listPage.scss 檔案</li>
+
+
+
+<li>修改 layout.scss 檔案</li>
+
+
+
+<li>修改 listPage.scss 檔案</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// src/routes/listPage/listPage.jsx
+import { listData } from '../../lib/dummydata'
+import './listPage.scss'
+import Filter from '../../components/filter/Filter'
+import Card from '../../components/card/Card'
+
+function ListPage(){
+  const data = listData;
+  
+  return (
+    &lt;div className='listPage'&gt;
+      &lt;div className="listContainer"&gt;
+        &lt;div className="wrapper"&gt;
+          &lt;Filter /&gt;
+          { data.map(item =&gt; (
+            &lt;Card key={item.id} item={item} /&gt;
+          ))}
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div className="mapContainer"&gt;Map&lt;/div&gt;
+    &lt;/div&gt;
+  )
+}
+
+export default ListPage
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// src/routes/listPage/listPage.scss
+.listPage {
+  display: flex;
+  height: 100%;
+
+  .listContainer {
+    flex: 3;
+    height: 100%;
+
+    .wrapper {
+      height: 100%;
+      padding-right: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      overflow-y: scroll;
+      padding-bottom: 50px;
+    }
+  }
+  .mapContainer { flex: 2; background-color: #fcf5f3; }
+}
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// src/lib/dummydata.js
+export const listData = &#91;
+  {
+    id: 1,
+    title: "A Great Apartment Next to the Beach!",
+    img: "https://images.pexels.com/photos/1918291/pexels-photo-1918291.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2",
+    bedroom: 2,
+    bathroom: 1,
+    price: 1000,
+    address: "456 Park Avenue, London",
+    latitude: 51.5074,
+    longitude: -0.1278,
+  },
+  {
+    id: 2,
+    title: "An Awesome Apartment Near the Park! Almost too good to be true!",
+    img: "https://images.pexels.com/photos/1428348/pexels-photo-1428348.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2",
+    bedroom: 3,
+    bathroom: 2,
+    price: 1500,
+    address: "789 Oxford Street, London",
+    latitude: 52.4862,
+    longitude: -1.8904,
+  },
+  {
+    id: 3,
+    title: "A New Apartment in the City!",
+    img: "https://images.pexels.com/photos/2062426/pexels-photo-2062426.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2",
+    bedroom: 1,
+    bathroom: 1,
+    price: 800,
+    address: "101 Baker Street, London",
+    latitude: 53.4808,
+    longitude: -2.2426,
+  },
+  {
+    id: 4,
+    title: "Great Location! Great Price! Great Apartment!",
+    img: "https://images.pexels.com/photos/2467285/pexels-photo-2467285.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2",
+    bedroom: 2,
+    bathroom: 1,
+    price: 1000,
+    address: "234 Kingsway, London,",
+    latitude: 53.8008,
+    longitude: -1.5491,
+  },
+  {
+    id: 5,
+    title: "Apartment 5",
+    img: "https://images.pexels.com/photos/276625/pexels-photo-276625.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2",
+    bedroom: 3,
+    bathroom: 2,
+    price: 1500,
+    address: "567 Victoria Road, London",
+    latitude: 53.4084,
+    longitude: -2.9916,
+  },
+  {
+    id: 6,
+    title: "Apartment 6",
+    img: "https://images.pexels.com/photos/271816/pexels-photo-271816.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2",
+    bedroom: 1,
+    bathroom: 1,
+    price: 800,
+    address: "890 Regent Street, London",
+    latitude: 54.9783,
+    longitude: -1.6174,
+  },
+  {
+    id: 7,
+    title: "Apartment 7",
+    img: "https://images.pexels.com/photos/2029667/pexels-photo-2029667.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2",
+    bedroom: 2,
+    bathroom: 1,
+    price: 1000,
+    address: "112 Piccadilly, London",
+    latitude: 53.3811,
+    longitude: -1.4701,
+  },
+  {
+    id: 8,
+    title: "Apartment 8",
+    img: "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2",
+    bedroom: 3,
+    bathroom: 2,
+    price: 1500,
+    address: "8765 Main High Street, London",
+    latitude: 51.4545,
+    longitude: -2.5879,
+  },
+];
+
+export const singlePostData = {
+  id: 1,
+  title: "Beautiful Apartment",
+  price: 1200,
+  images: &#91;
+    "https://images.pexels.com/photos/1918291/pexels-photo-1918291.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2",
+    "https://images.pexels.com/photos/1428348/pexels-photo-1428348.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2",
+    "https://images.pexels.com/photos/2062426/pexels-photo-2062426.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2",
+    "https://images.pexels.com/photos/2467285/pexels-photo-2467285.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2",
+  ],
+  bedRooms: 2,
+  bathroom: 1,
+  size: 861,
+  latitude: 51.5074,
+  longitude: -0.1278,
+  city: "London",
+  address: "1234 Broadway St",
+  school: "250m away",
+  bus: "100m away",
+  restaurant: "50m away",
+  description:
+    "Future alike hill pull picture swim magic chain seed engineer nest outer raise bound easy poetry gain loud weigh me recognize farmer bare danger. actually put square leg vessels earth engine matter key cup indeed body film century shut place environment were stage vertical roof bottom lady function breeze darkness beside tin view local breathe carbon swam declared magnet escape has from pile apart route coffee storm someone hold space use ahead sheep jungle closely natural attached part top grain your grade trade corn salmon trouble new bend most teacher range anybody every seat fifteen eventually",
+};
+
+export const userData = {
+  id: 1,
+  name: "John Doe",
+  img: "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2",
+};
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// src/components/filter/Filter.jsx
+import './filter.scss'
+
+function Filter(){
+  return (
+    &lt;div className='filter'&gt;
+      &lt;h1&gt;Search results for &lt;b&gt;London&lt;/b&gt;&lt;/h1&gt;
+      &lt;div className="top"&gt;
+        &lt;div className="item"&gt;
+          &lt;label htmlFor="city"&gt;Location&lt;/label&gt;
+          &lt;input type="text" id='city' name='city' placeholder='City Location' /&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div className="bottom"&gt;
+      &lt;div className="item"&gt;
+        &lt;label htmlFor="type"&gt;Type&lt;/label&gt;
+        &lt;select name="type" id="type"&gt;
+          &lt;option value=""&gt;any&lt;/option&gt;
+          &lt;option value="buy"&gt;Buy&lt;/option&gt;
+          &lt;option value="rent"&gt;Rent&lt;/option&gt;
+        &lt;/select&gt;
+      &lt;/div&gt;
+      &lt;div className="item"&gt;
+        &lt;label htmlFor="property"&gt;Property&lt;/label&gt;
+        &lt;select name="property" id="property"&gt;
+          &lt;option value=""&gt;any&lt;/option&gt;
+          &lt;option value="apartment"&gt;Apartment&lt;/option&gt;
+          &lt;option value="house"&gt;House&lt;/option&gt;
+          &lt;option value="condo"&gt;Condo&lt;/option&gt;
+          &lt;option value="land"&gt;Land&lt;/option&gt;
+        &lt;/select&gt;
+      &lt;/div&gt;
+      &lt;div className="item"&gt;
+        &lt;label htmlFor="minPrice"&gt;Min Price&lt;/label&gt;
+        &lt;input type="number" id='minPrice' name='minPrice' placeholder='any' /&gt;
+      &lt;/div&gt;
+      &lt;div className="item"&gt;
+        &lt;label htmlFor="maxPrice"&gt;Max Price&lt;/label&gt;
+        &lt;input type="number" id='maxPrice' name='maxPrice' placeholder='any' /&gt;
+      &lt;/div&gt;
+      &lt;div className="item"&gt;
+        &lt;label htmlFor="bedroom"&gt;Bedroom&lt;/label&gt;
+        &lt;input type="text" id='bedroom' name='bedroom' placeholder='any' /&gt;
+      &lt;/div&gt;
+      &lt;button&gt;
+        &lt;img src="/search.png" alt="" /&gt;
+      &lt;/button&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+  )
+}
+
+export default Filter
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// src/components/filter/filter.scss
+.filter {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  h1 {
+    font-weight: 300;
+    font-size: 24px;
+  }
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    label {
+      font-size: 10px;
+    }
+
+    input,
+    select {
+      width: 100px;
+      padding: 10px;
+      border: 1px solid #e0e0e0;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+  }
+
+  .top {
+    input {
+      width: 100%;
+    }
+  }
+
+  .bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    button {
+      width: 100px;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      background-color: #fece51;
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// src/components/card/Card.jsx
+import { Link } from 'react-router-dom'
+import './card.scss'
+
+function Card({ item }){
+  return (
+    &lt;div className='card'&gt;
+      &lt;Link to={`/${item.id}`} className="imageContainer"&gt;
+        &lt;img src={item.img} alt="" /&gt;
+      &lt;/Link&gt;
+      &lt;div className="textContainer"&gt;
+        &lt;h2 className="title"&gt;
+          &lt;Link to={`${item.id}`}&gt;{item.title}&lt;/Link&gt;
+        &lt;/h2&gt;
+        &lt;p className='address'&gt;
+          &lt;img src="/pin.png" alt="" /&gt;
+          &lt;span&gt;{item.address}&lt;/span&gt;
+        &lt;/p&gt;
+        &lt;p className='price'&gt;$ {item.price}&lt;/p&gt;
+        &lt;div className="bottom"&gt;
+          &lt;div className="features"&gt;
+            &lt;div className="feature"&gt;
+              &lt;img src="/bed.png" alt="" /&gt;
+              &lt;span&gt;{item.bedroom} bedroom&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div className="feature"&gt;
+              &lt;img src="/bath.png" alt="" /&gt;
+              &lt;span&gt;{item.bathroom} bathroom&lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div className="icons"&gt;
+            &lt;div className="icon"&gt;
+              &lt;img src="/save.png" alt="" /&gt;
+            &lt;/div&gt;
+            &lt;div className="icon"&gt;
+              &lt;img src="/chat.png" alt="" /&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  )
+}
+
+export default Card
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// src/components/card/card.scss
+.card {
+  display: flex;
+  gap: 20px;
+
+  .imageContainer {
+    flex: 2;
+    height: 200px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+
+  .textContainer {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+
+    img {
+      width: 16px;
+      height: 16px;
+    }
+
+    .title {
+      font-size: 20px;
+      font-weight: 600;
+      color: #444;
+      transition: all 0.4s ease;
+
+      &amp;:hover {
+        color: #000;
+        scale: 1.01;
+      }
+    }
+
+    .address {
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      color: #888;
+    }
+
+    .price {
+      font-size: 20px;
+      font-weight: 300;
+      padding: 5px;
+      border-radius: 5px;
+      background-color: rgba(254, 205, 81, 0.438);
+      width: max-content;
+    }
+
+    .bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+
+      .features {
+        display: flex;
+        gap: 20px;
+        font-size: 14px;
+
+        .feature {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          background-color: whitesmoke;
+          padding: 5px;
+          border-radius: 5px;
+        }
+      }
+
+      .icons {
+        display: flex;
+        gap: 20px;
+
+        .icon {
+          border: 1px solid #999;
+          padding: 2px 5px;
+          border-radius: 5px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          &amp;:hover {
+            background-color: lightgray;
+          }
+        }
+      }
+    }
+  }
+}
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// src/components/navbar/Navbar.jsx
+import { Link } from "react-router-dom"
+import { useState } from "react"
+import "./navbar.scss"
+
+function Navbar() {
+  const &#91;open, setOpen] = useState(false);
+  return (
+    &lt;nav&gt;
+      &lt;div className="left"&gt;
+        &lt;Link to="/" className="logo"&gt;
+          &lt;img src="/logo.png" /&gt;
+          &lt;span&gt;LamaEstate&lt;/span&gt;
+        &lt;/Link&gt;
+        &lt;Link to="/"&gt;Home&lt;/Link&gt;
+        &lt;Link to="/"&gt;About&lt;/Link&gt;
+        &lt;Link to="/"&gt;Contact&lt;/Link&gt;
+        &lt;Link to="/"&gt;Agents&lt;/Link&gt;
+      &lt;/div&gt;
+      &lt;div className="right"&gt;
+        &lt;Link to="/"&gt;Sign in&lt;/Link&gt;
+        &lt;Link to="/" className="register"&gt;Sign up&lt;/Link&gt;
+        &lt;div className="menuIcon"&gt;
+          &lt;img src="/menu.png" alt="" onClick={() =&gt; setOpen((prev) =&gt; !prev)} /&gt;
+        &lt;/div&gt;
+        &lt;div className={open ? "menu active" : "menu"}&gt;
+          &lt;Link to="/"&gt;Home&lt;/Link&gt;
+          &lt;Link to="/"&gt;About&lt;/Link&gt;
+          &lt;Link to="/"&gt;Contact&lt;/Link&gt;
+          &lt;Link to="/"&gt;Agents&lt;/Link&gt;
+          &lt;Link to="/"&gt;Sign in&lt;/Link&gt;
+          &lt;Link to="/"&gt;Sign up&lt;/Link&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/nav&gt;
+  )
+}
+
+export default Navbar;
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// src/components/searchBar/searchBar.scss
+@import "../../responsive.scss";
+
+.searchBar {
+  .type {
+
+
+    button {
+      padding: 16px 36px;
+      border: 1px solid #999;
+      border-bottom: none;
+      cursor: pointer;
+      background-color: white;
+      text-transform: capitalize;
+
+      &amp;.active {
+        background-color: black;
+        color: white;
+      }
+
+      &amp;:first-child {
+        border-top-left-radius: 5px;
+        border-right: none;
+      }
+
+      &amp;:last-child {
+        border-top-right-radius: 5px;
+        border-left: none;
+      }
+    }
+  }
+
+  form {
+    border: 1px solid #999;
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    gap: 5px;
+
+    @include sm {
+      flex-direction: column;
+      border: none;
+    }
+
+    input {
+      border: none;
+      padding: 0px 10px;
+      width: 200px;
+
+      @include lg {
+        padding: 0px 5px;
+
+        &amp;:nth-child(2), &amp;:nth-child(3) {
+          width: 140px;
+        }
+      }
+
+      @include md {
+        width: 200px;
+        &amp;:nth-child(2),
+        &amp;:nth-child(3) {
+          width: 200px;
+        }
+      }
+
+      @include sm {
+        width: auto;
+        &amp;:nth-child(2),
+        &amp;:nth-child(3) {
+          width: auto;
+        }
+
+        &amp; {
+          padding: 20px;
+          border: 1px solid #999;
+        }
+      }
+    }
+
+    button {
+      border: none;
+      cursor: pointer;
+      background-color: #fece51;
+      flex: 1;
+
+      @include sm {
+        padding: 10px;
+      }
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// src/routes/layout/layout.scss
+@import "../../responsive.scss";
+
+.layout {
+  height: 100vh;
+  max-width: 1366px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+
+  @include lg{
+    // background-color: rgb(247, 210, 196);
+    max-width: 1280px;
+  }
+
+  @include md{
+    // background-color: rgb(186, 203, 234);
+    max-width: 768px;
+  }
+
+  @include sm{
+    // background-color: rgb(239, 200, 200);
+    max-width: 640px;
+  }
+
+  .content {
+    // flex: 1;
+    height: calc(100vh - 100px);
+  }
+}
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">React Map Tutorial (Open Source Map Library)</h2>
+
+
+
+<ul class="wp-block-list">
+<li>講解會使用 Open Source Map</li>
+
+
+
+<li>在 components 資料夾裡面建立 map 資料夾</li>
+
+
+
+<li>在 map 資料夾裡面建立 Map.jsx 檔案</li>
+
+
+
+<li>在 map 資料夾裡面建立 map.scss 檔案</li>
+
+
+
+<li>修改 Map.jsx 檔案，使用程式碼片段 fcs 快速建立</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// src/components/map/Map.jsx
+import './map.scss'
+
+function Map(){
+  return (
+    &lt;div className='map'&gt;Map&lt;/div&gt;
+  )
+}
+
+export default Map
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// src/components/map/map.scss
+.map {
+  
+}
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">React Leaflet Map Tutorial</h2>
+
+
+
+<ul class="wp-block-list">
+<li>使用 React Leaflet</li>
+
+
+
+<li>安裝 React Leaflet 套件 – npm install react-leaflet leaflet</li>
+
+
+
+<li>修改 Map.jsx 檔案</li>
+
+
+
+<li>修改 map.scss 檔案</li>
+
+
+
+<li>修改 listPage.jsx 檔案</li>
+
+
+
+<li>修改 listPage.scss 檔案</li>
+
+
+
+<li>修改 Map.jsx 檔案，匯入 leaflet.css 檔案</li>
+
+
+
+<li>修改 listPage.jsx 檔案，items</li>
+
+
+
+<li>修改 Map.jsx 檔案，items</li>
+
+
+
+<li>在 components 資料夾裡面建立 pin 資料夾</li>
+
+
+
+<li>在 pin 資料夾裡面建立 Pin.jsx 檔案</li>
+
+
+
+<li>在 pin 資料夾裡面建立 pin.scss 檔案</li>
+
+
+
+<li>修改 Pin.jsx 檔案，使用程式碼片段 fcs 快速建立</li>
+
+
+
+<li>修改 pin.scss 檔案</li>
+
+
+
+<li>修改 Map.jsx 檔案</li>
+
+
+
+<li>修改 Pin.jsx 檔案</li>
+
+
+
+<li>修改 Map.jsx 檔案</li>
+
+
+
+<li>修改 pin.scss 檔案</li>
+
+
+
+<li>修改 Pin.jsx 檔案</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// src/components/map/Map.jsx
+import { MapContainer, TileLayer } from 'react-leaflet'
+import './map.scss'
+import 'leaflet/dist/leaflet.css'
+import Pin from '../pin/Pin'
+
+function Map({items}){
+  return (
+    &lt;MapContainer center={&#91;52.4797, -1.90269]} zoom={7} scrollWheelZoom={false} className='map'&gt;
+      &lt;TileLayer
+        attribution='&amp;copy; &lt;a href="https://www.openstreetmap.org/copyright"&gt;OpenStreetMap&lt;/a&gt; contributors'
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+      /&gt;
+      {items.map(item=&gt;(
+        &lt;Pin item={item} key={item.id} /&gt;
+      ))}
+    &lt;/MapContainer&gt;
+  )
+}
+
+export default Map
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// src/components/map/map.scss
+.map {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// src/routes/listPage/listPage.jsx
+import { listData } from '../../lib/dummydata'
+import './listPage.scss'
+import Filter from '../../components/filter/Filter'
+import Card from '../../components/card/Card'
+import Map from '../../components/map/Map';
+
+function ListPage(){
+  const data = listData;
+  
+  return (
+    &lt;div className='listPage'&gt;
+      &lt;div className="listContainer"&gt;
+        &lt;div className="wrapper"&gt;
+          &lt;Filter /&gt;
+          { data.map(item =&gt; (
+            &lt;Card key={item.id} item={item} /&gt;
+          ))}
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div className="mapContainer"&gt;
+        &lt;Map items={data} /&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  )
+}
+
+export default ListPage
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// src/routes/listPage/listPage.scss
+.listPage {
+  display: flex;
+  height: 100%;
+
+  .listContainer {
+    flex: 3;
+    height: 100%;
+
+    .wrapper {
+      height: 100%;
+      padding-right: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      overflow-y: scroll;
+      padding-bottom: 50px;
+    }
+  }
+  .mapContainer {
+    flex: 2;
+    height: 100%;
+    background-color: #fcf5f3;
+  }
+}
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// src/components/pin/Pin.jsx
+import { Marker, Popup } from 'react-leaflet'
+import './pin.scss'
+import { Link } from 'react-router-dom'
+
+function Pin({ item }){
+  return (
+    &lt;Marker position={&#91;item.latitude, item.longitude]}&gt;
+      &lt;Popup&gt;
+        &lt;div className="popupContainer"&gt;
+          &lt;img src={item.img} alt="" /&gt;
+          &lt;div className="textContainer"&gt;
+            &lt;Link to={`/${item.id}`}&gt;{item.title}&lt;/Link&gt;
+            &lt;span&gt;{item.bedroom} bedroom&lt;/span&gt;
+            &lt;b&gt;$ {item.price}&lt;/b&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/Popup&gt;
+    &lt;/Marker&gt;
+  )
+}
+
+export default Pin
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// src/components/pin/pin.scss
+.popupContainer {
+  display: flex;
+  gap: 20px;
+
+  img {
+    width: 64px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+
+  .textContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">React.js Responsive Single Page Design</h2>
+
+
+
+<ul class="wp-block-list">
+<li>修改 singlePage.jsx 檔案</li>
+
+
+
+<li>修改 singlePage.scss 檔案</li>
+
+
+
+<li>在 components 資料夾裡面建立 slider 資料夾</li>
+
+
+
+<li>在 slider 資料夾裡面建立 Slider.jsx 檔案</li>
+
+
+
+<li>在 slider 資料夾裡面建立 slider.scss 檔案</li>
+
+
+
+<li>修改 Slider.jsx 檔案，使用程式碼片段 fcs 快速建立</li>
+
+
+
+<li>修改 singlePage.jsx 檔案</li>
+
+
+
+<li>修改 dummydata.js 檔案，singlePostData、userData</li>
+
+
+
+<li>修改 singlePage.jsx 檔案</li>
+
+
+
+<li>修改 singlePage.scss 檔案</li>
+
+
+
+<li>修改 singlePage.jsx 檔案</li>
+
+
+
+<li>修改 singlePage.scss 檔案</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// src/routes/singlePage/singlePage.jsx
+import './singlePage.scss'
+import Slider from '../../components/slider/Slider'
+import { singlePostData } from '../../lib/dummydata'
+import { userData } from '../../lib/dummydata'
+
+function SinglePage(){
+  return (
+    &lt;div className='singlePage'&gt;
+      &lt;div className="details"&gt;
+        &lt;div className="wrapper"&gt;
+          &lt;Slider images={singlePostData.images} /&gt;
+          &lt;div className="info"&gt;
+            &lt;div className="top"&gt;
+              &lt;div className="post"&gt;
+                &lt;h1&gt;{singlePostData.title}&lt;/h1&gt;
+                &lt;div className="address"&gt;
+                  &lt;img src="/pin.png" alt="" /&gt;
+                  &lt;span&gt;{singlePostData.address}&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div className="price"&gt;$ {singlePostData.price}&lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div className="user"&gt;
+                &lt;img src={userData.img} alt="" /&gt;
+                &lt;span&gt;{userData.name}&lt;/span&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div className="bottom"&gt;
+              {singlePostData.description}
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div className="features"&gt;
+        &lt;div className="wrapper"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  )
+}
+
+export default SinglePage
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// src/routes/singlePage/singlePage.scss
+.singlePage {
+  display: flex;
+  height: 100%;
+
+  .details {
+    flex: 3;
+
+    .wrapper {
+      padding-right: 50px;
+
+      .info {
+        .top {
+          display: flex;
+          justify-content: space-between;
+
+          .post {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            h1 {
+              font-weight: 400;
+            }
+
+            .address {
+              display: flex;
+              gap: 5px;
+              align-items: center;
+              color: #888;
+              font-size: 14px;
+
+              img {
+                width: 16px;
+                height: 16px;
+              }
+            }
+
+            .price {
+              padding: 5px;
+              background-color: rgba(254, 205, 81, 0.438);
+              border-radius: 5px;
+              width: max-content;
+              font-size: 20px;
+              font-weight: 300;
+            }
+          }
+
+          .user {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 0px 50px;
+            border-radius: 10px;
+            background-color: rgba(254, 205, 81, 0.209);
+            font-weight: 600;
+
+            img {
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+              object-fit: cover;
+            }
+          }
+        }
+
+        .bottom {
+          margin-top: 50px;
+          color: #555;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+
+  .features {
+    flex: 2;
+    background-color: #fcf5f3;
+
+    .wrapper {
+      padding: 0px 20px;
+    }
+  }
+}
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// src/components/slider/Slider.jsx
+import './slider.scss'
+
+function Slider(){
+  return (
+    &lt;div className='slider'&gt;Slider&lt;/div&gt;
+  )
+}
+
+export default Slider
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// src/components/slider/slider.scss
+.slider {
+
+}
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// src/lib/dummydata.js
+export const listData = &#91;
+  {
+    id: 1,
+    title: "A Great Apartment Next to the Beach!",
+    img: "https://images.pexels.com/photos/1918291/pexels-photo-1918291.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2",
+    bedroom: 2,
+    bathroom: 1,
+    price: 1000,
+    address: "456 Park Avenue, London",
+    latitude: 51.5074,
+    longitude: -0.1278,
+  },
+  {
+    id: 2,
+    title: "An Awesome Apartment Near the Park! Almost too good to be true!",
+    img: "https://images.pexels.com/photos/1428348/pexels-photo-1428348.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2",
+    bedroom: 3,
+    bathroom: 2,
+    price: 1500,
+    address: "789 Oxford Street, London",
+    latitude: 52.4862,
+    longitude: -1.8904,
+  },
+  {
+    id: 3,
+    title: "A New Apartment in the City!",
+    img: "https://images.pexels.com/photos/2062426/pexels-photo-2062426.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2",
+    bedroom: 1,
+    bathroom: 1,
+    price: 800,
+    address: "101 Baker Street, London",
+    latitude: 53.4808,
+    longitude: -2.2426,
+  },
+  {
+    id: 4,
+    title: "Great Location! Great Price! Great Apartment!",
+    img: "https://images.pexels.com/photos/2467285/pexels-photo-2467285.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2",
+    bedroom: 2,
+    bathroom: 1,
+    price: 1000,
+    address: "234 Kingsway, London,",
+    latitude: 53.8008,
+    longitude: -1.5491,
+  },
+  {
+    id: 5,
+    title: "Apartment 5",
+    img: "https://images.pexels.com/photos/276625/pexels-photo-276625.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2",
+    bedroom: 3,
+    bathroom: 2,
+    price: 1500,
+    address: "567 Victoria Road, London",
+    latitude: 53.4084,
+    longitude: -2.9916,
+  },
+  {
+    id: 6,
+    title: "Apartment 6",
+    img: "https://images.pexels.com/photos/271816/pexels-photo-271816.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2",
+    bedroom: 1,
+    bathroom: 1,
+    price: 800,
+    address: "890 Regent Street, London",
+    latitude: 54.9783,
+    longitude: -1.6174,
+  },
+  {
+    id: 7,
+    title: "Apartment 7",
+    img: "https://images.pexels.com/photos/2029667/pexels-photo-2029667.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2",
+    bedroom: 2,
+    bathroom: 1,
+    price: 1000,
+    address: "112 Piccadilly, London",
+    latitude: 53.3811,
+    longitude: -1.4701,
+  },
+  {
+    id: 8,
+    title: "Apartment 8",
+    img: "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2",
+    bedroom: 3,
+    bathroom: 2,
+    price: 1500,
+    address: "8765 Main High Street, London",
+    latitude: 51.4545,
+    longitude: -2.5879,
+  },
+];
+
+export const singlePostData = {
+  id: 1,
+  title: "Beautiful Apartment",
+  price: 1200,
+  images: &#91;
+    "https://images.pexels.com/photos/1918291/pexels-photo-1918291.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2",
+    "https://images.pexels.com/photos/1428348/pexels-photo-1428348.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2",
+    "https://images.pexels.com/photos/2062426/pexels-photo-2062426.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2",
+    "https://images.pexels.com/photos/2467285/pexels-photo-2467285.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2",
+  ],
+  bedRooms: 2,
+  bathroom: 1,
+  size: 861,
+  latitude: 51.5074,
+  longitude: -0.1278,
+  city: "London",
+  address: "1234 Broadway St",
+  school: "250m away",
+  bus: "100m away",
+  restaurant: "50m away",
+  description:
+    "Future alike hill pull picture swim magic chain seed engineer nest outer raise bound easy poetry gain loud weigh me recognize farmer bare danger. actually put square leg vessels earth engine matter key cup indeed body film century shut place environment were stage vertical roof bottom lady function breeze darkness beside tin view local breathe carbon swam declared magnet escape has from pile apart route coffee storm someone hold space use ahead sheep jungle closely natural attached part top grain your grade trade corn salmon trouble new bend most teacher range anybody every seat fifteen eventually",
+};
+
+export const userData = {
+  id: 1,
+  name: "John Doe",
+  img: "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2",
+};
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">React.js Image Slider Tutorial From Scratch</h2>
+
+
+
+<ul class="wp-block-list">
+<li>修改 Slider.jsx 檔案</li>
+
+
+
+<li>修改 slider.scss 檔案</li>
+
+
+
+<li>修改 singlePage.scss 檔案</li>
+
+
+
+<li>修改 Slider.jsx 檔案</li>
+
+
+
+<li>修改 slider.scss 檔案</li>
+
+
+
+<li>修改 Slider.jsx 檔案</li>
+
+
+
+<li>修改 slider.scss 檔案</li>
+
+
+
+<li>修改 Slider.jsx 檔案</li>
+
+
+
+<li>修改 slider.scss 檔案</li>
+
+
+
+<li>修改 Slider.jsx 檔案</li>
+
+
+
+<li>修改 slider.scss 檔案</li>
+
+
+
+<li>修改 Slider.jsx 檔案</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// src/components/slider/Slider.jsx
+import { useState } from 'react'
+import './slider.scss'
+
+function Slider({ images }){
+  const &#91;imageIndex, setImageIndex ] = useState(null);
+
+  const changeSlide = (direction) =&gt; {
+    if (direction==="left") {
+      if (imageIndex === 0) {
+        setImageIndex(images.length - 1);
+      } else {
+        setImageIndex(imageIndex - 1);
+      }
+    } else {
+      if (imageIndex === images.length - 1) {
+        setImageIndex(0);
+      } else {
+        setImageIndex(imageIndex + 1);
+      }
+    } 
+  }
+
+  return (
+    &lt;div className='slider'&gt;
+      { imageIndex !== null &amp;&amp; (
+      &lt;div className="fullSlider"&gt;
+        &lt;div className="arrow" onClick={() =&gt; changeSlide("left")}&gt;
+          &lt;img src="/arrow.png" alt="" /&gt;
+        &lt;/div&gt;
+        &lt;div className="imgContainer"&gt;
+          &lt;img src={images&#91;imageIndex]} alt="" /&gt;
+        &lt;/div&gt;
+        &lt;div className="arrow" onClick={() =&gt; changeSlide("right")}&gt;
+          &lt;img src="/arrow.png" className='right' alt="" /&gt;
+        &lt;/div&gt;
+        &lt;div className="close" onClick={() =&gt; setImageIndex(null)}&gt;X&lt;/div&gt;
+      &lt;/div&gt;
+      )}
+      &lt;div className="bigImage"&gt;
+        &lt;img src={images&#91;0]} alt="" onClick={() =&gt; setImageIndex(0)} /&gt;
+      &lt;/div&gt;
+      &lt;div className="smallImage"&gt;
+        {images.slice(1).map((image, index) =&gt; (
+          &lt;img src={image} alt="" key={index} onClick={() =&gt; setImageIndex(index+1)}  /&gt;
+        ))}
+      &lt;/div&gt;
+    &lt;/div&gt;
+  )
+}
+
+export default Slider
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// src/components/slider/slider.scss
+.slider {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  gap: 20px;
+
+  .fullSlider {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .arrow {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 50px;
+
+        &amp;.right {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .imgContainer {
+      flex: 10;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: white;
+      font-size: 36px;
+      font-weight: bold;
+      padding: 50px;
+      cursor: pointer;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .bigImage {
+    flex: 3;
+  }
+
+  .smallImage {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    
+    img {
+      height: 100px;
+    }
+  }
+}
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// src/components/singlePage.scss
+.singlePage {
+  display: flex;
+  height: 100%;
+
+  .details {
+    flex: 3;
+
+    .wrapper {
+      padding-right: 50px;
+
+      .info {
+        margin-top: 50px;
+        
+        .top {
+          display: flex;
+          justify-content: space-between;
+
+          .post {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            h1 {
+              font-weight: 400;
+            }
+
+            .address {
+              display: flex;
+              gap: 5px;
+              align-items: center;
+              color: #888;
+              font-size: 14px;
+
+              img {
+                width: 16px;
+                height: 16px;
+              }
+            }
+
+            .price {
+              padding: 5px;
+              background-color: rgba(254, 205, 81, 0.438);
+              border-radius: 5px;
+              width: max-content;
+              font-size: 20px;
+              font-weight: 300;
+            }
+          }
+
+          .user {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 0px 50px;
+            border-radius: 10px;
+            background-color: rgba(254, 205, 81, 0.209);
+            font-weight: 600;
+
+            img {
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+              object-fit: cover;
+            }
+          }
+        }
+
+        .bottom {
+          margin-top: 50px;
+          color: #555;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+
+  .features {
+    flex: 2;
+    background-color: #fcf5f3;
+
+    .wrapper {
+      padding: 0px 20px;
+    }
+  }
+}
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">Property Features Design</h2>
+
+
+
+<ul class="wp-block-list">
+<li>修改 singlePage.jsx 檔案</li>
+
+
+
+<li>修改 singlePage.scss 檔案</li>
+
+
+
+<li>修改 singlePage.jsx 檔案，修正程式碼</li>
+
+
+
+<li>修改 singlePage.scss 檔案</li>
+
+
+
+<li>修改 slider.scss 檔案</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// src/routes/singlePage/singlePage.jsx
+import './singlePage.scss'
+import Slider from '../../components/slider/Slider'
+import Map from '../../components/map/Map'
+import { singlePostData, userData } from '../../lib/dummydata'
+
+function SinglePage(){
+  return (
+    &lt;div className='singlePage'&gt;
+      &lt;div className="details"&gt;
+        &lt;div className="wrapper"&gt;
+          &lt;Slider images={singlePostData.images} /&gt;
+          &lt;div className="info"&gt;
+            &lt;div className="top"&gt;
+              &lt;div className="post"&gt;
+                &lt;h1&gt;{singlePostData.title}&lt;/h1&gt;
+                &lt;div className="address"&gt;
+                  &lt;img src="/pin.png" alt="" /&gt;
+                  &lt;span&gt;{singlePostData.address}&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div className="price"&gt;$ {singlePostData.price}&lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div className="user"&gt;
+                &lt;img src={userData.img} alt="" /&gt;
+                &lt;span&gt;{userData.name}&lt;/span&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div className="bottom"&gt;
+              {singlePostData.description}
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div className="features"&gt;
+        &lt;div className="wrapper"&gt;
+          &lt;p className='title'&gt;General&lt;/p&gt;
+          &lt;div className="listVertical"&gt;
+            &lt;div className="feature"&gt;
+              &lt;img src="/utility.png" alt="" /&gt;
+              &lt;div className="featureText"&gt;
+                &lt;span&gt;Utilities&lt;/span&gt;
+                &lt;p&gt;Renter is responsible&lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div className="feature"&gt;
+              &lt;img src="/pet.png" alt="" /&gt;
+              &lt;div className="featureText"&gt;
+                &lt;span&gt;Pet Policy&lt;/span&gt;
+                &lt;p&gt;Pets Allowed&lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div className="feature"&gt;
+              &lt;img src="/fee.png" alt="" /&gt;
+              &lt;div className="featureText"&gt;
+                &lt;span&gt;Property Fees&lt;/span&gt;
+                &lt;p&gt;must have 3x the rent in total household income&lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;p className='title'&gt;Room Sizes&lt;/p&gt;
+          &lt;div className="sizes"&gt;
+            &lt;div className="size"&gt;
+              &lt;img src="/size.png" alt="" /&gt;
+              &lt;span&gt;80 sqft&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div className="size"&gt;
+              &lt;img src="/bed.png" alt="" /&gt;
+              &lt;span&gt;2 beds&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div className="size"&gt;
+              &lt;img src="/bath.png" alt="" /&gt;
+              &lt;span&gt;1 bathroom&lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;p className='title'&gt;Nearby Places&lt;/p&gt;
+          &lt;div className="listHorizontal"&gt;
+            &lt;div className="feature"&gt;
+              &lt;img src="/school.png" alt="" /&gt;
+              &lt;div className="featureText"&gt;
+                &lt;span&gt;School&lt;/span&gt;
+                &lt;p&gt;250m away&lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div className="feature"&gt;
+              &lt;img src="/pet.png" alt="" /&gt;
+              &lt;div className="featureText"&gt;
+                &lt;span&gt;Bus Stop&lt;/span&gt;
+                &lt;p&gt;100m away&lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div className="feature"&gt;
+              &lt;img src="/fee.png" alt="" /&gt;
+              &lt;div className="featureText"&gt;
+                &lt;span&gt;Restaurant&lt;/span&gt;
+                &lt;p&gt;200m away&lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;p className='title'&gt;Location&lt;/p&gt;
+          &lt;div className="mapContainer"&gt;
+            &lt;Map items={&#91;singlePostData]} /&gt;
+          &lt;/div&gt;
+          &lt;div className="buttons"&gt;
+            &lt;button&gt;
+              &lt;img src="/chat.png" alt="" /&gt;
+              Send a Message
+            &lt;/button&gt;
+            &lt;button&gt;
+              &lt;img src="/save.png" alt="" /&gt;
+              Save the Place
+            &lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  )
+}
+
+export default SinglePage
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// src/routes/singlePage/singlePage.scss
+@import '../../responsive.scss';
+
+.singlePage {
+  display: flex;
+  height: 100%;
+
+  @include md {
+    flex-direction: column;
+    overflow: scroll;
+  }
+
+  .details {
+    flex: 3;
+    height: 100%;
+    overflow-y: scroll;
+
+    @include md {
+      flex: none;
+      height: max-content;
+      margin-bottom: 50px;
+    }
+
+    .wrapper {
+      padding-right: 50px;
+
+      @include lg {
+        padding-right: 20px;
+      }
+
+      @include md {
+        padding-right: 0px;
+      }
+
+      .info {
+        margin-top: 50px;
+        
+        .top {
+          display: flex;
+          justify-content: space-between;
+
+          .post {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            h1 {
+              font-weight: 400;
+            }
+
+            .address {
+              display: flex;
+              gap: 5px;
+              align-items: center;
+              color: #888;
+              font-size: 14px;
+
+              img {
+                width: 16px;
+                height: 16px;
+              }
+            }
+
+            .price {
+              padding: 5px;
+              background-color: rgba(254, 205, 81, 0.438);
+              border-radius: 5px;
+              width: max-content;
+              font-size: 20px;
+              font-weight: 300;
+            }
+          }
+
+          .user {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 0px 50px;
+            border-radius: 10px;
+            background-color: rgba(254, 205, 81, 0.209);
+            font-weight: 600;
+
+            img {
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+              object-fit: cover;
+            }
+          }
+        }
+
+        .bottom {
+          margin-top: 50px;
+          color: #555;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+
+  .features {
+    flex: 2;
+    background-color: #fcf5f3;
+    height: 100%;
+    overflow-y: scroll;
+
+    @include md {
+      flex: none;
+      height: max-content;
+      margin-bottom: 50px;
+    }
+
+    .wrapper {
+      padding: 0px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+
+      .title {
+        font-weight: bold;
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      .feature {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        img {
+          background-color: rgba(254, 205, 81, 0.209);
+        }
+
+        .featureText {
+          span {
+            font-weight: bold;
+          }
+
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+
+      .listVertical {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        background-color: white;
+        border-radius: 10px;
+      }
+
+      .listHorizontal {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 10px;
+        background-color: white;
+        border-radius: 10px;
+      }
+
+      .sizes {
+        display: flex;
+        justify-content: space-between;
+
+        @include lg {
+          font-size: 12px;
+        }
+
+        .size {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          background-color: white;
+          padding: 10px;
+          border-radius: 5px;
+        }
+      }
+
+      .mapContainer {
+        width: 100%;
+        height: 200px;
+      }
+
+      .buttons {
+        display: flex;
+        justify-content: space-between;
+
+        button {
+          padding: 20px;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          background-color: white;
+          border: 1px solid #fece51;
+          border-radius: 5px;
+          cursor: pointer;
+
+          img {
+            width: 16px;
+            height: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// src/components/slider/slider.scss
+@import '../../responsive.scss';
+
+.slider {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  gap: 20px;
+
+  .fullSlider {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+
+    .arrow {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 50px;
+
+        @include md {
+          width: 30px;
+        }
+
+        @include sm {
+          width: 20px;
+        }
+
+        &amp;.right {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .imgContainer {
+      flex: 10;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: white;
+      font-size: 36px;
+      font-weight: bold;
+      padding: 50px;
+      cursor: pointer;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .bigImage {
+    flex: 3;
+  }
+
+  .smallImage {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    
+    img {
+      height: 100px;
+    }
+  }
+}
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">React.js Responsive Profile Page Design</h2>
+
+
+
+<ul class="wp-block-list">
+<li>在 routes 資料夾裡面建立 profilePage 資料夾</li>
+
+
+
+<li>在 profilePage 資料夾裡面建立 profilePage.jsx 檔案</li>
+
+
+
+<li>在 profilePage 資料夾裡面建立 profilePage.scss 檔案</li>
+
+
+
+<li>修改 profilePage.jsx 檔案，使用程式碼片段 fcs 快速建立</li>
+
+
+
+<li>修改 profilePage.scss 檔案</li>
+
+
+
+<li>修改 App.jsx 檔案</li>
+
+
+
+<li>修改 Navbar.jsx 檔案</li>
+
+
+
+<li>修改 navbar.scss 檔案</li>
+
+
+
+<li>修改 Navbar.jsx 檔案</li>
+
+
+
+<li>修改 navbar.scss 檔案</li>
+
+
+
+<li>修改 Navbar.jsx 檔案</li>
+
+
+
+<li>修改 navbar.scss 檔案</li>
+
+
+
+<li>修改 profilePage.jsx 檔案</li>
+
+
+
+<li>在 components 資料夾裡面建立 list 資料夾</li>
+
+
+
+<li>在 list 資料夾裡面建立 List.jsx 檔案</li>
+
+
+
+<li>在 list 資料夾裡面建立 list.scss 檔案</li>
+
+
+
+<li>修改 List.jsx 檔案，使用程式碼片段 fcs 快速建立</li>
+
+
+
+<li>修改 list.scss 檔案</li>
+
+
+
+<li>修改 List.jsx 檔案</li>
+
+
+
+<li>修改 profilePage.jsx 檔案</li>
+
+
+
+<li>修改 profilePage.scss 檔案</li>
+
+
+
+<li>修改 list.scss 檔案</li>
+
+
+
+<li>修改 profilePage.scss 檔案</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// src/routes/profilePage/profilePage.jsx
+import List from '../../components/list/List'
+import './profilePage.scss'
+
+function ProfilePage(){
+  return (
+    &lt;div className='profilePage'&gt;
+      &lt;div className="details"&gt;
+        &lt;div className="wrapper"&gt;
+          &lt;div className="title"&gt;
+            &lt;h1&gt;User Information&lt;/h1&gt;
+            &lt;button&gt;Update Profile&lt;/button&gt;
+          &lt;/div&gt;
+          &lt;div className="info"&gt;
+            &lt;span&gt;
+              Avatar:
+              &lt;img src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2" alt="" /&gt;
+            &lt;/span&gt;
+            &lt;span&gt;Username: &lt;b&gt;John Doe&lt;/b&gt;&lt;/span&gt;
+            &lt;span&gt;E-mail: &lt;b&gt;john@gmail.com&lt;/b&gt;&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div className="title"&gt;
+            &lt;h1&gt;My List&lt;/h1&gt;
+            &lt;button&gt;Create New Post&lt;/button&gt;
+          &lt;/div&gt;
+          &lt;List /&gt;
+          &lt;div className="title"&gt;
+            &lt;h1&gt;Saved List&lt;/h1&gt;
+          &lt;/div&gt;
+          &lt;List /&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div className="chatContainer"&gt;
+        &lt;div className="wrapper"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  )
+}
+
+export default ProfilePage
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// src/routes/profilePage/profilePage.scss
+.profilePage {
+  display: flex;
+  height: 100%;
+
+  .details {
+    flex: 3;
+    overflow-y: scroll;
+    padding-bottom: 50px;
+
+    .wrapper {
+      padding-right: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+
+      .title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h1 {
+          font-weight: 300;
+        }
+
+        button {
+          padding: 12px 24px;
+          background-color: #fece51;
+          cursor: pointer;
+          border: none;
+        }
+      }
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        span {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+        }
+
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  .chatContainer {
+    flex: 2;
+    background-color: #fcf5f3;
+    height: 100%;
+
+    .wrapper {
+      padding: 0px 20px;
+    }
+  }
+}
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// src/App.jsx
+import HomePage from './routes/homePage/homePage'
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from 'react-router-dom'
+import ListPage from './routes/listPage/listPage'
+import Layout from './routes/layout/layout'
+import SinglePage from './routes/singlePage/singlePage'
+import ProfilePage from './routes/profilePage/profilePage'
+
+function App() {
+
+  const router = createBrowserRouter(&#91;
+    {
+      path: "/",
+      element: &lt;Layout /&gt;,
+      children: &#91;
+        {
+          path: "/",
+          element: &lt;HomePage /&gt;
+        },
+        {
+          path: "/list",
+          element: &lt;ListPage /&gt;
+        },
+        {
+          path: "/:id",
+          element: &lt;SinglePage /&gt;
+        },
+        {
+          path: "/profile",
+          element: &lt;ProfilePage /&gt;
+        }
+      ]
+    },
+  ]);
+
+  return (
+    &lt;RouterProvider router={router} /&gt;
+  )
+}
+
+export default App
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// src/components/navbar/Navbar.jsx
+import { Link } from "react-router-dom"
+import { useState } from "react"
+import "./navbar.scss"
+
+function Navbar() {
+  const &#91;open, setOpen] = useState(false);
+  
+  const user = true;
+  return (
+    &lt;nav&gt;
+      &lt;div className="left"&gt;
+        &lt;Link to="/" className="logo"&gt;
+          &lt;img src="/logo.png" /&gt;
+          &lt;span&gt;LamaEstate&lt;/span&gt;
+        &lt;/Link&gt;
+        &lt;Link to="/"&gt;Home&lt;/Link&gt;
+        &lt;Link to="/"&gt;About&lt;/Link&gt;
+        &lt;Link to="/"&gt;Contact&lt;/Link&gt;
+        &lt;Link to="/"&gt;Agents&lt;/Link&gt;
+      &lt;/div&gt;
+      &lt;div className="right"&gt;
+        {user ? (
+          &lt;div className="user"&gt;
+            &lt;img src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2" alt="" /&gt;
+            &lt;span&gt;John Doe&lt;/span&gt;
+            &lt;Link to="/profile" className="profile"&gt;
+              &lt;div className="notification"&gt;3&lt;/div&gt;
+              &lt;span&gt;Profile&lt;/span&gt;
+            &lt;/Link&gt;
+          &lt;/div&gt;
+        ) : (
+          &lt;&gt;
+            &lt;Link to="/"&gt;Sign in&lt;/Link&gt;
+            &lt;Link to="/" className="register"&gt;Sign up&lt;/Link&gt;
+          &lt;/&gt;
+        )}
+        &lt;div className="menuIcon"&gt;
+          &lt;img src="/menu.png" alt="" onClick={() =&gt; setOpen((prev) =&gt; !prev)} /&gt;
+        &lt;/div&gt;
+        &lt;div className={open ? "menu active" : "menu"}&gt;
+          &lt;Link to="/"&gt;Home&lt;/Link&gt;
+          &lt;Link to="/"&gt;About&lt;/Link&gt;
+          &lt;Link to="/"&gt;Contact&lt;/Link&gt;
+          &lt;Link to="/"&gt;Agents&lt;/Link&gt;
+          &lt;Link to="/"&gt;Sign in&lt;/Link&gt;
+          &lt;Link to="/"&gt;Sign up&lt;/Link&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/nav&gt;
+  )
+}
+
+export default Navbar;
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// src/components/navbar/navbar.scss
+@import "../../responsive.scss";
+
+nav {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  a {
+    transition: all 0.4s ease;
+
+    @include sm {
+      display: none;
+    }
+
+    &amp;:hover {
+      scale: 1.05;
+    }
+  }
+
+  .left{
+    flex: 3;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    .logo {
+      font-weight: bold;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      img {
+        width: 28px;
+      }
+
+      span {
+        @include md {
+          display: none;
+        }
+
+        @include sm {
+          display: initial;
+        }
+      }
+    }
+  }
+  .right{
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #fcf5f3;
+    height: 100%;
+
+    @include md {
+      background-color: transparent;
+    }
+
+    a {
+      padding: 12px 24px;
+      margin: 20px;
+    }
+
+    .user {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 20px;
+      }
+
+      span {
+        @include sm {
+          display: none;
+        }
+      }
+
+      .profile {
+        padding: 12px 24px;
+        background-color: #fece51;
+        cursor: pointer;
+        border: none;
+        position: relative;
+
+        .notification {
+          position: absolute;
+          top: -8px;
+          right: -8px;
+          background-color: red;
+          color: white;
+          border-radius: 50%;
+          width: 26px;
+          height: 26px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+
+    .register {
+      background-color: #fece51;
+    }
+
+    .menuIcon {
+      display: none;
+      z-index: 999;
+
+      img {
+        width: 36px;
+        height: 36px;
+        cursor: pointer;
+      }
+
+      @include sm {
+        display: inline;
+      }
+    }
+
+    .menu {
+      position: absolute;
+      top: 0;
+      right: -50%;
+      background-color: black;
+      color: white;
+      height: 100vh;
+      width: 50%;
+      transition: all 1s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+
+      &amp;.active {
+        right: 0;
+      }
+
+      @include sm {
+        a {
+          display: initial;
+        }
+      }
+    }
+  }
+}
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// src/components/list/List.jsx
+import './list.scss'
+import Card from '../card/Card'
+import { listData } from '../../lib/dummydata'
+
+function List(){
+  return (
+    &lt;div className='list'&gt;
+      {listData.map(item=&gt;(
+        &lt;Card key={item.id} item={item} /&gt;
+      ))}
+    &lt;/div&gt;
+  )
+}
+
+export default List
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// src/components/list/list.scss
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">React.js Chat Component Design</h2>
+
+
+
+<ul class="wp-block-list">
+<li>在 components 資料夾裡面建立 chat 資料夾</li>
+
+
+
+<li>在 chat 資料夾裡面建立 Chat.jsx 檔案</li>
+
+
+
+<li>在 chat 資料夾裡面建立 chat.scss 檔案</li>
+
+
+
+<li>修改 Chat.jsx 檔案，使用程式碼片段 fcs 快速建立</li>
+
+
+
+<li>修改 chat.scss 檔案</li>
+
+
+
+<li>修改 Chat.jsx 檔案</li>
+
+
+
+<li>修改 chat.scss 檔案</li>
+
+
+
+<li>修改 profilePage.jsx 檔案</li>
+
+
+
+<li>修改 chat.scss 檔案</li>
+
+
+
+<li>修改 profilePage.scss 檔案</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// src/components/Chat.jsx
+import './chat.scss'
+
+function Chat(){
+  return (
+    &lt;div className='chat'&gt;
+      &lt;div className="messages"&gt;
+        &lt;h1&gt;Messages&lt;/h1&gt;
+        &lt;div className="message"&gt;
+          &lt;img src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2" alt="" /&gt;
+          &lt;span&gt;John Doe&lt;/span&gt;
+          &lt;p&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div className="message"&gt;
+          &lt;img src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2" alt="" /&gt;
+          &lt;span&gt;John Doe&lt;/span&gt;
+          &lt;p&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div className="message"&gt;
+          &lt;img src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2" alt="" /&gt;
+          &lt;span&gt;John Doe&lt;/span&gt;
+          &lt;p&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div className="message"&gt;
+          &lt;img src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2" alt="" /&gt;
+          &lt;span&gt;John Doe&lt;/span&gt;
+          &lt;p&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div className="message"&gt;
+          &lt;img src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2" alt="" /&gt;
+          &lt;span&gt;John Doe&lt;/span&gt;
+          &lt;p&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div className="message"&gt;
+          &lt;img src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2" alt="" /&gt;
+          &lt;span&gt;John Doe&lt;/span&gt;
+          &lt;p&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div className="chatBox"&gt;box&lt;/div&gt;
+    &lt;/div&gt;
+  )
+}
+
+export default Chat
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// src/components/chat/chat.scss
+.chat {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .messages {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: scroll;
+
+    h1 {
+      font-weight: 300;
+    }
+
+    .message {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      cursor: pointer;
+
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .chatBox {
+    flex: 1;
+  }
+}
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// src/routes/profilePage/profilePage.jsx
+import Chat from '../../components/chat/Chat'
+import List from '../../components/list/List'
+import './profilePage.scss'
+
+function ProfilePage(){
+  return (
+    &lt;div className='profilePage'&gt;
+      &lt;div className="details"&gt;
+        &lt;div className="wrapper"&gt;
+          &lt;div className="title"&gt;
+            &lt;h1&gt;User Information&lt;/h1&gt;
+            &lt;button&gt;Update Profile&lt;/button&gt;
+          &lt;/div&gt;
+          &lt;div className="info"&gt;
+            &lt;span&gt;
+              Avatar:
+              &lt;img src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2" alt="" /&gt;
+            &lt;/span&gt;
+            &lt;span&gt;Username: &lt;b&gt;John Doe&lt;/b&gt;&lt;/span&gt;
+            &lt;span&gt;E-mail: &lt;b&gt;john@gmail.com&lt;/b&gt;&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div className="title"&gt;
+            &lt;h1&gt;My List&lt;/h1&gt;
+            &lt;button&gt;Create New Post&lt;/button&gt;
+          &lt;/div&gt;
+          &lt;List /&gt;
+          &lt;div className="title"&gt;
+            &lt;h1&gt;Saved List&lt;/h1&gt;
+          &lt;/div&gt;
+          &lt;List /&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div className="chatContainer"&gt;
+        &lt;div className="wrapper"&gt;
+          &lt;Chat /&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  )
+}
+
+export default ProfilePage
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// src/routes/profilePage/profilePage.scss
+.profilePage {
+  display: flex;
+  height: 100%;
+
+  .details {
+    flex: 3;
+    overflow-y: scroll;
+    padding-bottom: 50px;
+
+    .wrapper {
+      padding-right: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+
+      .title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h1 {
+          font-weight: 300;
+        }
+
+        button {
+          padding: 12px 24px;
+          background-color: #fece51;
+          cursor: pointer;
+          border: none;
+        }
+      }
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        span {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+        }
+
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  .chatContainer {
+    flex: 2;
+    background-color: #fcf5f3;
+    height: 100%;
+
+    .wrapper {
+      padding: 0px 20px;
+      height: 100%;
+    }
+  }
+}
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">React Messenger Chat Window Design</h2>
+
+
+
+<ul class="wp-block-list">
+<li>修改 Chat.jsx 檔案</li>
+
+
+
+<li>修改 chat.scss 檔案</li>
+
+
+
+<li>修改 Chat.jsx 檔案</li>
+
+
+
+<li>修改 chat.scss 檔案</li>
+
+
+
+<li>修改 profilePage.scss 檔案</li>
+
+
+
+<li>修改 card.scss 檔案</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>// src/components/chat/Chat.jsx
+import { useState } from 'react'
+import './chat.scss'
+
+function Chat(){
+  const &#91;chat, setChat] = useState(true);
+
+  return (
+    &lt;div className='chat'&gt;
+      &lt;div className="messages"&gt;
+        &lt;h1&gt;Messages&lt;/h1&gt;
+        &lt;div className="message"&gt;
+          &lt;img src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2" alt="" /&gt;
+          &lt;span&gt;John Doe&lt;/span&gt;
+          &lt;p&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div className="message"&gt;
+          &lt;img src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2" alt="" /&gt;
+          &lt;span&gt;John Doe&lt;/span&gt;
+          &lt;p&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div className="message"&gt;
+          &lt;img src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2" alt="" /&gt;
+          &lt;span&gt;John Doe&lt;/span&gt;
+          &lt;p&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div className="message"&gt;
+          &lt;img src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2" alt="" /&gt;
+          &lt;span&gt;John Doe&lt;/span&gt;
+          &lt;p&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div className="message"&gt;
+          &lt;img src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2" alt="" /&gt;
+          &lt;span&gt;John Doe&lt;/span&gt;
+          &lt;p&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div className="message"&gt;
+          &lt;img src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2" alt="" /&gt;
+          &lt;span&gt;John Doe&lt;/span&gt;
+          &lt;p&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      {chat &amp;&amp; (
+        &lt;div className="chatBox"&gt;
+        &lt;div className="top"&gt;
+          &lt;div className="user"&gt;
+            &lt;img src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2" alt="" /&gt;
+            John Doe
+          &lt;/div&gt;
+          &lt;span className="close" onClick={()=&gt;setChat(null)}&gt;X&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div className="center"&gt;
+          &lt;div className="chatMessage"&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet&lt;/p&gt;
+            &lt;span&gt;1 hour ago&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div className="chatMessage own"&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet&lt;/p&gt;
+            &lt;span&gt;1 hour ago&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div className="chatMessage"&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet&lt;/p&gt;
+            &lt;span&gt;1 hour ago&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div className="chatMessage own"&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet&lt;/p&gt;
+            &lt;span&gt;1 hour ago&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div className="chatMessage"&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet&lt;/p&gt;
+            &lt;span&gt;1 hour ago&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div className="chatMessage own"&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet&lt;/p&gt;
+            &lt;span&gt;1 hour ago&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div className="chatMessage"&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet&lt;/p&gt;
+            &lt;span&gt;1 hour ago&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div className="chatMessage own"&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet&lt;/p&gt;
+            &lt;span&gt;1 hour ago&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div className="chatMessage"&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet&lt;/p&gt;
+            &lt;span&gt;1 hour ago&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div className="chatMessage own"&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet&lt;/p&gt;
+            &lt;span&gt;1 hour ago&lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div className="bottom"&gt;
+          &lt;textarea&gt;&lt;/textarea&gt;
+          &lt;button&gt;Send&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      )}
+    &lt;/div&gt;
+  )
+}
+
+export default Chat
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// src/components/chat/chat.scss
+.chat {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .messages {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: scroll;
+
+    h1 {
+      font-weight: 300;
+    }
+
+    .message {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      cursor: pointer;
+
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .chatBox {
+    flex: 1;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .top {
+      background-color: #f7c14b85;
+      padding: 20px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .user {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        img {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+
+      .close {
+        cursor: pointer;
+      }
+    }
+
+    .center {
+      height: 350px;
+      overflow: scroll;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .chatMessage {
+        width: 50%;
+        
+        &amp;.own {
+          align-self: flex-end;
+          text-align: right;
+        }
+
+        span {
+          font-size: 12px;
+          background-color: #f7c14b39;
+          padding: 2px;
+          border-radius: 5px;
+        }
+      }
+    }
+
+    .bottom {
+      border-top: 2px solid #f7c14b85;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      textarea {
+        flex: 3;
+        height: 100%;
+        border: none;
+        padding: 20px;
+      }
+      
+      button {
+        flex: 1;
+        background-color: #f7c14b85;
+        height: 100%;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }
+}
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// src/routes/profilePage/profilePage.scss
+@import '../../responsive.scss';
+
+.profilePage {
+  display: flex;
+  height: 100%;
+
+  @include md {
+    flex-direction: column;
+    overflow: scroll;
+  }
+
+  .details {
+    flex: 3;
+    overflow-y: scroll;
+    padding-bottom: 50px;
+
+    @include md {
+      flex: none;
+      height: max-content;
+    }
+
+    .wrapper {
+      padding-right: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+
+      .title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h1 {
+          font-weight: 300;
+        }
+
+        button {
+          padding: 12px 24px;
+          background-color: #fece51;
+          cursor: pointer;
+          border: none;
+        }
+      }
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        span {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+        }
+
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  .chatContainer {
+    flex: 2;
+    background-color: #fcf5f3;
+    height: 100%;
+
+    @include md {
+      flex: none;
+      height: max-content;
+    }
+
+    .wrapper {
+      padding: 0px 20px;
+      height: 100%;
+    }
+  }
+}
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// src/components/card/card.scss
+@import '../../responsive.scss';
+
+.card {
+  display: flex;
+  gap: 20px;
+
+  .imageContainer {
+    flex: 2;
+    height: 200px;
+
+    @include sm {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+
+  .textContainer {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+
+    img {
+      width: 16px;
+      height: 16px;
+    }
+
+    .title {
+      font-size: 20px;
+      font-weight: 600;
+      color: #444;
+      transition: all 0.4s ease;
+
+      &amp;:hover {
+        color: #000;
+        scale: 1.01;
+      }
+    }
+
+    .address {
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      color: #888;
+    }
+
+    .price {
+      font-size: 20px;
+      font-weight: 300;
+      padding: 5px;
+      border-radius: 5px;
+      background-color: rgba(254, 205, 81, 0.438);
+      width: max-content;
+    }
+
+    .bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+
+      .features {
+        display: flex;
+        gap: 20px;
+        font-size: 14px;
+
+        .feature {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          background-color: whitesmoke;
+          padding: 5px;
+          border-radius: 5px;
+        }
+      }
+
+      .icons {
+        display: flex;
+        gap: 20px;
+
+        .icon {
+          border: 1px solid #999;
+          padding: 2px 5px;
+          border-radius: 5px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          &amp;:hover {
+            background-color: lightgray;
+          }
+        }
+      }
+    }
+  }
+}
+</code></pre>
+
+
+
+<h2 class="wp-block-heading">What’s Next?</h2>
+	</div>
+<!-- .entry-content -->
+
+	<footer class="entry-footer">
+			</footer><!-- .entry-footer -->
+</article><!-- #post-876 -->
+
+	<nav class="navigation post-navigation" aria-label="文章">
+		<h2 class="screen-reader-text">文章導覽</h2>
+		<div class="nav-links">
+<div class="nav-previous"><a href="/wordpress_blog/vuejs-crash-2024/" rel="prev"><span class="nav-subtitle">Previous:</span> <span class="nav-title">Vue.js Crash Course 2024</span></a></div>
+<div class="nav-next"><a href="/wordpress_blog/full-stack-rabbit-01/" rel="next"><span class="nav-subtitle">Next:</span> <span class="nav-title">Build &amp; Deploy Full Stack E-commerce Website | Redux | MERN Stack – 01</span></a></div>
+</div>
+	</nav>
+	</main><!-- #main -->
+
+
+	</div></div>
+			
+			<footer id="colophon" class="site-footer">
+
+				
+				<div class="container-fluid">
+					<div class="site-info">
+						<div class="row">
+
+															
+								<div class="col-12 footer-copyright-elements footer-copyright-alignment-center">
+
+									<div class="botiga-credits">&copy; 2025 wordpress_blog. 
+Created by Gee Hsu. 
+<br>Proudly powered by <a rel="nofollow" href="https://athemes.com/theme/botiga/">Botiga</a>
+</div>
+<div class="social-profile">
+<a target="_blank" href="https://www.facebook.com/watergrass0402/"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></i></a><a target="_blank" href="https://github.com/GeeHsu"><i class="ws-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></i></a>
+</div>
+								</div>
+														
+						</div>
+					</div>
+				</div>
+<!-- .site-info -->
+
+				
+			</footer><!-- #colophon -->
+
+			
+			<div class="back-to-top visibility-all position-right"><i class="ws-svg-icon"><svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 15l7-7 7 7" stroke-width="3" stroke-linejoin="round"></path></svg></i></div>
+</div>
+<!-- #page -->
+
+
+<script id="botiga-custom-js-extra">
+var botiga = {"ajaxurl":"\/wp-admin\/admin-ajax.php","i18n":{"botiga_sharebox_copy_link":"Copy link","botiga_sharebox_copy_link_copied":"Copied!"}};
+</script>
+<script src="/wordpress_blog/wp-content/themes/botiga/assets/js/custom.min.js?ver=1.1.2" id="botiga-custom-js"></script>
+
+</body>
+</html>
